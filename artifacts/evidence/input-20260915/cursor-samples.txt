@@ -1,0 +1,22 @@
+[2026.09.15-06.07.13:350][285]LogTemp: Display: SHOEN_CURSOR RED viewport 664,462 valid=1 | Slate screen 780,579 -> pixel 664,462
+[2026.09.15-06.07.13:350][285]LogTemp: Display: SHOEN_CURSOR CYAN native 780,580 -> pixel 664,462 | Cocoa 780,402 backing=2.00 buttons=0
+[2026.09.15-06.07.13:350][285]LogTemp: Display: SHOEN_CURSOR Viewport 1280x720 | local 1280x720 origin 116,118 | local-to-pixel 1.00,1.00
+[2026.09.15-06.07.13:350][285]LogTemp: Display: SHOEN_CURSOR Window 116,118 dpi=1.00 app-scale=1.00 mode=2 | active=1 focus=1 capture=0 raw=0
+[2026.09.15-06.07.13:762][335]LogTemp: Display: SHOEN_INPUT event=0 mouse=664.0,462.0 click=1 hud=1 hit=0
+[2026.09.15-06.07.13:769][336]LogTemp: Display: SHOEN_CLICK 664.0 462.0
+[2026.09.15-06.07.13:770][336]LogTemp: Display: SHOEN_INPUT event=1 mouse=664.0,462.0 click=1 hud=1 hit=0
+[2026.09.15-06.11.17:929][392]LogTemp: Display: SHOEN_INPUT event=0 mouse=977.0,244.0 click=1 hud=1 hit=0
+[2026.09.15-06.11.17:929][392]LogTemp: Display: SHOEN_INPUT event=1 mouse=977.0,244.0 click=1 hud=1 hit=0
+[2026.09.15-06.11.17:938][393]LogTemp: Display: SHOEN_CLICK 977.0 244.0
+[2026.09.15-06.11.19:017][417]LogTemp: Display: SHOEN_CURSOR RED viewport 1093,328 valid=1 | Slate screen 1093,361 -> pixel 1093,328
+[2026.09.15-06.11.19:017][417]LogTemp: Display: SHOEN_CURSOR CYAN native 1093,362 -> pixel 1093,329 | Cocoa 1093,620 backing=2.00 buttons=0
+[2026.09.15-06.11.19:017][417]LogTemp: Display: SHOEN_CURSOR Viewport 1512x949 | local 1512x949 origin 0,33 | local-to-pixel 1.00,1.00
+[2026.09.15-06.11.19:017][417]LogTemp: Display: SHOEN_CURSOR Window 0,33 dpi=1.00 app-scale=1.00 mode=1 | active=1 focus=1 capture=0 raw=0
+[2026.09.15-06.12.03:479][790]LogTemp: Display: SHOEN_CURSOR RED viewport 925,249 valid=1 | Slate screen 1093,361 -> pixel 977,244
+[2026.09.15-06.12.03:479][790]LogTemp: Display: SHOEN_CURSOR CYAN native 1093,362 -> pixel 977,245 | Cocoa 1093,620 backing=2.00 buttons=0
+[2026.09.15-06.12.03:479][790]LogTemp: Display: SHOEN_CURSOR Viewport 1280x720 | local 1280x720 origin 116,117 | local-to-pixel 1.00,1.00
+[2026.09.15-06.12.03:479][790]LogTemp: Display: SHOEN_CURSOR Window 116,117 dpi=1.00 app-scale=1.00 mode=2 | active=1 focus=1 capture=0 raw=0
+[2026.09.15-06.12.04:480][885]LogTemp: Display: SHOEN_CURSOR RED viewport 977,245 valid=1 | Slate screen 1093,361 -> pixel 977,245
+[2026.09.15-06.12.04:480][885]LogTemp: Display: SHOEN_CURSOR CYAN native 1093,362 -> pixel 977,246 | Cocoa 1093,620 backing=2.00 buttons=0
+[2026.09.15-06.12.04:480][885]LogTemp: Display: SHOEN_CURSOR Viewport 1280x720 | local 1280x720 origin 116,116 | local-to-pixel 1.00,1.00
+[2026.09.15-06.12.04:480][885]LogTemp: Display: SHOEN_CURSOR Window 116,116 dpi=1.00 app-scale=1.00 mode=2 | active=1 focus=1 capture=0 raw=0

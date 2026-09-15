@@ -7,6 +7,42 @@
 #include "GameFramework/InputSettings.h"
 #include "GameFramework/PlayerInput.h"
 #include "Components/InputComponent.h"
+#include "FoundationPlayerController.h"
+#include "Tests/AutomationCommon.h"
+#include "Engine/World.h"
+
+IMPLEMENT_SIMPLE_AUTOMATION_TEST(FShoenSelectionProjectionFailure, "Shoen.Foundation.SelectionProjectionFailure",
+    EAutomationTestFlags::EditorContext | EAutomationTestFlags::EngineFilter)
+bool FShoenSelectionProjectionFailure::RunTest(const FString& Parameters)
+{
+    FTestWorldWrapper Fixture;
+    if (!TestTrue(TEXT("test world created"),Fixture.CreateTestWorld(EWorldType::Game))) return false;
+    auto* World = Fixture.GetTestWorld();
+    auto* Sim = World->GetGameInstance()->GetSubsystem<UShoenSimulationSubsystem>();
+    Sim->ResetScenario(1000);
+    auto* Controller = World->SpawnActor<AFoundationPlayerController>();
+    Controller->SelectAll();
+    const TSet<uint64> Before = Controller->Selected;
+    Controller->SelectionStart = Controller->SelectionEnd = FVector2D(600,400);
+    Controller->bSelecting = true;
+    FVector Ground = FVector::ZeroVector;
+    TestFalse(TEXT("no player viewport means cursor projection fails"),Controller->GroundAtCursor(Ground));
+    Controller->FinishSelection();
+    TestFalse(TEXT("invalid selection gesture is cancelled"),Controller->bSelecting);
+    TestEqual(TEXT("failed projection preserves selection"),Controller->Selected.Num(),Before.Num());
+    for (const uint64 Id : Before) TestTrue(TEXT("selected formation preserved"),Controller->Selected.Contains(Id));
+    // PlayerTick formerly replaced a failed mouse query with (0,0), converting
+    // an outside-window release into a box selection rather than cancelling it.
+    Controller->SelectAll();
+    Controller->SelectionStart = FVector2D(600,400);
+    Controller->SelectionEnd = FVector2D::ZeroVector;
+    Controller->bSelecting = true;
+    Controller->FinishSelection();
+    TestFalse(TEXT("invalid box gesture is cancelled"),Controller->bSelecting);
+    TestEqual(TEXT("invalid box endpoint preserves selection"),Controller->Selected.Num(),Before.Num());
+    Fixture.DestroyTestWorld(false);
+    return true;
+}
 
 IMPLEMENT_SIMPLE_AUTOMATION_TEST(FShoenInputConfiguration, "Shoen.Foundation.InputConfiguration",
     EAutomationTestFlags::EditorContext | EAutomationTestFlags::EngineFilter)

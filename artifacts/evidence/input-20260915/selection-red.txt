@@ -1,0 +1,18 @@
+[2026.09.15-06.11.14:499][596]LogAutomationCommandLine: Display: 	Shoen.Foundation.SelectionProjectionFailure
+[2026.09.15-06.11.14:562][604]LogAutomationController: Sending RunTest SelectionProjectionFailure to 5AE128FCFD494504808B7FBE391075F6
+[2026.09.15-06.11.14:562][605]LogAutomationController: Display: Test Started. Name={SelectionProjectionFailure} Path={Shoen.Foundation.SelectionProjectionFailure}
+[2026.09.15-06.11.14:571][605]LogAutomationWorker: Received RunTests SelectionProjectionFailure from 7A94FC5474471EA88B9A359A8715A2C3
+[2026.09.15-06.11.14:579][606]LogAutomationController: Error: Test Completed. Result={Fail} Name={SelectionProjectionFailure} Path={Shoen.Foundation.SelectionProjectionFailure}
+[2026.09.15-06.11.14:579][606]LogAutomationController: BeginEvents: Shoen.Foundation.SelectionProjectionFailure
+[2026.09.15-06.11.14:579][606]LogAutomationController: Error: Expected 'failed projection preserves selection' to be 10, but it was 1.
+[2026.09.15-06.11.14:579][606]LogAutomationController: Error: Expected 'selected formation preserved' to be true.
+[2026.09.15-06.11.14:579][606]LogAutomationController: Error: Expected 'selected formation preserved' to be true.
+[2026.09.15-06.11.14:579][606]LogAutomationController: Error: Expected 'selected formation preserved' to be true.
+[2026.09.15-06.11.14:579][606]LogAutomationController: Error: Expected 'selected formation preserved' to be true.
+[2026.09.15-06.11.14:579][606]LogAutomationController: Error: Expected 'selected formation preserved' to be true.
+[2026.09.15-06.11.14:579][606]LogAutomationController: Error: Expected 'selected formation preserved' to be true.
+[2026.09.15-06.11.14:579][606]LogAutomationController: Error: Expected 'selected formation preserved' to be true.
+[2026.09.15-06.11.14:579][606]LogAutomationController: Error: Expected 'selected formation preserved' to be true.
+[2026.09.15-06.11.14:579][606]LogAutomationController: Error: Expected 'selected formation preserved' to be true.
+[2026.09.15-06.11.14:579][606]LogAutomationController: EndEvents: Shoen.Foundation.SelectionProjectionFailure
+ERROR: Shoen.Foundation.SelectionProjectionFailure: Fail (errors=10)

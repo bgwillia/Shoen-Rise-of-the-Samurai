@@ -1,0 +1,9 @@
+[2026.09.15-06.15.09:983][601]LogAutomationCommandLine: Display: 	Shoen.Foundation.SelectionProjectionFailure
+[2026.09.15-06.15.10:054][610]LogAutomationController: Sending RunTest SelectionProjectionFailure to 6FC95C240C465F06C175DB9FB7250EC0
+[2026.09.15-06.15.10:054][610]LogAutomationController: Display: Test Started. Name={SelectionProjectionFailure} Path={Shoen.Foundation.SelectionProjectionFailure}
+[2026.09.15-06.15.10:062][611]LogAutomationWorker: Received RunTests SelectionProjectionFailure from 59571174414A32DAE02096812D32C61D
+[2026.09.15-06.15.10:079][613]LogAutomationController: Error: Test Completed. Result={Fail} Name={SelectionProjectionFailure} Path={Shoen.Foundation.SelectionProjectionFailure}
+[2026.09.15-06.15.10:079][613]LogAutomationController: BeginEvents: Shoen.Foundation.SelectionProjectionFailure
+[2026.09.15-06.15.10:079][613]LogAutomationController: Error: Expected 'invalid box endpoint preserves selection' to be 10, but it was 0.
+[2026.09.15-06.15.10:079][613]LogAutomationController: EndEvents: Shoen.Foundation.SelectionProjectionFailure
+ERROR: Shoen.Foundation.SelectionProjectionFailure: Fail (errors=1)

@@ -8,6 +8,7 @@
 #include "UnrealClient.h"
 #include "Misc/Paths.h"
 #include "GameFramework/HUD.h"
+#include "FoundationCursorDiagnostics.h"
 
 AFoundationPlayerController::AFoundationPlayerController()
 {
@@ -49,12 +50,22 @@ void AFoundationPlayerController::SelectAll()
 }
 void AFoundationPlayerController::FinishSelection()
 {
+    float MouseX = 0, MouseY = 0;
+    if (!GetMousePosition(MouseX,MouseY))
+    {
+        bSelecting = false;
+        return;
+    }
     auto* Sim = GetGameInstance()->GetSubsystem<UShoenSimulationSubsystem>();
-    if (!IsInputKeyDown(EKeys::LeftShift) && !IsInputKeyDown(EKeys::RightShift)) Selected.Reset();
     const bool Box = FVector2D::Distance(SelectionStart, SelectionEnd) > 8;
     const FBox2D Rect(SelectionStart.ComponentMin(SelectionEnd), SelectionStart.ComponentMax(SelectionEnd));
-    FVector Ground;
-    GroundAtCursor(Ground);
+    FVector Ground = FVector::ZeroVector;
+    if (!Box && !GroundAtCursor(Ground))
+    {
+        bSelecting = false;
+        return;
+    }
+    if (!IsInputKeyDown(EKeys::LeftShift) && !IsInputKeyDown(EKeys::RightShift)) Selected.Reset();
     uint64 ClosestId = 0;
     double Closest = 850 * 850;
     for (const auto& [Id, F] : Sim->State.formations)
@@ -63,8 +74,11 @@ void AFoundationPlayerController::FinishSelection()
         FVector2D Screen;
         const FVector Center(F.x,F.y,100);
         if (Box && ProjectWorldLocationToScreen(Center, Screen) && Rect.IsInside(Screen)) Selected.Add(Id);
-        const double Dist = FVector::DistSquared2D(Center, Ground);
-        if (!Box && Dist < Closest) { Closest = Dist; ClosestId = Id; }
+        if (!Box)
+        {
+            const double Dist = FVector::DistSquared2D(Center, Ground);
+            if (Dist < Closest) { Closest = Dist; ClosestId = Id; }
+        }
     }
     if (ClosestId) Selected.Add(ClosestId);
     bSelecting = false;
@@ -75,10 +89,10 @@ void AFoundationPlayerController::PlayerTick(float Dt)
     auto* Sim = GetGameInstance()->GetSubsystem<UShoenSimulationSubsystem>();
     if (!Sim) return;
     float MX = 0, MY = 0;
-    GetMousePosition(MX, MY);
+    const bool bHasMousePosition = GetMousePosition(MX, MY);
     if (bMouseDiagnostics && WasInputKeyJustPressed(EKeys::LeftMouseButton)) UE_LOG(LogTemp,Display,TEXT("SHOEN_CLICK %.1f %.1f"),MX,MY);
     const bool OverPanel = MX < 410 || MY < 66;
-    SelectionEnd = FVector2D(MX,MY);
+    if (bHasMousePosition) SelectionEnd = FVector2D(MX,MY);
     if (WasInputKeyJustPressed(EKeys::LeftMouseButton) && !OverPanel)
     { SelectionStart = SelectionEnd; bSelecting = true; }
     if (bSelecting && WasInputKeyJustReleased(EKeys::LeftMouseButton)) FinishSelection();
@@ -106,6 +120,12 @@ void AFoundationPlayerController::PlayerTick(float Dt)
     if (WasInputKeyJustPressed(EKeys::F5)) Sim->Save();
     if (WasInputKeyJustPressed(EKeys::F9)) Sim->Load();
     if (WasInputKeyJustPressed(EKeys::F12)) bMouseDiagnostics = !bMouseDiagnostics;
+    if (bMouseDiagnostics && (DiagnosticLogTime -= Dt) <= 0)
+    {
+        DiagnosticLogTime = 1;
+        for (const auto& Line : ReadFoundationCursorDiagnostics(*this).Lines)
+            UE_LOG(LogTemp,Display,TEXT("SHOEN_CURSOR %s"),*Line);
+    }
     if (auto* Mode = Cast<AFoundationGameMode>(GetWorld()->GetAuthGameMode()))
     {
         if (WasInputKeyJustPressed(EKeys::R)) Mode->NewScenario(0);

@@ -1,0 +1,15 @@
++ ["/opt/homebrew/bin/cmake", "-S", "/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/core", "-B", "/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/build/core", "-DCMAKE_BUILD_TYPE=Debug"]
+-- Configuring done (0.2s)
+-- Generating done (0.0s)
+-- Build files have been written to: /Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/build/core
++ ["/opt/homebrew/bin/cmake", "--build", "/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/build/core", "--config", "Debug"]
+[ 66%] Built target domain_core
+[100%] Built target domain_core_tests
++ ["/opt/homebrew/bin/ctest", "--test-dir", "/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/build/core", "-C", "Debug", "--output-on-failure", "--no-tests=error"]
+Test project /Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/build/core
+    Start 1: domain_core_invariants
+1/1 Test #1: domain_core_invariants ...........   Passed   11.63 sec
+
+100% tests passed out of 1
+
+Total Test time (real) =  11.64 sec

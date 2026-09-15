@@ -40,6 +40,14 @@ The map generator creates a real Unreal map and preserves an existing one. The C
 | Reset to 200-worker proof | R |
 | Toggle cursor diagnostic | F12 |
 
+### Mac input diagnosis
+
+F12 shows a red **viewport cursor** and, on macOS, a cyan **native pointer** X. It also displays Slate screen coordinates, the viewport transform, actual pixel resolution, screen backing scale, window DPI, focus and capture state. The native query is read-only; it does not reposition the cursor. Once per second, the same measurements appear as `SHOEN_CURSOR` in the Unreal log.
+
+The computer-control screenshot can display a click marker at a different position from the native macOS pointer. Test physical controls in the actual Unreal application window. Focus the game first, then press Control for group shortcuts. F11 toggles windowed/window-fullscreen mode. The currently measured viewport is 1280×720 windowed; fullscreen follows the display's usable size.
+
+Physical acceptance remains pending; see [STATUS.md](STATUS.md). A keyboard preset is available while diagnosing mouse delivery: Z/X/C/V. No coordinate correction or engine patch is enabled.
+
 ### Population proof
 
 Choose **Reset: 200 workers**, **Mobilize 100**, **Apply 20/15/65**, then **Return survivors**. The ledger must show **165 available, 15 wounded at home, 20 dead**. This is a labeled scripted accounting proof. It is not tactical combat. M mobilizes, O applies the fixture outcome, and Backspace demobilizes.

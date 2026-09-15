@@ -20,6 +20,8 @@ public:
     FVector2D SelectionEnd;
     void SelectAll();
 private:
+    friend class FShoenSelectionProjectionFailure;
+    float DiagnosticLogTime = 0;
     FVector MoveStart = FVector::ZeroVector;
     bool bOrdering = false;
     void FinishSelection();

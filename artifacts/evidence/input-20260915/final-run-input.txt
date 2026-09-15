@@ -1,0 +1,7 @@
+[2026.09.15-06.19.25:780][ 60]LogTemp: Display: SHOEN_INPUT event=0 mouse=977.0,244.0 click=1 hud=1 hit=0
+[2026.09.15-06.19.25:781][ 60]LogTemp: Display: SHOEN_INPUT event=1 mouse=977.0,244.0 click=1 hud=1 hit=0
+[2026.09.15-06.19.25:788][ 61]LogTemp: Display: SHOEN_CLICK 977.0 244.0
+[2026.09.15-06.20.55:141][643]LogTemp: Display: SHOEN_CURSOR RED viewport 977,244 valid=1 | Slate screen 1093,361 -> pixel 977,244
+[2026.09.15-06.20.55:142][643]LogTemp: Display: SHOEN_CURSOR CYAN native 1093,362 -> pixel 977,244 | Cocoa 1093,620 backing=2.00 buttons=0
+[2026.09.15-06.20.55:142][643]LogTemp: Display: SHOEN_CURSOR Viewport 1280x720 | local 1280x720 origin 116,118 | local-to-pixel 1.00,1.00
+[2026.09.15-06.20.55:142][643]LogTemp: Display: SHOEN_CURSOR Window 116,118 dpi=1.00 app-scale=1.00 mode=2 | active=1 focus=1 capture=0 raw=0

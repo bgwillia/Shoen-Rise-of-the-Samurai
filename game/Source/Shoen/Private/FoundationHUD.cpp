@@ -5,6 +5,7 @@
 #include "Engine/Canvas.h"
 #include "Engine/Engine.h"
 #include "Engine/GameInstance.h"
+#include "FoundationCursorDiagnostics.h"
 
 void AFoundationHUD::Label(const FString& Text,float X,float Y,FLinearColor Color,float Scale)
 {
@@ -73,10 +74,18 @@ void AFoundationHUD::DrawHUD()
         Label(FString::Printf(TEXT("Selected: %d formations"),PC->Selected.Num()),440,78,Gold,1.1f);
         if (PC->bMouseDiagnostics)
         {
-            float MX=0,MY=0; PC->GetMousePosition(MX,MY);
-            Label(FString::Printf(TEXT("Pointer %.0f, %.0f | Canvas %d x %d"),MX,MY,Canvas->SizeX,Canvas->SizeY),820,78,FLinearColor::Black);
+            const auto Diagnostic = ReadFoundationCursorDiagnostics(*PC);
+            const float MX = Diagnostic.Viewport.X, MY = Diagnostic.Viewport.Y;
+            DrawRect(FLinearColor(0,0,0,.85),420,155,Canvas->SizeX-430,80);
+            for (int32 I=0; I<Diagnostic.Lines.Num(); ++I) Label(Diagnostic.Lines[I],430,160+I*18,FLinearColor::White);
             DrawLine(MX-8,MY,MX+8,MY,FLinearColor::Red,2);
             DrawLine(MX,MY-8,MX,MY+8,FLinearColor::Red,2);
+            if (Diagnostic.bHasNative)
+            {
+                const FVector2D NativePoint = Diagnostic.NativeViewport;
+                DrawLine(NativePoint.X-12,NativePoint.Y-12,NativePoint.X+12,NativePoint.Y+12,FLinearColor(0,1,1),1);
+                DrawLine(NativePoint.X-12,NativePoint.Y+12,NativePoint.X+12,NativePoint.Y-12,FLinearColor(0,1,1),1);
+            }
         }
         if (PC->Selected.Num()==1)
         {
