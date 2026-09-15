@@ -1,6 +1,8 @@
 #include "FoundationPlayerController.h"
 #include "ShoenSimulationSubsystem.h"
 #include "FoundationGameMode.h"
+#include "SettlementView.h"
+#include "domain/Buildings.h"
 #include "Engine/GameInstance.h"
 #include "InputCoreTypes.h"
 #include "domain/Battle.h"
@@ -40,6 +42,100 @@ bool AFoundationPlayerController::GroundAtCursor(FVector& Point) const
     if (T < 0) return false;
     Point = Origin + Direction * T;
     return true;
+}
+void AFoundationPlayerController::BeginPlacement()
+{
+    auto* Sim=GetGameInstance()->GetSubsystem<UShoenSimulationSubsystem>();
+    if (!Sim || !Sim->IsSettlement() || Sim->BuildingDefinitions().empty())
+    {
+        if (Sim) Sim->Message=TEXT("N: open the settlement fixture before choosing a building.");
+        return;
+    }
+    CancelPlacement();
+    PendingPlacement={};
+    PendingPlacement.definition_id=Sim->BuildingDefinitions().begin()->first;
+    PendingPlacement.settlement_id=Sim->State.build_areas.begin()->first;
+    for (const auto& [Id,District] : Sim->State.districts)
+        if (District.settlement_id==PendingPlacement.settlement_id) { PendingPlacement.district_id=Id; break; }
+    bPlacing=true;
+    SeenWorldGeneration=Sim->WorldGeneration;
+    Sim->Message=TEXT("Move to ground, [ / ] rotate, click or Enter to build. Esc / right click cancel.");
+}
+void AFoundationPlayerController::CancelPlacement()
+{
+    bPlacing=false; bHasPlacementPoint=false; bSelecting=false; bOrdering=false;
+    PreviewResult={}; bPreviewCached=false;
+    if (auto* Mode=Cast<AFoundationGameMode>(GetWorld()->GetAuthGameMode()))
+        if (auto* View=Mode->SettlementPresentation()) View->HidePreview();
+}
+void AFoundationPlayerController::RefreshPlacement()
+{
+    if (!bPlacing || !bHasPlacementPoint) return;
+    auto* Sim=GetGameInstance()->GetSubsystem<UShoenSimulationSubsystem>();
+    if (!bPreviewCached || PreviewRevision!=Sim->State.revision || PreviewX!=PendingPlacement.x_cm || PreviewY!=PendingPlacement.y_cm || PreviewYaw!=PendingPlacement.yaw_degrees)
+    {
+        PreviewResult=Sim->PreviewBuilding(PendingPlacement);
+        PreviewRevision=Sim->State.revision;
+        PreviewX=PendingPlacement.x_cm; PreviewY=PendingPlacement.y_cm; PreviewYaw=PendingPlacement.yaw_degrees;
+        bPreviewCached=true;
+    }
+    const auto It=Sim->BuildingDefinitions().find(PendingPlacement.definition_id);
+    if (It==Sim->BuildingDefinitions().end()) { CancelPlacement(); return; }
+    if (auto* Mode=Cast<AFoundationGameMode>(GetWorld()->GetAuthGameMode()))
+        if (auto* View=Mode->SettlementPresentation())
+            View->SetPreview(It->second,PendingPlacement,PreviewResult.ground_z_cm,PreviewResult.ok);
+}
+void AFoundationPlayerController::UpdatePlacement(bool bCanReadCursor)
+{
+    if (!bPlacing) return;
+    if (bCanReadCursor)
+    {
+        auto* Sim=GetGameInstance()->GetSubsystem<UShoenSimulationSubsystem>();
+        FVector Origin,Direction;
+        if (!DeprojectMousePositionToWorld(Origin,Direction))
+        {
+            bHasPlacementPoint=false;
+            if (auto* Mode=Cast<AFoundationGameMode>(GetWorld()->GetAuthGameMode()))
+                if (auto* View=Mode->SettlementPresentation()) View->HidePreview();
+            return;
+        }
+        domain::Point3 Hit;
+        const auto Area=Sim->State.build_areas.find(PendingPlacement.settlement_id);
+        bool Found=Area!=Sim->State.build_areas.end() && domain::RaycastBuildArea(Area->second,
+            {Origin.X,Origin.Y,Origin.Z},{Direction.X,Direction.Y,Direction.Z},Hit);
+        if (!Found)
+        {
+            FVector Ground;
+            Found=GroundAtCursor(Ground);
+            if (Found) Hit={Ground.X,Ground.Y,Ground.Z};
+        }
+        bHasPlacementPoint=Found;
+        if (Found)
+        {
+            PendingPlacement.x_cm=FMath::RoundToInt(FMath::Clamp(Hit.x,-1.e9,1.e9));
+            PendingPlacement.y_cm=FMath::RoundToInt(FMath::Clamp(Hit.y,-1.e9,1.e9));
+        }
+    }
+    RefreshPlacement();
+}
+void AFoundationPlayerController::RotatePlacement(int32 Direction)
+{
+    if (!bPlacing) return;
+    auto* Sim=GetGameInstance()->GetSubsystem<UShoenSimulationSubsystem>();
+    const auto It=Sim->BuildingDefinitions().find(PendingPlacement.definition_id);
+    if (It==Sim->BuildingDefinitions().end()) return;
+    PendingPlacement.yaw_degrees=(PendingPlacement.yaw_degrees+Direction*It->second.rotation_step_degrees+360)%360;
+    RefreshPlacement();
+}
+void AFoundationPlayerController::ConfirmPlacement()
+{
+    auto* Sim=GetGameInstance()->GetSubsystem<UShoenSimulationSubsystem>();
+    if (!bPlacing || !bHasPlacementPoint || SeenWorldGeneration!=Sim->WorldGeneration || LastConfirmFrame==GFrameCounter) return;
+    LastConfirmFrame=GFrameCounter;
+    auto Command=PendingPlacement;
+    Command.transaction_id=Sim->State.next_transaction_id;
+    Sim->PlaceBuilding(Command);
+    RefreshPlacement();
 }
 void AFoundationPlayerController::SelectAll()
 {
@@ -91,12 +187,27 @@ void AFoundationPlayerController::PlayerTick(float Dt)
     float MX = 0, MY = 0;
     const bool bHasMousePosition = GetMousePosition(MX, MY);
     if (bMouseDiagnostics && WasInputKeyJustPressed(EKeys::LeftMouseButton)) UE_LOG(LogTemp,Display,TEXT("SHOEN_CLICK %.1f %.1f"),MX,MY);
-    const bool OverPanel = MX < 410 || MY < 66;
+    int32 ViewWidth=0,ViewHeight=0; GetViewportSize(ViewWidth,ViewHeight);
+    const bool OverPanel = MX < 410 || MY < 66 || MY >= ViewHeight-54;
+    if (SeenWorldGeneration!=Sim->WorldGeneration)
+    {
+        CancelPlacement(); Selected.Reset(); SeenWorldGeneration=Sim->WorldGeneration;
+    }
+    if (WasInputKeyJustPressed(EKeys::B)) { if (bPlacing) CancelPlacement(); else BeginPlacement(); }
+    const bool bPlacementGesture=bPlacing;
+    if (bPlacing)
+    {
+        UpdatePlacement(bHasMousePosition && !OverPanel);
+        if (WasInputKeyJustPressed(EKeys::LeftBracket)) RotatePlacement(-1);
+        if (WasInputKeyJustPressed(EKeys::RightBracket)) RotatePlacement(1);
+        if (WasInputKeyJustPressed(EKeys::Escape) || WasInputKeyJustPressed(EKeys::RightMouseButton)) CancelPlacement();
+        else if (WasInputKeyJustPressed(EKeys::Enter) || (bHasMousePosition && !OverPanel && WasInputKeyJustPressed(EKeys::LeftMouseButton))) ConfirmPlacement();
+    }
     if (bHasMousePosition) SelectionEnd = FVector2D(MX,MY);
-    if (WasInputKeyJustPressed(EKeys::LeftMouseButton) && !OverPanel)
+    if (!bPlacementGesture && bHasMousePosition && WasInputKeyJustPressed(EKeys::LeftMouseButton) && !OverPanel)
     { SelectionStart = SelectionEnd; bSelecting = true; }
     if (bSelecting && WasInputKeyJustReleased(EKeys::LeftMouseButton)) FinishSelection();
-    if (WasInputKeyJustPressed(EKeys::RightMouseButton) && !OverPanel) bOrdering = GroundAtCursor(MoveStart);
+    if (!bPlacementGesture && bHasMousePosition && WasInputKeyJustPressed(EKeys::RightMouseButton) && !OverPanel) bOrdering = GroundAtCursor(MoveStart);
     if (bOrdering && WasInputKeyJustReleased(EKeys::RightMouseButton))
     {
         FVector End;
@@ -128,6 +239,7 @@ void AFoundationPlayerController::PlayerTick(float Dt)
     }
     if (auto* Mode = Cast<AFoundationGameMode>(GetWorld()->GetAuthGameMode()))
     {
+        if (WasInputKeyJustPressed(EKeys::N)) Mode->NewSettlement();
         if (WasInputKeyJustPressed(EKeys::R)) Mode->NewScenario(0);
         if (WasInputKeyJustPressed(EKeys::Z)) Mode->NewScenario(1000);
         if (WasInputKeyJustPressed(EKeys::X)) Mode->NewScenario(4000);
@@ -136,9 +248,12 @@ void AFoundationPlayerController::PlayerTick(float Dt)
     }
     if (WasInputKeyJustPressed(EKeys::F10))
         FScreenshotRequest::RequestScreenshot(FPaths::ProjectSavedDir() / TEXT("Screenshots/Foundation.png"),true,true);
-    if (WasInputKeyJustPressed(EKeys::M)) Sim->MobilizeProof();
-    if (WasInputKeyJustPressed(EKeys::O)) Sim->ResolveProof();
-    if (WasInputKeyJustPressed(EKeys::BackSpace)) Sim->DemobilizeProof();
+    if (!Sim->IsSettlement())
+    {
+        if (WasInputKeyJustPressed(EKeys::M)) Sim->MobilizeProof();
+        if (WasInputKeyJustPressed(EKeys::O)) Sim->ResolveProof();
+        if (WasInputKeyJustPressed(EKeys::BackSpace)) Sim->DemobilizeProof();
+    }
     if (WasInputKeyJustPressed(EKeys::Escape)) { Selected.Reset(); bSelecting = false; bOrdering = false; }
     if (IsInputKeyDown(EKeys::LeftControl) && WasInputKeyJustPressed(EKeys::A)) SelectAll();
     const FKey Keys[] = { EKeys::One,EKeys::Two,EKeys::Three,EKeys::Four,EKeys::Five,EKeys::Six,EKeys::Seven,EKeys::Eight,EKeys::Nine };

@@ -262,6 +262,49 @@ with Path(os.environ["SHOEN_FAKE_CALLS"]).open("a", encoding="utf-8") as stream:
         self.assertIn("Fail", result.stdout)
         self.assertIn("Skipped", result.stdout)
 
+    def test_editor_test_selects_and_validates_placement_suite(self) -> None:
+        editor_body = """
+        report = next(value.split("=", 1)[1] for value in sys.argv if value.startswith("-ReportExportPath="))
+        output = Path(report)
+        output.mkdir(parents=True, exist_ok=True)
+        (output / "index.json").write_text(json.dumps({
+            "tests": [{"fullTestPath": "Shoen.Placement.Storehouse", "state": "Success", "errors": 0}]
+        }), encoding="utf-8-sig")
+        """
+        engine = self.make_engine(editor_body)
+
+        result = self.run_cli("--engine", str(engine), "editor-test", "--suite", "placement")
+
+        self.assertEqual(result.returncode, 0, result.stdout)
+        self.assertIn("1 automation test passed from Shoen.Placement", result.stdout)
+        argv = self.read_calls()[0]["argv"]
+        self.assertIn("-ExecCmds=Automation RunTests Shoen.Placement", argv)
+        self.assertNotIn("-ExecCmds=Automation RunTests Shoen.Foundation", argv)
+
+    def test_editor_test_rejects_missing_placement_report(self) -> None:
+        engine = self.make_engine()
+
+        result = self.run_cli("--engine", str(engine), "editor-test", "--suite", "placement")
+
+        self.assertNotEqual(result.returncode, 0)
+        self.assertIn("automation report", result.stdout.lower())
+
+    def test_editor_test_rejects_failed_placement_report(self) -> None:
+        editor_body = """
+        report = next(value.split("=", 1)[1] for value in sys.argv if value.startswith("-ReportExportPath="))
+        output = Path(report)
+        output.mkdir(parents=True, exist_ok=True)
+        (output / "index.json").write_text(json.dumps({
+            "tests": [{"fullTestPath": "Shoen.Placement.Overlap", "state": "Fail", "errors": 1}]
+        }), encoding="utf-8-sig")
+        """
+        engine = self.make_engine(editor_body)
+
+        result = self.run_cli("--engine", str(engine), "editor-test", "--suite", "placement")
+
+        self.assertNotEqual(result.returncode, 0)
+        self.assertIn("shoen.placement.overlap: fail", result.stdout.lower())
+
     def test_run_passes_scenario_and_soldier_count_as_game_flags(self) -> None:
         engine = self.make_engine()
 
@@ -279,6 +322,18 @@ with Path(os.environ["SHOEN_FAKE_CALLS"]).open("a", encoding="utf-8") as stream:
         self.assertIn("-NoVSync", argv)
         self.assertIn("-ShoenScenario=scale_lab", argv)
         self.assertIn("-ShoenSoldiers=4000", argv)
+
+    def test_run_passes_settlement_scenario_on_the_foundation_map(self) -> None:
+        engine = self.make_engine()
+
+        result = self.run_cli("--engine", str(engine), "run", "--scenario", "settlement")
+
+        self.assertEqual(result.returncode, 0, result.stdout)
+        argv = self.read_calls()[0]["argv"]
+        self.assertIn("/Game/Domain/Maps/Foundation", argv)
+        self.assertIn("-ShoenScenario=settlement", argv)
+        self.assertNotIn("-ShoenScenario=foundation", argv)
+        self.assertNotIn("-ShoenScenario=scale_lab", argv)
 
     def test_benchmark_is_rendered_and_requires_valid_fresh_counts(self) -> None:
         editor_body = """

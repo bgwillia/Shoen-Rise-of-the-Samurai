@@ -2,7 +2,7 @@
 
 Read `STATUS.md`, `docs/execution/milestone-1.md`, and the authoritative design package in `japan_strategy_codex_handoff/` before changes. Its `AGENTS.md`, `PLANS.md`, product contract and architecture apply to implementation here. Preserve user-supplied design documents and the asset-production workbook.
 
-Current authorization is the user's first technical milestone only. Do not continue into settlement-building M1 from the handoff without a new request.
+Current authorization is the user's Milestone 2 first Small Storehouse placement slice, recorded in `docs/execution/milestone-2-request.md` and planned in `docs/execution/milestone-2-placement.md`. Milestone 1 is accepted at `44c33ca14de4669031e7e85ab7f157476f5a0a23`. Do not start Milestone 2B, production, housing simulation, growth, roads or combat without a new request.
 
 Keep `DomainCore/Public/domain` and `DomainCore/Private/sim` engine-independent. CMake and Unreal must compile the same core. One ledger owns population; presentation may never create or subtract soldiers. Cohorts are aggregated civilians, service records retain immutable origins, and formation membership references service IDs.
 

@@ -1,0 +1,30 @@
+test_benchmark_accepts_zero_resolution_simulation_cpu_timings (test_dev.DevCliTests.test_benchmark_accepts_zero_resolution_simulation_cpu_timings) ... ok
+test_benchmark_is_rendered_and_requires_valid_fresh_counts (test_dev.DevCliTests.test_benchmark_is_rendered_and_requires_valid_fresh_counts) ... ok
+test_benchmark_rejects_a_report_with_wrong_counts (test_dev.DevCliTests.test_benchmark_rejects_a_report_with_wrong_counts) ... ok
+test_benchmark_rejects_missing_invalid_or_nonfinite_measurements (test_dev.DevCliTests.test_benchmark_rejects_missing_invalid_or_nonfinite_measurements) ... ok
+test_benchmark_requires_every_measurement_field (test_dev.DevCliTests.test_benchmark_requires_every_measurement_field) ... ok
+test_build_uses_editor_target_and_prints_an_argument_array (test_dev.DevCliTests.test_build_uses_editor_target_and_prints_an_argument_array) ... ok
+test_child_failure_is_propagated_and_logged (test_dev.DevCliTests.test_child_failure_is_propagated_and_logged) ... ok
+test_core_suite_filter_fails_when_ctest_matches_no_tests (test_dev.DevCliTests.test_core_suite_filter_fails_when_ctest_matches_no_tests) ... ok
+test_core_test_never_requires_or_invokes_unreal (test_dev.DevCliTests.test_core_test_never_requires_or_invokes_unreal) ... ok
+test_create_map_accepts_only_an_editor_generated_umap (test_dev.DevCliTests.test_create_map_accepts_only_an_editor_generated_umap) ... ok
+test_create_map_requires_the_real_umap_output (test_dev.DevCliTests.test_create_map_requires_the_real_umap_output) ... ok
+test_doctor_writes_exact_unreal_version_without_hardware_identifiers (test_dev.DevCliTests.test_doctor_writes_exact_unreal_version_without_hardware_identifiers) ... ok
+test_editor_test_parses_successful_matching_tests (test_dev.DevCliTests.test_editor_test_parses_successful_matching_tests) ... ok
+test_editor_test_rejects_failed_and_skipped_tests (test_dev.DevCliTests.test_editor_test_rejects_failed_and_skipped_tests) ... ok
+test_editor_test_rejects_failed_placement_report (test_dev.DevCliTests.test_editor_test_rejects_failed_placement_report) ... ok
+test_editor_test_rejects_missing_or_empty_reports (test_dev.DevCliTests.test_editor_test_rejects_missing_or_empty_reports) ... ok
+test_editor_test_rejects_missing_placement_report (test_dev.DevCliTests.test_editor_test_rejects_missing_placement_report) ... ok
+test_editor_test_selects_and_validates_placement_suite (test_dev.DevCliTests.test_editor_test_selects_and_validates_placement_suite) ... ok
+test_engine_command_fails_when_engine_root_is_missing (test_dev.DevCliTests.test_engine_command_fails_when_engine_root_is_missing) ... ok
+test_engine_option_is_accepted_after_the_subcommand (test_dev.DevCliTests.test_engine_option_is_accepted_after_the_subcommand) ... ok
+test_hardware_profile_parser_keeps_specs_and_drops_identifiers (test_dev.DevCliTests.test_hardware_profile_parser_keeps_specs_and_drops_identifiers) ... ok
+test_package_invokes_installed_run_uat_for_mac (test_dev.DevCliTests.test_package_invokes_installed_run_uat_for_mac) ... ok
+test_run_passes_scenario_and_soldier_count_as_game_flags (test_dev.DevCliTests.test_run_passes_scenario_and_soldier_count_as_game_flags) ... ok
+test_run_passes_settlement_scenario_on_the_foundation_map (test_dev.DevCliTests.test_run_passes_settlement_scenario_on_the_foundation_map) ... ok
+test_timeout_returns_124_and_does_not_report_success (test_dev.DevCliTests.test_timeout_returns_124_and_does_not_report_success) ... ok
+
+----------------------------------------------------------------------
+Ran 25 tests in 7.323s
+
+OK

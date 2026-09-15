@@ -6,6 +6,7 @@
 #include "Engine/Engine.h"
 #include "Engine/GameInstance.h"
 #include "FoundationCursorDiagnostics.h"
+#include "domain/Buildings.h"
 
 void AFoundationHUD::Label(const FString& Text,float X,float Y,FLinearColor Color,float Scale)
 {
@@ -27,7 +28,8 @@ void AFoundationHUD::DrawHUD()
     const auto P = domain::Summarize(Sim->State);
     const FLinearColor Muted(.62,.72,.73), Gold(.95,.74,.37);
     DrawRect(FLinearColor(.025,.04,.045,.95),0,0,Canvas->SizeX,64);
-    Label(TEXT("SHOEN  /  FOUNDATION LAB"),20,15,Gold,1.4f);
+    Label(Sim->IsSettlement() ? TEXT("SHOEN  /  SETTLEMENT") : TEXT("SHOEN  /  FOUNDATION LAB"),20,15,Gold,1.4f);
+    Button(TEXT("settlement"),TEXT("N  New settlement fixture"),Canvas->SizeX-246,17,226);
     Label(FString::Printf(TEXT("Year %lld  |  Day %lld / 360  |  %dx"),1180+Sim->State.campaign_day/360,1+Sim->State.campaign_day%360,Sim->State.speed),440,17,FLinearColor::White,1.2f);
     Label(TEXT("Simulation calendar  |  1 day / 3 sec at 1x"),440,40,Muted);
     DrawRect(FLinearColor(.035,.055,.06,.94),0,64,410,Canvas->SizeY-64);
@@ -37,6 +39,49 @@ void AFoundationHUD::DrawHUD()
     Button(TEXT("speed3"),TEXT("3x"),164,105,64);
     Button(TEXT("speed5"),TEXT("5x"),236,105,64);
     Button(TEXT("speed10"),TEXT("10x"),308,105,78);
+    if (Sim->IsSettlement())
+    {
+        const auto& Resources=Sim->State.settlements.begin()->second.resources;
+        Label(TEXT("SETTLEMENT RESOURCES"),20,154,Gold);
+        Label(FString::Printf(TEXT("Timber     %lld"),Resources.timber),20,182,FLinearColor::White,1.2f);
+        Label(FString::Printf(TEXT("Treasury   %lld"),Resources.treasury),20,210,FLinearColor::White,1.2f);
+        Label(FString::Printf(TEXT("Workers %lld   |   Buildings %llu"),P.available,uint64(Sim->State.buildings.size())),20,242,Muted);
+        Label(TEXT("CHOOSE BUILDING"),20,278,Gold);
+        if (!Sim->BuildingDefinitions().empty())
+        {
+            const auto& Definition=Sim->BuildingDefinitions().begin()->second;
+            Button(TEXT("build"),TEXT("B  ")+FString(UTF8_TO_TCHAR(Definition.display_name.c_str())),20,301,366);
+            Label(FString::Printf(TEXT("Cost: %lld timber + %lld treasury"),Definition.timber_cost,Definition.treasury_cost),20,341);
+            Label(FString::Printf(TEXT("Footprint %.1f x %.1f m | Flat ground"),Definition.width_cm/100.0,Definition.depth_cm/100.0),20,362,Muted);
+        }
+        const bool Placing=PC && PC->IsPlacing();
+        Label(Placing ? TEXT("PLACEMENT ACTIVE") : TEXT("Choose a building to start"),20,397,Gold);
+        if (Placing)
+        {
+            const bool Valid=PC->HasPlacementPoint() && PC->PlacementStatus().ok;
+            Label(PC->HasPlacementPoint() ? UTF8_TO_TCHAR(domain::PlacementReason(PC->PlacementStatus().code)) : TEXT("Move the pointer onto the ground"),20,424,Valid ? FLinearColor(.3,1,.45) : FLinearColor(1,.4,.3));
+            Label(FString::Printf(TEXT("Position %d, %d cm   |   Facing %d deg"),PC->Placement().x_cm,PC->Placement().y_cm,PC->Placement().yaw_degrees),20,447,Muted);
+            Button(TEXT("rotateleft"),TEXT("[  Rotate left"),20,474);
+            Button(TEXT("rotateright"),TEXT("]  Rotate right"),211,474);
+            Button(TEXT("confirm"),TEXT("Enter  Confirm"),20,509);
+            Button(TEXT("cancel"),TEXT("Esc  Cancel"),211,509);
+        }
+        if (!Sim->State.buildings.empty())
+        {
+            const auto& Last=Sim->State.buildings.rbegin()->second;
+            Label(FString::Printf(TEXT("Last building ID %llu | Completed"),uint64(Last.id)),20,554,Gold);
+        }
+        Label(TEXT("Gold outline: build area | Raised strip: slope"),20,580,Muted);
+        Button(TEXT("save"),TEXT("F5  Save settlement"),20,606);
+        Button(TEXT("load"),TEXT("F9  Load settlement"),211,606);
+        Label(TEXT("WASD pan | Wheel zoom | Q/E camera rotate"),20,640,Muted);
+        Label(TEXT("Middle-drag rotate | Shift-middle pan"),20,656,Muted);
+        Label(TEXT("Click / Enter build | Right click / Esc cancel"),20,672,Muted);
+        Label(TEXT("N new fixture | R foundation | F12 diagnostics"),20,688,Muted);
+        Label(TEXT("Placeholder only. No storage or production."),20,705,Muted);
+    }
+    else
+    {
     Label(TEXT("POPULATION / ONE SHARED LEDGER"),20,150,Gold);
     Label(FString::Printf(TEXT("Available workers       %lld"),P.available),20,178);
     Label(FString::Printf(TEXT("Away in service         %lld"),P.away),20,201);
@@ -69,9 +114,10 @@ void AFoundationHUD::DrawHUD()
     Label(TEXT("Right-drag facing | Ctrl+1..9 assign group"),20,678,Muted);
     Label(TEXT("1..9 recall | Ctrl+A all | Space pause"),20,692,Muted);
     Label(TEXT("Z/X/C/V presets | R reset | F12 input debug"),20,706,Muted);
+    }
     if (PC)
     {
-        Label(FString::Printf(TEXT("Selected: %d formations"),PC->Selected.Num()),440,78,Gold,1.1f);
+        if (!Sim->IsSettlement()) Label(FString::Printf(TEXT("Selected: %d formations"),PC->Selected.Num()),440,78,Gold,1.1f);
         if (PC->bMouseDiagnostics)
         {
             const auto Diagnostic = ReadFoundationCursorDiagnostics(*PC);
@@ -109,7 +155,7 @@ void AFoundationHUD::DrawHUD()
     }
     DrawRect(FLinearColor(.025,.04,.045,.95),410,Canvas->SizeY-54,Canvas->SizeX-410,54);
     Label(Sim->Message,430,Canvas->SizeY-42,Gold);
-    Label(TEXT("Original primitive placeholders. Scale support requires measured evidence."),430,Canvas->SizeY-23,Muted);
+    Label(Sim->IsSettlement() ? TEXT("Buildings are saved simulation records. N resets this test fixture.") : TEXT("Original primitive placeholders. Scale support requires measured evidence."),430,Canvas->SizeY-23,Muted);
 }
 void AFoundationHUD::NotifyHitBoxClick(FName Id)
 {
@@ -117,6 +163,16 @@ void AFoundationHUD::NotifyHitBoxClick(FName Id)
     auto* Sim = GetGameInstance()->GetSubsystem<UShoenSimulationSubsystem>();
     auto* Mode = Cast<AFoundationGameMode>(GetWorld()->GetAuthGameMode());
     if (!Sim || !Mode) return;
+    auto* PC=Cast<AFoundationPlayerController>(PlayerOwner);
+    if (Id==TEXT("settlement")) Mode->NewSettlement();
+    if (PC)
+    {
+        if (Id==TEXT("build")) PC->BeginPlacement();
+        if (Id==TEXT("rotateleft")) PC->RotatePlacement(-1);
+        if (Id==TEXT("rotateright")) PC->RotatePlacement(1);
+        if (Id==TEXT("confirm")) PC->ConfirmPlacement();
+        if (Id==TEXT("cancel")) PC->CancelPlacement();
+    }
     if (Id==TEXT("pause")) Sim->SetGameSpeed(0);
     if (Id==TEXT("speed1")) Sim->SetGameSpeed(1);
     if (Id==TEXT("speed3")) Sim->SetGameSpeed(3);

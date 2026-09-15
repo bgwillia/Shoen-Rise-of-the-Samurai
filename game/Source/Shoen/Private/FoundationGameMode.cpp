@@ -1,5 +1,6 @@
 #include "FoundationGameMode.h"
 #include "FormationView.h"
+#include "SettlementView.h"
 #include "FoundationPlayerController.h"
 #include "FoundationHUD.h"
 #include "StrategyCameraPawn.h"
@@ -42,11 +43,14 @@ void AFoundationGameMode::BeginPlay()
     bBenchmark = BenchmarkSeconds > 0 && !BenchmarkOutput.IsEmpty();
     if (bBenchmark) GEngine->Exec(GetWorld(), TEXT("t.MaxFPS 0"));
     auto* Sim = GetGameInstance()->GetSubsystem<UShoenSimulationSubsystem>();
-    Sim->PrepareForLevel(RequestedSoldiers);
+    FString Scenario;
+    FParse::Value(FCommandLine::Get(),TEXT("ShoenScenario="),Scenario);
+    if (Scenario==TEXT("settlement")) Sim->PrepareSettlementForLevel();
+    else Sim->PrepareForLevel(RequestedSoldiers);
     RebuildViews();
     if (auto* PC = GetWorld()->GetFirstPlayerController())
         if (auto* Camera = Cast<AStrategyCameraPawn>(PC->GetPawn()))
-        { Camera->FrameScenario(Views.Num()); Camera->bBenchmarkMotion = bBenchmark; }
+        { if (Sim->IsSettlement()) Camera->FrameSettlement(); else Camera->FrameScenario(Views.Num()); Camera->bBenchmarkMotion = bBenchmark; }
     BenchmarkStart = FPlatformTime::Seconds();
     LastFrameWallTime = BenchmarkStart;
 }
@@ -65,11 +69,12 @@ void AFoundationGameMode::CreateEnvironment()
         Component->SetCanEverAffectNavigation(false);
         auto* Material = Component->CreateDynamicMaterialInstance(0);
         if (Material) Material->SetVectorParameterValue(TEXT("Color"),Color);
+        return Actor;
     };
     Block(FVector(0,0,-90),FVector(1700,1700,1.5),FLinearColor(.25,.30,.22));
-    Block(FVector(-3400,-700,150),FVector(7,10,3),FLinearColor(.48,.39,.28));
-    Block(FVector(-3400,700,100),FVector(5,6,2),FLinearColor(.48,.39,.28));
-    Block(FVector(-2300,0,4),FVector(6,35,.08),FLinearColor(.44,.40,.30));
+    LabDecorations.Add(Block(FVector(-3400,-700,150),FVector(7,10,3),FLinearColor(.48,.39,.28)));
+    LabDecorations.Add(Block(FVector(-3400,700,100),FVector(5,6,2),FLinearColor(.48,.39,.28)));
+    LabDecorations.Add(Block(FVector(-2300,0,4),FVector(6,35,.08),FLinearColor(.44,.40,.30)));
     auto* Light = GetWorld()->SpawnActor<ADirectionalLight>(FVector(0,0,6000),FRotator(-55,-30,0));
     Light->SetMobility(EComponentMobility::Movable);
     Light->GetLightComponent()->SetIntensity(3.0f);
@@ -89,6 +94,17 @@ void AFoundationGameMode::NewScenario(int32 Soldiers)
         if (auto* Pawn = Cast<AStrategyCameraPawn>(PC->GetPawn())) Pawn->FrameScenario(Views.Num());
     }
 }
+void AFoundationGameMode::NewSettlement()
+{
+    auto* Sim=GetGameInstance()->GetSubsystem<UShoenSimulationSubsystem>();
+    if (!Sim->ResetSettlement()) return;
+    RebuildViews();
+    if (auto* PC=Cast<AFoundationPlayerController>(GetWorld()->GetFirstPlayerController()))
+    {
+        PC->CancelPlacement();
+        if (auto* Camera=Cast<AStrategyCameraPawn>(PC->GetPawn())) Camera->FrameSettlement();
+    }
+}
 void AFoundationGameMode::RebuildViews()
 {
     for (const auto& View : Views) if (View) View->Destroy();
@@ -101,6 +117,9 @@ void AFoundationGameMode::RebuildViews()
         View->Rebuild(Sim->State,F);
         Views.Add(View);
     }
+    if (!SettlementView) SettlementView=GetWorld()->SpawnActor<ASettlementView>();
+    SettlementView->Rebuild(Sim->State);
+    for (const auto& Decor : LabDecorations) if (Decor) Decor->SetActorHiddenInGame(Sim->IsSettlement());
     SeenGeneration = Sim->ViewGeneration;
     if (auto* PC = Cast<AFoundationPlayerController>(GetWorld()->GetFirstPlayerController())) PC->Selected.Reset();
 }

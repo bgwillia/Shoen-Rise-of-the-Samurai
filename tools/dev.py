@@ -20,6 +20,10 @@ import uuid
 DEFAULT_ENGINE_ROOT = Path("/Users/Shared/Epic Games/UE_5.8")
 FOUNDATION_MAP = "/Game/Domain/Maps/Foundation"
 FOUNDATION_TEST = "Shoen.Foundation"
+AUTOMATION_TEST_PREFIXES = {
+    "foundation": FOUNDATION_TEST,
+    "placement": "Shoen.Placement",
+}
 BENCHMARK_SOLDIER_COUNTS = (1000, 4000, 8000, 20000)
 RENDERED_WINDOW_ARGUMENTS = ("-windowed", "-ResX=1600", "-ResY=900", "-NoVSync")
 TIMEOUT_EXIT_CODE = 124
@@ -315,7 +319,7 @@ def command_editor_test(args: argparse.Namespace, root: Path, environment: Mappi
     if resolved is None:
         return 2
     editor, project = resolved
-    test_prefix = FOUNDATION_TEST
+    test_prefix = AUTOMATION_TEST_PREFIXES[args.suite]
     report = report_directory(root, f"editor-test-{args.suite}")
     log = prepare_log(root, f"editor-test-{args.suite}")
     status = run_command(
@@ -770,12 +774,20 @@ def build_parser() -> argparse.ArgumentParser:
 
     editor_test = subcommands.add_parser("editor-test", help="run Unreal automation tests")
     add_engine_override(editor_test)
-    editor_test.add_argument("--suite", choices=("foundation",), default="foundation")
+    editor_test.add_argument(
+        "--suite",
+        choices=tuple(AUTOMATION_TEST_PREFIXES),
+        default="foundation",
+    )
     add_timeout(editor_test, 1800)
 
     run = subcommands.add_parser("run", help="run a rendered foundation scenario")
     add_engine_override(run)
-    run.add_argument("--scenario", choices=("foundation", "scale_lab"), default="foundation")
+    run.add_argument(
+        "--scenario",
+        choices=("foundation", "scale_lab", "settlement"),
+        default="foundation",
+    )
     run.add_argument("--soldiers", type=positive_integer)
     add_timeout(run, None)
 

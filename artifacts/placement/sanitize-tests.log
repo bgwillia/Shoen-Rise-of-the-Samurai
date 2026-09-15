@@ -1,0 +1,9 @@
+Test project /tmp/shoen-m2-sanitize
+    Start 1: domain_core_invariants
+1/2 Test #1: domain_core_invariants ...........   Passed   31.07 sec
+    Start 2: domain_building_invariants
+2/2 Test #2: domain_building_invariants .......   Passed    0.92 sec
+
+100% tests passed out of 2
+
+Total Test time (real) =  32.00 sec

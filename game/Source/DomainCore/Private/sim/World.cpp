@@ -1,4 +1,5 @@
 #include "domain/World.h"
+#include "domain/Buildings.h"
 #include <algorithm>
 #include <cmath>
 #include <limits>
@@ -122,6 +123,7 @@ Result ValidateWorld(const World& w) {
     for(auto id:w.applied_transaction_ids) if(id==0 || id>=w.next_transaction_id) return Fail("Invalid applied transaction ID or next counter.");
     for(const auto& r:w.rng) if(r.state==0 || r.counter==std::numeric_limits<std::uint64_t>::max()) return Fail("Invalid or exhausted RNG stream.");
     auto s=Summarize(w);
+    if(auto buildings=ValidateBuildingState(w); !buildings.ok) return buildings;
     if(s.total+w.recorded_emigrants!=w.initial_population+w.births+w.admitted_immigrants) return Fail("Population conservation failed: home + away + dead + emigrants must equal all sources.");
     return {true,{},0};
 }

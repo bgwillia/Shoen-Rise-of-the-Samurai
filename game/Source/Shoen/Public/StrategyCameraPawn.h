@@ -13,6 +13,7 @@ public:
     virtual void Tick(float DeltaSeconds) override;
     void FrameScenario(int32 FormationCount);
     float Zoom() const;
+    void FrameSettlement();
     bool bBenchmarkMotion = false;
 private:
     UPROPERTY() TObjectPtr<USpringArmComponent> Arm;

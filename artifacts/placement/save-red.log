@@ -1,0 +1,15 @@
+PASS preview and atomic successful placement
+PASS each resource independently required and exact costs
+PASS rotated overlap and exact edge contact
+PASS rotated boundary and no build area
+PASS interior terrain peak and independent slope limit
+PASS shared triangulation height and nearest ray hit
+PASS invalid definitions coordinates and references
+FAIL duplicate conflict replay and shared transaction namespace: line 108: same.ok && same.code==PlacementCode::AlreadyApplied && loaded.world==before
+PASS stable global IDs view independence and determinism
+FAIL v2 restore all state and frozen definition dimensions: line 120: SnapshotVersion==2
+FAIL real accepted v1 fixture migration: line 134: migrated[8]==2
+PASS malformed building area and registry validation
+FAIL malformed v2 added records reject before replacement: line 159: bytes[8]==2
+PASS capacity and counter failures are immutable
+10 passed, 4 failed

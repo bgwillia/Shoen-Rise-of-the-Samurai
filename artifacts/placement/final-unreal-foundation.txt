@@ -1,0 +1,9 @@
+Command: python3 tools/dev.py editor-test --suite foundation
+Exit: 0
+Report: /Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/artifacts/tooling-editor-test-foundation-20260915T074407Z-f277f748/index.json
+Succeeded: 5; failed: 0; succeededWithWarnings: 0
+Shoen.Foundation.ClockBinding: Success errors=0 warnings=0
+Shoen.Foundation.InputConfiguration: Success errors=0 warnings=0
+Shoen.Foundation.PopulationAndSave: Success errors=0 warnings=0
+Shoen.Foundation.SelectionProjectionFailure: Success errors=0 warnings=0
+Shoen.Foundation.ViewDoesNotResetPopulation: Success errors=0 warnings=0

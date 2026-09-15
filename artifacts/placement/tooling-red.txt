@@ -1,0 +1,47 @@
+test_editor_test_selects_and_validates_placement_suite (tools.tests.test_dev.DevCliTests.test_editor_test_selects_and_validates_placement_suite) ... FAIL
+test_editor_test_rejects_missing_placement_report (tools.tests.test_dev.DevCliTests.test_editor_test_rejects_missing_placement_report) ... FAIL
+test_editor_test_rejects_failed_placement_report (tools.tests.test_dev.DevCliTests.test_editor_test_rejects_failed_placement_report) ... FAIL
+test_run_passes_settlement_scenario_on_the_foundation_map (tools.tests.test_dev.DevCliTests.test_run_passes_settlement_scenario_on_the_foundation_map) ... FAIL
+
+======================================================================
+FAIL: test_editor_test_selects_and_validates_placement_suite (tools.tests.test_dev.DevCliTests.test_editor_test_selects_and_validates_placement_suite)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/tools/tests/test_dev.py", line 278, in test_editor_test_selects_and_validates_placement_suite
+    self.assertEqual(result.returncode, 0, result.stdout)
+AssertionError: 2 != 0 : usage: dev.py editor-test [-h] [--engine ENGINE] [--suite {foundation}]
+                          [--timeout TIMEOUT]
+dev.py editor-test: error: argument --suite: invalid choice: 'placement' (choose from foundation)
+
+
+======================================================================
+FAIL: test_editor_test_rejects_missing_placement_report (tools.tests.test_dev.DevCliTests.test_editor_test_rejects_missing_placement_report)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/tools/tests/test_dev.py", line 290, in test_editor_test_rejects_missing_placement_report
+    self.assertIn("automation report", result.stdout.lower())
+AssertionError: 'automation report' not found in "usage: dev.py editor-test [-h] [--engine engine] [--suite {foundation}]\n                          [--timeout timeout]\ndev.py editor-test: error: argument --suite: invalid choice: 'placement' (choose from foundation)\n"
+
+======================================================================
+FAIL: test_editor_test_rejects_failed_placement_report (tools.tests.test_dev.DevCliTests.test_editor_test_rejects_failed_placement_report)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/tools/tests/test_dev.py", line 306, in test_editor_test_rejects_failed_placement_report
+    self.assertIn("shoen.placement.overlap: fail", result.stdout.lower())
+AssertionError: 'shoen.placement.overlap: fail' not found in "usage: dev.py editor-test [-h] [--engine engine] [--suite {foundation}]\n                          [--timeout timeout]\ndev.py editor-test: error: argument --suite: invalid choice: 'placement' (choose from foundation)\n"
+
+======================================================================
+FAIL: test_run_passes_settlement_scenario_on_the_foundation_map (tools.tests.test_dev.DevCliTests.test_run_passes_settlement_scenario_on_the_foundation_map)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/tools/tests/test_dev.py", line 331, in test_run_passes_settlement_scenario_on_the_foundation_map
+    self.assertEqual(result.returncode, 0, result.stdout)
+AssertionError: 2 != 0 : usage: dev.py run [-h] [--engine ENGINE] [--scenario {foundation,scale_lab}]
+                  [--soldiers SOLDIERS] [--timeout TIMEOUT]
+dev.py run: error: argument --scenario: invalid choice: 'settlement' (choose from foundation, scale_lab)
+
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.355s
+
+FAILED (failures=4)

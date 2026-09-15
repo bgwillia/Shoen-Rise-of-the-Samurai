@@ -1,0 +1,8 @@
+Command: python3 tools/dev.py editor-test --suite placement
+Exit: 0
+Report: /Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/artifacts/tooling-editor-test-placement-20260915T074325Z-341669a3/index.json
+Succeeded: 4; failed: 0; succeededWithWarnings: 0
+Shoen.Placement.ContentTransactionAndSave: Success errors=0 warnings=0
+Shoen.Placement.ContentValidation: Success errors=0 warnings=0
+Shoen.Placement.InputCancelRotateAndConfirm: Success errors=0 warnings=0
+Shoen.Placement.PassiveViewRecreation: Success errors=0 warnings=0

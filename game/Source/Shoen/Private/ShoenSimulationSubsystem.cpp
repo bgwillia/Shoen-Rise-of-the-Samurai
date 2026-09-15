@@ -1,4 +1,6 @@
 #include "ShoenSimulationSubsystem.h"
+#include "BuildingContent.h"
+#include "domain/Buildings.h"
 #include "domain/SaveCodec.h"
 #include "domain/Battle.h"
 #include "Misc/FileHelper.h"
@@ -13,14 +15,90 @@ void UShoenSimulationSubsystem::Initialize(FSubsystemCollectionBase& Collection)
 void UShoenSimulationSubsystem::ResetScenario(int32 Soldiers)
 {
     State = Soldiers > 0 ? domain::MakeScaleWorld(Soldiers) : domain::MakeFoundationWorld();
+    BuildingCatalog.clear();
     Message = Soldiers > 0 ? FString::Printf(TEXT("New scale fixture: %d people mobilized from its source population."), Soldiers)
         : TEXT("Accounting fixture: 200 agricultural workers. Press M to mobilize 100.");
     ++ViewGeneration;
+    ++WorldGeneration;
+}
+bool UShoenSimulationSubsystem::ResetSettlement()
+{
+    domain::BuildingCatalog CandidateCatalog;
+    domain::BuildArea CandidateArea;
+    int64 Timber = 0;
+    int64 Treasury = 0;
+    FString Error;
+    if (!LoadSettlementContent(CandidateCatalog, CandidateArea, Timber, Treasury, Error))
+    {
+        Message = FString::Printf(TEXT("Settlement content rejected: %s Current state kept."), *Error);
+        return false;
+    }
+
+    domain::World Candidate = domain::MakeFoundationWorld();
+    const auto Settlement = Candidate.settlements.find(CandidateArea.settlement_id);
+    if (Settlement == Candidate.settlements.end())
+    {
+        Message = TEXT("Settlement content rejected: build area references an unknown settlement. Current state kept.");
+        return false;
+    }
+    Settlement->second.resources.timber = Timber;
+    Settlement->second.resources.treasury = Treasury;
+    Candidate.build_areas.emplace(CandidateArea.settlement_id, std::move(CandidateArea));
+    const domain::Result WorldValidation = domain::ValidateWorld(Candidate);
+    const domain::Result BuildingValidation = domain::ValidateBuildingState(Candidate);
+    if (!WorldValidation.ok || !BuildingValidation.ok)
+    {
+        const std::string& DomainMessage = !WorldValidation.ok ? WorldValidation.error : BuildingValidation.error;
+        Message = FString::Printf(
+            TEXT("Settlement content rejected: %s Current state kept."),
+            UTF8_TO_TCHAR(DomainMessage.c_str()));
+        return false;
+    }
+
+    State = std::move(Candidate);
+    BuildingCatalog = std::move(CandidateCatalog);
+    const domain::BuildingDefinition& Storehouse = BuildingCatalog.at("small_storehouse");
+    Message = FString::Printf(
+        TEXT("Settlement fixture: %s costs %lld timber and %lld treasury. Press B to place."),
+        UTF8_TO_TCHAR(Storehouse.display_name.c_str()),
+        Storehouse.timber_cost,
+        Storehouse.treasury_cost);
+    ++ViewGeneration;
+    ++WorldGeneration;
+    return true;
 }
 void UShoenSimulationSubsystem::PrepareForLevel(int32 RequestedSoldiers)
 {
     if (!bHasPresentedLevel && RequestedSoldiers > 0) ResetScenario(RequestedSoldiers);
     bHasPresentedLevel = true;
+}
+bool UShoenSimulationSubsystem::PrepareSettlementForLevel()
+{
+    if (!bHasPresentedLevel && !IsSettlement() && !ResetSettlement())
+    {
+        return false;
+    }
+    bHasPresentedLevel = true;
+    if (!IsSettlement())
+    {
+        Message = TEXT("Settlement fixture was not prepared; current simulation state kept.");
+        return false;
+    }
+    return true;
+}
+domain::PlacementResult UShoenSimulationSubsystem::PreviewBuilding(const domain::PlacementCommand& Command) const
+{
+    return domain::EvaluatePlacement(State, BuildingCatalog, Command);
+}
+domain::PlacementResult UShoenSimulationSubsystem::PlaceBuilding(const domain::PlacementCommand& Command)
+{
+    const domain::PlacementResult Result = domain::PlaceBuilding(State, BuildingCatalog, Command);
+    Message = UTF8_TO_TCHAR(domain::PlacementReason(Result.code));
+    if (Result.ok && Result.code == domain::PlacementCode::Valid)
+    {
+        ++ViewGeneration;
+    }
+    return Result;
 }
 void UShoenSimulationSubsystem::Advance(float Seconds)
 {
@@ -86,7 +164,7 @@ bool UShoenSimulationSubsystem::SaveToPath(const FString& Path)
     { Message = TEXT("Could not preserve save backup; original kept."); return false; }
     if (!IFileManager::Get().Move(*Path, *Temp, true, true))
     { Message = TEXT("Could not replace save; backup is available."); return false; }
-    Message = TEXT("Saved the full simulation, origins, clock and formation orders.");
+    Message = TEXT("Saved the full simulation, origins, clock, formation orders and buildings.");
     return true;
 }
 bool UShoenSimulationSubsystem::LoadFromPath(const FString& Path)
@@ -96,9 +174,56 @@ bool UShoenSimulationSubsystem::LoadFromPath(const FString& Path)
     { Message = TEXT("Save missing or exceeds the size limit. Current state kept."); return false; }
     TArray<uint8> Bytes;
     if (!FFileHelper::LoadFileToArray(Bytes, *Path)) { Message = TEXT("Could not read save. Current state kept."); return false; }
-    const bool Okay = Report(domain::LoadSnapshot(State, std::span<const uint8>(Bytes.GetData(), Bytes.Num())), TEXT("Loaded saved date, population, resources and formations."));
-    if (Okay) ++ViewGeneration;
-    return Okay;
+    domain::DecodeResult Decoded = domain::DecodeSnapshot(std::span<const uint8>(Bytes.GetData(), Bytes.Num()));
+    if (!Decoded.ok)
+    {
+        Message = UTF8_TO_TCHAR(Decoded.error.c_str());
+        return false;
+    }
+
+    domain::BuildingCatalog CandidateCatalog;
+    if (!Decoded.world.build_areas.empty() || !Decoded.world.buildings.empty())
+    {
+        FString Error;
+        if (!LoadBuildingCatalog(CandidateCatalog, Error))
+        {
+            Message = FString::Printf(TEXT("Saved settlement content unavailable: %s Current state kept."), *Error);
+            return false;
+        }
+        for (const auto& [BuildingId, Building] : Decoded.world.buildings)
+        {
+            const auto Definition = CandidateCatalog.find(Building.definition_id);
+            if (Definition == CandidateCatalog.end() || Definition->second.version < Building.definition_version)
+            {
+                Message = FString::Printf(
+                    TEXT("Save references unavailable building definition '%s' version %u. Current state kept."),
+                    UTF8_TO_TCHAR(Building.definition_id.c_str()),
+                    Building.definition_version);
+                return false;
+            }
+        }
+        const domain::Result Validation = domain::ValidateBuildingState(Decoded.world);
+        if (!Validation.ok)
+        {
+            Message = FString::Printf(
+                TEXT("Saved settlement rejected: %s Current state kept."),
+                UTF8_TO_TCHAR(Validation.error.c_str()));
+            return false;
+        }
+    }
+
+    State = std::move(Decoded.world);
+    BuildingCatalog = std::move(CandidateCatalog);
+    Message = TEXT("Loaded saved date, population, resources, formations and buildings.");
+    ++ViewGeneration;
+    ++WorldGeneration;
+    return true;
 }
-bool UShoenSimulationSubsystem::Save() { return SaveToPath(FPaths::ProjectSavedDir() / TEXT("SaveGames/Foundation.sav")); }
-bool UShoenSimulationSubsystem::Load() { return LoadFromPath(FPaths::ProjectSavedDir() / TEXT("SaveGames/Foundation.sav")); }
+bool UShoenSimulationSubsystem::Save()
+{
+    return SaveToPath(FPaths::ProjectSavedDir() / (IsSettlement() ? TEXT("SaveGames/Settlement.sav") : TEXT("SaveGames/Foundation.sav")));
+}
+bool UShoenSimulationSubsystem::Load()
+{
+    return LoadFromPath(FPaths::ProjectSavedDir() / (IsSettlement() ? TEXT("SaveGames/Settlement.sav") : TEXT("SaveGames/Foundation.sav")));
+}

@@ -2,7 +2,7 @@
 #include "domain/World.h"
 #include <span>
 namespace domain {
-constexpr std::uint32_t SnapshotVersion = 1;
+constexpr std::uint32_t SnapshotVersion = 2;
 constexpr std::size_t MaxSnapshotBytes = 16 * 1024 * 1024;
 struct DecodeResult { bool ok = false; std::string error; World world; };
 // Empty bytes indicate invalid source state. Decoding never changes a live world.

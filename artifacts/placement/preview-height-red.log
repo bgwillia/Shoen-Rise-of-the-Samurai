@@ -1,0 +1,16 @@
+PASS preview and atomic successful placement
+PASS each resource independently required and exact costs
+PASS rotated overlap and exact edge contact
+PASS rotated boundary and no build area
+PASS interior terrain peak and independent slope limit
+PASS shared triangulation height and nearest ray hit
+FAIL invalid preview retains authoritative ground elevation: line 86: !preview.ok && preview.code==PlacementCode::TerrainTooSteep && preview.ground_z_cm==400
+PASS invalid definitions coordinates and references
+PASS duplicate conflict replay and shared transaction namespace
+PASS stable global IDs view independence and determinism
+PASS v2 restore all state and frozen definition dimensions
+PASS real accepted v1 fixture migration
+PASS malformed building area and registry validation
+PASS malformed v2 added records reject before replacement
+PASS capacity and counter failures are immutable
+14 passed, 1 failed

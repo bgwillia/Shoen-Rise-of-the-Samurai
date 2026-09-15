@@ -28,6 +28,17 @@ void AStrategyCameraPawn::FrameScenario(int32 Count)
     SetActorLocation(TargetFocus);
     Arm->TargetArmLength = TargetZoom;
 }
+void AStrategyCameraPawn::FrameSettlement()
+{
+    TargetFocus = FVector(-1700,0,0);
+    TargetZoom = 16000;
+    TargetYaw = -90;
+    ScenarioFocus = TargetFocus;
+    ScenarioZoom = TargetZoom;
+    SetActorLocation(TargetFocus);
+    Arm->TargetArmLength = TargetZoom;
+    Arm->SetRelativeRotation(FRotator(-60,TargetYaw,0));
+}
 float AStrategyCameraPawn::Zoom() const { return Arm->TargetArmLength; }
 void AStrategyCameraPawn::Tick(float Dt)
 {

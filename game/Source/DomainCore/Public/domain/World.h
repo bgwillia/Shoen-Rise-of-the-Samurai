@@ -1,4 +1,5 @@
 #pragma once
+#include "domain/BuildingTypes.h"
 #include <array>
 #include <cstdint>
 #include <map>
@@ -78,6 +79,8 @@ struct World {
     std::map<EntityId, ServiceRecord> services;
     std::map<EntityId, Formation> formations;
     std::map<EntityId, General> generals;
+    std::map<EntityId, Building> buildings;
+    std::map<EntityId, BuildArea> build_areas;
     Day campaign_day = 0; int speed = 1; std::int64_t subday_microseconds = 0;
     std::int64_t formation_substep_microseconds = 0;
     std::uint64_t revision = 0; EntityId next_id = 1, next_transaction_id = 1;

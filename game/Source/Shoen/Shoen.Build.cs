@@ -7,6 +7,6 @@ public class Shoen : ModuleRules
         CppStandard = CppStandardVersion.Cpp20;
         bEnableExceptions = true;
         PublicDependencyModuleNames.AddRange(new[] { "Core", "CoreUObject", "Engine", "InputCore", "DomainCore" });
-        PrivateDependencyModuleNames.AddRange(new[] { "Json", "JsonUtilities", "Slate", "SlateCore", "ApplicationCore" });
+        PrivateDependencyModuleNames.AddRange(new[] { "Json", "JsonUtilities", "Slate", "SlateCore", "ApplicationCore", "MeshDescription", "StaticMeshDescription" });
     }
 }

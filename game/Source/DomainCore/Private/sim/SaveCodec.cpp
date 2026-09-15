@@ -16,6 +16,7 @@ struct Writer {
     void U8(std::uint8_t n) {bytes.push_back(n);}
     void U32(std::uint32_t n) {for(int i=0;i<4;++i) U8(static_cast<std::uint8_t>(n>>(8*i)));}
     void U64(std::uint64_t n) {for(int i=0;i<8;++i) U8(static_cast<std::uint8_t>(n>>(8*i)));}
+    void I32(std::int32_t n) {U32(std::bit_cast<std::uint32_t>(n));}
     void I64(std::int64_t n) {U64(std::bit_cast<std::uint64_t>(n));}
     void Double(double n) {U64(std::bit_cast<std::uint64_t>(n));}
     void String(const std::string& s) {U32(static_cast<std::uint32_t>(s.size())); bytes.insert(bytes.end(),s.begin(),s.end());}
@@ -27,10 +28,11 @@ struct Reader {
     std::uint8_t U8() {if(pos>=bytes.size()) {Fail("Snapshot is truncated."); return 0;} return bytes[pos++];}
     std::uint32_t U32() {std::uint32_t n=0; for(int i=0;i<4;++i) n|=static_cast<std::uint32_t>(U8())<<(8*i); return n;}
     std::uint64_t U64() {std::uint64_t n=0; for(int i=0;i<8;++i) n|=static_cast<std::uint64_t>(U8())<<(8*i); return n;}
+    std::int32_t I32() {return std::bit_cast<std::int32_t>(U32());}
     std::int64_t I64() {return std::bit_cast<std::int64_t>(U64());}
     double Double() {return std::bit_cast<double>(U64());}
     bool Bool() {auto b=U8(); if(b>1) Fail("Snapshot boolean is invalid."); return b==1;}
-    std::uint32_t Count() {auto n=U32(); if(n>MaxServiceRecords || !error.empty()) {Fail("Snapshot record count exceeds the foundation limit."); return 0;} return n;}
+    std::uint32_t Count(std::size_t maximum=MaxServiceRecords) {auto n=U32(); if(n>maximum || !error.empty()) {Fail("Snapshot record count exceeds the foundation limit."); return 0;} return n;}
     std::string String() {
         auto n=U32(); if(n>256 || n>bytes.size()-pos || !error.empty()) {Fail("Snapshot string exceeds its bounds."); return {};}
         std::string value(reinterpret_cast<const char*>(bytes.data()+pos),n); pos+=n; return value;
@@ -72,8 +74,19 @@ void EncodeWorld(Writer& p,const World& w) {
         p.U64(id); p.String(g.name);
         for(int a:{g.command,g.coordination,g.scouting,g.secrecy,g.terrain_knowledge,g.logistics}) p.U32(static_cast<std::uint32_t>(a));
     }
+    // v2 appends settlement geometry and building records to the unchanged v1 prefix.
+    p.Count(w.build_areas);
+    for(const auto& [id,a]:w.build_areas) {
+        p.U64(id); p.I32(a.origin_x_cm); p.I32(a.origin_y_cm); p.I32(a.cell_size_cm); p.U32(a.columns); p.U32(a.rows);
+        p.Count(a.heights_cm); for(auto height:a.heights_cm) p.I32(height);
+    }
+    p.Count(w.buildings);
+    for(const auto& [id,b]:w.buildings) {
+        p.U64(id); p.U64(b.settlement_id); p.U64(b.district_id); p.U64(b.placement_transaction_id); p.String(b.definition_id); p.U32(b.definition_version);
+        p.I32(b.x_cm); p.I32(b.y_cm); p.I32(b.z_cm); p.I32(b.yaw_degrees); p.I32(b.width_cm); p.I32(b.depth_cm); p.I32(b.height_cm); p.U8(static_cast<std::uint8_t>(b.state)); p.I32(b.max_height_variation_cm); p.I32(b.max_slope_permille);
+    }
 }
-World ReadWorld(Reader& p) {
+World ReadWorld(Reader& p,std::uint32_t version) {
     World w;
     w.campaign_day=p.I64(); auto speed=p.U32(); if(speed>10) p.Fail("Snapshot speed is invalid."); w.speed=static_cast<int>(speed);
     w.subday_microseconds=p.I64(); w.formation_substep_microseconds=p.I64(); w.revision=p.U64(); w.next_id=p.U64(); w.next_transaction_id=p.U64();
@@ -110,6 +123,23 @@ World ReadWorld(Reader& p) {
         for(int* a:{&g.command,&g.coordination,&g.scouting,&g.secrecy,&g.terrain_knowledge,&g.logistics}) {auto value=p.U32(); if(value>100) p.Fail("Snapshot general attribute is invalid."); *a=static_cast<int>(value);}
         p.Insert(w.generals,std::move(g));
     }
+    if(version>=2 && p.error.empty()) {
+        n=p.Count(MaxBuildAreas);
+        for(std::uint32_t i=0;i<n && p.error.empty();++i) {
+            BuildArea a; a.settlement_id=p.U64(); a.origin_x_cm=p.I32(); a.origin_y_cm=p.I32(); a.cell_size_cm=p.I32(); a.columns=p.U32(); a.rows=p.U32();
+            auto count=p.Count(MaxTerrainVertices);
+            if(a.columns<2 || a.rows<2 || static_cast<std::uint64_t>(a.columns)*a.rows!=count) {p.Fail("Snapshot terrain dimensions do not match the bounded height array."); break;}
+            for(std::uint32_t j=0;j<count && p.error.empty();++j) a.heights_cm.push_back(p.I32());
+            auto id=a.settlement_id; if(!w.build_areas.emplace(id,std::move(a)).second) p.Fail("Snapshot has duplicate settlement build areas.");
+        }
+        n=p.Count(MaxBuildings);
+        for(std::uint32_t i=0;i<n && p.error.empty();++i) {
+            Building b; b.id=p.U64(); b.settlement_id=p.U64(); b.district_id=p.U64(); b.placement_transaction_id=p.U64(); b.definition_id=p.String(); b.definition_version=p.U32();
+            b.x_cm=p.I32(); b.y_cm=p.I32(); b.z_cm=p.I32(); b.yaw_degrees=p.I32(); b.width_cm=p.I32(); b.depth_cm=p.I32(); b.height_cm=p.I32(); b.state=static_cast<ConstructionState>(p.U8()); b.max_height_variation_cm=p.I32(); b.max_slope_permille=p.I32();
+            p.Insert(w.buildings,std::move(b));
+        }
+    }
+    // v1 migration deliberately leaves both registries empty; no fixture state is invented.
     return w;
 }
 }
@@ -123,12 +153,13 @@ DecodeResult DecodeSnapshot(std::span<const std::uint8_t> bytes) {
     if(bytes.size()<HeaderSize || bytes.size()>MaxSnapshotBytes) return {false,"Snapshot size is outside supported bounds.",{}};
     Reader h{bytes,0,{}};
     for(auto b:Magic) if(h.U8()!=b) return {false,"This is not a SHŌEN foundation snapshot.",{}};
-    if(h.U32()!=SnapshotVersion) return {false,"Unsupported snapshot version; no migration is available.",{}};
+    const auto version=h.U32();
+    if(version!=1 && version!=SnapshotVersion) return {false,"Unsupported snapshot version; this build reads versions 1 and 2.",{}};
     auto length=h.U64(); auto expected=h.U64();
     if(length!=bytes.size()-HeaderSize) return {false,"Snapshot length does not match its header.",{}};
     auto payload=bytes.subspan(HeaderSize);
     if(Checksum(payload)!=expected) return {false,"Snapshot checksum mismatch.",{}};
-    Reader p{payload,0,{}}; auto w=ReadWorld(p);
+    Reader p{payload,0,{}}; auto w=ReadWorld(p,version);
     if(!p.error.empty()) return {false,p.error,{}};
     if(p.pos!=payload.size()) return {false,"Snapshot contains trailing payload data.",{}};
     auto validation=ValidateWorld(w); if(!validation.ok) return {false,validation.error,{}};

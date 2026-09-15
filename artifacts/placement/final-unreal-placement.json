@@ -1,0 +1,89 @@
+{
+  "devices": [
+    {
+      "deviceName": "Brians-MacBook-Pro-3.local",
+      "instance": "FFA875DDE74CF298D067439DC41B7D1A",
+      "instanceName": "Brians-MacBook-Pro-3.local-31997",
+      "platform": "MacEditor",
+      "oSVersion": "macOS 26.6.2 25G83",
+      "model": "Default",
+      "gPU": "Apple M1 Max",
+      "cPUModel": "Apple M1 Max",
+      "rAMInGB": 32,
+      "renderMode": "SM6",
+      "rHI": "",
+      "appInstanceLog": ""
+    }
+  ],
+  "reportCreatedOn": "2026.09.15-07.43.47",
+  "succeeded": 4,
+  "succeededWithWarnings": 0,
+  "failed": 0,
+  "notRun": 0,
+  "inProcess": 0,
+  "totalDuration": 0.06710158288478851,
+  "comparisonExported": false,
+  "comparisonExportDirectory": "",
+  "tests": [
+    {
+      "testDisplayName": "ContentTransactionAndSave",
+      "fullTestPath": "Shoen.Placement.ContentTransactionAndSave",
+      "tags": [],
+      "state": "Success",
+      "deviceInstance": [
+        "FFA875DDE74CF298D067439DC41B7D1A"
+      ],
+      "duration": 0.016633998602628708,
+      "dateTime": "2026.09.15-07.43.46",
+      "entries": [],
+      "warnings": 0,
+      "errors": 0,
+      "artifacts": []
+    },
+    {
+      "testDisplayName": "ContentValidation",
+      "fullTestPath": "Shoen.Placement.ContentValidation",
+      "tags": [],
+      "state": "Success",
+      "deviceInstance": [
+        "FFA875DDE74CF298D067439DC41B7D1A"
+      ],
+      "duration": 0.016693376004695892,
+      "dateTime": "2026.09.15-07.43.47",
+      "entries": [],
+      "warnings": 0,
+      "errors": 0,
+      "artifacts": []
+    },
+    {
+      "testDisplayName": "InputCancelRotateAndConfirm",
+      "fullTestPath": "Shoen.Placement.InputCancelRotateAndConfirm",
+      "tags": [],
+      "state": "Success",
+      "deviceInstance": [
+        "FFA875DDE74CF298D067439DC41B7D1A"
+      ],
+      "duration": 0.016601167619228363,
+      "dateTime": "2026.09.15-07.43.47",
+      "entries": [],
+      "warnings": 0,
+      "errors": 0,
+      "artifacts": []
+    },
+    {
+      "testDisplayName": "PassiveViewRecreation",
+      "fullTestPath": "Shoen.Placement.PassiveViewRecreation",
+      "tags": [],
+      "state": "Success",
+      "deviceInstance": [
+        "FFA875DDE74CF298D067439DC41B7D1A"
+      ],
+      "duration": 0.01717304065823555,
+      "dateTime": "2026.09.15-07.43.47",
+      "entries": [],
+      "warnings": 0,
+      "errors": 0,
+      "artifacts": []
+    }
+  ]
+}

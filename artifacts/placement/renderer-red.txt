@@ -1,0 +1,62 @@
++ ["/Users/Shared/Epic Games/UE_5.8/Engine/Build/BatchFiles/Mac/Build.sh", "ShoenEditor", "Mac", "Development", "/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/game/Shoen.uproject", "-WaitMutex", "-NoHotReloadFromIDE"]
+Setting up bundled DotNet SDK
+/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/ThirdParty/DotNet/10.0/mac-arm64
+Running dotnet Engine/Binaries/DotNET/UnrealBuildTool/UnrealBuildTool.dll ShoenEditor Mac Development /Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/game/Shoen.uproject -WaitMutex -NoHotReloadFromIDE
+Log file: /Users/brianwilliams/Library/Application Support/Epic/UnrealBuildTool/Log.txt
+Determining max actions to execute in parallel (10 physical cores, 10 logical cores)
+  Executing up to 10 processes, one per physical core
+Using 'git status' to determine working set for adaptive non-unity build (/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai).
+UbaServer - Listening on 0.0.0.0:1345
+Invalidating makefile for ShoenEditor (source file added)
+Compiling with Mac SDK 26.5, minimum Target OS version 14.00
+UHT compiled-in object format Default
+Building ShoenEditor...
+===== Toolchain Information =====
+Using Clang compiler 21.1.6 (/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++)
+  Apple clang version 21.0.0 (clang-2100.1.1.101) Target: arm64-apple-darwin25.6.0 Thread model: posix InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+Using Clang archiver (/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool)
+  Apple clang version 21.0.0 (clang-2100.1.1.101) Target: arm64-apple-darwin25.6.0 Thread model: posix InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+[Adaptive Build] Excluded from DomainCore unity file: World.cpp, Buildings.cpp
+[Adaptive Build] Excluded from Shoen unity file: PlacementTests.cpp
+=================================
+Using Unreal Build Accelerator local executor to run 14 action(s)
+  CPU 10 physical cores, 10 logical cores
+  Memory 32 GB physical, 31.04 GB/32 GB committed
+  UBA Storage capacity 40 GB
+[1/14] Compile [Apple] Buildings.cpp
+[2/14] Compile [Apple] Battle.cpp
+[3/14] Compile [Apple] World.cpp
+[4/14] Compile [Apple] SaveCodec.cpp
+[5/14] Link [Apple] libUnrealEditor-DomainCore.dylib
+[6/14] Compile [Apple] FoundationHUD.cpp
+[7/14] Compile [Apple] Module.Shoen.gen.cpp
+[8/14] Compile [Apple] FormationView.cpp
+[9/14] Compile [Apple] FoundationPlayerController.cpp
+[10/14] Compile [Apple] ShoenSimulationSubsystem.cpp
+[11/14] Compile [Apple] FoundationGameMode.cpp
+[12/14] Compile [Apple] FoundationTests.cpp
+[13/14] Compile [Apple] PlacementTests.cpp
+[14/14] Link [Apple] libUnrealEditor-Shoen.dylib
+Undefined symbols for architecture arm64:
+  "ASettlementView::Rebuild(domain::World const&)", referenced from:
+      FShoenBuildingView::RunTest(FString const&) in PlacementTests.cpp.o
+      FShoenBuildingView::RunTest(FString const&) in PlacementTests.cpp.o
+      FShoenBuildingView::RunTest(FString const&) in PlacementTests.cpp.o
+      FShoenBuildingView::RunTest(FString const&) in PlacementTests.cpp.o
+  "ASettlementView::ASettlementView()", referenced from:
+      void InternalConstructor<ASettlementView>(FObjectInitializer const&) in Module.Shoen.gen.cpp.o
+  "ASettlementView::BuildingCount() const", referenced from:
+      FShoenBuildingView::RunTest(FString const&) in PlacementTests.cpp.o
+      FShoenBuildingView::RunTest(FString const&) in PlacementTests.cpp.o
+      FShoenBuildingView::RunTest(FString const&) in PlacementTests.cpp.o
+      FShoenBuildingView::RunTest(FString const&) in PlacementTests.cpp.o
+  "ASettlementView::GetBuildingTransform(unsigned long long, UE::Math::TTransform<double>&) const", referenced from:
+      FShoenBuildingView::RunTest(FString const&) in PlacementTests.cpp.o
+      FShoenBuildingView::RunTest(FString const&) in PlacementTests.cpp.o
+ld: symbol(s) not found for architecture arm64
+clang++: error: linker command failed with exit code 1 (use -v to see invocation)
+Total time in Unreal Build Accelerator local executor: 27.77 seconds
+
+Result: Failed (OtherCompilationError)
+Total execution time: 37.63 seconds
+Trace written to file /Users/brianwilliams/Library/Application Support/Epic/UnrealBuildTool/Trace.uba with size 9.9kb

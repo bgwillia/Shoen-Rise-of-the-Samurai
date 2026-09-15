@@ -1,0 +1,18 @@
+FAIL preview and atomic successful placement: line 30: b.max_height_variation_cm==20 && b.max_slope_permille==50
+PASS each resource independently required and exact costs
+PASS rotated overlap and exact edge contact
+PASS rotated boundary and no build area
+PASS interior terrain peak and independent slope limit
+PASS shared triangulation height and nearest ray hit
+PASS invalid preview retains authoritative ground elevation
+PASS invalid definitions coordinates and references
+PASS duplicate conflict replay and shared transaction namespace
+PASS stable global IDs view independence and determinism
+PASS v2 restore all state and frozen definition dimensions
+PASS real accepted v1 fixture migration
+FAIL saved buildings retain terrain placement constraints: line 154: !ValidateBuildingState(tampered).ok && !ValidateWorld(tampered).ok && EncodeSnapshot(tampered).empty()
+FAIL frozen terrain tolerances survive changed tuning: line 166: w.buildings.at(placed.building_id).max_height_variation_cm==100 && w.buildings.at(placed.building_id).max_slope_permille==100
+FAIL malformed building area and registry validation: line 173: !ValidateWorld(bad).ok && !ValidateBuildingState(bad).ok && EncodeSnapshot(bad).empty()
+FAIL malformed v2 added records reject before replacement: line 200: !LoadSnapshot(w,bad).ok && w==before
+PASS capacity and counter failures are immutable
+12 passed, 5 failed

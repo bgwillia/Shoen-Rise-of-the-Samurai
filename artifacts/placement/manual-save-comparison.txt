@@ -1,0 +1,7 @@
+F5 save two buildings; place third; F9 load; F5 resave (campaign paused).
+Before bytes=1194 SHA256=af13bc225026ddc511a8043106c975c8526cbdb11b375312080c140b5cefeecb
+After bytes=1194 SHA256=af13bc225026ddc511a8043106c975c8526cbdb11b375312080c140b5cefeecb
+Byte-identical=True
+After rendered boundary rejection, slope rejection, Escape cancel and F5 resave: still byte-identical=True
+Final original-HUD build: separated F9, observed 2 buildings/160 timber/90 treasury, then F5; still byte-identical=True.
+Final full replay after the separated F5: B/Enter added third building, observed140/85 andID7; F9 observed160/90 andID6 with thirdremoved; F5 remains byte-identical=True.

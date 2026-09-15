@@ -1,0 +1,14 @@
+FAIL preview and atomic successful placement: line 24: p.ok && p.code==PlacementCode::Valid && p.ground_z_cm==0
+FAIL each resource independently required and exact costs: line 20: !result.ok && result.code==code
+FAIL rotated overlap and exact edge contact: line 44: PlaceBuilding(w,cat,Command()).ok
+FAIL rotated boundary and no build area: line 20: !result.ok && result.code==code
+FAIL interior terrain peak and independent slope limit: line 63: TerrainHeightAt(a,corner.x,corner.y)==0
+FAIL shared triangulation height and nearest ray hit: line 73: std::abs(TerrainHeightAt(a,75,25)-25)<1e-8
+FAIL invalid definitions coordinates and references: line 83: ValidateBuildingCatalog(cat).ok
+FAIL duplicate conflict replay and shared transaction namespace: line 101: placed.ok
+FAIL stable global IDs view independence and determinism: line 114: PlaceBuilding(a,cat,c).ok && PlaceBuilding(b,cat,c).ok
+FAIL v2 restore all state and frozen definition dimensions: line 120: SnapshotVersion==2
+FAIL real accepted v1 fixture migration: line 134: migrated[8]==2
+FAIL malformed building area and registry validation: line 137: p.ok
+FAIL capacity and counter failures are immutable: line 20: !result.ok && result.code==code
+0 passed, 13 failed

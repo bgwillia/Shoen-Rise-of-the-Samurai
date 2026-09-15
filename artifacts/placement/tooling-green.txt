@@ -1,0 +1,9 @@
+test_editor_test_selects_and_validates_placement_suite (tools.tests.test_dev.DevCliTests.test_editor_test_selects_and_validates_placement_suite) ... ok
+test_editor_test_rejects_missing_placement_report (tools.tests.test_dev.DevCliTests.test_editor_test_rejects_missing_placement_report) ... ok
+test_editor_test_rejects_failed_placement_report (tools.tests.test_dev.DevCliTests.test_editor_test_rejects_failed_placement_report) ... ok
+test_run_passes_settlement_scenario_on_the_foundation_map (tools.tests.test_dev.DevCliTests.test_run_passes_settlement_scenario_on_the_foundation_map) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 1.942s
+
+OK
