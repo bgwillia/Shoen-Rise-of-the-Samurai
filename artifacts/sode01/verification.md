@@ -79,6 +79,12 @@ The committed Dō/Manny baseline is `6dbc613`; this task preserves those assets,
 
 Final source SHA-256: `009e3fd8ba1f89119f874e94673b2abee187284e1e386e23eb77acbbea3f0d9a`. [FILES.sha](../../SourceArt/Characters/Samurai/Sode01/FILES.sha) covers the saved source, manifest and exports. Source/pose hashes match; the separate pre-export source hash records the input before hidden runtime copies were saved.
 
+## Follow-up unity-build correction
+
+After the asset commit, the shared unity build exposed four anonymous-namespace names that collided with Dō when Unreal compiled the files together. Commit `8ff7bb2` prefixes the Sode constants/functions and all their uses; it changes identifiers only. Independent scanning found no additional Sode helper collisions.
+
+The separate Kusazuri task then ran the serialized shared build successfully: **exit 0, 24.98 seconds wall time** (Unreal reports 24.34 seconds internally). `Module.Shoen.cpp` compiled with Sode in the unity unit, the separate Kusazuri source compiled, and the editor library linked. [Copied build log](unity-build-after-fix.log), [result and provenance](unity-build-after-fix.json). This closes the unity-build verification gap; it does not represent a new animation or automation run.
+
 ## Limitations and pipeline assessment
 
 The atlas and lamella rhythm remain regular; ornament and knots are simpler than the sheets. Suspension arcs are conspicuous and raised-arm poses look lifted rather than gravity driven. Flexible tie contact remains in the listed poses. The preview controller is an isolated art integration example, not production battlefield equipment wiring. No human motion/visual acceptance, continuous clearance or full-army performance is claimed.

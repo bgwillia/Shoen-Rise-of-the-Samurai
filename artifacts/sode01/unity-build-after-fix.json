@@ -1,0 +1,13 @@
+{
+  "command": [
+    "python3",
+    "tools/dev.py",
+    "build"
+  ],
+  "exit_code": 0,
+  "elapsed_seconds": 24.975242853164673,
+  "verified_correction_commit": "8ff7bb2",
+  "executed_by": "Concurrent user-requested Kusazuri task, serialized shared build slot",
+  "copied_from": "artifacts/kusazuri01/build-result.json",
+  "scope": "Build and link only; no new automation or rendered capture claim"
+}
