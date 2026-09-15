@@ -17,11 +17,11 @@ The user's resumed Milestone 1 acceptance request and the open input blocker in 
 - [x] Read status, active plan, input/camera/HUD configuration, and installed Mac/Slate cursor paths.
 - [x] Reproduce baseline; instrument independent native and cached coordinates, geometry, DPI, window mode/focus/capture.
 - [x] Characterize the automated click-marker discrepancy using independent native coordinates; reproduce separate invalid-click and invalid-box selection failures before changing their behavior.
-- [ ] Confirm the original human-click report and continuous physical pointer tracking.
+- [x] Receive human confirmation of physical pointer tracking, the 1,000-soldier click, and camera/formation operation without offset.
 - [x] Apply the smallest evidenced selection fix and review it independently. No coordinate or engine patch.
 - [x] Run tooling/core/build/foundation tests (21 tests, CTest 1/1, build success, Unreal 5/5), then relaunch.
-- [ ] Complete the human-operated physical input checklist.
-- [x] Record exact evidence, limitations, and non-acceptance in STATUS.md.
+- [x] Accept the physical-input gate on the user’s collective camera/formation verification and explicit acceptance instruction; retain its precise scope in STATUS.md.
+- [x] Record exact evidence, limitations, and acceptance in STATUS.md.
 
 ## Decisions
 
@@ -31,7 +31,7 @@ The user's resumed Milestone 1 acceptance request and the open input blocker in 
 
 ## Discoveries
 
-UE 5.8.2 Mac mouse-down uses cached cursor state. Normal mouse movement refreshes it from NSEvent.mouseLocation; SceneViewport then converts Slate event coordinates using its geometry and pixel size. The previous synthetic-click mismatch alone does not establish a DPI defect or physical hardware failure. The new native query matches Slate and viewport within one pixel in stable 1280×720 windowed and 1512×949 window-fullscreen samples while the computer-control click marker is elsewhere. Transition-time stale viewport state resolved by the next one-second sample. Physical user observations are still missing.
+UE 5.8.2 Mac mouse-down uses cached cursor state. Normal mouse movement refreshes it from NSEvent.mouseLocation; SceneViewport then converts Slate event coordinates using its geometry and pixel size. The previous synthetic-click mismatch alone does not establish a DPI defect or physical hardware failure. The new native query matches Slate and viewport within one pixel in stable 1280×720 windowed and 1512×949 window-fullscreen samples while the computer-control click marker is elsewhere. Transition-time stale viewport state resolved by the next one-second sample. The user subsequently confirmed physical tracking/clicks and camera/formation controls without offset, and explicitly requested acceptance on that basis.
 
 ## Validation
 
@@ -47,4 +47,4 @@ UE 5.8.2 Mac mouse-down uses cached cursor state. Normal mouse movement refreshe
 
 ## Handoff
 
-IN_PROGRESS, awaiting the user’s actual mouse/keyboard observations. Automated click delivery is characterized; original physical-click symptoms and the physical acceptance checklist remain open. Final tests/build pass and the rendered game is left open on the 200-worker fixture with F12 enabled. Do not begin Milestone 2.
+VERIFIED on the acceptance basis stated by the user. Final regressions, build and ordinary-play presentation are recorded in STATUS.md. Useful diagnostics remain behind F12 and are off by default. Stop after the final local milestone commit; do not begin Milestone 2.

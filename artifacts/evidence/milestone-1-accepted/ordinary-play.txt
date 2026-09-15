@@ -1,0 +1,16 @@
+Final ordinary-play verification, 2026-09-15 UTC
+
+Runtime source: f8e4c08 (no code changed during acceptance finalization)
+Command: python3 tools/dev.py run --scenario foundation
+Fresh process launched after final tooling/core/build/Unreal regressions.
+Observed rendered viewport: 1280 x 720, Metal SM5.
+Z switched to 1,000 soldiers / 10 formations.
+F12 was not pressed in the fresh session.
+Observed: no diagnostic panel, red cursor cross, or cyan native-pointer X.
+Fresh runtime log query: 0 SHOEN_CURSOR / SHOEN_INPUT / SHOEN_CLICK lines.
+F10 produced game/Saved/Screenshots/Foundation00005.png, copied to ordinary-play.png.
+Default in FoundationPlayerController.h: bMouseDiagnostics = false.
+HUD drawing, native queries and diagnostic logging are gated by this flag.
+F12 remains the optional toggle. Earlier live session F12 off was also verified visually.
+
+This startup check verifies ordinary presentation, not additional human input gestures.

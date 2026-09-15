@@ -1,0 +1,104 @@
+﻿{
+	"devices": [
+		{
+			"deviceName": "Brians-MacBook-Pro-3.local",
+			"instance": "29BA3284D4456BF6D282BCB331C439A9",
+			"instanceName": "Brians-MacBook-Pro-3.local-19249",
+			"platform": "MacEditor",
+			"oSVersion": "macOS 26.6.2 25G83",
+			"model": "Default",
+			"gPU": "Apple M1 Max",
+			"cPUModel": "Apple M1 Max",
+			"rAMInGB": 32,
+			"renderMode": "SM6",
+			"rHI": "",
+			"appInstanceLog": ""
+		}
+	],
+	"reportCreatedOn": "2026.09.15-06.26.33",
+	"succeeded": 5,
+	"succeededWithWarnings": 0,
+	"failed": 0,
+	"notRun": 0,
+	"inProcess": 0,
+	"totalDuration": 0.041420869529247284,
+	"comparisonExported": false,
+	"comparisonExportDirectory": "",
+	"tests": [
+		{
+			"testDisplayName": "ClockBinding",
+			"fullTestPath": "Shoen.Foundation.ClockBinding",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"29BA3284D4456BF6D282BCB331C439A9"
+			],
+			"duration": 0.0083827897906303406,
+			"dateTime": "2026.09.15-06.26.33",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "InputConfiguration",
+			"fullTestPath": "Shoen.Foundation.InputConfiguration",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"29BA3284D4456BF6D282BCB331C439A9"
+			],
+			"duration": 0.0080528333783149719,
+			"dateTime": "2026.09.15-06.26.33",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "PopulationAndSave",
+			"fullTestPath": "Shoen.Foundation.PopulationAndSave",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"29BA3284D4456BF6D282BCB331C439A9"
+			],
+			"duration": 0.0083109550178050995,
+			"dateTime": "2026.09.15-06.26.33",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "SelectionProjectionFailure",
+			"fullTestPath": "Shoen.Foundation.SelectionProjectionFailure",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"29BA3284D4456BF6D282BCB331C439A9"
+			],
+			"duration": 0.0083914585411548615,
+			"dateTime": "2026.09.15-06.26.33",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "ViewDoesNotResetPopulation",
+			"fullTestPath": "Shoen.Foundation.ViewDoesNotResetPopulation",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"29BA3284D4456BF6D282BCB331C439A9"
+			],
+			"duration": 0.0082828328013420105,
+			"dateTime": "2026.09.15-06.26.33",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		}
+	]
+}

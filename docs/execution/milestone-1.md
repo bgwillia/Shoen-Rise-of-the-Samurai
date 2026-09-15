@@ -65,7 +65,7 @@ Files: `STATUS.md`, `artifacts/`, `README.md`, `content/provenance/README.md`.
 
 - [x] Run portable regression suite and Unreal editor build/automation.
 - [x] Launch rendered scene; verify keyboard accounting/save proof and rendered benchmark camera/formation presentation; capture evidence.
-- [ ] Complete physical mouse/held-key acceptance; cached Mac cursor routing remains under investigation (see STATUS.md).
+- [x] Close physical input acceptance using the user’s direct pointer/button and collective camera/formation verification; see STATUS.md for evidence scope.
 - [x] Run actual moving formation benchmarks and retain frame/memory data. If graphics is blocked, report no rendering measurements.
 - [x] Review spec coverage separately from code quality; resolve defects.
 - [x] Update STATUS with exact commands, results, placeholders, remaining issues and one next task.
@@ -82,7 +82,7 @@ Files: `STATUS.md`, `artifacts/`, `README.md`, `content/provenance/README.md`.
 
 ## Discoveries
 
-Resolved CMake, Git LFS and the separate Xcode Metal Toolchain prerequisite. Built UE 5.8.2 and launched Metal SM5. Repaired native input classes, inherited debug-key collisions, and the noisy default cube material. A stale Mac cursor/input-delivery issue remains open after the user reported an unresponsive preset button. No speculative coordinate scaling or engine patch was applied.
+Resolved CMake, Git LFS and the separate Xcode Metal Toolchain prerequisite. Built UE 5.8.2 and launched Metal SM5. Repaired native input classes, inherited debug-key collisions, and the noisy default cube material. The displaced automation marker was distinguished from the aligned native/Slate/viewport pointer. The user confirmed physical pointer/button and camera/formation operation without offset and accepted this evidence. No speculative coordinate scaling or engine patch was applied.
 
 ## Validation
 
@@ -90,4 +90,4 @@ Commands: `python3 tools/dev.py doctor`, `python3 tools/dev.py core-test`, `pyth
 
 ## Handoff
 
-The remaining unchecked item is physical input acceptance. Tests and executable output determine completion; see STATUS.md for actual results and scope limits. Do not advance to the next game milestone automatically.
+Milestone 1 is accepted with automated, rendered and human physical-input evidence; see STATUS.md for exact results, the human report’s scope and remaining platform/placeholder limitations. Stop here. Do not advance to Milestone 2 automatically.

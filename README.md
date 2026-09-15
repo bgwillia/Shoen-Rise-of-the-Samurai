@@ -42,11 +42,11 @@ The map generator creates a real Unreal map and preserves an existing one. The C
 
 ### Mac input diagnosis
 
-F12 shows a red **viewport cursor** and, on macOS, a cyan **native pointer** X. It also displays Slate screen coordinates, the viewport transform, actual pixel resolution, screen backing scale, window DPI, focus and capture state. The native query is read-only; it does not reposition the cursor. Once per second, the same measurements appear as `SHOEN_CURSOR` in the Unreal log.
+Diagnostics are **off by default** during ordinary play. F12 toggles a red **viewport cursor** and, on macOS, a cyan **native pointer** X. It also displays Slate screen coordinates, the viewport transform, actual pixel resolution, screen backing scale, window DPI, focus and capture state. The native query is read-only; it does not reposition the cursor. While enabled, the same measurements appear once per second as `SHOEN_CURSOR` in the Unreal log; toggling F12 off also stops this logging.
 
 The computer-control screenshot can display a click marker at a different position from the native macOS pointer. Test physical controls in the actual Unreal application window. Focus the game first, then press Control for group shortcuts. F11 toggles windowed/window-fullscreen mode. The currently measured viewport is 1280×720 windowed; fullscreen follows the display's usable size.
 
-Physical acceptance remains pending; see [STATUS.md](STATUS.md). A keyboard preset is available while diagnosing mouse delivery: Z/X/C/V. No coordinate correction or engine patch is enabled.
+The user physically verified pointer alignment, the 1,000-soldier button, and camera/formation controls. Milestone 1 is accepted; see [STATUS.md](STATUS.md). Z/X/C/V remain the preset shortcuts. No coordinate correction or engine patch is enabled.
 
 ### Population proof
 
