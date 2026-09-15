@@ -24,6 +24,7 @@ AUTOMATION_TEST_PREFIXES = {
     "foundation": FOUNDATION_TEST,
     "placement": "Shoen.Placement",
     "inspection": "Shoen.Inspection",
+    "profiling": "Shoen.Profiling",
 }
 BENCHMARK_SOLDIER_COUNTS = (1000, 4000, 8000, 20000)
 RENDERED_WINDOW_ARGUMENTS = ("-windowed", "-ResX=1600", "-ResY=900", "-NoVSync")

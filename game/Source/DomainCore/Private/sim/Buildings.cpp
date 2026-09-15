@@ -187,8 +187,12 @@ PlacementResult EvaluatePlacement(const World& w,const BuildingCatalog& catalog,
     if(w.buildings.size()>=MaxBuildings || w.applied_transaction_ids.size()>=MaxServiceRecords || w.next_id>=std::numeric_limits<EntityId>::max()-1 || w.next_transaction_id>=std::numeric_limits<EntityId>::max()-1 || w.revision>=std::numeric_limits<std::uint64_t>::max()-1) return {false,PlacementCode::CapacityExceeded,0,geometry.ground_z_cm};
     return geometry;
 }
-PlacementResult PlaceBuilding(World& w,const BuildingCatalog& catalog,const PlacementCommand& c) {
-    if(!ValidateWorld(w).ok) return Rejected(PlacementCode::InvalidWorld);
+PlacementResult PlaceBuilding(World& w,const BuildingCatalog& catalog,const PlacementCommand& c,const PlacementObserver& observer) {
+    const auto stage=[&observer](PlacementTraceStage value) {if(observer.on_stage) observer.on_stage(value,observer.context);};
+    stage(PlacementTraceStage::InitialValidationBegin);
+    const auto initial_validation=ValidateWorld(w);
+    stage(PlacementTraceStage::InitialValidationEnd);
+    if(!initial_validation.ok) return Rejected(PlacementCode::InvalidWorld);
     if(c.transaction_id==0) return Rejected(PlacementCode::InvalidCommand);
     if(w.applied_transaction_ids.contains(c.transaction_id)) {
         for(const auto& [id,b]:w.buildings) if(b.placement_transaction_id==c.transaction_id) {
@@ -198,12 +202,24 @@ PlacementResult PlaceBuilding(World& w,const BuildingCatalog& catalog,const Plac
         return Rejected(PlacementCode::TransactionConflict);
     }
     if(c.transaction_id>=std::numeric_limits<EntityId>::max()-1) return Rejected(PlacementCode::CapacityExceeded);
-    auto result=EvaluatePlacement(w,catalog,c); if(!result.ok) return result;
-    const auto& d=catalog.at(c.definition_id); World candidate=w; auto id=candidate.next_id++;
+    stage(PlacementTraceStage::PlacementValidationBegin);
+    auto result=EvaluatePlacement(w,catalog,c);
+    stage(PlacementTraceStage::PlacementValidationEnd);
+    if(!result.ok) return result;
+    const auto& d=catalog.at(c.definition_id);
+    stage(PlacementTraceStage::CandidateCopyBegin);
+    World candidate=w;
+    stage(PlacementTraceStage::CandidateCopyEnd);
+    auto id=candidate.next_id++;
     Building building{id,c.settlement_id,c.district_id,c.transaction_id,c.definition_id,d.version,c.x_cm,c.y_cm,result.ground_z_cm,c.yaw_degrees,d.width_cm,d.depth_cm,d.height_cm,ConstructionState::Completed,d.max_height_variation_cm,d.max_slope_permille};
     candidate.buildings.emplace(id,std::move(building)); auto& stocks=candidate.settlements.at(c.settlement_id).resources; stocks.timber-=d.timber_cost; stocks.treasury-=d.treasury_cost;
     candidate.applied_transaction_ids.insert(c.transaction_id); candidate.next_transaction_id=std::max(candidate.next_transaction_id,c.transaction_id+1); ++candidate.revision;
-    if(!ValidateWorld(candidate).ok) return Rejected(PlacementCode::InvalidWorld);
-    w=std::move(candidate); result.building_id=id; return result;
+    stage(PlacementTraceStage::CandidateValidationBegin);
+    const auto candidate_validation=ValidateWorld(candidate);
+    stage(PlacementTraceStage::CandidateValidationEnd);
+    if(!candidate_validation.ok) return Rejected(PlacementCode::InvalidWorld);
+    w=std::move(candidate);
+    stage(PlacementTraceStage::Committed);
+    result.building_id=id; return result;
 }
 }

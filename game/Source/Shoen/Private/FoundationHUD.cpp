@@ -8,6 +8,8 @@
 #include "FoundationCursorDiagnostics.h"
 #include "domain/Buildings.h"
 #include "domain/Inspection.h"
+#include "InteractionProfiler.h"
+#include "InputCoreTypes.h"
 
 void AFoundationHUD::Label(const FString& Text,float X,float Y,FLinearColor Color,float Scale)
 {
@@ -190,9 +192,13 @@ void AFoundationHUD::DrawHUD()
     DrawRect(FLinearColor(.025,.04,.045,.95),410,Canvas->SizeY-54,Canvas->SizeX-410,54);
     Label(Sim->Message,430,Canvas->SizeY-42,Gold);
     Label(Sim->IsSettlement() ? TEXT("Buildings are saved simulation records. N resets this test fixture.") : TEXT("Original primitive placeholders. Scale support requires measured evidence."),430,Canvas->SizeY-23,Muted);
+    ShoenProfile::CaptureHud(Sim->Message);
 }
 void AFoundationHUD::NotifyHitBoxClick(FName Id)
 {
+    const FName Kind=Id==TEXT("build") ? TEXT("enter") : Id==TEXT("rotateleft") || Id==TEXT("rotateright") ? TEXT("rotate") : Id==TEXT("confirm") ? TEXT("confirm") : Id==TEXT("cancel") ? TEXT("cancel") : TEXT("hud_other");
+    ShoenProfile::FActionScope Profile(Kind,EKeys::LeftMouseButton);
+    ShoenProfile::Mark(TEXT("ui_hit_processed"));
     Super::NotifyHitBoxClick(Id);
     auto* Sim = GetGameInstance()->GetSubsystem<UShoenSimulationSubsystem>();
     auto* Mode = Cast<AFoundationGameMode>(GetWorld()->GetAuthGameMode());

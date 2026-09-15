@@ -11,6 +11,7 @@
 #include "Misc/Paths.h"
 #include "GameFramework/HUD.h"
 #include "FoundationCursorDiagnostics.h"
+#include "InteractionProfiler.h"
 
 AFoundationPlayerController::AFoundationPlayerController()
 {
@@ -24,9 +25,17 @@ void AFoundationPlayerController::BeginPlay()
     Mode.SetHideCursorDuringCapture(false);
     Mode.SetLockMouseToViewportBehavior(EMouseLockMode::DoNotLock);
     SetInputMode(Mode);
+    InteractionReplay=MakeUnique<FInteractionReplay>(*this);
+}
+void AFoundationPlayerController::EndPlay(const EEndPlayReason::Type Reason)
+{
+    if (InteractionReplay) InteractionReplay->Finish();
+    if (ShoenProfile::IsCapturing()) ShoenProfile::Stop();
+    Super::EndPlay(Reason);
 }
 bool AFoundationPlayerController::InputKey(const FInputKeyEventArgs& Params)
 {
+    ShoenProfile::ControllerInput(Params.Key,Params.Event);
     if (bMouseDiagnostics && Params.Key == EKeys::LeftMouseButton)
     {
         float X=0,Y=0; GetMousePosition(X,Y);
@@ -49,6 +58,7 @@ void AFoundationPlayerController::RefreshInspection()
     if (!Sim) return;
     if (SeenWorldGeneration!=Sim->WorldGeneration)
     {
+        ShoenProfile::Invalidate(ShoenProfile::EVisualChannel::Selection);
         // A loaded/reset world can reuse numeric IDs. Selection belongs to this
         // world lifetime, so never carry it into the replacement implicitly.
         CancelPlacement(); Selected.Reset(); InspectedEntity={};
@@ -64,8 +74,23 @@ void AFoundationPlayerController::InspectBuilding(uint64 Id)
     RefreshInspection();
     auto* Sim=GetGameInstance()->GetSubsystem<UShoenSimulationSubsystem>();
     if (!Sim || !Sim->IsSettlement() || bPlacing) return;
+    const auto Previous=InspectedEntity;
+    ShoenProfile::SetEntity(Id);
+    const auto* Record=domain::ResolveBuilding(Sim->State,{domain::EntityKind::Building,Id});
+    const domain::EntitySelection Next=Record ? domain::EntitySelection{domain::EntityKind::Building,Id} : domain::EntitySelection{};
+    const bool Changed=Next!=Previous;
+    if (Changed) ShoenProfile::Invalidate(ShoenProfile::EVisualChannel::Selection);
+    ShoenProfile::Mark(TEXT("record_resolved"));
+    ShoenProfile::SetKind(!Record ? TEXT("clear") : Previous.id && Previous.id!=Id ? TEXT("switch") : TEXT("select"));
     InspectedEntity={domain::EntityKind::Building,Id};
+    ShoenProfile::Mark(Changed ? TEXT("selection_changed") : TEXT("selection_unchanged"));
+    if (Changed) ShoenProfile::Mark(TEXT("inspection_update_requested"));
     RefreshInspection();
+    if (Changed)
+    {
+        ShoenProfile::Mark(TEXT("highlight_applied"));
+        ShoenProfile::VisualReady(ShoenProfile::CurrentEvent(),ShoenProfile::EVisualChannel::Selection,true,true);
+    }
     if (bMouseDiagnostics)
     {
         if (const auto* Building=domain::ResolveBuilding(Sim->State,InspectedEntity))
@@ -76,8 +101,18 @@ void AFoundationPlayerController::InspectBuilding(uint64 Id)
         else { UE_LOG(LogTemp,Display,TEXT("SHOEN_INSPECT cleared")); }
     }
 }
+void AFoundationPlayerController::PickAndInspect(const FVector& Origin,const FVector& Direction)
+{
+    ShoenProfile::Mark(TEXT("pick_begin"));
+    uint64 HitId=0;
+    if (auto* Mode=Cast<AFoundationGameMode>(GetWorld()->GetAuthGameMode()))
+        if (auto* View=Mode->SettlementPresentation()) View->PickBuilding(Origin,Direction,HitId);
+    ShoenProfile::Mark(TEXT("stable_id_resolved"));
+    InspectBuilding(HitId);
+}
 void AFoundationPlayerController::BeginPlacement()
 {
+    ShoenProfile::FActionScope Profile(TEXT("enter"),EKeys::B);
     auto* Sim=GetGameInstance()->GetSubsystem<UShoenSimulationSubsystem>();
     if (!Sim || !Sim->IsSettlement() || Sim->BuildingDefinitions().empty())
     {
@@ -94,40 +129,61 @@ void AFoundationPlayerController::BeginPlacement()
     SeenWorldGeneration=Sim->WorldGeneration;
     RefreshInspection();
     Sim->Message=TEXT("Move to ground, [ / ] rotate, click or Enter to build. Esc / right click cancel.");
+    ShoenProfile::Mark(TEXT("mode_changed"));
+    ShoenProfile::Invalidate(ShoenProfile::EVisualChannel::Selection);
+    ShoenProfile::VisualReady(ShoenProfile::CurrentEvent(),ShoenProfile::EVisualChannel::Mode,false,true);
 }
 void AFoundationPlayerController::CancelPlacement()
 {
+    ShoenProfile::Invalidate(ShoenProfile::EVisualChannel::Mode);
     bPlacing=false; bHasPlacementPoint=false; bSelecting=false; bOrdering=false;
     PreviewResult={}; bPreviewCached=false;
     if (auto* Mode=Cast<AFoundationGameMode>(GetWorld()->GetAuthGameMode()))
         if (auto* View=Mode->SettlementPresentation()) View->HidePreview();
+    ShoenProfile::Invalidate(ShoenProfile::EVisualChannel::Preview);
+    ShoenProfile::Invalidate(ShoenProfile::EVisualChannel::Rotation);
+    ShoenProfile::Mark(TEXT("preview_hidden"));
+    ShoenProfile::VisualReady(ShoenProfile::CurrentEvent(),ShoenProfile::EVisualChannel::Mode,true,true);
 }
-void AFoundationPlayerController::RefreshPlacement()
+void AFoundationPlayerController::RefreshPlacement(bool bProfilePreview)
 {
     if (!bPlacing || !bHasPlacementPoint) return;
     auto* Sim=GetGameInstance()->GetSubsystem<UShoenSimulationSubsystem>();
-    if (!bPreviewCached || PreviewRevision!=Sim->State.revision || PreviewX!=PendingPlacement.x_cm || PreviewY!=PendingPlacement.y_cm || PreviewYaw!=PendingPlacement.yaw_degrees)
+    const bool Changed=!bPreviewCached || PreviewRevision!=Sim->State.revision || PreviewX!=PendingPlacement.x_cm || PreviewY!=PendingPlacement.y_cm || PreviewYaw!=PendingPlacement.yaw_degrees;
+    if (Changed)
     {
+        ShoenProfile::Invalidate(ShoenProfile::EVisualChannel::Preview);
+        ShoenProfile::Invalidate(ShoenProfile::EVisualChannel::Rotation);
+        ShoenProfile::Mark(TEXT("preview_validation_begin"));
         PreviewResult=Sim->PreviewBuilding(PendingPlacement);
+        ShoenProfile::Mark(TEXT("preview_validation_end"));
         PreviewRevision=Sim->State.revision;
         PreviewX=PendingPlacement.x_cm; PreviewY=PendingPlacement.y_cm; PreviewYaw=PendingPlacement.yaw_degrees;
         bPreviewCached=true;
     }
+    else ShoenProfile::Mark(TEXT("preview_cached"));
     const auto It=Sim->BuildingDefinitions().find(PendingPlacement.definition_id);
     if (It==Sim->BuildingDefinitions().end()) { CancelPlacement(); return; }
     if (auto* Mode=Cast<AFoundationGameMode>(GetWorld()->GetAuthGameMode()))
         if (auto* View=Mode->SettlementPresentation())
+        {
+            ShoenProfile::Mark(TEXT("preview_view_begin"));
             View->SetPreview(It->second,PendingPlacement,PreviewResult.ground_z_cm,PreviewResult.ok);
+            ShoenProfile::Mark(TEXT("preview_view_end"));
+            if (Changed && bProfilePreview) ShoenProfile::VisualReady(ShoenProfile::CurrentEvent(),ShoenProfile::EVisualChannel::Preview,true,false);
+        }
 }
 void AFoundationPlayerController::UpdatePlacement(bool bCanReadCursor)
 {
     if (!bPlacing) return;
+    ShoenProfile::FActionScope Profile(TEXT("preview"),EKeys::MouseX);
+    ShoenProfile::Mark(TEXT("preview_update_begin"));
     if (bCanReadCursor)
     {
         auto* Sim=GetGameInstance()->GetSubsystem<UShoenSimulationSubsystem>();
         FVector Origin,Direction;
-        if (!DeprojectMousePositionToWorld(Origin,Direction))
-        {
+            if (!DeprojectMousePositionToWorld(Origin,Direction))
+            {
             bHasPlacementPoint=false;
             if (auto* Mode=Cast<AFoundationGameMode>(GetWorld()->GetAuthGameMode()))
                 if (auto* View=Mode->SettlementPresentation()) View->HidePreview();
@@ -150,21 +206,27 @@ void AFoundationPlayerController::UpdatePlacement(bool bCanReadCursor)
             PendingPlacement.y_cm=FMath::RoundToInt(FMath::Clamp(Hit.y,-1.e9,1.e9));
         }
     }
-    RefreshPlacement();
+    RefreshPlacement(true);
+    ShoenProfile::Mark(TEXT("preview_update_end"));
 }
 void AFoundationPlayerController::RotatePlacement(int32 Direction)
 {
     if (!bPlacing) return;
+    ShoenProfile::FActionScope Profile(TEXT("rotate"),Direction<0 ? EKeys::LeftBracket : EKeys::RightBracket);
     auto* Sim=GetGameInstance()->GetSubsystem<UShoenSimulationSubsystem>();
     const auto It=Sim->BuildingDefinitions().find(PendingPlacement.definition_id);
     if (It==Sim->BuildingDefinitions().end()) return;
     PendingPlacement.yaw_degrees=(PendingPlacement.yaw_degrees+Direction*It->second.rotation_step_degrees+360)%360;
     RefreshPlacement();
+    ShoenProfile::Mark(TEXT("rotation_changed"));
+    ShoenProfile::VisualReady(ShoenProfile::CurrentEvent(),ShoenProfile::EVisualChannel::Rotation,true,true);
 }
 void AFoundationPlayerController::ConfirmPlacement()
 {
     auto* Sim=GetGameInstance()->GetSubsystem<UShoenSimulationSubsystem>();
     if (!bPlacing || !bHasPlacementPoint || SeenWorldGeneration!=Sim->WorldGeneration || LastConfirmFrame==GFrameCounter) return;
+    ShoenProfile::FActionScope Profile(TEXT("confirm"),EKeys::Enter);
+    ShoenProfile::Mark(TEXT("confirm_received"));
     LastConfirmFrame=GFrameCounter;
     auto Command=PendingPlacement;
     Command.transaction_id=Sim->State.next_transaction_id;
@@ -218,34 +280,47 @@ void AFoundationPlayerController::PlayerTick(float Dt)
     Super::PlayerTick(Dt);
     auto* Sim = GetGameInstance()->GetSubsystem<UShoenSimulationSubsystem>();
     if (!Sim) return;
+    ShoenProfile::SetSceneBuildingCount(int32(Sim->State.buildings.size()));
+    ShoenProfile::Frame(Dt);
+    if (InteractionReplay && InteractionReplay->Tick(Dt)) return;
     float MX = 0, MY = 0;
     const bool bHasMousePosition = GetMousePosition(MX, MY);
     if (bMouseDiagnostics && WasInputKeyJustPressed(EKeys::LeftMouseButton)) UE_LOG(LogTemp,Display,TEXT("SHOEN_CLICK %.1f %.1f"),MX,MY);
     int32 ViewWidth=0,ViewHeight=0; GetViewportSize(ViewWidth,ViewHeight);
     const bool OverPanel = MX < 410 || MY < 66 || MY >= ViewHeight-54;
     RefreshInspection();
-    if (WasInputKeyJustPressed(EKeys::B)) { if (bPlacing) CancelPlacement(); else BeginPlacement(); }
+    if (WasInputKeyJustPressed(EKeys::B))
+    {
+        ShoenProfile::FActionScope Profile(bPlacing ? TEXT("cancel") : TEXT("enter"),EKeys::B);
+        if (bPlacing) CancelPlacement(); else BeginPlacement();
+    }
     const bool bPlacementGesture=bPlacing;
     if (bPlacing)
     {
         UpdatePlacement(bHasMousePosition && !OverPanel);
         if (WasInputKeyJustPressed(EKeys::LeftBracket)) RotatePlacement(-1);
         if (WasInputKeyJustPressed(EKeys::RightBracket)) RotatePlacement(1);
-        if (WasInputKeyJustPressed(EKeys::Escape) || WasInputKeyJustPressed(EKeys::RightMouseButton)) CancelPlacement();
-        else if (WasInputKeyJustPressed(EKeys::Enter) || (bHasMousePosition && !OverPanel && WasInputKeyJustPressed(EKeys::LeftMouseButton))) ConfirmPlacement();
+        if (WasInputKeyJustPressed(EKeys::Escape) || WasInputKeyJustPressed(EKeys::RightMouseButton))
+        {
+            ShoenProfile::FActionScope Profile(TEXT("cancel"),WasInputKeyJustPressed(EKeys::Escape) ? EKeys::Escape : EKeys::RightMouseButton);
+            CancelPlacement();
+        }
+        else if (WasInputKeyJustPressed(EKeys::Enter) || (bHasMousePosition && !OverPanel && WasInputKeyJustPressed(EKeys::LeftMouseButton)))
+        {
+            ShoenProfile::FActionScope Profile(TEXT("confirm"),WasInputKeyJustPressed(EKeys::Enter) ? EKeys::Enter : EKeys::LeftMouseButton);
+            ConfirmPlacement();
+        }
     }
     if (bHasMousePosition) SelectionEnd = FVector2D(MX,MY);
     if (!bPlacementGesture && bHasMousePosition && WasInputKeyJustPressed(EKeys::LeftMouseButton) && !OverPanel)
     {
         if (Sim->IsSettlement())
         {
+            ShoenProfile::FActionScope Profile(TEXT("select"),EKeys::LeftMouseButton);
             FVector Origin,Direction;
             if (DeprojectMousePositionToWorld(Origin,Direction))
             {
-                uint64 HitId=0;
-                if (auto* Mode=Cast<AFoundationGameMode>(GetWorld()->GetAuthGameMode()))
-                    if (auto* View=Mode->SettlementPresentation()) View->PickBuilding(Origin,Direction,HitId);
-                InspectBuilding(HitId);
+                PickAndInspect(Origin,Direction);
             }
         }
         else { SelectionStart = SelectionEnd; bSelecting = true; }
@@ -274,6 +349,15 @@ void AFoundationPlayerController::PlayerTick(float Dt)
     if (WasInputKeyJustPressed(EKeys::F4)) Sim->SetGameSpeed(10);
     if (WasInputKeyJustPressed(EKeys::F5)) Sim->Save();
     if (WasInputKeyJustPressed(EKeys::F9)) Sim->Load();
+    if (WasInputKeyJustPressed(EKeys::F6))
+    {
+        if (ShoenProfile::IsCapturing()) Sim->Message=ShoenProfile::Stop() ? TEXT("Input profile saved under Saved/Profiling.") : TEXT("Input profile export failed.");
+        else
+        {
+            const FString Path=FPaths::ProjectSavedDir()/TEXT("Profiling")/FString::Printf(TEXT("physical-%s.json"),*FDateTime::UtcNow().ToString(TEXT("%Y%m%d-%H%M%S")));
+            Sim->Message=ShoenProfile::Start(GetWorld(),Path) ? TEXT("Input profiling active. F6 stops and saves; F12 stays optional.") : TEXT("Input profiling could not start.");
+        }
+    }
     if (WasInputKeyJustPressed(EKeys::F12)) bMouseDiagnostics = !bMouseDiagnostics;
     if (bMouseDiagnostics && (DiagnosticLogTime -= Dt) <= 0)
     {
@@ -301,7 +385,12 @@ void AFoundationPlayerController::PlayerTick(float Dt)
     if (WasInputKeyJustPressed(EKeys::Escape))
     {
         Selected.Reset(); bSelecting = false; bOrdering = false;
-        InspectedEntity={}; RefreshInspection();
+        if (!bPlacementGesture && Sim->IsSettlement())
+        {
+            ShoenProfile::FActionScope Profile(TEXT("clear"),EKeys::Escape);
+            InspectBuilding(0);
+        }
+        else { InspectedEntity={}; RefreshInspection(); }
     }
     if (IsInputKeyDown(EKeys::LeftControl) && WasInputKeyJustPressed(EKeys::A)) SelectAll();
     const FKey Keys[] = { EKeys::One,EKeys::Two,EKeys::Three,EKeys::Four,EKeys::Five,EKeys::Six,EKeys::Seven,EKeys::Eight,EKeys::Nine };

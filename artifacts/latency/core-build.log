@@ -1,0 +1,12 @@
+[  6%] Building CXX object CMakeFiles/domain_core.dir/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/game/Source/DomainCore/Private/sim/Buildings.cpp.o
+[ 13%] Building CXX object CMakeFiles/domain_core.dir/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/game/Source/DomainCore/Private/sim/ProfilingFixture.cpp.o
+[ 20%] Linking CXX static library libdomain_core.a
+[ 46%] Built target domain_core
+[ 53%] Linking CXX executable domain_core_tests
+[ 60%] Built target domain_core_tests
+[ 66%] Linking CXX executable domain_building_tests
+[ 73%] Built target domain_building_tests
+[ 80%] Linking CXX executable domain_inspection_tests
+[ 86%] Built target domain_inspection_tests
+[ 93%] Linking CXX executable domain_profiling_fixture_tests
+[100%] Built target domain_profiling_fixture_tests

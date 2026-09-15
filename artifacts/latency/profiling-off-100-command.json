@@ -1,0 +1,17 @@
+[
+  "/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/UnrealEditor.app/Contents/MacOS/UnrealEditor",
+  "/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/game/Shoen.uproject",
+  "/Game/Domain/Maps/Foundation",
+  "-game",
+  "-ShoenScenario=settlement",
+  "-windowed",
+  "-ResX=1600",
+  "-ResY=900",
+  "-NoVSync",
+  "-ShoenProfileBuildings=100",
+  "-ShoenProfileIterations=30",
+  "-ShoenProfileOutput=/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/artifacts/latency/profiling-off-100.json",
+  "-stdout",
+  "-FullStdOutLogOutput",
+  "-ShoenProfileDisabled"
+]

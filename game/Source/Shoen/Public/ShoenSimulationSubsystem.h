@@ -33,7 +33,17 @@ public:
     bool LoadFromPath(const FString& Path);
     bool Save();
     bool Load();
+    // Development profiling fixtures never enter a normal save slot.
+    bool BeginProfilingFixture(int32 BuildingCount);
+    bool RestoreProfilingBaseline();
+    void EndProfilingFixture();
+    bool IsProfilingFixture() const { return ProfilingOriginal.IsValid(); }
+    uint64 PendingPlacementProfile = 0;
 private:
+    TUniquePtr<domain::World> ProfilingOriginal;
+    TUniquePtr<domain::World> ProfilingBaseline;
+    domain::BuildingCatalog ProfilingOriginalCatalog;
+    FString ProfilingOriginalMessage;
     domain::BuildingCatalog BuildingCatalog;
     bool Report(const domain::Result& Result, const FString& Success);
 };

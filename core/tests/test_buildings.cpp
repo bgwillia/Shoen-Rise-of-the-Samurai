@@ -231,6 +231,52 @@ void LimitsAndCounters() {
     bad=Fixture(); for(std::size_t i=0;i<=MaxBuildAreas;++i) bad.build_areas.emplace(100+i,BuildArea{});
     CHECK(!ValidateBuildingState(bad).ok); before=bad; CHECK(!PlaceBuilding(bad,cat,Command()).ok && bad==before);
 }
+struct ObservedPlacement {
+    const World* live=nullptr; World before; std::array<PlacementTraceStage,16> stages{};
+    std::size_t count=0; bool unchanged_before_commit=true, committed_state_correct=false;
+};
+void RecordPlacementStage(PlacementTraceStage stage,void* context) {
+    auto& observed=*static_cast<ObservedPlacement*>(context);
+    if(observed.count<observed.stages.size()) observed.stages[observed.count]=stage;
+    ++observed.count;
+    if(stage==PlacementTraceStage::Committed) {
+        observed.committed_state_correct=observed.live->buildings.size()==observed.before.buildings.size()+1
+            && observed.live->settlements.at(1).resources.timber==observed.before.settlements.at(1).resources.timber-20
+            && observed.live->settlements.at(1).resources.treasury==observed.before.settlements.at(1).resources.treasury-5
+            && observed.live->next_id==observed.before.next_id+1
+            && observed.live->applied_transaction_ids.contains(1);
+    } else observed.unchanged_before_commit=observed.unchanged_before_commit && *observed.live==observed.before;
+}
+void PlacementObserverOrderAndCommitVisibility() {
+    auto w=Fixture(); auto unobserved=w; auto cat=Catalog(); ObservedPlacement observed{&w,w};
+    auto result=PlaceBuilding(w,cat,Command(),{RecordPlacementStage,&observed}); CHECK(result.ok);
+    const std::array expected={PlacementTraceStage::InitialValidationBegin,PlacementTraceStage::InitialValidationEnd,
+        PlacementTraceStage::PlacementValidationBegin,PlacementTraceStage::PlacementValidationEnd,
+        PlacementTraceStage::CandidateCopyBegin,PlacementTraceStage::CandidateCopyEnd,
+        PlacementTraceStage::CandidateValidationBegin,PlacementTraceStage::CandidateValidationEnd,PlacementTraceStage::Committed};
+    CHECK(observed.count==expected.size());
+    for(std::size_t i=0;i<expected.size();++i) CHECK(observed.stages[i]==expected[i]);
+    CHECK(observed.unchanged_before_commit && observed.committed_state_correct);
+    CHECK(PlaceBuilding(unobserved,cat,Command()).ok && unobserved==w);
+    auto empty_observer=Fixture(); CHECK(PlaceBuilding(empty_observer,cat,Command(),{nullptr,&observed}).ok && empty_observer==w);
+}
+void PlacementObserverRejectAndRetryNeverCommit() {
+    auto w=Fixture(); auto cat=Catalog(); CHECK(PlaceBuilding(w,cat,Command()).ok);
+    auto verify=[&](PlacementCommand command,PlacementCode code,std::size_t expected_count) {
+        ObservedPlacement observed{&w,w}; auto result=PlaceBuilding(w,cat,command,{RecordPlacementStage,&observed});
+        CHECK(result.code==code && observed.count==expected_count && w==observed.before && observed.unchanged_before_commit);
+        CHECK(observed.stages[0]==PlacementTraceStage::InitialValidationBegin && observed.stages[1]==PlacementTraceStage::InitialValidationEnd);
+        for(std::size_t i=0;i<observed.count;++i) CHECK(observed.stages[i]!=PlacementTraceStage::Committed && observed.stages[i]!=PlacementTraceStage::CandidateCopyBegin);
+        if(expected_count==4) CHECK(observed.stages[2]==PlacementTraceStage::PlacementValidationBegin && observed.stages[3]==PlacementTraceStage::PlacementValidationEnd);
+    };
+    verify(Command(),PlacementCode::AlreadyApplied,2);
+    verify(Command(1,2000),PlacementCode::TransactionConflict,2);
+    verify(Command(0),PlacementCode::InvalidCommand,2);
+    verify(Command(2),PlacementCode::OverlapsBuilding,4);
+    verify(Command(2,5000),PlacementCode::OutsideBuildArea,4);
+    w.settlements.at(1).resources.timber=0; verify(Command(2,2000),PlacementCode::InsufficientResources,4);
+    w.settlements.at(1).resources.timber=-1; verify(Command(2,2000),PlacementCode::InvalidWorld,2);
+}
 int main() {
     std::vector<std::pair<const char*,std::function<void()>>> tests={
         {"preview and atomic successful placement",SuccessAndPreview},{"each resource independently required and exact costs",ResourceAtomicity},
@@ -239,7 +285,7 @@ int main() {
         {"invalid preview retains authoritative ground elevation",InvalidPreviewKeepsTerrainElevation},{"invalid definitions coordinates and references",DefinitionsAndBadCommands},{"duplicate conflict replay and shared transaction namespace",DuplicateTransactions},
         {"stable global IDs view independence and determinism",StableIdsAndDeterminism},{"v2 restore all state and frozen definition dimensions",SnapshotV2AndFrozenDimensions},
         {"real accepted v1 fixture migration",AcceptedV1Migration},{"saved buildings retain terrain placement constraints",SavedTerrainMustRemainPlaceable},{"frozen terrain tolerances survive changed tuning",FrozenTerrainToleranceSurvivesTuning},{"malformed building area and registry validation",MalformedBuildingState},
-        {"malformed v2 added records reject before replacement",MalformedV2Payloads},{"capacity and counter failures are immutable",LimitsAndCounters}};
+        {"malformed v2 added records reject before replacement",MalformedV2Payloads},{"capacity and counter failures are immutable",LimitsAndCounters},{"optional observer stages match live atomic commit",PlacementObserverOrderAndCommitVisibility},{"observer rejection and retry never claim commit",PlacementObserverRejectAndRetryNeverCommit}};
     int failed=0; for(auto& [name,test]:tests) {try{test(); std::cout<<"PASS "<<name<<'\n';}catch(const std::exception& e){++failed;std::cerr<<"FAIL "<<name<<": "<<e.what()<<'\n';}}
     std::cout<<tests.size()-failed<<" passed, "<<failed<<" failed\n"; return failed?1:0;
 }

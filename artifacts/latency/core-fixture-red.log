@@ -1,0 +1,5 @@
+FAIL same terrain funds anchor and exact1/10/100 counts: line 14: MakeProfilingFixture(cat,count,w).ok && ValidateWorld(w).ok
+FAIL deterministic fixture matches genuine placement accounting: line 35: MakeProfilingFixture(cat,10,a).ok && MakeProfilingFixture(cat,10,b).ok && a==b && EncodeSnapshot(a)==EncodeSnapshot(b)
+PASS fixture failures preserve complete output world
+FAIL reserved rotation success and rejection space at every count: line 55: MakeProfilingFixture(cat,count,w).ok
+1 passed, 3 failed

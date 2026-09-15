@@ -6,6 +6,8 @@
 #include "Misc/FileHelper.h"
 #include "Misc/Paths.h"
 #include "HAL/FileManager.h"
+#include "InteractionProfiler.h"
+#include "domain/ProfilingFixture.h"
 
 void UShoenSimulationSubsystem::Initialize(FSubsystemCollectionBase& Collection)
 {
@@ -14,6 +16,7 @@ void UShoenSimulationSubsystem::Initialize(FSubsystemCollectionBase& Collection)
 }
 void UShoenSimulationSubsystem::ResetScenario(int32 Soldiers)
 {
+    if (IsProfilingFixture()) { Message=TEXT("End the profiling fixture before resetting the scenario."); return; }
     State = Soldiers > 0 ? domain::MakeScaleWorld(Soldiers) : domain::MakeFoundationWorld();
     BuildingCatalog.clear();
     Message = Soldiers > 0 ? FString::Printf(TEXT("New scale fixture: %d people mobilized from its source population."), Soldiers)
@@ -23,6 +26,7 @@ void UShoenSimulationSubsystem::ResetScenario(int32 Soldiers)
 }
 bool UShoenSimulationSubsystem::ResetSettlement()
 {
+    if (IsProfilingFixture()) { Message=TEXT("End the profiling fixture before resetting the settlement."); return false; }
     domain::BuildingCatalog CandidateCatalog;
     domain::BuildArea CandidateArea;
     int64 Timber = 0;
@@ -92,11 +96,39 @@ domain::PlacementResult UShoenSimulationSubsystem::PreviewBuilding(const domain:
 }
 domain::PlacementResult UShoenSimulationSubsystem::PlaceBuilding(const domain::PlacementCommand& Command)
 {
-    const domain::PlacementResult Result = domain::PlaceBuilding(State, BuildingCatalog, Command);
+    domain::PlacementObserver Observer;
+    if (ShoenProfile::IsCapturing()) Observer.on_stage=[](domain::PlacementTraceStage Stage,void*)
+    {
+        const TCHAR* Name=TEXT("unknown");
+        switch (Stage)
+        {
+        case domain::PlacementTraceStage::InitialValidationBegin: Name=TEXT("initial_validation_begin"); break;
+        case domain::PlacementTraceStage::InitialValidationEnd: Name=TEXT("initial_validation_end"); break;
+        case domain::PlacementTraceStage::PlacementValidationBegin: Name=TEXT("validation_begin"); break;
+        case domain::PlacementTraceStage::PlacementValidationEnd: Name=TEXT("validation_end"); break;
+        case domain::PlacementTraceStage::CandidateCopyBegin: Name=TEXT("candidate_copy_begin"); break;
+        case domain::PlacementTraceStage::CandidateCopyEnd: Name=TEXT("candidate_copy_end"); break;
+        case domain::PlacementTraceStage::CandidateValidationBegin: Name=TEXT("candidate_validation_begin"); break;
+        case domain::PlacementTraceStage::CandidateValidationEnd: Name=TEXT("candidate_validation_end"); break;
+        case domain::PlacementTraceStage::Committed: Name=TEXT("transaction_committed"); break;
+        }
+        ShoenProfile::Mark(Name);
+        if (Stage==domain::PlacementTraceStage::Committed) ShoenProfile::Mark(TEXT("resources_updated"));
+    };
+    const domain::PlacementResult Result = domain::PlaceBuilding(State, BuildingCatalog, Command,Observer);
     Message = UTF8_TO_TCHAR(domain::PlacementReason(Result.code));
+    ShoenProfile::SetKind(Result.ok ? TEXT("place_success") : TEXT("place_reject"));
+    ShoenProfile::SetEntity(Result.building_id);
     if (Result.ok && Result.code == domain::PlacementCode::Valid)
     {
         ++ViewGeneration;
+        PendingPlacementProfile=ShoenProfile::CurrentEvent();
+        ShoenProfile::Mark(TEXT("presentation_rebuild_requested"));
+    }
+    else
+    {
+        ShoenProfile::ExpectMessage(Message);
+        ShoenProfile::VisualReady(ShoenProfile::CurrentEvent(),ShoenProfile::EVisualChannel::Message,false,true);
     }
     return Result;
 }
@@ -154,6 +186,7 @@ bool UShoenSimulationSubsystem::DemobilizeProof()
 }
 bool UShoenSimulationSubsystem::SaveToPath(const FString& Path)
 {
+    if (IsProfilingFixture()) { Message=TEXT("Profiling fixture is transient; saving is disabled until it ends."); return false; }
     const auto Bytes = domain::EncodeSnapshot(State);
     if (Bytes.empty()) { Message = TEXT("Save rejected: invalid simulation state."); return false; }
     IFileManager::Get().MakeDirectory(*FPaths::GetPath(Path), true);
@@ -169,6 +202,7 @@ bool UShoenSimulationSubsystem::SaveToPath(const FString& Path)
 }
 bool UShoenSimulationSubsystem::LoadFromPath(const FString& Path)
 {
+    if (IsProfilingFixture()) { Message=TEXT("End the transient profiling fixture before loading."); return false; }
     const int64 Size = IFileManager::Get().FileSize(*Path);
     if (Size <= 0 || Size > int64(domain::MaxSnapshotBytes))
     { Message = TEXT("Save missing or exceeds the size limit. Current state kept."); return false; }
@@ -226,4 +260,39 @@ bool UShoenSimulationSubsystem::Save()
 bool UShoenSimulationSubsystem::Load()
 {
     return LoadFromPath(FPaths::ProjectSavedDir() / (IsSettlement() ? TEXT("SaveGames/Settlement.sav") : TEXT("SaveGames/Foundation.sav")));
+}
+bool UShoenSimulationSubsystem::BeginProfilingFixture(int32 BuildingCount)
+{
+#if UE_BUILD_SHIPPING
+    return false;
+#else
+    if (IsProfilingFixture()) return false;
+    domain::World Candidate;
+    const auto Result=domain::MakeProfilingFixture(BuildingCatalog,BuildingCount,Candidate);
+    if (!Result.ok) return false;
+    ProfilingOriginal=MakeUnique<domain::World>(State);
+    ProfilingOriginalCatalog=BuildingCatalog;
+    ProfilingOriginalMessage=Message;
+    ProfilingBaseline=MakeUnique<domain::World>(std::move(Candidate));
+    return RestoreProfilingBaseline();
+#endif
+}
+bool UShoenSimulationSubsystem::RestoreProfilingBaseline()
+{
+    if (!IsProfilingFixture() || !ProfilingBaseline) return false;
+    State=*ProfilingBaseline;
+    Message=TEXT("Transient latency fixture. Normal saves are protected.");
+    PendingPlacementProfile=0;
+    ++WorldGeneration; ++ViewGeneration;
+    return true;
+}
+void UShoenSimulationSubsystem::EndProfilingFixture()
+{
+    if (!IsProfilingFixture()) return;
+    State=std::move(*ProfilingOriginal);
+    BuildingCatalog=std::move(ProfilingOriginalCatalog);
+    Message=ProfilingOriginalMessage;
+    ProfilingOriginal.Reset(); ProfilingBaseline.Reset(); ProfilingOriginalMessage.Reset();
+    PendingPlacementProfile=0;
+    ++WorldGeneration; ++ViewGeneration;
 }

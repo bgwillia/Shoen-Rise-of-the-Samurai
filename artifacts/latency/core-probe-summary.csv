@@ -1,0 +1,17 @@
+Clock=std::chrono::steady_clock; warmups=10; samples=100; flat vertices=117; cells=96; generation/reset copies excluded
+buildings,stage,samples,median_us,max_us
+1,ValidateWorld,100,3.125,10.959
+1,EvaluatePlacement_valid,100,9.396,39.542
+1,PlaceBuilding_valid,100,23.021,124.416
+1,EvaluatePlacement_overlap,100,3.542,7.417
+1,PlaceBuilding_overlap,100,6.646,30.000
+10,ValidateWorld,100,32.834,180.083
+10,EvaluatePlacement_valid,100,40.771,128.458
+10,PlaceBuilding_valid,100,116.542,355.250
+10,EvaluatePlacement_overlap,100,33.333,68.708
+10,PlaceBuilding_overlap,100,66.626,181.042
+100,ValidateWorld,100,542.229,1280.250
+100,EvaluatePlacement_valid,100,551.625,1125.583
+100,PlaceBuilding_valid,100,1649.437,2929.083
+100,EvaluatePlacement_overlap,100,543.021,1281.667
+100,PlaceBuilding_overlap,100,1080.062,2080.166

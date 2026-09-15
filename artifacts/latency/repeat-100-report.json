@@ -1,0 +1,620 @@
+{
+  "complete": true,
+  "endpoint": "backbuffer_ready_rt",
+  "frame_pacing": [
+    {
+      "frame_ms": {
+        "max": 41.99250030517578,
+        "median": 8.705709457397461,
+        "n": 3301,
+        "p95": 9.648457527160645
+      },
+      "n": 3301,
+      "scene_buildings": 100
+    },
+    {
+      "frame_ms": {
+        "max": 10.792374610900879,
+        "median": 8.683770656585693,
+        "n": 600,
+        "p95": 9.601250648498535
+      },
+      "n": 600,
+      "scene_buildings": 101
+    }
+  ],
+  "generated_at_utc": "2026-09-15T11:23:38.004952Z",
+  "groups": [
+    {
+      "frame_deltas": {
+        "input_to_logic_frames": null,
+        "logic_to_backbuffer_ready_rt_frames": {
+          "max": 0.0,
+          "median": 0.0,
+          "n": 30,
+          "p95": 0.0
+        },
+        "total_frames": {
+          "max": 0.0,
+          "median": 0.0,
+          "n": 30,
+          "p95": 0.0
+        }
+      },
+      "input_to_logic_ms": null,
+      "kind": "cancel",
+      "logic_duration_ms": {
+        "max": 0.01525000000037835,
+        "median": 0.009395833332746406,
+        "n": 30,
+        "p95": 0.015166666667937534
+      },
+      "logic_to_backbuffer_ready_rt_ms": {
+        "max": 18.446208333334653,
+        "median": 16.995499999999538,
+        "n": 30,
+        "p95": 18.378708333333634
+      },
+      "logic_to_scene_rt_ms": {
+        "max": 10.167750000000524,
+        "median": 8.28133333333335,
+        "n": 30,
+        "p95": 9.379166666665697
+      },
+      "not_requested_n": 0,
+      "observed_n": 30,
+      "pending_n": 0,
+      "preview_cache": null,
+      "scene_buildings": 101,
+      "scene_rt_to_backbuffer_ms": {
+        "max": 9.469249999998283,
+        "median": 8.601229166667395,
+        "n": 30,
+        "p95": 9.38266666666459
+      },
+      "source": "replay",
+      "superseded_n": 0,
+      "total_ms": {
+        "max": 18.456750000001193,
+        "median": 17.00481249999939,
+        "n": 30,
+        "p95": 18.389041666669073
+      }
+    },
+    {
+      "frame_deltas": {
+        "input_to_logic_frames": null,
+        "logic_to_backbuffer_ready_rt_frames": {
+          "max": 0.0,
+          "median": 0.0,
+          "n": 30,
+          "p95": 0.0
+        },
+        "total_frames": {
+          "max": 0.0,
+          "median": 0.0,
+          "n": 30,
+          "p95": 0.0
+        }
+      },
+      "input_to_logic_ms": null,
+      "kind": "clear",
+      "logic_duration_ms": {
+        "max": 0.04774999999995089,
+        "median": 0.03416666666726087,
+        "n": 30,
+        "p95": 0.04195833333142218
+      },
+      "logic_to_backbuffer_ready_rt_ms": {
+        "max": 18.225750000001426,
+        "median": 16.863916666665318,
+        "n": 30,
+        "p95": 17.946958333335715
+      },
+      "logic_to_scene_rt_ms": {
+        "max": 9.449249999999665,
+        "median": 8.497645833333081,
+        "n": 30,
+        "p95": 9.352125000001251
+      },
+      "not_requested_n": 0,
+      "observed_n": 30,
+      "pending_n": 0,
+      "preview_cache": null,
+      "scene_buildings": 100,
+      "scene_rt_to_backbuffer_ms": {
+        "max": 9.310416666667152,
+        "median": 8.495020833333001,
+        "n": 30,
+        "p95": 9.136416666666264
+      },
+      "source": "replay",
+      "superseded_n": 0,
+      "total_ms": {
+        "max": 18.26291666666657,
+        "median": 16.90147916666683,
+        "n": 30,
+        "p95": 17.979833333334682
+      }
+    },
+    {
+      "frame_deltas": {
+        "input_to_logic_frames": null,
+        "logic_to_backbuffer_ready_rt_frames": {
+          "max": 0.0,
+          "median": 0.0,
+          "n": 30,
+          "p95": 0.0
+        },
+        "total_frames": {
+          "max": 0.0,
+          "median": 0.0,
+          "n": 30,
+          "p95": 0.0
+        }
+      },
+      "input_to_logic_ms": null,
+      "kind": "enter",
+      "logic_duration_ms": {
+        "max": 0.020083333334696363,
+        "median": 0.012062500000183718,
+        "n": 30,
+        "p95": 0.014958333333197515
+      },
+      "logic_to_backbuffer_ready_rt_ms": {
+        "max": 18.55004166666913,
+        "median": 17.13027083333145,
+        "n": 30,
+        "p95": 18.134625000002416
+      },
+      "logic_to_scene_rt_ms": null,
+      "not_requested_n": 0,
+      "observed_n": 30,
+      "pending_n": 0,
+      "preview_cache": null,
+      "scene_buildings": 100,
+      "scene_rt_to_backbuffer_ms": null,
+      "source": "replay",
+      "superseded_n": 0,
+      "total_ms": {
+        "max": 18.563125000000582,
+        "median": 17.142458333333707,
+        "n": 30,
+        "p95": 18.147166666669364
+      }
+    },
+    {
+      "frame_deltas": {
+        "input_to_logic_frames": null,
+        "logic_to_backbuffer_ready_rt_frames": {
+          "max": 0.0,
+          "median": 0.0,
+          "n": 30,
+          "p95": 0.0
+        },
+        "total_frames": {
+          "max": 0.0,
+          "median": 0.0,
+          "n": 30,
+          "p95": 0.0
+        }
+      },
+      "input_to_logic_ms": null,
+      "kind": "place_reject",
+      "logic_duration_ms": {
+        "max": 0.8915833333339833,
+        "median": 0.49489583333252085,
+        "n": 30,
+        "p95": 0.6035833333335177
+      },
+      "logic_to_backbuffer_ready_rt_ms": {
+        "max": 17.776791666667123,
+        "median": 16.711812500001543,
+        "n": 30,
+        "p95": 17.60841666666238
+      },
+      "logic_to_scene_rt_ms": null,
+      "not_requested_n": 0,
+      "observed_n": 30,
+      "pending_n": 0,
+      "preview_cache": null,
+      "scene_buildings": 100,
+      "scene_rt_to_backbuffer_ms": null,
+      "source": "replay",
+      "superseded_n": 0,
+      "total_ms": {
+        "max": 18.271791666669742,
+        "median": 17.248854166667115,
+        "n": 30,
+        "p95": 18.15879166666491
+      }
+    },
+    {
+      "frame_deltas": {
+        "input_to_logic_frames": null,
+        "logic_to_backbuffer_ready_rt_frames": {
+          "max": 1.0,
+          "median": 1.0,
+          "n": 30,
+          "p95": 1.0
+        },
+        "total_frames": {
+          "max": 1.0,
+          "median": 1.0,
+          "n": 30,
+          "p95": 1.0
+        }
+      },
+      "input_to_logic_ms": null,
+      "kind": "place_success",
+      "logic_duration_ms": {
+        "max": 1.1452083333315386,
+        "median": 0.9647083333347837,
+        "n": 30,
+        "p95": 1.1407083333288028
+      },
+      "logic_to_backbuffer_ready_rt_ms": {
+        "max": 26.618875000000116,
+        "median": 25.055083333332732,
+        "n": 30,
+        "p95": 26.202291666664678
+      },
+      "logic_to_scene_rt_ms": {
+        "max": 17.334208333333663,
+        "median": 16.37508333333244,
+        "n": 30,
+        "p95": 17.136791666671343
+      },
+      "not_requested_n": 0,
+      "observed_n": 30,
+      "pending_n": 0,
+      "preview_cache": null,
+      "scene_buildings": 100,
+      "scene_rt_to_backbuffer_ms": {
+        "max": 9.956833333333634,
+        "median": 8.520041666666657,
+        "n": 30,
+        "p95": 9.636624999999185
+      },
+      "source": "replay",
+      "superseded_n": 0,
+      "total_ms": {
+        "max": 27.61954166666692,
+        "median": 26.04945833333204,
+        "n": 30,
+        "p95": 27.24499999999898
+      }
+    },
+    {
+      "frame_deltas": {
+        "input_to_logic_frames": null,
+        "logic_to_backbuffer_ready_rt_frames": null,
+        "total_frames": null
+      },
+      "input_to_logic_ms": null,
+      "kind": "preview",
+      "logic_duration_ms": {
+        "max": 0.002375000000029104,
+        "median": 0.0008333333316841163,
+        "n": 270,
+        "p95": 0.001333333333604969
+      },
+      "logic_to_backbuffer_ready_rt_ms": null,
+      "logic_to_scene_rt_ms": null,
+      "not_requested_n": 270,
+      "observed_n": 0,
+      "pending_n": 0,
+      "preview_cache": null,
+      "scene_buildings": 100,
+      "scene_rt_to_backbuffer_ms": null,
+      "source": "replay",
+      "superseded_n": 0,
+      "total_ms": null
+    },
+    {
+      "frame_deltas": {
+        "input_to_logic_frames": null,
+        "logic_to_backbuffer_ready_rt_frames": null,
+        "total_frames": null
+      },
+      "input_to_logic_ms": null,
+      "kind": "preview",
+      "logic_duration_ms": {
+        "max": 0.11737499999799184,
+        "median": 0.02883333333011251,
+        "n": 1350,
+        "p95": 0.03725000000486034
+      },
+      "logic_to_backbuffer_ready_rt_ms": null,
+      "logic_to_scene_rt_ms": null,
+      "not_requested_n": 1350,
+      "observed_n": 0,
+      "pending_n": 0,
+      "preview_cache": "hit",
+      "scene_buildings": 100,
+      "scene_rt_to_backbuffer_ms": null,
+      "source": "replay",
+      "superseded_n": 0,
+      "total_ms": null
+    },
+    {
+      "frame_deltas": {
+        "input_to_logic_frames": null,
+        "logic_to_backbuffer_ready_rt_frames": {
+          "max": 0.0,
+          "median": 0.0,
+          "n": 60,
+          "p95": 0.0
+        },
+        "total_frames": {
+          "max": 0.0,
+          "median": 0.0,
+          "n": 60,
+          "p95": 0.0
+        }
+      },
+      "input_to_logic_ms": null,
+      "kind": "preview",
+      "logic_duration_ms": {
+        "max": 0.3975833333315677,
+        "median": 0.2891458333315313,
+        "n": 60,
+        "p95": 0.33312500000101863
+      },
+      "logic_to_backbuffer_ready_rt_ms": {
+        "max": 18.225041666664765,
+        "median": 16.89591666666638,
+        "n": 60,
+        "p95": 17.976833333330433
+      },
+      "logic_to_scene_rt_ms": {
+        "max": 10.191791666667996,
+        "median": 8.298854166666388,
+        "n": 60,
+        "p95": 9.307666666667501
+      },
+      "not_requested_n": 0,
+      "observed_n": 60,
+      "pending_n": 0,
+      "preview_cache": "miss",
+      "scene_buildings": 100,
+      "scene_rt_to_backbuffer_ms": {
+        "max": 9.855083333328366,
+        "median": 8.535229166668614,
+        "n": 60,
+        "p95": 9.463624999998501
+      },
+      "source": "replay",
+      "superseded_n": 0,
+      "total_ms": {
+        "max": 18.617999999998574,
+        "median": 17.18731250000019,
+        "n": 60,
+        "p95": 18.2602083333295
+      }
+    },
+    {
+      "frame_deltas": {
+        "input_to_logic_frames": null,
+        "logic_to_backbuffer_ready_rt_frames": null,
+        "total_frames": null
+      },
+      "input_to_logic_ms": null,
+      "kind": "preview",
+      "logic_duration_ms": {
+        "max": 0.09554166666748642,
+        "median": 0.028562499999679858,
+        "n": 270,
+        "p95": 0.037749999999505235
+      },
+      "logic_to_backbuffer_ready_rt_ms": null,
+      "logic_to_scene_rt_ms": null,
+      "not_requested_n": 270,
+      "observed_n": 0,
+      "pending_n": 0,
+      "preview_cache": "hit",
+      "scene_buildings": 101,
+      "scene_rt_to_backbuffer_ms": null,
+      "source": "replay",
+      "superseded_n": 0,
+      "total_ms": null
+    },
+    {
+      "frame_deltas": {
+        "input_to_logic_frames": null,
+        "logic_to_backbuffer_ready_rt_frames": {
+          "max": 0.0,
+          "median": 0.0,
+          "n": 30,
+          "p95": 0.0
+        },
+        "total_frames": {
+          "max": 0.0,
+          "median": 0.0,
+          "n": 30,
+          "p95": 0.0
+        }
+      },
+      "input_to_logic_ms": null,
+      "kind": "rotate",
+      "logic_duration_ms": {
+        "max": 0.37237499999901047,
+        "median": 0.28477083333291375,
+        "n": 30,
+        "p95": 0.3500833333346236
+      },
+      "logic_to_backbuffer_ready_rt_ms": {
+        "max": 18.11674999999923,
+        "median": 17.02927083333543,
+        "n": 30,
+        "p95": 18.062916666665842
+      },
+      "logic_to_scene_rt_ms": {
+        "max": 9.648875000000771,
+        "median": 8.366979166667534,
+        "n": 30,
+        "p95": 9.116291666668985
+      },
+      "not_requested_n": 0,
+      "observed_n": 30,
+      "pending_n": 0,
+      "preview_cache": null,
+      "scene_buildings": 100,
+      "scene_rt_to_backbuffer_ms": {
+        "max": 9.422874999999294,
+        "median": 8.555624999997235,
+        "n": 30,
+        "p95": 9.326499999999214
+      },
+      "source": "replay",
+      "superseded_n": 0,
+      "total_ms": {
+        "max": 18.380958333333183,
+        "median": 17.314666666668927,
+        "n": 30,
+        "p95": 18.373499999999694
+      }
+    },
+    {
+      "frame_deltas": {
+        "input_to_logic_frames": null,
+        "logic_to_backbuffer_ready_rt_frames": {
+          "max": 0.0,
+          "median": 0.0,
+          "n": 30,
+          "p95": 0.0
+        },
+        "total_frames": {
+          "max": 0.0,
+          "median": 0.0,
+          "n": 30,
+          "p95": 0.0
+        }
+      },
+      "input_to_logic_ms": null,
+      "kind": "select",
+      "logic_duration_ms": {
+        "max": 0.059958333333270275,
+        "median": 0.04943750000165892,
+        "n": 30,
+        "p95": 0.059791666662931675
+      },
+      "logic_to_backbuffer_ready_rt_ms": {
+        "max": 18.524249999998574,
+        "median": 16.947041666667246,
+        "n": 30,
+        "p95": 17.928250000000844
+      },
+      "logic_to_scene_rt_ms": {
+        "max": 9.517374999999447,
+        "median": 8.318125000000691,
+        "n": 30,
+        "p95": 9.19012500000099
+      },
+      "not_requested_n": 0,
+      "observed_n": 30,
+      "pending_n": 0,
+      "preview_cache": null,
+      "scene_buildings": 100,
+      "scene_rt_to_backbuffer_ms": {
+        "max": 10.42699999999968,
+        "median": 8.567166666665798,
+        "n": 30,
+        "p95": 9.398999999997613
+      },
+      "source": "replay",
+      "superseded_n": 0,
+      "total_ms": {
+        "max": 18.5784583333334,
+        "median": 16.99735416666499,
+        "n": 30,
+        "p95": 17.980666666670004
+      }
+    },
+    {
+      "frame_deltas": {
+        "input_to_logic_frames": null,
+        "logic_to_backbuffer_ready_rt_frames": {
+          "max": 0.0,
+          "median": 0.0,
+          "n": 30,
+          "p95": 0.0
+        },
+        "total_frames": {
+          "max": 0.0,
+          "median": 0.0,
+          "n": 30,
+          "p95": 0.0
+        }
+      },
+      "input_to_logic_ms": null,
+      "kind": "switch",
+      "logic_duration_ms": {
+        "max": 0.06491666666988749,
+        "median": 0.05249999999978172,
+        "n": 30,
+        "p95": 0.06354166666642413
+      },
+      "logic_to_backbuffer_ready_rt_ms": {
+        "max": 18.659708333329036,
+        "median": 16.89297916666419,
+        "n": 30,
+        "p95": 17.79445833333375
+      },
+      "logic_to_scene_rt_ms": {
+        "max": 10.931374999996478,
+        "median": 8.232729166667013,
+        "n": 30,
+        "p95": 9.418791666666948
+      },
+      "not_requested_n": 0,
+      "observed_n": 30,
+      "pending_n": 0,
+      "preview_cache": null,
+      "scene_buildings": 100,
+      "scene_rt_to_backbuffer_ms": {
+        "max": 9.587374999999156,
+        "median": 8.41666666666788,
+        "n": 30,
+        "p95": 9.224833333330025
+      },
+      "source": "replay",
+      "superseded_n": 0,
+      "total_ms": {
+        "max": 18.712708333332557,
+        "median": 16.95022916666494,
+        "n": 30,
+        "p95": 17.847041666667792
+      }
+    }
+  ],
+  "issues": [],
+  "notes": [
+    "The endpoint is Unreal BackBufferReadyToPresent, not display scanout.",
+    "source=slate identifies the Slate route; it does not prove physical input origin."
+  ],
+  "quality": {
+    "dropped_count": 0,
+    "events_n": 2190,
+    "not_requested_n": 1890,
+    "observed_n": 300,
+    "overflow_count": 0,
+    "pending_n": 0,
+    "superseded_n": 0
+  },
+  "schema_version": 1,
+  "sessions": [
+    {
+      "build_configuration": "Development",
+      "cpu": "Apple M1 Max",
+      "engine_version": "5.8.2-56702186+++UE5+Release-5.8",
+      "id": "C40ABA5F-1548-CA1D-3A0C-C1984B803200",
+      "platform": "Mac",
+      "viewport_height": 720,
+      "viewport_width": 1280
+    }
+  ],
+  "source_files": [
+    "/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/artifacts/latency/repeat-100.json"
+  ]
+}

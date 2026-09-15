@@ -357,6 +357,41 @@ with Path(os.environ["SHOEN_FAKE_CALLS"]).open("a", encoding="utf-8") as stream:
         self.assertNotEqual(result.returncode, 0)
         self.assertIn("shoen.inspection.picking: fail", result.stdout.lower())
 
+    def test_editor_test_selects_and_validates_profiling_suite(self) -> None:
+        editor_body = """
+        report = next(value.split("=", 1)[1] for value in sys.argv if value.startswith("-ReportExportPath="))
+        output = Path(report)
+        output.mkdir(parents=True, exist_ok=True)
+        (output / "index.json").write_text(json.dumps({
+            "tests": [{"fullTestPath": "Shoen.Profiling.Collector", "state": "Success", "errors": 0}]
+        }), encoding="utf-8-sig")
+        """
+        engine = self.make_engine(editor_body)
+
+        result = self.run_cli("--engine", str(engine), "editor-test", "--suite", "profiling")
+
+        self.assertEqual(result.returncode, 0, result.stdout)
+        self.assertIn("1 automation test passed from Shoen.Profiling", result.stdout)
+        argv = self.read_calls()[0]["argv"]
+        self.assertIn("-ExecCmds=Automation RunTests Shoen.Profiling", argv)
+        self.assertNotIn("-ExecCmds=Automation RunTests Shoen.Inspection", argv)
+
+    def test_editor_test_rejects_report_without_profiling_tests(self) -> None:
+        editor_body = """
+        report = next(value.split("=", 1)[1] for value in sys.argv if value.startswith("-ReportExportPath="))
+        output = Path(report)
+        output.mkdir(parents=True, exist_ok=True)
+        (output / "index.json").write_text(json.dumps({
+            "tests": [{"fullTestPath": "Shoen.Inspection.Picking", "state": "Success", "errors": 0}]
+        }), encoding="utf-8-sig")
+        """
+        engine = self.make_engine(editor_body)
+
+        result = self.run_cli("--engine", str(engine), "editor-test", "--suite", "profiling")
+
+        self.assertNotEqual(result.returncode, 0)
+        self.assertIn("no tests matching Shoen.Profiling", result.stdout)
+
     def test_run_passes_scenario_and_soldier_count_as_game_flags(self) -> None:
         engine = self.make_engine()
 

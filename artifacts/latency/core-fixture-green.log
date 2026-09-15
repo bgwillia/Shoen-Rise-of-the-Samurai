@@ -1,0 +1,5 @@
+PASS same terrain funds anchor and exact1/10/100 counts
+PASS deterministic fixture matches genuine placement accounting
+PASS fixture failures preserve complete output world
+PASS reserved rotation success and rejection space at every count
+4 passed, 0 failed

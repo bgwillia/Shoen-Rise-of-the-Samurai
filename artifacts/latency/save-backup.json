@@ -1,0 +1,14 @@
+[
+  {
+    "path": "game/Saved/SaveGames/Settlement.sav",
+    "bytes": 1497,
+    "sha256": "80c7430e52cdcfe99ed016b417abb910eddb94296b42462dbf3f24fc1d5173bc",
+    "backup": "game/Saved/AcceptanceBackups/m2c-20260915-110216/Settlement.sav"
+  },
+  {
+    "path": "game/Saved/SaveGames/Settlement.sav.bak",
+    "bytes": 1295,
+    "sha256": "c3fb6af1e5f7ea786df8df58bb66ee7e751888771e669441ba8366be38977249",
+    "backup": "game/Saved/AcceptanceBackups/m2c-20260915-110216/Settlement.sav.bak"
+  }
+]

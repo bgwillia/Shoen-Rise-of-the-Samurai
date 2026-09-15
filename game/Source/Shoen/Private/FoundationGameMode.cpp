@@ -23,6 +23,7 @@
 #include "HAL/FileManager.h"
 #include "Serialization/JsonSerializer.h"
 #include "domain/Battle.h"
+#include "InteractionProfiler.h"
 
 AFoundationGameMode::AFoundationGameMode()
 {
@@ -107,9 +108,14 @@ void AFoundationGameMode::NewSettlement()
 }
 void AFoundationGameMode::RebuildViews()
 {
+    auto* Sim = GetGameInstance()->GetSubsystem<UShoenSimulationSubsystem>();
+    ShoenProfile::FUseEventScope Profile(Sim->PendingPlacementProfile);
+    ShoenProfile::Invalidate(ShoenProfile::EVisualChannel::Buildings);
+    ShoenProfile::Invalidate(ShoenProfile::EVisualChannel::Preview);
+    ShoenProfile::Invalidate(ShoenProfile::EVisualChannel::Rotation);
+    ShoenProfile::Mark(TEXT("view_rebuild_begin"));
     for (const auto& View : Views) if (View) View->Destroy();
     Views.Reset();
-    auto* Sim = GetGameInstance()->GetSubsystem<UShoenSimulationSubsystem>();
     for (const auto& [Id,F] : Sim->State.formations)
     {
         if (domain::ActiveFormationCount(Sim->State,Id) == 0) continue;
@@ -126,6 +132,9 @@ void AFoundationGameMode::RebuildViews()
         PC->Selected.Reset();
         PC->RefreshInspection();
     }
+    ShoenProfile::Mark(TEXT("view_rebuild_end"));
+    ShoenProfile::VisualReady(ShoenProfile::CurrentEvent(),ShoenProfile::EVisualChannel::Buildings,true,true);
+    Sim->PendingPlacementProfile=0;
 }
 void AFoundationGameMode::Tick(float Dt)
 {
