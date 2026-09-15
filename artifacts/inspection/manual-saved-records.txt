@@ -1,0 +1,6 @@
+Decoded with the same DomainCore snapshot reader as the game.
+Bytes 1295, buildings 3, campaign_day 27, speed 0
+id=5 type=small_storehouse definition_version=1 settlement=1 district=2 position_cm=-2054,-258,0 yaw_deg=0 footprint_cm=800,600 state=0 transaction=1
+id=6 type=small_storehouse definition_version=1 settlement=1 district=2 position_cm=2067,2404,0 yaw_deg=15 footprint_cm=800,600 state=0 transaction=2
+id=7 type=small_storehouse definition_version=1 settlement=1 district=2 position_cm=1086,1778,0 yaw_deg=30 footprint_cm=800,600 state=0 transaction=3
+settlement=1 timber=140 treasury=85

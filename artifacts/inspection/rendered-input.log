@@ -1,0 +1,301 @@
+[2026.09.15-10.17.13:596][  6]LogTemp: Display: SHOEN_CURSOR RED viewport 953,533 valid=1 | Slate screen 1069,650 -> pixel 953,532
+[2026.09.15-10.17.13:596][  6]LogTemp: Display: SHOEN_CURSOR CYAN native 1069,651 -> pixel 953,533 | Cocoa 1069,331 backing=2.00 buttons=0
+[2026.09.15-10.17.13:596][  6]LogTemp: Display: SHOEN_CURSOR Viewport 1280x720 | local 1280x720 origin 116,118 | local-to-pixel 1.00,1.00
+[2026.09.15-10.17.13:596][  6]LogTemp: Display: SHOEN_CURSOR Window 116,118 dpi=1.00 app-scale=1.00 mode=2 | active=1 focus=1 capture=0 raw=0
+[2026.09.15-10.17.13:981][ 46]LogTemp: Display: SHOEN_INPUT event=0 mouse=953.0,533.0 click=1 hud=1 hit=0
+[2026.09.15-10.17.13:981][ 46]LogTemp: Display: SHOEN_INPUT event=1 mouse=953.0,533.0 click=1 hud=1 hit=0
+[2026.09.15-10.17.13:990][ 47]LogTemp: Display: SHOEN_CLICK 953.0 533.0
+[2026.09.15-10.17.13:990][ 47]LogTemp: Display: SHOEN_INSPECT cleared
+[2026.09.15-10.17.14:613][105]LogTemp: Display: SHOEN_CURSOR RED viewport 953,533 valid=1 | Slate screen 1069,650 -> pixel 953,532
+[2026.09.15-10.17.14:613][105]LogTemp: Display: SHOEN_CURSOR CYAN native 1069,651 -> pixel 953,533 | Cocoa 1069,331 backing=2.00 buttons=0
+[2026.09.15-10.17.14:613][105]LogTemp: Display: SHOEN_CURSOR Viewport 1280x720 | local 1280x720 origin 116,118 | local-to-pixel 1.00,1.00
+[2026.09.15-10.17.14:613][105]LogTemp: Display: SHOEN_CURSOR Window 116,118 dpi=1.00 app-scale=1.00 mode=2 | active=1 focus=1 capture=0 raw=0
+[2026.09.15-10.17.15:616][205]LogTemp: Display: SHOEN_CURSOR RED viewport 953,533 valid=1 | Slate screen 1069,650 -> pixel 953,532
+[2026.09.15-10.17.15:616][205]LogTemp: Display: SHOEN_CURSOR CYAN native 1069,651 -> pixel 953,533 | Cocoa 1069,331 backing=2.00 buttons=0
+[2026.09.15-10.17.15:616][205]LogTemp: Display: SHOEN_CURSOR Viewport 1280x720 | local 1280x720 origin 116,118 | local-to-pixel 1.00,1.00
+[2026.09.15-10.17.15:616][205]LogTemp: Display: SHOEN_CURSOR Window 116,118 dpi=1.00 app-scale=1.00 mode=2 | active=1 focus=1 capture=0 raw=0
+[2026.09.15-10.17.16:617][305]LogTemp: Display: SHOEN_CURSOR RED viewport 953,533 valid=1 | Slate screen 1069,650 -> pixel 953,532
+[2026.09.15-10.17.16:617][305]LogTemp: Display: SHOEN_CURSOR CYAN native 1069,651 -> pixel 953,533 | Cocoa 1069,331 backing=2.00 buttons=0
+[2026.09.15-10.17.16:617][305]LogTemp: Display: SHOEN_CURSOR Viewport 1280x720 | local 1280x720 origin 116,118 | local-to-pixel 1.00,1.00
+[2026.09.15-10.17.16:617][305]LogTemp: Display: SHOEN_CURSOR Window 116,118 dpi=1.00 app-scale=1.00 mode=2 | active=1 focus=1 capture=0 raw=0
+[2026.09.15-10.17.17:621][403]LogTemp: Display: SHOEN_CURSOR RED viewport 953,533 valid=1 | Slate screen 1069,650 -> pixel 953,532
+[2026.09.15-10.17.17:621][403]LogTemp: Display: SHOEN_CURSOR CYAN native 1069,651 -> pixel 953,533 | Cocoa 1069,331 backing=2.00 buttons=0
+[2026.09.15-10.17.17:621][403]LogTemp: Display: SHOEN_CURSOR Viewport 1280x720 | local 1280x720 origin 116,118 | local-to-pixel 1.00,1.00
+[2026.09.15-10.17.17:622][403]LogTemp: Display: SHOEN_CURSOR Window 116,118 dpi=1.00 app-scale=1.00 mode=2 | active=1 focus=1 capture=0 raw=0
+[2026.09.15-10.17.18:623][500]LogTemp: Display: SHOEN_CURSOR RED viewport 953,533 valid=1 | Slate screen 1069,650 -> pixel 953,532
+[2026.09.15-10.17.18:623][500]LogTemp: Display: SHOEN_CURSOR CYAN native 1069,651 -> pixel 953,533 | Cocoa 1069,331 backing=2.00 buttons=0
+[2026.09.15-10.17.18:623][500]LogTemp: Display: SHOEN_CURSOR Viewport 1280x720 | local 1280x720 origin 116,118 | local-to-pixel 1.00,1.00
+[2026.09.15-10.17.18:623][500]LogTemp: Display: SHOEN_CURSOR Window 116,118 dpi=1.00 app-scale=1.00 mode=2 | active=1 focus=1 capture=0 raw=0
+[2026.09.15-10.17.19:631][598]LogTemp: Display: SHOEN_CURSOR RED viewport 953,533 valid=1 | Slate screen 1069,650 -> pixel 953,532
+[2026.09.15-10.17.19:631][598]LogTemp: Display: SHOEN_CURSOR CYAN native 1069,651 -> pixel 953,533 | Cocoa 1069,331 backing=2.00 buttons=0
+[2026.09.15-10.17.19:631][598]LogTemp: Display: SHOEN_CURSOR Viewport 1280x720 | local 1280x720 origin 116,118 | local-to-pixel 1.00,1.00
+[2026.09.15-10.17.19:631][598]LogTemp: Display: SHOEN_CURSOR Window 116,118 dpi=1.00 app-scale=1.00 mode=2 | active=1 focus=1 capture=0 raw=0
+[2026.09.15-10.17.20:635][695]LogTemp: Display: SHOEN_CURSOR RED viewport 953,533 valid=1 | Slate screen 1069,650 -> pixel 953,532
+[2026.09.15-10.17.20:635][695]LogTemp: Display: SHOEN_CURSOR CYAN native 1069,651 -> pixel 953,533 | Cocoa 1069,331 backing=2.00 buttons=0
+[2026.09.15-10.17.20:635][695]LogTemp: Display: SHOEN_CURSOR Viewport 1280x720 | local 1280x720 origin 116,118 | local-to-pixel 1.00,1.00
+[2026.09.15-10.17.20:635][695]LogTemp: Display: SHOEN_CURSOR Window 116,118 dpi=1.00 app-scale=1.00 mode=2 | active=1 focus=1 capture=0 raw=0
+[2026.09.15-10.17.21:638][792]LogTemp: Display: SHOEN_CURSOR RED viewport 953,533 valid=1 | Slate screen 1069,650 -> pixel 953,532
+[2026.09.15-10.17.21:638][792]LogTemp: Display: SHOEN_CURSOR CYAN native 1069,651 -> pixel 953,533 | Cocoa 1069,331 backing=2.00 buttons=0
+[2026.09.15-10.17.21:638][792]LogTemp: Display: SHOEN_CURSOR Viewport 1280x720 | local 1280x720 origin 116,118 | local-to-pixel 1.00,1.00
+[2026.09.15-10.17.21:638][792]LogTemp: Display: SHOEN_CURSOR Window 116,118 dpi=1.00 app-scale=1.00 mode=2 | active=1 focus=1 capture=0 raw=0
+[2026.09.15-10.17.22:647][890]LogTemp: Display: SHOEN_CURSOR RED viewport 953,533 valid=1 | Slate screen 1069,650 -> pixel 953,532
+[2026.09.15-10.17.22:647][890]LogTemp: Display: SHOEN_CURSOR CYAN native 1069,651 -> pixel 953,533 | Cocoa 1069,331 backing=2.00 buttons=0
+[2026.09.15-10.17.22:647][890]LogTemp: Display: SHOEN_CURSOR Viewport 1280x720 | local 1280x720 origin 116,118 | local-to-pixel 1.00,1.00
+[2026.09.15-10.17.22:647][890]LogTemp: Display: SHOEN_CURSOR Window 116,118 dpi=1.00 app-scale=1.00 mode=2 | active=1 focus=1 capture=0 raw=0
+[2026.09.15-10.17.23:650][988]LogTemp: Display: SHOEN_CURSOR RED viewport 953,533 valid=1 | Slate screen 1069,650 -> pixel 953,532
+[2026.09.15-10.17.23:650][988]LogTemp: Display: SHOEN_CURSOR CYAN native 1069,651 -> pixel 953,533 | Cocoa 1069,331 backing=2.00 buttons=0
+[2026.09.15-10.17.23:650][988]LogTemp: Display: SHOEN_CURSOR Viewport 1280x720 | local 1280x720 origin 116,118 | local-to-pixel 1.00,1.00
+[2026.09.15-10.17.23:650][988]LogTemp: Display: SHOEN_CURSOR Window 116,118 dpi=1.00 app-scale=1.00 mode=2 | active=1 focus=1 capture=0 raw=0
+[2026.09.15-10.17.24:653][ 86]LogTemp: Display: SHOEN_CURSOR RED viewport 953,533 valid=1 | Slate screen 1069,650 -> pixel 953,532
+[2026.09.15-10.17.24:653][ 86]LogTemp: Display: SHOEN_CURSOR CYAN native 1069,651 -> pixel 953,533 | Cocoa 1069,331 backing=2.00 buttons=0
+[2026.09.15-10.17.24:653][ 86]LogTemp: Display: SHOEN_CURSOR Viewport 1280x720 | local 1280x720 origin 116,118 | local-to-pixel 1.00,1.00
+[2026.09.15-10.17.24:653][ 86]LogTemp: Display: SHOEN_CURSOR Window 116,118 dpi=1.00 app-scale=1.00 mode=2 | active=1 focus=1 capture=0 raw=0
+[2026.09.15-10.17.25:662][184]LogTemp: Display: SHOEN_CURSOR RED viewport 953,533 valid=1 | Slate screen 1069,650 -> pixel 953,532
+[2026.09.15-10.17.25:662][184]LogTemp: Display: SHOEN_CURSOR CYAN native 1069,651 -> pixel 953,533 | Cocoa 1069,331 backing=2.00 buttons=0
+[2026.09.15-10.17.25:662][184]LogTemp: Display: SHOEN_CURSOR Viewport 1280x720 | local 1280x720 origin 116,118 | local-to-pixel 1.00,1.00
+[2026.09.15-10.17.25:662][184]LogTemp: Display: SHOEN_CURSOR Window 116,118 dpi=1.00 app-scale=1.00 mode=2 | active=1 focus=1 capture=0 raw=0
+[2026.09.15-10.17.26:663][281]LogTemp: Display: SHOEN_CURSOR RED viewport 953,533 valid=1 | Slate screen 1069,650 -> pixel 953,532
+[2026.09.15-10.17.26:663][281]LogTemp: Display: SHOEN_CURSOR CYAN native 1069,651 -> pixel 953,533 | Cocoa 1069,331 backing=2.00 buttons=0
+[2026.09.15-10.17.26:663][281]LogTemp: Display: SHOEN_CURSOR Viewport 1280x720 | local 1280x720 origin 116,118 | local-to-pixel 1.00,1.00
+[2026.09.15-10.17.26:663][281]LogTemp: Display: SHOEN_CURSOR Window 116,118 dpi=1.00 app-scale=1.00 mode=2 | active=1 focus=1 capture=0 raw=0
+[2026.09.15-10.17.27:667][379]LogTemp: Display: SHOEN_CURSOR RED viewport 953,533 valid=1 | Slate screen 1069,650 -> pixel 953,532
+[2026.09.15-10.17.27:667][379]LogTemp: Display: SHOEN_CURSOR CYAN native 1069,651 -> pixel 953,533 | Cocoa 1069,331 backing=2.00 buttons=0
+[2026.09.15-10.17.27:667][379]LogTemp: Display: SHOEN_CURSOR Viewport 1280x720 | local 1280x720 origin 116,118 | local-to-pixel 1.00,1.00
+[2026.09.15-10.17.27:667][379]LogTemp: Display: SHOEN_CURSOR Window 116,118 dpi=1.00 app-scale=1.00 mode=2 | active=1 focus=1 capture=0 raw=0
+[2026.09.15-10.17.28:676][477]LogTemp: Display: SHOEN_CURSOR RED viewport 953,533 valid=1 | Slate screen 1069,650 -> pixel 953,532
+[2026.09.15-10.17.28:676][477]LogTemp: Display: SHOEN_CURSOR CYAN native 1069,651 -> pixel 953,533 | Cocoa 1069,331 backing=2.00 buttons=0
+[2026.09.15-10.17.28:676][477]LogTemp: Display: SHOEN_CURSOR Viewport 1280x720 | local 1280x720 origin 116,118 | local-to-pixel 1.00,1.00
+[2026.09.15-10.17.28:676][477]LogTemp: Display: SHOEN_CURSOR Window 116,118 dpi=1.00 app-scale=1.00 mode=2 | active=1 focus=1 capture=0 raw=0
+[2026.09.15-10.17.29:681][574]LogTemp: Display: SHOEN_CURSOR RED viewport 953,533 valid=1 | Slate screen 1069,650 -> pixel 953,532
+[2026.09.15-10.17.29:681][574]LogTemp: Display: SHOEN_CURSOR CYAN native 1069,651 -> pixel 953,533 | Cocoa 1069,331 backing=2.00 buttons=0
+[2026.09.15-10.17.29:681][574]LogTemp: Display: SHOEN_CURSOR Viewport 1280x720 | local 1280x720 origin 116,118 | local-to-pixel 1.00,1.00
+[2026.09.15-10.17.29:681][574]LogTemp: Display: SHOEN_CURSOR Window 116,118 dpi=1.00 app-scale=1.00 mode=2 | active=1 focus=1 capture=0 raw=0
+[2026.09.15-10.17.30:687][671]LogTemp: Display: SHOEN_CURSOR RED viewport 953,533 valid=1 | Slate screen 1069,650 -> pixel 953,532
+[2026.09.15-10.17.30:687][671]LogTemp: Display: SHOEN_CURSOR CYAN native 1069,651 -> pixel 953,533 | Cocoa 1069,331 backing=2.00 buttons=0
+[2026.09.15-10.17.30:687][671]LogTemp: Display: SHOEN_CURSOR Viewport 1280x720 | local 1280x720 origin 116,118 | local-to-pixel 1.00,1.00
+[2026.09.15-10.17.30:687][671]LogTemp: Display: SHOEN_CURSOR Window 116,118 dpi=1.00 app-scale=1.00 mode=2 | active=1 focus=1 capture=0 raw=0
+[2026.09.15-10.17.31:696][769]LogTemp: Display: SHOEN_CURSOR RED viewport 953,533 valid=1 | Slate screen 1069,650 -> pixel 953,532
+[2026.09.15-10.17.31:696][769]LogTemp: Display: SHOEN_CURSOR CYAN native 1069,651 -> pixel 953,533 | Cocoa 1069,331 backing=2.00 buttons=0
+[2026.09.15-10.17.31:696][769]LogTemp: Display: SHOEN_CURSOR Viewport 1280x720 | local 1280x720 origin 116,118 | local-to-pixel 1.00,1.00
+[2026.09.15-10.17.31:696][769]LogTemp: Display: SHOEN_CURSOR Window 116,118 dpi=1.00 app-scale=1.00 mode=2 | active=1 focus=1 capture=0 raw=0
+[2026.09.15-10.17.32:696][866]LogTemp: Display: SHOEN_CURSOR RED viewport 953,533 valid=1 | Slate screen 1069,650 -> pixel 953,532
+[2026.09.15-10.17.32:696][866]LogTemp: Display: SHOEN_CURSOR CYAN native 1069,651 -> pixel 953,533 | Cocoa 1069,331 backing=2.00 buttons=0
+[2026.09.15-10.17.32:696][866]LogTemp: Display: SHOEN_CURSOR Viewport 1280x720 | local 1280x720 origin 116,118 | local-to-pixel 1.00,1.00
+[2026.09.15-10.17.32:696][866]LogTemp: Display: SHOEN_CURSOR Window 116,118 dpi=1.00 app-scale=1.00 mode=2 | active=1 focus=1 capture=0 raw=0
+[2026.09.15-10.17.33:701][963]LogTemp: Display: SHOEN_CURSOR RED viewport 953,533 valid=1 | Slate screen 1069,650 -> pixel 953,532
+[2026.09.15-10.17.33:701][963]LogTemp: Display: SHOEN_CURSOR CYAN native 1069,651 -> pixel 953,533 | Cocoa 1069,331 backing=2.00 buttons=0
+[2026.09.15-10.17.33:701][963]LogTemp: Display: SHOEN_CURSOR Viewport 1280x720 | local 1280x720 origin 116,118 | local-to-pixel 1.00,1.00
+[2026.09.15-10.17.33:701][963]LogTemp: Display: SHOEN_CURSOR Window 116,118 dpi=1.00 app-scale=1.00 mode=2 | active=1 focus=1 capture=0 raw=0
+[2026.09.15-10.17.34:703][ 58]LogTemp: Display: SHOEN_CURSOR RED viewport 953,533 valid=1 | Slate screen 1069,650 -> pixel 953,532
+[2026.09.15-10.17.34:703][ 58]LogTemp: Display: SHOEN_CURSOR CYAN native 1069,651 -> pixel 953,533 | Cocoa 1069,331 backing=2.00 buttons=0
+[2026.09.15-10.17.34:703][ 58]LogTemp: Display: SHOEN_CURSOR Viewport 1280x720 | local 1280x720 origin 116,118 | local-to-pixel 1.00,1.00
+[2026.09.15-10.17.34:703][ 58]LogTemp: Display: SHOEN_CURSOR Window 116,118 dpi=1.00 app-scale=1.00 mode=2 | active=1 focus=1 capture=0 raw=0
+[2026.09.15-10.17.35:705][153]LogTemp: Display: SHOEN_CURSOR RED viewport 953,533 valid=1 | Slate screen 1069,650 -> pixel 953,532
+[2026.09.15-10.17.35:705][153]LogTemp: Display: SHOEN_CURSOR CYAN native 1069,651 -> pixel 953,533 | Cocoa 1069,331 backing=2.00 buttons=0
+[2026.09.15-10.17.35:705][153]LogTemp: Display: SHOEN_CURSOR Viewport 1280x720 | local 1280x720 origin 116,118 | local-to-pixel 1.00,1.00
+[2026.09.15-10.17.35:705][153]LogTemp: Display: SHOEN_CURSOR Window 116,118 dpi=1.00 app-scale=1.00 mode=2 | active=1 focus=1 capture=0 raw=0
+[2026.09.15-10.17.36:713][249]LogTemp: Display: SHOEN_CURSOR RED viewport 953,533 valid=1 | Slate screen 1069,650 -> pixel 953,532
+[2026.09.15-10.17.36:713][249]LogTemp: Display: SHOEN_CURSOR CYAN native 1069,651 -> pixel 953,533 | Cocoa 1069,331 backing=2.00 buttons=0
+[2026.09.15-10.17.36:713][249]LogTemp: Display: SHOEN_CURSOR Viewport 1280x720 | local 1280x720 origin 116,118 | local-to-pixel 1.00,1.00
+[2026.09.15-10.17.36:713][249]LogTemp: Display: SHOEN_CURSOR Window 116,118 dpi=1.00 app-scale=1.00 mode=2 | active=1 focus=1 capture=0 raw=0
+[2026.09.15-10.17.37:721][344]LogTemp: Display: SHOEN_CURSOR RED viewport 953,533 valid=1 | Slate screen 1069,650 -> pixel 953,532
+[2026.09.15-10.17.37:721][344]LogTemp: Display: SHOEN_CURSOR CYAN native 1069,651 -> pixel 953,533 | Cocoa 1069,331 backing=2.00 buttons=0
+[2026.09.15-10.17.37:721][344]LogTemp: Display: SHOEN_CURSOR Viewport 1280x720 | local 1280x720 origin 116,118 | local-to-pixel 1.00,1.00
+[2026.09.15-10.17.37:721][344]LogTemp: Display: SHOEN_CURSOR Window 116,118 dpi=1.00 app-scale=1.00 mode=2 | active=1 focus=1 capture=0 raw=0
+[2026.09.15-10.17.38:721][438]LogTemp: Display: SHOEN_CURSOR RED viewport 953,533 valid=1 | Slate screen 1069,650 -> pixel 953,532
+[2026.09.15-10.17.38:721][438]LogTemp: Display: SHOEN_CURSOR CYAN native 1069,651 -> pixel 953,533 | Cocoa 1069,331 backing=2.00 buttons=0
+[2026.09.15-10.17.38:721][438]LogTemp: Display: SHOEN_CURSOR Viewport 1280x720 | local 1280x720 origin 116,118 | local-to-pixel 1.00,1.00
+[2026.09.15-10.17.38:721][438]LogTemp: Display: SHOEN_CURSOR Window 116,118 dpi=1.00 app-scale=1.00 mode=2 | active=1 focus=1 capture=0 raw=0
+[2026.09.15-10.17.38:973][462]LogTemp: Display: SHOEN_INPUT event=0 mouse=953.0,533.0 click=1 hud=1 hit=0
+[2026.09.15-10.17.38:973][462]LogTemp: Display: SHOEN_INPUT event=1 mouse=953.0,533.0 click=1 hud=1 hit=0
+[2026.09.15-10.17.38:984][463]LogTemp: Display: SHOEN_CLICK 953.0 533.0
+[2026.09.15-10.17.39:729][534]LogTemp: Display: SHOEN_CURSOR RED viewport 953,533 valid=1 | Slate screen 1069,650 -> pixel 953,532
+[2026.09.15-10.17.39:729][534]LogTemp: Display: SHOEN_CURSOR CYAN native 1069,651 -> pixel 953,533 | Cocoa 1069,331 backing=2.00 buttons=0
+[2026.09.15-10.17.39:729][534]LogTemp: Display: SHOEN_CURSOR Viewport 1280x720 | local 1280x720 origin 116,118 | local-to-pixel 1.00,1.00
+[2026.09.15-10.17.39:729][534]LogTemp: Display: SHOEN_CURSOR Window 116,118 dpi=1.00 app-scale=1.00 mode=2 | active=1 focus=1 capture=0 raw=0
+[2026.09.15-10.17.40:731][629]LogTemp: Display: SHOEN_CURSOR RED viewport 953,533 valid=1 | Slate screen 1069,650 -> pixel 953,532
+[2026.09.15-10.17.40:731][629]LogTemp: Display: SHOEN_CURSOR CYAN native 1069,651 -> pixel 953,533 | Cocoa 1069,331 backing=2.00 buttons=0
+[2026.09.15-10.17.40:731][629]LogTemp: Display: SHOEN_CURSOR Viewport 1280x720 | local 1280x720 origin 116,118 | local-to-pixel 1.00,1.00
+[2026.09.15-10.17.40:731][629]LogTemp: Display: SHOEN_CURSOR Window 116,118 dpi=1.00 app-scale=1.00 mode=2 | active=1 focus=1 capture=0 raw=0
+[2026.09.15-10.17.41:734][725]LogTemp: Display: SHOEN_CURSOR RED viewport 953,533 valid=1 | Slate screen 1069,650 -> pixel 953,532
+[2026.09.15-10.17.41:734][725]LogTemp: Display: SHOEN_CURSOR CYAN native 1069,651 -> pixel 953,533 | Cocoa 1069,331 backing=2.00 buttons=0
+[2026.09.15-10.17.41:734][725]LogTemp: Display: SHOEN_CURSOR Viewport 1280x720 | local 1280x720 origin 116,118 | local-to-pixel 1.00,1.00
+[2026.09.15-10.17.41:734][725]LogTemp: Display: SHOEN_CURSOR Window 116,118 dpi=1.00 app-scale=1.00 mode=2 | active=1 focus=1 capture=0 raw=0
+[2026.09.15-10.17.42:742][820]LogTemp: Display: SHOEN_CURSOR RED viewport 953,533 valid=1 | Slate screen 1069,650 -> pixel 953,532
+[2026.09.15-10.17.42:742][820]LogTemp: Display: SHOEN_CURSOR CYAN native 1069,651 -> pixel 953,533 | Cocoa 1069,331 backing=2.00 buttons=0
+[2026.09.15-10.17.42:742][820]LogTemp: Display: SHOEN_CURSOR Viewport 1280x720 | local 1280x720 origin 116,118 | local-to-pixel 1.00,1.00
+[2026.09.15-10.17.42:742][820]LogTemp: Display: SHOEN_CURSOR Window 116,118 dpi=1.00 app-scale=1.00 mode=2 | active=1 focus=1 capture=0 raw=0
+[2026.09.15-10.17.43:750][916]LogTemp: Display: SHOEN_CURSOR RED viewport 953,533 valid=1 | Slate screen 1069,650 -> pixel 953,532
+[2026.09.15-10.17.43:750][916]LogTemp: Display: SHOEN_CURSOR CYAN native 1069,651 -> pixel 953,533 | Cocoa 1069,331 backing=2.00 buttons=0
+[2026.09.15-10.17.43:750][916]LogTemp: Display: SHOEN_CURSOR Viewport 1280x720 | local 1280x720 origin 116,118 | local-to-pixel 1.00,1.00
+[2026.09.15-10.17.43:750][916]LogTemp: Display: SHOEN_CURSOR Window 116,118 dpi=1.00 app-scale=1.00 mode=2 | active=1 focus=1 capture=0 raw=0
+[2026.09.15-10.17.44:752][ 11]LogTemp: Display: SHOEN_CURSOR RED viewport 953,533 valid=1 | Slate screen 1069,650 -> pixel 953,532
+[2026.09.15-10.17.44:752][ 11]LogTemp: Display: SHOEN_CURSOR CYAN native 1069,651 -> pixel 953,533 | Cocoa 1069,331 backing=2.00 buttons=0
+[2026.09.15-10.17.44:752][ 11]LogTemp: Display: SHOEN_CURSOR Viewport 1280x720 | local 1280x720 origin 116,118 | local-to-pixel 1.00,1.00
+[2026.09.15-10.17.44:752][ 11]LogTemp: Display: SHOEN_CURSOR Window 116,118 dpi=1.00 app-scale=1.00 mode=2 | active=1 focus=1 capture=0 raw=0
+[2026.09.15-10.17.45:760][108]LogTemp: Display: SHOEN_CURSOR RED viewport 953,533 valid=1 | Slate screen 1069,650 -> pixel 953,532
+[2026.09.15-10.17.45:760][108]LogTemp: Display: SHOEN_CURSOR CYAN native 1069,651 -> pixel 953,533 | Cocoa 1069,331 backing=2.00 buttons=0
+[2026.09.15-10.17.45:760][108]LogTemp: Display: SHOEN_CURSOR Viewport 1280x720 | local 1280x720 origin 116,118 | local-to-pixel 1.00,1.00
+[2026.09.15-10.17.45:760][108]LogTemp: Display: SHOEN_CURSOR Window 116,118 dpi=1.00 app-scale=1.00 mode=2 | active=1 focus=1 capture=0 raw=0
+[2026.09.15-10.17.46:763][205]LogTemp: Display: SHOEN_CURSOR RED viewport 953,533 valid=1 | Slate screen 1069,650 -> pixel 953,532
+[2026.09.15-10.17.46:763][205]LogTemp: Display: SHOEN_CURSOR CYAN native 1069,651 -> pixel 953,533 | Cocoa 1069,331 backing=2.00 buttons=0
+[2026.09.15-10.17.46:763][205]LogTemp: Display: SHOEN_CURSOR Viewport 1280x720 | local 1280x720 origin 116,118 | local-to-pixel 1.00,1.00
+[2026.09.15-10.17.46:763][205]LogTemp: Display: SHOEN_CURSOR Window 116,118 dpi=1.00 app-scale=1.00 mode=2 | active=1 focus=1 capture=0 raw=0
+[2026.09.15-10.17.47:766][302]LogTemp: Display: SHOEN_CURSOR RED viewport 953,533 valid=1 | Slate screen 1069,650 -> pixel 953,532
+[2026.09.15-10.17.47:766][302]LogTemp: Display: SHOEN_CURSOR CYAN native 1069,651 -> pixel 953,533 | Cocoa 1069,331 backing=2.00 buttons=0
+[2026.09.15-10.17.47:766][302]LogTemp: Display: SHOEN_CURSOR Viewport 1280x720 | local 1280x720 origin 116,118 | local-to-pixel 1.00,1.00
+[2026.09.15-10.17.47:766][302]LogTemp: Display: SHOEN_CURSOR Window 116,118 dpi=1.00 app-scale=1.00 mode=2 | active=1 focus=1 capture=0 raw=0
+[2026.09.15-10.17.48:503][373]LogTemp: Display: SHOEN_INPUT event=0 mouse=953.0,533.0 click=1 hud=1 hit=0
+[2026.09.15-10.17.48:503][373]LogTemp: Display: SHOEN_INPUT event=1 mouse=953.0,533.0 click=1 hud=1 hit=0
+[2026.09.15-10.17.48:513][374]LogTemp: Display: SHOEN_CLICK 953.0 533.0
+[2026.09.15-10.17.48:513][374]LogTemp: Display: SHOEN_INSPECT id=6 type=small_storehouse position_cm=2067,2404,0 yaw_deg=15
+[2026.09.15-10.17.48:771][399]LogTemp: Display: SHOEN_CURSOR RED viewport 953,533 valid=1 | Slate screen 1069,650 -> pixel 953,532
+[2026.09.15-10.17.48:771][399]LogTemp: Display: SHOEN_CURSOR CYAN native 1069,651 -> pixel 953,533 | Cocoa 1069,331 backing=2.00 buttons=0
+[2026.09.15-10.17.48:771][399]LogTemp: Display: SHOEN_CURSOR Viewport 1280x720 | local 1280x720 origin 116,118 | local-to-pixel 1.00,1.00
+[2026.09.15-10.17.48:771][399]LogTemp: Display: SHOEN_CURSOR Window 116,118 dpi=1.00 app-scale=1.00 mode=2 | active=1 focus=1 capture=0 raw=0
+[2026.09.15-10.17.49:778][495]LogTemp: Display: SHOEN_CURSOR RED viewport 953,533 valid=1 | Slate screen 1069,650 -> pixel 953,532
+[2026.09.15-10.17.49:778][495]LogTemp: Display: SHOEN_CURSOR CYAN native 1069,651 -> pixel 953,533 | Cocoa 1069,331 backing=2.00 buttons=0
+[2026.09.15-10.17.49:778][495]LogTemp: Display: SHOEN_CURSOR Viewport 1280x720 | local 1280x720 origin 116,118 | local-to-pixel 1.00,1.00
+[2026.09.15-10.17.49:778][495]LogTemp: Display: SHOEN_CURSOR Window 116,118 dpi=1.00 app-scale=1.00 mode=2 | active=1 focus=1 capture=0 raw=0
+[2026.09.15-10.17.50:780][592]LogTemp: Display: SHOEN_CURSOR RED viewport 953,533 valid=1 | Slate screen 1069,650 -> pixel 953,532
+[2026.09.15-10.17.50:780][592]LogTemp: Display: SHOEN_CURSOR CYAN native 1069,651 -> pixel 953,533 | Cocoa 1069,331 backing=2.00 buttons=0
+[2026.09.15-10.17.50:780][592]LogTemp: Display: SHOEN_CURSOR Viewport 1280x720 | local 1280x720 origin 116,118 | local-to-pixel 1.00,1.00
+[2026.09.15-10.17.50:780][592]LogTemp: Display: SHOEN_CURSOR Window 116,118 dpi=1.00 app-scale=1.00 mode=2 | active=1 focus=1 capture=0 raw=0
+[2026.09.15-10.17.51:787][689]LogTemp: Display: SHOEN_CURSOR RED viewport 953,533 valid=1 | Slate screen 1069,650 -> pixel 953,532
+[2026.09.15-10.17.51:787][689]LogTemp: Display: SHOEN_CURSOR CYAN native 1069,651 -> pixel 953,533 | Cocoa 1069,331 backing=2.00 buttons=0
+[2026.09.15-10.17.51:787][689]LogTemp: Display: SHOEN_CURSOR Viewport 1280x720 | local 1280x720 origin 116,118 | local-to-pixel 1.00,1.00
+[2026.09.15-10.17.51:787][689]LogTemp: Display: SHOEN_CURSOR Window 116,118 dpi=1.00 app-scale=1.00 mode=2 | active=1 focus=1 capture=0 raw=0
+[2026.09.15-10.17.52:795][786]LogTemp: Display: SHOEN_CURSOR RED viewport 953,533 valid=1 | Slate screen 1069,650 -> pixel 953,532
+[2026.09.15-10.17.52:795][786]LogTemp: Display: SHOEN_CURSOR CYAN native 1069,651 -> pixel 953,533 | Cocoa 1069,331 backing=2.00 buttons=0
+[2026.09.15-10.17.52:795][786]LogTemp: Display: SHOEN_CURSOR Viewport 1280x720 | local 1280x720 origin 116,118 | local-to-pixel 1.00,1.00
+[2026.09.15-10.17.52:795][786]LogTemp: Display: SHOEN_CURSOR Window 116,118 dpi=1.00 app-scale=1.00 mode=2 | active=1 focus=1 capture=0 raw=0
+[2026.09.15-10.17.53:800][882]LogTemp: Display: SHOEN_CURSOR RED viewport 953,533 valid=1 | Slate screen 1069,650 -> pixel 953,532
+[2026.09.15-10.17.53:800][882]LogTemp: Display: SHOEN_CURSOR CYAN native 1069,651 -> pixel 953,533 | Cocoa 1069,331 backing=2.00 buttons=0
+[2026.09.15-10.17.53:800][882]LogTemp: Display: SHOEN_CURSOR Viewport 1280x720 | local 1280x720 origin 116,118 | local-to-pixel 1.00,1.00
+[2026.09.15-10.17.53:800][882]LogTemp: Display: SHOEN_CURSOR Window 116,118 dpi=1.00 app-scale=1.00 mode=2 | active=1 focus=1 capture=0 raw=0
+[2026.09.15-10.17.54:806][978]LogTemp: Display: SHOEN_CURSOR RED viewport 953,533 valid=1 | Slate screen 1069,650 -> pixel 953,532
+[2026.09.15-10.17.54:806][978]LogTemp: Display: SHOEN_CURSOR CYAN native 1069,651 -> pixel 953,533 | Cocoa 1069,331 backing=2.00 buttons=0
+[2026.09.15-10.17.54:806][978]LogTemp: Display: SHOEN_CURSOR Viewport 1280x720 | local 1280x720 origin 116,118 | local-to-pixel 1.00,1.00
+[2026.09.15-10.17.54:806][978]LogTemp: Display: SHOEN_CURSOR Window 116,118 dpi=1.00 app-scale=1.00 mode=2 | active=1 focus=1 capture=0 raw=0
+[2026.09.15-10.17.55:811][ 74]LogTemp: Display: SHOEN_CURSOR RED viewport 953,533 valid=1 | Slate screen 1069,650 -> pixel 953,532
+[2026.09.15-10.17.55:811][ 74]LogTemp: Display: SHOEN_CURSOR CYAN native 1069,651 -> pixel 953,533 | Cocoa 1069,331 backing=2.00 buttons=0
+[2026.09.15-10.17.55:811][ 74]LogTemp: Display: SHOEN_CURSOR Viewport 1280x720 | local 1280x720 origin 116,118 | local-to-pixel 1.00,1.00
+[2026.09.15-10.17.55:811][ 74]LogTemp: Display: SHOEN_CURSOR Window 116,118 dpi=1.00 app-scale=1.00 mode=2 | active=1 focus=1 capture=0 raw=0
+[2026.09.15-10.17.56:813][162]LogTemp: Display: SHOEN_CURSOR RED viewport 953,533 valid=1 | Slate screen 1069,650 -> pixel 953,532
+[2026.09.15-10.17.56:813][162]LogTemp: Display: SHOEN_CURSOR CYAN native 1069,651 -> pixel 953,533 | Cocoa 1069,331 backing=2.00 buttons=0
+[2026.09.15-10.17.56:813][162]LogTemp: Display: SHOEN_CURSOR Viewport 1280x720 | local 1280x720 origin 116,118 | local-to-pixel 1.00,1.00
+[2026.09.15-10.17.56:813][162]LogTemp: Display: SHOEN_CURSOR Window 116,118 dpi=1.00 app-scale=1.00 mode=2 | active=1 focus=1 capture=0 raw=0
+[2026.09.15-10.17.57:817][259]LogTemp: Display: SHOEN_CURSOR RED viewport 953,533 valid=1 | Slate screen 1069,650 -> pixel 953,532
+[2026.09.15-10.17.57:817][259]LogTemp: Display: SHOEN_CURSOR CYAN native 1069,651 -> pixel 953,533 | Cocoa 1069,331 backing=2.00 buttons=0
+[2026.09.15-10.17.57:817][259]LogTemp: Display: SHOEN_CURSOR Viewport 1280x720 | local 1280x720 origin 116,118 | local-to-pixel 1.00,1.00
+[2026.09.15-10.17.57:817][259]LogTemp: Display: SHOEN_CURSOR Window 116,118 dpi=1.00 app-scale=1.00 mode=2 | active=1 focus=1 capture=0 raw=0
+[2026.09.15-10.17.58:827][356]LogTemp: Display: SHOEN_CURSOR RED viewport 953,533 valid=1 | Slate screen 1069,650 -> pixel 953,532
+[2026.09.15-10.17.58:827][356]LogTemp: Display: SHOEN_CURSOR CYAN native 1069,651 -> pixel 953,533 | Cocoa 1069,331 backing=2.00 buttons=0
+[2026.09.15-10.17.58:827][356]LogTemp: Display: SHOEN_CURSOR Viewport 1280x720 | local 1280x720 origin 116,118 | local-to-pixel 1.00,1.00
+[2026.09.15-10.17.58:827][356]LogTemp: Display: SHOEN_CURSOR Window 116,118 dpi=1.00 app-scale=1.00 mode=2 | active=1 focus=1 capture=0 raw=0
+[2026.09.15-10.17.59:835][453]LogTemp: Display: SHOEN_CURSOR RED viewport 953,533 valid=1 | Slate screen 1069,650 -> pixel 953,532
+[2026.09.15-10.17.59:835][453]LogTemp: Display: SHOEN_CURSOR CYAN native 1069,651 -> pixel 953,533 | Cocoa 1069,331 backing=2.00 buttons=0
+[2026.09.15-10.17.59:835][453]LogTemp: Display: SHOEN_CURSOR Viewport 1280x720 | local 1280x720 origin 116,118 | local-to-pixel 1.00,1.00
+[2026.09.15-10.17.59:835][453]LogTemp: Display: SHOEN_CURSOR Window 116,118 dpi=1.00 app-scale=1.00 mode=2 | active=1 focus=1 capture=0 raw=0
+[2026.09.15-10.18.01:822][544]LogCore: Display: Tracing Screenshot "Foundation00020" taken with size: 1280 x 720
+[2026.09.15-10.19.26:103][301]LogCore: Display: Tracing Screenshot "Foundation00021" taken with size: 1280 x 720
+[2026.09.15-10.20.18:021][671]LogTemp: Display: SHOEN_CURSOR RED viewport 0,0 valid=0 | Slate screen 1478,113 -> pixel 1362,-4
+[2026.09.15-10.20.18:021][671]LogTemp: Display: SHOEN_CURSOR CYAN native 1479,114 -> pixel 1363,-4 | Cocoa 1479,868 backing=2.00 buttons=0
+[2026.09.15-10.20.18:021][671]LogTemp: Display: SHOEN_CURSOR Viewport 1280x720 | local 1280x720 origin 116,118 | local-to-pixel 1.00,1.00
+[2026.09.15-10.20.18:021][671]LogTemp: Display: SHOEN_CURSOR Window 116,118 dpi=1.00 app-scale=1.00 mode=2 | active=1 focus=1 capture=0 raw=0
+[2026.09.15-10.20.19:025][751]LogTemp: Display: SHOEN_CURSOR RED viewport 1202,177 valid=1 | Slate screen 1318,294 -> pixel 1202,176
+[2026.09.15-10.20.19:025][751]LogTemp: Display: SHOEN_CURSOR CYAN native 1319,294 -> pixel 1203,177 | Cocoa 1319,688 backing=2.00 buttons=0
+[2026.09.15-10.20.19:025][751]LogTemp: Display: SHOEN_CURSOR Viewport 1280x720 | local 1280x720 origin 116,118 | local-to-pixel 1.00,1.00
+[2026.09.15-10.20.19:025][751]LogTemp: Display: SHOEN_CURSOR Window 116,118 dpi=1.00 app-scale=1.00 mode=2 | active=1 focus=1 capture=0 raw=0
+[2026.09.15-10.20.20:031][830]LogTemp: Display: SHOEN_CURSOR RED viewport 1202,177 valid=1 | Slate screen 1318,294 -> pixel 1202,176
+[2026.09.15-10.20.20:031][830]LogTemp: Display: SHOEN_CURSOR CYAN native 1319,294 -> pixel 1203,177 | Cocoa 1319,688 backing=2.00 buttons=0
+[2026.09.15-10.20.20:031][830]LogTemp: Display: SHOEN_CURSOR Viewport 1280x720 | local 1280x720 origin 116,118 | local-to-pixel 1.00,1.00
+[2026.09.15-10.20.20:031][830]LogTemp: Display: SHOEN_CURSOR Window 116,118 dpi=1.00 app-scale=1.00 mode=2 | active=1 focus=1 capture=0 raw=0
+[2026.09.15-10.20.21:044][913]LogTemp: Display: SHOEN_CURSOR RED viewport 1202,177 valid=1 | Slate screen 1318,294 -> pixel 1202,176
+[2026.09.15-10.20.21:044][913]LogTemp: Display: SHOEN_CURSOR CYAN native 1319,294 -> pixel 1203,177 | Cocoa 1319,688 backing=2.00 buttons=0
+[2026.09.15-10.20.21:044][913]LogTemp: Display: SHOEN_CURSOR Viewport 1280x720 | local 1280x720 origin 116,118 | local-to-pixel 1.00,1.00
+[2026.09.15-10.20.21:044][913]LogTemp: Display: SHOEN_CURSOR Window 116,118 dpi=1.00 app-scale=1.00 mode=2 | active=1 focus=1 capture=0 raw=0
+[2026.09.15-10.20.22:044][996]LogTemp: Display: SHOEN_CURSOR RED viewport 1202,177 valid=1 | Slate screen 1318,294 -> pixel 1202,176
+[2026.09.15-10.20.22:044][996]LogTemp: Display: SHOEN_CURSOR CYAN native 1319,294 -> pixel 1203,177 | Cocoa 1319,688 backing=2.00 buttons=0
+[2026.09.15-10.20.22:044][996]LogTemp: Display: SHOEN_CURSOR Viewport 1280x720 | local 1280x720 origin 116,118 | local-to-pixel 1.00,1.00
+[2026.09.15-10.20.22:044][996]LogTemp: Display: SHOEN_CURSOR Window 116,118 dpi=1.00 app-scale=1.00 mode=2 | active=1 focus=1 capture=0 raw=0
+[2026.09.15-10.20.23:053][ 81]LogTemp: Display: SHOEN_CURSOR RED viewport 1202,177 valid=1 | Slate screen 1318,294 -> pixel 1202,176
+[2026.09.15-10.20.23:053][ 81]LogTemp: Display: SHOEN_CURSOR CYAN native 1319,294 -> pixel 1203,177 | Cocoa 1319,688 backing=2.00 buttons=0
+[2026.09.15-10.20.23:053][ 81]LogTemp: Display: SHOEN_CURSOR Viewport 1280x720 | local 1280x720 origin 116,118 | local-to-pixel 1.00,1.00
+[2026.09.15-10.20.23:053][ 81]LogTemp: Display: SHOEN_CURSOR Window 116,118 dpi=1.00 app-scale=1.00 mode=2 | active=1 focus=1 capture=0 raw=0
+[2026.09.15-10.20.24:061][166]LogTemp: Display: SHOEN_CURSOR RED viewport 1202,177 valid=1 | Slate screen 1318,294 -> pixel 1202,176
+[2026.09.15-10.20.24:061][166]LogTemp: Display: SHOEN_CURSOR CYAN native 1319,294 -> pixel 1203,177 | Cocoa 1319,688 backing=2.00 buttons=0
+[2026.09.15-10.20.24:061][166]LogTemp: Display: SHOEN_CURSOR Viewport 1280x720 | local 1280x720 origin 116,118 | local-to-pixel 1.00,1.00
+[2026.09.15-10.20.24:061][166]LogTemp: Display: SHOEN_CURSOR Window 116,118 dpi=1.00 app-scale=1.00 mode=2 | active=1 focus=1 capture=0 raw=0
+[2026.09.15-10.20.25:062][250]LogTemp: Display: SHOEN_CURSOR RED viewport 1202,177 valid=1 | Slate screen 1318,294 -> pixel 1202,176
+[2026.09.15-10.20.25:062][250]LogTemp: Display: SHOEN_CURSOR CYAN native 1319,294 -> pixel 1203,177 | Cocoa 1319,688 backing=2.00 buttons=0
+[2026.09.15-10.20.25:062][250]LogTemp: Display: SHOEN_CURSOR Viewport 1280x720 | local 1280x720 origin 116,118 | local-to-pixel 1.00,1.00
+[2026.09.15-10.20.25:062][250]LogTemp: Display: SHOEN_CURSOR Window 116,118 dpi=1.00 app-scale=1.00 mode=2 | active=1 focus=1 capture=0 raw=0
+[2026.09.15-10.20.26:067][334]LogTemp: Display: SHOEN_CURSOR RED viewport 1202,177 valid=1 | Slate screen 1318,294 -> pixel 1202,176
+[2026.09.15-10.20.26:067][334]LogTemp: Display: SHOEN_CURSOR CYAN native 1319,294 -> pixel 1203,177 | Cocoa 1319,688 backing=2.00 buttons=0
+[2026.09.15-10.20.26:067][334]LogTemp: Display: SHOEN_CURSOR Viewport 1280x720 | local 1280x720 origin 116,118 | local-to-pixel 1.00,1.00
+[2026.09.15-10.20.26:067][334]LogTemp: Display: SHOEN_CURSOR Window 116,118 dpi=1.00 app-scale=1.00 mode=2 | active=1 focus=1 capture=0 raw=0
+[2026.09.15-10.20.27:077][418]LogTemp: Display: SHOEN_CURSOR RED viewport 1202,177 valid=1 | Slate screen 1318,294 -> pixel 1202,176
+[2026.09.15-10.20.27:077][418]LogTemp: Display: SHOEN_CURSOR CYAN native 1319,294 -> pixel 1203,177 | Cocoa 1319,688 backing=2.00 buttons=0
+[2026.09.15-10.20.27:077][418]LogTemp: Display: SHOEN_CURSOR Viewport 1280x720 | local 1280x720 origin 116,118 | local-to-pixel 1.00,1.00
+[2026.09.15-10.20.27:077][418]LogTemp: Display: SHOEN_CURSOR Window 116,118 dpi=1.00 app-scale=1.00 mode=2 | active=1 focus=1 capture=0 raw=0
+[2026.09.15-10.20.28:084][499]LogTemp: Display: SHOEN_CURSOR RED viewport 1202,177 valid=1 | Slate screen 1318,294 -> pixel 1202,176
+[2026.09.15-10.20.28:084][499]LogTemp: Display: SHOEN_CURSOR CYAN native 1319,294 -> pixel 1203,177 | Cocoa 1319,688 backing=2.00 buttons=0
+[2026.09.15-10.20.28:084][499]LogTemp: Display: SHOEN_CURSOR Viewport 1280x720 | local 1280x720 origin 116,118 | local-to-pixel 1.00,1.00
+[2026.09.15-10.20.28:084][499]LogTemp: Display: SHOEN_CURSOR Window 116,118 dpi=1.00 app-scale=1.00 mode=2 | active=1 focus=1 capture=0 raw=0
+[2026.09.15-10.20.29:085][583]LogTemp: Display: SHOEN_CURSOR RED viewport 1202,177 valid=1 | Slate screen 1318,294 -> pixel 1202,176
+[2026.09.15-10.20.29:085][583]LogTemp: Display: SHOEN_CURSOR CYAN native 1319,294 -> pixel 1203,177 | Cocoa 1319,688 backing=2.00 buttons=0
+[2026.09.15-10.20.29:085][583]LogTemp: Display: SHOEN_CURSOR Viewport 1280x720 | local 1280x720 origin 116,118 | local-to-pixel 1.00,1.00
+[2026.09.15-10.20.29:085][583]LogTemp: Display: SHOEN_CURSOR Window 116,118 dpi=1.00 app-scale=1.00 mode=2 | active=1 focus=1 capture=0 raw=0
+[2026.09.15-10.20.30:090][666]LogTemp: Display: SHOEN_CURSOR RED viewport 1202,177 valid=1 | Slate screen 1318,294 -> pixel 1202,176
+[2026.09.15-10.20.30:090][666]LogTemp: Display: SHOEN_CURSOR CYAN native 1319,294 -> pixel 1203,177 | Cocoa 1319,688 backing=2.00 buttons=0
+[2026.09.15-10.20.30:090][666]LogTemp: Display: SHOEN_CURSOR Viewport 1280x720 | local 1280x720 origin 116,118 | local-to-pixel 1.00,1.00
+[2026.09.15-10.20.30:090][666]LogTemp: Display: SHOEN_CURSOR Window 116,118 dpi=1.00 app-scale=1.00 mode=2 | active=1 focus=1 capture=0 raw=0
+[2026.09.15-10.20.31:102][750]LogTemp: Display: SHOEN_CURSOR RED viewport 1202,177 valid=1 | Slate screen 1318,294 -> pixel 1202,176
+[2026.09.15-10.20.31:102][750]LogTemp: Display: SHOEN_CURSOR CYAN native 1319,294 -> pixel 1203,177 | Cocoa 1319,688 backing=2.00 buttons=0
+[2026.09.15-10.20.31:102][750]LogTemp: Display: SHOEN_CURSOR Viewport 1280x720 | local 1280x720 origin 116,118 | local-to-pixel 1.00,1.00
+[2026.09.15-10.20.31:102][750]LogTemp: Display: SHOEN_CURSOR Window 116,118 dpi=1.00 app-scale=1.00 mode=2 | active=1 focus=1 capture=0 raw=0
+[2026.09.15-10.20.32:112][832]LogTemp: Display: SHOEN_CURSOR RED viewport 257,650 valid=1 | Slate screen 361,783 -> pixel 245,666
+[2026.09.15-10.20.32:112][832]LogTemp: Display: SHOEN_CURSOR CYAN native 350,797 -> pixel 234,680 | Cocoa 350,185 backing=2.00 buttons=0
+[2026.09.15-10.20.32:112][832]LogTemp: Display: SHOEN_CURSOR Viewport 1280x720 | local 1280x720 origin 116,118 | local-to-pixel 1.00,1.00
+[2026.09.15-10.20.32:112][832]LogTemp: Display: SHOEN_CURSOR Window 116,118 dpi=1.00 app-scale=1.00 mode=2 | active=1 focus=1 capture=0 raw=0
+[2026.09.15-10.20.33:117][914]LogTemp: Display: SHOEN_CURSOR RED viewport 0,0 valid=0 | Slate screen 303,890 -> pixel 187,772
+[2026.09.15-10.20.33:117][914]LogTemp: Display: SHOEN_CURSOR CYAN native 303,891 -> pixel 187,773 | Cocoa 303,91 backing=2.00 buttons=0
+[2026.09.15-10.20.33:117][914]LogTemp: Display: SHOEN_CURSOR Viewport 1280x720 | local 1280x720 origin 116,118 | local-to-pixel 1.00,1.00
+[2026.09.15-10.20.33:117][914]LogTemp: Display: SHOEN_CURSOR Window 116,118 dpi=1.00 app-scale=1.00 mode=2 | active=1 focus=1 capture=0 raw=0
+[2026.09.15-10.20.34:120][991]LogTemp: Display: SHOEN_CURSOR RED viewport 0,0 valid=0 | Slate screen 369,826 -> pixel 253,708
+[2026.09.15-10.20.34:120][991]LogTemp: Display: SHOEN_CURSOR CYAN native 407,794 -> pixel 291,676 | Cocoa 407,188 backing=2.00 buttons=0
+[2026.09.15-10.20.34:120][991]LogTemp: Display: SHOEN_CURSOR Viewport 1280x720 | local 1280x720 origin 116,118 | local-to-pixel 1.00,1.00
+[2026.09.15-10.20.34:120][991]LogTemp: Display: SHOEN_CURSOR Window 116,118 dpi=1.00 app-scale=1.00 mode=2 | active=1 focus=1 capture=0 raw=0
+[2026.09.15-10.20.35:127][ 74]LogTemp: Display: SHOEN_CURSOR RED viewport 886,297 valid=1 | Slate screen 1002,414 -> pixel 886,296
+[2026.09.15-10.20.35:127][ 74]LogTemp: Display: SHOEN_CURSOR CYAN native 1003,414 -> pixel 887,297 | Cocoa 1003,568 backing=2.00 buttons=0
+[2026.09.15-10.20.35:127][ 74]LogTemp: Display: SHOEN_CURSOR Viewport 1280x720 | local 1280x720 origin 116,118 | local-to-pixel 1.00,1.00
+[2026.09.15-10.20.35:127][ 74]LogTemp: Display: SHOEN_CURSOR Window 116,118 dpi=1.00 app-scale=1.00 mode=2 | active=1 focus=1 capture=0 raw=0
+[2026.09.15-10.20.36:137][158]LogTemp: Display: SHOEN_CURSOR RED viewport 886,297 valid=1 | Slate screen 1002,414 -> pixel 886,296
+[2026.09.15-10.20.36:137][158]LogTemp: Display: SHOEN_CURSOR CYAN native 1003,414 -> pixel 887,297 | Cocoa 1003,568 backing=2.00 buttons=0
+[2026.09.15-10.20.36:137][158]LogTemp: Display: SHOEN_CURSOR Viewport 1280x720 | local 1280x720 origin 116,118 | local-to-pixel 1.00,1.00
+[2026.09.15-10.20.36:137][158]LogTemp: Display: SHOEN_CURSOR Window 116,118 dpi=1.00 app-scale=1.00 mode=2 | active=1 focus=1 capture=0 raw=0
+[2026.09.15-10.20.37:139][241]LogTemp: Display: SHOEN_CURSOR RED viewport 886,297 valid=1 | Slate screen 1002,414 -> pixel 886,296
+[2026.09.15-10.20.37:139][241]LogTemp: Display: SHOEN_CURSOR CYAN native 1003,414 -> pixel 887,297 | Cocoa 1003,568 backing=2.00 buttons=0
+[2026.09.15-10.20.37:139][241]LogTemp: Display: SHOEN_CURSOR Viewport 1280x720 | local 1280x720 origin 116,118 | local-to-pixel 1.00,1.00
+[2026.09.15-10.20.37:139][241]LogTemp: Display: SHOEN_CURSOR Window 116,118 dpi=1.00 app-scale=1.00 mode=2 | active=1 focus=1 capture=0 raw=0
+[2026.09.15-10.20.38:143][324]LogTemp: Display: SHOEN_CURSOR RED viewport 886,297 valid=1 | Slate screen 1002,414 -> pixel 886,296
+[2026.09.15-10.20.38:143][324]LogTemp: Display: SHOEN_CURSOR CYAN native 1003,414 -> pixel 887,297 | Cocoa 1003,568 backing=2.00 buttons=0
+[2026.09.15-10.20.38:143][324]LogTemp: Display: SHOEN_CURSOR Viewport 1280x720 | local 1280x720 origin 116,118 | local-to-pixel 1.00,1.00
+[2026.09.15-10.20.38:143][324]LogTemp: Display: SHOEN_CURSOR Window 116,118 dpi=1.00 app-scale=1.00 mode=2 | active=1 focus=1 capture=0 raw=0
+[2026.09.15-10.20.39:148][407]LogTemp: Display: SHOEN_CURSOR RED viewport 886,297 valid=1 | Slate screen 1002,414 -> pixel 886,296
+[2026.09.15-10.20.39:148][407]LogTemp: Display: SHOEN_CURSOR CYAN native 1003,414 -> pixel 887,297 | Cocoa 1003,568 backing=2.00 buttons=0
+[2026.09.15-10.20.39:148][407]LogTemp: Display: SHOEN_CURSOR Viewport 1280x720 | local 1280x720 origin 116,118 | local-to-pixel 1.00,1.00
+[2026.09.15-10.20.39:148][407]LogTemp: Display: SHOEN_CURSOR Window 116,118 dpi=1.00 app-scale=1.00 mode=2 | active=1 focus=1 capture=0 raw=0
+[2026.09.15-10.20.40:156][491]LogTemp: Display: SHOEN_CURSOR RED viewport 886,297 valid=1 | Slate screen 1002,414 -> pixel 886,296
+[2026.09.15-10.20.40:156][491]LogTemp: Display: SHOEN_CURSOR CYAN native 1003,414 -> pixel 887,297 | Cocoa 1003,568 backing=2.00 buttons=0
+[2026.09.15-10.20.40:156][491]LogTemp: Display: SHOEN_CURSOR Viewport 1280x720 | local 1280x720 origin 116,118 | local-to-pixel 1.00,1.00
+[2026.09.15-10.20.40:156][491]LogTemp: Display: SHOEN_CURSOR Window 116,118 dpi=1.00 app-scale=1.00 mode=2 | active=1 focus=1 capture=0 raw=0
+[2026.09.15-10.20.41:164][575]LogTemp: Display: SHOEN_CURSOR RED viewport 886,297 valid=1 | Slate screen 1002,414 -> pixel 886,296
+[2026.09.15-10.20.41:164][575]LogTemp: Display: SHOEN_CURSOR CYAN native 1003,414 -> pixel 887,297 | Cocoa 1003,568 backing=2.00 buttons=0
+[2026.09.15-10.20.41:164][575]LogTemp: Display: SHOEN_CURSOR Viewport 1280x720 | local 1280x720 origin 116,118 | local-to-pixel 1.00,1.00
+[2026.09.15-10.20.41:164][575]LogTemp: Display: SHOEN_CURSOR Window 116,118 dpi=1.00 app-scale=1.00 mode=2 | active=1 focus=1 capture=0 raw=0
+[2026.09.15-10.20.42:165][657]LogTemp: Display: SHOEN_CURSOR RED viewport 886,297 valid=1 | Slate screen 1002,414 -> pixel 886,296
+[2026.09.15-10.20.42:165][657]LogTemp: Display: SHOEN_CURSOR CYAN native 1003,414 -> pixel 887,297 | Cocoa 1003,568 backing=2.00 buttons=0
+[2026.09.15-10.20.42:165][657]LogTemp: Display: SHOEN_CURSOR Viewport 1280x720 | local 1280x720 origin 116,118 | local-to-pixel 1.00,1.00
+[2026.09.15-10.20.42:165][657]LogTemp: Display: SHOEN_CURSOR Window 116,118 dpi=1.00 app-scale=1.00 mode=2 | active=1 focus=1 capture=0 raw=0

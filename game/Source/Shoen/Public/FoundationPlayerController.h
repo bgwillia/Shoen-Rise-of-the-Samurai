@@ -2,6 +2,7 @@
 #include "CoreMinimal.h"
 #include "GameFramework/PlayerController.h"
 #include "domain/BuildingTypes.h"
+#include "domain/Inspection.h"
 #include "FoundationPlayerController.generated.h"
 
 UCLASS()
@@ -28,7 +29,12 @@ public:
     bool HasPlacementPoint() const { return bHasPlacementPoint; }
     const domain::PlacementCommand& Placement() const { return PendingPlacement; }
     const domain::PlacementResult& PlacementStatus() const { return PreviewResult; }
+    domain::EntitySelection InspectionSelection() const { return InspectedEntity; }
+    void RefreshInspection();
 private:
+    friend class FShoenInspectionLifecycle;
+    domain::EntitySelection InspectedEntity;
+    void InspectBuilding(uint64 Id);
     friend class FShoenPlacementInput;
     bool bPlacing = false;
     bool bHasPlacementPoint = false;

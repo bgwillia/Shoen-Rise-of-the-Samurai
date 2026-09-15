@@ -1,0 +1,32 @@
+{
+  "command": "python3 tools/dev.py editor-test --suite placement",
+  "exit_status": 0,
+  "report": "artifacts/tooling-editor-test-placement-20260915T101448Z-fd4f18d5",
+  "tests": [
+    {
+      "name": "Shoen.Placement.ContentTransactionAndSave",
+      "state": "Success",
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "name": "Shoen.Placement.ContentValidation",
+      "state": "Success",
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "name": "Shoen.Placement.InputCancelRotateAndConfirm",
+      "state": "Success",
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "name": "Shoen.Placement.PassiveViewRecreation",
+      "state": "Success",
+      "errors": 0,
+      "warnings": 0
+    }
+  ],
+  "validation_errors": []
+}

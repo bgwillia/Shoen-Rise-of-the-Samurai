@@ -1,0 +1,25 @@
+Curated automation output. Full startup/runtime log retained locally in artifacts/local/m2b-full-logs/placement-final.log
+
++ ["/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/UnrealEditor.app/Contents/MacOS/UnrealEditor", "/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/game/Shoen.uproject", "-ExecCmds=Automation RunTests Shoen.Placement", "-TestExit=Automation Test Queue Empty", "-unattended", "-NullRHI", "-ReportExportPath=/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/artifacts/tooling-editor-test-placement-20260915T101448Z-fd4f18d5", "-nop4", "-nosplash", "-stdout", "-FullStdOutLogOutput"]
+LogCsvProfiler: Display: Metadata set : commandline="" /Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/game/Shoen.uproject -ExecCmds="Automation RunTests Shoen.Placement" -TestExit="Automation Test Queue Empty" -unattended -NullRHI -ReportExportPath=/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/artifacts/tooling-editor-test-placement-20260915T101448Z-fd4f18d5 -nop4 -nosplash -stdout -FullStdOutLogOutput""
+LogInit: Command Line: -ExecCmds="Automation RunTests Shoen.Placement" -TestExit="Automation Test Queue Empty" -unattended -NullRHI -ReportExportPath=/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/artifacts/tooling-editor-test-placement-20260915T101448Z-fd4f18d5 -nop4 -nosplash -stdout -FullStdOutLogOutput
+[2026.09.15-10.15.00:743][606]LogAutomationController: Display: Test Started. Name={ContentTransactionAndSave} Path={Shoen.Placement.ContentTransactionAndSave}
+[2026.09.15-10.15.00:760][609]LogAutomationController: Display: Test Completed. Result={Success} Name={ContentTransactionAndSave} Path={Shoen.Placement.ContentTransactionAndSave}
+[2026.09.15-10.15.00:760][609]LogAutomationController: BeginEvents: Shoen.Placement.ContentTransactionAndSave
+[2026.09.15-10.15.00:760][609]LogAutomationController: EndEvents: Shoen.Placement.ContentTransactionAndSave
+[2026.09.15-10.15.00:760][609]LogAutomationController: Display: Test Started. Name={ContentValidation} Path={Shoen.Placement.ContentValidation}
+[2026.09.15-10.15.00:785][612]LogAutomationController: Display: Test Completed. Result={Success} Name={ContentValidation} Path={Shoen.Placement.ContentValidation}
+[2026.09.15-10.15.00:785][613]LogAutomationController: BeginEvents: Shoen.Placement.ContentValidation
+[2026.09.15-10.15.00:785][613]LogAutomationController: EndEvents: Shoen.Placement.ContentValidation
+[2026.09.15-10.15.00:785][613]LogAutomationController: Display: Test Started. Name={InputCancelRotateAndConfirm} Path={Shoen.Placement.InputCancelRotateAndConfirm}
+[2026.09.15-10.15.00:810][615]LogAutomationController: Display: Test Completed. Result={Success} Name={InputCancelRotateAndConfirm} Path={Shoen.Placement.InputCancelRotateAndConfirm}
+[2026.09.15-10.15.00:810][615]LogAutomationController: BeginEvents: Shoen.Placement.InputCancelRotateAndConfirm
+[2026.09.15-10.15.00:810][615]LogAutomationController: EndEvents: Shoen.Placement.InputCancelRotateAndConfirm
+[2026.09.15-10.15.00:810][616]LogAutomationController: Display: Test Started. Name={PassiveViewRecreation} Path={Shoen.Placement.PassiveViewRecreation}
+[2026.09.15-10.15.00:827][617]LogAutomationController: Display: Test Completed. Result={Success} Name={PassiveViewRecreation} Path={Shoen.Placement.PassiveViewRecreation}
+[2026.09.15-10.15.00:827][617]LogAutomationController: BeginEvents: Shoen.Placement.PassiveViewRecreation
+[2026.09.15-10.15.00:827][617]LogAutomationController: EndEvents: Shoen.Placement.PassiveViewRecreation
+[2026.09.15-10.15.00:827][617]LogAutomationController: Exported report to '/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/artifacts/tooling-editor-test-placement-20260915T101448Z-fd4f18d5' in 0.00 Seconds
+[2026.09.15-10.15.00:827][617]LogAutomationCommandLine: Display: ...Automation Test Queue Empty 4 tests performed.
+[2026.09.15-10.15.00:827][618]LogExit: Display: **** TestExit: Automation Test Queue Empty ****
+4 automation test passed from Shoen.Placement

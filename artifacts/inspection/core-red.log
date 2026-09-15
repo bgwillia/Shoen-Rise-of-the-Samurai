@@ -1,0 +1,8 @@
+FAIL three real placements resolve exact IDs and transforms: line 27: b && b==&s.world.buildings.at(s.ids[i]) && b->id==s.ids[i]
+FAIL none wrong kind zero missing and removed selections are safe: line 36: ResolveBuilding(s.world,{EntityKind::Building,s.ids[1]})
+FAIL registry mismatch cannot select another building: line 48: ResolveBuilding(s.world,{EntityKind::Building,s.ids[0]})
+FAIL snapshot v2 restores exact inspected records: line 61: restored && *restored==original_records.at(id)
+FAIL repeated inspection and reordered views leave all state unchanged: line 69: b && b->id==id
+FAIL current definition tuning differs from frozen placed dimensions: line 79: b && *b==instance
+FAIL missing older and mismatched definitions have no fallback: line 84: ResolveBuildingDefinition(s.catalog,b)
+0 passed, 7 failed

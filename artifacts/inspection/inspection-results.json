@@ -1,0 +1,26 @@
+{
+  "command": "python3 tools/dev.py editor-test --suite inspection",
+  "exit_status": 0,
+  "report": "artifacts/tooling-editor-test-inspection-20260915T101342Z-963990f6",
+  "tests": [
+    {
+      "name": "Shoen.Inspection.SelectionLifecycleAndReload",
+      "state": "Success",
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "name": "Shoen.Inspection.ViewIdentityAndHighlight",
+      "state": "Success",
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "name": "Shoen.Inspection.ViewPicking",
+      "state": "Success",
+      "errors": 0,
+      "warnings": 0
+    }
+  ],
+  "validation_errors": []
+}

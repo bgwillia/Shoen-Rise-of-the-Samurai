@@ -1,0 +1,9 @@
+[  8%] Building CXX object CMakeFiles/domain_core.dir/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/game/Source/DomainCore/Private/sim/Inspection.cpp.o
+[ 16%] Linking CXX static library libdomain_core.a
+[ 50%] Built target domain_core
+[ 58%] Linking CXX executable domain_core_tests
+[ 66%] Built target domain_core_tests
+[ 75%] Linking CXX executable domain_building_tests
+[ 83%] Built target domain_building_tests
+[ 91%] Linking CXX executable domain_inspection_tests
+[100%] Built target domain_inspection_tests

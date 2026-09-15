@@ -1,0 +1,8 @@
+PASS three real placements resolve exact IDs and transforms
+PASS none wrong kind zero missing and removed selections are safe
+PASS registry mismatch cannot select another building
+PASS snapshot v2 restores exact inspected records
+PASS repeated inspection and reordered views leave all state unchanged
+PASS current definition tuning differs from frozen placed dimensions
+PASS missing older and mismatched definitions have no fallback
+7 passed, 0 failed

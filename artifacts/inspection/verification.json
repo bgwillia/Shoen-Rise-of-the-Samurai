@@ -1,0 +1,67 @@
+{
+  "source_base": "f27632b05e124934779b3dc574b017851608859d",
+  "branch": "codex/milestone-2b-inspection",
+  "date": "2026-09-15",
+  "commands": [
+    {
+      "command": "python3 -m unittest discover -s tools/tests -v",
+      "exit_status": 0,
+      "result": "28/28 passed",
+      "evidence": "tooling-final.log"
+    },
+    {
+      "command": "python3 tools/dev.py core-test",
+      "exit_status": 0,
+      "result": "CTest 3/3; 20 original + 17 placement + 7 inspection suites",
+      "evidence": "core-final.log"
+    },
+    {
+      "command": "python3 tools/dev.py build",
+      "exit_status": 0,
+      "result": "ShoenEditor Mac Development succeeded",
+      "evidence": "build-final.log"
+    },
+    {
+      "command": "python3 tools/dev.py editor-test --suite foundation",
+      "exit_status": 0,
+      "result": "5/5; test warnings/errors 0",
+      "evidence": "foundation-results.json"
+    },
+    {
+      "command": "python3 tools/dev.py editor-test --suite placement",
+      "exit_status": 0,
+      "result": "4/4; test warnings/errors 0",
+      "evidence": "placement-results.json"
+    },
+    {
+      "command": "python3 tools/dev.py editor-test --suite inspection",
+      "exit_status": 0,
+      "result": "3/3; test warnings/errors 0",
+      "evidence": "inspection-results.json"
+    }
+  ],
+  "human_acceptance": "All listed checks pass",
+  "human_acceptance_record": "manual-acceptance.md",
+  "actual_rendered_viewport": [
+    1280,
+    720
+  ],
+  "source_sha256": {
+    "core/CMakeLists.txt": "b6cc207bd92d33779c6d4f5b2659b7971335b08cc243848dd5b22052d08401bb",
+    "core/tests/test_inspection.cpp": "5bc99d385988277d5f7fcd9a24a1788e4b88f2fadf278921df26b2868e8f0ac1",
+    "game/Source/DomainCore/Private/sim/Inspection.cpp": "8c711e7b11043d9ac7a92b4d20adf1588863f15010ba4239ba7aed90ec99c4b8",
+    "game/Source/DomainCore/Public/domain/Inspection.h": "1981b135162863a059e784f527a72dc5c0f93bb9f1ba518d4842571aa9dfb3b7",
+    "game/Source/Shoen/Private/FoundationGameMode.cpp": "f48c96e0df9628431b983780e246cd280e517e74e17d44c6f2267504698276ae",
+    "game/Source/Shoen/Private/FoundationHUD.cpp": "c7df66103411da5d98d2bf8cd4370322f403b26d6e59293c246d34b4a2991aeb",
+    "game/Source/Shoen/Private/FoundationPlayerController.cpp": "cab56dc2eacdf7ce0a4a3c5b5309207e6d6751c6d31a25c413736078fe0bda1c",
+    "game/Source/Shoen/Private/SettlementView.cpp": "ce8bf49543e91b309d8bef1e5d3a58c60407d3e316cd6757419e7f834ab27cad",
+    "game/Source/Shoen/Private/Tests/InspectionTests.cpp": "2c5307f09ba226419f4aca27d59855cbab35e5419d9a36dfc22f6e38aa5bf3fd",
+    "game/Source/Shoen/Private/Tests/InspectionViewTests.cpp": "a02d8320d06c2f3f6ad6a585a763108b17420427f54913e69b05be754c5ac393",
+    "game/Source/Shoen/Public/FoundationGameMode.h": "c854d1808305f3d683d3583bdc0dc3c118b745c593d6850c4b850c33e375f28e",
+    "game/Source/Shoen/Public/FoundationHUD.h": "a5304d83278dfe4c44fdb9fb6c558ae489382948886cd86cd3c2d49d261ac2e5",
+    "game/Source/Shoen/Public/FoundationPlayerController.h": "06533a5c7ed6648ccaf89e2cfa94ac8a4bfbf5fed6ce3d887003461ab4f6f321",
+    "game/Source/Shoen/Public/SettlementView.h": "0c9725450ce81d3fb81e3635fc9becc8cbcbc36acd0e4bba32a1d6b3a60d909e",
+    "tools/dev.py": "c55c2bb09d65904e0392b58cf3b671ab2b7bdf082ba3cd7795c9e7d2274aa20c",
+    "tools/tests/test_dev.py": "942c1e7d13995df6d7596c1ac1a06be4e2f7ffc8c4f9d53c785c0c37ad7176c4"
+  }
+}

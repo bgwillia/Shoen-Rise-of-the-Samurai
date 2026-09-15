@@ -18,6 +18,7 @@ public:
     int32 LiveInstances() const;
     int32 LiveFormations() const { return Views.Num(); }
 private:
+    friend class FShoenInspectionLifecycle;
     UPROPERTY() TArray<TObjectPtr<AFormationView>> Views;
     UPROPERTY() TObjectPtr<ASettlementView> SettlementView;
     UPROPERTY() TArray<TObjectPtr<AActor>> LabDecorations;

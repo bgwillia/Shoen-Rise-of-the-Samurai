@@ -1,0 +1,21 @@
+Curated automation output. Full startup/runtime log retained locally in artifacts/local/m2b-full-logs/inspection-final.log
+
++ ["/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/UnrealEditor.app/Contents/MacOS/UnrealEditor", "/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/game/Shoen.uproject", "-ExecCmds=Automation RunTests Shoen.Inspection", "-TestExit=Automation Test Queue Empty", "-unattended", "-NullRHI", "-ReportExportPath=/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/artifacts/tooling-editor-test-inspection-20260915T101342Z-963990f6", "-nop4", "-nosplash", "-stdout", "-FullStdOutLogOutput"]
+LogCsvProfiler: Display: Metadata set : commandline="" /Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/game/Shoen.uproject -ExecCmds="Automation RunTests Shoen.Inspection" -TestExit="Automation Test Queue Empty" -unattended -NullRHI -ReportExportPath=/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/artifacts/tooling-editor-test-inspection-20260915T101342Z-963990f6 -nop4 -nosplash -stdout -FullStdOutLogOutput""
+LogInit: Command Line: -ExecCmds="Automation RunTests Shoen.Inspection" -TestExit="Automation Test Queue Empty" -unattended -NullRHI -ReportExportPath=/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/artifacts/tooling-editor-test-inspection-20260915T101342Z-963990f6 -nop4 -nosplash -stdout -FullStdOutLogOutput
+[2026.09.15-10.13.55:016][605]LogAutomationController: Display: Test Started. Name={SelectionLifecycleAndReload} Path={Shoen.Inspection.SelectionLifecycleAndReload}
+[2026.09.15-10.13.55:026][607]LogAutomationController: Display: Test Completed. Result={Success} Name={SelectionLifecycleAndReload} Path={Shoen.Inspection.SelectionLifecycleAndReload}
+[2026.09.15-10.13.55:026][607]LogAutomationController: BeginEvents: Shoen.Inspection.SelectionLifecycleAndReload
+[2026.09.15-10.13.55:026][607]LogAutomationController: EndEvents: Shoen.Inspection.SelectionLifecycleAndReload
+[2026.09.15-10.13.55:026][607]LogAutomationController: Display: Test Started. Name={ViewIdentityAndHighlight} Path={Shoen.Inspection.ViewIdentityAndHighlight}
+[2026.09.15-10.13.55:050][610]LogAutomationController: Display: Test Completed. Result={Success} Name={ViewIdentityAndHighlight} Path={Shoen.Inspection.ViewIdentityAndHighlight}
+[2026.09.15-10.13.55:050][610]LogAutomationController: BeginEvents: Shoen.Inspection.ViewIdentityAndHighlight
+[2026.09.15-10.13.55:050][610]LogAutomationController: EndEvents: Shoen.Inspection.ViewIdentityAndHighlight
+[2026.09.15-10.13.55:050][610]LogAutomationController: Display: Test Started. Name={ViewPicking} Path={Shoen.Inspection.ViewPicking}
+[2026.09.15-10.13.55:075][613]LogAutomationController: Display: Test Completed. Result={Success} Name={ViewPicking} Path={Shoen.Inspection.ViewPicking}
+[2026.09.15-10.13.55:075][613]LogAutomationController: BeginEvents: Shoen.Inspection.ViewPicking
+[2026.09.15-10.13.55:075][613]LogAutomationController: EndEvents: Shoen.Inspection.ViewPicking
+[2026.09.15-10.13.55:076][613]LogAutomationController: Exported report to '/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/artifacts/tooling-editor-test-inspection-20260915T101342Z-963990f6' in 0.00 Seconds
+[2026.09.15-10.13.55:076][613]LogAutomationCommandLine: Display: ...Automation Test Queue Empty 3 tests performed.
+[2026.09.15-10.13.55:076][614]LogExit: Display: **** TestExit: Automation Test Queue Empty ****
+3 automation test passed from Shoen.Inspection

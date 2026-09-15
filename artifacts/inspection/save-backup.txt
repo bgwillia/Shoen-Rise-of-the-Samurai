@@ -1,0 +1,2 @@
+game/Saved/SaveGames/Settlement.sav -> game/Saved/AcceptanceBackups/m2b-20260915-060836/Settlement.sav; SHA-256 af13bc225026ddc511a8043106c975c8526cbdb11b375312080c140b5cefeecb
+game/Saved/SaveGames/Settlement.sav.bak -> game/Saved/AcceptanceBackups/m2b-20260915-060836/Settlement.sav.bak; SHA-256 af13bc225026ddc511a8043106c975c8526cbdb11b375312080c140b5cefeecb

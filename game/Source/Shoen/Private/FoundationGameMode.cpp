@@ -117,11 +117,15 @@ void AFoundationGameMode::RebuildViews()
         View->Rebuild(Sim->State,F);
         Views.Add(View);
     }
-    if (!SettlementView) SettlementView=GetWorld()->SpawnActor<ASettlementView>();
+    if (!IsValid(SettlementView)) SettlementView=GetWorld()->SpawnActor<ASettlementView>();
     SettlementView->Rebuild(Sim->State);
     for (const auto& Decor : LabDecorations) if (Decor) Decor->SetActorHiddenInGame(Sim->IsSettlement());
     SeenGeneration = Sim->ViewGeneration;
-    if (auto* PC = Cast<AFoundationPlayerController>(GetWorld()->GetFirstPlayerController())) PC->Selected.Reset();
+    if (auto* PC = Cast<AFoundationPlayerController>(GetWorld()->GetFirstPlayerController()))
+    {
+        PC->Selected.Reset();
+        PC->RefreshInspection();
+    }
 }
 void AFoundationGameMode::Tick(float Dt)
 {

@@ -1,0 +1,16 @@
+[  8%] Building CXX object CMakeFiles/domain_core.dir/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/game/Source/DomainCore/Private/sim/World.cpp.o
+[ 16%] Building CXX object CMakeFiles/domain_core.dir/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/game/Source/DomainCore/Private/sim/SaveCodec.cpp.o
+[ 25%] Building CXX object CMakeFiles/domain_core.dir/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/game/Source/DomainCore/Private/sim/Battle.cpp.o
+[ 33%] Building CXX object CMakeFiles/domain_core.dir/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/game/Source/DomainCore/Private/sim/Buildings.cpp.o
+[ 41%] Building CXX object CMakeFiles/domain_core.dir/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/game/Source/DomainCore/Private/sim/Inspection.cpp.o
+[ 50%] Linking CXX static library libdomain_core.a
+[ 50%] Built target domain_core
+[ 58%] Building CXX object CMakeFiles/domain_core_tests.dir/tests/test_core.cpp.o
+[ 66%] Linking CXX executable domain_core_tests
+[ 66%] Built target domain_core_tests
+[ 75%] Building CXX object CMakeFiles/domain_building_tests.dir/tests/test_buildings.cpp.o
+[ 83%] Linking CXX executable domain_building_tests
+[ 83%] Built target domain_building_tests
+[ 91%] Building CXX object CMakeFiles/domain_inspection_tests.dir/tests/test_inspection.cpp.o
+[100%] Linking CXX executable domain_inspection_tests
+[100%] Built target domain_inspection_tests

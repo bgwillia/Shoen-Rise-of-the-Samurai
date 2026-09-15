@@ -1,0 +1,62 @@
+Curated automation output. Full startup/runtime log retained locally in artifacts/local/m2b-full-logs/unreal-red-tests.log
+
++ ["/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/UnrealEditor.app/Contents/MacOS/UnrealEditor", "/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/game/Shoen.uproject", "-ExecCmds=Automation RunTests Shoen.Inspection", "-TestExit=Automation Test Queue Empty", "-unattended", "-NullRHI", "-ReportExportPath=/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/artifacts/tooling-editor-test-inspection-20260915T100408Z-8b55c70a", "-nop4", "-nosplash", "-stdout", "-FullStdOutLogOutput"]
+LogCsvProfiler: Display: Metadata set : commandline="" /Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/game/Shoen.uproject -ExecCmds="Automation RunTests Shoen.Inspection" -TestExit="Automation Test Queue Empty" -unattended -NullRHI -ReportExportPath=/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/artifacts/tooling-editor-test-inspection-20260915T100408Z-8b55c70a -nop4 -nosplash -stdout -FullStdOutLogOutput""
+LogInit: Command Line: -ExecCmds="Automation RunTests Shoen.Inspection" -TestExit="Automation Test Queue Empty" -unattended -NullRHI -ReportExportPath=/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/artifacts/tooling-editor-test-inspection-20260915T100408Z-8b55c70a -nop4 -nosplash -stdout -FullStdOutLogOutput
+[2026.09.15-10.04.28:598][604]LogAutomationController: Display: Test Started. Name={SelectionLifecycleAndReload} Path={Shoen.Inspection.SelectionLifecycleAndReload}
+[2026.09.15-10.04.28:620][607]LogAutomationController: Error: Test Completed. Result={Fail} Name={SelectionLifecycleAndReload} Path={Shoen.Inspection.SelectionLifecycleAndReload}
+[2026.09.15-10.04.28:620][607]LogAutomationController: BeginEvents: Shoen.Inspection.SelectionLifecycleAndReload
+[2026.09.15-10.04.28:620][607]LogAutomationController: Error: Expected 'visual roof hit' to be true.
+[2026.09.15-10.04.28:620][607]LogAutomationController: Error: controller applies highlight to clicked building: The two values are not equal.
+[2026.09.15-10.04.28:620][608]LogAutomationController: Error: Expected 'hit resolves to clicked authoritative record, never another' to be true.
+[2026.09.15-10.04.28:620][608]LogAutomationController: Error: Expected 'visual roof hit' to be true.
+[2026.09.15-10.04.28:620][608]LogAutomationController: Error: controller applies highlight to clicked building: The two values are not equal.
+[2026.09.15-10.04.28:620][608]LogAutomationController: Error: Expected 'hit resolves to clicked authoritative record, never another' to be true.
+[2026.09.15-10.04.28:621][608]LogAutomationController: Error: Expected 'visual roof hit' to be true.
+[2026.09.15-10.04.28:621][608]LogAutomationController: Error: controller applies highlight to clicked building: The two values are not equal.
+[2026.09.15-10.04.28:621][608]LogAutomationController: Error: Expected 'hit resolves to clicked authoritative record, never another' to be true.
+[2026.09.15-10.04.28:621][608]LogAutomationController: Error: selection restored after cancel: The two values are not equal.
+[2026.09.15-10.04.28:621][608]LogAutomationController: Error: recreated view reacquires same stable selection: The two values are not equal.
+[2026.09.15-10.04.28:621][608]LogAutomationController: Error: save keeps selection: The two values are not equal.
+[2026.09.15-10.04.28:621][608]LogAutomationController: Error: same-world placement does not change selection: The two values are not equal.
+[2026.09.15-10.04.28:621][608]LogAutomationController: Error: Expected 'restored visual still pickable' to be true.
+[2026.09.15-10.04.28:621][608]LogAutomationController: Error: Expected 'restored click has same ID type and transform' to be true.
+[2026.09.15-10.04.28:621][608]LogAutomationController: EndEvents: Shoen.Inspection.SelectionLifecycleAndReload
+[2026.09.15-10.04.28:621][608]LogAutomationController: Display: Test Started. Name={ViewIdentityAndHighlight} Path={Shoen.Inspection.ViewIdentityAndHighlight}
+[2026.09.15-10.04.28:645][610]LogAutomationController: Error: Test Completed. Result={Fail} Name={ViewIdentityAndHighlight} Path={Shoen.Inspection.ViewIdentityAndHighlight}
+[2026.09.15-10.04.28:645][610]LogAutomationController: BeginEvents: Shoen.Inspection.ViewIdentityAndHighlight
+[2026.09.15-10.04.28:645][610]LogAutomationController: Error: selection stores requested stable ID: The two values are not equal.
+[2026.09.15-10.04.28:645][610]LogAutomationController: Error: Expected 'separate highlight component' to be not null.
+[2026.09.15-10.04.28:645][610]LogAutomationController: Error: same-world rebuild reacquires same selection: The two values are not equal.
+[2026.09.15-10.04.28:645][610]LogAutomationController: Error: Expected 'ray still hits after instance slot shift' to be true.
+[2026.09.15-10.04.28:645][610]LogAutomationController: Error: shifted slot still resolves selected ID: The two values are not equal.
+[2026.09.15-10.04.28:645][610]LogAutomationController: Error: slot shift preserves selected ID: The two values are not equal.
+[2026.09.15-10.04.28:645][611]LogAutomationController: Error: Expected 'recreated view picking resolves stable record' to be true.
+[2026.09.15-10.04.28:645][611]LogAutomationController: Error: another building never aliases selected one: The two values are not equal.
+[2026.09.15-10.04.28:645][611]LogAutomationController: Error: external stable ID reapplies highlight: The two values are not equal.
+[2026.09.15-10.04.28:645][611]LogAutomationController: Error: Expected 'outline component persists without selected record' to be not null.
+[2026.09.15-10.04.28:645][611]LogAutomationController: EndEvents: Shoen.Inspection.ViewIdentityAndHighlight
+[2026.09.15-10.04.28:645][611]LogAutomationController: Display: Test Started. Name={ViewPicking} Path={Shoen.Inspection.ViewPicking}
+[2026.09.15-10.04.28:670][613]LogAutomationController: Error: Test Completed. Result={Fail} Name={ViewPicking} Path={Shoen.Inspection.ViewPicking}
+[2026.09.15-10.04.28:670][613]LogAutomationController: BeginEvents: Shoen.Inspection.ViewPicking
+[2026.09.15-10.04.28:670][613]LogAutomationController: Error: Expected 'each roof resolves under a vertical ray' to be true.
+[2026.09.15-10.04.28:670][613]LogAutomationController: Error: each hit uses its own stable ID: The two values are not equal.
+[2026.09.15-10.04.28:670][613]LogAutomationController: Error: Expected 'each roof resolves under a vertical ray' to be true.
+[2026.09.15-10.04.28:670][613]LogAutomationController: Error: each hit uses its own stable ID: The two values are not equal.
+[2026.09.15-10.04.28:670][613]LogAutomationController: Error: Expected 'each roof resolves under a vertical ray' to be true.
+[2026.09.15-10.04.28:670][613]LogAutomationController: Error: each hit uses its own stable ID: The two values are not equal.
+[2026.09.15-10.04.28:670][613]LogAutomationController: Error: Expected 'nearest body hit wins over earlier instance index' to be true.
+[2026.09.15-10.04.28:670][613]LogAutomationController: Error: nearest building ID: The two values are not equal.
+[2026.09.15-10.04.28:670][613]LogAutomationController: Error: Expected 'oblique rotated roof remains selectable beyond ground footprint' to be true.
+[2026.09.15-10.04.28:670][613]LogAutomationController: Error: oblique roof identifies rotated building: The two values are not equal.
+[2026.09.15-10.04.28:670][613]LogAutomationController: Error: Expected 'ray from inside body finds a positive exit' to be true.
+[2026.09.15-10.04.28:670][613]LogAutomationController: Error: inside hit identity: The two values are not equal.
+[2026.09.15-10.04.28:670][613]LogAutomationController: Error: Expected 'actual gable triangle is a hit' to be true.
+[2026.09.15-10.04.28:670][613]LogAutomationController: Error: gable hit identity: The two values are not equal.
+[2026.09.15-10.04.28:670][613]LogAutomationController: EndEvents: Shoen.Inspection.ViewPicking
+[2026.09.15-10.04.28:672][613]LogAutomationController: Exported report to '/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/artifacts/tooling-editor-test-inspection-20260915T100408Z-8b55c70a' in 0.00 Seconds
+[2026.09.15-10.04.28:672][613]LogAutomationCommandLine: Display: ...Automation Test Queue Empty 3 tests performed.
+[2026.09.15-10.04.28:672][614]LogExit: Display: **** TestExit: Automation Test Queue Empty ****
+ERROR: Shoen.Inspection.SelectionLifecycleAndReload: Fail (errors=15)
+ERROR: Shoen.Inspection.ViewIdentityAndHighlight: Fail (errors=10)
+ERROR: Shoen.Inspection.ViewPicking: Fail (errors=14)

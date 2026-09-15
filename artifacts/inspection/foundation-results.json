@@ -1,0 +1,38 @@
+{
+  "command": "python3 tools/dev.py editor-test --suite foundation",
+  "exit_status": 0,
+  "report": "artifacts/tooling-editor-test-foundation-20260915T101420Z-6a35ca50",
+  "tests": [
+    {
+      "name": "Shoen.Foundation.ClockBinding",
+      "state": "Success",
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "name": "Shoen.Foundation.InputConfiguration",
+      "state": "Success",
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "name": "Shoen.Foundation.PopulationAndSave",
+      "state": "Success",
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "name": "Shoen.Foundation.SelectionProjectionFailure",
+      "state": "Success",
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "name": "Shoen.Foundation.ViewDoesNotResetPopulation",
+      "state": "Success",
+      "errors": 0,
+      "warnings": 0
+    }
+  ],
+  "validation_errors": []
+}

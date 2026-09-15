@@ -1,6 +1,6 @@
 # SHŌEN — settlement foundation
 
-Milestones 1 and 2A are accepted. Milestone 2A adds the first persistent Small Storehouse placement slice for the Unreal strategy/city-building prototype. See [STATUS.md](STATUS.md) for exactly what has been verified. The authoritative product handoff remains in `japan_strategy_codex_handoff/`; the asset workbook is a separate future production backlog.
+Milestones 1, 2A and 2B are accepted. Milestone 2B adds selection and read-only inspection of persistent Small Storehouses. See [STATUS.md](STATUS.md) for exactly what has been verified. The authoritative product handoff remains in `japan_strategy_codex_handoff/`; the asset workbook is a separate future production backlog.
 
 ## Run on this Mac
 
@@ -15,6 +15,7 @@ python3 tools/dev.py build
 python3 tools/dev.py create-map
 python3 tools/dev.py editor-test --suite foundation
 python3 tools/dev.py editor-test --suite placement
+python3 tools/dev.py editor-test --suite inspection
 python3 tools/dev.py run --scenario settlement
 ```
 
@@ -29,6 +30,14 @@ Choose **Small Storehouse** (B), point at ground, rotate with **[ / ]**, and **l
 The gold outline bounds the build area. The raised strip is deliberately too steep. Overlap, a footprint beyond the boundary, invalid terrain, or insufficient resources rejects the whole transaction. Exact footprint edge contact is allowed. **Esc / right click** cancels without spending. Preview freezes over the HUD so its rotate/confirm buttons act on the last ground location. Camera controls remain available; formation selection/orders are suspended only during placement.
 
 F5 saves the layout, resources and stable IDs. Place more, then F9 restores the saved state. The HUD shows the last building ID. N starts a fresh fixture; R returns to the accepted population lab. Buildings are passive instanced presentation of authoritative simulation records; no storage, production, construction-worker or housing gameplay exists.
+
+## Building inspection
+
+Exit placement with **Esc**, then **left-click a placed building's body or roof**. A cyan footprint marks the selection. The **Building Inspector appears in the left sidebar, below the Small Storehouse button**.
+
+The **Instance** section shows that building's stable ID, settlement/district, position in centimeters, yaw in degrees, completed state and placed footprint. The **Definition** section shows the type's display name, type ID, configured footprint/version and configured cost. Current configured cost is not a refund or the historical cost paid; placed dimensions remain those stored in the save.
+
+Click another building to switch; click empty ground or press **Esc** to clear. Entering placement clears inspection. Cancel placement to inspect again. Same-world visual recreation preserves the selected ID; load/reset deliberately clears selection. After loading, click the restored building to inspect its saved ID, type and transform. UI selection is not saved.
 
 ## Controls
 
@@ -47,6 +56,8 @@ F5 saves the layout, resources and stable IDs. Place more, then F9 restores the 
 | Save / load | F5 / F9 or buttons |
 | Capture screenshot | F10, saved under `game/Saved/Screenshots/` |
 | Clear selection | Escape |
+| Inspect building in settlement | Left click its body or roof outside placement mode |
+| Clear building inspection | Click empty ground or Escape |
 | New 1k / 4k / 8k / 20k fixture | Z / X / C / V |
 | Reset to 200-worker proof | R |
 | Toggle cursor diagnostic | F12 |
@@ -58,6 +69,8 @@ F5 saves the layout, resources and stable IDs. Place more, then F9 restores the 
 ### Mac input diagnosis
 
 Diagnostics are **off by default** during ordinary play. F12 toggles a red **viewport cursor** and, on macOS, a cyan **native pointer** X. It also displays Slate screen coordinates, the viewport transform, actual pixel resolution, screen backing scale, window DPI, focus and capture state. The native query is read-only; it does not reposition the cursor. While enabled, the same measurements appear once per second as `SHOEN_CURSOR` in the Unreal log; toggling F12 off also stops this logging.
+
+While F12 is enabled, building selection also logs `SHOEN_INSPECT` with the resolved ID/type/position/yaw or a clear event. This is an opt-in inspection audit, not an input-latency measurement.
 
 The computer-control screenshot can display a click marker at a different position from the native macOS pointer. Test physical controls in the actual Unreal application window. Focus the game first, then press Control for group shortcuts. F11 toggles windowed/window-fullscreen mode. The currently measured viewport is 1280×720 windowed; fullscreen follows the display's usable size.
 
@@ -95,7 +108,7 @@ V2 additionally preserves terrain, building IDs/type versions, position, yaw, fr
 - `core/` — CMake target and invariant tests compiling those same sources.
 - `game/Source/Shoen/` — Unreal subsystem, strategy camera, input, debug HUD and instanced views.
 - `tools/` — audited build/test/run wrappers and map generation.
-- `docs/execution/milestone-1.md` and `milestone-2-placement.md` — scope, decisions and execution checklists.
+- `docs/execution/milestone-1.md`, `milestone-2-placement.md` and `milestone-2b-inspection.md` — scope, decisions and execution checklists.
 - `content/provenance/README.md` — placeholder asset provenance.
 
-This slice stops at persistent placement. Milestone 2B requires a new instruction; see STATUS.md for acceptance evidence and limitations.
+This slice stops at building selection and inspection. Milestone 2C requires a new instruction; see STATUS.md for acceptance evidence and limitations.

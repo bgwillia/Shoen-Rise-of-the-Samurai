@@ -43,6 +43,39 @@ bool AFoundationPlayerController::GroundAtCursor(FVector& Point) const
     Point = Origin + Direction * T;
     return true;
 }
+void AFoundationPlayerController::RefreshInspection()
+{
+    auto* Sim=GetGameInstance()->GetSubsystem<UShoenSimulationSubsystem>();
+    if (!Sim) return;
+    if (SeenWorldGeneration!=Sim->WorldGeneration)
+    {
+        // A loaded/reset world can reuse numeric IDs. Selection belongs to this
+        // world lifetime, so never carry it into the replacement implicitly.
+        CancelPlacement(); Selected.Reset(); InspectedEntity={};
+        SeenWorldGeneration=Sim->WorldGeneration;
+    }
+    if (bPlacing || !Sim->IsSettlement() || !domain::ResolveBuilding(Sim->State,InspectedEntity)) InspectedEntity={};
+    if (auto* Mode=Cast<AFoundationGameMode>(GetWorld()->GetAuthGameMode()))
+        if (auto* View=Mode->SettlementPresentation())
+            if (View->SelectedBuildingId()!=InspectedEntity.id) View->SetSelectedBuilding(InspectedEntity.id,Sim->State);
+}
+void AFoundationPlayerController::InspectBuilding(uint64 Id)
+{
+    RefreshInspection();
+    auto* Sim=GetGameInstance()->GetSubsystem<UShoenSimulationSubsystem>();
+    if (!Sim || !Sim->IsSettlement() || bPlacing) return;
+    InspectedEntity={domain::EntityKind::Building,Id};
+    RefreshInspection();
+    if (bMouseDiagnostics)
+    {
+        if (const auto* Building=domain::ResolveBuilding(Sim->State,InspectedEntity))
+        {
+            UE_LOG(LogTemp,Display,TEXT("SHOEN_INSPECT id=%llu type=%s position_cm=%d,%d,%d yaw_deg=%d"),
+                uint64(Building->id),UTF8_TO_TCHAR(Building->definition_id.c_str()),Building->x_cm,Building->y_cm,Building->z_cm,Building->yaw_degrees);
+        }
+        else { UE_LOG(LogTemp,Display,TEXT("SHOEN_INSPECT cleared")); }
+    }
+}
 void AFoundationPlayerController::BeginPlacement()
 {
     auto* Sim=GetGameInstance()->GetSubsystem<UShoenSimulationSubsystem>();
@@ -59,6 +92,7 @@ void AFoundationPlayerController::BeginPlacement()
         if (District.settlement_id==PendingPlacement.settlement_id) { PendingPlacement.district_id=Id; break; }
     bPlacing=true;
     SeenWorldGeneration=Sim->WorldGeneration;
+    RefreshInspection();
     Sim->Message=TEXT("Move to ground, [ / ] rotate, click or Enter to build. Esc / right click cancel.");
 }
 void AFoundationPlayerController::CancelPlacement()
@@ -189,10 +223,7 @@ void AFoundationPlayerController::PlayerTick(float Dt)
     if (bMouseDiagnostics && WasInputKeyJustPressed(EKeys::LeftMouseButton)) UE_LOG(LogTemp,Display,TEXT("SHOEN_CLICK %.1f %.1f"),MX,MY);
     int32 ViewWidth=0,ViewHeight=0; GetViewportSize(ViewWidth,ViewHeight);
     const bool OverPanel = MX < 410 || MY < 66 || MY >= ViewHeight-54;
-    if (SeenWorldGeneration!=Sim->WorldGeneration)
-    {
-        CancelPlacement(); Selected.Reset(); SeenWorldGeneration=Sim->WorldGeneration;
-    }
+    RefreshInspection();
     if (WasInputKeyJustPressed(EKeys::B)) { if (bPlacing) CancelPlacement(); else BeginPlacement(); }
     const bool bPlacementGesture=bPlacing;
     if (bPlacing)
@@ -205,7 +236,20 @@ void AFoundationPlayerController::PlayerTick(float Dt)
     }
     if (bHasMousePosition) SelectionEnd = FVector2D(MX,MY);
     if (!bPlacementGesture && bHasMousePosition && WasInputKeyJustPressed(EKeys::LeftMouseButton) && !OverPanel)
-    { SelectionStart = SelectionEnd; bSelecting = true; }
+    {
+        if (Sim->IsSettlement())
+        {
+            FVector Origin,Direction;
+            if (DeprojectMousePositionToWorld(Origin,Direction))
+            {
+                uint64 HitId=0;
+                if (auto* Mode=Cast<AFoundationGameMode>(GetWorld()->GetAuthGameMode()))
+                    if (auto* View=Mode->SettlementPresentation()) View->PickBuilding(Origin,Direction,HitId);
+                InspectBuilding(HitId);
+            }
+        }
+        else { SelectionStart = SelectionEnd; bSelecting = true; }
+    }
     if (bSelecting && WasInputKeyJustReleased(EKeys::LeftMouseButton)) FinishSelection();
     if (!bPlacementGesture && bHasMousePosition && WasInputKeyJustPressed(EKeys::RightMouseButton) && !OverPanel) bOrdering = GroundAtCursor(MoveStart);
     if (bOrdering && WasInputKeyJustReleased(EKeys::RightMouseButton))
@@ -254,7 +298,11 @@ void AFoundationPlayerController::PlayerTick(float Dt)
         if (WasInputKeyJustPressed(EKeys::O)) Sim->ResolveProof();
         if (WasInputKeyJustPressed(EKeys::BackSpace)) Sim->DemobilizeProof();
     }
-    if (WasInputKeyJustPressed(EKeys::Escape)) { Selected.Reset(); bSelecting = false; bOrdering = false; }
+    if (WasInputKeyJustPressed(EKeys::Escape))
+    {
+        Selected.Reset(); bSelecting = false; bOrdering = false;
+        InspectedEntity={}; RefreshInspection();
+    }
     if (IsInputKeyDown(EKeys::LeftControl) && WasInputKeyJustPressed(EKeys::A)) SelectAll();
     const FKey Keys[] = { EKeys::One,EKeys::Two,EKeys::Three,EKeys::Four,EKeys::Five,EKeys::Six,EKeys::Seven,EKeys::Eight,EKeys::Nine };
     for (int32 Index=0; Index<9; ++Index)
@@ -274,4 +322,5 @@ void AFoundationPlayerController::PlayerTick(float Dt)
                 if (F.control_group == Index+1 && domain::ActiveFormationCount(Sim->State,Id)>0) Selected.Add(Id);
         }
     }
+    RefreshInspection(); // F9 may have replaced the World during this input update.
 }

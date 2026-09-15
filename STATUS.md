@@ -2,104 +2,83 @@
 
 ## Current milestone
 
-**Milestone 2A — first persistent Small Storehouse placement slice: ACCEPTED.** On 2026-09-15 the user physically verified the actual Unreal game and explicitly accepted this slice. The tested game implementation is `90d4d1fe9c4275908665d4f00c8159d0aecc6953`; this acceptance update changes documentation only. The existing automated regressions and rendered functional replay pass. **Milestone 2B has not begun.**
+**Milestone 2B — stable building selection and inspection: ACCEPTED.** On 2026-09-15 the user confirmed that all requested physical checks passed in the actual Unreal game. Automated regressions, the build and rendered verification also pass. No M2C work has begun.
 
-Milestone 1 remains accepted at `44c33ca14de4669031e7e85ab7f157476f5a0a23`. Its complete physical-input acceptance, root-cause investigation, tests and performance evidence are preserved in [Milestone 1 status](docs/execution/milestone-1-status.md). The prior Mac physical-input issue remains resolved. No engine patches or pointer coordinate corrections were added.
+Source starts from accepted M2A commit `f27632b05e124934779b3dc574b017851608859d` on `codex/milestone-2b-inspection`. This acceptance commit records the verified M2B state. [Authorized request](docs/execution/milestone-2b-request.md), [execution plan](docs/execution/milestone-2b-inspection.md).
 
-Scope and design: [user request](docs/execution/milestone-2-request.md), [execution plan](docs/execution/milestone-2-placement.md).
+Milestone 1 remains accepted at `44c33ca14de4669031e7e85ab7f157476f5a0a23`; its physical input issue remains resolved. Milestone 2A remains accepted, including human verification of HUD, pointer-following preview, placement/rotation/validation/cancellation/save/load. Complete prior evidence is preserved in [M1 status](docs/execution/milestone-1-status.md) and [M2A status](docs/execution/milestone-2a-status.md).
 
-## Implemented
+## Architecture and behavior added
 
-- One data-defined **Small Storehouse**: 8×6 m footprint, 4.5 m placeholder height, 20 timber + 5 treasury, 15-degree rotation steps, 20 cm maximum height variation and 100-permille maximum slope. Definitions and fixture live in [content data](game/Content/Domain/Data/buildings.json).
-- New settlement fixture on the existing Foundation map: 200 timber, 100 treasury and the existing 200 workers; a saved triangulated build area with flat ground and a deliberately invalid raised strip. No population is created by placement.
-- Native viewport cursor raycasts against the same authoritative triangles used for rendering. Green/red body and footprint preview, readable reason, selected building/cost and current resources. Preview freezes over the HUD. B chooses placement; brackets rotate; left click/Enter confirm; Esc/right click cancel. Equivalent HUD controls; N starts a new fixture. Existing camera, F12, clock, formation lab and shortcuts remain.
-- `domain::World` owns building records and terrain. Stable global ID, definition/version, settlement/district, integer-centimeter position, integer-degree yaw, frozen dimensions/terrain tolerances, completed state and placement transaction ID persist. Unreal presents batched wall/roof instances with no per-building actor Tick.
-- Separate deterministic oriented-footprint/boundary/terrain and resource validation. Terrain clipping checks interior ridges as well as corners. Edge contact within 1e-6 cm is allowed. Typed reason codes drive UI; no string parsing drives rules.
-- Candidate-world transaction commits one building and both costs together. Failures preserve the entire world, including ID/transaction counters and revision. A matching accepted retry returns the same ID without spending; conflicting reuse rejects. Same-frame UI confirmation is guarded, and reset/load invalidate stale gestures.
-- Original Canvas HUD and explicit building ISM batches are retained. Extended rendering checks disproved the attempted command-merging and Slate text workarounds; neither remains. The user now confirms the physical HUD renders correctly; earlier captured glyph anomalies are retained as historical evidence and no longer qualify acceptance. No renderer fix or established engine cause is claimed. [Renderer investigation](artifacts/placement/renderer-isolation.md).
-- Passive view recreation preserves the entire simulation and stable transforms. Terrain meshes are reused while unchanged; render-only meshes do not cook physics. No storage, production, workers or housing systems were added.
-
-## Human physical acceptance
-
-On 2026-09-15 the user explicitly accepted Milestone 2A after testing in the actual Unreal game:
-
-- HUD text renders correctly.
-- The building-placement preview follows the physical mouse correctly.
-- New HUD/building controls respond correctly to physical mouse input.
-- Placement, rotation, validation, cancellation and save/load appear correct.
-- There is a small but perceptible UI response delay, with no observed missed inputs or incorrect interaction. This is a known issue, not an acceptance blocker.
-
-This resolves the previous physical-input/text acceptance qualifications. It does not establish the cause of the older capture anomalies. [Human acceptance record](artifacts/placement/human-acceptance.md).
-
-## Prior tool-driven rendered verification
-
-Actual Metal-rendered 1280×720 game, launched with `python3 tools/dev.py run --scenario settlement`. The following historical checks supplement the human acceptance above:
-
-- B selects Small Storehouse and enters placement with a green body/footprint at the native pointer's ground intersection.
-- Bracket rotation changes facing 0→15 degrees and rotates the rendered footprint/roof.
-- Enter places ID 5 at (1344, 2647) cm, yaw 15°; stocks 200/100→180/95. Workers stay 200.
-- Overlap turns the preview red; repeated Enter rejects without spending or adding buildings.
-- Wheel zoom moves the ray/ground intersection while the placed building stays fixed. A native-position mouse press places ID 6 at (551, 1957) cm, yaw 15°; stocks become 160/90.
-- Right-click cancels without an order or resource debit. F5 saves two buildings.
-- B, wheel zoom and Enter add ID 7 at (−268, 1245) cm, yaw 0°; stocks become 140/85. F9 removes that unsaved third building and restores both saved buildings and 160/90.
-- F5 after reload produces a byte-identical 1,194-byte snapshot, including IDs, transforms, resources and paused clock. See [save comparison](artifacts/placement/manual-save-comparison.txt).
-- Zoom outside the boundary produces a red reason and rejected Enter. Q camera rotation moves the preview onto the raised strip; excessive slope produces a red reason and rejected Enter. Esc cancels. F5 afterward is still byte-identical to the saved state.
-- F12 displays matching native/viewport cursor measurements; toggled off afterward.
-
-The final ordinary-launch replay again verified native-position mouse placement, overlap rejection, cancellation and separately observed save/alter/load. The final resave remains byte-identical. [Full manual record](artifacts/placement/manual-acceptance.md), [final layout](artifacts/placement/final-restored-layout.png).
-
-These earlier detailed actions were tool-driven. The user's subsequent physical acceptance is recorded separately above. The computer-control pointer-movement limitation does not invalidate that human evidence. No coordinate correction was introduced.
-
-## UI/input latency follow-up
-
-**Known issue: slight, perceptible response delay reported by the user.** No missed inputs or incorrect behavior were observed. Magnitude in milliseconds, frequency, affected stage and root cause are **not measured**. The accepted build is unchanged; no speculative latency fix, new runtime instrumentation or permanent diagnostic presentation was added.
-
-Existing **F12** diagnostics remain available and off by default. They log controller mouse-event receipt (`SHOEN_INPUT`), polled clicks (`SHOEN_CLICK`) and periodic native/Slate/viewport cursor state (`SHOEN_CURSOR`). These logs do not correlate all stages or measure input-to-display latency.
-
-A reliable five-stage measurement needs an event/frame correlation through the platform/Slate input path and actual presentation timing. Adding only controller/HUD timestamps would miss both ends. Defer that instrumentation to a focused profiling pass; the exact measurement boundaries and opt-in requirements are documented in [latency profiling notes](docs/execution/milestone-2a-latency.md).
+- **Typed selection identity:** `domain::EntitySelection` contains only entity kind and stable ID. Const resolvers look up the exact current World record and exact compatible definition. Missing, zero, wrong-kind or mismatched IDs fail safely. Borrowed records are reacquired for each use, never retained through world replacement.
+- **Visible building → ID → World → inspector:** the passive settlement view decodes the current body/roof instance index through a transient ID table. Picking intersects the actual transformed wall box and shared gable triangles, chooses the nearest positive hit and checks nearer saved terrain. Persistent selection never uses an Actor pointer, display name or array slot.
+- **Placeholder highlight:** a separate passive cyan footprint follows the selected instance's frozen position, yaw and dimensions. No building Actor ticks, engine collision cooking, engine patches or pointer-coordinate correction were added.
+- **Read-only inspector:** click a building outside placement mode. The panel appears in the existing left sidebar **below the Small Storehouse button**. Instance data: ID, settlement/district, exact centimeter position, yaw, completed state and placed footprint. Definition data: display name, type ID, configured footprint/version and configured cost. Missing definition data is explicitly unavailable. Current configured cost is not a refund or a claim about historical spending.
+- **Lifecycle:** click another building to switch, empty terrain or Esc to clear. Entering placement clears inspection; cancellation restores normal clicking. Same-world view reconstruction reacquires the selected ID. Missing records clear safely. Reset/load intentionally clears UI selection, including when a new world reuses a numeric ID. Save keeps the current selection. Snapshot format is unchanged.
+- **Diagnostics:** F12 remains off by default. Existing cursor diagnostics are preserved. While enabled, `SHOEN_INSPECT` logs the resolved ID/type/position/yaw or a clear event. This is an inspection audit, not a latency measurement. No permanent debug overlay or speculative latency/renderer fix was added.
 
 ## Automated verification
 
-Host: Unreal 5.8.2 / CL 56702186, macOS 26.6.2, Xcode 26.6.0, Apple Clang 21.0.0; Apple M1 Max (10 CPU / 32 GPU cores), 32 GB RAM. Editor `-game`, Metal SM5, 1280×720; content schema 1 and Small Storehouse definition version 1. Source starts from accepted M1 commit above on `codex/milestone-2-placement`.
+Host: Unreal 5.8.2 / CL 56702186, macOS 26.6.2, Xcode 26.6.0, Apple Clang 21.0.0; Apple M1 Max (10 CPU / 32 GPU), 32 GB RAM. Same portable C++20 core compiled by CMake and Unreal. Content schema 1, Small Storehouse definition version 1. Editor/game workflow, not packaged acceptance.
 
-Regression evidence for the physically accepted game implementation `90d4d1fe9c4275908665d4f00c8159d0aecc6953` follows. This acceptance commit changes only Markdown documentation, so no build or runtime regressions were required or rerun; documentation links, scope and whitespace were checked.
-
-| Exact command | Result |
+| Exact command | Final result |
 |---|---|
-| `python3 -m unittest discover -s tools/tests -v` | Exit 0; 25/25 passed |
-| `python3 tools/dev.py core-test` | Exit 0; CTest 2/2, 20 original + 17 placement suites |
+| `python3 -m unittest discover -s tools/tests -v` | Exit 0; 28/28 passed |
+| `python3 tools/dev.py core-test` | Exit 0; CTest 3/3: 20 original + 17 placement + 7 inspection suites |
 | `python3 tools/dev.py build` | Exit 0; ShoenEditor Mac Development succeeded |
-| `python3 tools/dev.py editor-test --suite foundation` | Exit 0; 5/5 passed, zero test warnings/errors |
-| `python3 tools/dev.py editor-test --suite placement` | Exit 0; 4/4 passed, zero test warnings/errors |
+| `python3 tools/dev.py editor-test --suite foundation` | Exit 0; 5/5, zero test warnings/errors |
+| `python3 tools/dev.py editor-test --suite placement` | Exit 0; 4/4, zero test warnings/errors |
+| `python3 tools/dev.py editor-test --suite inspection` | Exit 0; 3/3, zero test warnings/errors |
 
-The current 17 placement suites also pass under ASan+UBSan; the earlier full sanitizer run predates the final frozen-terrain fields. Red/green logs and final results are retained in [placement evidence](artifacts/placement/). Unreal automation covers actual content parsing/rejection, transaction+file save/load, input cancellation/duplicate/replacement-world handling and passive view recreation. Headless automation is not rendering evidence.
+[Final logs, summaries and red/green evidence](artifacts/inspection/). Core tests cover three real placements with distinct IDs, exact lookup, wrong/missing/removed IDs, key-record mismatch, snapshot round-trip, unchanged World state and configured-versus-frozen data. Unreal covers body/roof picking, rotated/oblique/nearest/occluded/invalid rays, shifted instance ordering, destroyed-view recreation, highlight geometry and controller selection/placement/save/load/reset lifetimes. Tooling rejects wrong-suite or failed inspection reports.
 
-Independent integration review found no remaining important UI/state-lifecycle defect. Core review found a saved-terrain validation gap. A failing regression reproduced it; frozen per-building terrain limits now reject corrupted steep-ground placements while preserving valid buildings after stricter tuning. Core 17/17 placement suites and current placement sanitizers pass.
+Failing tests were run before implementation: core inspection 0/7, three new tooling failures and all three Unreal inspection tests failing against stubs. During integration, a compile error in conditional diagnostic logging was fixed. The first lifecycle run also exposed an uninitialized test World with no registered player controller; the fixture now uses normal actor initialization and asserts registration. No runtime workaround was added for that fixture issue. All final commands above pass. [Independent conformance and code-quality reviews](artifacts/inspection/review.md) found no remaining material defect.
 
-## Save compatibility
+Headless automation does not establish rendering or physical mouse acceptance.
 
-**Writer v2; reader v1 and v2.** The existing 28-byte header, magic, checksum and v1 payload prefix remain. V2 appends bounded build-area grids and building records, including frozen visual dimensions and terrain limits. Exact IDs, position/yaw, completed state, costs already paid, shared transaction ledger, resources, population, clock/RNG and formation state round-trip.
+## Rendered verification
 
-A real 4,971-byte v1 snapshot generated before codec edits is retained as [migration fixture](core/tests/fixtures/milestone1-v1.shoen), SHA-256 `1f4fb37fe2d0de0147ad09e467cb301b6352c1ea00105c0e83df8ab5d96f326a`. V1 loads preserve its world and produce empty buildings/build areas; migration does not reset resources or invent a fixture. The original M1 executable cannot read v2; retain original v1 saves for that executable.
+Launched `python3 tools/dev.py run --scenario settlement`, Metal SM5. The wrapper requests 1600×900; the actual Mac viewport is **1280×720**, window origin (116,118), DPI/app scale 1, backing scale 2. F12 reported the native and viewport pointer together at (953,533); the computer-control click marker itself can appear elsewhere. This is the already-known automation limitation, not evidence of a new physical pointer offset.
 
-Foundation and settlement use separate `Foundation.sav` and `Settlement.sav` slots under `game/Saved/SaveGames/`, with temporary replacement and previous `.bak`. Missing/too-new building definitions or invalid snapshots reject before replacing the live world. Catalog validation is independent of the new-fixture file; saved terrain/resources remain authoritative. The checksum detects accidental corruption, not malicious tampering.
+Tool-driven actions observed in the actual game:
 
-## Placeholder
+- Scene contained ID 5 when this rendered pass began. Added ID 6 by native-position mouse press at (2067,2404,0) cm, yaw 15°. Exited placement and clicked it: cyan highlight and inspector showed its own ID/transform, Completed, settlement 1/district 2 and Small Storehouse configuration.
+- Entered placement (clearing inspection), zoomed to a separate valid position, rotated and mouse-placed ID 7 at (1086,1778,0) cm, yaw 30°. Cancelled placement and clicked it: inspector and highlight switched to ID 7.
+- F5 saved three buildings and 140 timber/85 treasury. Added unsaved ID 8 at approximately (72,1131,0) cm, yaw 0°; resources became 120/80 and count became four. F9 restored the three-building layout and 140/85 with no selection. Save/load actions were separate and their results observed.
+- F12 was toggled off for ordinary presentation. The game was left paused with the restored three buildings visible for the human pass.
 
-All buildings, terrain, colors and Canvas controls are temporary technical presentation. The storehouse has no storage capacity or production. Construction completes immediately; only a completed-state contract exists. No final Japanese art, audio, animation, housing simulation, farming, smithing, organic growth, roads, workers, pathfinding, AI, combat or diplomacy was implemented. User-supplied design files and asset workbook remain untouched.
+The 1,295-byte saved snapshot was decoded through the shared DomainCore reader: IDs 5/6/7, positions and rotations are recorded in [saved records](artifacts/inspection/manual-saved-records.txt). ID 5 is (-2054,-258,0) cm at 0°; all are Small Storehouse version 1 with an 800×600 cm footprint. Captures: [ID 6 inspector](artifacts/inspection/selected-building-6.png), [ID 7 inspector](artifacts/inspection/selected-building-7.png).
+
+These are tool-driven observations, supplemented by the separate human physical acceptance below.
+
+## Human physical acceptance
+
+On 2026-09-15, in response to the explicit M2B physical acceptance checklist, the user answered **“All listed checks pass.”** This verifies:
+
+- Physical clicking of each of the three buildings; correct cyan highlight and distinct ID/position/yaw.
+- Empty-ground deselection.
+- Entering and cancelling placement, then ordinary selection again.
+- F5 save, adding a building, F9 load, and physically selecting restored buildings.
+- Readable inspector, aligned physical clicks, and correct restored IDs/types/transforms.
+
+This is new human verification of M2B, separate from earlier M2A acceptance and the tool-driven replay. [Exact acceptance procedure and record](artifacts/inspection/manual-acceptance.md).
+
+## Save compatibility and preserved scope
+
+Writer v2; readers v1/v2, unchanged in M2B. Building identity, type/version, integer transform, frozen dimensions/state and paid transactions remain authoritative in World. Selection is UI state and is not serialized. Separate Foundation/Settlement save slots remain. The existing settlement save and backup were copied to `game/Saved/AcceptanceBackups/m2b-20260915-060836/` before testing; [backup hashes](artifacts/inspection/save-backup.txt). The current settlement slot contains the three-building acceptance fixture.
+
+No demolition, upgrades, construction queues/workers, inventories/storage capacity, roads, farming, housing, infill, district specialization, smith production, combat or final art was added. Ordinary storehouses still complete immediately and have no production/storage behavior. User-supplied handoff documents and asset workbook remain untouched.
 
 ## Known limitations
 
-- Slight UI/input response delay is human-observed and unquantified, with no missed input or incorrect interaction. Its cause remains open for measurement; no speculative fixes were applied.
-- Earlier automated captures intermittently lose sections of HUD letters. The user physically confirmed correct HUD text; the capture anomaly's cause remains unknown and it is not an acceptance blocker.
-- Multiple save/load shortcuts arriving within one game update use the existing fixed polling order (F5 before F9). Acceptance separates each operation and observes its result; a rapid automated batch is recorded as rejected evidence.
-- Only the Mac editor/game workflow is verified. Standalone packaging and other platforms are untested; JSON staging is configured but not packaged acceptance.
-- The HUD targets at least 1280×720. A single fixture and building family are exposed. New-fixture controls intentionally replace the unsaved test world.
-- Terrain is a bounded static height grid; no arbitrary landscape/navmesh, terrain editing or obstruction system. Buildings have no selection/edit/demolition workflow in this slice.
-- Saved-building validation checks pairs and terrain raycasts scan triangles. Passive instancing avoids ordinary-building ticks, but this does not certify 10,000-building performance. Spatial indexing/incremental validation needs measurement before dense settlements.
-- Snapshot cap 16 MiB; 10,000 buildings, 64 build areas and 65,536 vertices per area are safety bounds, not performance promises. Determinism is tested on this build/platform, not across all floating-point implementations.
-- Existing engine startup diagnostics about optional ACL compression assets/audio may appear; final test-result warnings are tracked separately. No animation/audio systems were added.
+- The computer-control tool cannot reliably move the native pointer. Human physical selection/alignment is accepted; automation limitations remain separate from game behavior.
+- The slight UI response delay reported and accepted in M2A remains **unmeasured**, with no established cause or new latency fix. F12 logs do not measure end-to-end input-to-display latency. See [profiling boundaries](docs/execution/milestone-2a-latency.md).
+- Placeholder Canvas panel targets at least 1280×720 and the current single building family. No advanced/responsive inspector framework, editing or tooltips. The cyan footprint is a simple selection aid, not final art.
+- Earlier automated captures sometimes lost glyph portions; human M2A text acceptance remains valid. Current inspector engine captures are readable. The user also physically confirmed this new panel is readable.
+- Picking scans buildings and terrain on clicks. This is not proof of 5,000/10,000-building response time. No spatial index or performance promise was introduced.
+- Only Mac editor/game has been verified. Other platforms, standalone packaging, final art/animation/audio and full beta scale remain unverified. Existing optional ACL/audio startup diagnostics are separate from the zero-warning final test results.
+- Rapid save/load inputs in one update retain the existing fixed polling order. Acceptance separates each action and observes its result.
 
-## Next recommended task
+## Recommended next task
 
-**Milestone 2B — select an existing building and inspect its authoritative ID, type, transform, completed state and placement transaction, including after load.** This gives a small useful interaction foundation before demolition, construction phases or economy. Recommendation only; no Milestone 2B implementation.
+With M2B accepted, **M2C should begin with a focused, opt-in UI latency measurement pass**: correlate input event receipt, UI hit processing, preview update, simulation transaction and rendered/presented response, then fix only an observed bottleneck. This recommendation addresses the user's known delay before more interaction systems are added. No M2C implementation has begun.

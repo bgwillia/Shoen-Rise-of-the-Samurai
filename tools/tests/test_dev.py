@@ -305,6 +305,58 @@ with Path(os.environ["SHOEN_FAKE_CALLS"]).open("a", encoding="utf-8") as stream:
         self.assertNotEqual(result.returncode, 0)
         self.assertIn("shoen.placement.overlap: fail", result.stdout.lower())
 
+    def test_editor_test_selects_and_validates_inspection_suite(self) -> None:
+        editor_body = """
+        report = next(value.split("=", 1)[1] for value in sys.argv if value.startswith("-ReportExportPath="))
+        output = Path(report)
+        output.mkdir(parents=True, exist_ok=True)
+        (output / "index.json").write_text(json.dumps({
+            "tests": [{"fullTestPath": "Shoen.Inspection.Building", "state": "Success", "errors": 0}]
+        }), encoding="utf-8-sig")
+        """
+        engine = self.make_engine(editor_body)
+
+        result = self.run_cli("--engine", str(engine), "editor-test", "--suite", "inspection")
+
+        self.assertEqual(result.returncode, 0, result.stdout)
+        self.assertIn("1 automation test passed from Shoen.Inspection", result.stdout)
+        argv = self.read_calls()[0]["argv"]
+        self.assertIn("-ExecCmds=Automation RunTests Shoen.Inspection", argv)
+        self.assertNotIn("-ExecCmds=Automation RunTests Shoen.Foundation", argv)
+        self.assertNotIn("-ExecCmds=Automation RunTests Shoen.Placement", argv)
+
+    def test_editor_test_rejects_report_without_inspection_tests(self) -> None:
+        editor_body = """
+        report = next(value.split("=", 1)[1] for value in sys.argv if value.startswith("-ReportExportPath="))
+        output = Path(report)
+        output.mkdir(parents=True, exist_ok=True)
+        (output / "index.json").write_text(json.dumps({
+            "tests": [{"fullTestPath": "Shoen.Placement.Storehouse", "state": "Success", "errors": 0}]
+        }), encoding="utf-8-sig")
+        """
+        engine = self.make_engine(editor_body)
+
+        result = self.run_cli("--engine", str(engine), "editor-test", "--suite", "inspection")
+
+        self.assertNotEqual(result.returncode, 0)
+        self.assertIn("no tests matching Shoen.Inspection", result.stdout)
+
+    def test_editor_test_rejects_failed_inspection_report(self) -> None:
+        editor_body = """
+        report = next(value.split("=", 1)[1] for value in sys.argv if value.startswith("-ReportExportPath="))
+        output = Path(report)
+        output.mkdir(parents=True, exist_ok=True)
+        (output / "index.json").write_text(json.dumps({
+            "tests": [{"fullTestPath": "Shoen.Inspection.Picking", "state": "Fail", "errors": 1}]
+        }), encoding="utf-8-sig")
+        """
+        engine = self.make_engine(editor_body)
+
+        result = self.run_cli("--engine", str(engine), "editor-test", "--suite", "inspection")
+
+        self.assertNotEqual(result.returncode, 0)
+        self.assertIn("shoen.inspection.picking: fail", result.stdout.lower())
+
     def test_run_passes_scenario_and_soldier_count_as_game_flags(self) -> None:
         engine = self.make_engine()
 

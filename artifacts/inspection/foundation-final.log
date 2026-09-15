@@ -1,0 +1,29 @@
+Curated automation output. Full startup/runtime log retained locally in artifacts/local/m2b-full-logs/foundation-final.log
+
++ ["/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/UnrealEditor.app/Contents/MacOS/UnrealEditor", "/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/game/Shoen.uproject", "-ExecCmds=Automation RunTests Shoen.Foundation", "-TestExit=Automation Test Queue Empty", "-unattended", "-NullRHI", "-ReportExportPath=/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/artifacts/tooling-editor-test-foundation-20260915T101420Z-6a35ca50", "-nop4", "-nosplash", "-stdout", "-FullStdOutLogOutput"]
+LogCsvProfiler: Display: Metadata set : commandline="" /Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/game/Shoen.uproject -ExecCmds="Automation RunTests Shoen.Foundation" -TestExit="Automation Test Queue Empty" -unattended -NullRHI -ReportExportPath=/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/artifacts/tooling-editor-test-foundation-20260915T101420Z-6a35ca50 -nop4 -nosplash -stdout -FullStdOutLogOutput""
+LogInit: Command Line: -ExecCmds="Automation RunTests Shoen.Foundation" -TestExit="Automation Test Queue Empty" -unattended -NullRHI -ReportExportPath=/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/artifacts/tooling-editor-test-foundation-20260915T101420Z-6a35ca50 -nop4 -nosplash -stdout -FullStdOutLogOutput
+[2026.09.15-10.14.31:440][606]LogAutomationController: Display: Test Started. Name={ClockBinding} Path={Shoen.Foundation.ClockBinding}
+[2026.09.15-10.14.31:457][609]LogAutomationController: Display: Test Completed. Result={Success} Name={ClockBinding} Path={Shoen.Foundation.ClockBinding}
+[2026.09.15-10.14.31:457][609]LogAutomationController: BeginEvents: Shoen.Foundation.ClockBinding
+[2026.09.15-10.14.31:457][609]LogAutomationController: EndEvents: Shoen.Foundation.ClockBinding
+[2026.09.15-10.14.31:457][610]LogAutomationController: Display: Test Started. Name={InputConfiguration} Path={Shoen.Foundation.InputConfiguration}
+[2026.09.15-10.14.31:482][612]LogAutomationController: Display: Test Completed. Result={Success} Name={InputConfiguration} Path={Shoen.Foundation.InputConfiguration}
+[2026.09.15-10.14.31:482][612]LogAutomationController: BeginEvents: Shoen.Foundation.InputConfiguration
+[2026.09.15-10.14.31:482][612]LogAutomationController: EndEvents: Shoen.Foundation.InputConfiguration
+[2026.09.15-10.14.31:483][612]LogAutomationController: Display: Test Started. Name={PopulationAndSave} Path={Shoen.Foundation.PopulationAndSave}
+[2026.09.15-10.14.31:507][615]LogAutomationController: Display: Test Completed. Result={Success} Name={PopulationAndSave} Path={Shoen.Foundation.PopulationAndSave}
+[2026.09.15-10.14.31:507][615]LogAutomationController: BeginEvents: Shoen.Foundation.PopulationAndSave
+[2026.09.15-10.14.31:507][615]LogAutomationController: EndEvents: Shoen.Foundation.PopulationAndSave
+[2026.09.15-10.14.31:507][616]LogAutomationController: Display: Test Started. Name={SelectionProjectionFailure} Path={Shoen.Foundation.SelectionProjectionFailure}
+[2026.09.15-10.14.31:533][618]LogAutomationController: Display: Test Completed. Result={Success} Name={SelectionProjectionFailure} Path={Shoen.Foundation.SelectionProjectionFailure}
+[2026.09.15-10.14.31:533][618]LogAutomationController: BeginEvents: Shoen.Foundation.SelectionProjectionFailure
+[2026.09.15-10.14.31:533][618]LogAutomationController: EndEvents: Shoen.Foundation.SelectionProjectionFailure
+[2026.09.15-10.14.31:533][618]LogAutomationController: Display: Test Started. Name={ViewDoesNotResetPopulation} Path={Shoen.Foundation.ViewDoesNotResetPopulation}
+[2026.09.15-10.14.31:557][621]LogAutomationController: Display: Test Completed. Result={Success} Name={ViewDoesNotResetPopulation} Path={Shoen.Foundation.ViewDoesNotResetPopulation}
+[2026.09.15-10.14.31:557][621]LogAutomationController: BeginEvents: Shoen.Foundation.ViewDoesNotResetPopulation
+[2026.09.15-10.14.31:557][621]LogAutomationController: EndEvents: Shoen.Foundation.ViewDoesNotResetPopulation
+[2026.09.15-10.14.31:558][621]LogAutomationController: Exported report to '/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/artifacts/tooling-editor-test-foundation-20260915T101420Z-6a35ca50' in 0.00 Seconds
+[2026.09.15-10.14.31:558][621]LogAutomationCommandLine: Display: ...Automation Test Queue Empty 5 tests performed.
+[2026.09.15-10.14.31:558][622]LogExit: Display: **** TestExit: Automation Test Queue Empty ****
+5 automation test passed from Shoen.Foundation

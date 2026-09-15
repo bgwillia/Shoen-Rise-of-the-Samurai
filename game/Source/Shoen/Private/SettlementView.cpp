@@ -11,11 +11,56 @@
 #include "UObject/ConstructorHelpers.h"
 #include "domain/Buildings.h"
 #include <cmath>
+#include <limits>
 
 namespace
 {
 constexpr double CubeSize = 100.0;
 constexpr double WallFraction = 0.7;
+const FVector3f RoofVertices[] = {
+    {-50,-50,0},{50,-50,0},{50,50,0},{-50,50,0},{-50,0,100},{50,0,100}};
+constexpr int32 RoofTriangles[][3] = {
+    {0,1,5},{0,5,4},{3,4,5},{3,5,2},{0,4,3},{1,2,5},{0,3,2},{0,2,1}};
+constexpr double MinPickDistance = 1.e-6;
+
+bool RayBody(const FVector& Origin, const FVector& Direction, double& Distance)
+{
+    double Near=-std::numeric_limits<double>::infinity();
+    double Far=std::numeric_limits<double>::infinity();
+    for (int32 Axis=0; Axis<3; ++Axis)
+    {
+        if (Direction[Axis]==0)
+        {
+            if (Origin[Axis]<-CubeSize/2 || Origin[Axis]>CubeSize/2) return false;
+            continue;
+        }
+        double A=(-CubeSize/2-Origin[Axis])/Direction[Axis];
+        double B=(CubeSize/2-Origin[Axis])/Direction[Axis];
+        if (A>B) std::swap(A,B);
+        Near=FMath::Max(Near,A);
+        Far=FMath::Min(Far,B);
+        if (Near>Far) return false;
+    }
+    Distance=Near>MinPickDistance ? Near : Far;
+    return std::isfinite(Distance) && Distance>MinPickDistance;
+}
+
+bool RayRoofTriangle(const FVector& Origin, const FVector& Direction,
+    const FVector& A, const FVector& B, const FVector& C, double& Distance)
+{
+    const FVector AB=B-A, AC=C-A;
+    const FVector P=FVector::CrossProduct(Direction,AC);
+    const double Determinant=FVector::DotProduct(AB,P);
+    if (FMath::Abs(Determinant)<1.e-12) return false;
+    const FVector Offset=Origin-A;
+    const double U=FVector::DotProduct(Offset,P)/Determinant;
+    if (U < -1.e-9 || U > 1+1.e-9) return false;
+    const FVector Q=FVector::CrossProduct(Offset,AB);
+    const double V=FVector::DotProduct(Direction,Q)/Determinant;
+    if (V < -1.e-9 || U+V > 1+1.e-9) return false;
+    Distance=FVector::DotProduct(AC,Q)/Determinant;
+    return std::isfinite(Distance) && Distance>MinPickDistance;
+}
 
 // Only render geometry is created here. All footprint and ground decisions stay
 // in DomainCore. Per-triangle normals make the authored ramp easy to distinguish.
@@ -136,7 +181,8 @@ ASettlementView::ASettlementView()
     PreviewBody = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("PlacementBody"));
     PreviewRoof = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("PlacementRoof"));
     PreviewFootprint = CreateDefaultSubobject<UInstancedStaticMeshComponent>(TEXT("PlacementFootprint"));
-    UStaticMeshComponent* Components[] = {Terrain,Bodies,Roofs,Boundary,PreviewBody,PreviewRoof,PreviewFootprint};
+    SelectedFootprint = CreateDefaultSubobject<UInstancedStaticMeshComponent>(TEXT("BuildingSelectionFootprint"));
+    UStaticMeshComponent* Components[] = {Terrain,Bodies,Roofs,Boundary,PreviewBody,PreviewRoof,PreviewFootprint,SelectedFootprint};
     for (auto* Component : Components)
     {
         Component->SetupAttachment(GetRootComponent());
@@ -150,6 +196,8 @@ ASettlementView::ASettlementView()
     Boundary->SetStaticMesh(Cube.Object);
     PreviewBody->SetStaticMesh(Cube.Object);
     PreviewFootprint->SetStaticMesh(Cube.Object);
+    SelectedFootprint->SetStaticMesh(Cube.Object);
+    SelectedFootprint->SetVisibility(false);
     HidePreview();
 }
 
@@ -158,12 +206,8 @@ void ASettlementView::PrepareMeshesAndMaterials()
     if (!RoofMesh)
     {
         FSurfaceMesh Mesh;
-        const FVector3f A(-50,-50,0), B(50,-50,0), C(50,50,0), D(-50,50,0);
-        const FVector3f E(-50,0,100), F(50,0,100);
-        Mesh.Triangle(A,B,F); Mesh.Triangle(A,F,E);
-        Mesh.Triangle(D,E,F); Mesh.Triangle(D,F,C);
-        Mesh.Triangle(A,E,D); Mesh.Triangle(B,C,F);
-        Mesh.Triangle(A,D,C); Mesh.Triangle(A,C,B);
+        for (const auto& Triangle : RoofTriangles)
+            Mesh.Triangle(RoofVertices[Triangle[0]],RoofVertices[Triangle[1]],RoofVertices[Triangle[2]]);
         RoofMesh = Mesh.Build(this,BaseMaterial);
         Roofs->SetStaticMesh(RoofMesh);
         PreviewRoof->SetStaticMesh(RoofMesh);
@@ -171,6 +215,7 @@ void ASettlementView::PrepareMeshesAndMaterials()
         Tint(Roofs,FLinearColor(.22,.26,.28));
         Tint(Terrain,FLinearColor(.29,.38,.22));
         Tint(Boundary,FLinearColor(.95,.69,.16));
+        Tint(SelectedFootprint,FLinearColor(.1,.85,1));
     }
     if (!PreviewMaterial)
     {
@@ -189,6 +234,8 @@ void ASettlementView::Rebuild(const domain::World& State)
     Bodies->ClearInstances();
     Roofs->ClearInstances();
     BuildingTransforms.Reset();
+    InstanceBuildingIds.Reset();
+    InstanceBuildingIds.Reserve(int32(State.buildings.size()));
     TArray<FTransform> BodyTransforms, RoofTransforms;
     BodyTransforms.Reserve(int32(State.buildings.size()));
     RoofTransforms.Reserve(int32(State.buildings.size()));
@@ -196,6 +243,7 @@ void ASettlementView::Rebuild(const domain::World& State)
     {
         const FTransform Base = BasePose(Building.x_cm,Building.y_cm,Building.z_cm,Building.yaw_degrees);
         BuildingTransforms.Add(Id,Base);
+        InstanceBuildingIds.Add(Id);
         BodyTransforms.Add(BodyPose(Base,Building.width_cm,Building.depth_cm,Building.height_cm));
         RoofTransforms.Add(RoofPose(Base,Building.width_cm,Building.depth_cm,Building.height_cm));
     }
@@ -203,6 +251,7 @@ void ASettlementView::Rebuild(const domain::World& State)
     Roofs->AddInstances(RoofTransforms,false,false,false);
     // Placing another building does not rebuild the unchanged terrain mesh.
     if (!bHasBuiltTerrain || PresentedAreas!=State.build_areas) RebuildTerrain(State);
+    SetSelectedBuilding(SelectedId,State);
 }
 
 void ASettlementView::RebuildTerrain(const domain::World& State)
@@ -260,6 +309,73 @@ void ASettlementView::RebuildTerrain(const domain::World& State)
 
 int32 ASettlementView::BuildingCount() const { return Bodies->GetInstanceCount(); }
 
+bool ASettlementView::PickBuilding(const FVector& Origin, const FVector& Direction, uint64& OutId) const
+{
+    OutId=0;
+    if (Origin.ContainsNaN() || Direction.ContainsNaN()) return false;
+    const double Largest=FMath::Max3(FMath::Abs(Direction.X),FMath::Abs(Direction.Y),FMath::Abs(Direction.Z));
+    if (Largest==0) return false;
+    // Scale first so finite very large/small input directions cannot overflow or
+    // underflow during normalization. Local ray parameters remain world distance.
+    const FVector ScaledDirection(Direction.X/Largest,Direction.Y/Largest,Direction.Z/Largest);
+    const FVector RayDirection=ScaledDirection.GetSafeNormal();
+    double Nearest=std::numeric_limits<double>::infinity();
+    for (int32 Index=0; Index<InstanceBuildingIds.Num(); ++Index)
+    {
+        FTransform Body,Roof;
+        if (!Bodies->GetInstanceTransform(Index,Body,true) || !Roofs->GetInstanceTransform(Index,Roof,true)) continue;
+        double Distance=0;
+        if (RayBody(Body.InverseTransformPosition(Origin),Body.InverseTransformVector(RayDirection),Distance) && Distance<Nearest)
+        {
+            Nearest=Distance;
+            OutId=InstanceBuildingIds[Index];
+        }
+        const FVector RoofOrigin=Roof.InverseTransformPosition(Origin);
+        const FVector RoofDirection=Roof.InverseTransformVector(RayDirection);
+        for (const auto& Triangle : RoofTriangles)
+        {
+            if (RayRoofTriangle(RoofOrigin,RoofDirection,FVector(RoofVertices[Triangle[0]]),
+                FVector(RoofVertices[Triangle[1]]),FVector(RoofVertices[Triangle[2]]),Distance) && Distance<Nearest)
+            {
+                Nearest=Distance;
+                OutId=InstanceBuildingIds[Index];
+            }
+        }
+    }
+    if (OutId==0) return false;
+    // A nearer saved terrain triangle hides buildings behind a ridge. This is
+    // the same collision-free grid used for the rendered terrain and placement.
+    for (const auto& [Id,Area] : PresentedAreas)
+    {
+        domain::Point3 Hit;
+        if (domain::RaycastBuildArea(Area,{Origin.X,Origin.Y,Origin.Z},
+            {RayDirection.X,RayDirection.Y,RayDirection.Z},Hit))
+        {
+            const double Distance=FVector::DotProduct(FVector(Hit.x,Hit.y,Hit.z)-Origin,RayDirection);
+            if (Distance>MinPickDistance && Distance<Nearest-MinPickDistance)
+            {
+                OutId=0;
+                return false;
+            }
+        }
+    }
+    return true;
+}
+
+void ASettlementView::SetSelectedBuilding(uint64 Id, const domain::World& State)
+{
+    SelectedId=0;
+    SelectedFootprint->ClearInstances();
+    SelectedFootprint->SetVisibility(false);
+    const auto Found=State.buildings.find(Id);
+    if (Id==0 || Found==State.buildings.end() || Found->second.id!=Id || !BuildingTransforms.Contains(Id)) return;
+    const auto& Building=Found->second;
+    RebuildFootprint(SelectedFootprint,Building.x_cm,Building.y_cm,Building.yaw_degrees,
+        Building.width_cm,Building.depth_cm,Building.z_cm,18);
+    SelectedId=Id;
+    SelectedFootprint->SetVisibility(true);
+}
+
 bool ASettlementView::GetBuildingTransform(uint64 Id, FTransform& Out) const
 {
     const FTransform* Transform = BuildingTransforms.Find(Id);
@@ -286,8 +402,18 @@ void ASettlementView::SetPreview(const domain::BuildingDefinition& Definition,
     PreviewBody->SetWorldTransform(BodyPose(Base,Definition.width_cm,Definition.depth_cm,Definition.height_cm));
     PreviewRoof->SetWorldTransform(RoofPose(Base,Definition.width_cm,Definition.depth_cm,Definition.height_cm));
     PreviewMaterial->SetVectorParameterValue(TEXT("Color"),bValid ? FLinearColor(.15,.85,.28) : FLinearColor(.95,.12,.08));
-    PreviewFootprint->ClearInstances();
-    const auto Corners = domain::FootprintCorners(Command.x_cm,Command.y_cm,Definition.width_cm,Definition.depth_cm,Command.yaw_degrees);
+    RebuildFootprint(PreviewFootprint,Command.x_cm,Command.y_cm,Command.yaw_degrees,
+        Definition.width_cm,Definition.depth_cm,GroundZ,14);
+    PreviewBody->SetVisibility(true);
+    PreviewRoof->SetVisibility(true);
+    PreviewFootprint->SetVisibility(true);
+}
+
+void ASettlementView::RebuildFootprint(UInstancedStaticMeshComponent* Component, int32 X, int32 Y,
+    int32 Yaw, int32 Width, int32 Depth, int32 GroundZ, double LineWidth)
+{
+    Component->ClearInstances();
+    const auto Corners = domain::FootprintCorners(X,Y,Width,Depth,Yaw);
     for (std::size_t I=0; I<Corners.size(); ++I)
     {
         const auto& A=Corners[I]; const auto& B=Corners[(I+1)%Corners.size()];
@@ -300,11 +426,8 @@ void ASettlementView::SetPreview(const domain::BuildingDefinition& Definition,
             return FVector(X,Y,PreviewHeight(X,Y,GroundZ)+10);
         };
         for (int32 Segment=0; Segment<Segments; ++Segment)
-            AddBar(PreviewFootprint,Point(Segment),Point(Segment+1),14);
+            AddBar(Component,Point(Segment),Point(Segment+1),LineWidth);
     }
-    PreviewBody->SetVisibility(true);
-    PreviewRoof->SetVisibility(true);
-    PreviewFootprint->SetVisibility(true);
 }
 
 void ASettlementView::HidePreview()
