@@ -1,0 +1,20 @@
+{
+	"mode": "rendered_primitive_movement_only",
+	"requested_soldiers": 8000,
+	"live_soldiers": 8000,
+	"formations": 80,
+	"soldier_actors": 0,
+	"formation_actors": 80,
+	"seconds": 120,
+	"warmup_seconds": 10,
+	"frames": 6562,
+	"median_frame_ms": 16.449831426143646,
+	"p95_frame_ms": 28.460748493671417,
+	"median_fps": 60.790896520112923,
+	"simulation_cpu_median_ms": 0.001125037670135498,
+	"simulation_cpu_p95_ms": 0.0048354268074035645,
+	"peak_process_memory_bytes": 3662417064,
+	"limits": "Editor -game, primitive rigid movement, selection and camera pan/zoom. No combat, animation, pathfinding or reference-tier certification. GPU time and input latency not measured.",
+	"viewport_width": 1280,
+	"viewport_height": 720
+}

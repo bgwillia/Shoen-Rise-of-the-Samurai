@@ -1,0 +1,18 @@
+PASS population conservation and requested 200-person proof
+PASS outcome and demobilization exactly once
+PASS wounded excluded from labor and recruitment
+PASS six occupations and exact skill/estate return origin
+PASS district loss attribution and allied return
+PASS fixed days and all five speeds
+PASS snapshot all ledgers resources generals clock RNG
+PASS formation membership matches attached away records
+PASS invalid transactions are immutable
+PASS malformed worlds and saves rejected before replacement
+PASS reload rejects duplicate applied outcome
+PASS stable service IDs and independent RNG streams
+PASS captivity missing and desertion remain living away
+FAIL counter overflow rejects without mutation: line 144: !Mobilize(w,3,1).ok
+PASS 1000 4000 8000 20000 finite scale fixtures
+PASS unique slots and nonoverlapping group move targets
+PASS fixed 20Hz movement survives save continuation
+16 passed, 1 failed

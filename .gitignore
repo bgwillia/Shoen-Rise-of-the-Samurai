@@ -1,0 +1,35 @@
+# Unreal generated output, at project or plugin depth
+Binaries/
+DerivedDataCache/
+Intermediate/
+Saved/
+.vs/
+.idea/
+.vscode/
+*.sln
+*.suo
+*.VC.db
+*.VC.opendb
+*.xcodeproj/
+*.xcworkspace/
+*.xcuserstate
+*.opensdf
+*.sdf
+*.pdb
+*.dSYM/
+# Portable build and local developer output
+/build/
+/dist/
+/packages/
+/artifacts/local/
+# Keep raw engine logs/reports local; curated evidence and benchmark JSON are tracked.
+/artifacts/tooling-*.log
+/artifacts/tooling-editor-test-*/
+.worktrees/
+.superpowers/
+__pycache__/
+*.pyc
+.DS_Store
+.env
+.env.*
+!.env.example

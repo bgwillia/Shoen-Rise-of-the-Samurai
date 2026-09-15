@@ -1,0 +1,5 @@
+[ 16%] Building CXX object CMakeFiles/domain_core.dir/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/game/Source/DomainCore/Private/sim/World.cpp.o
+[ 33%] Linking CXX static library libdomain_core.a
+[ 66%] Built target domain_core
+[ 83%] Linking CXX executable domain_core_tests
+[100%] Built target domain_core_tests

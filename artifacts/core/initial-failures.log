@@ -1,0 +1,17 @@
+FAIL population conservation and requested 200-person proof: line 32: Summarize(w).available==200
+FAIL outcome and demobilization exactly once: line 23: r.ok
+FAIL wounded excluded from labor and recruitment: line 23: r.ok
+FAIL six occupations and exact skill/estate return origin: line 23: r.ok
+FAIL district loss attribution and allied return: line 23: r.ok
+FAIL fixed days and all five speeds: line 68: SetSpeed(w,speed).ok
+FAIL snapshot all ledgers resources generals clock RNG: line 23: r.ok
+FAIL formation membership matches attached away records: line 23: r.ok
+FAIL invalid transactions are immutable: line 89: ValidateWorld(w).ok
+FAIL malformed worlds and saves rejected before replacement: line 104: ValidateWorld(w).ok
+FAIL reload rejects duplicate applied outcome: line 23: r.ok
+FAIL stable service IDs and independent RNG streams: line 23: r.ok
+FAIL captivity missing and desertion remain living away: line 23: r.ok
+FAIL 1000 4000 8000 20000 finite scale fixtures: line 136: ValidateWorld(w).ok
+FAIL unique slots and nonoverlapping group move targets: line 139: w.formations.size()==10
+FAIL fixed 20Hz movement survives save continuation: line 149: IssueMove(a,ids,50000,10000,1.2).ok
+0 passed, 16 failed

@@ -1,0 +1,5 @@
+Command: python3 tools/dev.py build
+Exit code: 0
+Deploying ShoenEditor Mac Development...
+Result: Succeeded
+Total execution time: 23.37 seconds

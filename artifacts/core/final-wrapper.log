@@ -1,0 +1,19 @@
++ ["/opt/homebrew/bin/cmake", "-S", "/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/core", "-B", "/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/build/core", "-DCMAKE_BUILD_TYPE=Debug"]
+-- Configuring done (0.1s)
+-- Generating done (0.0s)
+-- Build files have been written to: /Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/build/core
++ ["/opt/homebrew/bin/cmake", "--build", "/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/build/core", "--config", "Debug"]
+[ 16%] Building CXX object CMakeFiles/domain_core.dir/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/game/Source/DomainCore/Private/sim/Battle.cpp.o
+[ 33%] Linking CXX static library libdomain_core.a
+[ 66%] Built target domain_core
+[ 83%] Building CXX object CMakeFiles/domain_core_tests.dir/tests/test_core.cpp.o
+[100%] Linking CXX executable domain_core_tests
+[100%] Built target domain_core_tests
++ ["/opt/homebrew/bin/ctest", "--test-dir", "/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/build/core", "-C", "Debug", "--output-on-failure", "--no-tests=error"]
+Test project /Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/build/core
+    Start 1: domain_core_invariants
+1/1 Test #1: domain_core_invariants ...........   Passed   12.57 sec
+
+100% tests passed out of 1
+
+Total Test time (real) =  12.58 sec

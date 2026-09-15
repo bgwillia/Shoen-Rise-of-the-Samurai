@@ -1,0 +1,140 @@
+test_benchmark_is_rendered_and_requires_valid_fresh_counts (test_dev.DevCliTests.test_benchmark_is_rendered_and_requires_valid_fresh_counts) ... FAIL
+test_benchmark_rejects_a_report_with_wrong_counts (test_dev.DevCliTests.test_benchmark_rejects_a_report_with_wrong_counts) ... FAIL
+test_build_uses_editor_target_and_prints_an_argument_array (test_dev.DevCliTests.test_build_uses_editor_target_and_prints_an_argument_array) ... FAIL
+test_child_failure_is_propagated_and_logged (test_dev.DevCliTests.test_child_failure_is_propagated_and_logged) ... FAIL
+test_core_test_never_requires_or_invokes_unreal (test_dev.DevCliTests.test_core_test_never_requires_or_invokes_unreal) ... FAIL
+test_create_map_accepts_only_an_editor_generated_umap (test_dev.DevCliTests.test_create_map_accepts_only_an_editor_generated_umap) ... FAIL
+test_create_map_requires_the_real_umap_output (test_dev.DevCliTests.test_create_map_requires_the_real_umap_output) ... FAIL
+test_editor_test_parses_successful_matching_tests (test_dev.DevCliTests.test_editor_test_parses_successful_matching_tests) ... FAIL
+test_editor_test_rejects_failed_and_skipped_tests (test_dev.DevCliTests.test_editor_test_rejects_failed_and_skipped_tests) ... FAIL
+test_editor_test_rejects_missing_or_empty_reports (test_dev.DevCliTests.test_editor_test_rejects_missing_or_empty_reports) ... FAIL
+test_engine_command_fails_when_engine_root_is_missing (test_dev.DevCliTests.test_engine_command_fails_when_engine_root_is_missing) ... FAIL
+test_package_invokes_installed_run_uat_for_mac (test_dev.DevCliTests.test_package_invokes_installed_run_uat_for_mac) ... FAIL
+test_run_passes_scenario_and_soldier_count_as_game_flags (test_dev.DevCliTests.test_run_passes_scenario_and_soldier_count_as_game_flags) ... FAIL
+test_timeout_returns_124_and_does_not_report_success (test_dev.DevCliTests.test_timeout_returns_124_and_does_not_report_success) ... FAIL
+
+======================================================================
+FAIL: test_benchmark_is_rendered_and_requires_valid_fresh_counts (test_dev.DevCliTests.test_benchmark_is_rendered_and_requires_valid_fresh_counts)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/tools/tests/test_dev.py", line 269, in test_benchmark_is_rendered_and_requires_valid_fresh_counts
+    self.assertEqual(result.returncode, 0, result.stdout)
+AssertionError: 2 != 0 : /opt/homebrew/Cellar/python@3.12/3.12.13_4/Frameworks/Python.framework/Versions/3.12/Resources/Python.app/Contents/MacOS/Python: can't open file '/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/tools/dev.py': [Errno 2] No such file or directory
+
+
+======================================================================
+FAIL: test_benchmark_rejects_a_report_with_wrong_counts (test_dev.DevCliTests.test_benchmark_rejects_a_report_with_wrong_counts)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/tools/tests/test_dev.py", line 294, in test_benchmark_rejects_a_report_with_wrong_counts
+    self.assertIn("live_soldiers", result.stdout)
+AssertionError: 'live_soldiers' not found in "/opt/homebrew/Cellar/python@3.12/3.12.13_4/Frameworks/Python.framework/Versions/3.12/Resources/Python.app/Contents/MacOS/Python: can't open file '/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/tools/dev.py': [Errno 2] No such file or directory\n"
+
+======================================================================
+FAIL: test_build_uses_editor_target_and_prints_an_argument_array (test_dev.DevCliTests.test_build_uses_editor_target_and_prints_an_argument_array)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/tools/tests/test_dev.py", line 152, in test_build_uses_editor_target_and_prints_an_argument_array
+    self.assertEqual(result.returncode, 0, result.stdout)
+AssertionError: 2 != 0 : /opt/homebrew/Cellar/python@3.12/3.12.13_4/Frameworks/Python.framework/Versions/3.12/Resources/Python.app/Contents/MacOS/Python: can't open file '/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/tools/dev.py': [Errno 2] No such file or directory
+
+
+======================================================================
+FAIL: test_child_failure_is_propagated_and_logged (test_dev.DevCliTests.test_child_failure_is_propagated_and_logged)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/tools/tests/test_dev.py", line 142, in test_child_failure_is_propagated_and_logged
+    self.assertEqual(result.returncode, 17, result.stdout)
+AssertionError: 2 != 17 : /opt/homebrew/Cellar/python@3.12/3.12.13_4/Frameworks/Python.framework/Versions/3.12/Resources/Python.app/Contents/MacOS/Python: can't open file '/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/tools/dev.py': [Errno 2] No such file or directory
+
+
+======================================================================
+FAIL: test_core_test_never_requires_or_invokes_unreal (test_dev.DevCliTests.test_core_test_never_requires_or_invokes_unreal)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/tools/tests/test_dev.py", line 131, in test_core_test_never_requires_or_invokes_unreal
+    self.assertEqual(result.returncode, 0, result.stdout)
+AssertionError: 2 != 0 : /opt/homebrew/Cellar/python@3.12/3.12.13_4/Frameworks/Python.framework/Versions/3.12/Resources/Python.app/Contents/MacOS/Python: can't open file '/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/tools/dev.py': [Errno 2] No such file or directory
+
+
+======================================================================
+FAIL: test_create_map_accepts_only_an_editor_generated_umap (test_dev.DevCliTests.test_create_map_accepts_only_an_editor_generated_umap)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/tools/tests/test_dev.py", line 184, in test_create_map_accepts_only_an_editor_generated_umap
+    self.assertEqual(result.returncode, 0, result.stdout)
+AssertionError: 2 != 0 : /opt/homebrew/Cellar/python@3.12/3.12.13_4/Frameworks/Python.framework/Versions/3.12/Resources/Python.app/Contents/MacOS/Python: can't open file '/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/tools/dev.py': [Errno 2] No such file or directory
+
+
+======================================================================
+FAIL: test_create_map_requires_the_real_umap_output (test_dev.DevCliTests.test_create_map_requires_the_real_umap_output)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/tools/tests/test_dev.py", line 167, in test_create_map_requires_the_real_umap_output
+    self.assertIn("Foundation.umap", result.stdout)
+AssertionError: 'Foundation.umap' not found in "/opt/homebrew/Cellar/python@3.12/3.12.13_4/Frameworks/Python.framework/Versions/3.12/Resources/Python.app/Contents/MacOS/Python: can't open file '/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/tools/dev.py': [Errno 2] No such file or directory\n"
+
+======================================================================
+FAIL: test_editor_test_parses_successful_matching_tests (test_dev.DevCliTests.test_editor_test_parses_successful_matching_tests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/tools/tests/test_dev.py", line 212, in test_editor_test_parses_successful_matching_tests
+    self.assertEqual(result.returncode, 0, result.stdout)
+AssertionError: 2 != 0 : /opt/homebrew/Cellar/python@3.12/3.12.13_4/Frameworks/Python.framework/Versions/3.12/Resources/Python.app/Contents/MacOS/Python: can't open file '/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/tools/dev.py': [Errno 2] No such file or directory
+
+
+======================================================================
+FAIL: test_editor_test_rejects_failed_and_skipped_tests (test_dev.DevCliTests.test_editor_test_rejects_failed_and_skipped_tests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/tools/tests/test_dev.py", line 232, in test_editor_test_rejects_failed_and_skipped_tests
+    self.assertIn("Fail", result.stdout)
+AssertionError: 'Fail' not found in "/opt/homebrew/Cellar/python@3.12/3.12.13_4/Frameworks/Python.framework/Versions/3.12/Resources/Python.app/Contents/MacOS/Python: can't open file '/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/tools/dev.py': [Errno 2] No such file or directory\n"
+
+======================================================================
+FAIL: test_editor_test_rejects_missing_or_empty_reports (test_dev.DevCliTests.test_editor_test_rejects_missing_or_empty_reports)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/tools/tests/test_dev.py", line 193, in test_editor_test_rejects_missing_or_empty_reports
+    self.assertIn("automation report", result.stdout.lower())
+AssertionError: 'automation report' not found in "/opt/homebrew/cellar/python@3.12/3.12.13_4/frameworks/python.framework/versions/3.12/resources/python.app/contents/macos/python: can't open file '/users/brianwilliams/desktop/shoen-rise-of-the-samurai/tools/dev.py': [errno 2] no such file or directory\n"
+
+======================================================================
+FAIL: test_engine_command_fails_when_engine_root_is_missing (test_dev.DevCliTests.test_engine_command_fails_when_engine_root_is_missing)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/tools/tests/test_dev.py", line 117, in test_engine_command_fails_when_engine_root_is_missing
+    self.assertIn("Unreal Engine", result.stdout)
+AssertionError: 'Unreal Engine' not found in "/opt/homebrew/Cellar/python@3.12/3.12.13_4/Frameworks/Python.framework/Versions/3.12/Resources/Python.app/Contents/MacOS/Python: can't open file '/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/tools/dev.py': [Errno 2] No such file or directory\n"
+
+======================================================================
+FAIL: test_package_invokes_installed_run_uat_for_mac (test_dev.DevCliTests.test_package_invokes_installed_run_uat_for_mac)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/tools/tests/test_dev.py", line 301, in test_package_invokes_installed_run_uat_for_mac
+    self.assertEqual(result.returncode, 0, result.stdout)
+AssertionError: 2 != 0 : /opt/homebrew/Cellar/python@3.12/3.12.13_4/Frameworks/Python.framework/Versions/3.12/Resources/Python.app/Contents/MacOS/Python: can't open file '/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/tools/dev.py': [Errno 2] No such file or directory
+
+
+======================================================================
+FAIL: test_run_passes_scenario_and_soldier_count_as_game_flags (test_dev.DevCliTests.test_run_passes_scenario_and_soldier_count_as_game_flags)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/tools/tests/test_dev.py", line 242, in test_run_passes_scenario_and_soldier_count_as_game_flags
+    self.assertEqual(result.returncode, 0, result.stdout)
+AssertionError: 2 != 0 : /opt/homebrew/Cellar/python@3.12/3.12.13_4/Frameworks/Python.framework/Versions/3.12/Resources/Python.app/Contents/MacOS/Python: can't open file '/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/tools/dev.py': [Errno 2] No such file or directory
+
+
+======================================================================
+FAIL: test_timeout_returns_124_and_does_not_report_success (test_dev.DevCliTests.test_timeout_returns_124_and_does_not_report_success)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/tools/tests/test_dev.py", line 314, in test_timeout_returns_124_and_does_not_report_success
+    self.assertEqual(result.returncode, 124, result.stdout)
+AssertionError: 2 != 124 : /opt/homebrew/Cellar/python@3.12/3.12.13_4/Frameworks/Python.framework/Versions/3.12/Resources/Python.app/Contents/MacOS/Python: can't open file '/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/tools/dev.py': [Errno 2] No such file or directory
+
+
+----------------------------------------------------------------------
+Ran 14 tests in 0.392s
+
+FAILED (failures=14)

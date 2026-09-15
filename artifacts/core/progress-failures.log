@@ -1,0 +1,17 @@
+PASS population conservation and requested 200-person proof
+PASS outcome and demobilization exactly once
+PASS wounded excluded from labor and recruitment
+PASS six occupations and exact skill/estate return origin
+PASS district loss attribution and allied return
+PASS fixed days and all five speeds
+FAIL snapshot all ledgers resources generals clock RNG: line 79: !bytes.empty()
+PASS formation membership matches attached away records
+PASS invalid transactions are immutable
+FAIL malformed worlds and saves rejected before replacement: line 109: bytes.size()>28
+FAIL reload rejects duplicate applied outcome: line 126: r.ok
+FAIL stable service IDs and independent RNG streams: line 134: loaded.ok
+PASS captivity missing and desertion remain living away
+PASS 1000 4000 8000 20000 finite scale fixtures
+FAIL unique slots and nonoverlapping group move targets: line 147: slots.size()==100
+FAIL fixed 20Hz movement survives save continuation: line 156: IssueMove(a,ids,50000,10000,1.2).ok
+10 passed, 6 failed
