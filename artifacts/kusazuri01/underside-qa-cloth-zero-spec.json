@@ -1,0 +1,953 @@
+{
+  "source_sha256": "2bcfa0b3387ef2338a657d0c4b6884a8e35042516e1c54ac8c23137ce743dc14",
+  "objects": {
+    "Kusazuri_01_Front_Center_Interior": {
+      "materials": [
+        "M_Kusazuri01"
+      ],
+      "tiles": {
+        "12": 368,
+        "4": 172
+      },
+      "outward_tiles": {
+        "12": 200,
+        "4": 92
+      },
+      "inward_tiles": {
+        "12": 168,
+        "4": 80
+      },
+      "uv_layers": [
+        "UV0_DoAtlas"
+      ]
+    },
+    "Kusazuri_01_Front_L_Interior": {
+      "materials": [
+        "M_Kusazuri01"
+      ],
+      "tiles": {
+        "12": 368,
+        "4": 172
+      },
+      "outward_tiles": {
+        "12": 180,
+        "4": 86
+      },
+      "inward_tiles": {
+        "12": 188,
+        "4": 86
+      },
+      "uv_layers": [
+        "UV0_DoAtlas"
+      ]
+    },
+    "Kusazuri_01_Front_R_Interior": {
+      "materials": [
+        "M_Kusazuri01"
+      ],
+      "tiles": {
+        "12": 368,
+        "4": 172
+      },
+      "outward_tiles": {
+        "12": 180,
+        "4": 86
+      },
+      "inward_tiles": {
+        "12": 188,
+        "4": 86
+      },
+      "uv_layers": [
+        "UV0_DoAtlas"
+      ]
+    },
+    "Kusazuri_01_Side_L_Interior": {
+      "materials": [
+        "M_Kusazuri01"
+      ],
+      "tiles": {
+        "12": 368,
+        "4": 172
+      },
+      "outward_tiles": {
+        "12": 185,
+        "4": 86
+      },
+      "inward_tiles": {
+        "12": 183,
+        "4": 86
+      },
+      "uv_layers": [
+        "UV0_DoAtlas"
+      ]
+    },
+    "Kusazuri_01_Side_R_Interior": {
+      "materials": [
+        "M_Kusazuri01"
+      ],
+      "tiles": {
+        "12": 368,
+        "4": 172
+      },
+      "outward_tiles": {
+        "12": 185,
+        "4": 86
+      },
+      "inward_tiles": {
+        "12": 183,
+        "4": 86
+      },
+      "uv_layers": [
+        "UV0_DoAtlas"
+      ]
+    },
+    "Kusazuri_01_Rear_L_Interior": {
+      "materials": [
+        "M_Kusazuri01"
+      ],
+      "tiles": {
+        "12": 368,
+        "4": 172
+      },
+      "outward_tiles": {
+        "12": 185,
+        "4": 86
+      },
+      "inward_tiles": {
+        "12": 183,
+        "4": 86
+      },
+      "uv_layers": [
+        "UV0_DoAtlas"
+      ]
+    },
+    "Kusazuri_01_Rear_R_Interior": {
+      "materials": [
+        "M_Kusazuri01"
+      ],
+      "tiles": {
+        "12": 368,
+        "4": 172
+      },
+      "outward_tiles": {
+        "12": 185,
+        "4": 86
+      },
+      "inward_tiles": {
+        "12": 183,
+        "4": 86
+      },
+      "uv_layers": [
+        "UV0_DoAtlas"
+      ]
+    }
+  },
+  "ramps": {
+    "Color Ramp": {
+      "label": "Lacquer / dark red silk / aged brass",
+      "entries": [
+        [
+          0.0,
+          [
+            0.2800000011920929,
+            0.28999999165534973,
+            0.30000001192092896,
+            1.0
+          ]
+        ],
+        [
+          0.05999999865889549,
+          [
+            0.8500000238418579,
+            0.8500000238418579,
+            0.8500000238418579,
+            1.0
+          ]
+        ],
+        [
+          0.12666666507720947,
+          [
+            0.8500000238418579,
+            0.7799999713897705,
+            0.6700000166893005,
+            1.0
+          ]
+        ],
+        [
+          0.19333332777023315,
+          [
+            0.3799999952316284,
+            0.30000001192092896,
+            0.2800000011920929,
+            1.0
+          ]
+        ],
+        [
+          0.25999999046325684,
+          [
+            0.8500000238418579,
+            0.8500000238418579,
+            0.8500000238418579,
+            1.0
+          ]
+        ],
+        [
+          0.3266666531562805,
+          [
+            0.8500000238418579,
+            0.8500000238418579,
+            0.8500000238418579,
+            1.0
+          ]
+        ],
+        [
+          0.3933333456516266,
+          [
+            0.8500000238418579,
+            0.8500000238418579,
+            0.8500000238418579,
+            1.0
+          ]
+        ],
+        [
+          0.46000000834465027,
+          [
+            0.8500000238418579,
+            0.8500000238418579,
+            0.8500000238418579,
+            1.0
+          ]
+        ],
+        [
+          0.5266666412353516,
+          [
+            0.8500000238418579,
+            0.8500000238418579,
+            0.8500000238418579,
+            1.0
+          ]
+        ],
+        [
+          0.5933333039283752,
+          [
+            0.8500000238418579,
+            0.8500000238418579,
+            0.8500000238418579,
+            1.0
+          ]
+        ],
+        [
+          0.6600000262260437,
+          [
+            0.2800000011920929,
+            0.28999999165534973,
+            0.30000001192092896,
+            1.0
+          ]
+        ],
+        [
+          0.7266666889190674,
+          [
+            0.8500000238418579,
+            0.7799999713897705,
+            0.6700000166893005,
+            1.0
+          ]
+        ],
+        [
+          0.7933333516120911,
+          [
+            0.10000000149011612,
+            0.18000000715255737,
+            0.47999998927116394,
+            1.0
+          ]
+        ],
+        [
+          0.8600000143051147,
+          [
+            0.8500000238418579,
+            0.8500000238418579,
+            0.8500000238418579,
+            1.0
+          ]
+        ],
+        [
+          0.9266666769981384,
+          [
+            0.8500000238418579,
+            0.8500000238418579,
+            0.8500000238418579,
+            1.0
+          ]
+        ],
+        [
+          0.9933333396911621,
+          [
+            0.8500000238418579,
+            0.8500000238418579,
+            0.8500000238418579,
+            1.0
+          ]
+        ]
+      ],
+      "tile12_evaluated": [
+        0.10000000149011612,
+        0.18000000715255737,
+        0.47999998927116394,
+        1.0
+      ]
+    }
+  },
+  "nodes": [
+    {
+      "name": "Principled BSDF",
+      "type": "BSDF_PRINCIPLED",
+      "label": "",
+      "inputs": [
+        {
+          "name": "Base Color",
+          "links": [
+            [
+              "Mix (Legacy).002",
+              "Color"
+            ]
+          ]
+        },
+        {
+          "name": "Metallic",
+          "links": [
+            [
+              "Separate Color",
+              "Blue"
+            ]
+          ]
+        },
+        {
+          "name": "Roughness",
+          "links": [
+            [
+              "Math.007",
+              "Value"
+            ]
+          ]
+        },
+        {
+          "name": "IOR",
+          "links": []
+        },
+        {
+          "name": "Alpha",
+          "links": []
+        },
+        {
+          "name": "Normal",
+          "links": [
+            [
+              "Normal Map",
+              "Normal"
+            ]
+          ]
+        },
+        {
+          "name": "Weight",
+          "links": []
+        },
+        {
+          "name": "Diffuse Roughness",
+          "links": []
+        },
+        {
+          "name": "Subsurface Weight",
+          "links": []
+        },
+        {
+          "name": "Subsurface Radius",
+          "links": []
+        },
+        {
+          "name": "Subsurface Scale",
+          "links": []
+        },
+        {
+          "name": "Subsurface IOR",
+          "links": []
+        },
+        {
+          "name": "Subsurface Anisotropy",
+          "links": []
+        },
+        {
+          "name": "Specular IOR Level",
+          "links": []
+        },
+        {
+          "name": "Specular Tint",
+          "links": []
+        },
+        {
+          "name": "Anisotropic",
+          "links": []
+        },
+        {
+          "name": "Anisotropic Rotation",
+          "links": []
+        },
+        {
+          "name": "Tangent",
+          "links": []
+        },
+        {
+          "name": "Transmission Weight",
+          "links": []
+        },
+        {
+          "name": "Coat Weight",
+          "links": []
+        },
+        {
+          "name": "Coat Roughness",
+          "links": []
+        },
+        {
+          "name": "Coat IOR",
+          "links": []
+        },
+        {
+          "name": "Coat Tint",
+          "links": []
+        },
+        {
+          "name": "Coat Normal",
+          "links": []
+        },
+        {
+          "name": "Sheen Weight",
+          "links": []
+        },
+        {
+          "name": "Sheen Roughness",
+          "links": []
+        },
+        {
+          "name": "Sheen Tint",
+          "links": []
+        },
+        {
+          "name": "Emission Color",
+          "links": []
+        },
+        {
+          "name": "Emission Strength",
+          "links": []
+        },
+        {
+          "name": "Thin Film Thickness",
+          "links": []
+        },
+        {
+          "name": "Thin Film IOR",
+          "links": []
+        }
+      ]
+    },
+    {
+      "name": "Material Output",
+      "type": "OUTPUT_MATERIAL",
+      "label": "",
+      "inputs": [
+        {
+          "name": "Surface",
+          "links": [
+            [
+              "Principled BSDF",
+              "BSDF"
+            ]
+          ]
+        },
+        {
+          "name": "Volume",
+          "links": []
+        },
+        {
+          "name": "Displacement",
+          "links": []
+        },
+        {
+          "name": "Thickness",
+          "links": []
+        }
+      ]
+    },
+    {
+      "name": "Image Texture",
+      "type": "TEX_IMAGE",
+      "label": "",
+      "inputs": [
+        {
+          "name": "Vector",
+          "links": []
+        }
+      ]
+    },
+    {
+      "name": "Image Texture.001",
+      "type": "TEX_IMAGE",
+      "label": "",
+      "inputs": [
+        {
+          "name": "Vector",
+          "links": []
+        }
+      ]
+    },
+    {
+      "name": "Normal Map",
+      "type": "NORMAL_MAP",
+      "label": "",
+      "inputs": [
+        {
+          "name": "Strength",
+          "links": []
+        },
+        {
+          "name": "Color",
+          "links": [
+            [
+              "Image Texture.001",
+              "Color"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Image Texture.002",
+      "type": "TEX_IMAGE",
+      "label": "",
+      "inputs": [
+        {
+          "name": "Vector",
+          "links": []
+        }
+      ]
+    },
+    {
+      "name": "Separate Color",
+      "type": "SEPARATE_COLOR",
+      "label": "",
+      "inputs": [
+        {
+          "name": "Color",
+          "links": [
+            [
+              "Image Texture.002",
+              "Color"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Texture Coordinate",
+      "type": "TEX_COORD",
+      "label": "",
+      "inputs": []
+    },
+    {
+      "name": "Separate XYZ",
+      "type": "SEPXYZ",
+      "label": "",
+      "inputs": [
+        {
+          "name": "Vector",
+          "links": [
+            [
+              "Texture Coordinate",
+              "UV"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Math",
+      "type": "MATH",
+      "label": "",
+      "inputs": [
+        {
+          "name": "Value",
+          "links": [
+            [
+              "Separate XYZ",
+              "X"
+            ]
+          ]
+        },
+        {
+          "name": "Value",
+          "links": []
+        },
+        {
+          "name": "Value",
+          "links": []
+        }
+      ]
+    },
+    {
+      "name": "Math.001",
+      "type": "MATH",
+      "label": "",
+      "inputs": [
+        {
+          "name": "Value",
+          "links": [
+            [
+              "Separate XYZ",
+              "Y"
+            ]
+          ]
+        },
+        {
+          "name": "Value",
+          "links": []
+        },
+        {
+          "name": "Value",
+          "links": []
+        }
+      ]
+    },
+    {
+      "name": "Math.002",
+      "type": "MATH",
+      "label": "",
+      "inputs": [
+        {
+          "name": "Value",
+          "links": [
+            [
+              "Math",
+              "Value"
+            ]
+          ]
+        },
+        {
+          "name": "Value",
+          "links": []
+        },
+        {
+          "name": "Value",
+          "links": []
+        }
+      ]
+    },
+    {
+      "name": "Math.003",
+      "type": "MATH",
+      "label": "",
+      "inputs": [
+        {
+          "name": "Value",
+          "links": [
+            [
+              "Math.001",
+              "Value"
+            ]
+          ]
+        },
+        {
+          "name": "Value",
+          "links": []
+        },
+        {
+          "name": "Value",
+          "links": []
+        }
+      ]
+    },
+    {
+      "name": "Math.004",
+      "type": "MATH",
+      "label": "",
+      "inputs": [
+        {
+          "name": "Value",
+          "links": [
+            [
+              "Math.003",
+              "Value"
+            ]
+          ]
+        },
+        {
+          "name": "Value",
+          "links": []
+        },
+        {
+          "name": "Value",
+          "links": []
+        }
+      ]
+    },
+    {
+      "name": "Math.005",
+      "type": "MATH",
+      "label": "",
+      "inputs": [
+        {
+          "name": "Value",
+          "links": [
+            [
+              "Math.002",
+              "Value"
+            ]
+          ]
+        },
+        {
+          "name": "Value",
+          "links": [
+            [
+              "Math.004",
+              "Value"
+            ]
+          ]
+        },
+        {
+          "name": "Value",
+          "links": []
+        }
+      ]
+    },
+    {
+      "name": "Math.006",
+      "type": "MATH",
+      "label": "",
+      "inputs": [
+        {
+          "name": "Value",
+          "links": [
+            [
+              "Math.005",
+              "Value"
+            ]
+          ]
+        },
+        {
+          "name": "Value",
+          "links": []
+        },
+        {
+          "name": "Value",
+          "links": []
+        }
+      ]
+    },
+    {
+      "name": "Color Ramp",
+      "type": "VALTORGB",
+      "label": "Lacquer / dark red silk / aged brass",
+      "inputs": [
+        {
+          "name": "Factor",
+          "links": [
+            [
+              "Math.006",
+              "Value"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Mix (Legacy)",
+      "type": "MIX_RGB",
+      "label": "",
+      "inputs": [
+        {
+          "name": "Factor",
+          "links": []
+        },
+        {
+          "name": "Color1",
+          "links": [
+            [
+              "Image Texture",
+              "Color"
+            ]
+          ]
+        },
+        {
+          "name": "Color2",
+          "links": [
+            [
+              "Color Ramp",
+              "Color"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Separate Color.001",
+      "type": "SEPARATE_COLOR",
+      "label": "",
+      "inputs": [
+        {
+          "name": "Color",
+          "links": [
+            [
+              "Image Texture.002",
+              "Color"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Math.007",
+      "type": "MATH",
+      "label": "",
+      "inputs": [
+        {
+          "name": "Value",
+          "links": [
+            [
+              "Separate Color.001",
+              "Green"
+            ]
+          ]
+        },
+        {
+          "name": "Value",
+          "links": []
+        },
+        {
+          "name": "Value",
+          "links": []
+        }
+      ]
+    },
+    {
+      "name": "Color Attribute",
+      "type": "VERTEX_COLOR",
+      "label": "",
+      "inputs": []
+    },
+    {
+      "name": "Separate Color.002",
+      "type": "SEPARATE_COLOR",
+      "label": "",
+      "inputs": [
+        {
+          "name": "Color",
+          "links": [
+            [
+              "Color Attribute",
+              "Color"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Vector Math",
+      "type": "VECT_MATH",
+      "label": "",
+      "inputs": [
+        {
+          "name": "Vector",
+          "links": [
+            [
+              "Image Texture",
+              "Color"
+            ]
+          ]
+        },
+        {
+          "name": "Vector",
+          "links": []
+        },
+        {
+          "name": "Vector",
+          "links": []
+        },
+        {
+          "name": "Scale",
+          "links": []
+        }
+      ]
+    },
+    {
+      "name": "Mix (Legacy).001",
+      "type": "MIX_RGB",
+      "label": "",
+      "inputs": [
+        {
+          "name": "Factor",
+          "links": []
+        },
+        {
+          "name": "Color1",
+          "links": [
+            [
+              "Vector Math",
+              "Value"
+            ]
+          ]
+        },
+        {
+          "name": "Color2",
+          "links": []
+        }
+      ]
+    },
+    {
+      "name": "Mix (Legacy).002",
+      "type": "MIX_RGB",
+      "label": "",
+      "inputs": [
+        {
+          "name": "Factor",
+          "links": [
+            [
+              "Separate Color.002",
+              "Red"
+            ]
+          ]
+        },
+        {
+          "name": "Color1",
+          "links": [
+            [
+              "Mix (Legacy).001",
+              "Color"
+            ]
+          ]
+        },
+        {
+          "name": "Color2",
+          "links": [
+            [
+              "Mix (Legacy)",
+              "Color"
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "material_settings": {
+    "use_backface_culling": false,
+    "surface_render_method": "DITHERED"
+  },
+  "cloth": {
+    "tile": 12,
+    "metallic": 0,
+    "roughness": 0.9,
+    "specular_ior_level": 0.05,
+    "normal_strength": 0.65,
+    "other_tiles": "unchanged",
+    "source_unchanged": true
+  }
+}

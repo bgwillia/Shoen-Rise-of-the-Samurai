@@ -1,0 +1,44 @@
+﻿{
+	"devices": [
+		{
+			"deviceName": "Brians-MacBook-Pro-3.local",
+			"instance": "4A643610904957E4B5765A9C6828FBB1",
+			"instanceName": "Brians-MacBook-Pro-3.local-12135",
+			"platform": "MacEditor",
+			"oSVersion": "macOS 26.6.2 25G83",
+			"model": "Default",
+			"gPU": "Apple M1 Max",
+			"cPUModel": "Apple M1 Max",
+			"rAMInGB": 32,
+			"renderMode": "SM6",
+			"rHI": "",
+			"appInstanceLog": ""
+		}
+	],
+	"reportCreatedOn": "2026.09.15-20.23.15",
+	"succeeded": 1,
+	"succeededWithWarnings": 0,
+	"failed": 0,
+	"notRun": 0,
+	"inProcess": 0,
+	"totalDuration": 0.0081796683371067047,
+	"comparisonExported": false,
+	"comparisonExportDirectory": "",
+	"tests": [
+		{
+			"testDisplayName": "HingeMath",
+			"fullTestPath": "Shoen.Art.Kusazuri.HingeMath",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"4A643610904957E4B5765A9C6828FBB1"
+			],
+			"duration": 0.0081796683371067047,
+			"dateTime": "2026.09.15-20.23.15",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		}
+	]
+}

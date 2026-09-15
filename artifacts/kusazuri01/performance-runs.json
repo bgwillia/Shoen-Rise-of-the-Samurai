@@ -1,0 +1,280 @@
+{
+  "source_sha256": "cf7c0ec0578b7fe2aca7d1b30439c521e8cecc3e63d4f36b0c8820b31dc9eb9e",
+  "runs": [
+    {
+      "label": "cost-1-existing",
+      "count": 1,
+      "mode": "existing",
+      "camera": "close",
+      "started_unix_seconds": 1789505810.182419,
+      "finished_unix_seconds": 1789505847.655676,
+      "report": "artifacts/kusazuri01/cost-1-existing.json",
+      "frames": 1050,
+      "viewport": [
+        1280,
+        720
+      ],
+      "rhi": "Metal",
+      "frame": {
+        "samples": 1050,
+        "median_ms": 14.131460338830948,
+        "p95_ms": 18.40125024318695,
+        "worst_ms": 27.826417237520218
+      },
+      "median_fps": 70.76409486514024,
+      "game_thread": {
+        "samples": 1050,
+        "median_ms": 1.159999966621399,
+        "p95_ms": 2.1135833263397217,
+        "worst_ms": 9.997249603271484
+      },
+      "render_thread": {
+        "samples": 1050,
+        "median_ms": 14.147000312805176,
+        "p95_ms": 18.302541732788086,
+        "worst_ms": 25.70920753479004
+      },
+      "gpu": {
+        "samples": 1050,
+        "median_ms": 13.705750465393066,
+        "p95_ms": 18.064958572387695,
+        "worst_ms": 24.471500396728516
+      },
+      "capture_seconds": 15.00831537693739,
+      "representation": "single skeletal/poseable fixture"
+    },
+    {
+      "label": "cost-1-kusazuri",
+      "count": 1,
+      "mode": "kusazuri",
+      "camera": "close",
+      "started_unix_seconds": 1789505847.6561558,
+      "finished_unix_seconds": 1789505876.254027,
+      "report": "artifacts/kusazuri01/cost-1-kusazuri.json",
+      "frames": 1327,
+      "viewport": [
+        1280,
+        720
+      ],
+      "rhi": "Metal",
+      "frame": {
+        "samples": 1327,
+        "median_ms": 11.241164058446884,
+        "p95_ms": 12.995455414056778,
+        "worst_ms": 97.49658405780792
+      },
+      "median_fps": 88.958758612599,
+      "game_thread": {
+        "samples": 1327,
+        "median_ms": 1.0851666927337646,
+        "p95_ms": 1.594333291053772,
+        "worst_ms": 5.023083209991455
+      },
+      "render_thread": {
+        "samples": 1327,
+        "median_ms": 11.268458366394043,
+        "p95_ms": 12.94474983215332,
+        "worst_ms": 146.68133544921875
+      },
+      "gpu": {
+        "samples": 1327,
+        "median_ms": 10.664875030517578,
+        "p95_ms": 12.408708572387695,
+        "worst_ms": 16.402374267578125
+      },
+      "capture_seconds": 15.009399626404047,
+      "representation": "single skeletal/poseable fixture"
+    },
+    {
+      "label": "cost-100-existing",
+      "count": 100,
+      "mode": "existing",
+      "camera": "tactical",
+      "started_unix_seconds": 1789505876.256449,
+      "finished_unix_seconds": 1789505908.371525,
+      "report": "artifacts/kusazuri01/cost-100-existing.json",
+      "frames": 1885,
+      "viewport": [
+        1280,
+        720
+      ],
+      "rhi": "Metal",
+      "frame": {
+        "samples": 1885,
+        "median_ms": 10.4282945394516,
+        "p95_ms": 11.715918779373169,
+        "worst_ms": 145.49775049090385
+      },
+      "median_fps": 95.89295701390765,
+      "game_thread": {
+        "samples": 1885,
+        "median_ms": 0.890250027179718,
+        "p95_ms": 1.3945000171661377,
+        "worst_ms": 104.05933380126953
+      },
+      "render_thread": {
+        "samples": 1885,
+        "median_ms": 10.450333595275879,
+        "p95_ms": 11.676750183105469,
+        "worst_ms": 116.12962341308594
+      },
+      "gpu": {
+        "samples": 1885,
+        "median_ms": 9.877708435058594,
+        "p95_ms": 11.156208038330078,
+        "worst_ms": 38.95724868774414
+      },
+      "capture_seconds": 20.00627150014043,
+      "representation": "static"
+    },
+    {
+      "label": "cost-100-kusazuri",
+      "count": 100,
+      "mode": "kusazuri",
+      "camera": "tactical",
+      "started_unix_seconds": 1789505908.372301,
+      "finished_unix_seconds": 1789505940.5439339,
+      "report": "artifacts/kusazuri01/cost-100-kusazuri.json",
+      "frames": 1413,
+      "viewport": [
+        1280,
+        720
+      ],
+      "rhi": "Metal",
+      "frame": {
+        "samples": 1413,
+        "median_ms": 14.062080532312393,
+        "p95_ms": 17.07979291677475,
+        "worst_ms": 26.11662447452545
+      },
+      "median_fps": 71.11323233444449,
+      "game_thread": {
+        "samples": 1413,
+        "median_ms": 0.8775416612625122,
+        "p95_ms": 1.1959166526794434,
+        "worst_ms": 2.2325832843780518
+      },
+      "render_thread": {
+        "samples": 1413,
+        "median_ms": 14.065750122070312,
+        "p95_ms": 17.071041107177734,
+        "worst_ms": 25.89270782470703
+      },
+      "gpu": {
+        "samples": 1413,
+        "median_ms": 13.629708290100098,
+        "p95_ms": 16.56100082397461,
+        "worst_ms": 19.837125778198242
+      },
+      "capture_seconds": 20.002019833773375,
+      "representation": "static"
+    },
+    {
+      "label": "cost-500-kusazuri",
+      "count": 500,
+      "mode": "kusazuri",
+      "camera": "tactical",
+      "started_unix_seconds": 1789505940.544766,
+      "finished_unix_seconds": 1789505973.3483012,
+      "report": "artifacts/kusazuri01/cost-500-kusazuri.json",
+      "frames": 836,
+      "viewport": [
+        1280,
+        720
+      ],
+      "rhi": "Metal",
+      "frame": {
+        "samples": 836,
+        "median_ms": 22.999122738838196,
+        "p95_ms": 30.04937246441841,
+        "worst_ms": 162.96087577939034
+      },
+      "median_fps": 43.479919271499796,
+      "game_thread": {
+        "samples": 836,
+        "median_ms": 0.8820416927337646,
+        "p95_ms": 1.228541612625122,
+        "worst_ms": 2.2203750610351562
+      },
+      "render_thread": {
+        "samples": 836,
+        "median_ms": 22.979917526245117,
+        "p95_ms": 30.151500701904297,
+        "worst_ms": 162.08175659179688
+      },
+      "gpu": {
+        "samples": 836,
+        "median_ms": 22.726959228515625,
+        "p95_ms": 29.36945915222168,
+        "worst_ms": 159.96807861328125
+      },
+      "capture_seconds": 20.00622395798564,
+      "representation": "static"
+    },
+    {
+      "label": "cost-500-existing",
+      "count": 500,
+      "mode": "existing",
+      "camera": "tactical",
+      "started_unix_seconds": 1789505973.3491719,
+      "finished_unix_seconds": 1789506006.704711,
+      "report": "artifacts/kusazuri01/cost-500-existing.json",
+      "frames": 1012,
+      "viewport": [
+        1280,
+        720
+      ],
+      "rhi": "Metal",
+      "frame": {
+        "samples": 1012,
+        "median_ms": 19.283417612314224,
+        "p95_ms": 24.685457348823547,
+        "worst_ms": 27.816124260425568
+      },
+      "median_fps": 51.8580274567828,
+      "game_thread": {
+        "samples": 1012,
+        "median_ms": 0.8842499852180481,
+        "p95_ms": 1.190000057220459,
+        "worst_ms": 2.2597084045410156
+      },
+      "render_thread": {
+        "samples": 1012,
+        "median_ms": 19.23954200744629,
+        "p95_ms": 24.618457794189453,
+        "worst_ms": 27.896791458129883
+      },
+      "gpu": {
+        "samples": 1012,
+        "median_ms": 18.814916610717773,
+        "p95_ms": 24.198749542236328,
+        "worst_ms": 28.194625854492188
+      },
+      "capture_seconds": 20.009209875017405,
+      "representation": "static"
+    }
+  ],
+  "comparisons": [
+    {
+      "count": 1,
+      "median_frame_delta_ms": -2.8902962803840637,
+      "median_frame_delta_percent": -20.452920017345985,
+      "p95_frame_delta_ms": -5.405794829130173
+    },
+    {
+      "count": 100,
+      "median_frame_delta_ms": 3.633785992860794,
+      "median_frame_delta_percent": 34.845448401113984,
+      "p95_frame_delta_ms": 5.363874137401581
+    },
+    {
+      "count": 500,
+      "median_frame_delta_ms": 3.7157051265239716,
+      "median_frame_delta_percent": 19.268913847258872,
+      "p95_frame_delta_ms": 5.363915115594864
+    }
+  ],
+  "scope": "Incremental art sanity check: one advancing native-idle character, plus 100/500 static outfit groups. No combat, population simulation or animated crowd claim.",
+  "conditions": "Sequential runs after coordinated Blender/build/review work finished; three-second warmup; no VSync; identical camera per count. Single trials; order reversed at 500.",
+  "limits": "Editor review validation overhead remains. Thermal/background variation is not eliminated. Null GPU counters are unavailable, not zero. Baseline close framing loads the waist asset; process memory is not isolated asset residency."
+}

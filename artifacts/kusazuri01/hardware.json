@@ -1,0 +1,11 @@
+{
+  "cpu_brand": "Apple M1 Max",
+  "memory_bytes": 34359738368,
+  "memory_gib": 32,
+  "evidence": "Read from sysctl -n machdep.cpu.brand_string and sysctl -n hw.memsize on this host before reserved cost run.",
+  "render_api": "Metal",
+  "viewport_expected": [
+    1280,
+    720
+  ]
+}

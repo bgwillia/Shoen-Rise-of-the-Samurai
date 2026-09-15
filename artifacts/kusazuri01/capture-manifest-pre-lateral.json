@@ -1,0 +1,1439 @@
+{
+  "controller_variant": "production kusazuri_motion.armor_pose",
+  "source_sha256": "f2b7dc4f19383cb823715a1dafe46ce9ec307954c0191dbe9d03747145fba653",
+  "motion_script_sha256": "1effe2a50bf90b88ef952f3f8cf6a24998e6d814bb8972f677886d0a070a6b6c",
+  "review_script_sha256": "1dd10961814e5b8226b247f200e07757367b4552d2f8d30ec849f8d00944b0a9",
+  "blender_version": "5.1.2",
+  "resolution": 900,
+  "cycles_samples": 16,
+  "captures": [
+    {
+      "file": "SourceArt/Characters/Samurai/Kusazuri01/Review/Captures/PreLateral/front.png",
+      "eye_metres": [
+        0,
+        -2.5,
+        0.845
+      ],
+      "target_metres": [
+        0,
+        -0.015,
+        0.845
+      ],
+      "orthographic_span_metres": 0.69,
+      "kind": "component",
+      "pose": "neutral"
+    },
+    {
+      "file": "SourceArt/Characters/Samurai/Kusazuri01/Review/Captures/PreLateral/back.png",
+      "eye_metres": [
+        0,
+        2.5,
+        0.845
+      ],
+      "target_metres": [
+        0,
+        -0.015,
+        0.845
+      ],
+      "orthographic_span_metres": 0.69,
+      "kind": "component",
+      "pose": "neutral"
+    },
+    {
+      "file": "SourceArt/Characters/Samurai/Kusazuri01/Review/Captures/PreLateral/left.png",
+      "eye_metres": [
+        2.5,
+        0,
+        0.845
+      ],
+      "target_metres": [
+        0,
+        -0.015,
+        0.845
+      ],
+      "orthographic_span_metres": 0.69,
+      "kind": "component",
+      "pose": "neutral"
+    },
+    {
+      "file": "SourceArt/Characters/Samurai/Kusazuri01/Review/Captures/PreLateral/right.png",
+      "eye_metres": [
+        -2.5,
+        0,
+        0.845
+      ],
+      "target_metres": [
+        0,
+        -0.015,
+        0.845
+      ],
+      "orthographic_span_metres": 0.69,
+      "kind": "component",
+      "pose": "neutral"
+    },
+    {
+      "file": "SourceArt/Characters/Samurai/Kusazuri01/Review/Captures/PreLateral/threequarter-front.png",
+      "eye_metres": [
+        1.4,
+        -2.3,
+        1.2
+      ],
+      "target_metres": [
+        0,
+        -0.015,
+        0.845
+      ],
+      "orthographic_span_metres": 0.73,
+      "kind": "component",
+      "pose": "neutral"
+    },
+    {
+      "file": "SourceArt/Characters/Samurai/Kusazuri01/Review/Captures/PreLateral/threequarter-rear.png",
+      "eye_metres": [
+        1.4,
+        2.3,
+        1.2
+      ],
+      "target_metres": [
+        0,
+        -0.015,
+        0.845
+      ],
+      "orthographic_span_metres": 0.73,
+      "kind": "component",
+      "pose": "neutral"
+    },
+    {
+      "file": "SourceArt/Characters/Samurai/Kusazuri01/Review/Captures/PreLateral/top-interior.png",
+      "eye_metres": [
+        0.06,
+        -0.09,
+        2.4
+      ],
+      "target_metres": [
+        0,
+        -0.015,
+        0.845
+      ],
+      "orthographic_span_metres": 0.73,
+      "kind": "component",
+      "pose": "neutral"
+    },
+    {
+      "file": "SourceArt/Characters/Samurai/Kusazuri01/Review/Captures/PreLateral/underside.png",
+      "eye_metres": [
+        0.1,
+        -0.12,
+        -0.9
+      ],
+      "target_metres": [
+        0,
+        -0.015,
+        0.845
+      ],
+      "orthographic_span_metres": 0.73,
+      "kind": "component",
+      "pose": "neutral"
+    },
+    {
+      "file": "SourceArt/Characters/Samurai/Kusazuri01/Review/Captures/PreLateral/exploded-construction.png",
+      "eye_metres": [
+        1.6,
+        -2.5,
+        1.85
+      ],
+      "target_metres": [
+        0,
+        0,
+        0.9
+      ],
+      "orthographic_span_metres": 1.18,
+      "kind": "exploded component inspection",
+      "pose": "neutral",
+      "note": "Temporary radial layer offsets and raised belt; no source edits saved."
+    },
+    {
+      "file": "SourceArt/Characters/Samurai/Kusazuri01/Review/Captures/PreLateral/outfit-front.png",
+      "eye_metres": [
+        0,
+        -3,
+        1.0
+      ],
+      "target_metres": [
+        0,
+        0,
+        0.93
+      ],
+      "orthographic_span_metres": 2.05,
+      "kind": "complete current armor fixture",
+      "pose": "neutral"
+    },
+    {
+      "file": "SourceArt/Characters/Samurai/Kusazuri01/Review/Captures/PreLateral/outfit-back.png",
+      "eye_metres": [
+        0,
+        3,
+        1.0
+      ],
+      "target_metres": [
+        0,
+        0,
+        0.93
+      ],
+      "orthographic_span_metres": 2.05,
+      "kind": "complete current armor fixture",
+      "pose": "neutral"
+    },
+    {
+      "file": "SourceArt/Characters/Samurai/Kusazuri01/Review/Captures/PreLateral/outfit-threequarter.png",
+      "eye_metres": [
+        1.5,
+        -3,
+        1.7
+      ],
+      "target_metres": [
+        0,
+        0,
+        0.93
+      ],
+      "orthographic_span_metres": 2.05,
+      "kind": "complete current armor fixture",
+      "pose": "neutral"
+    },
+    {
+      "file": "SourceArt/Characters/Samurai/Kusazuri01/Review/Captures/PreLateral/tactical-distance.png",
+      "eye_metres": [
+        5.5,
+        -8.5,
+        7.5
+      ],
+      "target_metres": [
+        0,
+        0,
+        0.85
+      ],
+      "orthographic_span_metres": 8.5,
+      "kind": "single figure tactical-distance readability",
+      "pose": "neutral",
+      "note": "Functional Blender orthographic capture; no performance measurement."
+    },
+    {
+      "file": "SourceArt/Characters/Samurai/Kusazuri01/Review/Captures/PreLateral/pose-neutral.png",
+      "eye_metres": [
+        1.5,
+        -2.6,
+        1.5
+      ],
+      "target_metres": [
+        0,
+        0,
+        0.96
+      ],
+      "orthographic_span_metres": 2.15,
+      "kind": "motion",
+      "pose": "neutral",
+      "selection_reason": "requested static diagnostic",
+      "measured_totals": {
+        "body": {
+          "triangle_intersections": 0,
+          "maximum_sampled_penetration_estimate_mm": 0.0,
+          "intersecting_components": []
+        },
+        "do": {
+          "triangle_intersections": 12295,
+          "maximum_sampled_penetration_estimate_mm": 4.013773985207081,
+          "intersecting_components": [
+            "Kusazuri_01_Belt",
+            "Kusazuri_01_Lacing"
+          ]
+        }
+      }
+    },
+    {
+      "file": "SourceArt/Characters/Samurai/Kusazuri01/Review/Captures/PreLateral/pose-wide-step.png",
+      "eye_metres": [
+        1.5,
+        -2.6,
+        1.5
+      ],
+      "target_metres": [
+        0,
+        0,
+        0.96
+      ],
+      "orthographic_span_metres": 2.15,
+      "kind": "motion",
+      "pose": "wide-step",
+      "selection_reason": "requested static diagnostic",
+      "measured_totals": {
+        "body": {
+          "triangle_intersections": 0,
+          "maximum_sampled_penetration_estimate_mm": 0.0,
+          "intersecting_components": []
+        },
+        "do": {
+          "triangle_intersections": 12295,
+          "maximum_sampled_penetration_estimate_mm": 4.013773985207081,
+          "intersecting_components": [
+            "Kusazuri_01_Belt",
+            "Kusazuri_01_Lacing"
+          ]
+        }
+      }
+    },
+    {
+      "file": "SourceArt/Characters/Samurai/Kusazuri01/Review/Captures/PreLateral/pose-wide-stance.png",
+      "eye_metres": [
+        1.5,
+        -2.6,
+        1.5
+      ],
+      "target_metres": [
+        0,
+        0,
+        0.96
+      ],
+      "orthographic_span_metres": 2.15,
+      "kind": "motion",
+      "pose": "wide-stance",
+      "selection_reason": "requested static diagnostic",
+      "measured_totals": {
+        "body": {
+          "triangle_intersections": 0,
+          "maximum_sampled_penetration_estimate_mm": 0.0,
+          "intersecting_components": []
+        },
+        "do": {
+          "triangle_intersections": 12295,
+          "maximum_sampled_penetration_estimate_mm": 4.013772588223219,
+          "intersecting_components": [
+            "Kusazuri_01_Belt",
+            "Kusazuri_01_Lacing"
+          ]
+        }
+      }
+    },
+    {
+      "file": "SourceArt/Characters/Samurai/Kusazuri01/Review/Captures/PreLateral/pose-knee-lift.png",
+      "eye_metres": [
+        1.5,
+        -2.6,
+        1.5
+      ],
+      "target_metres": [
+        0,
+        0,
+        0.96
+      ],
+      "orthographic_span_metres": 2.15,
+      "kind": "motion",
+      "pose": "knee-lift",
+      "selection_reason": "requested static diagnostic",
+      "measured_totals": {
+        "body": {
+          "triangle_intersections": 715,
+          "maximum_sampled_penetration_estimate_mm": 7.011632900685072,
+          "intersecting_components": [
+            "Kusazuri_01_Front_Center_Interior",
+            "Kusazuri_01_Front_L",
+            "Kusazuri_01_Front_L_Interior",
+            "Kusazuri_01_Front_L_Lacing",
+            "Kusazuri_01_Front_L_Trim",
+            "Kusazuri_01_Lacing"
+          ]
+        },
+        "do": {
+          "triangle_intersections": 13116,
+          "maximum_sampled_penetration_estimate_mm": 4.013773985207081,
+          "intersecting_components": [
+            "Kusazuri_01_Belt",
+            "Kusazuri_01_Front_L",
+            "Kusazuri_01_Front_L_Interior",
+            "Kusazuri_01_Front_L_Lacing",
+            "Kusazuri_01_Front_L_Trim",
+            "Kusazuri_01_Lacing"
+          ]
+        }
+      }
+    },
+    {
+      "file": "SourceArt/Characters/Samurai/Kusazuri01/Review/Captures/PreLateral/pose-crouch.png",
+      "eye_metres": [
+        1.5,
+        -2.6,
+        1.5
+      ],
+      "target_metres": [
+        0,
+        0,
+        0.96
+      ],
+      "orthographic_span_metres": 2.15,
+      "kind": "motion",
+      "pose": "crouch",
+      "selection_reason": "requested static diagnostic",
+      "measured_totals": {
+        "body": {
+          "triangle_intersections": 0,
+          "maximum_sampled_penetration_estimate_mm": 0.0,
+          "intersecting_components": []
+        },
+        "do": {
+          "triangle_intersections": 7414,
+          "maximum_sampled_penetration_estimate_mm": 3.0494825914502144,
+          "intersecting_components": [
+            "Kusazuri_01_Belt",
+            "Kusazuri_01_Front_Center",
+            "Kusazuri_01_Front_Center_Interior",
+            "Kusazuri_01_Front_Center_Trim",
+            "Kusazuri_01_Front_L_Lacing",
+            "Kusazuri_01_Front_R_Lacing",
+            "Kusazuri_01_Lacing"
+          ]
+        }
+      }
+    },
+    {
+      "file": "SourceArt/Characters/Samurai/Kusazuri01/Review/Captures/PreLateral/pose-combat-stance.png",
+      "eye_metres": [
+        1.5,
+        -2.6,
+        1.5
+      ],
+      "target_metres": [
+        0,
+        0,
+        0.96
+      ],
+      "orthographic_span_metres": 2.15,
+      "kind": "motion",
+      "pose": "combat-stance",
+      "selection_reason": "requested static diagnostic",
+      "measured_totals": {
+        "body": {
+          "triangle_intersections": 0,
+          "maximum_sampled_penetration_estimate_mm": 0.0,
+          "intersecting_components": []
+        },
+        "do": {
+          "triangle_intersections": 9117,
+          "maximum_sampled_penetration_estimate_mm": 2.2182485554367304,
+          "intersecting_components": [
+            "Kusazuri_01_Belt",
+            "Kusazuri_01_Lacing"
+          ]
+        }
+      }
+    },
+    {
+      "file": "SourceArt/Characters/Samurai/Kusazuri01/Review/Captures/PreLateral/pose-torso-turn.png",
+      "eye_metres": [
+        1.5,
+        -2.6,
+        1.5
+      ],
+      "target_metres": [
+        0,
+        0,
+        0.96
+      ],
+      "orthographic_span_metres": 2.15,
+      "kind": "motion",
+      "pose": "torso-turn",
+      "selection_reason": "requested static diagnostic",
+      "measured_totals": {
+        "body": {
+          "triangle_intersections": 0,
+          "maximum_sampled_penetration_estimate_mm": 0.0,
+          "intersecting_components": []
+        },
+        "do": {
+          "triangle_intersections": 6241,
+          "maximum_sampled_penetration_estimate_mm": 5.109918769448996,
+          "intersecting_components": [
+            "Kusazuri_01_Belt",
+            "Kusazuri_01_Lacing"
+          ]
+        }
+      }
+    },
+    {
+      "file": "SourceArt/Characters/Samurai/Kusazuri01/Review/Captures/PreLateral/pose-hip-rotation.png",
+      "eye_metres": [
+        1.5,
+        -2.6,
+        1.5
+      ],
+      "target_metres": [
+        0,
+        0,
+        0.96
+      ],
+      "orthographic_span_metres": 2.15,
+      "kind": "motion",
+      "pose": "hip-rotation",
+      "selection_reason": "requested static diagnostic",
+      "measured_totals": {
+        "body": {
+          "triangle_intersections": 0,
+          "maximum_sampled_penetration_estimate_mm": 0.0,
+          "intersecting_components": []
+        },
+        "do": {
+          "triangle_intersections": 12297,
+          "maximum_sampled_penetration_estimate_mm": 3.477903548628092,
+          "intersecting_components": [
+            "Kusazuri_01_Belt",
+            "Kusazuri_01_Lacing"
+          ]
+        }
+      }
+    },
+    {
+      "file": "SourceArt/Characters/Samurai/Kusazuri01/Review/Captures/PreLateral/pose-bow-diagnostic.png",
+      "eye_metres": [
+        1.5,
+        -2.6,
+        1.5
+      ],
+      "target_metres": [
+        0,
+        0,
+        0.96
+      ],
+      "orthographic_span_metres": 2.15,
+      "kind": "motion",
+      "pose": "bow-diagnostic",
+      "selection_reason": "requested static diagnostic",
+      "measured_totals": {
+        "body": {
+          "triangle_intersections": 0,
+          "maximum_sampled_penetration_estimate_mm": 0.0,
+          "intersecting_components": []
+        },
+        "do": {
+          "triangle_intersections": 9117,
+          "maximum_sampled_penetration_estimate_mm": 2.2182485554367304,
+          "intersecting_components": [
+            "Kusazuri_01_Belt",
+            "Kusazuri_01_Lacing"
+          ]
+        }
+      }
+    },
+    {
+      "file": "SourceArt/Characters/Samurai/Kusazuri01/Review/Captures/PreLateral/pose-A_Idle-227.png",
+      "eye_metres": [
+        1.5,
+        -2.6,
+        1.5
+      ],
+      "target_metres": [
+        0,
+        0,
+        0.96
+      ],
+      "orthographic_span_metres": 2.15,
+      "kind": "motion",
+      "pose": "A_Idle:227",
+      "selection_reason": "body: maximum triangle intersections; contact depth breaks ties",
+      "measured_totals": {
+        "body": {
+          "triangle_intersections": 2866,
+          "maximum_sampled_penetration_estimate_mm": 8.346393704414368,
+          "intersecting_components": [
+            "Kusazuri_01_Front_L",
+            "Kusazuri_01_Front_L_Interior",
+            "Kusazuri_01_Front_L_Lacing",
+            "Kusazuri_01_Front_L_Trim",
+            "Kusazuri_01_Front_R",
+            "Kusazuri_01_Front_R_Interior",
+            "Kusazuri_01_Front_R_Lacing",
+            "Kusazuri_01_Front_R_Trim",
+            "Kusazuri_01_Side_L",
+            "Kusazuri_01_Side_L_Interior",
+            "Kusazuri_01_Side_L_Lacing",
+            "Kusazuri_01_Side_L_Trim",
+            "Kusazuri_01_Side_R",
+            "Kusazuri_01_Side_R_Interior",
+            "Kusazuri_01_Side_R_Lacing",
+            "Kusazuri_01_Side_R_Trim"
+          ]
+        },
+        "do": {
+          "triangle_intersections": 9845,
+          "maximum_sampled_penetration_estimate_mm": 2.9914919286966324,
+          "intersecting_components": [
+            "Kusazuri_01_Belt",
+            "Kusazuri_01_Front_Center_Interior",
+            "Kusazuri_01_Lacing"
+          ]
+        }
+      }
+    },
+    {
+      "file": "SourceArt/Characters/Samurai/Kusazuri01/Review/Captures/PreLateral/pose-A_Idle-112.png",
+      "eye_metres": [
+        1.5,
+        -2.6,
+        1.5
+      ],
+      "target_metres": [
+        0,
+        0,
+        0.96
+      ],
+      "orthographic_span_metres": 2.15,
+      "kind": "motion",
+      "pose": "A_Idle:112",
+      "selection_reason": "body: maximum sampled contact penetration estimate",
+      "measured_totals": {
+        "body": {
+          "triangle_intersections": 2512,
+          "maximum_sampled_penetration_estimate_mm": 9.796065278351307,
+          "intersecting_components": [
+            "Kusazuri_01_Front_L",
+            "Kusazuri_01_Front_L_Trim",
+            "Kusazuri_01_Front_R",
+            "Kusazuri_01_Front_R_Interior",
+            "Kusazuri_01_Front_R_Lacing",
+            "Kusazuri_01_Front_R_Trim",
+            "Kusazuri_01_Side_L",
+            "Kusazuri_01_Side_L_Lacing",
+            "Kusazuri_01_Side_L_Trim",
+            "Kusazuri_01_Side_R",
+            "Kusazuri_01_Side_R_Interior",
+            "Kusazuri_01_Side_R_Lacing",
+            "Kusazuri_01_Side_R_Trim"
+          ]
+        },
+        "do": {
+          "triangle_intersections": 9940,
+          "maximum_sampled_penetration_estimate_mm": 2.1977960132062435,
+          "intersecting_components": [
+            "Kusazuri_01_Belt",
+            "Kusazuri_01_Front_Center_Interior",
+            "Kusazuri_01_Lacing"
+          ]
+        }
+      }
+    },
+    {
+      "file": "SourceArt/Characters/Samurai/Kusazuri01/Review/Captures/PreLateral/pose-A_Idle-156.png",
+      "eye_metres": [
+        1.5,
+        -2.6,
+        1.5
+      ],
+      "target_metres": [
+        0,
+        0,
+        0.96
+      ],
+      "orthographic_span_metres": 2.15,
+      "kind": "motion",
+      "pose": "A_Idle:156",
+      "selection_reason": "do: maximum triangle intersections; contact depth breaks ties",
+      "measured_totals": {
+        "body": {
+          "triangle_intersections": 1174,
+          "maximum_sampled_penetration_estimate_mm": 7.487814407795668,
+          "intersecting_components": [
+            "Kusazuri_01_Front_L",
+            "Kusazuri_01_Front_L_Trim",
+            "Kusazuri_01_Front_R",
+            "Kusazuri_01_Front_R_Interior",
+            "Kusazuri_01_Front_R_Lacing",
+            "Kusazuri_01_Front_R_Trim",
+            "Kusazuri_01_Side_R",
+            "Kusazuri_01_Side_R_Trim"
+          ]
+        },
+        "do": {
+          "triangle_intersections": 10420,
+          "maximum_sampled_penetration_estimate_mm": 1.991658704355359,
+          "intersecting_components": [
+            "Kusazuri_01_Belt",
+            "Kusazuri_01_Lacing"
+          ]
+        }
+      }
+    },
+    {
+      "file": "SourceArt/Characters/Samurai/Kusazuri01/Review/Captures/PreLateral/pose-A_Idle-2.png",
+      "eye_metres": [
+        1.5,
+        -2.6,
+        1.5
+      ],
+      "target_metres": [
+        0,
+        0,
+        0.96
+      ],
+      "orthographic_span_metres": 2.15,
+      "kind": "motion",
+      "pose": "A_Idle:2",
+      "selection_reason": "do: maximum sampled contact penetration estimate",
+      "measured_totals": {
+        "body": {
+          "triangle_intersections": 2766,
+          "maximum_sampled_penetration_estimate_mm": 8.180158212780952,
+          "intersecting_components": [
+            "Kusazuri_01_Front_L",
+            "Kusazuri_01_Front_L_Interior",
+            "Kusazuri_01_Front_L_Lacing",
+            "Kusazuri_01_Front_L_Trim",
+            "Kusazuri_01_Front_R",
+            "Kusazuri_01_Front_R_Interior",
+            "Kusazuri_01_Front_R_Lacing",
+            "Kusazuri_01_Front_R_Trim",
+            "Kusazuri_01_Side_L",
+            "Kusazuri_01_Side_L_Interior",
+            "Kusazuri_01_Side_L_Lacing",
+            "Kusazuri_01_Side_L_Trim",
+            "Kusazuri_01_Side_R",
+            "Kusazuri_01_Side_R_Interior",
+            "Kusazuri_01_Side_R_Lacing",
+            "Kusazuri_01_Side_R_Trim"
+          ]
+        },
+        "do": {
+          "triangle_intersections": 9826,
+          "maximum_sampled_penetration_estimate_mm": 9.09042451530695,
+          "intersecting_components": [
+            "Kusazuri_01_Belt",
+            "Kusazuri_01_Front_Center_Interior",
+            "Kusazuri_01_Lacing"
+          ]
+        }
+      }
+    },
+    {
+      "file": "SourceArt/Characters/Samurai/Kusazuri01/Review/Captures/PreLateral/pose-A_Idle-160.png",
+      "eye_metres": [
+        1.5,
+        -2.6,
+        1.5
+      ],
+      "target_metres": [
+        0,
+        0,
+        0.96
+      ],
+      "orthographic_span_metres": 2.15,
+      "kind": "motion",
+      "pose": "A_Idle:160",
+      "selection_reason": "maximum measured panel hinge opening",
+      "measured_totals": {
+        "body": {
+          "triangle_intersections": 1123,
+          "maximum_sampled_penetration_estimate_mm": 7.3737818747758865,
+          "intersecting_components": [
+            "Kusazuri_01_Front_L",
+            "Kusazuri_01_Front_L_Trim",
+            "Kusazuri_01_Front_R",
+            "Kusazuri_01_Front_R_Interior",
+            "Kusazuri_01_Front_R_Lacing",
+            "Kusazuri_01_Front_R_Trim",
+            "Kusazuri_01_Side_R"
+          ]
+        },
+        "do": {
+          "triangle_intersections": 10397,
+          "maximum_sampled_penetration_estimate_mm": 3.2330562826246023,
+          "intersecting_components": [
+            "Kusazuri_01_Belt",
+            "Kusazuri_01_Lacing"
+          ]
+        }
+      }
+    },
+    {
+      "file": "SourceArt/Characters/Samurai/Kusazuri01/Review/Captures/PreLateral/pose-A_Walk-13.png",
+      "eye_metres": [
+        1.5,
+        -2.6,
+        1.5
+      ],
+      "target_metres": [
+        0,
+        0,
+        0.96
+      ],
+      "orthographic_span_metres": 2.15,
+      "kind": "motion",
+      "pose": "A_Walk:13",
+      "selection_reason": "body: maximum triangle intersections; contact depth breaks ties",
+      "measured_totals": {
+        "body": {
+          "triangle_intersections": 2482,
+          "maximum_sampled_penetration_estimate_mm": 11.219566687941551,
+          "intersecting_components": [
+            "Kusazuri_01_Front_L",
+            "Kusazuri_01_Front_L_Interior",
+            "Kusazuri_01_Front_L_Lacing",
+            "Kusazuri_01_Front_L_Trim",
+            "Kusazuri_01_Side_L",
+            "Kusazuri_01_Side_L_Interior",
+            "Kusazuri_01_Side_L_Trim"
+          ]
+        },
+        "do": {
+          "triangle_intersections": 21049,
+          "maximum_sampled_penetration_estimate_mm": 1.9939308986067772,
+          "intersecting_components": [
+            "Kusazuri_01_Belt",
+            "Kusazuri_01_Front_Center",
+            "Kusazuri_01_Front_Center_Interior",
+            "Kusazuri_01_Front_Center_Trim",
+            "Kusazuri_01_Front_L",
+            "Kusazuri_01_Front_L_Interior",
+            "Kusazuri_01_Front_L_Lacing",
+            "Kusazuri_01_Front_L_Trim",
+            "Kusazuri_01_Front_R",
+            "Kusazuri_01_Front_R_Interior",
+            "Kusazuri_01_Front_R_Lacing",
+            "Kusazuri_01_Front_R_Trim",
+            "Kusazuri_01_Lacing",
+            "Kusazuri_01_Side_L",
+            "Kusazuri_01_Side_L_Interior",
+            "Kusazuri_01_Side_L_Trim",
+            "Kusazuri_01_Side_R",
+            "Kusazuri_01_Side_R_Interior",
+            "Kusazuri_01_Side_R_Trim"
+          ]
+        }
+      }
+    },
+    {
+      "file": "SourceArt/Characters/Samurai/Kusazuri01/Review/Captures/PreLateral/pose-A_Walk-23.png",
+      "eye_metres": [
+        1.5,
+        -2.6,
+        1.5
+      ],
+      "target_metres": [
+        0,
+        0,
+        0.96
+      ],
+      "orthographic_span_metres": 2.15,
+      "kind": "motion",
+      "pose": "A_Walk:23",
+      "selection_reason": "do: maximum triangle intersections; contact depth breaks ties",
+      "measured_totals": {
+        "body": {
+          "triangle_intersections": 0,
+          "maximum_sampled_penetration_estimate_mm": 0.0,
+          "intersecting_components": []
+        },
+        "do": {
+          "triangle_intersections": 23018,
+          "maximum_sampled_penetration_estimate_mm": 1.9940140191465616,
+          "intersecting_components": [
+            "Kusazuri_01_Belt",
+            "Kusazuri_01_Front_Center",
+            "Kusazuri_01_Front_Center_Interior",
+            "Kusazuri_01_Front_Center_Lacing",
+            "Kusazuri_01_Front_Center_Trim",
+            "Kusazuri_01_Front_L",
+            "Kusazuri_01_Front_L_Interior",
+            "Kusazuri_01_Front_L_Lacing",
+            "Kusazuri_01_Front_L_Trim",
+            "Kusazuri_01_Front_R",
+            "Kusazuri_01_Front_R_Interior",
+            "Kusazuri_01_Front_R_Lacing",
+            "Kusazuri_01_Front_R_Trim",
+            "Kusazuri_01_Lacing",
+            "Kusazuri_01_Side_L",
+            "Kusazuri_01_Side_L_Interior",
+            "Kusazuri_01_Side_L_Trim",
+            "Kusazuri_01_Side_R",
+            "Kusazuri_01_Side_R_Interior",
+            "Kusazuri_01_Side_R_Trim"
+          ]
+        }
+      }
+    },
+    {
+      "file": "SourceArt/Characters/Samurai/Kusazuri01/Review/Captures/PreLateral/pose-A_Walk-41.png",
+      "eye_metres": [
+        1.5,
+        -2.6,
+        1.5
+      ],
+      "target_metres": [
+        0,
+        0,
+        0.96
+      ],
+      "orthographic_span_metres": 2.15,
+      "kind": "motion",
+      "pose": "A_Walk:41",
+      "selection_reason": "do: maximum sampled contact penetration estimate",
+      "measured_totals": {
+        "body": {
+          "triangle_intersections": 0,
+          "maximum_sampled_penetration_estimate_mm": 0.0,
+          "intersecting_components": []
+        },
+        "do": {
+          "triangle_intersections": 19758,
+          "maximum_sampled_penetration_estimate_mm": 17.12859608232975,
+          "intersecting_components": [
+            "Kusazuri_01_Belt",
+            "Kusazuri_01_Front_Center",
+            "Kusazuri_01_Front_Center_Interior",
+            "Kusazuri_01_Front_Center_Lacing",
+            "Kusazuri_01_Front_Center_Trim",
+            "Kusazuri_01_Front_L",
+            "Kusazuri_01_Front_L_Interior",
+            "Kusazuri_01_Front_L_Trim",
+            "Kusazuri_01_Front_R",
+            "Kusazuri_01_Front_R_Interior",
+            "Kusazuri_01_Front_R_Lacing",
+            "Kusazuri_01_Front_R_Trim",
+            "Kusazuri_01_Lacing",
+            "Kusazuri_01_Side_L",
+            "Kusazuri_01_Side_L_Interior",
+            "Kusazuri_01_Side_L_Lacing",
+            "Kusazuri_01_Side_L_Trim",
+            "Kusazuri_01_Side_R",
+            "Kusazuri_01_Side_R_Interior",
+            "Kusazuri_01_Side_R_Trim"
+          ]
+        }
+      }
+    },
+    {
+      "file": "SourceArt/Characters/Samurai/Kusazuri01/Review/Captures/PreLateral/pose-A_Walk-6.png",
+      "eye_metres": [
+        1.5,
+        -2.6,
+        1.5
+      ],
+      "target_metres": [
+        0,
+        0,
+        0.96
+      ],
+      "orthographic_span_metres": 2.15,
+      "kind": "motion",
+      "pose": "A_Walk:6",
+      "selection_reason": "maximum measured panel hinge opening",
+      "measured_totals": {
+        "body": {
+          "triangle_intersections": 0,
+          "maximum_sampled_penetration_estimate_mm": 0.0,
+          "intersecting_components": []
+        },
+        "do": {
+          "triangle_intersections": 18144,
+          "maximum_sampled_penetration_estimate_mm": 2.235808176919818,
+          "intersecting_components": [
+            "Kusazuri_01_Belt",
+            "Kusazuri_01_Front_Center",
+            "Kusazuri_01_Front_Center_Interior",
+            "Kusazuri_01_Front_Center_Trim",
+            "Kusazuri_01_Front_L",
+            "Kusazuri_01_Front_L_Interior",
+            "Kusazuri_01_Front_L_Lacing",
+            "Kusazuri_01_Front_L_Trim",
+            "Kusazuri_01_Front_R",
+            "Kusazuri_01_Front_R_Interior",
+            "Kusazuri_01_Front_R_Trim",
+            "Kusazuri_01_Lacing",
+            "Kusazuri_01_Side_L",
+            "Kusazuri_01_Side_L_Interior",
+            "Kusazuri_01_Side_L_Lacing",
+            "Kusazuri_01_Side_L_Trim",
+            "Kusazuri_01_Side_R_Interior",
+            "Kusazuri_01_Side_R_Trim"
+          ]
+        }
+      }
+    },
+    {
+      "file": "SourceArt/Characters/Samurai/Kusazuri01/Review/Captures/PreLateral/pose-A_Run-28.png",
+      "eye_metres": [
+        1.5,
+        -2.6,
+        1.5
+      ],
+      "target_metres": [
+        0,
+        0,
+        0.96
+      ],
+      "orthographic_span_metres": 2.15,
+      "kind": "motion",
+      "pose": "A_Run:28",
+      "selection_reason": "body: maximum triangle intersections; contact depth breaks ties",
+      "measured_totals": {
+        "body": {
+          "triangle_intersections": 1463,
+          "maximum_sampled_penetration_estimate_mm": 8.426020853221416,
+          "intersecting_components": [
+            "Kusazuri_01_Front_L",
+            "Kusazuri_01_Front_L_Interior",
+            "Kusazuri_01_Front_L_Lacing",
+            "Kusazuri_01_Front_L_Trim"
+          ]
+        },
+        "do": {
+          "triangle_intersections": 19099,
+          "maximum_sampled_penetration_estimate_mm": 3.7471323739737272,
+          "intersecting_components": [
+            "Kusazuri_01_Belt",
+            "Kusazuri_01_Front_Center",
+            "Kusazuri_01_Front_Center_Interior",
+            "Kusazuri_01_Front_Center_Trim",
+            "Kusazuri_01_Front_L",
+            "Kusazuri_01_Front_L_Interior",
+            "Kusazuri_01_Front_L_Lacing",
+            "Kusazuri_01_Front_L_Trim",
+            "Kusazuri_01_Front_R",
+            "Kusazuri_01_Front_R_Interior",
+            "Kusazuri_01_Front_R_Lacing",
+            "Kusazuri_01_Front_R_Trim",
+            "Kusazuri_01_Lacing",
+            "Kusazuri_01_Side_L_Interior",
+            "Kusazuri_01_Side_R",
+            "Kusazuri_01_Side_R_Interior",
+            "Kusazuri_01_Side_R_Lacing",
+            "Kusazuri_01_Side_R_Trim"
+          ]
+        }
+      }
+    },
+    {
+      "file": "SourceArt/Characters/Samurai/Kusazuri01/Review/Captures/PreLateral/pose-A_Run-20.png",
+      "eye_metres": [
+        1.5,
+        -2.6,
+        1.5
+      ],
+      "target_metres": [
+        0,
+        0,
+        0.96
+      ],
+      "orthographic_span_metres": 2.15,
+      "kind": "motion",
+      "pose": "A_Run:20",
+      "selection_reason": "body: maximum sampled contact penetration estimate",
+      "measured_totals": {
+        "body": {
+          "triangle_intersections": 1325,
+          "maximum_sampled_penetration_estimate_mm": 8.938394486904144,
+          "intersecting_components": [
+            "Kusazuri_01_Front_R",
+            "Kusazuri_01_Front_R_Interior",
+            "Kusazuri_01_Front_R_Lacing",
+            "Kusazuri_01_Front_R_Trim",
+            "Kusazuri_01_Lacing"
+          ]
+        },
+        "do": {
+          "triangle_intersections": 19831,
+          "maximum_sampled_penetration_estimate_mm": 4.472827073186636,
+          "intersecting_components": [
+            "Kusazuri_01_Belt",
+            "Kusazuri_01_Front_Center",
+            "Kusazuri_01_Front_Center_Interior",
+            "Kusazuri_01_Front_Center_Trim",
+            "Kusazuri_01_Front_L",
+            "Kusazuri_01_Front_L_Interior",
+            "Kusazuri_01_Front_L_Lacing",
+            "Kusazuri_01_Front_L_Trim",
+            "Kusazuri_01_Front_R",
+            "Kusazuri_01_Front_R_Interior",
+            "Kusazuri_01_Front_R_Trim",
+            "Kusazuri_01_Lacing",
+            "Kusazuri_01_Rear_L_Interior",
+            "Kusazuri_01_Side_L",
+            "Kusazuri_01_Side_L_Interior",
+            "Kusazuri_01_Side_L_Trim",
+            "Kusazuri_01_Side_R_Interior"
+          ]
+        }
+      }
+    },
+    {
+      "file": "SourceArt/Characters/Samurai/Kusazuri01/Review/Captures/PreLateral/pose-A_Run-43.png",
+      "eye_metres": [
+        1.5,
+        -2.6,
+        1.5
+      ],
+      "target_metres": [
+        0,
+        0,
+        0.96
+      ],
+      "orthographic_span_metres": 2.15,
+      "kind": "motion",
+      "pose": "A_Run:43",
+      "selection_reason": "do: maximum triangle intersections; contact depth breaks ties",
+      "measured_totals": {
+        "body": {
+          "triangle_intersections": 0,
+          "maximum_sampled_penetration_estimate_mm": 0.0,
+          "intersecting_components": []
+        },
+        "do": {
+          "triangle_intersections": 21176,
+          "maximum_sampled_penetration_estimate_mm": 3.0618926975876093,
+          "intersecting_components": [
+            "Kusazuri_01_Belt",
+            "Kusazuri_01_Front_Center",
+            "Kusazuri_01_Front_Center_Interior",
+            "Kusazuri_01_Front_Center_Trim",
+            "Kusazuri_01_Front_L",
+            "Kusazuri_01_Front_L_Interior",
+            "Kusazuri_01_Front_L_Lacing",
+            "Kusazuri_01_Front_L_Trim",
+            "Kusazuri_01_Front_R",
+            "Kusazuri_01_Front_R_Interior",
+            "Kusazuri_01_Front_R_Trim",
+            "Kusazuri_01_Lacing",
+            "Kusazuri_01_Rear_R_Interior",
+            "Kusazuri_01_Side_L_Interior",
+            "Kusazuri_01_Side_R",
+            "Kusazuri_01_Side_R_Interior",
+            "Kusazuri_01_Side_R_Trim"
+          ]
+        }
+      }
+    },
+    {
+      "file": "SourceArt/Characters/Samurai/Kusazuri01/Review/Captures/PreLateral/pose-A_Run-29.png",
+      "eye_metres": [
+        1.5,
+        -2.6,
+        1.5
+      ],
+      "target_metres": [
+        0,
+        0,
+        0.96
+      ],
+      "orthographic_span_metres": 2.15,
+      "kind": "motion",
+      "pose": "A_Run:29",
+      "selection_reason": "do: maximum sampled contact penetration estimate",
+      "measured_totals": {
+        "body": {
+          "triangle_intersections": 903,
+          "maximum_sampled_penetration_estimate_mm": 7.30183906853199,
+          "intersecting_components": [
+            "Kusazuri_01_Side_L",
+            "Kusazuri_01_Side_L_Interior",
+            "Kusazuri_01_Side_L_Lacing",
+            "Kusazuri_01_Side_L_Trim"
+          ]
+        },
+        "do": {
+          "triangle_intersections": 18008,
+          "maximum_sampled_penetration_estimate_mm": 20.187875255942345,
+          "intersecting_components": [
+            "Kusazuri_01_Belt",
+            "Kusazuri_01_Front_Center",
+            "Kusazuri_01_Front_Center_Interior",
+            "Kusazuri_01_Front_Center_Trim",
+            "Kusazuri_01_Front_L",
+            "Kusazuri_01_Front_L_Interior",
+            "Kusazuri_01_Front_L_Trim",
+            "Kusazuri_01_Front_R",
+            "Kusazuri_01_Front_R_Interior",
+            "Kusazuri_01_Front_R_Lacing",
+            "Kusazuri_01_Front_R_Trim",
+            "Kusazuri_01_Lacing",
+            "Kusazuri_01_Side_L_Interior",
+            "Kusazuri_01_Side_L_Trim",
+            "Kusazuri_01_Side_R",
+            "Kusazuri_01_Side_R_Interior",
+            "Kusazuri_01_Side_R_Lacing",
+            "Kusazuri_01_Side_R_Trim"
+          ]
+        }
+      }
+    },
+    {
+      "file": "SourceArt/Characters/Samurai/Kusazuri01/Review/Captures/PreLateral/pose-A_Run-31.png",
+      "eye_metres": [
+        1.5,
+        -2.6,
+        1.5
+      ],
+      "target_metres": [
+        0,
+        0,
+        0.96
+      ],
+      "orthographic_span_metres": 2.15,
+      "kind": "motion",
+      "pose": "A_Run:31",
+      "selection_reason": "maximum measured panel hinge opening",
+      "measured_totals": {
+        "body": {
+          "triangle_intersections": 18,
+          "maximum_sampled_penetration_estimate_mm": 0.41181547567248344,
+          "intersecting_components": [
+            "Kusazuri_01_Front_L_Interior"
+          ]
+        },
+        "do": {
+          "triangle_intersections": 18345,
+          "maximum_sampled_penetration_estimate_mm": 3.516450524330139,
+          "intersecting_components": [
+            "Kusazuri_01_Belt",
+            "Kusazuri_01_Front_Center",
+            "Kusazuri_01_Front_Center_Interior",
+            "Kusazuri_01_Front_Center_Trim",
+            "Kusazuri_01_Front_L",
+            "Kusazuri_01_Front_L_Interior",
+            "Kusazuri_01_Front_L_Trim",
+            "Kusazuri_01_Front_R",
+            "Kusazuri_01_Front_R_Interior",
+            "Kusazuri_01_Front_R_Lacing",
+            "Kusazuri_01_Front_R_Trim",
+            "Kusazuri_01_Lacing",
+            "Kusazuri_01_Side_L",
+            "Kusazuri_01_Side_L_Interior",
+            "Kusazuri_01_Side_L_Lacing",
+            "Kusazuri_01_Side_L_Trim",
+            "Kusazuri_01_Side_R",
+            "Kusazuri_01_Side_R_Interior",
+            "Kusazuri_01_Side_R_Trim"
+          ]
+        }
+      }
+    },
+    {
+      "file": "SourceArt/Characters/Samurai/Kusazuri01/Review/Captures/PreLateral/pose-A_Attack-13.png",
+      "eye_metres": [
+        1.5,
+        -2.6,
+        1.5
+      ],
+      "target_metres": [
+        0,
+        0,
+        0.96
+      ],
+      "orthographic_span_metres": 2.15,
+      "kind": "motion",
+      "pose": "A_Attack:13",
+      "selection_reason": "body: maximum triangle intersections; contact depth breaks ties",
+      "measured_totals": {
+        "body": {
+          "triangle_intersections": 587,
+          "maximum_sampled_penetration_estimate_mm": 15.0876734405756,
+          "intersecting_components": [
+            "Kusazuri_01_Front_R",
+            "Kusazuri_01_Front_R_Interior",
+            "Kusazuri_01_Front_R_Lacing",
+            "Kusazuri_01_Front_R_Trim"
+          ]
+        },
+        "do": {
+          "triangle_intersections": 11110,
+          "maximum_sampled_penetration_estimate_mm": 1.9657243974506855,
+          "intersecting_components": [
+            "Kusazuri_01_Belt",
+            "Kusazuri_01_Front_R",
+            "Kusazuri_01_Front_R_Lacing",
+            "Kusazuri_01_Front_R_Trim",
+            "Kusazuri_01_Lacing"
+          ]
+        }
+      }
+    },
+    {
+      "file": "SourceArt/Characters/Samurai/Kusazuri01/Review/Captures/PreLateral/pose-A_Attack-12.png",
+      "eye_metres": [
+        1.5,
+        -2.6,
+        1.5
+      ],
+      "target_metres": [
+        0,
+        0,
+        0.96
+      ],
+      "orthographic_span_metres": 2.15,
+      "kind": "motion",
+      "pose": "A_Attack:12",
+      "selection_reason": "do: maximum triangle intersections; contact depth breaks ties",
+      "measured_totals": {
+        "body": {
+          "triangle_intersections": 0,
+          "maximum_sampled_penetration_estimate_mm": 0.0,
+          "intersecting_components": []
+        },
+        "do": {
+          "triangle_intersections": 11764,
+          "maximum_sampled_penetration_estimate_mm": 2.115901792421937,
+          "intersecting_components": [
+            "Kusazuri_01_Belt",
+            "Kusazuri_01_Front_R_Lacing",
+            "Kusazuri_01_Front_R_Trim",
+            "Kusazuri_01_Lacing",
+            "Kusazuri_01_Rear_R_Interior"
+          ]
+        }
+      }
+    },
+    {
+      "file": "SourceArt/Characters/Samurai/Kusazuri01/Review/Captures/PreLateral/pose-A_Attack-23.png",
+      "eye_metres": [
+        1.5,
+        -2.6,
+        1.5
+      ],
+      "target_metres": [
+        0,
+        0,
+        0.96
+      ],
+      "orthographic_span_metres": 2.15,
+      "kind": "motion",
+      "pose": "A_Attack:23",
+      "selection_reason": "do: maximum sampled contact penetration estimate",
+      "measured_totals": {
+        "body": {
+          "triangle_intersections": 0,
+          "maximum_sampled_penetration_estimate_mm": 0.0,
+          "intersecting_components": []
+        },
+        "do": {
+          "triangle_intersections": 9203,
+          "maximum_sampled_penetration_estimate_mm": 8.569429628551006,
+          "intersecting_components": [
+            "Kusazuri_01_Belt",
+            "Kusazuri_01_Front_Center",
+            "Kusazuri_01_Front_Center_Interior",
+            "Kusazuri_01_Front_Center_Trim",
+            "Kusazuri_01_Front_R_Interior",
+            "Kusazuri_01_Front_R_Lacing",
+            "Kusazuri_01_Front_R_Trim",
+            "Kusazuri_01_Lacing",
+            "Kusazuri_01_Side_R_Interior",
+            "Kusazuri_01_Side_R_Trim"
+          ]
+        }
+      }
+    }
+  ],
+  "motion_selection": [
+    {
+      "pose": "neutral",
+      "selection_reason": "requested static diagnostic"
+    },
+    {
+      "pose": "wide-step",
+      "selection_reason": "requested static diagnostic"
+    },
+    {
+      "pose": "wide-stance",
+      "selection_reason": "requested static diagnostic"
+    },
+    {
+      "pose": "knee-lift",
+      "selection_reason": "requested static diagnostic"
+    },
+    {
+      "pose": "crouch",
+      "selection_reason": "requested static diagnostic"
+    },
+    {
+      "pose": "combat-stance",
+      "selection_reason": "requested static diagnostic"
+    },
+    {
+      "pose": "torso-turn",
+      "selection_reason": "requested static diagnostic"
+    },
+    {
+      "pose": "hip-rotation",
+      "selection_reason": "requested static diagnostic"
+    },
+    {
+      "pose": "bow-diagnostic",
+      "selection_reason": "requested static diagnostic"
+    },
+    {
+      "pose": "A_Idle:227",
+      "selection_reason": "body: maximum triangle intersections; contact depth breaks ties"
+    },
+    {
+      "pose": "A_Idle:112",
+      "selection_reason": "body: maximum sampled contact penetration estimate"
+    },
+    {
+      "pose": "A_Idle:156",
+      "selection_reason": "do: maximum triangle intersections; contact depth breaks ties"
+    },
+    {
+      "pose": "A_Idle:2",
+      "selection_reason": "do: maximum sampled contact penetration estimate"
+    },
+    {
+      "pose": "A_Idle:160",
+      "selection_reason": "maximum measured panel hinge opening"
+    },
+    {
+      "pose": "A_Walk:13",
+      "selection_reason": "body: maximum triangle intersections; contact depth breaks ties"
+    },
+    {
+      "pose": "A_Walk:23",
+      "selection_reason": "do: maximum triangle intersections; contact depth breaks ties"
+    },
+    {
+      "pose": "A_Walk:41",
+      "selection_reason": "do: maximum sampled contact penetration estimate"
+    },
+    {
+      "pose": "A_Walk:6",
+      "selection_reason": "maximum measured panel hinge opening"
+    },
+    {
+      "pose": "A_Run:28",
+      "selection_reason": "body: maximum triangle intersections; contact depth breaks ties"
+    },
+    {
+      "pose": "A_Run:20",
+      "selection_reason": "body: maximum sampled contact penetration estimate"
+    },
+    {
+      "pose": "A_Run:43",
+      "selection_reason": "do: maximum triangle intersections; contact depth breaks ties"
+    },
+    {
+      "pose": "A_Run:29",
+      "selection_reason": "do: maximum sampled contact penetration estimate"
+    },
+    {
+      "pose": "A_Run:31",
+      "selection_reason": "maximum measured panel hinge opening"
+    },
+    {
+      "pose": "A_Attack:13",
+      "selection_reason": "body: maximum triangle intersections; contact depth breaks ties"
+    },
+    {
+      "pose": "A_Attack:12",
+      "selection_reason": "do: maximum triangle intersections; contact depth breaks ties"
+    },
+    {
+      "pose": "A_Attack:23",
+      "selection_reason": "do: maximum sampled contact penetration estimate"
+    }
+  ],
+  "source_file_unchanged": true,
+  "scope": "Functional Blender source/still-pose captures; no Unreal or performance claim.",
+  "archive_note": "Frozen source production captures before native attack13 lateral guard correction; not final clearance approval."
+}

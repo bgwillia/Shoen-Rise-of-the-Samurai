@@ -1,0 +1,5 @@
+FBX version: 7300
+NATIVE_COLOR_READBACK [{"file": "/tmp/kusazuri-native-static.fbx", "meshes": [{"object": "SM_Kusazuri01", "vertices": 77144, "attributes": ["Attribute"], "colors": {"domain": "CORNER", "black": 69252, "white": 373692, "other": 0, "black_bounds_blender_m": [[-0.19547979533672333, -0.20577363669872284, 0.9244066476821899], [0.19543415307998657, 0.14545749127864838, 1.0398082733154297]], "front_knot_tail_black_corners": 19470, "front_knot_tail_bounds_blender_m": [[-0.06011497974395752, -0.20577363669872284, 0.9244066476821899], [0.05979332700371742, -0.18000037968158722, 1.0398082733154297]]}}]}]
+Blender 5.1.2 (hash ec6e62d40fa9 built 2026-05-19 01:30:33)
+
+Blender quit

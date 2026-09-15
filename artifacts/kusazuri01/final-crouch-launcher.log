@@ -1,0 +1,13 @@
++ ["/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/UnrealEditor.app/Contents/MacOS/UnrealEditor", "/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/game/Shoen.uproject", "/Game/Art/Characters/Samurai/Kusazuri01/Review/Kusazuri01_Review?game=/Script/Shoen.KusazuriReviewGameMode", "-game", "-windowed", "-ResX=1600", "-ResY=900", "-NoVSync", "-nop4", "-nosplash", "-stdout", "-FullStdOutLogOutput", "-KusazuriMode=kusazuri", "-KusazuriCount=1", "-KusazuriCamera=close", "-KusazuriAnimation=idle", "-KusazuriPose=crouch", "-KusazuriContract=/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/SourceArt/Characters/Samurai/Kusazuri01/asset-manifest.json", "-KusazuriSeconds=4.0", "-KusazuriOutput=/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/artifacts/kusazuri01/final-crouch.json", "-KusazuriScreenshot=/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/artifacts/kusazuri01/final-crouch.png"]
+Exit 0: /Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/artifacts/local/kusazuri01/final-crouch.log
+{
+  "rendered_bodies": 1,
+  "rendered_helmets": 1,
+  "rendered_armors": 1,
+  "rendered_kusazuri": 1,
+  "rendered_sode": 2,
+  "frames": 192,
+  "median_fps": 53.70089232932864,
+  "interval_fps": 47.842048480302324,
+  "max_kusazuri_bone_position_error_cm": 4.27025222217834e-09
+}

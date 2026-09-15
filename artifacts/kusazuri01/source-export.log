@@ -1,0 +1,24 @@
+00:00.848  blend            | Read blend: "/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/SourceArt/Characters/Samurai/Kusazuri01/Kusazuri01.blend"
+
+FBX export starting... '/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/SourceArt/Characters/Samurai/Kusazuri01/Review/Exports/SM_Kusazuri01.fbx'
+export finished in 0.4572 sec.
+
+FBX export starting... '/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/SourceArt/Characters/Samurai/Kusazuri01/Exports/SK_Kusazuri01.fbx'
+export finished in 0.4386 sec.
+
+FBX export starting... '/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/SourceArt/Characters/Samurai/Kusazuri01/Review/Exports/SM_Kusazuri01_LOD1.fbx'
+export finished in 0.1326 sec.
+
+FBX export starting... '/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/SourceArt/Characters/Samurai/Kusazuri01/Exports/SK_Kusazuri01_LOD1.fbx'
+export finished in 0.1428 sec.
+
+FBX export starting... '/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/SourceArt/Characters/Samurai/Kusazuri01/Review/Exports/SM_Kusazuri01_LOD2.fbx'
+export finished in 0.0086 sec.
+
+FBX export starting... '/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/SourceArt/Characters/Samurai/Kusazuri01/Exports/SK_Kusazuri01_LOD2.fbx'
+export finished in 0.0203 sec.
+Info: Saved as "Kusazuri01.blend"
+KUSAZURI01_SAVED_SOURCE_EXPORTED {"source": "/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/SourceArt/Characters/Samurai/Kusazuri01/Kusazuri01.blend", "runtime_lod_triangles": [147648, 44282, 1808], "preserved": true}
+Blender 5.1.2 (hash ec6e62d40fa9 built 2026-05-19 01:30:33)
+
+Blender quit

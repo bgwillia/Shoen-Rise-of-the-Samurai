@@ -1,0 +1,27 @@
+{
+  "read_only": true,
+  "assets": [
+    {
+      "asset": "/Game/Art/Characters/Samurai/Kusazuri01/Review/SM_Kusazuri01",
+      "export": "/tmp/kusazuri-native-static.fbx",
+      "success": true,
+      "errors": [],
+      "unchanged": true,
+      "native_front_knot_tail_region_cm": {
+        "count": 3312,
+        "bounds": [
+          [
+            -6.011497974395752,
+            18.000038146972656,
+            92.05382537841797
+          ],
+          [
+            5.97933292388916,
+            20.577363967895508,
+            103.98082733154297
+          ]
+        ]
+      }
+    }
+  ]
+}

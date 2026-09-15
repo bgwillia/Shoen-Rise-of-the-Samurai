@@ -1,0 +1,10 @@
+00:00.526  blend            | Read blend: "/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/SourceArt/Characters/Samurai/Kusazuri01/Kusazuri01.blend"
+/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/SourceArt/Characters/Samurai/Kusazuri01/Scripts/validate_kusazuri.py:190: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  if not material.use_nodes or not material.node_tree:
+FBX version: 7300
+Error, could not find any file path in  FBXElem(id=b'Texture', props=[54393808384, b'EnvSamplerTex\x00\x01Texture', b''], props_type=bytearray(b'LSS'), elems=[FBXElem(id=b'Type', props=[b'TextureVideoClip'], props_type=bytearray(b'S'), elems=[]), FBXElem(id=b'Version', props=[202], props_type=bytearray(b'I'), elems=[]), FBXElem(id=b'TextureName', props=[b'EnvSamplerTex\x00\x01Texture'], props_type=bytearray(b'S'), elems=[]), FBXElem(id=b'Media', props=[b''], props_type=bytearray(b'S'), elems=[]), FBXElem(id=b'FileName', props=[b''], props_type=bytearray(b'S'), elems=[]), FBXElem(id=b'RelativeFilename', props=[b''], props_type=bytearray(b'S'), elems=[]), FBXElem(id=b'ModelUVTranslation', props=[0.0, 0.0], props_type=bytearray(b'DD'), elems=[]), FBXElem(id=b'ModelUVScaling', props=[1.0, 1.0], props_type=bytearray(b'DD'), elems=[]), FBXElem(id=b'Texture_Alpha_Source', props=[b'None'], props_type=bytearray(b'S'), elems=[]), FBXElem(id=b'Cropping', props=[0, 0, 0, 0], props_type=bytearray(b'IIII'), elems=[])])
+       Falling back to:  EnvSamplerTex
+KUSAZURI01_SOURCE_VALIDATED /Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/artifacts/kusazuri01/source-validation.json
+Blender 5.1.2 (hash ec6e62d40fa9 built 2026-05-19 01:30:33)
+
+Blender quit

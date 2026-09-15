@@ -1,0 +1,300 @@
+{
+  "status": "Failing pre-lateral-guard baseline; superseded by ongoing bounded corrections, not final approval",
+  "source_sha256": "f2b7dc4f19383cb823715a1dafe46ce9ec307954c0191dbe9d03747145fba653",
+  "controller_sha256": "1effe2a50bf90b88ef952f3f8cf6a24998e6d814bb8972f677886d0a070a6b6c",
+  "pose_count": 372,
+  "native_frame_count": 363,
+  "diagnostic_count": 9,
+  "source_file_unchanged": true,
+  "rigidity_preserved": true,
+  "controller_targets_reproduced": true,
+  "maximum_pair_distance_error_mm": 0.0007727150833081176,
+  "maximum_all_vertex_rigid_transform_error_mm": 0.0004807789863616728,
+  "inverted_or_collapsed_triangles": 0,
+  "clips": [
+    {
+      "clip": "A_Idle",
+      "frames": 229,
+      "range": [
+        1.0,
+        229.0
+      ],
+      "all_integer_frames": true,
+      "body_contact_frames": 229,
+      "leg_contact_frames": 0,
+      "max_leg_depth_estimate_mm": 0,
+      "hand_contact_frames": 229,
+      "max_hand_depth_estimate_mm": 9.796065278351307,
+      "max_do_depth_estimate_mm": 9.09042451530695,
+      "leg_contact_details": []
+    },
+    {
+      "clip": "A_Walk",
+      "frames": 47,
+      "range": [
+        1.0,
+        47.0
+      ],
+      "all_integer_frames": true,
+      "body_contact_frames": 11,
+      "leg_contact_frames": 1,
+      "max_leg_depth_estimate_mm": 2.0033479668200016,
+      "hand_contact_frames": 10,
+      "max_hand_depth_estimate_mm": 11.219566687941551,
+      "max_do_depth_estimate_mm": 17.12859608232975,
+      "leg_contact_details": [
+        {
+          "pose": "A_Walk:19",
+          "clip": "A_Walk",
+          "body_pairs": 58,
+          "do_pairs": 20792,
+          "max_do_depth_estimate_mm": 2.223268151283264,
+          "leg_pairs": 58,
+          "max_leg_depth_estimate_mm": 2.0033479668200016,
+          "hand_pairs": 0,
+          "max_hand_depth_estimate_mm": 0
+        }
+      ]
+    },
+    {
+      "clip": "A_Run",
+      "frames": 55,
+      "range": [
+        1.0,
+        55.0
+      ],
+      "all_integer_frames": true,
+      "body_contact_frames": 17,
+      "leg_contact_frames": 8,
+      "max_leg_depth_estimate_mm": 6.254375446587801,
+      "hand_contact_frames": 12,
+      "max_hand_depth_estimate_mm": 8.938394486904144,
+      "max_do_depth_estimate_mm": 20.187875255942345,
+      "leg_contact_details": [
+        {
+          "pose": "A_Run:6",
+          "clip": "A_Run",
+          "body_pairs": 20,
+          "do_pairs": 19488,
+          "max_do_depth_estimate_mm": 7.961902767419815,
+          "leg_pairs": 20,
+          "max_leg_depth_estimate_mm": 1.334257423877716,
+          "hand_pairs": 0,
+          "max_hand_depth_estimate_mm": 0
+        },
+        {
+          "pose": "A_Run:13",
+          "clip": "A_Run",
+          "body_pairs": 20,
+          "do_pairs": 16603,
+          "max_do_depth_estimate_mm": 2.6097064837813377,
+          "leg_pairs": 20,
+          "max_leg_depth_estimate_mm": 0.8482671692036092,
+          "hand_pairs": 0,
+          "max_hand_depth_estimate_mm": 0
+        },
+        {
+          "pose": "A_Run:22",
+          "clip": "A_Run",
+          "body_pairs": 114,
+          "do_pairs": 19376,
+          "max_do_depth_estimate_mm": 2.1110856905579567,
+          "leg_pairs": 85,
+          "max_leg_depth_estimate_mm": 2.525495132431388,
+          "hand_pairs": 29,
+          "max_hand_depth_estimate_mm": 0.6143725477159023
+        },
+        {
+          "pose": "A_Run:30",
+          "clip": "A_Run",
+          "body_pairs": 159,
+          "do_pairs": 16929,
+          "max_do_depth_estimate_mm": 8.831080980598927,
+          "leg_pairs": 40,
+          "max_leg_depth_estimate_mm": 1.4643747126683593,
+          "hand_pairs": 119,
+          "max_hand_depth_estimate_mm": 1.6473352443426847
+        },
+        {
+          "pose": "A_Run:31",
+          "clip": "A_Run",
+          "body_pairs": 18,
+          "do_pairs": 18345,
+          "max_do_depth_estimate_mm": 3.516450524330139,
+          "leg_pairs": 18,
+          "max_leg_depth_estimate_mm": 0.41181547567248344,
+          "hand_pairs": 0,
+          "max_hand_depth_estimate_mm": 0
+        },
+        {
+          "pose": "A_Run:32",
+          "clip": "A_Run",
+          "body_pairs": 105,
+          "do_pairs": 18659,
+          "max_do_depth_estimate_mm": 2.4726889096200466,
+          "leg_pairs": 105,
+          "max_leg_depth_estimate_mm": 6.180056370794773,
+          "hand_pairs": 0,
+          "max_hand_depth_estimate_mm": 0
+        },
+        {
+          "pose": "A_Run:39",
+          "clip": "A_Run",
+          "body_pairs": 999,
+          "do_pairs": 19057,
+          "max_do_depth_estimate_mm": 3.274838672950864,
+          "leg_pairs": 257,
+          "max_leg_depth_estimate_mm": 6.254375446587801,
+          "hand_pairs": 742,
+          "max_hand_depth_estimate_mm": 4.510138183832169
+        },
+        {
+          "pose": "A_Run:40",
+          "clip": "A_Run",
+          "body_pairs": 49,
+          "do_pairs": 18829,
+          "max_do_depth_estimate_mm": 3.4062403719872236,
+          "leg_pairs": 49,
+          "max_leg_depth_estimate_mm": 1.3997815549373627,
+          "hand_pairs": 0,
+          "max_hand_depth_estimate_mm": 0
+        }
+      ]
+    },
+    {
+      "clip": "A_Attack",
+      "frames": 32,
+      "range": [
+        1.0,
+        32.0
+      ],
+      "all_integer_frames": true,
+      "body_contact_frames": 1,
+      "leg_contact_frames": 1,
+      "max_leg_depth_estimate_mm": 15.0876734405756,
+      "hand_contact_frames": 0,
+      "max_hand_depth_estimate_mm": 0,
+      "max_do_depth_estimate_mm": 8.569429628551006,
+      "leg_contact_details": [
+        {
+          "pose": "A_Attack:13",
+          "clip": "A_Attack",
+          "body_pairs": 587,
+          "do_pairs": 11110,
+          "max_do_depth_estimate_mm": 1.9657243974506855,
+          "leg_pairs": 587,
+          "max_leg_depth_estimate_mm": 15.0876734405756,
+          "hand_pairs": 0,
+          "max_hand_depth_estimate_mm": 0
+        }
+      ]
+    }
+  ],
+  "diagnostics": [
+    {
+      "pose": "neutral",
+      "clip": null,
+      "body_pairs": 0,
+      "do_pairs": 12295,
+      "max_do_depth_estimate_mm": 4.013773985207081,
+      "leg_pairs": 0,
+      "max_leg_depth_estimate_mm": 0,
+      "hand_pairs": 0,
+      "max_hand_depth_estimate_mm": 0
+    },
+    {
+      "pose": "wide-step",
+      "clip": null,
+      "body_pairs": 0,
+      "do_pairs": 12295,
+      "max_do_depth_estimate_mm": 4.013773985207081,
+      "leg_pairs": 0,
+      "max_leg_depth_estimate_mm": 0,
+      "hand_pairs": 0,
+      "max_hand_depth_estimate_mm": 0
+    },
+    {
+      "pose": "wide-stance",
+      "clip": null,
+      "body_pairs": 0,
+      "do_pairs": 12295,
+      "max_do_depth_estimate_mm": 4.013772588223219,
+      "leg_pairs": 0,
+      "max_leg_depth_estimate_mm": 0,
+      "hand_pairs": 0,
+      "max_hand_depth_estimate_mm": 0
+    },
+    {
+      "pose": "knee-lift",
+      "clip": null,
+      "body_pairs": 715,
+      "do_pairs": 13116,
+      "max_do_depth_estimate_mm": 4.013773985207081,
+      "leg_pairs": 715,
+      "max_leg_depth_estimate_mm": 7.011632900685072,
+      "hand_pairs": 0,
+      "max_hand_depth_estimate_mm": 0
+    },
+    {
+      "pose": "crouch",
+      "clip": null,
+      "body_pairs": 0,
+      "do_pairs": 7414,
+      "max_do_depth_estimate_mm": 3.0494825914502144,
+      "leg_pairs": 0,
+      "max_leg_depth_estimate_mm": 0,
+      "hand_pairs": 0,
+      "max_hand_depth_estimate_mm": 0
+    },
+    {
+      "pose": "combat-stance",
+      "clip": null,
+      "body_pairs": 0,
+      "do_pairs": 9117,
+      "max_do_depth_estimate_mm": 2.2182485554367304,
+      "leg_pairs": 0,
+      "max_leg_depth_estimate_mm": 0,
+      "hand_pairs": 0,
+      "max_hand_depth_estimate_mm": 0
+    },
+    {
+      "pose": "torso-turn",
+      "clip": null,
+      "body_pairs": 0,
+      "do_pairs": 6241,
+      "max_do_depth_estimate_mm": 5.109918769448996,
+      "leg_pairs": 0,
+      "max_leg_depth_estimate_mm": 0,
+      "hand_pairs": 0,
+      "max_hand_depth_estimate_mm": 0
+    },
+    {
+      "pose": "hip-rotation",
+      "clip": null,
+      "body_pairs": 0,
+      "do_pairs": 12297,
+      "max_do_depth_estimate_mm": 3.477903548628092,
+      "leg_pairs": 0,
+      "max_leg_depth_estimate_mm": 0,
+      "hand_pairs": 0,
+      "max_hand_depth_estimate_mm": 0
+    },
+    {
+      "pose": "bow-diagnostic",
+      "clip": null,
+      "body_pairs": 0,
+      "do_pairs": 9117,
+      "max_do_depth_estimate_mm": 2.2182485554367304,
+      "leg_pairs": 0,
+      "max_leg_depth_estimate_mm": 0,
+      "hand_pairs": 0,
+      "max_hand_depth_estimate_mm": 0
+    }
+  ],
+  "limits": [
+    "Penetration numbers are signed nearest-surface estimates at vertices of intersecting armor triangles, not exact solid intersection depth.",
+    "Triangle pair counts differ with tessellation; frames/regions and estimated depth are reported separately.",
+    "Eight diagnostic poses are body-clear; near-horizontal knee lift retains panel and tassel contacts.",
+    "Blender source geometry only; these records are not Unreal render/performance evidence."
+  ]
+}

@@ -1,0 +1,3116 @@
+{
+  "scope": "Historical quick hinge experiments; not final full-frame approval. Saved source never modified by review.",
+  "variants": [
+    {
+      "report": "motion-validation-quick-initial.json",
+      "source_sha256": "2e6fa537ea0afc7183f7bec76ba701db485a0c3a347deb6b31d43e866a030c84",
+      "controller_sha256": "768e91e75bb74e0c80643c477b9ff2775d2dc2862128d1e29fece2dde46dcf48",
+      "review_script_sha256": "f8b9f0715c78be69b4214abe74ac684ce8d11e24b1994011c6acc0fa4a2768db",
+      "controller_variant": "initial production radial .15 rad margin",
+      "source_file_unchanged": true,
+      "rigidity_preserved": true,
+      "controller_targets_reproduced": true,
+      "checks": [
+        {
+          "pose": "neutral",
+          "clip": null,
+          "body_triangle_pairs": 0,
+          "body_maximum_contact_depth_estimate_mm": 0.0,
+          "thigh_leg_triangle_pairs": null,
+          "thigh_leg_maximum_contact_depth_estimate_mm": null,
+          "hand_triangle_pairs": null,
+          "body_contact_bones": null,
+          "do_triangle_pairs": 1171,
+          "do_maximum_contact_depth_estimate_mm": 1.4915337087586522,
+          "body_contact_parts": {}
+        },
+        {
+          "pose": "wide-step",
+          "clip": null,
+          "body_triangle_pairs": 78,
+          "body_maximum_contact_depth_estimate_mm": 3.195311641320586,
+          "thigh_leg_triangle_pairs": null,
+          "thigh_leg_maximum_contact_depth_estimate_mm": null,
+          "hand_triangle_pairs": null,
+          "body_contact_bones": null,
+          "do_triangle_pairs": 1171,
+          "do_maximum_contact_depth_estimate_mm": 1.4915337087586522,
+          "body_contact_parts": {
+            "Kusazuri_01_Front_L_Interior": {
+              "pairs": 78,
+              "max_depth_estimate_mm": 3.195311641320586
+            }
+          }
+        },
+        {
+          "pose": "knee-lift",
+          "clip": null,
+          "body_triangle_pairs": 1182,
+          "body_maximum_contact_depth_estimate_mm": 27.302861213684082,
+          "thigh_leg_triangle_pairs": null,
+          "thigh_leg_maximum_contact_depth_estimate_mm": null,
+          "hand_triangle_pairs": null,
+          "body_contact_bones": null,
+          "do_triangle_pairs": 1171,
+          "do_maximum_contact_depth_estimate_mm": 1.4915337087586522,
+          "body_contact_parts": {
+            "Kusazuri_01_Belt": {
+              "pairs": 154,
+              "max_depth_estimate_mm": 16.368504613637924
+            },
+            "Kusazuri_01_Front_Center": {
+              "pairs": 152,
+              "max_depth_estimate_mm": 7.838143035769463
+            },
+            "Kusazuri_01_Front_Center_Interior": {
+              "pairs": 152,
+              "max_depth_estimate_mm": 13.850100338459015
+            },
+            "Kusazuri_01_Front_Center_Lacing": {
+              "pairs": 77,
+              "max_depth_estimate_mm": 4.207381512969732
+            },
+            "Kusazuri_01_Front_Center_Trim": {
+              "pairs": 152,
+              "max_depth_estimate_mm": 6.420849356800318
+            },
+            "Kusazuri_01_Front_L": {
+              "pairs": 152,
+              "max_depth_estimate_mm": 27.302861213684082
+            },
+            "Kusazuri_01_Front_L_Interior": {
+              "pairs": 88,
+              "max_depth_estimate_mm": 20.70382423698902
+            },
+            "Kusazuri_01_Front_L_Lacing": {
+              "pairs": 70,
+              "max_depth_estimate_mm": 6.4191375859081745
+            },
+            "Kusazuri_01_Front_L_Trim": {
+              "pairs": 95,
+              "max_depth_estimate_mm": 22.429708391427994
+            },
+            "Kusazuri_01_Lacing": {
+              "pairs": 90,
+              "max_depth_estimate_mm": 6.03116862475872
+            }
+          }
+        },
+        {
+          "pose": "crouch",
+          "clip": null,
+          "body_triangle_pairs": 0,
+          "body_maximum_contact_depth_estimate_mm": 0.0,
+          "thigh_leg_triangle_pairs": null,
+          "thigh_leg_maximum_contact_depth_estimate_mm": null,
+          "hand_triangle_pairs": null,
+          "body_contact_bones": null,
+          "do_triangle_pairs": 3989,
+          "do_maximum_contact_depth_estimate_mm": 1.9354093819856644,
+          "body_contact_parts": {}
+        },
+        {
+          "pose": "hip-rotation",
+          "clip": null,
+          "body_triangle_pairs": 0,
+          "body_maximum_contact_depth_estimate_mm": 0.0,
+          "thigh_leg_triangle_pairs": null,
+          "thigh_leg_maximum_contact_depth_estimate_mm": null,
+          "hand_triangle_pairs": null,
+          "body_contact_bones": null,
+          "do_triangle_pairs": 1171,
+          "do_maximum_contact_depth_estimate_mm": 1.4915833016857505,
+          "body_contact_parts": {}
+        },
+        {
+          "pose": "A_Idle:1",
+          "clip": "A_Idle",
+          "body_triangle_pairs": 1848,
+          "body_maximum_contact_depth_estimate_mm": 6.814185995608568,
+          "thigh_leg_triangle_pairs": null,
+          "thigh_leg_maximum_contact_depth_estimate_mm": null,
+          "hand_triangle_pairs": null,
+          "body_contact_bones": null,
+          "do_triangle_pairs": 2727,
+          "do_maximum_contact_depth_estimate_mm": 2.1066158078610897,
+          "body_contact_parts": {
+            "Kusazuri_01_Front_L": {
+              "pairs": 171,
+              "max_depth_estimate_mm": 0.0
+            },
+            "Kusazuri_01_Front_L_Interior": {
+              "pairs": 29,
+              "max_depth_estimate_mm": 0.0
+            },
+            "Kusazuri_01_Front_L_Trim": {
+              "pairs": 32,
+              "max_depth_estimate_mm": 0.0
+            },
+            "Kusazuri_01_Front_R": {
+              "pairs": 414,
+              "max_depth_estimate_mm": 5.988258868455887
+            },
+            "Kusazuri_01_Front_R_Interior": {
+              "pairs": 195,
+              "max_depth_estimate_mm": 5.051787011325359
+            },
+            "Kusazuri_01_Front_R_Lacing": {
+              "pairs": 134,
+              "max_depth_estimate_mm": 5.7599409483373165
+            },
+            "Kusazuri_01_Front_R_Trim": {
+              "pairs": 178,
+              "max_depth_estimate_mm": 6.814185995608568
+            },
+            "Kusazuri_01_Side_L_Interior": {
+              "pairs": 90,
+              "max_depth_estimate_mm": 2.4412393104285
+            },
+            "Kusazuri_01_Side_R": {
+              "pairs": 264,
+              "max_depth_estimate_mm": 6.6970838233828545
+            },
+            "Kusazuri_01_Side_R_Interior": {
+              "pairs": 203,
+              "max_depth_estimate_mm": 0.0
+            },
+            "Kusazuri_01_Side_R_Lacing": {
+              "pairs": 48,
+              "max_depth_estimate_mm": 3.8568745367228985
+            },
+            "Kusazuri_01_Side_R_Trim": {
+              "pairs": 90,
+              "max_depth_estimate_mm": 5.90175436809659
+            }
+          }
+        },
+        {
+          "pose": "A_Idle:58",
+          "clip": "A_Idle",
+          "body_triangle_pairs": 576,
+          "body_maximum_contact_depth_estimate_mm": 5.347418133169413,
+          "thigh_leg_triangle_pairs": null,
+          "thigh_leg_maximum_contact_depth_estimate_mm": null,
+          "hand_triangle_pairs": null,
+          "body_contact_bones": null,
+          "do_triangle_pairs": 2561,
+          "do_maximum_contact_depth_estimate_mm": 1.9706839229911566,
+          "body_contact_parts": {
+            "Kusazuri_01_Front_R": {
+              "pairs": 291,
+              "max_depth_estimate_mm": 5.347418133169413
+            },
+            "Kusazuri_01_Front_R_Lacing": {
+              "pairs": 57,
+              "max_depth_estimate_mm": 2.101035788655281
+            },
+            "Kusazuri_01_Front_R_Trim": {
+              "pairs": 60,
+              "max_depth_estimate_mm": 0.0
+            },
+            "Kusazuri_01_Side_L_Interior": {
+              "pairs": 90,
+              "max_depth_estimate_mm": 2.609862480312586
+            },
+            "Kusazuri_01_Side_R": {
+              "pairs": 6,
+              "max_depth_estimate_mm": 0.0
+            },
+            "Kusazuri_01_Side_R_Lacing": {
+              "pairs": 72,
+              "max_depth_estimate_mm": 0.6076580029912293
+            }
+          }
+        },
+        {
+          "pose": "A_Idle:115",
+          "clip": "A_Idle",
+          "body_triangle_pairs": 1832,
+          "body_maximum_contact_depth_estimate_mm": 8.242310956120491,
+          "thigh_leg_triangle_pairs": null,
+          "thigh_leg_maximum_contact_depth_estimate_mm": null,
+          "hand_triangle_pairs": null,
+          "body_contact_bones": null,
+          "do_triangle_pairs": 2673,
+          "do_maximum_contact_depth_estimate_mm": 2.0404162351042032,
+          "body_contact_parts": {
+            "Kusazuri_01_Front_R": {
+              "pairs": 333,
+              "max_depth_estimate_mm": 7.708876393735409
+            },
+            "Kusazuri_01_Front_R_Interior": {
+              "pairs": 232,
+              "max_depth_estimate_mm": 8.242310956120491
+            },
+            "Kusazuri_01_Front_R_Lacing": {
+              "pairs": 186,
+              "max_depth_estimate_mm": 7.156740874052048
+            },
+            "Kusazuri_01_Front_R_Trim": {
+              "pairs": 179,
+              "max_depth_estimate_mm": 5.196869373321533
+            },
+            "Kusazuri_01_Side_L_Interior": {
+              "pairs": 90,
+              "max_depth_estimate_mm": 2.469810890033841
+            },
+            "Kusazuri_01_Side_R": {
+              "pairs": 375,
+              "max_depth_estimate_mm": 5.108121316879988
+            },
+            "Kusazuri_01_Side_R_Interior": {
+              "pairs": 250,
+              "max_depth_estimate_mm": 0.0
+            },
+            "Kusazuri_01_Side_R_Lacing": {
+              "pairs": 51,
+              "max_depth_estimate_mm": 5.0480249337852
+            },
+            "Kusazuri_01_Side_R_Trim": {
+              "pairs": 136,
+              "max_depth_estimate_mm": 6.63779629394412
+            }
+          }
+        },
+        {
+          "pose": "A_Idle:172",
+          "clip": "A_Idle",
+          "body_triangle_pairs": 112,
+          "body_maximum_contact_depth_estimate_mm": 3.1783217564225197,
+          "thigh_leg_triangle_pairs": null,
+          "thigh_leg_maximum_contact_depth_estimate_mm": null,
+          "hand_triangle_pairs": null,
+          "body_contact_bones": null,
+          "do_triangle_pairs": 2309,
+          "do_maximum_contact_depth_estimate_mm": 2.5182573590427637,
+          "body_contact_parts": {
+            "Kusazuri_01_Side_L_Interior": {
+              "pairs": 112,
+              "max_depth_estimate_mm": 3.1783217564225197
+            }
+          }
+        },
+        {
+          "pose": "A_Idle:229",
+          "clip": "A_Idle",
+          "body_triangle_pairs": 1847,
+          "body_maximum_contact_depth_estimate_mm": 6.763980723917484,
+          "thigh_leg_triangle_pairs": null,
+          "thigh_leg_maximum_contact_depth_estimate_mm": null,
+          "hand_triangle_pairs": null,
+          "body_contact_bones": null,
+          "do_triangle_pairs": 2721,
+          "do_maximum_contact_depth_estimate_mm": 2.1082123275846243,
+          "body_contact_parts": {
+            "Kusazuri_01_Front_L": {
+              "pairs": 161,
+              "max_depth_estimate_mm": 0.0
+            },
+            "Kusazuri_01_Front_L_Interior": {
+              "pairs": 28,
+              "max_depth_estimate_mm": 0.0
+            },
+            "Kusazuri_01_Front_L_Trim": {
+              "pairs": 32,
+              "max_depth_estimate_mm": 0.0
+            },
+            "Kusazuri_01_Front_R": {
+              "pairs": 416,
+              "max_depth_estimate_mm": 5.9365504421293736
+            },
+            "Kusazuri_01_Front_R_Interior": {
+              "pairs": 194,
+              "max_depth_estimate_mm": 5.102174356579781
+            },
+            "Kusazuri_01_Front_R_Lacing": {
+              "pairs": 131,
+              "max_depth_estimate_mm": 5.797993391752243
+            },
+            "Kusazuri_01_Front_R_Trim": {
+              "pairs": 177,
+              "max_depth_estimate_mm": 6.763980723917484
+            },
+            "Kusazuri_01_Side_L_Interior": {
+              "pairs": 90,
+              "max_depth_estimate_mm": 2.4458488915115595
+            },
+            "Kusazuri_01_Side_R": {
+              "pairs": 271,
+              "max_depth_estimate_mm": 6.721244193613529
+            },
+            "Kusazuri_01_Side_R_Interior": {
+              "pairs": 207,
+              "max_depth_estimate_mm": 0.0
+            },
+            "Kusazuri_01_Side_R_Lacing": {
+              "pairs": 52,
+              "max_depth_estimate_mm": 3.9847083389759064
+            },
+            "Kusazuri_01_Side_R_Trim": {
+              "pairs": 88,
+              "max_depth_estimate_mm": 6.020037457346916
+            }
+          }
+        },
+        {
+          "pose": "A_Walk:1",
+          "clip": "A_Walk",
+          "body_triangle_pairs": 398,
+          "body_maximum_contact_depth_estimate_mm": 7.844541221857071,
+          "thigh_leg_triangle_pairs": null,
+          "thigh_leg_maximum_contact_depth_estimate_mm": null,
+          "hand_triangle_pairs": null,
+          "body_contact_bones": null,
+          "do_triangle_pairs": 11640,
+          "do_maximum_contact_depth_estimate_mm": 3.170032287016511,
+          "body_contact_parts": {
+            "Kusazuri_01_Side_L": {
+              "pairs": 239,
+              "max_depth_estimate_mm": 7.844541221857071
+            },
+            "Kusazuri_01_Side_L_Interior": {
+              "pairs": 50,
+              "max_depth_estimate_mm": 0.0992610293906182
+            },
+            "Kusazuri_01_Side_L_Lacing": {
+              "pairs": 66,
+              "max_depth_estimate_mm": 2.671763300895691
+            },
+            "Kusazuri_01_Side_L_Trim": {
+              "pairs": 43,
+              "max_depth_estimate_mm": 4.813358653336763
+            }
+          }
+        },
+        {
+          "pose": "A_Walk:12",
+          "clip": "A_Walk",
+          "body_triangle_pairs": 0,
+          "body_maximum_contact_depth_estimate_mm": 0.0,
+          "thigh_leg_triangle_pairs": null,
+          "thigh_leg_maximum_contact_depth_estimate_mm": null,
+          "hand_triangle_pairs": null,
+          "body_contact_bones": null,
+          "do_triangle_pairs": 12058,
+          "do_maximum_contact_depth_estimate_mm": 1.9907583482563496,
+          "body_contact_parts": {}
+        },
+        {
+          "pose": "A_Walk:24",
+          "clip": "A_Walk",
+          "body_triangle_pairs": 1172,
+          "body_maximum_contact_depth_estimate_mm": 6.765397265553474,
+          "thigh_leg_triangle_pairs": null,
+          "thigh_leg_maximum_contact_depth_estimate_mm": null,
+          "hand_triangle_pairs": null,
+          "body_contact_bones": null,
+          "do_triangle_pairs": 12405,
+          "do_maximum_contact_depth_estimate_mm": 1.988341100513935,
+          "body_contact_parts": {
+            "Kusazuri_01_Front_R": {
+              "pairs": 545,
+              "max_depth_estimate_mm": 3.8676587864756584
+            },
+            "Kusazuri_01_Front_R_Interior": {
+              "pairs": 172,
+              "max_depth_estimate_mm": 2.804606221616268
+            },
+            "Kusazuri_01_Front_R_Lacing": {
+              "pairs": 110,
+              "max_depth_estimate_mm": 3.511024173349142
+            },
+            "Kusazuri_01_Front_R_Trim": {
+              "pairs": 138,
+              "max_depth_estimate_mm": 6.765397265553474
+            },
+            "Kusazuri_01_Side_R": {
+              "pairs": 140,
+              "max_depth_estimate_mm": 2.284975489601493
+            },
+            "Kusazuri_01_Side_R_Trim": {
+              "pairs": 67,
+              "max_depth_estimate_mm": 1.2663677334785461
+            }
+          }
+        },
+        {
+          "pose": "A_Walk:36",
+          "clip": "A_Walk",
+          "body_triangle_pairs": 1486,
+          "body_maximum_contact_depth_estimate_mm": 7.169741205871105,
+          "thigh_leg_triangle_pairs": null,
+          "thigh_leg_maximum_contact_depth_estimate_mm": null,
+          "hand_triangle_pairs": null,
+          "body_contact_bones": null,
+          "do_triangle_pairs": 11455,
+          "do_maximum_contact_depth_estimate_mm": 2.820265479385853,
+          "body_contact_parts": {
+            "Kusazuri_01_Front_L": {
+              "pairs": 725,
+              "max_depth_estimate_mm": 7.169741205871105
+            },
+            "Kusazuri_01_Front_L_Interior": {
+              "pairs": 498,
+              "max_depth_estimate_mm": 2.669599140062928
+            },
+            "Kusazuri_01_Front_L_Lacing": {
+              "pairs": 126,
+              "max_depth_estimate_mm": 3.55131714604795
+            },
+            "Kusazuri_01_Front_L_Trim": {
+              "pairs": 137,
+              "max_depth_estimate_mm": 4.853370599448681
+            }
+          }
+        },
+        {
+          "pose": "A_Walk:47",
+          "clip": "A_Walk",
+          "body_triangle_pairs": 388,
+          "body_maximum_contact_depth_estimate_mm": 7.949096150696278,
+          "thigh_leg_triangle_pairs": null,
+          "thigh_leg_maximum_contact_depth_estimate_mm": null,
+          "hand_triangle_pairs": null,
+          "body_contact_bones": null,
+          "do_triangle_pairs": 11651,
+          "do_maximum_contact_depth_estimate_mm": 3.1699631363153458,
+          "body_contact_parts": {
+            "Kusazuri_01_Side_L": {
+              "pairs": 241,
+              "max_depth_estimate_mm": 7.949096150696278
+            },
+            "Kusazuri_01_Side_L_Interior": {
+              "pairs": 46,
+              "max_depth_estimate_mm": 0.12672520824708045
+            },
+            "Kusazuri_01_Side_L_Lacing": {
+              "pairs": 58,
+              "max_depth_estimate_mm": 2.7339623775333166
+            },
+            "Kusazuri_01_Side_L_Trim": {
+              "pairs": 43,
+              "max_depth_estimate_mm": 4.923340864479542
+            }
+          }
+        },
+        {
+          "pose": "A_Run:1",
+          "clip": "A_Run",
+          "body_triangle_pairs": 114,
+          "body_maximum_contact_depth_estimate_mm": 5.75345428660512,
+          "thigh_leg_triangle_pairs": null,
+          "thigh_leg_maximum_contact_depth_estimate_mm": null,
+          "hand_triangle_pairs": null,
+          "body_contact_bones": null,
+          "do_triangle_pairs": 11591,
+          "do_maximum_contact_depth_estimate_mm": 3.4230498131364584,
+          "body_contact_parts": {
+            "Kusazuri_01_Front_L_Interior": {
+              "pairs": 114,
+              "max_depth_estimate_mm": 5.75345428660512
+            }
+          }
+        },
+        {
+          "pose": "A_Run:14",
+          "clip": "A_Run",
+          "body_triangle_pairs": 114,
+          "body_maximum_contact_depth_estimate_mm": 7.100388407707214,
+          "thigh_leg_triangle_pairs": null,
+          "thigh_leg_maximum_contact_depth_estimate_mm": null,
+          "hand_triangle_pairs": null,
+          "body_contact_bones": null,
+          "do_triangle_pairs": 7354,
+          "do_maximum_contact_depth_estimate_mm": 1.9855694845318794,
+          "body_contact_parts": {
+            "Kusazuri_01_Front_L": {
+              "pairs": 42,
+              "max_depth_estimate_mm": 2.8927940875291824
+            },
+            "Kusazuri_01_Front_L_Interior": {
+              "pairs": 72,
+              "max_depth_estimate_mm": 7.100388407707214
+            }
+          }
+        },
+        {
+          "pose": "A_Run:28",
+          "clip": "A_Run",
+          "body_triangle_pairs": 1287,
+          "body_maximum_contact_depth_estimate_mm": 7.978401146829128,
+          "thigh_leg_triangle_pairs": null,
+          "thigh_leg_maximum_contact_depth_estimate_mm": null,
+          "hand_triangle_pairs": null,
+          "body_contact_bones": null,
+          "do_triangle_pairs": 11463,
+          "do_maximum_contact_depth_estimate_mm": 4.44047013297677,
+          "body_contact_parts": {
+            "Kusazuri_01_Front_L": {
+              "pairs": 598,
+              "max_depth_estimate_mm": 5.437953397631645
+            },
+            "Kusazuri_01_Front_L_Interior": {
+              "pairs": 266,
+              "max_depth_estimate_mm": 3.1746362801641226
+            },
+            "Kusazuri_01_Front_L_Lacing": {
+              "pairs": 164,
+              "max_depth_estimate_mm": 4.402656108140945
+            },
+            "Kusazuri_01_Front_L_Trim": {
+              "pairs": 107,
+              "max_depth_estimate_mm": 2.1163737401366234
+            },
+            "Kusazuri_01_Front_R": {
+              "pairs": 42,
+              "max_depth_estimate_mm": 1.1170184006914496
+            },
+            "Kusazuri_01_Front_R_Interior": {
+              "pairs": 92,
+              "max_depth_estimate_mm": 7.978401146829128
+            },
+            "Kusazuri_01_Side_L_Interior": {
+              "pairs": 18,
+              "max_depth_estimate_mm": 0.6786332232877612
+            }
+          }
+        },
+        {
+          "pose": "A_Run:42",
+          "clip": "A_Run",
+          "body_triangle_pairs": 0,
+          "body_maximum_contact_depth_estimate_mm": 0.0,
+          "thigh_leg_triangle_pairs": null,
+          "thigh_leg_maximum_contact_depth_estimate_mm": null,
+          "hand_triangle_pairs": null,
+          "body_contact_bones": null,
+          "do_triangle_pairs": 8272,
+          "do_maximum_contact_depth_estimate_mm": 1.9891392439603806,
+          "body_contact_parts": {}
+        },
+        {
+          "pose": "A_Run:55",
+          "clip": "A_Run",
+          "body_triangle_pairs": 112,
+          "body_maximum_contact_depth_estimate_mm": 5.404351279139519,
+          "thigh_leg_triangle_pairs": null,
+          "thigh_leg_maximum_contact_depth_estimate_mm": null,
+          "hand_triangle_pairs": null,
+          "body_contact_bones": null,
+          "do_triangle_pairs": 11489,
+          "do_maximum_contact_depth_estimate_mm": 2.436408307403326,
+          "body_contact_parts": {
+            "Kusazuri_01_Front_L_Interior": {
+              "pairs": 112,
+              "max_depth_estimate_mm": 5.404351279139519
+            }
+          }
+        },
+        {
+          "pose": "A_Attack:1",
+          "clip": "A_Attack",
+          "body_triangle_pairs": 0,
+          "body_maximum_contact_depth_estimate_mm": 0.0,
+          "thigh_leg_triangle_pairs": null,
+          "thigh_leg_maximum_contact_depth_estimate_mm": null,
+          "hand_triangle_pairs": null,
+          "body_contact_bones": null,
+          "do_triangle_pairs": 2102,
+          "do_maximum_contact_depth_estimate_mm": 1.9457772141322494,
+          "body_contact_parts": {}
+        },
+        {
+          "pose": "A_Attack:9",
+          "clip": "A_Attack",
+          "body_triangle_pairs": 0,
+          "body_maximum_contact_depth_estimate_mm": 0.0,
+          "thigh_leg_triangle_pairs": null,
+          "thigh_leg_maximum_contact_depth_estimate_mm": null,
+          "hand_triangle_pairs": null,
+          "body_contact_bones": null,
+          "do_triangle_pairs": 2716,
+          "do_maximum_contact_depth_estimate_mm": 1.8299432704225183,
+          "body_contact_parts": {}
+        },
+        {
+          "pose": "A_Attack:16",
+          "clip": "A_Attack",
+          "body_triangle_pairs": 0,
+          "body_maximum_contact_depth_estimate_mm": 0.0,
+          "thigh_leg_triangle_pairs": null,
+          "thigh_leg_maximum_contact_depth_estimate_mm": null,
+          "hand_triangle_pairs": null,
+          "body_contact_bones": null,
+          "do_triangle_pairs": 2000,
+          "do_maximum_contact_depth_estimate_mm": 1.8893434898927808,
+          "body_contact_parts": {}
+        },
+        {
+          "pose": "A_Attack:24",
+          "clip": "A_Attack",
+          "body_triangle_pairs": 0,
+          "body_maximum_contact_depth_estimate_mm": 0.0,
+          "thigh_leg_triangle_pairs": null,
+          "thigh_leg_maximum_contact_depth_estimate_mm": null,
+          "hand_triangle_pairs": null,
+          "body_contact_bones": null,
+          "do_triangle_pairs": 2866,
+          "do_maximum_contact_depth_estimate_mm": 1.9925215747207403,
+          "body_contact_parts": {}
+        },
+        {
+          "pose": "A_Attack:32",
+          "clip": "A_Attack",
+          "body_triangle_pairs": 0,
+          "body_maximum_contact_depth_estimate_mm": 0.0,
+          "thigh_leg_triangle_pairs": null,
+          "thigh_leg_maximum_contact_depth_estimate_mm": null,
+          "hand_triangle_pairs": null,
+          "body_contact_bones": null,
+          "do_triangle_pairs": 3622,
+          "do_maximum_contact_depth_estimate_mm": 1.986759016290307,
+          "body_contact_parts": {}
+        }
+      ]
+    },
+    {
+      "report": "motion-validation-quick-radial-005.json",
+      "source_sha256": "04a164b91cf3bf55372eee5708a59072ddaaadfc4db66007df00cf616fc5695c",
+      "controller_sha256": "a0288a1d845b3d63191f73bf99c62fc569ab30dbfd5c78ef152c3e0764b0c56f",
+      "review_script_sha256": "3e1e2b5de55f24abe163ae0aec3c34b6f4b8e83638712ae62426392ec33037b4",
+      "controller_variant": "production kusazuri_motion.armor_pose",
+      "source_file_unchanged": true,
+      "rigidity_preserved": true,
+      "controller_targets_reproduced": true,
+      "checks": [
+        {
+          "pose": "neutral",
+          "clip": null,
+          "body_triangle_pairs": 0,
+          "body_maximum_contact_depth_estimate_mm": 0.0,
+          "thigh_leg_triangle_pairs": 0,
+          "thigh_leg_maximum_contact_depth_estimate_mm": 0,
+          "hand_triangle_pairs": 0,
+          "body_contact_bones": {},
+          "do_triangle_pairs": 1959,
+          "do_maximum_contact_depth_estimate_mm": 1.4915337087586522,
+          "body_contact_parts": {}
+        },
+        {
+          "pose": "wide-step",
+          "clip": null,
+          "body_triangle_pairs": 0,
+          "body_maximum_contact_depth_estimate_mm": 0.0,
+          "thigh_leg_triangle_pairs": 0,
+          "thigh_leg_maximum_contact_depth_estimate_mm": 0,
+          "hand_triangle_pairs": 0,
+          "body_contact_bones": {},
+          "do_triangle_pairs": 1959,
+          "do_maximum_contact_depth_estimate_mm": 1.4915337087586522,
+          "body_contact_parts": {}
+        },
+        {
+          "pose": "knee-lift",
+          "clip": null,
+          "body_triangle_pairs": 1022,
+          "body_maximum_contact_depth_estimate_mm": 17.32986606657505,
+          "thigh_leg_triangle_pairs": 1022,
+          "thigh_leg_maximum_contact_depth_estimate_mm": 17.32986606657505,
+          "hand_triangle_pairs": 0,
+          "body_contact_bones": {
+            "thigh_twist_01_l": 749,
+            "thigh_twist_02_l": 273
+          },
+          "do_triangle_pairs": 1959,
+          "do_maximum_contact_depth_estimate_mm": 1.4915337087586522,
+          "body_contact_parts": {
+            "Kusazuri_01_Belt": {
+              "pairs": 154,
+              "max_depth_estimate_mm": 16.368504613637924
+            },
+            "Kusazuri_01_Front_Center": {
+              "pairs": 20,
+              "max_depth_estimate_mm": 1.3883366482332349
+            },
+            "Kusazuri_01_Front_Center_Interior": {
+              "pairs": 138,
+              "max_depth_estimate_mm": 2.187826670706272
+            },
+            "Kusazuri_01_Front_L": {
+              "pairs": 153,
+              "max_depth_estimate_mm": 10.370875708758831
+            },
+            "Kusazuri_01_Front_L_Interior": {
+              "pairs": 86,
+              "max_depth_estimate_mm": 14.766259118914604
+            },
+            "Kusazuri_01_Front_L_Lacing": {
+              "pairs": 32,
+              "max_depth_estimate_mm": 2.479707356542349
+            },
+            "Kusazuri_01_Front_L_Trim": {
+              "pairs": 42,
+              "max_depth_estimate_mm": 17.32986606657505
+            },
+            "Kusazuri_01_Lacing": {
+              "pairs": 397,
+              "max_depth_estimate_mm": 3.752464195713401
+            }
+          }
+        },
+        {
+          "pose": "crouch",
+          "clip": null,
+          "body_triangle_pairs": 0,
+          "body_maximum_contact_depth_estimate_mm": 0.0,
+          "thigh_leg_triangle_pairs": 0,
+          "thigh_leg_maximum_contact_depth_estimate_mm": 0,
+          "hand_triangle_pairs": 0,
+          "body_contact_bones": {},
+          "do_triangle_pairs": 7856,
+          "do_maximum_contact_depth_estimate_mm": 4.672303795814514,
+          "body_contact_parts": {}
+        },
+        {
+          "pose": "hip-rotation",
+          "clip": null,
+          "body_triangle_pairs": 0,
+          "body_maximum_contact_depth_estimate_mm": 0.0,
+          "thigh_leg_triangle_pairs": 0,
+          "thigh_leg_maximum_contact_depth_estimate_mm": 0,
+          "hand_triangle_pairs": 0,
+          "body_contact_bones": {},
+          "do_triangle_pairs": 1961,
+          "do_maximum_contact_depth_estimate_mm": 1.4915833016857505,
+          "body_contact_parts": {}
+        },
+        {
+          "pose": "A_Idle:1",
+          "clip": "A_Idle",
+          "body_triangle_pairs": 2392,
+          "body_maximum_contact_depth_estimate_mm": 9.69096552580595,
+          "thigh_leg_triangle_pairs": 0,
+          "thigh_leg_maximum_contact_depth_estimate_mm": 0,
+          "hand_triangle_pairs": 2392,
+          "body_contact_bones": {
+            "index_02_l": 83,
+            "index_03_l": 168,
+            "thumb_03_l": 278,
+            "thumb_03_r": 240,
+            "middle_02_r": 261,
+            "index_02_r": 168,
+            "index_03_r": 328,
+            "middle_03_r": 79,
+            "ring_03_l": 121,
+            "pinky_03_l": 116,
+            "pinky_02_r": 230,
+            "ring_02_r": 258,
+            "ring_01_r": 1,
+            "pinky_03_r": 61
+          },
+          "do_triangle_pairs": 7657,
+          "do_maximum_contact_depth_estimate_mm": 3.747862996533513,
+          "body_contact_parts": {
+            "Kusazuri_01_Front_L": {
+              "pairs": 275,
+              "max_depth_estimate_mm": 4.088644403964281
+            },
+            "Kusazuri_01_Front_L_Interior": {
+              "pairs": 120,
+              "max_depth_estimate_mm": 6.085304077714682
+            },
+            "Kusazuri_01_Front_L_Lacing": {
+              "pairs": 54,
+              "max_depth_estimate_mm": 2.211819402873516
+            },
+            "Kusazuri_01_Front_L_Trim": {
+              "pairs": 80,
+              "max_depth_estimate_mm": 0.823001260869205
+            },
+            "Kusazuri_01_Front_R": {
+              "pairs": 573,
+              "max_depth_estimate_mm": 6.589486729353666
+            },
+            "Kusazuri_01_Front_R_Interior": {
+              "pairs": 251,
+              "max_depth_estimate_mm": 4.697905387729406
+            },
+            "Kusazuri_01_Front_R_Lacing": {
+              "pairs": 86,
+              "max_depth_estimate_mm": 1.7973891226574779
+            },
+            "Kusazuri_01_Front_R_Trim": {
+              "pairs": 166,
+              "max_depth_estimate_mm": 9.69096552580595
+            },
+            "Kusazuri_01_Side_L": {
+              "pairs": 73,
+              "max_depth_estimate_mm": 3.546362277120352
+            },
+            "Kusazuri_01_Side_L_Lacing": {
+              "pairs": 73,
+              "max_depth_estimate_mm": 2.2728070616722107
+            },
+            "Kusazuri_01_Side_L_Trim": {
+              "pairs": 91,
+              "max_depth_estimate_mm": 1.5398714458569884
+            },
+            "Kusazuri_01_Side_R": {
+              "pairs": 220,
+              "max_depth_estimate_mm": 6.645544897764921
+            },
+            "Kusazuri_01_Side_R_Interior": {
+              "pairs": 201,
+              "max_depth_estimate_mm": 0.0
+            },
+            "Kusazuri_01_Side_R_Lacing": {
+              "pairs": 48,
+              "max_depth_estimate_mm": 2.1332846954464912
+            },
+            "Kusazuri_01_Side_R_Trim": {
+              "pairs": 81,
+              "max_depth_estimate_mm": 4.127834923565388
+            }
+          }
+        },
+        {
+          "pose": "A_Idle:58",
+          "clip": "A_Idle",
+          "body_triangle_pairs": 1562,
+          "body_maximum_contact_depth_estimate_mm": 8.057634346187115,
+          "thigh_leg_triangle_pairs": 0,
+          "thigh_leg_maximum_contact_depth_estimate_mm": 0,
+          "hand_triangle_pairs": 1562,
+          "body_contact_bones": {
+            "index_03_l": 258,
+            "index_03_r": 358,
+            "ring_03_r": 177,
+            "middle_03_r": 414,
+            "middle_02_r": 12,
+            "pinky_03_r": 343
+          },
+          "do_triangle_pairs": 7469,
+          "do_maximum_contact_depth_estimate_mm": 2.3574226070195436,
+          "body_contact_parts": {
+            "Kusazuri_01_Front_L": {
+              "pairs": 130,
+              "max_depth_estimate_mm": 3.0215170700103045
+            },
+            "Kusazuri_01_Front_L_Interior": {
+              "pairs": 62,
+              "max_depth_estimate_mm": 0.0
+            },
+            "Kusazuri_01_Front_L_Trim": {
+              "pairs": 66,
+              "max_depth_estimate_mm": 3.4785191528499126
+            },
+            "Kusazuri_01_Front_R": {
+              "pairs": 516,
+              "max_depth_estimate_mm": 8.057634346187115
+            },
+            "Kusazuri_01_Front_R_Interior": {
+              "pairs": 261,
+              "max_depth_estimate_mm": 3.245911793783307
+            },
+            "Kusazuri_01_Front_R_Lacing": {
+              "pairs": 68,
+              "max_depth_estimate_mm": 2.303675515577197
+            },
+            "Kusazuri_01_Front_R_Trim": {
+              "pairs": 116,
+              "max_depth_estimate_mm": 2.445334568619728
+            },
+            "Kusazuri_01_Side_R": {
+              "pairs": 137,
+              "max_depth_estimate_mm": 2.5065934751182795
+            },
+            "Kusazuri_01_Side_R_Interior": {
+              "pairs": 156,
+              "max_depth_estimate_mm": 0.0
+            },
+            "Kusazuri_01_Side_R_Trim": {
+              "pairs": 50,
+              "max_depth_estimate_mm": 0.0
+            }
+          }
+        },
+        {
+          "pose": "A_Idle:115",
+          "clip": "A_Idle",
+          "body_triangle_pairs": 2149,
+          "body_maximum_contact_depth_estimate_mm": 7.97173660248518,
+          "thigh_leg_triangle_pairs": 0,
+          "thigh_leg_maximum_contact_depth_estimate_mm": 0,
+          "hand_triangle_pairs": 2149,
+          "body_contact_bones": {
+            "thumb_03_l": 80,
+            "thumb_02_r": 100,
+            "thumb_03_r": 341,
+            "middle_02_r": 179,
+            "index_02_r": 476,
+            "index_03_r": 78,
+            "thumb_01_r": 18,
+            "ring_03_l": 28,
+            "pinky_02_r": 189,
+            "pinky_01_r": 82,
+            "ring_01_r": 365,
+            "ring_02_r": 213
+          },
+          "do_triangle_pairs": 7676,
+          "do_maximum_contact_depth_estimate_mm": 3.8145293947309256,
+          "body_contact_parts": {
+            "Kusazuri_01_Front_L_Trim": {
+              "pairs": 80,
+              "max_depth_estimate_mm": 1.256661838851869
+            },
+            "Kusazuri_01_Front_R": {
+              "pairs": 556,
+              "max_depth_estimate_mm": 7.442477159202099
+            },
+            "Kusazuri_01_Front_R_Interior": {
+              "pairs": 336,
+              "max_depth_estimate_mm": 7.97173660248518
+            },
+            "Kusazuri_01_Front_R_Lacing": {
+              "pairs": 128,
+              "max_depth_estimate_mm": 2.752611879259348
+            },
+            "Kusazuri_01_Front_R_Trim": {
+              "pairs": 172,
+              "max_depth_estimate_mm": 7.460733409970999
+            },
+            "Kusazuri_01_Side_L_Lacing": {
+              "pairs": 28,
+              "max_depth_estimate_mm": 0.7184029091149569
+            },
+            "Kusazuri_01_Side_R": {
+              "pairs": 350,
+              "max_depth_estimate_mm": 6.052386946976185
+            },
+            "Kusazuri_01_Side_R_Interior": {
+              "pairs": 261,
+              "max_depth_estimate_mm": 0.0
+            },
+            "Kusazuri_01_Side_R_Lacing": {
+              "pairs": 84,
+              "max_depth_estimate_mm": 2.435317961499095
+            },
+            "Kusazuri_01_Side_R_Trim": {
+              "pairs": 154,
+              "max_depth_estimate_mm": 3.317233407869935
+            }
+          }
+        },
+        {
+          "pose": "A_Idle:172",
+          "clip": "A_Idle",
+          "body_triangle_pairs": 886,
+          "body_maximum_contact_depth_estimate_mm": 5.271753296256065,
+          "thigh_leg_triangle_pairs": 0,
+          "thigh_leg_maximum_contact_depth_estimate_mm": 0,
+          "hand_triangle_pairs": 886,
+          "body_contact_bones": {
+            "middle_03_l": 126,
+            "ring_03_r": 254,
+            "middle_03_r": 420,
+            "pinky_03_r": 86
+          },
+          "do_triangle_pairs": 7040,
+          "do_maximum_contact_depth_estimate_mm": 4.247603006660938,
+          "body_contact_parts": {
+            "Kusazuri_01_Front_L": {
+              "pairs": 70,
+              "max_depth_estimate_mm": 0.0
+            },
+            "Kusazuri_01_Front_L_Lacing": {
+              "pairs": 56,
+              "max_depth_estimate_mm": 1.5533741097897291
+            },
+            "Kusazuri_01_Front_R": {
+              "pairs": 290,
+              "max_depth_estimate_mm": 5.271753296256065
+            },
+            "Kusazuri_01_Front_R_Interior": {
+              "pairs": 220,
+              "max_depth_estimate_mm": 1.7513798084110022
+            },
+            "Kusazuri_01_Front_R_Lacing": {
+              "pairs": 75,
+              "max_depth_estimate_mm": 2.2724152076989412
+            },
+            "Kusazuri_01_Front_R_Trim": {
+              "pairs": 89,
+              "max_depth_estimate_mm": 4.782845266163349
+            },
+            "Kusazuri_01_Side_R": {
+              "pairs": 38,
+              "max_depth_estimate_mm": 1.0082833468914032
+            },
+            "Kusazuri_01_Side_R_Trim": {
+              "pairs": 48,
+              "max_depth_estimate_mm": 1.4547585742548108
+            }
+          }
+        },
+        {
+          "pose": "A_Idle:229",
+          "clip": "A_Idle",
+          "body_triangle_pairs": 2386,
+          "body_maximum_contact_depth_estimate_mm": 9.70732606947422,
+          "thigh_leg_triangle_pairs": 0,
+          "thigh_leg_maximum_contact_depth_estimate_mm": 0,
+          "hand_triangle_pairs": 2386,
+          "body_contact_bones": {
+            "index_02_l": 80,
+            "index_03_l": 164,
+            "thumb_03_l": 270,
+            "thumb_03_r": 249,
+            "middle_02_r": 259,
+            "index_02_r": 171,
+            "index_03_r": 317,
+            "middle_03_r": 76,
+            "ring_03_l": 121,
+            "pinky_03_l": 127,
+            "pinky_02_r": 234,
+            "ring_02_r": 258,
+            "ring_01_r": 1,
+            "pinky_03_r": 59
+          },
+          "do_triangle_pairs": 7637,
+          "do_maximum_contact_depth_estimate_mm": 2.675366122275591,
+          "body_contact_parts": {
+            "Kusazuri_01_Front_L": {
+              "pairs": 264,
+              "max_depth_estimate_mm": 4.305409267544746
+            },
+            "Kusazuri_01_Front_L_Interior": {
+              "pairs": 117,
+              "max_depth_estimate_mm": 6.166898179799318
+            },
+            "Kusazuri_01_Front_L_Lacing": {
+              "pairs": 57,
+              "max_depth_estimate_mm": 2.45568435639143
+            },
+            "Kusazuri_01_Front_L_Trim": {
+              "pairs": 76,
+              "max_depth_estimate_mm": 0.567391631193459
+            },
+            "Kusazuri_01_Front_R": {
+              "pairs": 580,
+              "max_depth_estimate_mm": 6.606455892324448
+            },
+            "Kusazuri_01_Front_R_Interior": {
+              "pairs": 248,
+              "max_depth_estimate_mm": 4.747995175421238
+            },
+            "Kusazuri_01_Front_R_Lacing": {
+              "pairs": 86,
+              "max_depth_estimate_mm": 1.7722739139571786
+            },
+            "Kusazuri_01_Front_R_Trim": {
+              "pairs": 158,
+              "max_depth_estimate_mm": 9.70732606947422
+            },
+            "Kusazuri_01_Side_L": {
+              "pairs": 73,
+              "max_depth_estimate_mm": 3.537544747814536
+            },
+            "Kusazuri_01_Side_L_Lacing": {
+              "pairs": 86,
+              "max_depth_estimate_mm": 2.2738587576895952
+            },
+            "Kusazuri_01_Side_L_Trim": {
+              "pairs": 89,
+              "max_depth_estimate_mm": 1.461976789869368
+            },
+            "Kusazuri_01_Side_R": {
+              "pairs": 220,
+              "max_depth_estimate_mm": 6.581978872418404
+            },
+            "Kusazuri_01_Side_R_Interior": {
+              "pairs": 203,
+              "max_depth_estimate_mm": 0.0
+            },
+            "Kusazuri_01_Side_R_Lacing": {
+              "pairs": 48,
+              "max_depth_estimate_mm": 2.2172341123223305
+            },
+            "Kusazuri_01_Side_R_Trim": {
+              "pairs": 81,
+              "max_depth_estimate_mm": 4.19465871527791
+            }
+          }
+        },
+        {
+          "pose": "A_Walk:1",
+          "clip": "A_Walk",
+          "body_triangle_pairs": 350,
+          "body_maximum_contact_depth_estimate_mm": 7.131801452487707,
+          "thigh_leg_triangle_pairs": 0,
+          "thigh_leg_maximum_contact_depth_estimate_mm": 0,
+          "hand_triangle_pairs": 350,
+          "body_contact_bones": {
+            "thumb_03_l": 311,
+            "thumb_02_l": 39
+          },
+          "do_triangle_pairs": 16602,
+          "do_maximum_contact_depth_estimate_mm": 2.156103728339076,
+          "body_contact_parts": {
+            "Kusazuri_01_Side_L": {
+              "pairs": 257,
+              "max_depth_estimate_mm": 7.131801452487707
+            },
+            "Kusazuri_01_Side_L_Interior": {
+              "pairs": 50,
+              "max_depth_estimate_mm": 0.0992610293906182
+            },
+            "Kusazuri_01_Side_L_Trim": {
+              "pairs": 43,
+              "max_depth_estimate_mm": 4.813358653336763
+            }
+          }
+        },
+        {
+          "pose": "A_Walk:12",
+          "clip": "A_Walk",
+          "body_triangle_pairs": 0,
+          "body_maximum_contact_depth_estimate_mm": 0.0,
+          "thigh_leg_triangle_pairs": 0,
+          "thigh_leg_maximum_contact_depth_estimate_mm": 0,
+          "hand_triangle_pairs": 0,
+          "body_contact_bones": {},
+          "do_triangle_pairs": 16923,
+          "do_maximum_contact_depth_estimate_mm": 2.012928482145071,
+          "body_contact_parts": {}
+        },
+        {
+          "pose": "A_Walk:24",
+          "clip": "A_Walk",
+          "body_triangle_pairs": 1278,
+          "body_maximum_contact_depth_estimate_mm": 7.723345886915922,
+          "thigh_leg_triangle_pairs": 0,
+          "thigh_leg_maximum_contact_depth_estimate_mm": 0,
+          "hand_triangle_pairs": 1278,
+          "body_contact_bones": {
+            "thumb_02_r": 180,
+            "thumb_03_r": 294,
+            "middle_02_r": 178,
+            "index_02_r": 204,
+            "index_03_r": 150,
+            "middle_03_r": 83,
+            "ring_03_r": 189
+          },
+          "do_triangle_pairs": 16857,
+          "do_maximum_contact_depth_estimate_mm": 2.092155860736966,
+          "body_contact_parts": {
+            "Kusazuri_01_Front_R": {
+              "pairs": 629,
+              "max_depth_estimate_mm": 7.723345886915922
+            },
+            "Kusazuri_01_Front_R_Interior": {
+              "pairs": 344,
+              "max_depth_estimate_mm": 6.73292949795723
+            },
+            "Kusazuri_01_Front_R_Lacing": {
+              "pairs": 4,
+              "max_depth_estimate_mm": 2.4199411273002625
+            },
+            "Kusazuri_01_Front_R_Trim": {
+              "pairs": 112,
+              "max_depth_estimate_mm": 4.018788225948811
+            },
+            "Kusazuri_01_Side_R": {
+              "pairs": 122,
+              "max_depth_estimate_mm": 5.860732402652502
+            },
+            "Kusazuri_01_Side_R_Trim": {
+              "pairs": 67,
+              "max_depth_estimate_mm": 1.2663677334785461
+            }
+          }
+        },
+        {
+          "pose": "A_Walk:36",
+          "clip": "A_Walk",
+          "body_triangle_pairs": 1643,
+          "body_maximum_contact_depth_estimate_mm": 8.370619267225266,
+          "thigh_leg_triangle_pairs": 0,
+          "thigh_leg_maximum_contact_depth_estimate_mm": 0,
+          "hand_triangle_pairs": 1643,
+          "body_contact_bones": {
+            "thumb_02_l": 69,
+            "thumb_03_l": 345,
+            "ring_01_l": 294,
+            "ring_02_l": 153,
+            "middle_01_l": 113,
+            "middle_02_l": 218,
+            "index_02_l": 355,
+            "pinky_02_l": 24,
+            "index_03_l": 63,
+            "pinky_01_l": 9
+          },
+          "do_triangle_pairs": 16584,
+          "do_maximum_contact_depth_estimate_mm": 6.983503233641386,
+          "body_contact_parts": {
+            "Kusazuri_01_Front_L": {
+              "pairs": 879,
+              "max_depth_estimate_mm": 8.370619267225266
+            },
+            "Kusazuri_01_Front_L_Interior": {
+              "pairs": 428,
+              "max_depth_estimate_mm": 4.832984879612923
+            },
+            "Kusazuri_01_Front_L_Lacing": {
+              "pairs": 217,
+              "max_depth_estimate_mm": 3.0951497610658407
+            },
+            "Kusazuri_01_Front_L_Trim": {
+              "pairs": 119,
+              "max_depth_estimate_mm": 2.7645996306091547
+            }
+          }
+        },
+        {
+          "pose": "A_Walk:47",
+          "clip": "A_Walk",
+          "body_triangle_pairs": 344,
+          "body_maximum_contact_depth_estimate_mm": 7.0186639204621315,
+          "thigh_leg_triangle_pairs": 0,
+          "thigh_leg_maximum_contact_depth_estimate_mm": 0,
+          "hand_triangle_pairs": 344,
+          "body_contact_bones": {
+            "thumb_03_l": 305,
+            "thumb_02_l": 39
+          },
+          "do_triangle_pairs": 16613,
+          "do_maximum_contact_depth_estimate_mm": 2.1535216365009546,
+          "body_contact_parts": {
+            "Kusazuri_01_Side_L": {
+              "pairs": 255,
+              "max_depth_estimate_mm": 7.0186639204621315
+            },
+            "Kusazuri_01_Side_L_Interior": {
+              "pairs": 46,
+              "max_depth_estimate_mm": 0.12672520824708045
+            },
+            "Kusazuri_01_Side_L_Trim": {
+              "pairs": 43,
+              "max_depth_estimate_mm": 4.923340864479542
+            }
+          }
+        },
+        {
+          "pose": "A_Run:1",
+          "clip": "A_Run",
+          "body_triangle_pairs": 0,
+          "body_maximum_contact_depth_estimate_mm": 0.0,
+          "thigh_leg_triangle_pairs": 0,
+          "thigh_leg_maximum_contact_depth_estimate_mm": 0,
+          "hand_triangle_pairs": 0,
+          "body_contact_bones": {},
+          "do_triangle_pairs": 18298,
+          "do_maximum_contact_depth_estimate_mm": 4.380336496978998,
+          "body_contact_parts": {}
+        },
+        {
+          "pose": "A_Run:14",
+          "clip": "A_Run",
+          "body_triangle_pairs": 40,
+          "body_maximum_contact_depth_estimate_mm": 1.9998420029878616,
+          "thigh_leg_triangle_pairs": 40,
+          "thigh_leg_maximum_contact_depth_estimate_mm": 1.9998420029878616,
+          "hand_triangle_pairs": 0,
+          "body_contact_bones": {
+            "thigh_twist_01_l": 40
+          },
+          "do_triangle_pairs": 11441,
+          "do_maximum_contact_depth_estimate_mm": 24.343151599168777,
+          "body_contact_parts": {
+            "Kusazuri_01_Front_L_Interior": {
+              "pairs": 40,
+              "max_depth_estimate_mm": 1.9998420029878616
+            }
+          }
+        },
+        {
+          "pose": "A_Run:28",
+          "clip": "A_Run",
+          "body_triangle_pairs": 1442,
+          "body_maximum_contact_depth_estimate_mm": 7.480033207684755,
+          "thigh_leg_triangle_pairs": 0,
+          "thigh_leg_maximum_contact_depth_estimate_mm": 0,
+          "hand_triangle_pairs": 1442,
+          "body_contact_bones": {
+            "pinky_metacarpal_l": 159,
+            "pinky_01_l": 430,
+            "pinky_02_l": 185,
+            "ring_02_l": 310,
+            "ring_03_l": 169,
+            "middle_03_l": 151,
+            "ring_01_l": 38
+          },
+          "do_triangle_pairs": 17458,
+          "do_maximum_contact_depth_estimate_mm": 2.545552095398307,
+          "body_contact_parts": {
+            "Kusazuri_01_Front_L": {
+              "pairs": 768,
+              "max_depth_estimate_mm": 7.480033207684755
+            },
+            "Kusazuri_01_Front_L_Interior": {
+              "pairs": 299,
+              "max_depth_estimate_mm": 6.036406382918358
+            },
+            "Kusazuri_01_Front_L_Lacing": {
+              "pairs": 124,
+              "max_depth_estimate_mm": 2.8033768758177757
+            },
+            "Kusazuri_01_Front_L_Trim": {
+              "pairs": 251,
+              "max_depth_estimate_mm": 4.768547601997852
+            }
+          }
+        },
+        {
+          "pose": "A_Run:42",
+          "clip": "A_Run",
+          "body_triangle_pairs": 0,
+          "body_maximum_contact_depth_estimate_mm": 0.0,
+          "thigh_leg_triangle_pairs": 0,
+          "thigh_leg_maximum_contact_depth_estimate_mm": 0,
+          "hand_triangle_pairs": 0,
+          "body_contact_bones": {},
+          "do_triangle_pairs": 12688,
+          "do_maximum_contact_depth_estimate_mm": 3.0002451967447996,
+          "body_contact_parts": {}
+        },
+        {
+          "pose": "A_Run:55",
+          "clip": "A_Run",
+          "body_triangle_pairs": 0,
+          "body_maximum_contact_depth_estimate_mm": 0.0,
+          "thigh_leg_triangle_pairs": 0,
+          "thigh_leg_maximum_contact_depth_estimate_mm": 0,
+          "hand_triangle_pairs": 0,
+          "body_contact_bones": {},
+          "do_triangle_pairs": 18025,
+          "do_maximum_contact_depth_estimate_mm": 1.9884370267391205,
+          "body_contact_parts": {}
+        },
+        {
+          "pose": "A_Attack:1",
+          "clip": "A_Attack",
+          "body_triangle_pairs": 0,
+          "body_maximum_contact_depth_estimate_mm": 0.0,
+          "thigh_leg_triangle_pairs": 0,
+          "thigh_leg_maximum_contact_depth_estimate_mm": 0,
+          "hand_triangle_pairs": 0,
+          "body_contact_bones": {},
+          "do_triangle_pairs": 4408,
+          "do_maximum_contact_depth_estimate_mm": 1.9457772141322494,
+          "body_contact_parts": {}
+        },
+        {
+          "pose": "A_Attack:9",
+          "clip": "A_Attack",
+          "body_triangle_pairs": 0,
+          "body_maximum_contact_depth_estimate_mm": 0.0,
+          "thigh_leg_triangle_pairs": 0,
+          "thigh_leg_maximum_contact_depth_estimate_mm": 0,
+          "hand_triangle_pairs": 0,
+          "body_contact_bones": {},
+          "do_triangle_pairs": 5109,
+          "do_maximum_contact_depth_estimate_mm": 1.8299432704225183,
+          "body_contact_parts": {}
+        },
+        {
+          "pose": "A_Attack:16",
+          "clip": "A_Attack",
+          "body_triangle_pairs": 0,
+          "body_maximum_contact_depth_estimate_mm": 0.0,
+          "thigh_leg_triangle_pairs": 0,
+          "thigh_leg_maximum_contact_depth_estimate_mm": 0,
+          "hand_triangle_pairs": 0,
+          "body_contact_bones": {},
+          "do_triangle_pairs": 3361,
+          "do_maximum_contact_depth_estimate_mm": 1.8893434898927808,
+          "body_contact_parts": {}
+        },
+        {
+          "pose": "A_Attack:24",
+          "clip": "A_Attack",
+          "body_triangle_pairs": 0,
+          "body_maximum_contact_depth_estimate_mm": 0.0,
+          "thigh_leg_triangle_pairs": 0,
+          "thigh_leg_maximum_contact_depth_estimate_mm": 0,
+          "hand_triangle_pairs": 0,
+          "body_contact_bones": {},
+          "do_triangle_pairs": 6712,
+          "do_maximum_contact_depth_estimate_mm": 1.9925215747207403,
+          "body_contact_parts": {}
+        },
+        {
+          "pose": "A_Attack:32",
+          "clip": "A_Attack",
+          "body_triangle_pairs": 0,
+          "body_maximum_contact_depth_estimate_mm": 0.0,
+          "thigh_leg_triangle_pairs": 0,
+          "thigh_leg_maximum_contact_depth_estimate_mm": 0,
+          "hand_triangle_pairs": 0,
+          "body_contact_bones": {},
+          "do_triangle_pairs": 7588,
+          "do_maximum_contact_depth_estimate_mm": 1.986759016290307,
+          "body_contact_parts": {}
+        }
+      ]
+    },
+    {
+      "report": "motion-validation-quick-probe-cardinal-fronts.json",
+      "source_sha256": "04a164b91cf3bf55372eee5708a59072ddaaadfc4db66007df00cf616fc5695c",
+      "controller_sha256": "a0288a1d845b3d63191f73bf99c62fc569ab30dbfd5c78ef152c3e0764b0c56f",
+      "review_script_sha256": "3e1e2b5de55f24abe163ae0aec3c34b6f4b8e83638712ae62426392ec33037b4",
+      "controller_variant": "experimental cardinal Front_L/R, .05 rad margin",
+      "source_file_unchanged": true,
+      "rigidity_preserved": true,
+      "controller_targets_reproduced": true,
+      "checks": [
+        {
+          "pose": "neutral",
+          "clip": null,
+          "body_triangle_pairs": 0,
+          "body_maximum_contact_depth_estimate_mm": 0.0,
+          "thigh_leg_triangle_pairs": 0,
+          "thigh_leg_maximum_contact_depth_estimate_mm": 0,
+          "hand_triangle_pairs": 0,
+          "body_contact_bones": {},
+          "do_triangle_pairs": 1959,
+          "do_maximum_contact_depth_estimate_mm": 1.4915337087586522,
+          "body_contact_parts": {}
+        },
+        {
+          "pose": "wide-step",
+          "clip": null,
+          "body_triangle_pairs": 0,
+          "body_maximum_contact_depth_estimate_mm": 0.0,
+          "thigh_leg_triangle_pairs": 0,
+          "thigh_leg_maximum_contact_depth_estimate_mm": 0,
+          "hand_triangle_pairs": 0,
+          "body_contact_bones": {},
+          "do_triangle_pairs": 2056,
+          "do_maximum_contact_depth_estimate_mm": 5.5258315987885,
+          "body_contact_parts": {}
+        },
+        {
+          "pose": "knee-lift",
+          "clip": null,
+          "body_triangle_pairs": 1432,
+          "body_maximum_contact_depth_estimate_mm": 16.368504613637924,
+          "thigh_leg_triangle_pairs": 1432,
+          "thigh_leg_maximum_contact_depth_estimate_mm": 16.368504613637924,
+          "hand_triangle_pairs": 0,
+          "body_contact_bones": {
+            "thigh_twist_01_l": 950,
+            "thigh_twist_02_l": 482
+          },
+          "do_triangle_pairs": 2734,
+          "do_maximum_contact_depth_estimate_mm": 1.61167758051306,
+          "body_contact_parts": {
+            "Kusazuri_01_Belt": {
+              "pairs": 154,
+              "max_depth_estimate_mm": 16.368504613637924
+            },
+            "Kusazuri_01_Front_Center": {
+              "pairs": 20,
+              "max_depth_estimate_mm": 1.3883366482332349
+            },
+            "Kusazuri_01_Front_Center_Interior": {
+              "pairs": 138,
+              "max_depth_estimate_mm": 2.187826670706272
+            },
+            "Kusazuri_01_Front_L": {
+              "pairs": 343,
+              "max_depth_estimate_mm": 5.675461143255234
+            },
+            "Kusazuri_01_Front_L_Interior": {
+              "pairs": 136,
+              "max_depth_estimate_mm": 7.160500157624483
+            },
+            "Kusazuri_01_Front_L_Lacing": {
+              "pairs": 104,
+              "max_depth_estimate_mm": 2.331807743757963
+            },
+            "Kusazuri_01_Front_L_Trim": {
+              "pairs": 140,
+              "max_depth_estimate_mm": 3.6791819147765636
+            },
+            "Kusazuri_01_Lacing": {
+              "pairs": 397,
+              "max_depth_estimate_mm": 3.752464195713401
+            }
+          }
+        },
+        {
+          "pose": "crouch",
+          "clip": null,
+          "body_triangle_pairs": 0,
+          "body_maximum_contact_depth_estimate_mm": 0.0,
+          "thigh_leg_triangle_pairs": 0,
+          "thigh_leg_maximum_contact_depth_estimate_mm": 0,
+          "hand_triangle_pairs": 0,
+          "body_contact_bones": {},
+          "do_triangle_pairs": 9959,
+          "do_maximum_contact_depth_estimate_mm": 4.672303795814514,
+          "body_contact_parts": {}
+        },
+        {
+          "pose": "hip-rotation",
+          "clip": null,
+          "body_triangle_pairs": 0,
+          "body_maximum_contact_depth_estimate_mm": 0.0,
+          "thigh_leg_triangle_pairs": 0,
+          "thigh_leg_maximum_contact_depth_estimate_mm": 0,
+          "hand_triangle_pairs": 0,
+          "body_contact_bones": {},
+          "do_triangle_pairs": 1961,
+          "do_maximum_contact_depth_estimate_mm": 1.4915833016857505,
+          "body_contact_parts": {}
+        },
+        {
+          "pose": "A_Idle:1",
+          "clip": "A_Idle",
+          "body_triangle_pairs": 1622,
+          "body_maximum_contact_depth_estimate_mm": 8.05875938385725,
+          "thigh_leg_triangle_pairs": 0,
+          "thigh_leg_maximum_contact_depth_estimate_mm": 0,
+          "hand_triangle_pairs": 1622,
+          "body_contact_bones": {
+            "middle_03_r": 531,
+            "index_03_r": 206,
+            "ring_03_r": 87,
+            "middle_02_r": 11,
+            "ring_03_l": 121,
+            "pinky_03_l": 116,
+            "pinky_02_r": 230,
+            "ring_02_r": 258,
+            "ring_01_r": 1,
+            "pinky_03_r": 61
+          },
+          "do_triangle_pairs": 7681,
+          "do_maximum_contact_depth_estimate_mm": 3.747862996533513,
+          "body_contact_parts": {
+            "Kusazuri_01_Front_R": {
+              "pairs": 385,
+              "max_depth_estimate_mm": 8.05875938385725
+            },
+            "Kusazuri_01_Front_R_Interior": {
+              "pairs": 195,
+              "max_depth_estimate_mm": 5.051787011325359
+            },
+            "Kusazuri_01_Front_R_Lacing": {
+              "pairs": 77,
+              "max_depth_estimate_mm": 1.7587722977623343
+            },
+            "Kusazuri_01_Front_R_Trim": {
+              "pairs": 178,
+              "max_depth_estimate_mm": 6.814185995608568
+            },
+            "Kusazuri_01_Side_L": {
+              "pairs": 73,
+              "max_depth_estimate_mm": 3.5464235115796328
+            },
+            "Kusazuri_01_Side_L_Lacing": {
+              "pairs": 73,
+              "max_depth_estimate_mm": 2.273057121783495
+            },
+            "Kusazuri_01_Side_L_Trim": {
+              "pairs": 91,
+              "max_depth_estimate_mm": 1.539864344522357
+            },
+            "Kusazuri_01_Side_R": {
+              "pairs": 220,
+              "max_depth_estimate_mm": 6.645468063652515
+            },
+            "Kusazuri_01_Side_R_Interior": {
+              "pairs": 201,
+              "max_depth_estimate_mm": 0.0
+            },
+            "Kusazuri_01_Side_R_Lacing": {
+              "pairs": 48,
+              "max_depth_estimate_mm": 2.1334122866392136
+            },
+            "Kusazuri_01_Side_R_Trim": {
+              "pairs": 81,
+              "max_depth_estimate_mm": 4.128042608499527
+            }
+          }
+        },
+        {
+          "pose": "A_Idle:58",
+          "clip": "A_Idle",
+          "body_triangle_pairs": 759,
+          "body_maximum_contact_depth_estimate_mm": 5.367603152990341,
+          "thigh_leg_triangle_pairs": 0,
+          "thigh_leg_maximum_contact_depth_estimate_mm": 0,
+          "hand_triangle_pairs": 759,
+          "body_contact_bones": {
+            "ring_03_r": 128,
+            "middle_03_r": 288,
+            "pinky_03_r": 343
+          },
+          "do_triangle_pairs": 7483,
+          "do_maximum_contact_depth_estimate_mm": 2.3574226070195436,
+          "body_contact_parts": {
+            "Kusazuri_01_Front_R": {
+              "pairs": 296,
+              "max_depth_estimate_mm": 5.367603152990341
+            },
+            "Kusazuri_01_Front_R_Lacing": {
+              "pairs": 60,
+              "max_depth_estimate_mm": 1.6632818151265383
+            },
+            "Kusazuri_01_Front_R_Trim": {
+              "pairs": 60,
+              "max_depth_estimate_mm": 0.0
+            },
+            "Kusazuri_01_Side_R": {
+              "pairs": 137,
+              "max_depth_estimate_mm": 2.506472636014223
+            },
+            "Kusazuri_01_Side_R_Interior": {
+              "pairs": 156,
+              "max_depth_estimate_mm": 0.0
+            },
+            "Kusazuri_01_Side_R_Trim": {
+              "pairs": 50,
+              "max_depth_estimate_mm": 0.0
+            }
+          }
+        },
+        {
+          "pose": "A_Idle:115",
+          "clip": "A_Idle",
+          "body_triangle_pairs": 1648,
+          "body_maximum_contact_depth_estimate_mm": 8.242310956120491,
+          "thigh_leg_triangle_pairs": 0,
+          "thigh_leg_maximum_contact_depth_estimate_mm": 0,
+          "hand_triangle_pairs": 1648,
+          "body_contact_bones": {
+            "middle_02_r": 154,
+            "middle_03_r": 152,
+            "index_03_r": 403,
+            "thumb_03_r": 62,
+            "ring_03_l": 28,
+            "pinky_02_r": 189,
+            "pinky_01_r": 82,
+            "ring_01_r": 365,
+            "ring_02_r": 213
+          },
+          "do_triangle_pairs": 7680,
+          "do_maximum_contact_depth_estimate_mm": 3.8145293947309256,
+          "body_contact_parts": {
+            "Kusazuri_01_Front_R": {
+              "pairs": 314,
+              "max_depth_estimate_mm": 8.080491796135902
+            },
+            "Kusazuri_01_Front_R_Interior": {
+              "pairs": 232,
+              "max_depth_estimate_mm": 8.242310956120491
+            },
+            "Kusazuri_01_Front_R_Lacing": {
+              "pairs": 46,
+              "max_depth_estimate_mm": 2.575616119429469
+            },
+            "Kusazuri_01_Front_R_Trim": {
+              "pairs": 179,
+              "max_depth_estimate_mm": 5.196869373321533
+            },
+            "Kusazuri_01_Side_L_Lacing": {
+              "pairs": 28,
+              "max_depth_estimate_mm": 0.7184728165157139
+            },
+            "Kusazuri_01_Side_R": {
+              "pairs": 350,
+              "max_depth_estimate_mm": 6.052267737686634
+            },
+            "Kusazuri_01_Side_R_Interior": {
+              "pairs": 261,
+              "max_depth_estimate_mm": 0.0
+            },
+            "Kusazuri_01_Side_R_Lacing": {
+              "pairs": 84,
+              "max_depth_estimate_mm": 2.4352618493139744
+            },
+            "Kusazuri_01_Side_R_Trim": {
+              "pairs": 154,
+              "max_depth_estimate_mm": 3.3172632101923227
+            }
+          }
+        },
+        {
+          "pose": "A_Idle:172",
+          "clip": "A_Idle",
+          "body_triangle_pairs": 86,
+          "body_maximum_contact_depth_estimate_mm": 1.4547687023878098,
+          "thigh_leg_triangle_pairs": 0,
+          "thigh_leg_maximum_contact_depth_estimate_mm": 0,
+          "hand_triangle_pairs": 86,
+          "body_contact_bones": {
+            "pinky_03_r": 86
+          },
+          "do_triangle_pairs": 7040,
+          "do_maximum_contact_depth_estimate_mm": 4.247603006660938,
+          "body_contact_parts": {
+            "Kusazuri_01_Side_R": {
+              "pairs": 38,
+              "max_depth_estimate_mm": 1.0082847438752651
+            },
+            "Kusazuri_01_Side_R_Trim": {
+              "pairs": 48,
+              "max_depth_estimate_mm": 1.4547687023878098
+            }
+          }
+        },
+        {
+          "pose": "A_Idle:229",
+          "clip": "A_Idle",
+          "body_triangle_pairs": 1636,
+          "body_maximum_contact_depth_estimate_mm": 7.99426157027483,
+          "thigh_leg_triangle_pairs": 0,
+          "thigh_leg_maximum_contact_depth_estimate_mm": 0,
+          "hand_triangle_pairs": 1636,
+          "body_contact_bones": {
+            "middle_03_r": 533,
+            "index_03_r": 209,
+            "ring_03_r": 85,
+            "middle_02_r": 9,
+            "ring_03_l": 121,
+            "pinky_03_l": 127,
+            "pinky_02_r": 234,
+            "ring_02_r": 258,
+            "ring_01_r": 1,
+            "pinky_03_r": 59
+          },
+          "do_triangle_pairs": 7661,
+          "do_maximum_contact_depth_estimate_mm": 2.675366122275591,
+          "body_contact_parts": {
+            "Kusazuri_01_Front_R": {
+              "pairs": 390,
+              "max_depth_estimate_mm": 7.99426157027483
+            },
+            "Kusazuri_01_Front_R_Interior": {
+              "pairs": 194,
+              "max_depth_estimate_mm": 5.102174356579781
+            },
+            "Kusazuri_01_Front_R_Lacing": {
+              "pairs": 75,
+              "max_depth_estimate_mm": 1.7471200553700328
+            },
+            "Kusazuri_01_Front_R_Trim": {
+              "pairs": 177,
+              "max_depth_estimate_mm": 6.763980723917484
+            },
+            "Kusazuri_01_Side_L": {
+              "pairs": 73,
+              "max_depth_estimate_mm": 3.5374260041862726
+            },
+            "Kusazuri_01_Side_L_Lacing": {
+              "pairs": 86,
+              "max_depth_estimate_mm": 2.2737972903996706
+            },
+            "Kusazuri_01_Side_L_Trim": {
+              "pairs": 89,
+              "max_depth_estimate_mm": 1.4620029833167791
+            },
+            "Kusazuri_01_Side_R": {
+              "pairs": 220,
+              "max_depth_estimate_mm": 6.5819877199828625
+            },
+            "Kusazuri_01_Side_R_Interior": {
+              "pairs": 203,
+              "max_depth_estimate_mm": 0.0
+            },
+            "Kusazuri_01_Side_R_Lacing": {
+              "pairs": 48,
+              "max_depth_estimate_mm": 2.2171693854033947
+            },
+            "Kusazuri_01_Side_R_Trim": {
+              "pairs": 81,
+              "max_depth_estimate_mm": 4.1946470737457275
+            }
+          }
+        },
+        {
+          "pose": "A_Walk:1",
+          "clip": "A_Walk",
+          "body_triangle_pairs": 350,
+          "body_maximum_contact_depth_estimate_mm": 7.131817284971476,
+          "thigh_leg_triangle_pairs": 0,
+          "thigh_leg_maximum_contact_depth_estimate_mm": 0,
+          "hand_triangle_pairs": 350,
+          "body_contact_bones": {
+            "thumb_03_l": 311,
+            "thumb_02_l": 39
+          },
+          "do_triangle_pairs": 16424,
+          "do_maximum_contact_depth_estimate_mm": 2.156103728339076,
+          "body_contact_parts": {
+            "Kusazuri_01_Side_L": {
+              "pairs": 257,
+              "max_depth_estimate_mm": 7.131817284971476
+            },
+            "Kusazuri_01_Side_L_Interior": {
+              "pairs": 50,
+              "max_depth_estimate_mm": 0.09919524745782837
+            },
+            "Kusazuri_01_Side_L_Trim": {
+              "pairs": 43,
+              "max_depth_estimate_mm": 4.813307896256447
+            }
+          }
+        },
+        {
+          "pose": "A_Walk:12",
+          "clip": "A_Walk",
+          "body_triangle_pairs": 0,
+          "body_maximum_contact_depth_estimate_mm": 0.0,
+          "thigh_leg_triangle_pairs": 0,
+          "thigh_leg_maximum_contact_depth_estimate_mm": 0,
+          "hand_triangle_pairs": 0,
+          "body_contact_bones": {},
+          "do_triangle_pairs": 16740,
+          "do_maximum_contact_depth_estimate_mm": 2.0343302749097347,
+          "body_contact_parts": {}
+        },
+        {
+          "pose": "A_Walk:24",
+          "clip": "A_Walk",
+          "body_triangle_pairs": 640,
+          "body_maximum_contact_depth_estimate_mm": 7.113122381269932,
+          "thigh_leg_triangle_pairs": 0,
+          "thigh_leg_maximum_contact_depth_estimate_mm": 0,
+          "hand_triangle_pairs": 640,
+          "body_contact_bones": {
+            "thumb_03_r": 361,
+            "thumb_02_r": 90,
+            "ring_03_r": 189
+          },
+          "do_triangle_pairs": 16722,
+          "do_maximum_contact_depth_estimate_mm": 2.092155860736966,
+          "body_contact_parts": {
+            "Kusazuri_01_Front_R": {
+              "pairs": 168,
+              "max_depth_estimate_mm": 7.113122381269932
+            },
+            "Kusazuri_01_Front_R_Interior": {
+              "pairs": 122,
+              "max_depth_estimate_mm": 4.461577162146568
+            },
+            "Kusazuri_01_Front_R_Lacing": {
+              "pairs": 54,
+              "max_depth_estimate_mm": 1.3246848247945309
+            },
+            "Kusazuri_01_Front_R_Trim": {
+              "pairs": 107,
+              "max_depth_estimate_mm": 4.544255323708057
+            },
+            "Kusazuri_01_Side_R": {
+              "pairs": 122,
+              "max_depth_estimate_mm": 5.860591307282448
+            },
+            "Kusazuri_01_Side_R_Trim": {
+              "pairs": 67,
+              "max_depth_estimate_mm": 1.266183564439416
+            }
+          }
+        },
+        {
+          "pose": "A_Walk:36",
+          "clip": "A_Walk",
+          "body_triangle_pairs": 821,
+          "body_maximum_contact_depth_estimate_mm": 7.8346021473407745,
+          "thigh_leg_triangle_pairs": 0,
+          "thigh_leg_maximum_contact_depth_estimate_mm": 0,
+          "hand_triangle_pairs": 821,
+          "body_contact_bones": {
+            "thumb_02_l": 227,
+            "thumb_03_l": 256,
+            "index_02_l": 281,
+            "index_03_l": 48,
+            "thumb_01_l": 9
+          },
+          "do_triangle_pairs": 16391,
+          "do_maximum_contact_depth_estimate_mm": 6.983503233641386,
+          "body_contact_parts": {
+            "Kusazuri_01_Front_L": {
+              "pairs": 424,
+              "max_depth_estimate_mm": 7.19464011490345
+            },
+            "Kusazuri_01_Front_L_Interior": {
+              "pairs": 265,
+              "max_depth_estimate_mm": 7.8346021473407745
+            },
+            "Kusazuri_01_Front_L_Lacing": {
+              "pairs": 44,
+              "max_depth_estimate_mm": 0.8347788825631142
+            },
+            "Kusazuri_01_Front_L_Trim": {
+              "pairs": 88,
+              "max_depth_estimate_mm": 6.51905732229352
+            }
+          }
+        },
+        {
+          "pose": "A_Walk:47",
+          "clip": "A_Walk",
+          "body_triangle_pairs": 344,
+          "body_maximum_contact_depth_estimate_mm": 7.0186639204621315,
+          "thigh_leg_triangle_pairs": 0,
+          "thigh_leg_maximum_contact_depth_estimate_mm": 0,
+          "hand_triangle_pairs": 344,
+          "body_contact_bones": {
+            "thumb_03_l": 305,
+            "thumb_02_l": 39
+          },
+          "do_triangle_pairs": 16424,
+          "do_maximum_contact_depth_estimate_mm": 2.1535216365009546,
+          "body_contact_parts": {
+            "Kusazuri_01_Side_L": {
+              "pairs": 255,
+              "max_depth_estimate_mm": 7.0186639204621315
+            },
+            "Kusazuri_01_Side_L_Interior": {
+              "pairs": 46,
+              "max_depth_estimate_mm": 0.12679507199209183
+            },
+            "Kusazuri_01_Side_L_Trim": {
+              "pairs": 43,
+              "max_depth_estimate_mm": 4.923327825963497
+            }
+          }
+        },
+        {
+          "pose": "A_Run:1",
+          "clip": "A_Run",
+          "body_triangle_pairs": 0,
+          "body_maximum_contact_depth_estimate_mm": 0.0,
+          "thigh_leg_triangle_pairs": 0,
+          "thigh_leg_maximum_contact_depth_estimate_mm": 0,
+          "hand_triangle_pairs": 0,
+          "body_contact_bones": {},
+          "do_triangle_pairs": 18560,
+          "do_maximum_contact_depth_estimate_mm": 4.380336496978998,
+          "body_contact_parts": {}
+        },
+        {
+          "pose": "A_Run:14",
+          "clip": "A_Run",
+          "body_triangle_pairs": 0,
+          "body_maximum_contact_depth_estimate_mm": 0.0,
+          "thigh_leg_triangle_pairs": 0,
+          "thigh_leg_maximum_contact_depth_estimate_mm": 0,
+          "hand_triangle_pairs": 0,
+          "body_contact_bones": {},
+          "do_triangle_pairs": 12227,
+          "do_maximum_contact_depth_estimate_mm": 12.538057751953602,
+          "body_contact_parts": {}
+        },
+        {
+          "pose": "A_Run:28",
+          "clip": "A_Run",
+          "body_triangle_pairs": 998,
+          "body_maximum_contact_depth_estimate_mm": 7.028458174318075,
+          "thigh_leg_triangle_pairs": 0,
+          "thigh_leg_maximum_contact_depth_estimate_mm": 0,
+          "hand_triangle_pairs": 998,
+          "body_contact_bones": {
+            "pinky_02_l": 203,
+            "pinky_03_l": 202,
+            "ring_02_l": 70,
+            "ring_03_l": 344,
+            "middle_03_l": 179
+          },
+          "do_triangle_pairs": 17132,
+          "do_maximum_contact_depth_estimate_mm": 7.078538648784161,
+          "body_contact_parts": {
+            "Kusazuri_01_Front_L": {
+              "pairs": 489,
+              "max_depth_estimate_mm": 7.028458174318075
+            },
+            "Kusazuri_01_Front_L_Interior": {
+              "pairs": 243,
+              "max_depth_estimate_mm": 0.682215322740376
+            },
+            "Kusazuri_01_Front_L_Lacing": {
+              "pairs": 137,
+              "max_depth_estimate_mm": 2.908044960349798
+            },
+            "Kusazuri_01_Front_L_Trim": {
+              "pairs": 129,
+              "max_depth_estimate_mm": 4.694673232734203
+            }
+          }
+        },
+        {
+          "pose": "A_Run:42",
+          "clip": "A_Run",
+          "body_triangle_pairs": 0,
+          "body_maximum_contact_depth_estimate_mm": 0.0,
+          "thigh_leg_triangle_pairs": 0,
+          "thigh_leg_maximum_contact_depth_estimate_mm": 0,
+          "hand_triangle_pairs": 0,
+          "body_contact_bones": {},
+          "do_triangle_pairs": 12818,
+          "do_maximum_contact_depth_estimate_mm": 3.0002451967447996,
+          "body_contact_parts": {}
+        },
+        {
+          "pose": "A_Run:55",
+          "clip": "A_Run",
+          "body_triangle_pairs": 0,
+          "body_maximum_contact_depth_estimate_mm": 0.0,
+          "thigh_leg_triangle_pairs": 0,
+          "thigh_leg_maximum_contact_depth_estimate_mm": 0,
+          "hand_triangle_pairs": 0,
+          "body_contact_bones": {},
+          "do_triangle_pairs": 18256,
+          "do_maximum_contact_depth_estimate_mm": 1.9841452594846487,
+          "body_contact_parts": {}
+        },
+        {
+          "pose": "A_Attack:1",
+          "clip": "A_Attack",
+          "body_triangle_pairs": 674,
+          "body_maximum_contact_depth_estimate_mm": 15.24229533970356,
+          "thigh_leg_triangle_pairs": 674,
+          "thigh_leg_maximum_contact_depth_estimate_mm": 15.24229533970356,
+          "hand_triangle_pairs": 0,
+          "body_contact_bones": {
+            "thigh_twist_01_l": 435,
+            "thigh_twist_02_l": 239
+          },
+          "do_triangle_pairs": 4408,
+          "do_maximum_contact_depth_estimate_mm": 1.9457772141322494,
+          "body_contact_parts": {
+            "Kusazuri_01_Front_L": {
+              "pairs": 223,
+              "max_depth_estimate_mm": 6.868503056466579
+            },
+            "Kusazuri_01_Front_L_Interior": {
+              "pairs": 152,
+              "max_depth_estimate_mm": 15.24229533970356
+            },
+            "Kusazuri_01_Front_L_Lacing": {
+              "pairs": 162,
+              "max_depth_estimate_mm": 2.455282723531127
+            },
+            "Kusazuri_01_Front_L_Trim": {
+              "pairs": 137,
+              "max_depth_estimate_mm": 13.8615183532238
+            }
+          }
+        },
+        {
+          "pose": "A_Attack:9",
+          "clip": "A_Attack",
+          "body_triangle_pairs": 573,
+          "body_maximum_contact_depth_estimate_mm": 17.656758427619934,
+          "thigh_leg_triangle_pairs": 573,
+          "thigh_leg_maximum_contact_depth_estimate_mm": 17.656758427619934,
+          "hand_triangle_pairs": 0,
+          "body_contact_bones": {
+            "thigh_twist_01_l": 326,
+            "thigh_twist_02_l": 247
+          },
+          "do_triangle_pairs": 5109,
+          "do_maximum_contact_depth_estimate_mm": 1.8299432704225183,
+          "body_contact_parts": {
+            "Kusazuri_01_Front_L": {
+              "pairs": 213,
+              "max_depth_estimate_mm": 7.31816329061985
+            },
+            "Kusazuri_01_Front_L_Interior": {
+              "pairs": 156,
+              "max_depth_estimate_mm": 17.656758427619934
+            },
+            "Kusazuri_01_Front_L_Lacing": {
+              "pairs": 110,
+              "max_depth_estimate_mm": 1.599030802026391
+            },
+            "Kusazuri_01_Front_L_Trim": {
+              "pairs": 94,
+              "max_depth_estimate_mm": 12.717566452920437
+            }
+          }
+        },
+        {
+          "pose": "A_Attack:16",
+          "clip": "A_Attack",
+          "body_triangle_pairs": 527,
+          "body_maximum_contact_depth_estimate_mm": 15.185553580522537,
+          "thigh_leg_triangle_pairs": 527,
+          "thigh_leg_maximum_contact_depth_estimate_mm": 15.185553580522537,
+          "hand_triangle_pairs": 0,
+          "body_contact_bones": {
+            "thigh_twist_01_r": 428,
+            "thigh_twist_02_r": 99
+          },
+          "do_triangle_pairs": 3361,
+          "do_maximum_contact_depth_estimate_mm": 1.8893434898927808,
+          "body_contact_parts": {
+            "Kusazuri_01_Front_R": {
+              "pairs": 165,
+              "max_depth_estimate_mm": 6.985722575336695
+            },
+            "Kusazuri_01_Front_R_Interior": {
+              "pairs": 138,
+              "max_depth_estimate_mm": 15.185553580522537
+            },
+            "Kusazuri_01_Front_R_Lacing": {
+              "pairs": 126,
+              "max_depth_estimate_mm": 1.7686287174001336
+            },
+            "Kusazuri_01_Front_R_Trim": {
+              "pairs": 98,
+              "max_depth_estimate_mm": 14.184923842549324
+            }
+          }
+        },
+        {
+          "pose": "A_Attack:24",
+          "clip": "A_Attack",
+          "body_triangle_pairs": 316,
+          "body_maximum_contact_depth_estimate_mm": 8.27780645340681,
+          "thigh_leg_triangle_pairs": 316,
+          "thigh_leg_maximum_contact_depth_estimate_mm": 8.27780645340681,
+          "hand_triangle_pairs": 0,
+          "body_contact_bones": {
+            "thigh_twist_01_l": 99,
+            "thigh_twist_02_l": 217
+          },
+          "do_triangle_pairs": 7113,
+          "do_maximum_contact_depth_estimate_mm": 1.9925215747207403,
+          "body_contact_parts": {
+            "Kusazuri_01_Front_L": {
+              "pairs": 125,
+              "max_depth_estimate_mm": 4.662307910621166
+            },
+            "Kusazuri_01_Front_L_Interior": {
+              "pairs": 152,
+              "max_depth_estimate_mm": 8.27780645340681
+            },
+            "Kusazuri_01_Front_L_Trim": {
+              "pairs": 39,
+              "max_depth_estimate_mm": 1.8457862315699458
+            }
+          }
+        },
+        {
+          "pose": "A_Attack:32",
+          "clip": "A_Attack",
+          "body_triangle_pairs": 0,
+          "body_maximum_contact_depth_estimate_mm": 0.0,
+          "thigh_leg_triangle_pairs": 0,
+          "thigh_leg_maximum_contact_depth_estimate_mm": 0,
+          "hand_triangle_pairs": 0,
+          "body_contact_bones": {},
+          "do_triangle_pairs": 7926,
+          "do_maximum_contact_depth_estimate_mm": 1.986759016290307,
+          "body_contact_parts": {}
+        }
+      ]
+    },
+    {
+      "report": "motion-validation-quick-probe-gated-fronts.json",
+      "source_sha256": "04a164b91cf3bf55372eee5708a59072ddaaadfc4db66007df00cf616fc5695c",
+      "controller_sha256": "a0288a1d845b3d63191f73bf99c62fc569ab30dbfd5c78ef152c3e0764b0c56f",
+      "review_script_sha256": "1dd10961814e5b8226b247f200e07757367b4552d2f8d30ec849f8d00944b0a9",
+      "controller_variant": "experimental Front_L/R radial-to-cardinal smoothstep sagittal 50-75 degrees, all-panel .02 rad margin",
+      "source_file_unchanged": true,
+      "rigidity_preserved": true,
+      "controller_targets_reproduced": true,
+      "checks": [
+        {
+          "pose": "neutral",
+          "clip": null,
+          "body_triangle_pairs": 0,
+          "body_maximum_contact_depth_estimate_mm": 0.0,
+          "thigh_leg_triangle_pairs": 0,
+          "thigh_leg_maximum_contact_depth_estimate_mm": 0,
+          "hand_triangle_pairs": 0,
+          "body_contact_bones": {},
+          "do_triangle_pairs": 1959,
+          "do_maximum_contact_depth_estimate_mm": 1.4915337087586522,
+          "body_contact_parts": {}
+        },
+        {
+          "pose": "wide-step",
+          "clip": null,
+          "body_triangle_pairs": 0,
+          "body_maximum_contact_depth_estimate_mm": 0.0,
+          "thigh_leg_triangle_pairs": 0,
+          "thigh_leg_maximum_contact_depth_estimate_mm": 0,
+          "hand_triangle_pairs": 0,
+          "body_contact_bones": {},
+          "do_triangle_pairs": 1959,
+          "do_maximum_contact_depth_estimate_mm": 1.4915337087586522,
+          "body_contact_parts": {}
+        },
+        {
+          "pose": "knee-lift",
+          "clip": null,
+          "body_triangle_pairs": 1237,
+          "body_maximum_contact_depth_estimate_mm": 16.368504613637924,
+          "thigh_leg_triangle_pairs": 1237,
+          "thigh_leg_maximum_contact_depth_estimate_mm": 16.368504613637924,
+          "hand_triangle_pairs": 0,
+          "body_contact_bones": {
+            "thigh_twist_01_l": 884,
+            "thigh_twist_02_l": 353
+          },
+          "do_triangle_pairs": 2782,
+          "do_maximum_contact_depth_estimate_mm": 1.6081033973023295,
+          "body_contact_parts": {
+            "Kusazuri_01_Belt": {
+              "pairs": 154,
+              "max_depth_estimate_mm": 16.368504613637924
+            },
+            "Kusazuri_01_Front_Center_Interior": {
+              "pairs": 52,
+              "max_depth_estimate_mm": 1.2144267093390226
+            },
+            "Kusazuri_01_Front_L": {
+              "pairs": 290,
+              "max_depth_estimate_mm": 7.011632900685072
+            },
+            "Kusazuri_01_Front_L_Interior": {
+              "pairs": 126,
+              "max_depth_estimate_mm": 6.335011217743158
+            },
+            "Kusazuri_01_Front_L_Lacing": {
+              "pairs": 96,
+              "max_depth_estimate_mm": 1.9286443712189794
+            },
+            "Kusazuri_01_Front_L_Trim": {
+              "pairs": 122,
+              "max_depth_estimate_mm": 3.391639329493046
+            },
+            "Kusazuri_01_Lacing": {
+              "pairs": 397,
+              "max_depth_estimate_mm": 3.752464195713401
+            }
+          }
+        },
+        {
+          "pose": "crouch",
+          "clip": null,
+          "body_triangle_pairs": 0,
+          "body_maximum_contact_depth_estimate_mm": 0.0,
+          "thigh_leg_triangle_pairs": 0,
+          "thigh_leg_maximum_contact_depth_estimate_mm": 0,
+          "hand_triangle_pairs": 0,
+          "body_contact_bones": {},
+          "do_triangle_pairs": 7689,
+          "do_maximum_contact_depth_estimate_mm": 4.672303795814514,
+          "body_contact_parts": {}
+        },
+        {
+          "pose": "hip-rotation",
+          "clip": null,
+          "body_triangle_pairs": 0,
+          "body_maximum_contact_depth_estimate_mm": 0.0,
+          "thigh_leg_triangle_pairs": 0,
+          "thigh_leg_maximum_contact_depth_estimate_mm": 0,
+          "hand_triangle_pairs": 0,
+          "body_contact_bones": {},
+          "do_triangle_pairs": 1961,
+          "do_maximum_contact_depth_estimate_mm": 1.4915833016857505,
+          "body_contact_parts": {}
+        },
+        {
+          "pose": "A_Idle:1",
+          "clip": "A_Idle",
+          "body_triangle_pairs": 2837,
+          "body_maximum_contact_depth_estimate_mm": 8.32825805991888,
+          "thigh_leg_triangle_pairs": 0,
+          "thigh_leg_maximum_contact_depth_estimate_mm": 0,
+          "hand_triangle_pairs": 2837,
+          "body_contact_bones": {
+            "index_02_l": 116,
+            "thumb_03_l": 404,
+            "index_03_l": 112,
+            "thumb_03_r": 293,
+            "middle_02_r": 289,
+            "index_02_r": 361,
+            "index_03_r": 133,
+            "pinky_03_l": 315,
+            "ring_03_l": 212,
+            "pinky_01_r": 57,
+            "pinky_02_r": 268,
+            "ring_02_r": 155,
+            "ring_01_r": 122
+          },
+          "do_triangle_pairs": 7657,
+          "do_maximum_contact_depth_estimate_mm": 3.747862996533513,
+          "body_contact_parts": {
+            "Kusazuri_01_Front_L": {
+              "pairs": 324,
+              "max_depth_estimate_mm": 7.662436459213495
+            },
+            "Kusazuri_01_Front_L_Interior": {
+              "pairs": 143,
+              "max_depth_estimate_mm": 6.826131138950586
+            },
+            "Kusazuri_01_Front_L_Lacing": {
+              "pairs": 87,
+              "max_depth_estimate_mm": 2.047847490757704
+            },
+            "Kusazuri_01_Front_L_Trim": {
+              "pairs": 78,
+              "max_depth_estimate_mm": 0.8343919180333614
+            },
+            "Kusazuri_01_Front_R": {
+              "pairs": 615,
+              "max_depth_estimate_mm": 7.800126913934946
+            },
+            "Kusazuri_01_Front_R_Interior": {
+              "pairs": 237,
+              "max_depth_estimate_mm": 4.544545896351337
+            },
+            "Kusazuri_01_Front_R_Lacing": {
+              "pairs": 74,
+              "max_depth_estimate_mm": 2.8048818930983543
+            },
+            "Kusazuri_01_Front_R_Trim": {
+              "pairs": 150,
+              "max_depth_estimate_mm": 8.32825805991888
+            },
+            "Kusazuri_01_Side_L": {
+              "pairs": 252,
+              "max_depth_estimate_mm": 3.9032846689224243
+            },
+            "Kusazuri_01_Side_L_Interior": {
+              "pairs": 98,
+              "max_depth_estimate_mm": 0.0
+            },
+            "Kusazuri_01_Side_L_Lacing": {
+              "pairs": 64,
+              "max_depth_estimate_mm": 1.093563623726368
+            },
+            "Kusazuri_01_Side_L_Trim": {
+              "pairs": 113,
+              "max_depth_estimate_mm": 5.2168224938213825
+            },
+            "Kusazuri_01_Side_R": {
+              "pairs": 227,
+              "max_depth_estimate_mm": 6.9919549860060215
+            },
+            "Kusazuri_01_Side_R_Interior": {
+              "pairs": 203,
+              "max_depth_estimate_mm": 0.0
+            },
+            "Kusazuri_01_Side_R_Lacing": {
+              "pairs": 60,
+              "max_depth_estimate_mm": 1.666322466917336
+            },
+            "Kusazuri_01_Side_R_Trim": {
+              "pairs": 112,
+              "max_depth_estimate_mm": 2.2082491777837276
+            }
+          }
+        },
+        {
+          "pose": "A_Idle:58",
+          "clip": "A_Idle",
+          "body_triangle_pairs": 1485,
+          "body_maximum_contact_depth_estimate_mm": 7.0601291954517365,
+          "thigh_leg_triangle_pairs": 0,
+          "thigh_leg_maximum_contact_depth_estimate_mm": 0,
+          "hand_triangle_pairs": 1485,
+          "body_contact_bones": {
+            "index_03_l": 281,
+            "middle_03_r": 229,
+            "index_03_r": 377,
+            "middle_02_r": 262,
+            "ring_03_r": 81,
+            "pinky_03_r": 188,
+            "pinky_02_r": 67
+          },
+          "do_triangle_pairs": 7469,
+          "do_maximum_contact_depth_estimate_mm": 2.3574226070195436,
+          "body_contact_parts": {
+            "Kusazuri_01_Front_L": {
+              "pairs": 104,
+              "max_depth_estimate_mm": 6.731554865837097
+            },
+            "Kusazuri_01_Front_L_Interior": {
+              "pairs": 113,
+              "max_depth_estimate_mm": 0.0
+            },
+            "Kusazuri_01_Front_L_Trim": {
+              "pairs": 64,
+              "max_depth_estimate_mm": 3.253613831475377
+            },
+            "Kusazuri_01_Front_R": {
+              "pairs": 430,
+              "max_depth_estimate_mm": 7.0601291954517365
+            },
+            "Kusazuri_01_Front_R_Interior": {
+              "pairs": 296,
+              "max_depth_estimate_mm": 1.9165714038535953
+            },
+            "Kusazuri_01_Front_R_Lacing": {
+              "pairs": 76,
+              "max_depth_estimate_mm": 2.7968192007392645
+            },
+            "Kusazuri_01_Front_R_Trim": {
+              "pairs": 147,
+              "max_depth_estimate_mm": 2.893927274271846
+            },
+            "Kusazuri_01_Side_R": {
+              "pairs": 78,
+              "max_depth_estimate_mm": 4.165808670222759
+            },
+            "Kusazuri_01_Side_R_Interior": {
+              "pairs": 131,
+              "max_depth_estimate_mm": 0.0
+            },
+            "Kusazuri_01_Side_R_Trim": {
+              "pairs": 46,
+              "max_depth_estimate_mm": 0.0
+            }
+          }
+        },
+        {
+          "pose": "A_Idle:115",
+          "clip": "A_Idle",
+          "body_triangle_pairs": 2524,
+          "body_maximum_contact_depth_estimate_mm": 9.273956529796124,
+          "thigh_leg_triangle_pairs": 0,
+          "thigh_leg_maximum_contact_depth_estimate_mm": 0,
+          "hand_triangle_pairs": 2524,
+          "body_contact_bones": {
+            "thumb_03_l": 260,
+            "thumb_02_r": 185,
+            "thumb_03_r": 352,
+            "index_01_r": 147,
+            "index_02_r": 426,
+            "middle_02_r": 33,
+            "thumb_01_r": 165,
+            "ring_03_l": 202,
+            "pinky_01_r": 182,
+            "ring_01_r": 385,
+            "pinky_02_r": 108,
+            "ring_02_r": 79
+          },
+          "do_triangle_pairs": 7676,
+          "do_maximum_contact_depth_estimate_mm": 3.8145293947309256,
+          "body_contact_parts": {
+            "Kusazuri_01_Front_L": {
+              "pairs": 166,
+              "max_depth_estimate_mm": 4.388709552586079
+            },
+            "Kusazuri_01_Front_L_Trim": {
+              "pairs": 94,
+              "max_depth_estimate_mm": 5.934660322964191
+            },
+            "Kusazuri_01_Front_R": {
+              "pairs": 494,
+              "max_depth_estimate_mm": 9.273956529796124
+            },
+            "Kusazuri_01_Front_R_Interior": {
+              "pairs": 295,
+              "max_depth_estimate_mm": 8.19054339081049
+            },
+            "Kusazuri_01_Front_R_Lacing": {
+              "pairs": 268,
+              "max_depth_estimate_mm": 2.524884417653084
+            },
+            "Kusazuri_01_Front_R_Trim": {
+              "pairs": 251,
+              "max_depth_estimate_mm": 5.067285615950823
+            },
+            "Kusazuri_01_Side_L": {
+              "pairs": 139,
+              "max_depth_estimate_mm": 2.820175141096115
+            },
+            "Kusazuri_01_Side_L_Lacing": {
+              "pairs": 30,
+              "max_depth_estimate_mm": 1.894982997328043
+            },
+            "Kusazuri_01_Side_L_Trim": {
+              "pairs": 33,
+              "max_depth_estimate_mm": 0.0
+            },
+            "Kusazuri_01_Side_R": {
+              "pairs": 330,
+              "max_depth_estimate_mm": 8.34061298519373
+            },
+            "Kusazuri_01_Side_R_Interior": {
+              "pairs": 241,
+              "max_depth_estimate_mm": 0.9793033823370934
+            },
+            "Kusazuri_01_Side_R_Lacing": {
+              "pairs": 64,
+              "max_depth_estimate_mm": 2.2987632546573877
+            },
+            "Kusazuri_01_Side_R_Trim": {
+              "pairs": 119,
+              "max_depth_estimate_mm": 2.095330273732543
+            }
+          }
+        },
+        {
+          "pose": "A_Idle:172",
+          "clip": "A_Idle",
+          "body_triangle_pairs": 1238,
+          "body_maximum_contact_depth_estimate_mm": 5.434801336377859,
+          "thigh_leg_triangle_pairs": 0,
+          "thigh_leg_maximum_contact_depth_estimate_mm": 0,
+          "hand_triangle_pairs": 1238,
+          "body_contact_bones": {
+            "middle_03_l": 244,
+            "ring_03_r": 241,
+            "middle_03_r": 452,
+            "index_03_r": 262,
+            "middle_02_r": 2,
+            "pinky_03_r": 37
+          },
+          "do_triangle_pairs": 7040,
+          "do_maximum_contact_depth_estimate_mm": 4.247603006660938,
+          "body_contact_parts": {
+            "Kusazuri_01_Front_L": {
+              "pairs": 136,
+              "max_depth_estimate_mm": 2.3649162612855434
+            },
+            "Kusazuri_01_Front_L_Lacing": {
+              "pairs": 50,
+              "max_depth_estimate_mm": 1.289463834837079
+            },
+            "Kusazuri_01_Front_L_Trim": {
+              "pairs": 58,
+              "max_depth_estimate_mm": 0.0
+            },
+            "Kusazuri_01_Front_R": {
+              "pairs": 502,
+              "max_depth_estimate_mm": 4.763361997902393
+            },
+            "Kusazuri_01_Front_R_Interior": {
+              "pairs": 226,
+              "max_depth_estimate_mm": 4.372449591755867
+            },
+            "Kusazuri_01_Front_R_Lacing": {
+              "pairs": 75,
+              "max_depth_estimate_mm": 2.441221149638295
+            },
+            "Kusazuri_01_Front_R_Trim": {
+              "pairs": 154,
+              "max_depth_estimate_mm": 5.434801336377859
+            },
+            "Kusazuri_01_Side_R": {
+              "pairs": 37,
+              "max_depth_estimate_mm": 0.5525813903659582
+            }
+          }
+        },
+        {
+          "pose": "A_Idle:229",
+          "clip": "A_Idle",
+          "body_triangle_pairs": 2854,
+          "body_maximum_contact_depth_estimate_mm": 8.346393704414368,
+          "thigh_leg_triangle_pairs": 0,
+          "thigh_leg_maximum_contact_depth_estimate_mm": 0,
+          "hand_triangle_pairs": 2854,
+          "body_contact_bones": {
+            "index_02_l": 114,
+            "thumb_03_l": 396,
+            "index_03_l": 110,
+            "thumb_03_r": 291,
+            "middle_02_r": 294,
+            "index_02_r": 373,
+            "index_03_r": 122,
+            "pinky_03_l": 336,
+            "ring_03_l": 212,
+            "pinky_01_r": 61,
+            "pinky_02_r": 261,
+            "ring_02_r": 161,
+            "ring_01_r": 123
+          },
+          "do_triangle_pairs": 7637,
+          "do_maximum_contact_depth_estimate_mm": 2.675366122275591,
+          "body_contact_parts": {
+            "Kusazuri_01_Front_L": {
+              "pairs": 312,
+              "max_depth_estimate_mm": 7.36198527738452
+            },
+            "Kusazuri_01_Front_L_Interior": {
+              "pairs": 139,
+              "max_depth_estimate_mm": 6.7401607520878315
+            },
+            "Kusazuri_01_Front_L_Lacing": {
+              "pairs": 89,
+              "max_depth_estimate_mm": 1.9315421814098954
+            },
+            "Kusazuri_01_Front_L_Trim": {
+              "pairs": 80,
+              "max_depth_estimate_mm": 1.134903053753078
+            },
+            "Kusazuri_01_Front_R": {
+              "pairs": 621,
+              "max_depth_estimate_mm": 7.752422709017992
+            },
+            "Kusazuri_01_Front_R_Interior": {
+              "pairs": 237,
+              "max_depth_estimate_mm": 4.567992407828569
+            },
+            "Kusazuri_01_Front_R_Lacing": {
+              "pairs": 74,
+              "max_depth_estimate_mm": 2.8074004221707582
+            },
+            "Kusazuri_01_Front_R_Trim": {
+              "pairs": 148,
+              "max_depth_estimate_mm": 8.346393704414368
+            },
+            "Kusazuri_01_Side_L": {
+              "pairs": 257,
+              "max_depth_estimate_mm": 3.9504230953752995
+            },
+            "Kusazuri_01_Side_L_Interior": {
+              "pairs": 102,
+              "max_depth_estimate_mm": 0.0
+            },
+            "Kusazuri_01_Side_L_Lacing": {
+              "pairs": 80,
+              "max_depth_estimate_mm": 1.1480682296678424
+            },
+            "Kusazuri_01_Side_L_Trim": {
+              "pairs": 109,
+              "max_depth_estimate_mm": 5.415101535618305
+            },
+            "Kusazuri_01_Side_R": {
+              "pairs": 225,
+              "max_depth_estimate_mm": 6.896501872688532
+            },
+            "Kusazuri_01_Side_R_Interior": {
+              "pairs": 209,
+              "max_depth_estimate_mm": 0.0
+            },
+            "Kusazuri_01_Side_R_Lacing": {
+              "pairs": 60,
+              "max_depth_estimate_mm": 1.7072686459869146
+            },
+            "Kusazuri_01_Side_R_Trim": {
+              "pairs": 112,
+              "max_depth_estimate_mm": 2.2448792587965727
+            }
+          }
+        },
+        {
+          "pose": "A_Walk:1",
+          "clip": "A_Walk",
+          "body_triangle_pairs": 350,
+          "body_maximum_contact_depth_estimate_mm": 7.131801452487707,
+          "thigh_leg_triangle_pairs": 0,
+          "thigh_leg_maximum_contact_depth_estimate_mm": 0,
+          "hand_triangle_pairs": 350,
+          "body_contact_bones": {
+            "thumb_03_l": 311,
+            "thumb_02_l": 39
+          },
+          "do_triangle_pairs": 16579,
+          "do_maximum_contact_depth_estimate_mm": 2.156103728339076,
+          "body_contact_parts": {
+            "Kusazuri_01_Side_L": {
+              "pairs": 257,
+              "max_depth_estimate_mm": 7.131801452487707
+            },
+            "Kusazuri_01_Side_L_Interior": {
+              "pairs": 50,
+              "max_depth_estimate_mm": 0.0992610293906182
+            },
+            "Kusazuri_01_Side_L_Trim": {
+              "pairs": 43,
+              "max_depth_estimate_mm": 4.813358653336763
+            }
+          }
+        },
+        {
+          "pose": "A_Walk:12",
+          "clip": "A_Walk",
+          "body_triangle_pairs": 0,
+          "body_maximum_contact_depth_estimate_mm": 0.0,
+          "thigh_leg_triangle_pairs": 0,
+          "thigh_leg_maximum_contact_depth_estimate_mm": 0,
+          "hand_triangle_pairs": 0,
+          "body_contact_bones": {},
+          "do_triangle_pairs": 17011,
+          "do_maximum_contact_depth_estimate_mm": 2.6408531703054905,
+          "body_contact_parts": {}
+        },
+        {
+          "pose": "A_Walk:24",
+          "clip": "A_Walk",
+          "body_triangle_pairs": 1360,
+          "body_maximum_contact_depth_estimate_mm": 9.344317950308323,
+          "thigh_leg_triangle_pairs": 0,
+          "thigh_leg_maximum_contact_depth_estimate_mm": 0,
+          "hand_triangle_pairs": 1360,
+          "body_contact_bones": {
+            "thumb_02_r": 262,
+            "thumb_03_r": 226,
+            "index_02_r": 338,
+            "middle_02_r": 250,
+            "index_03_r": 50,
+            "middle_03_r": 7,
+            "thumb_01_r": 38,
+            "ring_03_r": 189
+          },
+          "do_triangle_pairs": 16880,
+          "do_maximum_contact_depth_estimate_mm": 1.9881895277649164,
+          "body_contact_parts": {
+            "Kusazuri_01_Front_R": {
+              "pairs": 614,
+              "max_depth_estimate_mm": 6.843004375696182
+            },
+            "Kusazuri_01_Front_R_Interior": {
+              "pairs": 375,
+              "max_depth_estimate_mm": 9.344317950308323
+            },
+            "Kusazuri_01_Front_R_Lacing": {
+              "pairs": 46,
+              "max_depth_estimate_mm": 1.01340317633003
+            },
+            "Kusazuri_01_Front_R_Trim": {
+              "pairs": 136,
+              "max_depth_estimate_mm": 6.08067587018013
+            },
+            "Kusazuri_01_Side_R": {
+              "pairs": 122,
+              "max_depth_estimate_mm": 5.860781297087669
+            },
+            "Kusazuri_01_Side_R_Trim": {
+              "pairs": 67,
+              "max_depth_estimate_mm": 1.2664863606914878
+            }
+          }
+        },
+        {
+          "pose": "A_Walk:36",
+          "clip": "A_Walk",
+          "body_triangle_pairs": 1950,
+          "body_maximum_contact_depth_estimate_mm": 8.691221475601196,
+          "thigh_leg_triangle_pairs": 0,
+          "thigh_leg_maximum_contact_depth_estimate_mm": 0,
+          "hand_triangle_pairs": 1950,
+          "body_contact_bones": {
+            "thumb_02_l": 165,
+            "thumb_03_l": 378,
+            "pinky_01_l": 5,
+            "pinky_metacarpal_l": 53,
+            "ring_metacarpal_l": 28,
+            "ring_01_l": 369,
+            "middle_01_l": 301,
+            "middle_02_l": 131,
+            "index_01_l": 62,
+            "index_02_l": 314,
+            "ring_02_l": 93,
+            "middle_metacarpal_l": 51
+          },
+          "do_triangle_pairs": 16452,
+          "do_maximum_contact_depth_estimate_mm": 7.660690229386091,
+          "body_contact_parts": {
+            "Kusazuri_01_Front_L": {
+              "pairs": 945,
+              "max_depth_estimate_mm": 8.691221475601196
+            },
+            "Kusazuri_01_Front_L_Interior": {
+              "pairs": 545,
+              "max_depth_estimate_mm": 4.732290748506784
+            },
+            "Kusazuri_01_Front_L_Lacing": {
+              "pairs": 256,
+              "max_depth_estimate_mm": 2.0116735249757767
+            },
+            "Kusazuri_01_Front_L_Trim": {
+              "pairs": 204,
+              "max_depth_estimate_mm": 3.7681458052247763
+            }
+          }
+        },
+        {
+          "pose": "A_Walk:47",
+          "clip": "A_Walk",
+          "body_triangle_pairs": 344,
+          "body_maximum_contact_depth_estimate_mm": 7.0186639204621315,
+          "thigh_leg_triangle_pairs": 0,
+          "thigh_leg_maximum_contact_depth_estimate_mm": 0,
+          "hand_triangle_pairs": 344,
+          "body_contact_bones": {
+            "thumb_03_l": 305,
+            "thumb_02_l": 39
+          },
+          "do_triangle_pairs": 16593,
+          "do_maximum_contact_depth_estimate_mm": 2.1535216365009546,
+          "body_contact_parts": {
+            "Kusazuri_01_Side_L": {
+              "pairs": 255,
+              "max_depth_estimate_mm": 7.0186639204621315
+            },
+            "Kusazuri_01_Side_L_Interior": {
+              "pairs": 46,
+              "max_depth_estimate_mm": 0.12672520824708045
+            },
+            "Kusazuri_01_Side_L_Trim": {
+              "pairs": 43,
+              "max_depth_estimate_mm": 4.923340864479542
+            }
+          }
+        },
+        {
+          "pose": "A_Run:1",
+          "clip": "A_Run",
+          "body_triangle_pairs": 0,
+          "body_maximum_contact_depth_estimate_mm": 0.0,
+          "thigh_leg_triangle_pairs": 0,
+          "thigh_leg_maximum_contact_depth_estimate_mm": 0,
+          "hand_triangle_pairs": 0,
+          "body_contact_bones": {},
+          "do_triangle_pairs": 18214,
+          "do_maximum_contact_depth_estimate_mm": 4.380336496978998,
+          "body_contact_parts": {}
+        },
+        {
+          "pose": "A_Run:14",
+          "clip": "A_Run",
+          "body_triangle_pairs": 0,
+          "body_maximum_contact_depth_estimate_mm": 0.0,
+          "thigh_leg_triangle_pairs": 0,
+          "thigh_leg_maximum_contact_depth_estimate_mm": 0,
+          "hand_triangle_pairs": 0,
+          "body_contact_bones": {},
+          "do_triangle_pairs": 12020,
+          "do_maximum_contact_depth_estimate_mm": 12.897792272269726,
+          "body_contact_parts": {}
+        },
+        {
+          "pose": "A_Run:28",
+          "clip": "A_Run",
+          "body_triangle_pairs": 1450,
+          "body_maximum_contact_depth_estimate_mm": 8.426020853221416,
+          "thigh_leg_triangle_pairs": 0,
+          "thigh_leg_maximum_contact_depth_estimate_mm": 0,
+          "hand_triangle_pairs": 1450,
+          "body_contact_bones": {
+            "pinky_metacarpal_l": 180,
+            "pinky_01_l": 381,
+            "pinky_02_l": 117,
+            "ring_01_l": 122,
+            "ring_02_l": 300,
+            "middle_03_l": 254,
+            "ring_03_l": 85,
+            "middle_02_l": 11
+          },
+          "do_triangle_pairs": 17388,
+          "do_maximum_contact_depth_estimate_mm": 2.545552095398307,
+          "body_contact_parts": {
+            "Kusazuri_01_Front_L": {
+              "pairs": 863,
+              "max_depth_estimate_mm": 8.426020853221416
+            },
+            "Kusazuri_01_Front_L_Interior": {
+              "pairs": 288,
+              "max_depth_estimate_mm": 6.668334361165762
+            },
+            "Kusazuri_01_Front_L_Lacing": {
+              "pairs": 121,
+              "max_depth_estimate_mm": 2.6884262915700674
+            },
+            "Kusazuri_01_Front_L_Trim": {
+              "pairs": 178,
+              "max_depth_estimate_mm": 4.931511357426643
+            }
+          }
+        },
+        {
+          "pose": "A_Run:42",
+          "clip": "A_Run",
+          "body_triangle_pairs": 0,
+          "body_maximum_contact_depth_estimate_mm": 0.0,
+          "thigh_leg_triangle_pairs": 0,
+          "thigh_leg_maximum_contact_depth_estimate_mm": 0,
+          "hand_triangle_pairs": 0,
+          "body_contact_bones": {},
+          "do_triangle_pairs": 12578,
+          "do_maximum_contact_depth_estimate_mm": 3.0002451967447996,
+          "body_contact_parts": {}
+        },
+        {
+          "pose": "A_Run:55",
+          "clip": "A_Run",
+          "body_triangle_pairs": 0,
+          "body_maximum_contact_depth_estimate_mm": 0.0,
+          "thigh_leg_triangle_pairs": 0,
+          "thigh_leg_maximum_contact_depth_estimate_mm": 0,
+          "hand_triangle_pairs": 0,
+          "body_contact_bones": {},
+          "do_triangle_pairs": 17932,
+          "do_maximum_contact_depth_estimate_mm": 1.9841452594846487,
+          "body_contact_parts": {}
+        },
+        {
+          "pose": "A_Attack:1",
+          "clip": "A_Attack",
+          "body_triangle_pairs": 0,
+          "body_maximum_contact_depth_estimate_mm": 0.0,
+          "thigh_leg_triangle_pairs": 0,
+          "thigh_leg_maximum_contact_depth_estimate_mm": 0,
+          "hand_triangle_pairs": 0,
+          "body_contact_bones": {},
+          "do_triangle_pairs": 4408,
+          "do_maximum_contact_depth_estimate_mm": 1.9457772141322494,
+          "body_contact_parts": {}
+        },
+        {
+          "pose": "A_Attack:9",
+          "clip": "A_Attack",
+          "body_triangle_pairs": 0,
+          "body_maximum_contact_depth_estimate_mm": 0.0,
+          "thigh_leg_triangle_pairs": 0,
+          "thigh_leg_maximum_contact_depth_estimate_mm": 0,
+          "hand_triangle_pairs": 0,
+          "body_contact_bones": {},
+          "do_triangle_pairs": 5109,
+          "do_maximum_contact_depth_estimate_mm": 1.8299432704225183,
+          "body_contact_parts": {}
+        },
+        {
+          "pose": "A_Attack:16",
+          "clip": "A_Attack",
+          "body_triangle_pairs": 0,
+          "body_maximum_contact_depth_estimate_mm": 0.0,
+          "thigh_leg_triangle_pairs": 0,
+          "thigh_leg_maximum_contact_depth_estimate_mm": 0,
+          "hand_triangle_pairs": 0,
+          "body_contact_bones": {},
+          "do_triangle_pairs": 3361,
+          "do_maximum_contact_depth_estimate_mm": 1.8893434898927808,
+          "body_contact_parts": {}
+        },
+        {
+          "pose": "A_Attack:24",
+          "clip": "A_Attack",
+          "body_triangle_pairs": 0,
+          "body_maximum_contact_depth_estimate_mm": 0.0,
+          "thigh_leg_triangle_pairs": 0,
+          "thigh_leg_maximum_contact_depth_estimate_mm": 0,
+          "hand_triangle_pairs": 0,
+          "body_contact_bones": {},
+          "do_triangle_pairs": 6774,
+          "do_maximum_contact_depth_estimate_mm": 1.9925215747207403,
+          "body_contact_parts": {}
+        },
+        {
+          "pose": "A_Attack:32",
+          "clip": "A_Attack",
+          "body_triangle_pairs": 0,
+          "body_maximum_contact_depth_estimate_mm": 0.0,
+          "thigh_leg_triangle_pairs": 0,
+          "thigh_leg_maximum_contact_depth_estimate_mm": 0,
+          "hand_triangle_pairs": 0,
+          "body_contact_bones": {},
+          "do_triangle_pairs": 7580,
+          "do_maximum_contact_depth_estimate_mm": 1.986759016290307,
+          "body_contact_parts": {}
+        }
+      ]
+    }
+  ],
+  "same_source_for_three_updated_variants": true,
+  "initial_source_note": "Initial .15 radial pass used earlier102352triangle finish. Updated three variants share147648triangle source; lining/envelope preserved but raw triangle counts are not comparable across initial versus updated source. Initial report does not contain exhaustive region labels; null means unavailable.",
+  "baseline_do_body_report": "baseline-do-body-high-knee.json",
+  "recommendation": "Promote high-flexion gatedFrontL/R with radial-to-cardinal normal smoothstep at sagittal50-75degrees and all-panel.02rad margin, then apply separately planned belt/cord geometry fix and run all integer frames. Purecardinal is rejected because it introduces attack-thigh contacts.",
+  "remaining_limits": [
+    "Gated probe has no thigh contacts in20native quick samples, not proof for all frames.",
+    "Highknee frontpanel sampled contact remains up to7.012mm, belt16.369mm and obi3.752mm before pendingattachment correction.",
+    "Native lowered hands still contact source panels; bodyclips are classified by original dominant skinbone.",
+    "Do source contact remains; depth is signed nearest-surface estimate rather than exact Boolean depth.",
+    "PreservedDo itself is clear against Manny at diagnostic highknee but contacts Manny during nativeRun14."
+  ],
+  "attachment_refinement": {
+    "report": "motion-validation-quick-refined-attachment.json",
+    "source_sha256": "ae09fe79d13b4487e5d947d823f11597720465095190258b788fd244bae17ea1",
+    "source_file_unchanged": true,
+    "production_controller_sha256": "1effe2a50bf90b88ef952f3f8cf6a24998e6d814bb8972f677886d0a070a6b6c",
+    "native_sample_count": 20,
+    "native_samples_with_thigh_or_leg_contacts": [],
+    "knee_belt": {
+      "triangle_intersections": 0,
+      "intersecting_armor_triangles": 0,
+      "examples": [],
+      "depth_sample_vertices": 237,
+      "vertices_on_negative_nearest_normal_side": 0,
+      "maximum_sampled_penetration_estimate_mm": 0.0,
+      "maximum_negative_nearest_normal_sample_distance_mm": 0.0,
+      "minimum_unsigned_sample_clearance_mm": 2.142692683264613,
+      "deepest_sample": null,
+      "contact_triangle_pairs_by_dominant_target_bone": {},
+      "maximum_contact_penetration_estimate_mm_by_dominant_target_bone": {}
+    },
+    "knee_cord": {
+      "triangle_intersections": 198,
+      "intersecting_armor_triangles": 178,
+      "examples": [
+        [
+          6282,
+          4679
+        ],
+        [
+          6282,
+          4676
+        ],
+        [
+          6282,
+          4678
+        ],
+        [
+          6283,
+          4657
+        ],
+        [
+          6283,
+          4676
+        ]
+      ],
+      "depth_sample_vertices": 414,
+      "vertices_on_negative_nearest_normal_side": 73,
+      "maximum_sampled_penetration_estimate_mm": 3.752464195713401,
+      "maximum_negative_nearest_normal_sample_distance_mm": 3.752464195713401,
+      "minimum_unsigned_sample_clearance_mm": 0.04956639895681292,
+      "deepest_sample": {
+        "armor_vertex": 256,
+        "target_triangle": 6276,
+        "point_metres": [
+          0.13918940722942352,
+          -0.14391343295574188,
+          1.0032702684402466
+        ],
+        "surface_metres": [
+          0.13926365971565247,
+          -0.14356274902820587,
+          1.0070055723190308
+        ]
+      },
+      "contact_triangle_pairs_by_dominant_target_bone": {
+        "thigh_twist_01_l": 198
+      },
+      "maximum_contact_penetration_estimate_mm_by_dominant_target_bone": {
+        "thigh_twist_01_l": 3.752464195713401
+      }
+    },
+    "maximum_high_knee_panel_depth_estimate_mm": 7.011632900685072,
+    "notes": [
+      "Raised belt lower edge eliminates measured high-knee belt contact.",
+      "Raised two-ring cord halves surface contacts but retains3.752mm sampled high-knee contact at lower braided ring.",
+      "All20native samples remain free of thigh/leg contact; finger and Do contacts remain.",
+      "Final full-frame review still required after export."
+    ]
+  }
+}

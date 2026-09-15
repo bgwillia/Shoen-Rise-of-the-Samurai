@@ -1,0 +1,14 @@
+{
+  "source_sha256": "cf7c0ec0578b7fe2aca7d1b30439c521e8cecc3e63d4f36b0c8820b31dc9eb9e",
+  "source_matches_frozen": true,
+  "existing_dependencies_unchanged_after_captures_and_tests": true,
+  "changed_dependencies": [],
+  "engine_process_check_returncode": 1,
+  "engine_processes": "",
+  "engine_released": true,
+  "capture_count": 20,
+  "unreal_test_count": 21,
+  "test_problems": [],
+  "nullrhi_tests_are_rendering_evidence": false,
+  "cost_experiment_run": false
+}

@@ -1,0 +1,109 @@
+{
+  "source_sha256": "cf7c0ec0578b7fe2aca7d1b30439c521e8cecc3e63d4f36b0c8820b31dc9eb9e",
+  "motion_script_sha256": "d08a47004a1fba6614fd59171d231e1f6b6349162c14c9f8e0a2006461b8f88d",
+  "review_script_sha256": "6fc1d4730204ff782c1074a55ccf15f112c54548f87d5267991a5800fd1de4c5",
+  "pose_count": 372,
+  "native_frame_count": 363,
+  "clips": {
+    "A_Idle": {
+      "frames": 229,
+      "leg_contact_frames": [],
+      "hand_contact_frame_count": 229,
+      "max_leg_estimate_mm": 0,
+      "max_hand_estimate_mm": 9.796065278351307,
+      "max_Do_signed_nearest_surface_diagnostic_mm": 9.09042451530695
+    },
+    "A_Walk": {
+      "frames": 47,
+      "leg_contact_frames": [],
+      "hand_contact_frame_count": 14,
+      "max_leg_estimate_mm": 0,
+      "max_hand_estimate_mm": 11.219566687941551,
+      "max_Do_signed_nearest_surface_diagnostic_mm": 17.12859608232975
+    },
+    "A_Run": {
+      "frames": 55,
+      "leg_contact_frames": [
+        {
+          "pose": "A_Run:31",
+          "leg_contact": {
+            "triangle_pairs": 66,
+            "max_estimate_mm": 2.2609883453696966,
+            "components": {
+              "Kusazuri_01_Front_L": {
+                "triangle_pairs": 4,
+                "max_estimate_mm": 0.8960841805674136
+              },
+              "Kusazuri_01_Front_L_Interior": {
+                "triangle_pairs": 62,
+                "max_estimate_mm": 2.2609883453696966
+              }
+            }
+          },
+          "hand_contact": {
+            "triangle_pairs": 0,
+            "max_estimate_mm": 0,
+            "components": {}
+          },
+          "body_triangle_pairs": 66,
+          "Do_triangle_pairs": 18536,
+          "Do_signed_nearest_surface_diagnostic_mm": 3.516450524330139,
+          "leg_max_shell_mm": 0.8960841805674136,
+          "leg_max_lining_mm": 2.2609883453696966
+        },
+        {
+          "pose": "A_Run:40",
+          "leg_contact": {
+            "triangle_pairs": 45,
+            "max_estimate_mm": 1.1786951217800379,
+            "components": {
+              "Kusazuri_01_Front_R": {
+                "triangle_pairs": 5,
+                "max_estimate_mm": 0.003428806621741387
+              },
+              "Kusazuri_01_Front_R_Interior": {
+                "triangle_pairs": 40,
+                "max_estimate_mm": 1.1786951217800379
+              }
+            }
+          },
+          "hand_contact": {
+            "triangle_pairs": 0,
+            "max_estimate_mm": 0,
+            "components": {}
+          },
+          "body_triangle_pairs": 45,
+          "Do_triangle_pairs": 18868,
+          "Do_signed_nearest_surface_diagnostic_mm": 3.4062403719872236,
+          "leg_max_shell_mm": 0.003428806621741387,
+          "leg_max_lining_mm": 1.1786951217800379
+        }
+      ],
+      "hand_contact_frame_count": 12,
+      "max_leg_estimate_mm": 2.2609883453696966,
+      "max_hand_estimate_mm": 8.938394486904144,
+      "max_Do_signed_nearest_surface_diagnostic_mm": 17.509520053863525
+    },
+    "A_Attack": {
+      "frames": 32,
+      "leg_contact_frames": [],
+      "hand_contact_frame_count": 0,
+      "max_leg_estimate_mm": 0,
+      "max_hand_estimate_mm": 0,
+      "max_Do_signed_nearest_surface_diagnostic_mm": 8.569429628551006
+    }
+  },
+  "rigidity_preserved": true,
+  "controller_targets_reproduced": true,
+  "source_file_unchanged": true,
+  "maximum_pair_distance_error_metres": 1.0060741799100548e-06,
+  "maximum_all_vertex_rigid_transform_error_metres": 4.807789863616728e-07,
+  "inverted_or_collapsed_triangles": 0,
+  "surface_clear_in_all_samples": false,
+  "limits": [
+    "Body-region labels use dominant skin influence per contacted body triangle.",
+    "Depth estimates use negative nearest-face signs at vertices of contacting triangles. They are not exact Boolean solid penetration.",
+    "Do signed-nearest diagnostic outliers require the separate do-outlier-solid-containment.json investigation. Actual triangle crossings remain even when an outlier point is outside all Do solids.",
+    "Integer frames do not establish subframe clearance. Existing body/upper armor animation and remaining hand contacts are preserved."
+  ]
+}

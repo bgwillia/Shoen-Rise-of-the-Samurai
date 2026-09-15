@@ -1,0 +1,392 @@
+{
+  "source_sha256": "cf7c0ec0578b7fe2aca7d1b30439c521e8cecc3e63d4f36b0c8820b31dc9eb9e",
+  "main_captures": 44,
+  "close_captures": 4,
+  "source_file_unchanged": true,
+  "images": [
+    {
+      "file": "SourceArt/Characters/Samurai/Kusazuri01/Review/Captures/front.png",
+      "size": [
+        900,
+        900
+      ],
+      "sha256": "deefe407dbf39c08f2d85ea66764ece8675af72190afa8eaf3b30e1e3d19e7aa"
+    },
+    {
+      "file": "SourceArt/Characters/Samurai/Kusazuri01/Review/Captures/back.png",
+      "size": [
+        900,
+        900
+      ],
+      "sha256": "865bd93445e9fc4f68037e2e6ca0639f1dfbba41fa1cd356c9151a37a28df2c6"
+    },
+    {
+      "file": "SourceArt/Characters/Samurai/Kusazuri01/Review/Captures/left.png",
+      "size": [
+        900,
+        900
+      ],
+      "sha256": "644ef9aec8f99d14f072969bb7f34c4dd840aef4e5e90b4571c0f45646720732"
+    },
+    {
+      "file": "SourceArt/Characters/Samurai/Kusazuri01/Review/Captures/right.png",
+      "size": [
+        900,
+        900
+      ],
+      "sha256": "816c69899c33f4cc496e0c44d4ec3bf24b134558b84f7c56d3457ebdfd42a2f4"
+    },
+    {
+      "file": "SourceArt/Characters/Samurai/Kusazuri01/Review/Captures/threequarter-front.png",
+      "size": [
+        900,
+        900
+      ],
+      "sha256": "698e5935c15333b06acaf2b0e3a04ef26c04b809f7b9dd44e78372a9218426f5"
+    },
+    {
+      "file": "SourceArt/Characters/Samurai/Kusazuri01/Review/Captures/threequarter-rear.png",
+      "size": [
+        900,
+        900
+      ],
+      "sha256": "80574d7a56aa14c65aad4a2211385ff3d7594647d6f969dd31ca6fe8070d5c93"
+    },
+    {
+      "file": "SourceArt/Characters/Samurai/Kusazuri01/Review/Captures/top-interior.png",
+      "size": [
+        900,
+        900
+      ],
+      "sha256": "1dc1574796dfa2e38f4aa33b04e98460429f3dee27e2564c1810b49f004f7d1c"
+    },
+    {
+      "file": "SourceArt/Characters/Samurai/Kusazuri01/Review/Captures/underside.png",
+      "size": [
+        900,
+        900
+      ],
+      "sha256": "7433df07524ba58fb0909e0595a4fe7d06fce6147eaccaf690cac3c4e94227f6"
+    },
+    {
+      "file": "SourceArt/Characters/Samurai/Kusazuri01/Review/Captures/exploded-construction.png",
+      "size": [
+        900,
+        900
+      ],
+      "sha256": "7e35cf119d48e8e45e4da3adb4d587046ad68023cf7d2269609bec0ed93b0132"
+    },
+    {
+      "file": "SourceArt/Characters/Samurai/Kusazuri01/Review/Captures/outfit-front.png",
+      "size": [
+        900,
+        900
+      ],
+      "sha256": "8539e05c58d52266808b9e7efc61a959259cc1ea923cb0588e96987542a2acc7"
+    },
+    {
+      "file": "SourceArt/Characters/Samurai/Kusazuri01/Review/Captures/outfit-back.png",
+      "size": [
+        900,
+        900
+      ],
+      "sha256": "25822c039b0416769d76b7ff3d5c0bcc41582be1c8ab2d4e12aa3f8677b81469"
+    },
+    {
+      "file": "SourceArt/Characters/Samurai/Kusazuri01/Review/Captures/outfit-threequarter.png",
+      "size": [
+        900,
+        900
+      ],
+      "sha256": "2f2ea9a106ad83f09aaef7ae265cade08c289e27493df741f8eb9178b770741f"
+    },
+    {
+      "file": "SourceArt/Characters/Samurai/Kusazuri01/Review/Captures/tactical-distance.png",
+      "size": [
+        900,
+        900
+      ],
+      "sha256": "7059c38fb632b34e3b06deb0e336dfc39963e8fd4977ea61dbcc198285b511f6"
+    },
+    {
+      "file": "SourceArt/Characters/Samurai/Kusazuri01/Review/Captures/pose-neutral.png",
+      "size": [
+        900,
+        900
+      ],
+      "sha256": "84de1c14ac1e7767e6cac3cd67cac36603113b19238a82b510b9cef9b5714d62"
+    },
+    {
+      "file": "SourceArt/Characters/Samurai/Kusazuri01/Review/Captures/pose-wide-step.png",
+      "size": [
+        900,
+        900
+      ],
+      "sha256": "8ff72dd343fcfe0adf8e1c4f952b4ca431e41377afce5355a96b7fbe858af8d7"
+    },
+    {
+      "file": "SourceArt/Characters/Samurai/Kusazuri01/Review/Captures/pose-wide-stance.png",
+      "size": [
+        900,
+        900
+      ],
+      "sha256": "849f1ff8ce872ee1af5a9d9c75fe86362e30d0ff447db64e50758d59ec7464d7"
+    },
+    {
+      "file": "SourceArt/Characters/Samurai/Kusazuri01/Review/Captures/pose-knee-lift.png",
+      "size": [
+        900,
+        900
+      ],
+      "sha256": "e56cd9975c2abdee946aa224242ee9978bdb7ca58d63ecd5cc735e71e978dc11"
+    },
+    {
+      "file": "SourceArt/Characters/Samurai/Kusazuri01/Review/Captures/pose-crouch.png",
+      "size": [
+        900,
+        900
+      ],
+      "sha256": "f3bc28f8758d073f20a08c4417f6e438020e59de6ae57478e5468a21da155369"
+    },
+    {
+      "file": "SourceArt/Characters/Samurai/Kusazuri01/Review/Captures/pose-combat-stance.png",
+      "size": [
+        900,
+        900
+      ],
+      "sha256": "dec41c2822a9f5c411bd069a2300a6810865f9314daca602a28f094e57c4212f"
+    },
+    {
+      "file": "SourceArt/Characters/Samurai/Kusazuri01/Review/Captures/pose-torso-turn.png",
+      "size": [
+        900,
+        900
+      ],
+      "sha256": "6c1e483c3a8589c546a2c6a53ffbc79e3fc079ec9bb11b4d3f0106ed40d0e20a"
+    },
+    {
+      "file": "SourceArt/Characters/Samurai/Kusazuri01/Review/Captures/pose-hip-rotation.png",
+      "size": [
+        900,
+        900
+      ],
+      "sha256": "03d1a91c7420ee8cc32e40d286a488b328c8dc35d7a28570dd639459873b61a8"
+    },
+    {
+      "file": "SourceArt/Characters/Samurai/Kusazuri01/Review/Captures/pose-bow-diagnostic.png",
+      "size": [
+        900,
+        900
+      ],
+      "sha256": "c35f9710bc8b71e57a64a8525d794e0f14c022f6ff016e6a98c46718e78f89f3"
+    },
+    {
+      "file": "SourceArt/Characters/Samurai/Kusazuri01/Review/Captures/pose-A_Idle-227.png",
+      "size": [
+        900,
+        900
+      ],
+      "sha256": "2b219ef8b0406b96857ebdb99e23682c18d26f2a970f0ae3feaf7e95567f9547"
+    },
+    {
+      "file": "SourceArt/Characters/Samurai/Kusazuri01/Review/Captures/pose-A_Idle-112.png",
+      "size": [
+        900,
+        900
+      ],
+      "sha256": "40827478d183da91e672887bf369dd4b57606f8d6b3cef9cdf96b856297fc7ba"
+    },
+    {
+      "file": "SourceArt/Characters/Samurai/Kusazuri01/Review/Captures/pose-A_Idle-156.png",
+      "size": [
+        900,
+        900
+      ],
+      "sha256": "b641033083ee3b7a0db1261d6de4e5f345b43a1990108007571d1e1090c6ff1c"
+    },
+    {
+      "file": "SourceArt/Characters/Samurai/Kusazuri01/Review/Captures/pose-A_Idle-2.png",
+      "size": [
+        900,
+        900
+      ],
+      "sha256": "67c8cdd0b426936106b66e247518b138c7f1575bd488c41d1964ab0b71f24b38"
+    },
+    {
+      "file": "SourceArt/Characters/Samurai/Kusazuri01/Review/Captures/pose-A_Idle-160.png",
+      "size": [
+        900,
+        900
+      ],
+      "sha256": "dd47351e790f5a77c38f39025db1281723a0488e74aeddfc2d9591e7e73e12df"
+    },
+    {
+      "file": "SourceArt/Characters/Samurai/Kusazuri01/Review/Captures/pose-A_Walk-13.png",
+      "size": [
+        900,
+        900
+      ],
+      "sha256": "8d1299051b1f0b4fa966e59d313fc3412976458f0e5637c66b80b0473711030f"
+    },
+    {
+      "file": "SourceArt/Characters/Samurai/Kusazuri01/Review/Captures/pose-A_Walk-23.png",
+      "size": [
+        900,
+        900
+      ],
+      "sha256": "10f5ea34415733faef8c9b19b8b2ba48f97453275fbd3f6b88e2e95a4dbdb289"
+    },
+    {
+      "file": "SourceArt/Characters/Samurai/Kusazuri01/Review/Captures/pose-A_Walk-41.png",
+      "size": [
+        900,
+        900
+      ],
+      "sha256": "8a6efa9fef6ad927200df51a0e6a469af01b51e098d26825ca017a7d24f54749"
+    },
+    {
+      "file": "SourceArt/Characters/Samurai/Kusazuri01/Review/Captures/pose-A_Walk-6.png",
+      "size": [
+        900,
+        900
+      ],
+      "sha256": "1f02337a33934fc0ba4c0cf2446919a78bfea8d097d55e330afdf517c413c817"
+    },
+    {
+      "file": "SourceArt/Characters/Samurai/Kusazuri01/Review/Captures/pose-A_Run-28.png",
+      "size": [
+        900,
+        900
+      ],
+      "sha256": "7a2b8adde590c1af0e91a27060996dea915b1e9b63dcc519910e6715357a91aa"
+    },
+    {
+      "file": "SourceArt/Characters/Samurai/Kusazuri01/Review/Captures/pose-A_Run-20.png",
+      "size": [
+        900,
+        900
+      ],
+      "sha256": "3ce3f1563de9971c6b375b819e1a672f10789e4bd1a223f5b6c1b7cbb8c8621a"
+    },
+    {
+      "file": "SourceArt/Characters/Samurai/Kusazuri01/Review/Captures/pose-A_Run-43.png",
+      "size": [
+        900,
+        900
+      ],
+      "sha256": "6b32ba098da3428362585e40647a7c230dd552381e68b1ef5236e5b64908aaae"
+    },
+    {
+      "file": "SourceArt/Characters/Samurai/Kusazuri01/Review/Captures/pose-A_Run-29.png",
+      "size": [
+        900,
+        900
+      ],
+      "sha256": "5805eb7618d924ce0c47b9ee425250f1b2268321fee27506afb82bb0f21facde"
+    },
+    {
+      "file": "SourceArt/Characters/Samurai/Kusazuri01/Review/Captures/pose-A_Run-31.png",
+      "size": [
+        900,
+        900
+      ],
+      "sha256": "beca8ac13ef2ac03ec40eab424b87598ff44dd390f78fedd4614904adfc6341b"
+    },
+    {
+      "file": "SourceArt/Characters/Samurai/Kusazuri01/Review/Captures/pose-A_Attack-1.png",
+      "size": [
+        900,
+        900
+      ],
+      "sha256": "75451bfde550f91891b0ccb7899552649a02e24faff858a674b2d4b02aab60ff"
+    },
+    {
+      "file": "SourceArt/Characters/Samurai/Kusazuri01/Review/Captures/pose-A_Attack-12.png",
+      "size": [
+        900,
+        900
+      ],
+      "sha256": "28ab1ca74285e69357f1cbbb43c13aea50f5440555e63a826263246b1ebc7911"
+    },
+    {
+      "file": "SourceArt/Characters/Samurai/Kusazuri01/Review/Captures/pose-A_Attack-23.png",
+      "size": [
+        900,
+        900
+      ],
+      "sha256": "ab8c9231ac4291915ca180810bc2860a8536d25e76fdc47298be28f45ed16edf"
+    },
+    {
+      "file": "SourceArt/Characters/Samurai/Kusazuri01/Review/Captures/pose-A_Attack-13.png",
+      "size": [
+        900,
+        900
+      ],
+      "sha256": "5c0a3ae5cdad1022e3b39fe92b12ba54724a1490969ea753c8f90b670b7b9285"
+    },
+    {
+      "file": "SourceArt/Characters/Samurai/Kusazuri01/Review/Captures/pose-A_Walk-19.png",
+      "size": [
+        900,
+        900
+      ],
+      "sha256": "a885cf3a798a326d302ac14aec18fbf085259a041041e42b14d5de5501036c97"
+    },
+    {
+      "file": "SourceArt/Characters/Samurai/Kusazuri01/Review/Captures/pose-A_Run-22.png",
+      "size": [
+        900,
+        900
+      ],
+      "sha256": "8c1edabab6c34896b222501c316d373efffbe77ed48f2172ac745d525bf22ab0"
+    },
+    {
+      "file": "SourceArt/Characters/Samurai/Kusazuri01/Review/Captures/pose-A_Run-32.png",
+      "size": [
+        900,
+        900
+      ],
+      "sha256": "c5b72470b591df50165e0c4f067f342796d75388a861e664a0fdc7d9238817e5"
+    },
+    {
+      "file": "SourceArt/Characters/Samurai/Kusazuri01/Review/Captures/pose-A_Run-39.png",
+      "size": [
+        900,
+        900
+      ],
+      "sha256": "58957ea6e8b65cb90c1ca2effbe4324d320465905c29b689a824a124bfb0d229"
+    },
+    {
+      "file": "SourceArt/Characters/Samurai/Kusazuri01/Review/Captures/contact-close-A_Run-31.png",
+      "size": [
+        900,
+        900
+      ],
+      "sha256": "d05dc6fe9b96f5b0afe623ab4cd8c842a584188769607a634ebf982646127bb1"
+    },
+    {
+      "file": "SourceArt/Characters/Samurai/Kusazuri01/Review/Captures/contact-close-A_Run-40.png",
+      "size": [
+        900,
+        900
+      ],
+      "sha256": "e5a6538bbf3f43080fa5bff6308579e8168ed94cf5c55591f18c766cd7ff120b"
+    },
+    {
+      "file": "SourceArt/Characters/Samurai/Kusazuri01/Review/Captures/contact-close-knee-lift.png",
+      "size": [
+        900,
+        900
+      ],
+      "sha256": "7cdad7c6c909a5ef7d6db930430a3f5871b876f8bba0fbff5c09e97220672550"
+    },
+    {
+      "file": "SourceArt/Characters/Samurai/Kusazuri01/Review/Captures/contact-close-knee-lift-side.png",
+      "size": [
+        900,
+        900
+      ],
+      "sha256": "3e63e8283aeec7a8cc5a1798939d25485fb44d2068d75eb96f83ff7c3baa2447"
+    }
+  ]
+}

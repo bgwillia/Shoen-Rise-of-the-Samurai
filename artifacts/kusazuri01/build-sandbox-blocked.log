@@ -1,0 +1,12 @@
++ ["/Users/Shared/Epic Games/UE_5.8/Engine/Build/BatchFiles/Mac/Build.sh", "ShoenEditor", "Mac", "Development", "/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/game/Shoen.uproject", "-WaitMutex", "-NoHotReloadFromIDE"]
+Setting up bundled DotNet SDK
+/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/ThirdParty/DotNet/10.0/mac-arm64
+Running dotnet Engine/Binaries/DotNET/UnrealBuildTool/UnrealBuildTool.dll ShoenEditor Mac Development /Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/game/Shoen.uproject -WaitMutex -NoHotReloadFromIDE
+Unhandled exception. System.UnauthorizedAccessException: Access to the path '/Users/brianwilliams/Library/Application Support/Epic/UnrealBuildTool/Trace-backup-2026.09.15-19.12.46.uba' is denied.
+ ---> System.IO.IOException: Operation not permitted
+   --- End of inner exception stack trace ---
+   at System.IO.FileSystem.DeleteFile(String fullPath)
+   at EpicGames.Core.FileReference.Delete(FileReference location)
+   at EpicGames.Core.Log.BackupLogFile(FileReference outputFile)
+   at UnrealBuildTool.UnrealBuildTool.Main(String[] ArgumentsArray)
+/Users/Shared/Epic Games/UE_5.8/Engine/Build/BatchFiles/Mac/Build.sh: line 35:  3245 Abort trap: 6           dotnet Engine/Binaries/DotNET/UnrealBuildTool/UnrealBuildTool.dll "$@"

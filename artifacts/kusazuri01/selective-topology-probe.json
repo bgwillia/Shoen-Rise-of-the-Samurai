@@ -1,0 +1,612 @@
+{
+  "Kusazuri_01_Belt": {
+    "evaluated_source_triangles": 4416,
+    "policy": "dissolve face angles below 8 degrees; preserve closed shell/lining/belt or selected hem",
+    "edges_after_reduction": {
+      "nonmanifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0
+    },
+    "edges_after_flat_island_cleanup": {
+      "nonmanifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0
+    },
+    "edges_after_uv_triangulation": {
+      "nonmanifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0
+    },
+    "edges_after_triangulation": {
+      "nonmanifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0
+    },
+    "runtime_triangles": 3246
+  },
+  "Kusazuri_01_Front_Center": {
+    "evaluated_source_triangles": 3920,
+    "policy": "dissolve face angles below 25 degrees; preserve closed shell/lining/belt or selected hem",
+    "edges_after_reduction": {
+      "nonmanifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0
+    },
+    "edges_after_flat_island_cleanup": {
+      "nonmanifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0
+    },
+    "edges_after_uv_triangulation": {
+      "nonmanifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0
+    },
+    "edges_after_triangulation": {
+      "nonmanifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0
+    },
+    "runtime_triangles": 840
+  },
+  "Kusazuri_01_Front_Center_Interior": {
+    "evaluated_source_triangles": 1080,
+    "policy": "dissolve face angles below 8 degrees; preserve closed shell/lining/belt or selected hem",
+    "edges_after_reduction": {
+      "nonmanifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0
+    },
+    "edges_after_flat_island_cleanup": {
+      "nonmanifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0
+    },
+    "edges_after_uv_triangulation": {
+      "nonmanifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0
+    },
+    "edges_after_triangulation": {
+      "nonmanifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0
+    },
+    "runtime_triangles": 116
+  },
+  "Kusazuri_01_Front_Center_Lacing": {
+    "policy": "omit repeated physical stitches; detailed atlas remains on every shell",
+    "runtime_triangles": 0
+  },
+  "Kusazuri_01_Front_Center_Trim": {
+    "evaluated_source_triangles": 5108,
+    "retained_hem_islands": 1,
+    "policy": "dissolve face angles below 8 degrees; preserve closed shell/lining/belt or selected hem",
+    "edges_after_reduction": {
+      "nonmanifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0
+    },
+    "edges_after_flat_island_cleanup": {
+      "nonmanifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0
+    },
+    "edges_after_uv_triangulation": {
+      "nonmanifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0
+    },
+    "edges_after_triangulation": {
+      "nonmanifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0
+    },
+    "runtime_triangles": 76
+  },
+  "Kusazuri_01_Front_L": {
+    "evaluated_source_triangles": 4312,
+    "policy": "dissolve face angles below 25 degrees; preserve closed shell/lining/belt or selected hem",
+    "edges_after_reduction": {
+      "nonmanifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0
+    },
+    "edges_after_flat_island_cleanup": {
+      "nonmanifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0
+    },
+    "edges_after_uv_triangulation": {
+      "nonmanifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0
+    },
+    "edges_after_triangulation": {
+      "nonmanifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0
+    },
+    "runtime_triangles": 924
+  },
+  "Kusazuri_01_Front_L_Interior": {
+    "evaluated_source_triangles": 1080,
+    "policy": "dissolve face angles below 8 degrees; preserve closed shell/lining/belt or selected hem",
+    "edges_after_reduction": {
+      "nonmanifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0
+    },
+    "edges_after_flat_island_cleanup": {
+      "nonmanifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0
+    },
+    "edges_after_uv_triangulation": {
+      "nonmanifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0
+    },
+    "edges_after_triangulation": {
+      "nonmanifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0
+    },
+    "runtime_triangles": 132
+  },
+  "Kusazuri_01_Front_L_Lacing": {
+    "policy": "omit repeated physical stitches; detailed atlas remains on every shell",
+    "runtime_triangles": 0
+  },
+  "Kusazuri_01_Front_L_Trim": {
+    "evaluated_source_triangles": 5108,
+    "retained_hem_islands": 1,
+    "policy": "dissolve face angles below 8 degrees; preserve closed shell/lining/belt or selected hem",
+    "edges_after_reduction": {
+      "nonmanifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0
+    },
+    "edges_after_flat_island_cleanup": {
+      "nonmanifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0
+    },
+    "edges_after_uv_triangulation": {
+      "nonmanifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0
+    },
+    "edges_after_triangulation": {
+      "nonmanifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0
+    },
+    "runtime_triangles": 108
+  },
+  "Kusazuri_01_Front_R": {
+    "evaluated_source_triangles": 4312,
+    "policy": "dissolve face angles below 25 degrees; preserve closed shell/lining/belt or selected hem",
+    "edges_after_reduction": {
+      "nonmanifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0
+    },
+    "edges_after_flat_island_cleanup": {
+      "nonmanifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0
+    },
+    "edges_after_uv_triangulation": {
+      "nonmanifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0
+    },
+    "edges_after_triangulation": {
+      "nonmanifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0
+    },
+    "runtime_triangles": 924
+  },
+  "Kusazuri_01_Front_R_Interior": {
+    "evaluated_source_triangles": 1080,
+    "policy": "dissolve face angles below 8 degrees; preserve closed shell/lining/belt or selected hem",
+    "edges_after_reduction": {
+      "nonmanifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0
+    },
+    "edges_after_flat_island_cleanup": {
+      "nonmanifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0
+    },
+    "edges_after_uv_triangulation": {
+      "nonmanifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0
+    },
+    "edges_after_triangulation": {
+      "nonmanifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0
+    },
+    "runtime_triangles": 132
+  },
+  "Kusazuri_01_Front_R_Lacing": {
+    "policy": "omit repeated physical stitches; detailed atlas remains on every shell",
+    "runtime_triangles": 0
+  },
+  "Kusazuri_01_Front_R_Trim": {
+    "evaluated_source_triangles": 5108,
+    "retained_hem_islands": 1,
+    "policy": "dissolve face angles below 8 degrees; preserve closed shell/lining/belt or selected hem",
+    "edges_after_reduction": {
+      "nonmanifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0
+    },
+    "edges_after_flat_island_cleanup": {
+      "nonmanifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0
+    },
+    "edges_after_uv_triangulation": {
+      "nonmanifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0
+    },
+    "edges_after_triangulation": {
+      "nonmanifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0
+    },
+    "runtime_triangles": 108
+  },
+  "Kusazuri_01_Lacing": {
+    "evaluated_source_triangles": 23084,
+    "policy": "obi only: collapse ratio .20; preserve indigo corner mask",
+    "edges_after_reduction": {
+      "nonmanifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0
+    },
+    "edges_after_flat_island_cleanup": {
+      "nonmanifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0
+    },
+    "edges_after_uv_triangulation": {
+      "nonmanifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0
+    },
+    "edges_after_triangulation": {
+      "nonmanifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0
+    },
+    "runtime_triangles": 4572
+  },
+  "Kusazuri_01_Rear_L": {
+    "evaluated_source_triangles": 4312,
+    "policy": "dissolve face angles below 25 degrees; preserve closed shell/lining/belt or selected hem",
+    "edges_after_reduction": {
+      "nonmanifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0
+    },
+    "edges_after_flat_island_cleanup": {
+      "nonmanifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0
+    },
+    "edges_after_uv_triangulation": {
+      "nonmanifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0
+    },
+    "edges_after_triangulation": {
+      "nonmanifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0
+    },
+    "runtime_triangles": 924
+  },
+  "Kusazuri_01_Rear_L_Interior": {
+    "evaluated_source_triangles": 1080,
+    "policy": "dissolve face angles below 8 degrees; preserve closed shell/lining/belt or selected hem",
+    "edges_after_reduction": {
+      "nonmanifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0
+    },
+    "edges_after_flat_island_cleanup": {
+      "nonmanifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0
+    },
+    "edges_after_uv_triangulation": {
+      "nonmanifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0
+    },
+    "edges_after_triangulation": {
+      "nonmanifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0
+    },
+    "runtime_triangles": 132
+  },
+  "Kusazuri_01_Rear_L_Lacing": {
+    "policy": "omit repeated physical stitches; detailed atlas remains on every shell",
+    "runtime_triangles": 0
+  },
+  "Kusazuri_01_Rear_L_Trim": {
+    "evaluated_source_triangles": 5108,
+    "retained_hem_islands": 1,
+    "policy": "dissolve face angles below 8 degrees; preserve closed shell/lining/belt or selected hem",
+    "edges_after_reduction": {
+      "nonmanifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0
+    },
+    "edges_after_flat_island_cleanup": {
+      "nonmanifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0
+    },
+    "edges_after_uv_triangulation": {
+      "nonmanifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0
+    },
+    "edges_after_triangulation": {
+      "nonmanifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0
+    },
+    "runtime_triangles": 108
+  },
+  "Kusazuri_01_Rear_R": {
+    "evaluated_source_triangles": 4312,
+    "policy": "dissolve face angles below 25 degrees; preserve closed shell/lining/belt or selected hem",
+    "edges_after_reduction": {
+      "nonmanifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0
+    },
+    "edges_after_flat_island_cleanup": {
+      "nonmanifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0
+    },
+    "edges_after_uv_triangulation": {
+      "nonmanifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0
+    },
+    "edges_after_triangulation": {
+      "nonmanifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0
+    },
+    "runtime_triangles": 924
+  },
+  "Kusazuri_01_Rear_R_Interior": {
+    "evaluated_source_triangles": 1080,
+    "policy": "dissolve face angles below 8 degrees; preserve closed shell/lining/belt or selected hem",
+    "edges_after_reduction": {
+      "nonmanifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0
+    },
+    "edges_after_flat_island_cleanup": {
+      "nonmanifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0
+    },
+    "edges_after_uv_triangulation": {
+      "nonmanifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0
+    },
+    "edges_after_triangulation": {
+      "nonmanifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0
+    },
+    "runtime_triangles": 132
+  },
+  "Kusazuri_01_Rear_R_Lacing": {
+    "policy": "omit repeated physical stitches; detailed atlas remains on every shell",
+    "runtime_triangles": 0
+  },
+  "Kusazuri_01_Rear_R_Trim": {
+    "evaluated_source_triangles": 5108,
+    "retained_hem_islands": 1,
+    "policy": "dissolve face angles below 8 degrees; preserve closed shell/lining/belt or selected hem",
+    "edges_after_reduction": {
+      "nonmanifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0
+    },
+    "edges_after_flat_island_cleanup": {
+      "nonmanifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0
+    },
+    "edges_after_uv_triangulation": {
+      "nonmanifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0
+    },
+    "edges_after_triangulation": {
+      "nonmanifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0
+    },
+    "runtime_triangles": 108
+  },
+  "Kusazuri_01_Side_L": {
+    "evaluated_source_triangles": 4312,
+    "policy": "dissolve face angles below 25 degrees; preserve closed shell/lining/belt or selected hem",
+    "edges_after_reduction": {
+      "nonmanifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0
+    },
+    "edges_after_flat_island_cleanup": {
+      "nonmanifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0
+    },
+    "edges_after_uv_triangulation": {
+      "nonmanifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0
+    },
+    "edges_after_triangulation": {
+      "nonmanifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0
+    },
+    "runtime_triangles": 924
+  },
+  "Kusazuri_01_Side_L_Interior": {
+    "evaluated_source_triangles": 1080,
+    "policy": "dissolve face angles below 8 degrees; preserve closed shell/lining/belt or selected hem",
+    "edges_after_reduction": {
+      "nonmanifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0
+    },
+    "edges_after_flat_island_cleanup": {
+      "nonmanifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0
+    },
+    "edges_after_uv_triangulation": {
+      "nonmanifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0
+    },
+    "edges_after_triangulation": {
+      "nonmanifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0
+    },
+    "runtime_triangles": 120
+  },
+  "Kusazuri_01_Side_L_Lacing": {
+    "policy": "omit repeated physical stitches; detailed atlas remains on every shell",
+    "runtime_triangles": 0
+  },
+  "Kusazuri_01_Side_L_Trim": {
+    "evaluated_source_triangles": 5108,
+    "retained_hem_islands": 1,
+    "policy": "dissolve face angles below 8 degrees; preserve closed shell/lining/belt or selected hem",
+    "edges_after_reduction": {
+      "nonmanifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0
+    },
+    "edges_after_flat_island_cleanup": {
+      "nonmanifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0
+    },
+    "edges_after_uv_triangulation": {
+      "nonmanifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0
+    },
+    "edges_after_triangulation": {
+      "nonmanifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0
+    },
+    "runtime_triangles": 94
+  },
+  "Kusazuri_01_Side_R": {
+    "evaluated_source_triangles": 4312,
+    "policy": "dissolve face angles below 25 degrees; preserve closed shell/lining/belt or selected hem",
+    "edges_after_reduction": {
+      "nonmanifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0
+    },
+    "edges_after_flat_island_cleanup": {
+      "nonmanifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0
+    },
+    "edges_after_uv_triangulation": {
+      "nonmanifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0
+    },
+    "edges_after_triangulation": {
+      "nonmanifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0
+    },
+    "runtime_triangles": 924
+  },
+  "Kusazuri_01_Side_R_Interior": {
+    "evaluated_source_triangles": 1080,
+    "policy": "dissolve face angles below 8 degrees; preserve closed shell/lining/belt or selected hem",
+    "edges_after_reduction": {
+      "nonmanifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0
+    },
+    "edges_after_flat_island_cleanup": {
+      "nonmanifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0
+    },
+    "edges_after_uv_triangulation": {
+      "nonmanifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0
+    },
+    "edges_after_triangulation": {
+      "nonmanifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0
+    },
+    "runtime_triangles": 120
+  },
+  "Kusazuri_01_Side_R_Lacing": {
+    "policy": "omit repeated physical stitches; detailed atlas remains on every shell",
+    "runtime_triangles": 0
+  },
+  "Kusazuri_01_Side_R_Trim": {
+    "evaluated_source_triangles": 5108,
+    "retained_hem_islands": 1,
+    "policy": "dissolve face angles below 8 degrees; preserve closed shell/lining/belt or selected hem",
+    "edges_after_reduction": {
+      "nonmanifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0
+    },
+    "edges_after_flat_island_cleanup": {
+      "nonmanifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0
+    },
+    "edges_after_uv_triangulation": {
+      "nonmanifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0
+    },
+    "edges_after_triangulation": {
+      "nonmanifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0
+    },
+    "runtime_triangles": 94
+  }
+}

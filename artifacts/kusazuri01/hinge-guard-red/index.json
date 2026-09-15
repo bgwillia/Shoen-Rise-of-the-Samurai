@@ -1,0 +1,117 @@
+﻿{
+	"devices": [
+		{
+			"deviceName": "Brians-MacBook-Pro-3.local",
+			"instance": "BC0658FB5F4040E786F81BAA3A4802E4",
+			"instanceName": "Brians-MacBook-Pro-3.local-11804",
+			"platform": "MacEditor",
+			"oSVersion": "macOS 26.6.2 25G83",
+			"model": "Default",
+			"gPU": "Apple M1 Max",
+			"cPUModel": "Apple M1 Max",
+			"rAMInGB": 32,
+			"renderMode": "SM6",
+			"rHI": "",
+			"appInstanceLog": ""
+		}
+	],
+	"reportCreatedOn": "2026.09.15-20.21.38",
+	"succeeded": 0,
+	"succeededWithWarnings": 0,
+	"failed": 1,
+	"notRun": 0,
+	"inProcess": 0,
+	"totalDuration": 0.0083212479948997498,
+	"comparisonExported": false,
+	"comparisonExportDirectory": "",
+	"tests": [
+		{
+			"testDisplayName": "HingeMath",
+			"fullTestPath": "Shoen.Art.Kusazuri.HingeMath",
+			"tags": [],
+			"state": "Fail",
+			"deviceInstance": [
+				"BC0658FB5F4040E786F81BAA3A4802E4"
+			],
+			"duration": 0.0083212479948997498,
+			"dateTime": "2026.09.15-20.21.38",
+			"entries": [
+				{
+					"event":
+					{
+						"type": "Error",
+						"message": "Expected 'lateral attack beyond 35 degree azimuth retains radial hinge' to be true.",
+						"context": "",
+						"artifact": "00000000000000000000000000000000"
+					},
+					"filename": "Unknown",
+					"lineNumber": 0,
+					"timestamp": "2026.09.15-20.21.38"
+				},
+				{
+					"event":
+					{
+						"type": "Error",
+						"message": "Expected 'near-forward high knee hinge follows horizontal thigh direction' to be true.",
+						"context": "",
+						"artifact": "00000000000000000000000000000000"
+					},
+					"filename": "Unknown",
+					"lineNumber": 0,
+					"timestamp": "2026.09.15-20.21.38"
+				},
+				{
+					"event":
+					{
+						"type": "Error",
+						"message": "Expected 'lateral attack beyond 35 degree azimuth retains radial hinge' to be true.",
+						"context": "",
+						"artifact": "00000000000000000000000000000000"
+					},
+					"filename": "Unknown",
+					"lineNumber": 0,
+					"timestamp": "2026.09.15-20.21.38"
+				},
+				{
+					"event":
+					{
+						"type": "Error",
+						"message": "Expected 'near-forward high knee hinge follows horizontal thigh direction' to be true.",
+						"context": "",
+						"artifact": "00000000000000000000000000000000"
+					},
+					"filename": "Unknown",
+					"lineNumber": 0,
+					"timestamp": "2026.09.15-20.21.38"
+				},
+				{
+					"event":
+					{
+						"type": "Error",
+						"message": "Expected 'side panel opens by the sagittal floor when radial opening is zero' to be true.",
+						"context": "",
+						"artifact": "00000000000000000000000000000000"
+					},
+					"filename": "Unknown",
+					"lineNumber": 0,
+					"timestamp": "2026.09.15-20.21.38"
+				},
+				{
+					"event":
+					{
+						"type": "Error",
+						"message": "Expected 'side panel opens by the sagittal floor when radial opening is zero' to be true.",
+						"context": "",
+						"artifact": "00000000000000000000000000000000"
+					},
+					"filename": "Unknown",
+					"lineNumber": 0,
+					"timestamp": "2026.09.15-20.21.38"
+				}
+			],
+			"warnings": 0,
+			"errors": 6,
+			"artifacts": []
+		}
+	]
+}

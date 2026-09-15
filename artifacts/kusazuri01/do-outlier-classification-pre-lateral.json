@@ -1,0 +1,225 @@
+{
+  "source_sha256": "f2b7dc4f19383cb823715a1dafe46ce9ec307954c0191dbe9d03747145fba653",
+  "motion_script_sha256": "1effe2a50bf90b88ef952f3f8cf6a24998e6d814bb8972f677886d0a070a6b6c",
+  "scope": "Archived pre-lateral maximum Do nearest-surface estimates. These points are vertices of intersecting Kusazuri triangles; they are not necessarily inside Do solids.",
+  "outliers": [
+    {
+      "pose": "A_Run:29",
+      "component": "Kusazuri_01_Side_R_Interior",
+      "archived_measurement": {
+        "triangle_intersections": 254,
+        "intersecting_armor_triangles": 73,
+        "examples": [
+          [
+            61539,
+            495
+          ],
+          [
+            61539,
+            498
+          ],
+          [
+            61540,
+            498
+          ],
+          [
+            61541,
+            498
+          ],
+          [
+            61541,
+            499
+          ]
+        ],
+        "depth_sample_vertices": 221,
+        "vertices_on_negative_nearest_normal_side": 28,
+        "maximum_sampled_penetration_estimate_mm": 20.187875255942345,
+        "maximum_negative_nearest_normal_sample_distance_mm": 20.187875255942345,
+        "minimum_unsigned_sample_clearance_mm": 0.017156828107545152,
+        "deepest_sample": {
+          "armor_vertex": 475,
+          "target_triangle": 9122,
+          "point_metres": [
+            -0.16086751222610474,
+            0.12527675926685333,
+            0.8385950326919556
+          ],
+          "surface_metres": [
+            -0.15769854187965393,
+            0.1181427538394928,
+            0.8572126030921936
+          ]
+        },
+        "contact_triangle_pairs_by_dominant_target_bone": {},
+        "maximum_contact_penetration_estimate_mm_by_dominant_target_bone": {}
+      },
+      "nearest_component_inferred_from_sorted_reference_triangle_ranges": "Do_Edge",
+      "classification": "Unresolved solid containment; sign of the nearest face alone cannot establish physical depth."
+    },
+    {
+      "pose": "A_Walk:41",
+      "component": "Kusazuri_01_Front_Center_Trim",
+      "archived_measurement": {
+        "triangle_intersections": 189,
+        "intersecting_armor_triangles": 50,
+        "examples": [
+          [
+            60427,
+            5106
+          ],
+          [
+            60427,
+            5074
+          ],
+          [
+            60427,
+            5099
+          ],
+          [
+            60427,
+            5085
+          ],
+          [
+            60427,
+            5065
+          ]
+        ],
+        "depth_sample_vertices": 288,
+        "vertices_on_negative_nearest_normal_side": 9,
+        "maximum_sampled_penetration_estimate_mm": 17.12859608232975,
+        "maximum_negative_nearest_normal_sample_distance_mm": 17.12859608232975,
+        "minimum_unsigned_sample_clearance_mm": 0.023415586838382296,
+        "deepest_sample": {
+          "armor_vertex": 2662,
+          "target_triangle": 43206,
+          "point_metres": [
+            0.02100929245352745,
+            -0.12185622751712799,
+            0.9109483957290649
+          ],
+          "surface_metres": [
+            0.023170456290245056,
+            -0.10490148514509201,
+            0.9120686054229736
+          ]
+        },
+        "contact_triangle_pairs_by_dominant_target_bone": {},
+        "maximum_contact_penetration_estimate_mm_by_dominant_target_bone": {}
+      },
+      "nearest_component_inferred_from_sorted_reference_triangle_ranges": "Do_Lacing",
+      "classification": "Unresolved solid containment; sign of the nearest face alone cannot establish physical depth."
+    },
+    {
+      "pose": "A_Run:50",
+      "component": "Kusazuri_01_Front_Center_Interior",
+      "archived_measurement": {
+        "triangle_intersections": 394,
+        "intersecting_armor_triangles": 80,
+        "examples": [
+          [
+            60425,
+            658
+          ],
+          [
+            60425,
+            504
+          ],
+          [
+            60425,
+            502
+          ],
+          [
+            60425,
+            503
+          ],
+          [
+            60425,
+            659
+          ]
+        ],
+        "depth_sample_vertices": 231,
+        "vertices_on_negative_nearest_normal_side": 6,
+        "maximum_sampled_penetration_estimate_mm": 17.043113708496094,
+        "maximum_negative_nearest_normal_sample_distance_mm": 17.043113708496094,
+        "minimum_unsigned_sample_clearance_mm": 0.4531276354100555,
+        "deepest_sample": {
+          "armor_vertex": 97,
+          "target_triangle": 43206,
+          "point_metres": [
+            0.06289567053318024,
+            -0.030693283304572105,
+            0.9514649510383606
+          ],
+          "surface_metres": [
+            0.0554511696100235,
+            -0.015523938462138176,
+            0.9492427706718445
+          ]
+        },
+        "contact_triangle_pairs_by_dominant_target_bone": {},
+        "maximum_contact_penetration_estimate_mm_by_dominant_target_bone": {}
+      },
+      "nearest_component_inferred_from_sorted_reference_triangle_ranges": "Do_Lacing",
+      "classification": "Unresolved solid containment; sign of the nearest face alone cannot establish physical depth."
+    },
+    {
+      "pose": "A_Run:50",
+      "component": "Kusazuri_01_Front_Center",
+      "archived_measurement": {
+        "triangle_intersections": 78,
+        "intersecting_armor_triangles": 34,
+        "examples": [
+          [
+            63352,
+            146
+          ],
+          [
+            63352,
+            113
+          ],
+          [
+            63384,
+            147
+          ],
+          [
+            63384,
+            128
+          ],
+          [
+            63384,
+            146
+          ]
+        ],
+        "depth_sample_vertices": 261,
+        "vertices_on_negative_nearest_normal_side": 13,
+        "maximum_sampled_penetration_estimate_mm": 12.037262320518494,
+        "maximum_negative_nearest_normal_sample_distance_mm": 12.037262320518494,
+        "minimum_unsigned_sample_clearance_mm": 0.0033785836421884596,
+        "deepest_sample": {
+          "armor_vertex": 19,
+          "target_triangle": 43030,
+          "point_metres": [
+            -0.08179325610399246,
+            -0.05060623213648796,
+            0.9394624829292297
+          ],
+          "surface_metres": [
+            -0.08613729476928711,
+            -0.03948550298810005,
+            0.9379280805587769
+          ]
+        },
+        "contact_triangle_pairs_by_dominant_target_bone": {},
+        "maximum_contact_penetration_estimate_mm_by_dominant_target_bone": {}
+      },
+      "nearest_component_inferred_from_sorted_reference_triangle_ranges": "Do_Lacing",
+      "classification": "Unresolved solid containment; sign of the nearest face alone cannot establish physical depth."
+    }
+  ],
+  "visual_review": {
+    "A_Run:29": "Existing 900px outfit capture shows contact around the upper panel/obi seam without a conspicuous 20mm external gouge; the far side and backing are occluded.",
+    "A_Walk:41": "Existing 900px outfit capture shows a continuous obi/panel transition; it cannot resolve whether the thin trim crosses a Do cord.",
+    "A_Run:50": "No archived dedicated capture."
+  },
+  "next_check": "Reproduce archived hinge targets on unchanged Do fixture and evaluate exact outlier points against connected closed Do islands using independent ray directions."
+}

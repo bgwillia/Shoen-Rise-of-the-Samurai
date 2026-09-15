@@ -1,0 +1,17 @@
+{
+  "Blender": {
+    "exit_code": 1,
+    "pids": "",
+    "error": ""
+  },
+  "UnrealEditor": {
+    "exit_code": 1,
+    "pids": "",
+    "error": ""
+  },
+  "ShaderCompileWorker": {
+    "exit_code": 1,
+    "pids": "",
+    "error": ""
+  }
+}

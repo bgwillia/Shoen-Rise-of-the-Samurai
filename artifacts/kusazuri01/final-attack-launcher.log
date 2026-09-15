@@ -1,0 +1,13 @@
++ ["/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/UnrealEditor.app/Contents/MacOS/UnrealEditor", "/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/game/Shoen.uproject", "/Game/Art/Characters/Samurai/Kusazuri01/Review/Kusazuri01_Review?game=/Script/Shoen.KusazuriReviewGameMode", "-game", "-windowed", "-ResX=1600", "-ResY=900", "-NoVSync", "-nop4", "-nosplash", "-stdout", "-FullStdOutLogOutput", "-KusazuriMode=kusazuri", "-KusazuriCount=1", "-KusazuriCamera=close", "-KusazuriAnimation=attack", "-KusazuriPose=animation", "-KusazuriContract=/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/SourceArt/Characters/Samurai/Kusazuri01/asset-manifest.json", "-KusazuriSeconds=8.0", "-KusazuriOutput=/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/artifacts/kusazuri01/final-attack.json", "-KusazuriScreenshot=/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/artifacts/kusazuri01/final-attack.png"]
+Exit 0: /Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/artifacts/local/kusazuri01/final-attack.log
+{
+  "rendered_bodies": 1,
+  "rendered_helmets": 1,
+  "rendered_armors": 1,
+  "rendered_kusazuri": 1,
+  "rendered_sode": 2,
+  "frames": 402,
+  "median_fps": 57.089293385747595,
+  "interval_fps": 50.14938935384167,
+  "max_kusazuri_bone_position_error_cm": 1.6628428414373827e-08
+}

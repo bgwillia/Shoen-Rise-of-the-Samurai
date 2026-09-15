@@ -1,0 +1,11 @@
+{
+  "source_sha256": "cf7c0ec0578b7fe2aca7d1b30439c521e8cecc3e63d4f36b0c8820b31dc9eb9e",
+  "source_checks_passed": 44,
+  "final_native_captures": 20,
+  "measured_poses": 372,
+  "unreal_tests_passed": 21,
+  "cost_trials": 8,
+  "report_links_valid": true,
+  "motion_all_clear_claim": false,
+  "scope": "Final evidence consistency readback; does not replace the individual raw checks or visual inspection."
+}

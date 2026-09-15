@@ -1,0 +1,15 @@
+addon_utils.disable: bl_ext.lab_blender_org.mcp not enabled
+Building panel Front_Center
+Building panel Front_L
+Building panel Front_R
+Building panel Side_L
+Building panel Side_R
+Building panel Rear_L
+Building panel Rear_R
+/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/SourceArt/Characters/Samurai/Kusazuri01/Scripts/build_kusazuri.py:221: DeprecationWarning: 'World.use_nodes' is expected to be removed in Blender 6.0
+  world=bpy.data.worlds.new('Neutral armor review');world.use_nodes=True;world.node_tree.nodes['Background'].inputs[0].default_value=(.12,.145,.18,1);world.node_tree.nodes['Background'].inputs[1].default_value=.5;scene.world=world
+Info: Saved as "Kusazuri01.blend"
+KUSAZURI_SOURCE_COMPLETE {"source_triangles": 147408, "panels": 7, "objects": 30}
+Blender 5.1.2 (hash ec6e62d40fa9 built 2026-05-19 01:30:33)
+
+Blender quit

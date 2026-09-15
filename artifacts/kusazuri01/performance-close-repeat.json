@@ -1,0 +1,55 @@
+{
+  "reason": "First single-character pair was unexpectedly faster with added armor. Reverse the order once to expose run-to-run variation; do not infer a speedup.",
+  "conditions": "Same close camera, native idle, three-second warmup,15-second sample command, no coordinated heavy work. Followed the original six serial trials.",
+  "runs": [
+    {
+      "label": "cost-repeat-1-kusazuri",
+      "mode": "kusazuri",
+      "report": "cost-repeat-1-kusazuri.json",
+      "frame": {
+        "samples": 1337,
+        "median_ms": 10.950833559036255,
+        "p95_ms": 14.003835618495941,
+        "worst_ms": 42.80520603060722
+      },
+      "median_fps": 91.31724946863375,
+      "gpu": {
+        "samples": 1337,
+        "median_ms": 10.320291519165039,
+        "p95_ms": 12.842082977294922,
+        "worst_ms": 27.041208267211914
+      },
+      "frames": 1337,
+      "viewport": [
+        1280,
+        720
+      ],
+      "rhi": "Metal"
+    },
+    {
+      "label": "cost-repeat-1-existing",
+      "mode": "existing",
+      "report": "cost-repeat-1-existing.json",
+      "frame": {
+        "samples": 1286,
+        "median_ms": 11.237956583499908,
+        "p95_ms": 15.034165233373642,
+        "worst_ms": 55.492375046014786
+      },
+      "median_fps": 88.98414872577872,
+      "gpu": {
+        "samples": 1286,
+        "median_ms": 10.62874984741211,
+        "p95_ms": 12.675708770751953,
+        "worst_ms": 56.66362380981445
+      },
+      "frames": 1286,
+      "viewport": [
+        1280,
+        720
+      ],
+      "rhi": "Metal"
+    }
+  ],
+  "median_frame_delta_ms": -0.28712302446365356
+}

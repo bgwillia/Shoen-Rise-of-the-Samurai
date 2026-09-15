@@ -1,0 +1,16 @@
+{
+  "asset": "Kusazuri01",
+  "engine_version": "5.8.2-56702186+++UE5+Release-5.8",
+  "validated": false,
+  "rendering_validated": false,
+  "imports": [],
+  "fbx_import": {
+    "convert_scene": false,
+    "convert_scene_unit": true,
+    "force_front_x_axis": false,
+    "normal_import": "Import normals and tangents",
+    "vertex_colors": "Replace with FBX colors (ArmorTint: R=0 indigo obi, R=1 original palette)",
+    "coordinate_contract": "Blender world metres, -Y forward, preserved native .01-scale root; raw FBX maps (100x,-100y,100z) into native Manny +Y-forward mesh space."
+  },
+  "error": "Traceback (most recent call last):\n  File \"/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/SourceArt/Characters/Samurai/Kusazuri01/Scripts/import_unreal.py\", line 427, in <module>\n    main()\n  File \"/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/SourceArt/Characters/Samurai/Kusazuri01/Scripts/import_unreal.py\", line 394, in main\n    material = create_material_variant()\n               ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/SourceArt/Characters/Samurai/Kusazuri01/Scripts/import_unreal.py\", line 228, in create_material_variant\n    require(lines and \"float tile\" in lines[0], \"Unexpected atlas tint expression\")\n  File \"/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/SourceArt/Characters/Samurai/Kusazuri01/Scripts/import_unreal.py\", line 47, in require\n    raise RuntimeError(message)\nRuntimeError: Unexpected atlas tint expression\n"
+}

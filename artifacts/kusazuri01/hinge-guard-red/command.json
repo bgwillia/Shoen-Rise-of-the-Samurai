@@ -1,0 +1,13 @@
+[
+  "/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/UnrealEditor.app/Contents/MacOS/UnrealEditor",
+  "/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/game/Shoen.uproject",
+  "-ExecCmds=Automation RunTests Shoen.Art.Kusazuri.HingeMath",
+  "-TestExit=Automation Test Queue Empty",
+  "-unattended",
+  "-NullRHI",
+  "-ReportExportPath=/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/artifacts/kusazuri01/hinge-guard-red",
+  "-nop4",
+  "-nosplash",
+  "-stdout",
+  "-FullStdOutLogOutput"
+]

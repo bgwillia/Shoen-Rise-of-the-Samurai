@@ -1,5 +1,13 @@
 # SHŌEN status
 
+## Kusazuri 01 waist armor note — 2026-09-15
+
+Kusazuri01 now has seven independently hinged leaves in a 30-mesh editable Blender source, with revised Dō-matched plate detail, red lacing, restrained brass, braided indigo obi and dark padded lining. It imports on unchanged native Manny with one opaque material, the existing three 2K Dō textures and 147,408 / 44,210 / 15,734 triangle LODs. Existing Kabuto/Dō/Sode geometry and gameplay remain unchanged.
+
+The 372-pose sweep preserves rigidity with no inversion. Idle/walk/attack are leg-clear; two run frames retain shallow contact (shell up to .896 mm, lining 2.261 mm), and the extreme knee lift retains approximately 6.425 mm shell contact. Stock unarmed hand contact and shallow Dō attachment contact remain documented. Forty-eight source renders and twenty actual Metal views support inspection. Final build, 67 tooling tests, 6 portable targets and all 21 Unreal tests pass, including Blender/Unreal hinge parity and terrain regression.
+
+The reserved 1280×720 Metal static comparison measured approximately +3.63 ms at 100 figures and +3.72 ms at 500 figures on M1 Max / 32 GB. These short trials do not establish animated-army or combat capacity; single-character variation prevented isolating a reliable incremental cost, and frame hitches remain. [Editable asset/workflow](SourceArt/Characters/Samurai/Kusazuri01/README.md), [verification, captures and costs](artifacts/kusazuri01/verification.md). The revised finish has not been approved by the user. Next recommendation: **Kote_L_01 + Kote_R_01**; it has not been started.
+
 ## Sode 01 paired armor note — 2026-09-15
 
 Both Sode shoulders now have an editable sixteen-part Blender source and imported assets on native Manny, with a revised Dō-matched lacquer/lacing finish, fitted ornament, twisted cords and quilted lining. The pair uses one shared material with the existing Dō textures; runtime LODs total 72,116 / 26,388 / 7,976 triangles. Fourteen actual Unreal views/motions and sixteen source pose samples are recorded. The required pose controller preserves rigid panels; flexible tie contact and simplified raised-arm lift remain. Single-character comparisons measured +0.446 ms close and +0.249 ms tactical frame median versus Kabuto+Dō. Build, 67 tooling tests, 6 portable targets and Sode native automation passed; the shared full suite had one known missing-fixture failure in the separate in-progress Kusazuri task. [Asset/workflow](SourceArt/Characters/Samurai/Sode01/README.md), [verification and captures](artifacts/sode01/verification.md). Human visual approval remains pending.

@@ -1,0 +1,23 @@
+[
+  "/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/UnrealEditor.app/Contents/MacOS/UnrealEditor",
+  "/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/game/Shoen.uproject",
+  "/Game/Art/Characters/Samurai/Kusazuri01/Review/Kusazuri01_Review?game=/Script/Shoen.KusazuriReviewGameMode",
+  "-game",
+  "-windowed",
+  "-ResX=1600",
+  "-ResY=900",
+  "-NoVSync",
+  "-nop4",
+  "-nosplash",
+  "-stdout",
+  "-FullStdOutLogOutput",
+  "-KusazuriMode=kusazuri",
+  "-KusazuriCount=1",
+  "-KusazuriCamera=right",
+  "-KusazuriAnimation=idle",
+  "-KusazuriPose=neutral",
+  "-KusazuriContract=/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/SourceArt/Characters/Samurai/Kusazuri01/asset-manifest.json",
+  "-KusazuriSeconds=4.0",
+  "-KusazuriOutput=/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/artifacts/kusazuri01/final-right.json",
+  "-KusazuriScreenshot=/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/artifacts/kusazuri01/final-right.png"
+]

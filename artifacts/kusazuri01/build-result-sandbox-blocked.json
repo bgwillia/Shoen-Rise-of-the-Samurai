@@ -1,0 +1,9 @@
+{
+  "command": [
+    "python3",
+    "tools/dev.py",
+    "build"
+  ],
+  "exit_code": 134,
+  "elapsed_seconds": 0.4964022636413574
+}

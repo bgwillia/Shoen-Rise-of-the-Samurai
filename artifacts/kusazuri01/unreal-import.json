@@ -1,0 +1,2656 @@
+{
+  "asset": "Kusazuri01",
+  "engine_version": "5.8.2-56702186+++UE5+Release-5.8",
+  "validated": true,
+  "rendering_validated": false,
+  "imports": [
+    {
+      "source": "SourceArt/Characters/Samurai/Kusazuri01/Exports/SK_Kusazuri01.fbx",
+      "sha256": "5f77a7ec3c6ddc8c82c7fddad6e0961f341ebac1a7d28026a3eb60d08a4de287",
+      "assets": [
+        "/Game/Art/Characters/Samurai/Kusazuri01/SK_Kusazuri01.SK_Kusazuri01"
+      ],
+      "vertex_color_import_option_readback": "<VertexColorImportOption.REPLACE: 0>"
+    },
+    {
+      "source": "SourceArt/Characters/Samurai/Kusazuri01/Exports/SK_Kusazuri01_LOD1.fbx",
+      "asset": "/Game/Art/Characters/Samurai/Kusazuri01/SK_Kusazuri01.SK_Kusazuri01",
+      "lod": 1,
+      "sha256": "0f631e205b1742b38cd14a44de79a4a17c3adfd9ac556aad2b9c551e143fe99c"
+    },
+    {
+      "source": "SourceArt/Characters/Samurai/Kusazuri01/Exports/SK_Kusazuri01_LOD2.fbx",
+      "asset": "/Game/Art/Characters/Samurai/Kusazuri01/SK_Kusazuri01.SK_Kusazuri01",
+      "lod": 2,
+      "sha256": "5b5421be68194526d5a66a01fd76c3a231463f71f938e90e2407ed0f2e125243"
+    },
+    {
+      "source": "SourceArt/Characters/Samurai/Kusazuri01/Review/Exports/SM_Kusazuri01.fbx",
+      "sha256": "0811f157f86f6ea2f25874d8522a18e971e8e5021dfed2f377693f4e3841fe3b",
+      "assets": [
+        "/Game/Art/Characters/Samurai/Kusazuri01/Review/SM_Kusazuri01.SM_Kusazuri01"
+      ],
+      "vertex_color_import_option_readback": "<VertexColorImportOption.REPLACE: 0>"
+    },
+    {
+      "source": "SourceArt/Characters/Samurai/Kusazuri01/Review/Exports/SM_Kusazuri01_LOD1.fbx",
+      "asset": "/Game/Art/Characters/Samurai/Kusazuri01/Review/SM_Kusazuri01.SM_Kusazuri01",
+      "lod": 1,
+      "sha256": "67319198fb3649cb3f93f580f656edb68176be2b63f696486ab2d9919b38e9ae"
+    },
+    {
+      "source": "SourceArt/Characters/Samurai/Kusazuri01/Review/Exports/SM_Kusazuri01_LOD2.fbx",
+      "asset": "/Game/Art/Characters/Samurai/Kusazuri01/Review/SM_Kusazuri01.SM_Kusazuri01",
+      "lod": 2,
+      "sha256": "1421b45c96fbf98d2678dec9f21cc7c92f2a95bb18b0e37c2d1c6af69750374c"
+    }
+  ],
+  "fbx_import": {
+    "convert_scene": false,
+    "convert_scene_unit": true,
+    "force_front_x_axis": false,
+    "normal_import": "Import normals and tangents",
+    "vertex_colors": "Replace with FBX colors (ArmorTint: R=0 indigo obi, R=1 original palette)",
+    "coordinate_contract": "Blender world metres, -Y forward, preserved native .01-scale root; raw FBX maps (100x,-100y,100z) into native Manny +Y-forward mesh space."
+  },
+  "material_texture_readback": {
+    "source_graph": [
+      "/Game/Art/Characters/Samurai/Do01/T_Do01_BaseColor.T_Do01_BaseColor",
+      "/Game/Art/Characters/Samurai/Do01/T_Do01_Normal.T_Do01_Normal",
+      "/Game/Art/Characters/Samurai/Do01/T_Do01_ORM.T_Do01_ORM"
+    ],
+    "target_graph": [
+      "/Game/Art/Characters/Samurai/Do01/T_Do01_BaseColor.T_Do01_BaseColor",
+      "/Game/Art/Characters/Samurai/Do01/T_Do01_Normal.T_Do01_Normal",
+      "/Game/Art/Characters/Samurai/Do01/T_Do01_ORM.T_Do01_ORM"
+    ],
+    "source_active_resource": [],
+    "target_active_resource": []
+  },
+  "material": {
+    "asset": "/Game/Art/Characters/Samurai/Kusazuri01/M_Kusazuri01.M_Kusazuri01",
+    "cloned_from": "/Game/Art/Characters/Samurai/Sode01/M_Sode01",
+    "rationale": "Match final Sode lacquer/brass/red panel cords; tile 12 tints quilted lining indigo, and ArmorTint.R selects desaturated woven tile-3 texture for the indigo obi and bow",
+    "obi_vertex_mask": {
+      "attribute": "ArmorTint",
+      "channel": "R",
+      "indigo_value": 0,
+      "original_palette_value": 1,
+      "color": [
+        0.08,
+        0.18,
+        0.5
+      ],
+      "desaturation": 1.0,
+      "formula": "lerp(desaturate(raw BaseColor,1)*indigo, original palette BaseColor, VertexColor.R)",
+      "normal_and_orm": "Unchanged shared atlas maps; tile 3 retains woven cord surface detail"
+    },
+    "tile_12_multiplier": [
+      0.1,
+      0.18,
+      0.48
+    ],
+    "source_custom_code": "// FBX import flips V for Unreal texture sampling. Recover Blender's atlas row\n// only for palette classification; texture samples retain their native UVs.\nfloat tile = floor(UV.x * 4.0) + 4.0 * floor((1.0 - UV.y) * 4.0);\nif (tile == 0.0 || tile == 10.0) return float3(0.28, 0.29, 0.30);\nif (tile == 3.0) return float3(0.38, 0.30, 0.28);\nif (tile == 2.0 || tile == 11.0) return float3(0.85, 0.78, 0.67);\nreturn float3(0.85, 0.85, 0.85);",
+    "custom_code": "// FBX import flips V for Unreal texture sampling. Recover Blender's atlas row\n// only for palette classification; texture samples retain their native UVs.\nfloat tile = floor(UV.x * 4.0) + 4.0 * floor((1.0 - UV.y) * 4.0);\nif (tile == 12.0) return float3(0.10, 0.18, 0.48);\nif (tile == 0.0 || tile == 10.0) return float3(0.28, 0.29, 0.30);\nif (tile == 3.0) return float3(0.38, 0.30, 0.28);\nif (tile == 2.0 || tile == 11.0) return float3(0.85, 0.78, 0.67);\nreturn float3(0.85, 0.85, 0.85);",
+    "tile_12_surface": {
+      "metallic": 0.0,
+      "roughness": 0.9,
+      "specular": 0.0,
+      "mask_code": "float tile = floor(UV.x * 4.0) + 4.0 * floor((1.0 - UV.y) * 4.0);\nreturn tile == 12.0 ? 1.0 : 0.0;",
+      "reason": "Suppress chalky grazing specular on indigo cloth; preserve all other atlas regions",
+      "normal_strength": 0.65,
+      "other_atlas_scalar_inputs_unchanged": true
+    },
+    "textures": [
+      "/Game/Art/Characters/Samurai/Do01/T_Do01_BaseColor.T_Do01_BaseColor",
+      "/Game/Art/Characters/Samurai/Do01/T_Do01_Normal.T_Do01_Normal",
+      "/Game/Art/Characters/Samurai/Do01/T_Do01_ORM.T_Do01_ORM"
+    ],
+    "new_texture_allocations": 0,
+    "runtime_material_slots": 1,
+    "existing_material_changed": false,
+    "compile_errors": [],
+    "rendering_limit": "NullRHI import checks compilation responses; actual Metal review still required"
+  },
+  "skeletal_mesh": {
+    "asset": "/Game/Art/Characters/Samurai/Kusazuri01/SK_Kusazuri01.SK_Kusazuri01",
+    "material_slots": 1,
+    "material": "/Game/Art/Characters/Samurai/Kusazuri01/M_Kusazuri01.M_Kusazuri01",
+    "lods": [
+      {
+        "lod": 0,
+        "render_vertices": 177348,
+        "sections": 1,
+        "section_material_slot": 0,
+        "build_settings": {
+          "recompute_normals": false,
+          "recompute_tangents": false,
+          "full_precision_uvs": true
+        }
+      },
+      {
+        "lod": 1,
+        "render_vertices": 58780,
+        "sections": 1,
+        "section_material_slot": 0,
+        "build_settings": {
+          "recompute_normals": false,
+          "recompute_tangents": false,
+          "full_precision_uvs": true
+        }
+      },
+      {
+        "lod": 2,
+        "render_vertices": 32537,
+        "sections": 1,
+        "section_material_slot": 0,
+        "build_settings": {
+          "recompute_normals": false,
+          "recompute_tangents": false,
+          "full_precision_uvs": true
+        }
+      }
+    ],
+    "bounds_cm": {
+      "min": [
+        -26.618558883666992,
+        -20.11115837097168,
+        66.86333465576172
+      ],
+      "max": [
+        26.618558883666992,
+        22.8378849029541,
+        103.98082733154297
+      ],
+      "size": [
+        53.237117767333984,
+        42.94904327392578,
+        37.11749267578125
+      ]
+    },
+    "skeleton": {
+      "asset": "/Game/Characters/Mannequins/Meshes/SK_Mannequin.SK_Mannequin",
+      "exact_existing_asset": true,
+      "reference_mesh": "/Game/Characters/Mannequins/Meshes/SKM_Manny_Simple",
+      "matching_reference_transforms": true,
+      "reference_tolerances": {
+        "translation_cm": 0.01,
+        "scale": 0.0001,
+        "quaternion_dot_error": 1e-06
+      },
+      "maximum_reference_delta": {
+        "translation_cm": 0.0019882917404174805,
+        "scale": 5.125999450683594e-06,
+        "quaternion_dot_error": 2.205980287328657e-09
+      },
+      "reference_deltas": [
+        {
+          "name": "root",
+          "translation_cm": 0.0,
+          "scale": 0.0,
+          "quaternion_dot_error": 4.9048654027217253e-11
+        },
+        {
+          "name": "pelvis",
+          "translation_cm": 0.0,
+          "scale": 3.5762786865234375e-07,
+          "quaternion_dot_error": 8.881784197001252e-16
+        },
+        {
+          "name": "spine_01",
+          "translation_cm": 2.5137799255503523e-06,
+          "scale": 1.1920928955078125e-07,
+          "quaternion_dot_error": 3.552713678800501e-14
+        },
+        {
+          "name": "spine_02",
+          "translation_cm": 5.7220458984375e-06,
+          "scale": 0.0,
+          "quaternion_dot_error": 5.007105841059456e-14
+        },
+        {
+          "name": "spine_03",
+          "translation_cm": 1.3828277587890625e-05,
+          "scale": 2.384185791015625e-07,
+          "quaternion_dot_error": 2.475797344914099e-14
+        },
+        {
+          "name": "spine_04",
+          "translation_cm": 2.574920654296875e-05,
+          "scale": 1.1920928955078125e-07,
+          "quaternion_dot_error": 1.3988810110276972e-14
+        },
+        {
+          "name": "spine_05",
+          "translation_cm": 5.514509112458654e-06,
+          "scale": 0.0,
+          "quaternion_dot_error": 9.35918009759007e-14
+        },
+        {
+          "name": "neck_01",
+          "translation_cm": 1.5543300815323846e-05,
+          "scale": 0.0,
+          "quaternion_dot_error": 8.875122858853501e-13
+        },
+        {
+          "name": "neck_02",
+          "translation_cm": 2.1551924817231338e-05,
+          "scale": 1.1920928955078125e-07,
+          "quaternion_dot_error": 4.85500528668581e-13
+        },
+        {
+          "name": "head",
+          "translation_cm": 2.384185791015625e-06,
+          "scale": 5.960464477539063e-08,
+          "quaternion_dot_error": 9.103828801926284e-15
+        },
+        {
+          "name": "clavicle_l",
+          "translation_cm": 1.1444091796875e-05,
+          "scale": 1.1920928955078125e-07,
+          "quaternion_dot_error": 7.793765632868599e-14
+        },
+        {
+          "name": "upperarm_l",
+          "translation_cm": 3.2573152509485226e-05,
+          "scale": 2.384185791015625e-07,
+          "quaternion_dot_error": 4.905587047687732e-11
+        },
+        {
+          "name": "lowerarm_l",
+          "translation_cm": 3.24249267578125e-05,
+          "scale": 1.1920928955078125e-07,
+          "quaternion_dot_error": 4.9050874473266504e-11
+        },
+        {
+          "name": "lowerarm_twist_02_l",
+          "translation_cm": 1.151433474433361e-05,
+          "scale": 1.1920928955078125e-07,
+          "quaternion_dot_error": 4.9050874473266504e-11
+        },
+        {
+          "name": "lowerarm_twist_01_l",
+          "translation_cm": 1.0272647216424957e-05,
+          "scale": 1.1920928955078125e-07,
+          "quaternion_dot_error": 4.905154060708128e-11
+        },
+        {
+          "name": "hand_l",
+          "translation_cm": 1.6346562894398176e-05,
+          "scale": 1.7881393432617188e-07,
+          "quaternion_dot_error": 2.4713564528155985e-13
+        },
+        {
+          "name": "index_metacarpal_l",
+          "translation_cm": 1.7315149307250977e-05,
+          "scale": 1.1920928955078125e-07,
+          "quaternion_dot_error": 4.9169224247691545e-11
+        },
+        {
+          "name": "index_01_l",
+          "translation_cm": 1.71661376953125e-05,
+          "scale": 1.1920928955078125e-07,
+          "quaternion_dot_error": 4.907019235389498e-11
+        },
+        {
+          "name": "index_02_l",
+          "translation_cm": 1.430511474609375e-05,
+          "scale": 0.0,
+          "quaternion_dot_error": 2.1393997684526767e-13
+        },
+        {
+          "name": "index_03_l",
+          "translation_cm": 2.09808349609375e-05,
+          "scale": 1.7881393432617188e-07,
+          "quaternion_dot_error": 4.944644693694045e-11
+        },
+        {
+          "name": "middle_metacarpal_l",
+          "translation_cm": 2.1398067474365234e-05,
+          "scale": 1.7881393432617188e-07,
+          "quaternion_dot_error": 1.0114131754335176e-13
+        },
+        {
+          "name": "middle_01_l",
+          "translation_cm": 1.1794862004421702e-05,
+          "scale": 1.1920928955078125e-07,
+          "quaternion_dot_error": 5.1181281435219717e-14
+        },
+        {
+          "name": "middle_02_l",
+          "translation_cm": 1.71661376953125e-05,
+          "scale": 0.0,
+          "quaternion_dot_error": 5.054845431118338e-13
+        },
+        {
+          "name": "middle_03_l",
+          "translation_cm": 5.126141324751643e-06,
+          "scale": 1.1920928955078125e-07,
+          "quaternion_dot_error": 4.931421937470759e-11
+        },
+        {
+          "name": "thumb_01_l",
+          "translation_cm": 1.5020370483398438e-05,
+          "scale": 1.1920928955078125e-07,
+          "quaternion_dot_error": 4.945588383264976e-11
+        },
+        {
+          "name": "thumb_02_l",
+          "translation_cm": 1.0013580322265625e-05,
+          "scale": 2.384185791015625e-07,
+          "quaternion_dot_error": 4.596323321948148e-14
+        },
+        {
+          "name": "thumb_03_l",
+          "translation_cm": 1.33514404296875e-05,
+          "scale": 1.1920928955078125e-07,
+          "quaternion_dot_error": 4.905509332076008e-11
+        },
+        {
+          "name": "pinky_metacarpal_l",
+          "translation_cm": 1.874566078186035e-05,
+          "scale": 1.1920928955078125e-07,
+          "quaternion_dot_error": 1.1235457009206584e-13
+        },
+        {
+          "name": "pinky_01_l",
+          "translation_cm": 2.039968967437744e-05,
+          "scale": 2.384185791015625e-07,
+          "quaternion_dot_error": 9.747758156208874e-14
+        },
+        {
+          "name": "pinky_02_l",
+          "translation_cm": 2.3933116040097957e-06,
+          "scale": 1.7881393432617188e-07,
+          "quaternion_dot_error": 6.650235917504688e-14
+        },
+        {
+          "name": "pinky_03_l",
+          "translation_cm": 3.0517578125e-05,
+          "scale": 2.384185791015625e-07,
+          "quaternion_dot_error": 9.64783808399261e-14
+        },
+        {
+          "name": "ring_metacarpal_l",
+          "translation_cm": 1.0907649993896484e-05,
+          "scale": 1.1920928955078125e-07,
+          "quaternion_dot_error": 4.945710507797685e-11
+        },
+        {
+          "name": "ring_01_l",
+          "translation_cm": 1.0438263416290283e-05,
+          "scale": 1.1920928955078125e-07,
+          "quaternion_dot_error": 4.9094173171226885e-11
+        },
+        {
+          "name": "ring_02_l",
+          "translation_cm": 2.3365020751953125e-05,
+          "scale": 5.960464477539063e-08,
+          "quaternion_dot_error": 4.907807493736982e-11
+        },
+        {
+          "name": "ring_03_l",
+          "translation_cm": 1.9073486328125e-05,
+          "scale": 1.1920928955078125e-07,
+          "quaternion_dot_error": 2.383648833870211e-13
+        },
+        {
+          "name": "upperarm_twist_01_l",
+          "translation_cm": 2.208722791863238e-05,
+          "scale": 2.384185791015625e-07,
+          "quaternion_dot_error": 4.908295991867817e-11
+        },
+        {
+          "name": "upperarm_twist_02_l",
+          "translation_cm": 2.86102294921875e-05,
+          "scale": 2.384185791015625e-07,
+          "quaternion_dot_error": 4.907485529059841e-11
+        },
+        {
+          "name": "clavicle_r",
+          "translation_cm": 1.4781951904296875e-05,
+          "scale": 4.172325134277344e-06,
+          "quaternion_dot_error": 4.00679489587219e-13
+        },
+        {
+          "name": "upperarm_r",
+          "translation_cm": 8.0108642578125e-05,
+          "scale": 9.5367431640625e-07,
+          "quaternion_dot_error": 4.4786396813378815e-13
+        },
+        {
+          "name": "lowerarm_r",
+          "translation_cm": 0.00012454453104737695,
+          "scale": 5.364418029785156e-07,
+          "quaternion_dot_error": 5.357780885617558e-11
+        },
+        {
+          "name": "lowerarm_twist_02_r",
+          "translation_cm": 3.625412134056205e-05,
+          "scale": 3.5762786865234375e-07,
+          "quaternion_dot_error": 4.906564043949402e-11
+        },
+        {
+          "name": "lowerarm_twist_01_r",
+          "translation_cm": 6.883243622013424e-05,
+          "scale": 3.5762786865234375e-07,
+          "quaternion_dot_error": 4.909528339425151e-11
+        },
+        {
+          "name": "hand_r",
+          "translation_cm": 9.608931576821078e-05,
+          "scale": 1.0728836059570312e-06,
+          "quaternion_dot_error": 5.0203174950524954e-11
+        },
+        {
+          "name": "pinky_metacarpal_r",
+          "translation_cm": 3.266334533691406e-05,
+          "scale": 1.5497207641601562e-06,
+          "quaternion_dot_error": 4.9514836675257357e-11
+        },
+        {
+          "name": "pinky_01_r",
+          "translation_cm": 3.1948089599609375e-05,
+          "scale": 1.0728836059570312e-06,
+          "quaternion_dot_error": 5.003220060473268e-11
+        },
+        {
+          "name": "pinky_02_r",
+          "translation_cm": 2.411877539998386e-05,
+          "scale": 1.2516975402832031e-06,
+          "quaternion_dot_error": 6.225020499073253e-13
+        },
+        {
+          "name": "pinky_03_r",
+          "translation_cm": 2.3126602172851562e-05,
+          "scale": 2.384185791015625e-07,
+          "quaternion_dot_error": 3.9395153805799055e-12
+        },
+        {
+          "name": "ring_metacarpal_r",
+          "translation_cm": 2.09808349609375e-05,
+          "scale": 1.0728836059570312e-06,
+          "quaternion_dot_error": 4.914879614403844e-11
+        },
+        {
+          "name": "ring_01_r",
+          "translation_cm": 2.47955322265625e-05,
+          "scale": 1.0728836059570312e-06,
+          "quaternion_dot_error": 4.978073508965508e-11
+        },
+        {
+          "name": "ring_02_r",
+          "translation_cm": 8.277256711153314e-06,
+          "scale": 8.940696716308594e-07,
+          "quaternion_dot_error": 4.9794168788253046e-11
+        },
+        {
+          "name": "ring_03_r",
+          "translation_cm": 4.430759872775525e-06,
+          "scale": 1.1920928955078125e-07,
+          "quaternion_dot_error": 5.2017945506577234e-11
+        },
+        {
+          "name": "middle_metacarpal_r",
+          "translation_cm": 3.0040740966796875e-05,
+          "scale": 1.7881393432617188e-07,
+          "quaternion_dot_error": 3.2307490016592055e-14
+        },
+        {
+          "name": "middle_01_r",
+          "translation_cm": 3.3855438232421875e-05,
+          "scale": 7.152557373046875e-07,
+          "quaternion_dot_error": 4.910971629357164e-11
+        },
+        {
+          "name": "middle_02_r",
+          "translation_cm": 2.1413805370684713e-05,
+          "scale": 7.748603820800781e-07,
+          "quaternion_dot_error": 6.189493362285248e-13
+        },
+        {
+          "name": "middle_03_r",
+          "translation_cm": 1.9788742065429688e-05,
+          "scale": 2.384185791015625e-07,
+          "quaternion_dot_error": 5.211975295793536e-11
+        },
+        {
+          "name": "index_metacarpal_r",
+          "translation_cm": 2.193450927734375e-05,
+          "scale": 6.556510925292969e-07,
+          "quaternion_dot_error": 1.5731860258938468e-13
+        },
+        {
+          "name": "index_01_r",
+          "translation_cm": 3.8295984268188477e-05,
+          "scale": 4.76837158203125e-07,
+          "quaternion_dot_error": 4.9791948342203796e-11
+        },
+        {
+          "name": "index_02_r",
+          "translation_cm": 9.809635230340064e-06,
+          "scale": 4.76837158203125e-07,
+          "quaternion_dot_error": 5.706546346573305e-14
+        },
+        {
+          "name": "index_03_r",
+          "translation_cm": 1.430511474609375e-05,
+          "scale": 2.384185791015625e-07,
+          "quaternion_dot_error": 4.826139488045555e-13
+        },
+        {
+          "name": "thumb_01_r",
+          "translation_cm": 1.4066696166992188e-05,
+          "scale": 1.6689300537109375e-06,
+          "quaternion_dot_error": 5.081912668458699e-11
+        },
+        {
+          "name": "thumb_02_r",
+          "translation_cm": 1.5170531696639955e-05,
+          "scale": 5.364418029785156e-07,
+          "quaternion_dot_error": 5.064837438339964e-13
+        },
+        {
+          "name": "thumb_03_r",
+          "translation_cm": 1.1998550689895637e-05,
+          "scale": 1.7881393432617188e-07,
+          "quaternion_dot_error": 4.969202826998753e-11
+        },
+        {
+          "name": "upperarm_twist_01_r",
+          "translation_cm": 3.805785672739148e-05,
+          "scale": 2.980232238769531e-07,
+          "quaternion_dot_error": 5.498090871469685e-11
+        },
+        {
+          "name": "upperarm_twist_02_r",
+          "translation_cm": 7.82012939453125e-05,
+          "scale": 1.1920928955078125e-07,
+          "quaternion_dot_error": 4.91089391374544e-11
+        },
+        {
+          "name": "thigh_r",
+          "translation_cm": 1.7642974853515625e-05,
+          "scale": 5.125999450683594e-06,
+          "quaternion_dot_error": 4.093836381002802e-11
+        },
+        {
+          "name": "calf_r",
+          "translation_cm": 0.00011999809793650229,
+          "scale": 0.0,
+          "quaternion_dot_error": 3.313225249712559e-10
+        },
+        {
+          "name": "foot_r",
+          "translation_cm": 0.0001861024938971667,
+          "scale": 3.5762786865234375e-07,
+          "quaternion_dot_error": 1.35565236814017e-09
+        },
+        {
+          "name": "ball_r",
+          "translation_cm": 0.0019882917404174805,
+          "scale": 2.384185791015625e-07,
+          "quaternion_dot_error": 2.205980287328657e-09
+        },
+        {
+          "name": "calf_twist_02_r",
+          "translation_cm": 5.8669596910476685e-05,
+          "scale": 1.7881393432617188e-07,
+          "quaternion_dot_error": 4.939182396412889e-11
+        },
+        {
+          "name": "calf_twist_01_r",
+          "translation_cm": 0.00012116134166717529,
+          "scale": 1.7881393432617188e-07,
+          "quaternion_dot_error": 4.9194759377257924e-11
+        },
+        {
+          "name": "thigh_twist_01_r",
+          "translation_cm": 4.101944432477467e-05,
+          "scale": 1.1920928955078125e-07,
+          "quaternion_dot_error": 1.6130863311758503e-10
+        },
+        {
+          "name": "thigh_twist_02_r",
+          "translation_cm": 8.005590646931182e-05,
+          "scale": 1.1920928955078125e-07,
+          "quaternion_dot_error": 1.6168799632509945e-10
+        },
+        {
+          "name": "thigh_l",
+          "translation_cm": 7.3909759521484375e-06,
+          "scale": 1.1920928955078125e-07,
+          "quaternion_dot_error": 3.8413716652030416e-14
+        },
+        {
+          "name": "calf_l",
+          "translation_cm": 1.9073486328125e-05,
+          "scale": 1.1920928955078125e-07,
+          "quaternion_dot_error": 4.905376105313053e-11
+        },
+        {
+          "name": "foot_l",
+          "translation_cm": 1.52587890625e-05,
+          "scale": 2.384185791015625e-07,
+          "quaternion_dot_error": 4.9083626052492946e-11
+        },
+        {
+          "name": "ball_l",
+          "translation_cm": 2.86102294921875e-06,
+          "scale": 1.1920928955078125e-07,
+          "quaternion_dot_error": 5.551115123125783e-15
+        },
+        {
+          "name": "calf_twist_02_l",
+          "translation_cm": 2.09808349609375e-05,
+          "scale": 2.384185791015625e-07,
+          "quaternion_dot_error": 4.906297590423492e-11
+        },
+        {
+          "name": "calf_twist_01_l",
+          "translation_cm": 1.71661376953125e-05,
+          "scale": 2.384185791015625e-07,
+          "quaternion_dot_error": 4.9069082130870356e-11
+        },
+        {
+          "name": "thigh_twist_01_l",
+          "translation_cm": 6.67572021484375e-06,
+          "scale": 1.1920928955078125e-07,
+          "quaternion_dot_error": 4.904776584879755e-11
+        },
+        {
+          "name": "thigh_twist_02_l",
+          "translation_cm": 1.52587890625e-05,
+          "scale": 1.1920928955078125e-07,
+          "quaternion_dot_error": 4.904687767037785e-11
+        },
+        {
+          "name": "ik_foot_root",
+          "translation_cm": 0.0,
+          "scale": 0.0,
+          "quaternion_dot_error": 4.9048654027217253e-11
+        },
+        {
+          "name": "ik_foot_l",
+          "translation_cm": 4.172325134277344e-07,
+          "scale": 1.1920928955078125e-07,
+          "quaternion_dot_error": 1.2212453270876722e-15
+        },
+        {
+          "name": "ik_foot_r",
+          "translation_cm": 9.5367431640625e-07,
+          "scale": 1.6689300537109375e-06,
+          "quaternion_dot_error": 6.28180840678283e-11
+        },
+        {
+          "name": "ik_hand_root",
+          "translation_cm": 0.0,
+          "scale": 0.0,
+          "quaternion_dot_error": 4.9048654027217253e-11
+        },
+        {
+          "name": "ik_hand_gun",
+          "translation_cm": 2.86102294921875e-06,
+          "scale": 5.960464477539063e-08,
+          "quaternion_dot_error": 5.10702591327572e-15
+        },
+        {
+          "name": "ik_hand_l",
+          "translation_cm": 2.288818359375e-05,
+          "scale": 2.384185791015625e-07,
+          "quaternion_dot_error": 4.906230977042014e-11
+        },
+        {
+          "name": "ik_hand_r",
+          "translation_cm": 1.0584991294138035e-05,
+          "scale": 5.960464477539063e-08,
+          "quaternion_dot_error": 4.9051318562476354e-11
+        },
+        {
+          "name": "interaction",
+          "translation_cm": 0.0,
+          "scale": 0.0,
+          "quaternion_dot_error": 4.9048654027217253e-11
+        },
+        {
+          "name": "center_of_mass",
+          "translation_cm": 0.0,
+          "scale": 0.0,
+          "quaternion_dot_error": 4.9048654027217253e-11
+        }
+      ],
+      "reference_errors": [],
+      "bone_count": 89,
+      "bones": [
+        {
+          "name": "root",
+          "parent": "None",
+          "translation": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "rotation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            0.9999999999509513
+          ]
+        },
+        {
+          "name": "pelvis",
+          "parent": "root",
+          "translation": [
+            -3.4314998759166215e-17,
+            2.2808661460876465,
+            95.89678192138672
+          ],
+          "scale": [
+            0.9999999403953552,
+            0.9999996423721313,
+            0.9999998807907104
+          ],
+          "rotation_xyzw": [
+            -0.02241498087174909,
+            0.7067514192941322,
+            0.022414979009103907,
+            -0.7067514192941322
+          ]
+        },
+        {
+          "name": "spine_01",
+          "parent": "pelvis",
+          "translation": [
+            3.677051305770874,
+            2.513779918444925e-06,
+            -1.6072941377842653e-07
+          ],
+          "scale": [
+            1.0,
+            1.0000001192092896,
+            1.0
+          ],
+          "rotation_xyzw": [
+            -4.233062858014759e-09,
+            2.1783819547149695e-09,
+            -0.12582923676532703,
+            -0.9920519155644301
+          ]
+        },
+        {
+          "name": "spine_02",
+          "parent": "spine_01",
+          "translation": [
+            6.795063018798828,
+            3.503231710055843e-06,
+            -3.282016791672504e-07
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "rotation_xyzw": [
+            1.5921354394324867e-09,
+            -1.7543308093028815e-09,
+            0.03022827797084246,
+            -0.9995430211906426
+          ]
+        },
+        {
+          "name": "spine_03",
+          "parent": "spine_02",
+          "translation": [
+            7.238214015960693,
+            7.88619615832431e-07,
+            -3.2462665444654704e-07
+          ],
+          "scale": [
+            1.000000238418579,
+            1.0,
+            1.0
+          ],
+          "rotation_xyzw": [
+            2.452322371975453e-09,
+            -6.241752738447189e-10,
+            0.09537714078881199,
+            -0.9954412092207912
+          ]
+        },
+        {
+          "name": "spine_04",
+          "parent": "spine_03",
+          "translation": [
+            8.523919105529785,
+            7.655311264898046e-07,
+            -3.706058464558737e-07
+          ],
+          "scale": [
+            0.9999998807907104,
+            0.9999999403953552,
+            1.0
+          ],
+          "rotation_xyzw": [
+            3.918992709849633e-06,
+            -2.3386035088736305e-07,
+            0.05117689136803711,
+            -0.9986896043188248
+          ]
+        },
+        {
+          "name": "spine_05",
+          "parent": "spine_04",
+          "translation": [
+            19.439802169799805,
+            -5.3363360166258644e-06,
+            4.465794916086452e-07
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "rotation_xyzw": [
+            -3.922733515864611e-06,
+            7.852628087665817e-09,
+            0.005945777211147292,
+            -0.999982323702758
+          ]
+        },
+        {
+          "name": "neck_01",
+          "parent": "spine_05",
+          "translation": [
+            11.887763977050781,
+            -1.5543300833087415e-05,
+            -4.6799343067505106e-07
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "rotation_xyzw": [
+            -7.581144783859587e-09,
+            6.268326564696654e-10,
+            -0.20729920768134985,
+            -0.9782775876481504
+          ]
+        },
+        {
+          "name": "neck_02",
+          "parent": "neck_01",
+          "translation": [
+            5.110241889953613,
+            2.1551924874074757e-05,
+            -2.0797028810193297e-07
+          ],
+          "scale": [
+            1.0000001192092896,
+            0.9999998807907104,
+            1.0
+          ],
+          "rotation_xyzw": [
+            -8.544720446068713e-07,
+            -1.0694412593680903e-08,
+            0.01669692640459438,
+            -0.9998605966073018
+          ]
+        },
+        {
+          "name": "head",
+          "parent": "neck_02",
+          "translation": [
+            4.912968635559082,
+            -2.0052643776580226e-06,
+            4.533314168497782e-08
+          ],
+          "scale": [
+            0.9999999403953552,
+            1.0,
+            1.0
+          ],
+          "rotation_xyzw": [
+            8.492570573690956e-07,
+            6.821397205787973e-08,
+            0.10348855064832246,
+            -0.9946306449551934
+          ]
+        },
+        {
+          "name": "clavicle_l",
+          "parent": "spine_05",
+          "translation": [
+            5.516257286071777,
+            -1.3147743940353394,
+            -1.427904486656189
+          ],
+          "scale": [
+            1.0,
+            1.0000001192092896,
+            1.0000001192092896
+          ],
+          "rotation_xyzw": [
+            0.08327800211137541,
+            -0.7545604268925855,
+            -0.04128977370929204,
+            -0.6496141093903769
+          ]
+        },
+        {
+          "name": "upperarm_l",
+          "parent": "clavicle_l",
+          "translation": [
+            17.809532165527344,
+            -4.269008059054613e-06,
+            3.2573152566328645e-05
+          ],
+          "scale": [
+            1.0,
+            1.000000238418579,
+            1.0
+          ],
+          "rotation_xyzw": [
+            -0.019947764904200267,
+            -0.3917308055330648,
+            -0.020190063367185557,
+            -0.9196420085635929
+          ]
+        },
+        {
+          "name": "lowerarm_l",
+          "parent": "upperarm_l",
+          "translation": [
+            27.77117156982422,
+            5.628136023005936e-06,
+            -2.9271030143718235e-05
+          ],
+          "scale": [
+            1.0000001192092896,
+            1.0,
+            1.0
+          ],
+          "rotation_xyzw": [
+            3.33952420639227e-08,
+            2.07399235170371e-08,
+            -0.33363258775438065,
+            -0.9427031856794678
+          ]
+        },
+        {
+          "name": "lowerarm_twist_02_l",
+          "parent": "lowerarm_l",
+          "translation": [
+            9.083684921264648,
+            1.1514334801177029e-05,
+            -7.893747351772618e-06
+          ],
+          "scale": [
+            0.9999998807907104,
+            0.9999998807907104,
+            0.9999998807907104
+          ],
+          "rotation_xyzw": [
+            0.011477642582361954,
+            0.014877370415754985,
+            0.01749472489537463,
+            -0.9996703767107455
+          ]
+        },
+        {
+          "name": "lowerarm_twist_01_l",
+          "parent": "lowerarm_l",
+          "translation": [
+            18.167383193969727,
+            8.849671758071054e-06,
+            -1.0272647159581538e-05
+          ],
+          "scale": [
+            0.9999998807907104,
+            0.9999998807907104,
+            0.9999998807907104
+          ],
+          "rotation_xyzw": [
+            0.011477654688119378,
+            0.014877369482571163,
+            0.017494724893185924,
+            -0.9996703765856801
+          ]
+        },
+        {
+          "name": "hand_l",
+          "parent": "lowerarm_l",
+          "translation": [
+            27.251073837280273,
+            1.6346562915714458e-05,
+            -8.42966437630821e-06
+          ],
+          "scale": [
+            0.9999998807907104,
+            0.9999998807907104,
+            0.9999998211860657
+          ],
+          "rotation_xyzw": [
+            -0.5575863215919569,
+            -0.0016783657763630013,
+            0.020560354337220737,
+            -0.8298626084427467
+          ]
+        },
+        {
+          "name": "index_metacarpal_l",
+          "parent": "hand_l",
+          "translation": [
+            3.444499969482422,
+            0.38469812273979187,
+            -2.379324436187744
+          ],
+          "scale": [
+            1.0,
+            0.9999998807907104,
+            1.0000001192092896
+          ],
+          "rotation_xyzw": [
+            0.02896536688795428,
+            -0.06370492999004583,
+            -0.007109309052438134,
+            -0.99752300577115
+          ]
+        },
+        {
+          "name": "index_01_l",
+          "parent": "index_metacarpal_l",
+          "translation": [
+            5.877115249633789,
+            -0.043181855231523514,
+            0.2408801168203354
+          ],
+          "scale": [
+            1.0000001192092896,
+            0.9999999403953552,
+            1.0
+          ],
+          "rotation_xyzw": [
+            -9.660625566339893e-08,
+            1.9139204402362065e-07,
+            0.2025565770495553,
+            -0.9792705616916233
+          ]
+        },
+        {
+          "name": "index_02_l",
+          "parent": "index_01_l",
+          "translation": [
+            4.080014228820801,
+            -1.1279803402430844e-05,
+            -8.350621101271827e-06
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "rotation_xyzw": [
+            -4.211579571498061e-07,
+            1.8270140225882875e-07,
+            0.1295971000187771,
+            -0.991566735861239
+          ]
+        },
+        {
+          "name": "index_03_l",
+          "parent": "index_02_l",
+          "translation": [
+            2.5949790477752686,
+            -7.396674845949747e-06,
+            4.168770828982815e-06
+          ],
+          "scale": [
+            0.9999999403953552,
+            0.9999998807907104,
+            0.9999998211860657
+          ],
+          "rotation_xyzw": [
+            6.707350000280832e-08,
+            -2.6524443587851574e-07,
+            0.10900830391556333,
+            -0.9940408389896671
+          ]
+        },
+        {
+          "name": "middle_metacarpal_l",
+          "parent": "hand_l",
+          "translation": [
+            3.375830888748169,
+            0.7535921335220337,
+            -0.18286330997943878
+          ],
+          "scale": [
+            0.9999998211860657,
+            0.9999999403953552,
+            0.9999999403953552
+          ],
+          "rotation_xyzw": [
+            -0.03729176187589851,
+            0.00038580454239812057,
+            -0.020259067627071088,
+            -0.9990989669847168
+          ]
+        },
+        {
+          "name": "middle_01_l",
+          "parent": "middle_metacarpal_l",
+          "translation": [
+            6.098204612731934,
+            -1.1794862075475976e-05,
+            -3.686192258101073e-06
+          ],
+          "scale": [
+            1.0000001192092896,
+            0.9999998807907104,
+            1.0
+          ],
+          "rotation_xyzw": [
+            -2.514396492418926e-07,
+            -1.3727592137605353e-07,
+            0.2720507139695723,
+            -0.9622829152741744
+          ]
+        },
+        {
+          "name": "middle_02_l",
+          "parent": "middle_01_l",
+          "translation": [
+            5.169017314910889,
+            -1.2462915037758648e-05,
+            4.247012839186937e-06
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "rotation_xyzw": [
+            -5.442003096829346e-07,
+            5.208196449393345e-07,
+            0.18025551912156065,
+            -0.9836198187438323
+          ]
+        },
+        {
+          "name": "middle_03_l",
+          "parent": "middle_02_l",
+          "translation": [
+            2.4740047454833984,
+            2.090174803015543e-06,
+            5.12614133185707e-06
+          ],
+          "scale": [
+            0.9999998807907104,
+            0.9999998807907104,
+            0.9999999403953552
+          ],
+          "rotation_xyzw": [
+            3.199836055085182e-08,
+            -2.8511936327009003e-07,
+            0.08715507185708572,
+            -0.9961947567375623
+          ]
+        },
+        {
+          "name": "thumb_01_l",
+          "parent": "hand_l",
+          "translation": [
+            1.9924423694610596,
+            -1.3565897941589355,
+            -2.581535816192627
+          ],
+          "scale": [
+            0.9999999403953552,
+            1.0000001192092896,
+            0.9999999403953552
+          ],
+          "rotation_xyzw": [
+            0.5051925735249386,
+            -0.36912977380256434,
+            -0.0670391389963426,
+            -0.7771933012399492
+          ]
+        },
+        {
+          "name": "thumb_02_l",
+          "parent": "thumb_01_l",
+          "translation": [
+            4.378009796142578,
+            -8.320432243635878e-06,
+            -1.5749337762827054e-06
+          ],
+          "scale": [
+            1.000000238418579,
+            1.0,
+            0.9999999403953552
+          ],
+          "rotation_xyzw": [
+            0.03356535807747606,
+            0.010302537351087937,
+            0.2018554702802095,
+            -0.9787857751209994
+          ]
+        },
+        {
+          "name": "thumb_03_l",
+          "parent": "thumb_02_l",
+          "translation": [
+            3.085986614227295,
+            -7.350471378231305e-07,
+            6.786746098441654e-07
+          ],
+          "scale": [
+            0.9999999403953552,
+            0.9999998807907104,
+            1.0000001192092896
+          ],
+          "rotation_xyzw": [
+            1.1190759989057633e-08,
+            1.0997839826006518e-07,
+            0.08715582382470105,
+            -0.9961946909491809
+          ]
+        },
+        {
+          "name": "pinky_metacarpal_l",
+          "parent": "hand_l",
+          "translation": [
+            3.3143723011016846,
+            0.3059360086917877,
+            2.3911166191101074
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0000001192092896
+          ],
+          "rotation_xyzw": [
+            -0.21823153186145505,
+            0.18816621848527743,
+            0.05828608648976739,
+            -0.9558091885120485
+          ]
+        },
+        {
+          "name": "pinky_01_l",
+          "parent": "pinky_metacarpal_l",
+          "translation": [
+            4.957579612731934,
+            0.14309999346733093,
+            -0.19883142411708832
+          ],
+          "scale": [
+            1.000000238418579,
+            0.9999999403953552,
+            1.0
+          ],
+          "rotation_xyzw": [
+            0.08998371784276613,
+            -0.01701580197633692,
+            0.12806615409284033,
+            -0.9875284568974021
+          ]
+        },
+        {
+          "name": "pinky_02_l",
+          "parent": "pinky_01_l",
+          "translation": [
+            3.816002130508423,
+            2.393311433479539e-06,
+            -6.229539621926961e-07
+          ],
+          "scale": [
+            0.9999998211860657,
+            0.9999998807907104,
+            0.9999998807907104
+          ],
+          "rotation_xyzw": [
+            -3.095763738413698e-07,
+            1.5692886750671362e-07,
+            0.1846976633709124,
+            -0.9827953872221851
+          ]
+        },
+        {
+          "name": "pinky_03_l",
+          "parent": "pinky_02_l",
+          "translation": [
+            2.0400304794311523,
+            -1.2719819096673746e-05,
+            -5.236837523625582e-07
+          ],
+          "scale": [
+            1.0000001192092896,
+            1.000000238418579,
+            1.0000001192092896
+          ],
+          "rotation_xyzw": [
+            4.9302703119399746e-08,
+            3.1944887757475243e-07,
+            0.04289605161607337,
+            -0.9990795407552128
+          ]
+        },
+        {
+          "name": "ring_metacarpal_l",
+          "parent": "hand_l",
+          "translation": [
+            3.374300956726074,
+            0.5425277948379517,
+            1.0917637348175049
+          ],
+          "scale": [
+            0.9999999403953552,
+            0.9999998807907104,
+            0.9999999403953552
+          ],
+          "rotation_xyzw": [
+            -0.11659957360279966,
+            0.10056899394622407,
+            -0.02565930946195734,
+            -0.9877408651220875
+          ]
+        },
+        {
+          "name": "ring_01_l",
+          "parent": "ring_metacarpal_l",
+          "translation": [
+            5.645508766174316,
+            0.041634973138570786,
+            -0.02069186419248581
+          ],
+          "scale": [
+            1.0000001192092896,
+            0.9999998807907104,
+            1.0000001192092896
+          ],
+          "rotation_xyzw": [
+            0.054216469976617505,
+            -0.013177349088067785,
+            0.2535397978719422,
+            -0.9657145036972601
+          ]
+        },
+        {
+          "name": "ring_02_l",
+          "parent": "ring_01_l",
+          "translation": [
+            4.977023601531982,
+            -7.329561412916519e-06,
+            -6.500963081634836e-06
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            0.9999999403953552
+          ],
+          "rotation_xyzw": [
+            -2.0816159325450967e-07,
+            -1.0492832489144952e-07,
+            0.16473767052663604,
+            -0.9863374168160239
+          ]
+        },
+        {
+          "name": "ring_03_l",
+          "parent": "ring_02_l",
+          "translation": [
+            2.2649810314178467,
+            -1.5908892237348482e-05,
+            -1.966842091860599e-06
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0000001192092896
+          ],
+          "rotation_xyzw": [
+            2.554576849070416e-07,
+            -2.2275221193007818e-07,
+            0.07991996619773198,
+            -0.9968012836081415
+          ]
+        },
+        {
+          "name": "upperarm_twist_01_l",
+          "parent": "upperarm_l",
+          "translation": [
+            9.257067680358887,
+            1.8305217963643372e-07,
+            -2.2087227989686653e-05
+          ],
+          "scale": [
+            1.0000001192092896,
+            1.000000238418579,
+            1.0000001192092896
+          ],
+          "rotation_xyzw": [
+            -5.364741028298749e-05,
+            0.018790067915711858,
+            -0.002849917131658248,
+            -0.9998193878615906
+          ]
+        },
+        {
+          "name": "upperarm_twist_02_l",
+          "parent": "upperarm_l",
+          "translation": [
+            18.51412010192871,
+            5.694356786989374e-06,
+            -2.5836545319180004e-05
+          ],
+          "scale": [
+            1.000000238418579,
+            1.0000001192092896,
+            1.0
+          ],
+          "rotation_xyzw": [
+            -1.0307176978079807e-07,
+            -4.5937518675619945e-08,
+            -1.9930247673459777e-07,
+            -0.9999999999509251
+          ]
+        },
+        {
+          "name": "clavicle_r",
+          "parent": "spine_05",
+          "translation": [
+            5.516205310821533,
+            -1.3148221969604492,
+            1.4278724193572998
+          ],
+          "scale": [
+            0.9999958276748657,
+            0.9999998807907104,
+            0.9999997019767761
+          ],
+          "rotation_xyzw": [
+            0.7545609011032298,
+            0.08327778575465487,
+            -0.6496135706873459,
+            0.04129001943473197
+          ]
+        },
+        {
+          "name": "upperarm_r",
+          "parent": "clavicle_r",
+          "translation": [
+            -17.80970573425293,
+            1.6529264030396007e-05,
+            0.0004097065539099276
+          ],
+          "scale": [
+            0.9999991059303284,
+            1.0000001192092896,
+            1.0000009536743164
+          ],
+          "rotation_xyzw": [
+            -0.019947415251875874,
+            -0.3917314416909946,
+            -0.02019054073568539,
+            -0.9196417347425381
+          ]
+        },
+        {
+          "name": "lowerarm_r",
+          "parent": "upperarm_r",
+          "translation": [
+            -27.77077865600586,
+            1.8333725165575743e-05,
+            -0.00012454453099053353
+          ],
+          "scale": [
+            1.0000003576278687,
+            0.999999463558197,
+            0.9999999403953552
+          ],
+          "rotation_xyzw": [
+            2.455763675947213e-06,
+            1.664476919795454e-06,
+            -0.333633120722875,
+            -0.9427029970514675
+          ]
+        },
+        {
+          "name": "lowerarm_twist_02_r",
+          "parent": "lowerarm_r",
+          "translation": [
+            -9.083681106567383,
+            3.585783633752726e-05,
+            -3.625412136898376e-05
+          ],
+          "scale": [
+            0.9999999403953552,
+            1.0000001192092896,
+            1.0000003576278687
+          ],
+          "rotation_xyzw": [
+            0.011477653688815858,
+            0.01487754262045021,
+            0.017494916642013848,
+            -0.9996703706647361
+          ]
+        },
+        {
+          "name": "lowerarm_twist_01_r",
+          "parent": "lowerarm_r",
+          "translation": [
+            -18.167354583740234,
+            6.883243622723967e-05,
+            -6.28554480499588e-05
+          ],
+          "scale": [
+            0.9999998807907104,
+            1.0000001192092896,
+            1.0000003576278687
+          ],
+          "rotation_xyzw": [
+            0.0114775735892908,
+            0.014877552857499829,
+            0.017494989276355757,
+            -0.999670370160885
+          ]
+        },
+        {
+          "name": "hand_r",
+          "parent": "lowerarm_r",
+          "translation": [
+            -27.251073837280273,
+            9.608931577531621e-05,
+            -8.852509199641645e-05
+          ],
+          "scale": [
+            1.0000001192092896,
+            1.000001072883606,
+            0.9999992251396179
+          ],
+          "rotation_xyzw": [
+            -0.5575879680979638,
+            -0.0016775531299382711,
+            0.020560416840294835,
+            -0.8298615021852388
+          ]
+        },
+        {
+          "name": "pinky_metacarpal_r",
+          "parent": "hand_r",
+          "translation": [
+            -3.3146445751190186,
+            -0.30593135952949524,
+            -2.3912999629974365
+          ],
+          "scale": [
+            0.9999991655349731,
+            0.9999991059303284,
+            1.0000015497207642
+          ],
+          "rotation_xyzw": [
+            -0.21823101804260228,
+            0.18816664442865016,
+            0.05828715000527567,
+            -0.9558091570678324
+          ]
+        },
+        {
+          "name": "pinky_01_r",
+          "parent": "pinky_metacarpal_r",
+          "translation": [
+            -4.957332611083984,
+            -0.1432785838842392,
+            0.1989123821258545
+          ],
+          "scale": [
+            1.000001072883606,
+            0.9999995231628418,
+            0.9999997019767761
+          ],
+          "rotation_xyzw": [
+            0.08998509302915522,
+            -0.01701682583151663,
+            0.12806623898680342,
+            -0.9875283028879911
+          ]
+        },
+        {
+          "name": "pinky_02_r",
+          "parent": "pinky_01_r",
+          "translation": [
+            -3.8160316944122314,
+            -5.448480078484863e-05,
+            3.1609244615538046e-05
+          ],
+          "scale": [
+            1.000001072883606,
+            0.9999987483024597,
+            0.9999997615814209
+          ],
+          "rotation_xyzw": [
+            6.550428112113064e-07,
+            -5.761368698619728e-07,
+            0.18469686809225663,
+            -0.9827955366789933
+          ]
+        },
+        {
+          "name": "pinky_03_r",
+          "parent": "pinky_02_r",
+          "translation": [
+            -2.040022850036621,
+            1.8607775928103365e-05,
+            -3.826137617579661e-05
+          ],
+          "scale": [
+            1.000000238418579,
+            0.9999998807907104,
+            1.0
+          ],
+          "rotation_xyzw": [
+            -2.7242668383377566e-06,
+            -5.974112145441589e-07,
+            0.04289589544161386,
+            -0.9990795474567997
+          ]
+        },
+        {
+          "name": "ring_metacarpal_r",
+          "parent": "hand_r",
+          "translation": [
+            -3.3741869926452637,
+            -0.5429989099502563,
+            -1.0917935371398926
+          ],
+          "scale": [
+            0.9999992251396179,
+            0.9999998211860657,
+            1.000001072883606
+          ],
+          "rotation_xyzw": [
+            -0.11659890249537887,
+            0.10056867309241434,
+            -0.02565920875694662,
+            -0.9877409796283523
+          ]
+        },
+        {
+          "name": "ring_01_r",
+          "parent": "ring_metacarpal_r",
+          "translation": [
+            -5.6457366943359375,
+            -0.04145652428269386,
+            0.020657004788517952
+          ],
+          "scale": [
+            1.000001072883606,
+            0.9999991655349731,
+            0.9999996423721313
+          ],
+          "rotation_xyzw": [
+            0.05421723417644156,
+            -0.013177853990149908,
+            0.2535398002817745,
+            -0.9657144532714897
+          ]
+        },
+        {
+          "name": "ring_02_r",
+          "parent": "ring_01_r",
+          "translation": [
+            -4.977069854736328,
+            1.256957693840377e-05,
+            -2.5256393200834282e-05
+          ],
+          "scale": [
+            1.0000008344650269,
+            0.9999991059303284,
+            1.0000001192092896
+          ],
+          "rotation_xyzw": [
+            -1.127524426580567e-06,
+            -3.513823309378479e-07,
+            0.16473742889329523,
+            -0.9863374571728175
+          ]
+        },
+        {
+          "name": "ring_03_r",
+          "parent": "ring_02_r",
+          "translation": [
+            -2.264976978302002,
+            -5.4448330047307536e-05,
+            -1.4425032532017212e-05
+          ],
+          "scale": [
+            1.0000001192092896,
+            0.9999998807907104,
+            0.9999999403953552
+          ],
+          "rotation_xyzw": [
+            -2.424576898996445e-06,
+            6.115921974741711e-08,
+            0.0799203289401951,
+            -0.9968012544725812
+          ]
+        },
+        {
+          "name": "middle_metacarpal_r",
+          "parent": "hand_r",
+          "translation": [
+            -3.375770092010498,
+            -0.7540211081504822,
+            0.18280401825904846
+          ],
+          "scale": [
+            0.9999998211860657,
+            0.9999998807907104,
+            1.0000001192092896
+          ],
+          "rotation_xyzw": [
+            -0.037291475696317335,
+            0.0003857002702792055,
+            -0.02025871408725985,
+            -0.9990989848754841
+          ]
+        },
+        {
+          "name": "middle_01_r",
+          "parent": "middle_metacarpal_r",
+          "translation": [
+            -6.098399639129639,
+            0.00012097939179511741,
+            -2.642852268763818e-05
+          ],
+          "scale": [
+            1.0000007152557373,
+            0.9999993443489075,
+            1.0
+          ],
+          "rotation_xyzw": [
+            2.3450533310874538e-07,
+            -2.6187734320277244e-07,
+            0.27205082434264044,
+            -0.9622828840191803
+          ]
+        },
+        {
+          "name": "middle_02_r",
+          "parent": "middle_01_r",
+          "translation": [
+            -5.1689958572387695,
+            5.602478631772101e-05,
+            -4.901623833575286e-05
+          ],
+          "scale": [
+            1.0000005960464478,
+            0.9999992251396179,
+            0.9999999403953552
+          ],
+          "rotation_xyzw": [
+            -9.777050094429176e-07,
+            3.4176123038769076e-07,
+            0.1802544638107321,
+            -0.9836200121364106
+          ]
+        },
+        {
+          "name": "middle_03_r",
+          "parent": "middle_02_r",
+          "translation": [
+            -2.474066734313965,
+            -2.9605596864712425e-05,
+            2.5328930860268883e-05
+          ],
+          "scale": [
+            1.0000001192092896,
+            0.9999997615814209,
+            1.0
+          ],
+          "rotation_xyzw": [
+            -2.0748700388787287e-06,
+            -1.256330838472456e-06,
+            0.08715625045670052,
+            -0.9961946536206412
+          ]
+        },
+        {
+          "name": "index_metacarpal_r",
+          "parent": "hand_r",
+          "translation": [
+            -3.4444921016693115,
+            -0.3851683735847473,
+            2.3793129920959473
+          ],
+          "scale": [
+            1.0000004768371582,
+            1.0,
+            0.9999993443489075
+          ],
+          "rotation_xyzw": [
+            0.028965672972795238,
+            -0.06370540817108274,
+            -0.007109194649732056,
+            -0.997522967209488
+          ]
+        },
+        {
+          "name": "index_01_r",
+          "parent": "index_metacarpal_r",
+          "translation": [
+            -5.877234935760498,
+            0.04337763041257858,
+            -0.24098993837833405
+          ],
+          "scale": [
+            1.0000004768371582,
+            0.9999996423721313,
+            1.0
+          ],
+          "rotation_xyzw": [
+            9.99778010971816e-08,
+            1.100539832007761e-06,
+            0.20255605326107834,
+            -0.9792706700335622
+          ]
+        },
+        {
+          "name": "index_02_r",
+          "parent": "index_01_r",
+          "translation": [
+            -4.07993745803833,
+            4.769429324369412e-06,
+            2.8473350539570674e-05
+          ],
+          "scale": [
+            1.0000004768371582,
+            0.9999997615814209,
+            1.0000001192092896
+          ],
+          "rotation_xyzw": [
+            3.061024369774975e-07,
+            -8.120630953354107e-08,
+            0.12959675538885712,
+            -0.9915667809041309
+          ]
+        },
+        {
+          "name": "index_03_r",
+          "parent": "index_02_r",
+          "translation": [
+            -2.595090627670288,
+            -3.649901918834075e-05,
+            1.1629664413703722e-06
+          ],
+          "scale": [
+            1.0,
+            0.9999997615814209,
+            0.9999997615814209
+          ],
+          "rotation_xyzw": [
+            -8.9940466574048e-07,
+            -3.9221533206202394e-07,
+            0.10900920028380476,
+            -0.9940407407408021
+          ]
+        },
+        {
+          "name": "thumb_01_r",
+          "parent": "hand_r",
+          "translation": [
+            -1.9928208589553833,
+            1.3566502332687378,
+            2.5813395977020264
+          ],
+          "scale": [
+            1.0000016689300537,
+            0.9999995827674866,
+            0.9999984502792358
+          ],
+          "rotation_xyzw": [
+            0.5051941803199332,
+            -0.3691282818375796,
+            -0.06703943668377893,
+            -0.7771929397193043
+          ]
+        },
+        {
+          "name": "thumb_02_r",
+          "parent": "thumb_01_r",
+          "translation": [
+            -4.377835273742676,
+            -0.0004313805256970227,
+            -0.00015091599198058248
+          ],
+          "scale": [
+            1.000000238418579,
+            0.999999463558197,
+            1.0000003576278687
+          ],
+          "rotation_xyzw": [
+            0.033565864821818225,
+            0.010301751346997155,
+            0.20185541130610257,
+            -0.9787857781784491
+          ]
+        },
+        {
+          "name": "thumb_03_r",
+          "parent": "thumb_02_r",
+          "translation": [
+            -3.085944890975952,
+            2.6849711503018625e-05,
+            4.1517956560710445e-05
+          ],
+          "scale": [
+            0.9999998211860657,
+            1.0000001192092896,
+            1.0000001192092896
+          ],
+          "rotation_xyzw": [
+            7.445102527397497e-07,
+            -8.440730347206798e-07,
+            0.08715559461111222,
+            -0.996194711002132
+          ]
+        },
+        {
+          "name": "upperarm_twist_01_r",
+          "parent": "upperarm_r",
+          "translation": [
+            -9.256932258605957,
+            -8.010783858480863e-06,
+            -0.0001388404198223725
+          ],
+          "scale": [
+            0.9999997019767761,
+            0.9999999403953552,
+            1.0000001192092896
+          ],
+          "rotation_xyzw": [
+            -5.3787661270640776e-05,
+            0.01879360867485842,
+            -0.002849890336535371,
+            -0.9998193213810381
+          ]
+        },
+        {
+          "name": "upperarm_twist_02_r",
+          "parent": "upperarm_r",
+          "translation": [
+            -18.513874053955078,
+            -9.966538527805824e-06,
+            -0.00026992312632501125
+          ],
+          "scale": [
+            0.9999998807907104,
+            0.9999998807907104,
+            0.9999999403953552
+          ],
+          "rotation_xyzw": [
+            -1.223763934572318e-08,
+            -3.4715091599651284e-07,
+            5.4823945380783e-09,
+            -0.9999999999508911
+          ]
+        },
+        {
+          "name": "thigh_r",
+          "parent": "pelvis",
+          "translation": [
+            -2.36574387550354,
+            0.1194898709654808,
+            9.96909236907959
+          ],
+          "scale": [
+            1.0000007152557373,
+            1.0000001192092896,
+            1.0000051259994507
+          ],
+          "rotation_xyzw": [
+            0.029460486694341648,
+            -0.07239611611435115,
+            0.9965197670500345,
+            -0.028969569790295503
+          ]
+        },
+        {
+          "name": "calf_r",
+          "parent": "thigh_r",
+          "translation": [
+            43.34123611450195,
+            7.643002390977927e-06,
+            0.00011999809794360772
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "rotation_xyzw": [
+            2.3751459456707598e-05,
+            -6.412691354228037e-07,
+            -0.04366154943543137,
+            -0.999046379523122
+          ]
+        },
+        {
+          "name": "foot_r",
+          "parent": "calf_r",
+          "translation": [
+            42.2178955078125,
+            3.130684490315616e-05,
+            0.00018610249389894307
+          ],
+          "scale": [
+            1.0,
+            0.9999998807907104,
+            0.9999996423721313
+          ],
+          "rotation_xyzw": [
+            -0.0006145823217622162,
+            -0.026877805312326593,
+            0.02323723746617327,
+            -0.9993684188361206
+          ]
+        },
+        {
+          "name": "ball_r",
+          "parent": "foot_r",
+          "translation": [
+            7.0094451904296875,
+            -15.237525939941406,
+            -0.5409339070320129
+          ],
+          "scale": [
+            1.0000001192092896,
+            1.0,
+            1.000000238418579
+          ],
+          "rotation_xyzw": [
+            -4.4593340799989945e-05,
+            4.9224455148650426e-05,
+            -0.7071071968592034,
+            -0.7071063623941641
+          ]
+        },
+        {
+          "name": "calf_twist_02_r",
+          "parent": "calf_r",
+          "translation": [
+            14.072612762451172,
+            1.333031013928121e-05,
+            0.03778761997818947
+          ],
+          "scale": [
+            0.9999998807907104,
+            0.9999998211860657,
+            0.9999998807907104
+          ],
+          "rotation_xyzw": [
+            -9.357571122970006e-05,
+            -0.0022519232858886646,
+            0.02324853060220548,
+            -0.99972717568937
+          ]
+        },
+        {
+          "name": "calf_twist_01_r",
+          "parent": "calf_r",
+          "translation": [
+            28.145259857177734,
+            2.1603347704513e-05,
+            0.07557906210422516
+          ],
+          "scale": [
+            0.9999998211860657,
+            0.9999999403953552,
+            0.9999998211860657
+          ],
+          "rotation_xyzw": [
+            -9.351929348786694e-05,
+            -0.0022514625148391206,
+            0.023248560412662912,
+            -0.9997271760392084
+          ]
+        },
+        {
+          "name": "thigh_twist_01_r",
+          "parent": "thigh_r",
+          "translation": [
+            14.447080612182617,
+            -1.6801144511191524e-06,
+            4.101944432477467e-05
+          ],
+          "scale": [
+            1.0,
+            1.0000001192092896,
+            1.0000001192092896
+          ],
+          "rotation_xyzw": [
+            4.068163537240023e-05,
+            -0.0022526394602800513,
+            -0.011407960915426039,
+            -0.9999323888594294
+          ]
+        },
+        {
+          "name": "thigh_twist_02_r",
+          "parent": "thigh_r",
+          "translation": [
+            28.894142150878906,
+            1.9936001081077848e-06,
+            8.00559064373374e-05
+          ],
+          "scale": [
+            1.0,
+            1.0000001192092896,
+            1.0000001192092896
+          ],
+          "rotation_xyzw": [
+            4.07073849996559e-05,
+            -0.0022526634425973613,
+            -0.011407926460347734,
+            -0.9999323891974422
+          ]
+        },
+        {
+          "name": "thigh_l",
+          "parent": "pelvis",
+          "translation": [
+            -2.3657186031341553,
+            0.11004677414894104,
+            -9.96920394897461
+          ],
+          "scale": [
+            0.9999999403953552,
+            1.0000001192092896,
+            1.0000001192092896
+          ],
+          "rotation_xyzw": [
+            0.07240475761892547,
+            0.02946195584567765,
+            -0.028969586086332336,
+            -0.9965190953082027
+          ]
+        },
+        {
+          "name": "calf_l",
+          "parent": "thigh_l",
+          "translation": [
+            -43.34132766723633,
+            -2.349408077861881e-06,
+            -5.761102784163086e-06
+          ],
+          "scale": [
+            1.0000001192092896,
+            0.9999999403953552,
+            1.0000001192092896
+          ],
+          "rotation_xyzw": [
+            6.919893954299734e-08,
+            -1.7270211835235733e-08,
+            -0.04366154572956703,
+            -0.9990463799676187
+          ]
+        },
+        {
+          "name": "foot_l",
+          "parent": "calf_l",
+          "translation": [
+            -42.217899322509766,
+            -2.3580339529871708e-06,
+            -5.7020174608624075e-06
+          ],
+          "scale": [
+            0.9999999403953552,
+            1.000000238418579,
+            0.9999998807907104
+          ],
+          "rotation_xyzw": [
+            -0.0006654426641868764,
+            -0.02687702309201793,
+            0.023239159794324164,
+            -0.9993683626019635
+          ]
+        },
+        {
+          "name": "ball_l",
+          "parent": "foot_l",
+          "translation": [
+            -7.009439468383789,
+            15.237589836120605,
+            0.5388892292976379
+          ],
+          "scale": [
+            0.9999998807907104,
+            1.0,
+            0.9999998807907104
+          ],
+          "rotation_xyzw": [
+            -5.303269381141391e-08,
+            3.3418480999304586e-08,
+            -0.7071067215818978,
+            -0.7071068407911894
+          ]
+        },
+        {
+          "name": "calf_twist_02_l",
+          "parent": "calf_l",
+          "translation": [
+            -14.072617530822754,
+            1.4179939853420365e-06,
+            -3.2369855489378097e-06
+          ],
+          "scale": [
+            0.9999999403953552,
+            1.000000238418579,
+            0.9999999403953552
+          ],
+          "rotation_xyzw": [
+            -9.316932707833951e-05,
+            -0.0022513032555646554,
+            0.023248636748931177,
+            -0.9997271746553404
+          ]
+        },
+        {
+          "name": "calf_twist_01_l",
+          "parent": "calf_l",
+          "translation": [
+            -28.145259857177734,
+            -5.874667749594664e-06,
+            -0.0754532516002655
+          ],
+          "scale": [
+            0.9999999403953552,
+            1.000000238418579,
+            0.9999999403953552
+          ],
+          "rotation_xyzw": [
+            -9.32019379162943e-05,
+            -0.0022512997630184228,
+            0.023248638610681688,
+            -0.9997271746168708
+          ]
+        },
+        {
+          "name": "thigh_twist_01_l",
+          "parent": "thigh_l",
+          "translation": [
+            -14.44710922241211,
+            -6.079316790419398e-06,
+            -3.45566058967961e-06
+          ],
+          "scale": [
+            1.0000001192092896,
+            1.0,
+            1.0
+          ],
+          "rotation_xyzw": [
+            2.57501937050225e-05,
+            -0.0022530878879160536,
+            -0.011408078240929136,
+            -0.999932387006568
+          ]
+        },
+        {
+          "name": "thigh_twist_02_l",
+          "parent": "thigh_l",
+          "translation": [
+            -28.89422035217285,
+            -1.8998980522155762e-06,
+            -1.5170696315180976e-05
+          ],
+          "scale": [
+            1.0000001192092896,
+            1.0000001192092896,
+            1.0
+          ],
+          "rotation_xyzw": [
+            2.571721178977473e-05,
+            -0.00225308975055362,
+            -0.011408078240890943,
+            -0.9999323870032202
+          ]
+        },
+        {
+          "name": "ik_foot_root",
+          "parent": "root",
+          "translation": [
+            0.0,
+            -0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "rotation_xyzw": [
+            0.0,
+            -0.0,
+            0.0,
+            -0.9999999999509513
+          ]
+        },
+        {
+          "name": "ik_foot_l",
+          "parent": "ik_foot_root",
+          "translation": [
+            14.087671279907227,
+            -0.994257926940918,
+            8.237637519836426
+          ],
+          "scale": [
+            1.0000001192092896,
+            0.9999999403953552,
+            1.0000001192092896
+          ],
+          "rotation_xyzw": [
+            0.06363155061559837,
+            0.7042465931958666,
+            0.04137550740926493,
+            -0.7058865554215467
+          ]
+        },
+        {
+          "name": "ik_foot_r",
+          "parent": "ik_foot_root",
+          "translation": [
+            -14.087557792663574,
+            -0.9848347306251526,
+            8.238231658935547
+          ],
+          "scale": [
+            1.0000016689300537,
+            0.9999999403953552,
+            1.0000001192092896
+          ],
+          "rotation_xyzw": [
+            0.7058867260566473,
+            0.04136770244663848,
+            -0.7042475983150009,
+            0.06362360755935784
+          ]
+        },
+        {
+          "name": "ik_hand_root",
+          "parent": "root",
+          "translation": [
+            0.0,
+            -0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "rotation_xyzw": [
+            0.0,
+            -0.0,
+            0.0,
+            -0.9999999999509513
+          ]
+        },
+        {
+          "name": "ik_hand_gun",
+          "parent": "ik_hand_root",
+          "translation": [
+            -47.76831817626953,
+            15.698807716369629,
+            104.4664306640625
+          ],
+          "scale": [
+            0.9999999403953552,
+            1.0,
+            0.9999999403953552
+          ],
+          "rotation_xyzw": [
+            0.5984603239402219,
+            0.009649388609523355,
+            0.5205995503830835,
+            -0.6088745668113905
+          ]
+        },
+        {
+          "name": "ik_hand_l",
+          "parent": "ik_hand_gun",
+          "translation": [
+            43.73358917236328,
+            61.66987228393555,
+            58.40809631347656
+          ],
+          "scale": [
+            0.9999998807907104,
+            1.000000238418579,
+            1.0000001192092896
+          ],
+          "rotation_xyzw": [
+            -0.4577661435433019,
+            -0.6455091210884543,
+            -0.6113657925653064,
+            -4.929704623771711e-08
+          ]
+        },
+        {
+          "name": "ik_hand_r",
+          "parent": "ik_hand_gun",
+          "translation": [
+            1.0584991287032608e-05,
+            8.46617876959499e-06,
+            -2.2404728952096775e-06
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            0.9999999403953552
+          ],
+          "rotation_xyzw": [
+            6.347919167781257e-08,
+            3.803734926845987e-08,
+            7.720100114359989e-09,
+            -0.9999999999509487
+          ]
+        },
+        {
+          "name": "interaction",
+          "parent": "root",
+          "translation": [
+            0.0,
+            -0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "rotation_xyzw": [
+            0.0,
+            -0.0,
+            0.0,
+            -0.9999999999509513
+          ]
+        },
+        {
+          "name": "center_of_mass",
+          "parent": "root",
+          "translation": [
+            0.0,
+            -0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "rotation_xyzw": [
+            0.0,
+            -0.0,
+            0.0,
+            -0.9999999999509513
+          ]
+        }
+      ]
+    },
+    "weight_readback": "Source validator inspects vertex weights; rendered KusazuriReviewGameMode reports section influences and verifies follower bone alignment",
+    "static_review_mesh": {
+      "asset": "/Game/Art/Characters/Samurai/Kusazuri01/Review/SM_Kusazuri01.SM_Kusazuri01",
+      "material_slots": 1,
+      "lods": [
+        {
+          "lod": 0,
+          "triangles": 147408,
+          "render_vertices": 177322,
+          "sections": 1,
+          "uv_channels": 1,
+          "material_slot": 0,
+          "build_settings": {
+            "recompute_normals": false,
+            "recompute_tangents": false,
+            "full_precision_uvs": true
+          }
+        },
+        {
+          "lod": 1,
+          "triangles": 44210,
+          "render_vertices": 58779,
+          "sections": 1,
+          "uv_channels": 1,
+          "material_slot": 0,
+          "build_settings": {
+            "recompute_normals": false,
+            "recompute_tangents": false,
+            "full_precision_uvs": true
+          }
+        },
+        {
+          "lod": 2,
+          "triangles": 15734,
+          "render_vertices": 32531,
+          "sections": 1,
+          "uv_channels": 1,
+          "material_slot": 0,
+          "build_settings": {
+            "recompute_normals": false,
+            "recompute_tangents": false,
+            "full_precision_uvs": true
+          }
+        }
+      ],
+      "bounds_cm": {
+        "min": [
+          -26.618558883666992,
+          -20.11115837097168,
+          66.86333465576172
+        ],
+        "max": [
+          26.618558883666992,
+          22.8378849029541,
+          103.98082733154297
+        ],
+        "size": [
+          53.237117767333984,
+          42.94904327392578,
+          37.11749267578125
+        ]
+      },
+      "maximum_skeletal_bounds_delta_cm": 0.0
+    }
+  },
+  "animations": [
+    {
+      "role": "idle",
+      "asset": "/Game/Characters/Mannequins/Anims/Unarmed/MM_Idle.MM_Idle",
+      "seconds": 7.566666603088379,
+      "frames": 227,
+      "reused_native_asset": true
+    },
+    {
+      "role": "walk",
+      "asset": "/Game/Characters/Mannequins/Anims/Unarmed/Walk/MF_Unarmed_Walk_Fwd.MF_Unarmed_Walk_Fwd",
+      "seconds": 1.5,
+      "frames": 45,
+      "reused_native_asset": true
+    },
+    {
+      "role": "run",
+      "asset": "/Game/Characters/Mannequins/Anims/Unarmed/Jog/MF_Unarmed_Jog_Fwd.MF_Unarmed_Jog_Fwd",
+      "seconds": 1.7666666507720947,
+      "frames": 53,
+      "reused_native_asset": true
+    },
+    {
+      "role": "attack",
+      "asset": "/Game/Characters/Mannequins/Anims/Unarmed/Attack/MM_Attack_01.MM_Attack_01",
+      "seconds": 1.0,
+      "frames": 30,
+      "reused_native_asset": true
+    }
+  ],
+  "read_only_dependencies": {
+    "unchanged": true,
+    "sha256_before": {
+      "/Game/Characters/Mannequins/Meshes/SKM_Manny_Simple": "be9f011191ee1887b97cd13bce09886a6066c2fd62c619991070ec142184e1bf",
+      "/Game/Characters/Mannequins/Meshes/SK_Mannequin": "22029d47455f24471195b26a0e04a1e1389f27d6a924e88c9f46a0f600c9a530",
+      "/Game/Art/Characters/Samurai/Sode01/M_Sode01": "37c72442c634ea7a9cb951ef6db0d74136b34f2d349b32dcab4c4172daa32aed",
+      "/Game/Art/Characters/Samurai/Do01/M_Do01": "0d0514c4737bc9fc18a714e5abbdf4249fca8124681cdcfd4b29f3d7c4958d77",
+      "/Game/Art/Characters/Samurai/Do01/SK_Do01": "55ee66c0020e4822719cbae25cb34a512fe92cb3d3ed9799933467e9cee066b7",
+      "/Game/Art/Characters/Samurai/Do01/Review/SM_Do01": "e1b5af0e9021bc69a4b47f0c6446f2bd1e2669e2a5981990a0d8d9654b62139f",
+      "/Game/Art/Characters/Samurai/Kabuto01/SM_Kabuto01": "47de4c61e9656d627ade47f49f2571b83736e67eb026f8d3a66ad2458844aee8",
+      "/Game/Characters/Mannequins/Anims/Unarmed/MM_Idle": "11ee7fdeb84db89c1a66785b43b9bfc1415782122b8ac229517f4c5125d9cb0d",
+      "/Game/Characters/Mannequins/Anims/Unarmed/Walk/MF_Unarmed_Walk_Fwd": "c74b2fc0cb651c4924804b364e534856a1b44dee818127c408dc055e4bda5ed9",
+      "/Game/Characters/Mannequins/Anims/Unarmed/Jog/MF_Unarmed_Jog_Fwd": "0ccbe851f85a6d4cd7c6438c219cb6af8e281784107b5be8e9b052e4df3069cb",
+      "/Game/Characters/Mannequins/Anims/Unarmed/Attack/MM_Attack_01": "f796113f17c91eca7e48ef57bbadc4fc36245a86b127e75a34ca4771500639ed",
+      "/Game/Art/Characters/Samurai/Do01/T_Do01_BaseColor": "833f1aa69738dd9e1800665c232e1c707f7faf781478c0104723aa724d423954",
+      "/Game/Art/Characters/Samurai/Do01/T_Do01_Normal": "ee2b15ebf8c99b202bb173d916a87ba840ee7d532c969afe8504265c1fe43b0b",
+      "/Game/Art/Characters/Samurai/Do01/T_Do01_ORM": "d4f7ca94e467008d9bdb08fa4b9f3cb4685f1a8cb6f6c4c64d68d4c077382aeb",
+      "/Game/Art/Characters/Samurai/Sode01/SK_Sode_L_01": "b2dda9ccefc282ad61add1a5952468a2d3f961403c657bd76290cab08b4abd84",
+      "/Game/Art/Characters/Samurai/Sode01/SK_Sode_R_01": "95f1b09b59d6eacf30294fef0acad4b80eeb8caefdf04b6a6af73ca1b5e3b9ec",
+      "/Game/Art/Characters/Samurai/Sode01/Review/SM_Sode_L_01": "fddd799d0a814678feb9760364f855df41604bbe68573b1a230a4cd9ce88593d",
+      "/Game/Art/Characters/Samurai/Sode01/Review/SM_Sode_R_01": "2a8600d6c96b8e903dc67357d55ce93527700fed91bdd98d27301d1f08f1d994",
+      "/Game/Art/Characters/Samurai/Do01/Review/SM_Manny": "54777c98a5368e4095ce190ce7df5ab92ba3fc284e51ba6905dcb294d4b43505"
+    },
+    "sha256_after": {
+      "/Game/Characters/Mannequins/Meshes/SKM_Manny_Simple": "be9f011191ee1887b97cd13bce09886a6066c2fd62c619991070ec142184e1bf",
+      "/Game/Characters/Mannequins/Meshes/SK_Mannequin": "22029d47455f24471195b26a0e04a1e1389f27d6a924e88c9f46a0f600c9a530",
+      "/Game/Art/Characters/Samurai/Sode01/M_Sode01": "37c72442c634ea7a9cb951ef6db0d74136b34f2d349b32dcab4c4172daa32aed",
+      "/Game/Art/Characters/Samurai/Do01/M_Do01": "0d0514c4737bc9fc18a714e5abbdf4249fca8124681cdcfd4b29f3d7c4958d77",
+      "/Game/Art/Characters/Samurai/Do01/SK_Do01": "55ee66c0020e4822719cbae25cb34a512fe92cb3d3ed9799933467e9cee066b7",
+      "/Game/Art/Characters/Samurai/Do01/Review/SM_Do01": "e1b5af0e9021bc69a4b47f0c6446f2bd1e2669e2a5981990a0d8d9654b62139f",
+      "/Game/Art/Characters/Samurai/Kabuto01/SM_Kabuto01": "47de4c61e9656d627ade47f49f2571b83736e67eb026f8d3a66ad2458844aee8",
+      "/Game/Characters/Mannequins/Anims/Unarmed/MM_Idle": "11ee7fdeb84db89c1a66785b43b9bfc1415782122b8ac229517f4c5125d9cb0d",
+      "/Game/Characters/Mannequins/Anims/Unarmed/Walk/MF_Unarmed_Walk_Fwd": "c74b2fc0cb651c4924804b364e534856a1b44dee818127c408dc055e4bda5ed9",
+      "/Game/Characters/Mannequins/Anims/Unarmed/Jog/MF_Unarmed_Jog_Fwd": "0ccbe851f85a6d4cd7c6438c219cb6af8e281784107b5be8e9b052e4df3069cb",
+      "/Game/Characters/Mannequins/Anims/Unarmed/Attack/MM_Attack_01": "f796113f17c91eca7e48ef57bbadc4fc36245a86b127e75a34ca4771500639ed",
+      "/Game/Art/Characters/Samurai/Do01/T_Do01_BaseColor": "833f1aa69738dd9e1800665c232e1c707f7faf781478c0104723aa724d423954",
+      "/Game/Art/Characters/Samurai/Do01/T_Do01_Normal": "ee2b15ebf8c99b202bb173d916a87ba840ee7d532c969afe8504265c1fe43b0b",
+      "/Game/Art/Characters/Samurai/Do01/T_Do01_ORM": "d4f7ca94e467008d9bdb08fa4b9f3cb4685f1a8cb6f6c4c64d68d4c077382aeb",
+      "/Game/Art/Characters/Samurai/Sode01/SK_Sode_L_01": "b2dda9ccefc282ad61add1a5952468a2d3f961403c657bd76290cab08b4abd84",
+      "/Game/Art/Characters/Samurai/Sode01/SK_Sode_R_01": "95f1b09b59d6eacf30294fef0acad4b80eeb8caefdf04b6a6af73ca1b5e3b9ec",
+      "/Game/Art/Characters/Samurai/Sode01/Review/SM_Sode_L_01": "fddd799d0a814678feb9760364f855df41604bbe68573b1a230a4cd9ce88593d",
+      "/Game/Art/Characters/Samurai/Sode01/Review/SM_Sode_R_01": "2a8600d6c96b8e903dc67357d55ce93527700fed91bdd98d27301d1f08f1d994",
+      "/Game/Art/Characters/Samurai/Do01/Review/SM_Manny": "54777c98a5368e4095ce190ce7df5ab92ba3fc284e51ba6905dcb294d4b43505"
+    }
+  },
+  "review_map": {
+    "asset": "/Game/Art/Characters/Samurai/Kusazuri01/Review/Kusazuri01_Review",
+    "default_game_mode": "/Script/Shoen.KusazuriReviewGameMode"
+  },
+  "saved_assets": [
+    "/Game/Art/Characters/Samurai/Kusazuri01/M_Kusazuri01.M_Kusazuri01",
+    "/Game/Art/Characters/Samurai/Kusazuri01/Review/SM_Kusazuri01.SM_Kusazuri01",
+    "/Game/Art/Characters/Samurai/Kusazuri01/SK_Kusazuri01.SK_Kusazuri01"
+  ]
+}

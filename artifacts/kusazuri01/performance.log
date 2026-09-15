@@ -1,0 +1,104 @@
+Starting cost-1-existing
++ ["/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/UnrealEditor.app/Contents/MacOS/UnrealEditor", "/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/game/Shoen.uproject", "/Game/Art/Characters/Samurai/Kusazuri01/Review/Kusazuri01_Review?game=/Script/Shoen.KusazuriReviewGameMode", "-game", "-windowed", "-ResX=1600", "-ResY=900", "-NoVSync", "-nop4", "-nosplash", "-stdout", "-FullStdOutLogOutput", "-KusazuriMode=existing", "-KusazuriCount=1", "-KusazuriCamera=close", "-KusazuriAnimation=idle", "-KusazuriPose=animation", "-KusazuriContract=/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/SourceArt/Characters/Samurai/Kusazuri01/asset-manifest.json", "-KusazuriSeconds=15.0", "-KusazuriOutput=/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/artifacts/kusazuri01/cost-1-existing.json", "-KusazuriScreenshot=/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/artifacts/kusazuri01/cost-1-existing.png"]
+Exit 0: /Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/artifacts/local/kusazuri01/cost-1-existing.log
+{
+  "rendered_bodies": 1,
+  "rendered_helmets": 1,
+  "rendered_armors": 1,
+  "rendered_kusazuri": 0,
+  "rendered_sode": 2,
+  "frames": 1050,
+  "median_fps": 70.76409486514024,
+  "interval_fps": 69.96121640763815,
+  "max_kusazuri_bone_position_error_cm": 0
+}
+Starting cost-1-kusazuri
++ ["/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/UnrealEditor.app/Contents/MacOS/UnrealEditor", "/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/game/Shoen.uproject", "/Game/Art/Characters/Samurai/Kusazuri01/Review/Kusazuri01_Review?game=/Script/Shoen.KusazuriReviewGameMode", "-game", "-windowed", "-ResX=1600", "-ResY=900", "-NoVSync", "-nop4", "-nosplash", "-stdout", "-FullStdOutLogOutput", "-KusazuriMode=kusazuri", "-KusazuriCount=1", "-KusazuriCamera=close", "-KusazuriAnimation=idle", "-KusazuriPose=animation", "-KusazuriContract=/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/SourceArt/Characters/Samurai/Kusazuri01/asset-manifest.json", "-KusazuriSeconds=15.0", "-KusazuriOutput=/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/artifacts/kusazuri01/cost-1-kusazuri.json", "-KusazuriScreenshot=/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/artifacts/kusazuri01/cost-1-kusazuri.png"]
+Exit 0: /Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/artifacts/local/kusazuri01/cost-1-kusazuri.log
+{
+  "rendered_bodies": 1,
+  "rendered_helmets": 1,
+  "rendered_armors": 1,
+  "rendered_kusazuri": 1,
+  "rendered_sode": 2,
+  "frames": 1327,
+  "median_fps": 88.958758612599,
+  "interval_fps": 88.41126447626758,
+  "max_kusazuri_bone_position_error_cm": 1.4447514855394609e-08
+}
+Starting cost-100-existing
++ ["/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/UnrealEditor.app/Contents/MacOS/UnrealEditor", "/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/game/Shoen.uproject", "/Game/Art/Characters/Samurai/Kusazuri01/Review/Kusazuri01_Review?game=/Script/Shoen.KusazuriReviewGameMode", "-game", "-windowed", "-ResX=1600", "-ResY=900", "-NoVSync", "-nop4", "-nosplash", "-stdout", "-FullStdOutLogOutput", "-KusazuriMode=existing", "-KusazuriCount=100", "-KusazuriCamera=tactical", "-KusazuriAnimation=idle", "-KusazuriPose=animation", "-KusazuriContract=/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/SourceArt/Characters/Samurai/Kusazuri01/asset-manifest.json", "-KusazuriSeconds=20.0", "-KusazuriOutput=/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/artifacts/kusazuri01/cost-100-existing.json", "-KusazuriScreenshot=/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/artifacts/kusazuri01/cost-100-existing.png"]
+Exit 0: /Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/artifacts/local/kusazuri01/cost-100-existing.log
+{
+  "rendered_bodies": 100,
+  "rendered_helmets": 100,
+  "rendered_armors": 100,
+  "rendered_kusazuri": 0,
+  "rendered_sode": 200,
+  "frames": 1885,
+  "median_fps": 95.89295701390765,
+  "interval_fps": 94.2204548202182,
+  "max_kusazuri_bone_position_error_cm": 0
+}
+Starting cost-100-kusazuri
++ ["/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/UnrealEditor.app/Contents/MacOS/UnrealEditor", "/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/game/Shoen.uproject", "/Game/Art/Characters/Samurai/Kusazuri01/Review/Kusazuri01_Review?game=/Script/Shoen.KusazuriReviewGameMode", "-game", "-windowed", "-ResX=1600", "-ResY=900", "-NoVSync", "-nop4", "-nosplash", "-stdout", "-FullStdOutLogOutput", "-KusazuriMode=kusazuri", "-KusazuriCount=100", "-KusazuriCamera=tactical", "-KusazuriAnimation=idle", "-KusazuriPose=animation", "-KusazuriContract=/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/SourceArt/Characters/Samurai/Kusazuri01/asset-manifest.json", "-KusazuriSeconds=20.0", "-KusazuriOutput=/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/artifacts/kusazuri01/cost-100-kusazuri.json", "-KusazuriScreenshot=/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/artifacts/kusazuri01/cost-100-kusazuri.png"]
+Exit 0: /Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/artifacts/local/kusazuri01/cost-100-kusazuri.log
+{
+  "rendered_bodies": 100,
+  "rendered_helmets": 100,
+  "rendered_armors": 100,
+  "rendered_kusazuri": 100,
+  "rendered_sode": 200,
+  "frames": 1413,
+  "median_fps": 71.11323233444449,
+  "interval_fps": 70.64286565770483,
+  "max_kusazuri_bone_position_error_cm": 0
+}
+Starting cost-500-kusazuri
++ ["/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/UnrealEditor.app/Contents/MacOS/UnrealEditor", "/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/game/Shoen.uproject", "/Game/Art/Characters/Samurai/Kusazuri01/Review/Kusazuri01_Review?game=/Script/Shoen.KusazuriReviewGameMode", "-game", "-windowed", "-ResX=1600", "-ResY=900", "-NoVSync", "-nop4", "-nosplash", "-stdout", "-FullStdOutLogOutput", "-KusazuriMode=kusazuri", "-KusazuriCount=500", "-KusazuriCamera=tactical", "-KusazuriAnimation=idle", "-KusazuriPose=animation", "-KusazuriContract=/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/SourceArt/Characters/Samurai/Kusazuri01/asset-manifest.json", "-KusazuriSeconds=20.0", "-KusazuriOutput=/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/artifacts/kusazuri01/cost-500-kusazuri.json", "-KusazuriScreenshot=/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/artifacts/kusazuri01/cost-500-kusazuri.png"]
+Exit 0: /Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/artifacts/local/kusazuri01/cost-500-kusazuri.log
+{
+  "rendered_bodies": 500,
+  "rendered_helmets": 500,
+  "rendered_armors": 500,
+  "rendered_kusazuri": 500,
+  "rendered_sode": 1000,
+  "frames": 836,
+  "median_fps": 43.479919271499796,
+  "interval_fps": 41.78699597463539,
+  "max_kusazuri_bone_position_error_cm": 0
+}
+Starting cost-500-existing
++ ["/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/UnrealEditor.app/Contents/MacOS/UnrealEditor", "/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/game/Shoen.uproject", "/Game/Art/Characters/Samurai/Kusazuri01/Review/Kusazuri01_Review?game=/Script/Shoen.KusazuriReviewGameMode", "-game", "-windowed", "-ResX=1600", "-ResY=900", "-NoVSync", "-nop4", "-nosplash", "-stdout", "-FullStdOutLogOutput", "-KusazuriMode=existing", "-KusazuriCount=500", "-KusazuriCamera=tactical", "-KusazuriAnimation=idle", "-KusazuriPose=animation", "-KusazuriContract=/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/SourceArt/Characters/Samurai/Kusazuri01/asset-manifest.json", "-KusazuriSeconds=20.0", "-KusazuriOutput=/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/artifacts/kusazuri01/cost-500-existing.json", "-KusazuriScreenshot=/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/artifacts/kusazuri01/cost-500-existing.png"]
+Exit 0: /Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/artifacts/local/kusazuri01/cost-500-existing.log
+{
+  "rendered_bodies": 500,
+  "rendered_helmets": 500,
+  "rendered_armors": 500,
+  "rendered_kusazuri": 0,
+  "rendered_sode": 1000,
+  "frames": 1012,
+  "median_fps": 51.8580274567828,
+  "interval_fps": 50.57670974122459,
+  "max_kusazuri_bone_position_error_cm": 0
+}
+[
+  {
+    "count": 1,
+    "median_frame_delta_ms": -2.8902962803840637,
+    "median_frame_delta_percent": -20.452920017345985,
+    "p95_frame_delta_ms": -5.405794829130173
+  },
+  {
+    "count": 100,
+    "median_frame_delta_ms": 3.633785992860794,
+    "median_frame_delta_percent": 34.845448401113984,
+    "p95_frame_delta_ms": 5.363874137401581
+  },
+  {
+    "count": 500,
+    "median_frame_delta_ms": 3.7157051265239716,
+    "median_frame_delta_percent": 19.268913847258872,
+    "p95_frame_delta_ms": 5.363915115594864
+  }
+]

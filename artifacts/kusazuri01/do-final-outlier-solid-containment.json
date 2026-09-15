@@ -1,0 +1,334 @@
+{
+  "baseline": "final",
+  "command_arguments": [
+    "/Applications/Blender.app/Contents/MacOS/Blender",
+    "--background",
+    "--factory-startup",
+    "--threads",
+    "2",
+    "--python-exit-code",
+    "1",
+    "--python",
+    "SourceArt/Characters/Samurai/Kusazuri01/Scripts/diagnose_do_contacts.py"
+  ],
+  "input_report": "artifacts/kusazuri01/motion-validation.json",
+  "input_report_sha256": "5b6f9d542daad4dbf64d9ed787efce2c72132a3f0a3f2bee542b0fcf4e94dead",
+  "input_fixture": "artifacts/kusazuri01/hinge-reference-poses.json",
+  "input_fixture_sha256": "2bfa75ed81b51dd4071e9e937bfe172802d5f0c8b6b1f64d581c8c856903a8b0",
+  "review_script_sha256": "6fc1d4730204ff782c1074a55ccf15f112c54548f87d5267991a5800fd1de4c5",
+  "source_sha256": "cf7c0ec0578b7fe2aca7d1b30439c521e8cecc3e63d4f36b0c8820b31dc9eb9e",
+  "reference_source_sha256": "cf7c0ec0578b7fe2aca7d1b30439c521e8cecc3e63d4f36b0c8820b31dc9eb9e",
+  "reference_motion_script_sha256": "d08a47004a1fba6614fd59171d231e1f6b6349162c14c9f8e0a2006461b8f88d",
+  "scope": "Restore explicitly selected frozen panel targets. Final mode checks the largest Do signed-nearest outlier per native clip on matching frozen source/controller. Pre-lateral mode replays the archived four points on unchanged panel/Do geometry; tail and material edits do not alter these panels. Point reproduction error must be zero before interpreting the old comparison. Per connected closed Do island, classify contact vertices by three independent ray parity tests, resolving disagreements with closed-island signed solid-angle winding. Surface distance is per containing solid, not exact penetration of a union or unsampled triangle interiors.",
+  "probe_script_sha256": "53df55059822214ce6698dbb75228d6381042f126817a3021b895bfcff9f4561",
+  "probe_script": "\"\"\"Classify bounded Do contact outliers against each closed mesh island.\n\nBlender --background --factory-startup --threads 2 --python-exit-code 1 \\\n --python THIS -- [--baseline pre-lateral]\nThe default checks the maximum Do signed-nearest outlier in each final native clip.\nNo source or controller edits are saved.\n\"\"\"\nimport argparse,json,sys,hashlib,math\nfrom pathlib import Path\nimport bpy\nfrom mathutils import Vector,Matrix\nfrom mathutils.bvhtree import BVHTree\nsys.path.insert(0,str(Path(__file__).resolve().parent))\nimport review_kusazuri as r\nout=r.OUTPUT\nparser=argparse.ArgumentParser(description=__doc__)\nparser.add_argument('--baseline',choices=('final','pre-lateral'),default='final')\nargs=parser.parse_args(sys.argv[sys.argv.index('--')+1:] if '--' in sys.argv else [])\nsuffix='' if args.baseline=='final' else '-pre-lateral'\ninput_report=out/('motion-validation'+suffix+'.json')\ninput_fixture=out/('hinge-reference-poses'+suffix+'.json')\narch=json.loads(input_report.read_text())\nfixture=json.loads(input_fixture.read_text())\nassert fixture['source_sha256']==arch['source_sha256']\nassert fixture['motion_script_sha256']==arch['motion_script_sha256']\nreview=r.Review()\nif args.baseline=='final':\n    assert review.source_hash==arch['source_sha256']\n    assert review.motion_hash==arch['motion_script_sha256']\ncache={}\n\ndef islands(ob,dg):\n    points,faces=r.evaluated(ob,dg)\n    if ob.name not in cache:\n        parent=list(range(len(points)))\n        def find(a):\n            while parent[a]!=a:\n                parent[a]=parent[parent[a]];a=parent[a]\n            return a\n        for face in faces:\n            for v in face[1:]:parent[find(v)]=find(face[0])\n        groups={}\n        for i,face in enumerate(faces):groups.setdefault(find(face[0]),[]).append(i)\n        cache[ob.name]=list(groups.values())\n    result=[]\n    for ii,indices in enumerate(cache[ob.name]):\n        selected=[faces[i] for i in indices]\n        used=sorted({v for face in selected for v in face})\n        lookup={old:new for new,old in enumerate(used)}\n        vertices=[points[i] for i in used]\n        remapped=[tuple(lookup[v] for v in face) for face in selected]\n        edges={}\n        for face in remapped:\n            for a,b in zip(face,face[1:]+face[:1]):\n                key=tuple(sorted((a,b)));edges[key]=edges.get(key,0)+1\n        result.append({'name':ob.name,'island':ii,'tree':BVHTree.FromPolygons(vertices,remapped,all_triangles=True),\n          'low':[min(v[i] for v in vertices) for i in range(3)],'high':[max(v[i] for v in vertices) for i in range(3)],\n          'closed':all(n==2 for n in edges.values()),'vertices':vertices,'faces':remapped})\n    return result\n\ndef point_solids(point,solids):\n    candidates=[]\n    for solid in solids:\n        if not all(solid['low'][i]-1e-7<=point[i]<=solid['high'][i]+1e-7 for i in range(3)):continue\n        tree=solid['tree'];location,normal,face,distance=tree.find_nearest(point)\n        votes=[]\n        for direction in (Vector((.931,.317,.177)).normalized(),Vector((-.223,.877,.425)).normalized(),Vector((.331,-.271,.904)).normalized()):\n            count=0;start=point.copy()\n            for _ in range(256):\n                hit,_,_,_=tree.ray_cast(start,direction,10)\n                if hit is None:break\n                count+=1;start=hit+direction*1e-6\n            votes.append(count%2)\n        winding=None\n        if len(set(votes))>1:\n            # A ray can land on a triangulation edge. Resolve disagreements\n            # with the signed solid angle of every triangle in this island.\n            angles=[]\n            for face in solid['faces']:\n                a,b,c=(solid['vertices'][i]-point for i in face)\n                denominator=(a.length*b.length*c.length+a.dot(b)*c.length+\n                             b.dot(c)*a.length+c.dot(a)*b.length)\n                angles.append(2*math.atan2(a.dot(b.cross(c)),denominator))\n            winding=math.fsum(angles)/(4*math.pi)\n        candidates.append({'object':solid['name'],'island':solid['island'],'closed':solid['closed'],\n          'inside_ray_votes':votes,'winding_number_if_rays_disagree':winding,\n          'inside':abs(winding)>.5 if winding is not None else bool(votes[0]),\n          'surface_distance_mm':distance*1000})\n    return candidates\n\nrequests=[]\nfor clip in arch['coverage']:\n    record=max((c for c in arch['checks'] if c.get('clip')==clip),key=lambda c:c['totals']['do']['maximum_sampled_penetration_estimate_mm'])\n    name=max(record['surface_intersections']['do'],key=lambda name:record['surface_intersections']['do'][name]['maximum_sampled_penetration_estimate_mm'])\n    requests.append((record['pose'],[name]))\nif args.baseline=='pre-lateral':\n    requests=[('A_Run:29',['Kusazuri_01_Side_R_Interior']),('A_Walk:41',['Kusazuri_01_Front_Center_Trim']),('A_Run:50',['Kusazuri_01_Front_Center_Interior','Kusazuri_01_Front_Center'])]\nrows=[]\nfor pose,names in requests:\n    record=next(c for c in arch['checks'] if c['pose']==pose)\n    review.apply(record)\n    frozen=next(p for p in fixture['poses'] if p['pose']==pose)\n    assert frozen['panels']==record['hinge_targets']['panels']\n    for panel in frozen['panels']:\n        review.armor.pose.bones[panel['bone']].matrix=Matrix(panel['target_blender_cm'])\n        bpy.context.view_layer.update()\n    dg=bpy.context.evaluated_depsgraph_get()\n    solids=[island for ob in review.do for island in islands(ob,dg)]\n    assert all(solid['closed'] for solid in solids), 'Do containment requires closed islands'\n    do_tree=r.tree_from(review.do,dg)\n    for name in names:\n        old=record['surface_intersections']['do'][name]\n        points,faces=r.evaluated(bpy.data.objects[name],dg)\n        overlaps=do_tree.overlap(BVHTree.FromPolygons(points,faces,all_triangles=True))\n        vertices=sorted({v for _,f in overlaps for v in faces[f]})\n        index=old['deepest_sample']['armor_vertex'];point=points[index]\n        contained=[];ambiguous=0\n        for v in vertices:\n            candidates=point_solids(points[v],solids)\n            ambiguous+=sum(len(set(x['inside_ray_votes']))>1 for x in candidates)\n            inside=[x for x in candidates if x['inside']]\n            if inside:contained.append({'vertex':v,'point_metres':list(points[v]),'solids':inside,'maximum_distance_to_containing_solid_surface_mm':max(x['surface_distance_mm'] for x in inside)})\n        row={'pose':pose,'component':name,'reference_estimate_mm':old['maximum_sampled_penetration_estimate_mm'],\n          'reference_outlier_reproduction_error_m':(point-Vector(old['deepest_sample']['point_metres'])).length,\n          'reference_outlier_point_metres':list(point),'outlier_aabb_candidates':point_solids(point,solids),\n          'triangle_pairs_reproduced':len(overlaps),'contact_triangle_vertices_tested':len(vertices),\n          'contact_vertices_inside_any_closed_Do_solid':len(contained),'ray_disagreements_resolved_by_winding':ambiguous,\n          'maximum_sampled_distance_to_containing_Do_solid_surface_mm':max((x['maximum_distance_to_containing_solid_surface_mm'] for x in contained),default=0),\n          'deepest_contained_sample':max(contained,key=lambda x:x['maximum_distance_to_containing_solid_surface_mm'],default=None),\n          'inside_solid_objects':sorted({x['object'] for sample in contained for x in sample['solids']})}\n        rows.append(row);print('DO_SOLID_CHECK '+json.dumps(row),flush=True)\npayload={'baseline':args.baseline,'command_arguments':sys.argv,'input_report':str(input_report.relative_to(r.ROOT)),'input_report_sha256':r.sha256(input_report),'input_fixture':str(input_fixture.relative_to(r.ROOT)),'input_fixture_sha256':r.sha256(input_fixture),'review_script_sha256':r.sha256(Path(r.__file__)),'source_sha256':review.source_hash,'reference_source_sha256':arch['source_sha256'],'reference_motion_script_sha256':arch['motion_script_sha256'],\n 'scope':'Restore explicitly selected frozen panel targets. Final mode checks the largest Do signed-nearest outlier per native clip on matching frozen source/controller. Pre-lateral mode replays the archived four points on unchanged panel/Do geometry; tail and material edits do not alter these panels. Point reproduction error must be zero before interpreting the old comparison. Per connected closed Do island, classify contact vertices by three independent ray parity tests, resolving disagreements with closed-island signed solid-angle winding. Surface distance is per containing solid, not exact penetration of a union or unsampled triangle interiors.',\n 'probe_script_sha256':hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),'probe_script':Path(__file__).read_text(),'checks':rows,'source_file_unchanged':r.sha256(review.source)==review.source_hash}\nassert payload['source_file_unchanged']\nassert all(row['reference_outlier_reproduction_error_m']<1e-6 for row in rows)\nr.write_json(out/('do-final-outlier-solid-containment.json' if args.baseline=='final' else 'do-outlier-solid-containment.json'),payload)\nprint('DO_SOLID_DIAGNOSTIC_COMPLETE',flush=True)\n",
+  "checks": [
+    {
+      "pose": "A_Idle:2",
+      "component": "Kusazuri_01_Belt",
+      "reference_estimate_mm": 9.09042451530695,
+      "reference_outlier_reproduction_error_m": 0.0,
+      "reference_outlier_point_metres": [
+        -0.15778562426567078,
+        -0.03110804408788681,
+        0.9830589890480042
+      ],
+      "outlier_aabb_candidates": [
+        {
+          "object": "Do_Review_Edge",
+          "island": 0,
+          "closed": true,
+          "inside_ray_votes": [
+            0,
+            0,
+            0
+          ],
+          "winding_number_if_rays_disagree": null,
+          "inside": false,
+          "surface_distance_mm": 9.170625358819962
+        },
+        {
+          "object": "Do_Review_Edge",
+          "island": 1,
+          "closed": true,
+          "inside_ray_votes": [
+            0,
+            0,
+            0
+          ],
+          "winding_number_if_rays_disagree": null,
+          "inside": false,
+          "surface_distance_mm": 15.64694195985794
+        },
+        {
+          "object": "Do_Review_Lining",
+          "island": 0,
+          "closed": true,
+          "inside_ray_votes": [
+            0,
+            0,
+            0
+          ],
+          "winding_number_if_rays_disagree": null,
+          "inside": false,
+          "surface_distance_mm": 9.17879305779934
+        }
+      ],
+      "triangle_pairs_reproduced": 1602,
+      "contact_triangle_vertices_tested": 756,
+      "contact_vertices_inside_any_closed_Do_solid": 300,
+      "ray_disagreements_resolved_by_winding": 3,
+      "maximum_sampled_distance_to_containing_Do_solid_surface_mm": 1.9636449869722128,
+      "deepest_contained_sample": {
+        "vertex": 1970,
+        "point_metres": [
+          0.13540907204151154,
+          -0.12991978228092194,
+          0.9915576577186584
+        ],
+        "solids": [
+          {
+            "object": "Do_Review_Lining",
+            "island": 0,
+            "closed": true,
+            "inside_ray_votes": [
+              1,
+              1,
+              1
+            ],
+            "winding_number_if_rays_disagree": null,
+            "inside": true,
+            "surface_distance_mm": 1.9636449869722128
+          }
+        ],
+        "maximum_distance_to_containing_solid_surface_mm": 1.9636449869722128
+      },
+      "inside_solid_objects": [
+        "Do_Review_Edge",
+        "Do_Review_Lining",
+        "Do_Review_Main",
+        "Do_Review_Side_L",
+        "Do_Review_Side_R"
+      ]
+    },
+    {
+      "pose": "A_Walk:41",
+      "component": "Kusazuri_01_Front_Center_Trim",
+      "reference_estimate_mm": 17.12859608232975,
+      "reference_outlier_reproduction_error_m": 0.0,
+      "reference_outlier_point_metres": [
+        0.02100929245352745,
+        -0.12185622751712799,
+        0.9109483957290649
+      ],
+      "outlier_aabb_candidates": [
+        {
+          "object": "Do_Review_Lining",
+          "island": 0,
+          "closed": true,
+          "inside_ray_votes": [
+            0,
+            0,
+            0
+          ],
+          "winding_number_if_rays_disagree": null,
+          "inside": false,
+          "surface_distance_mm": 28.789035975933075
+        }
+      ],
+      "triangle_pairs_reproduced": 189,
+      "contact_triangle_vertices_tested": 49,
+      "contact_vertices_inside_any_closed_Do_solid": 8,
+      "ray_disagreements_resolved_by_winding": 0,
+      "maximum_sampled_distance_to_containing_Do_solid_surface_mm": 1.587449456565082,
+      "deepest_contained_sample": {
+        "vertex": 2668,
+        "point_metres": [
+          0.02445445954799652,
+          -0.09528320282697678,
+          0.934609591960907
+        ],
+        "solids": [
+          {
+            "object": "Do_Review_Lining",
+            "island": 0,
+            "closed": true,
+            "inside_ray_votes": [
+              1,
+              1,
+              1
+            ],
+            "winding_number_if_rays_disagree": null,
+            "inside": true,
+            "surface_distance_mm": 1.587449456565082
+          }
+        ],
+        "maximum_distance_to_containing_solid_surface_mm": 1.587449456565082
+      },
+      "inside_solid_objects": [
+        "Do_Review_Lining"
+      ]
+    },
+    {
+      "pose": "A_Run:29",
+      "component": "Kusazuri_01_Front_Center_Interior",
+      "reference_estimate_mm": 17.509520053863525,
+      "reference_outlier_reproduction_error_m": 0.0,
+      "reference_outlier_point_metres": [
+        -0.09596027433872223,
+        -0.014332427643239498,
+        0.8503133058547974
+      ],
+      "outlier_aabb_candidates": [
+        {
+          "object": "Do_Review_Edge",
+          "island": 0,
+          "closed": true,
+          "inside_ray_votes": [
+            0,
+            0,
+            0
+          ],
+          "winding_number_if_rays_disagree": null,
+          "inside": false,
+          "surface_distance_mm": 29.612116515636444
+        },
+        {
+          "object": "Do_Review_Edge",
+          "island": 1,
+          "closed": true,
+          "inside_ray_votes": [
+            0,
+            0,
+            0
+          ],
+          "winding_number_if_rays_disagree": null,
+          "inside": false,
+          "surface_distance_mm": 29.660135507583618
+        },
+        {
+          "object": "Do_Review_Lining",
+          "island": 0,
+          "closed": true,
+          "inside_ray_votes": [
+            0,
+            0,
+            0
+          ],
+          "winding_number_if_rays_disagree": null,
+          "inside": false,
+          "surface_distance_mm": 27.273600921034813
+        }
+      ],
+      "triangle_pairs_reproduced": 441,
+      "contact_triangle_vertices_tested": 91,
+      "contact_vertices_inside_any_closed_Do_solid": 16,
+      "ray_disagreements_resolved_by_winding": 0,
+      "maximum_sampled_distance_to_containing_Do_solid_surface_mm": 1.9596244674175978,
+      "deepest_contained_sample": {
+        "vertex": 196,
+        "point_metres": [
+          0.04004472494125366,
+          -0.025343626737594604,
+          0.8818344473838806
+        ],
+        "solids": [
+          {
+            "object": "Do_Review_Lining",
+            "island": 0,
+            "closed": true,
+            "inside_ray_votes": [
+              1,
+              1,
+              1
+            ],
+            "winding_number_if_rays_disagree": null,
+            "inside": true,
+            "surface_distance_mm": 1.9596244674175978
+          }
+        ],
+        "maximum_distance_to_containing_solid_surface_mm": 1.9596244674175978
+      },
+      "inside_solid_objects": [
+        "Do_Review_Lining",
+        "Do_Review_Main"
+      ]
+    },
+    {
+      "pose": "A_Attack:23",
+      "component": "Kusazuri_01_Belt",
+      "reference_estimate_mm": 8.569429628551006,
+      "reference_outlier_reproduction_error_m": 0.0,
+      "reference_outlier_point_metres": [
+        0.24372141063213348,
+        -0.17442916333675385,
+        0.8989654183387756
+      ],
+      "outlier_aabb_candidates": [
+        {
+          "object": "Do_Review_Edge",
+          "island": 0,
+          "closed": true,
+          "inside_ray_votes": [
+            0,
+            0,
+            0
+          ],
+          "winding_number_if_rays_disagree": null,
+          "inside": false,
+          "surface_distance_mm": 8.608119562268257
+        },
+        {
+          "object": "Do_Review_Edge",
+          "island": 1,
+          "closed": true,
+          "inside_ray_votes": [
+            0,
+            0,
+            0
+          ],
+          "winding_number_if_rays_disagree": null,
+          "inside": false,
+          "surface_distance_mm": 14.95957002043724
+        }
+      ],
+      "triangle_pairs_reproduced": 1422,
+      "contact_triangle_vertices_tested": 686,
+      "contact_vertices_inside_any_closed_Do_solid": 270,
+      "ray_disagreements_resolved_by_winding": 5,
+      "maximum_sampled_distance_to_containing_Do_solid_surface_mm": 1.9929981790482998,
+      "deepest_contained_sample": {
+        "vertex": 2342,
+        "point_metres": [
+          0.03306932374835014,
+          -0.23833298683166504,
+          0.932330846786499
+        ],
+        "solids": [
+          {
+            "object": "Do_Review_Lining",
+            "island": 0,
+            "closed": true,
+            "inside_ray_votes": [
+              1,
+              1,
+              0
+            ],
+            "winding_number_if_rays_disagree": 1.0000000768098958,
+            "inside": true,
+            "surface_distance_mm": 1.9929981790482998
+          }
+        ],
+        "maximum_distance_to_containing_solid_surface_mm": 1.9929981790482998
+      },
+      "inside_solid_objects": [
+        "Do_Review_Back",
+        "Do_Review_Edge",
+        "Do_Review_Lining",
+        "Do_Review_Main",
+        "Do_Review_Side_R"
+      ]
+    }
+  ],
+  "source_file_unchanged": true
+}

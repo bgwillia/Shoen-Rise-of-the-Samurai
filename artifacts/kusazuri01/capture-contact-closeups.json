@@ -1,0 +1,284 @@
+{
+  "source_sha256": "cf7c0ec0578b7fe2aca7d1b30439c521e8cecc3e63d4f36b0c8820b31dc9eb9e",
+  "motion_script_sha256": "d08a47004a1fba6614fd59171d231e1f6b6349162c14c9f8e0a2006461b8f88d",
+  "resolution": 900,
+  "cycles_samples": 16,
+  "captures": [
+    {
+      "file": "SourceArt/Characters/Samurai/Kusazuri01/Review/Captures/contact-close-A_Run-31.png",
+      "eye_metres": [
+        1.4308207035064697,
+        -2.500702381134033,
+        1.2830924987792969
+      ],
+      "target_metres": [
+        0.18082073330879211,
+        -0.000702285731676966,
+        0.88309246301651
+      ],
+      "orthographic_span_metres": 0.72,
+      "kind": "body contact close view",
+      "pose": "A_Run:31",
+      "measured_component": "Kusazuri_01_Front_L_Interior",
+      "measured_contact": {
+        "triangle_intersections": 62,
+        "intersecting_armor_triangles": 33,
+        "examples": [
+          [
+            6293,
+            912
+          ],
+          [
+            6293,
+            515
+          ],
+          [
+            6293,
+            402
+          ],
+          [
+            6293,
+            1073
+          ],
+          [
+            6293,
+            908
+          ]
+        ],
+        "depth_sample_vertices": 205,
+        "vertices_on_negative_nearest_normal_side": 11,
+        "maximum_sampled_penetration_estimate_mm": 2.2609883453696966,
+        "maximum_negative_nearest_normal_sample_distance_mm": 2.2609883453696966,
+        "minimum_unsigned_sample_clearance_mm": 0.06067268259357661,
+        "deepest_sample": {
+          "armor_vertex": 466,
+          "target_triangle": 6499,
+          "point_metres": [
+            0.18082073330879211,
+            -0.000702285731676966,
+            0.88309246301651
+          ],
+          "surface_metres": [
+            0.1822812557220459,
+            -0.001111297868192196,
+            0.8847692608833313
+          ]
+        },
+        "contact_triangle_pairs_by_dominant_target_bone": {
+          "thigh_twist_01_l": 62
+        },
+        "maximum_contact_penetration_estimate_mm_by_dominant_target_bone": {
+          "thigh_twist_01_l": 2.2609883453696966
+        }
+      }
+    },
+    {
+      "file": "SourceArt/Characters/Samurai/Kusazuri01/Review/Captures/contact-close-A_Run-40.png",
+      "eye_metres": [
+        -1.4054538011550903,
+        -2.4988903999328613,
+        1.2733771800994873
+      ],
+      "target_metres": [
+        -0.15545375645160675,
+        0.001109542790800333,
+        0.8733771443367004
+      ],
+      "orthographic_span_metres": 0.72,
+      "kind": "body contact close view",
+      "pose": "A_Run:40",
+      "measured_component": "Kusazuri_01_Front_R_Interior",
+      "measured_contact": {
+        "triangle_intersections": 40,
+        "intersecting_armor_triangles": 20,
+        "examples": [
+          [
+            18623,
+            738
+          ],
+          [
+            18623,
+            729
+          ],
+          [
+            18623,
+            736
+          ],
+          [
+            18623,
+            739
+          ],
+          [
+            18622,
+            737
+          ]
+        ],
+        "depth_sample_vertices": 197,
+        "vertices_on_negative_nearest_normal_side": 5,
+        "maximum_sampled_penetration_estimate_mm": 1.1786951217800379,
+        "maximum_negative_nearest_normal_sample_distance_mm": 1.1786951217800379,
+        "minimum_unsigned_sample_clearance_mm": 0.1349306694464758,
+        "deepest_sample": {
+          "armor_vertex": 377,
+          "target_triangle": 18569,
+          "point_metres": [
+            -0.15545375645160675,
+            0.001109542790800333,
+            0.8733771443367004
+          ],
+          "surface_metres": [
+            -0.15631890296936035,
+            0.0009262934327125549,
+            0.8741564154624939
+          ]
+        },
+        "contact_triangle_pairs_by_dominant_target_bone": {
+          "thigh_twist_01_r": 40
+        },
+        "maximum_contact_penetration_estimate_mm_by_dominant_target_bone": {
+          "thigh_twist_01_r": 1.1786951217800379
+        }
+      }
+    },
+    {
+      "file": "SourceArt/Characters/Samurai/Kusazuri01/Review/Captures/contact-close-knee-lift.png",
+      "eye_metres": [
+        1.40133535861969,
+        -2.6393439769744873,
+        1.3960462808609009
+      ],
+      "target_metres": [
+        0.15133540332317352,
+        -0.13934394717216492,
+        0.996046245098114
+      ],
+      "orthographic_span_metres": 0.72,
+      "kind": "body contact close view",
+      "pose": "knee-lift",
+      "measured_component": "Kusazuri_01_Front_L",
+      "measured_contact": {
+        "triangle_intersections": 266,
+        "intersecting_armor_triangles": 197,
+        "examples": [
+          [
+            6283,
+            280
+          ],
+          [
+            6283,
+            262
+          ],
+          [
+            6283,
+            227
+          ],
+          [
+            6283,
+            312
+          ],
+          [
+            6283,
+            243
+          ]
+        ],
+        "depth_sample_vertices": 399,
+        "vertices_on_negative_nearest_normal_side": 94,
+        "maximum_sampled_penetration_estimate_mm": 6.425308063626289,
+        "maximum_negative_nearest_normal_sample_distance_mm": 8.062542416155338,
+        "minimum_unsigned_sample_clearance_mm": 0.028852404284407385,
+        "deepest_sample": {
+          "armor_vertex": 195,
+          "target_triangle": 6282,
+          "point_metres": [
+            0.15133540332317352,
+            -0.13934394717216492,
+            0.996046245098114
+          ],
+          "surface_metres": [
+            0.15310148894786835,
+            -0.13872724771499634,
+            1.0021932125091553
+          ]
+        },
+        "contact_triangle_pairs_by_dominant_target_bone": {
+          "thigh_twist_01_l": 266
+        },
+        "maximum_contact_penetration_estimate_mm_by_dominant_target_bone": {
+          "thigh_twist_01_l": 6.425308063626289
+        }
+      }
+    },
+    {
+      "file": "SourceArt/Characters/Samurai/Kusazuri01/Review/Captures/contact-close-knee-lift-side.png",
+      "eye_metres": [
+        2.8513355255126953,
+        -0.6393439769744873,
+        1.1460462808609009
+      ],
+      "target_metres": [
+        0.15133540332317352,
+        -0.13934394717216492,
+        0.996046245098114
+      ],
+      "orthographic_span_metres": 0.72,
+      "kind": "body contact close view from left side",
+      "pose": "knee-lift",
+      "measured_component": "Kusazuri_01_Front_L",
+      "measured_contact": {
+        "triangle_intersections": 266,
+        "intersecting_armor_triangles": 197,
+        "examples": [
+          [
+            6283,
+            280
+          ],
+          [
+            6283,
+            262
+          ],
+          [
+            6283,
+            227
+          ],
+          [
+            6283,
+            312
+          ],
+          [
+            6283,
+            243
+          ]
+        ],
+        "depth_sample_vertices": 399,
+        "vertices_on_negative_nearest_normal_side": 94,
+        "maximum_sampled_penetration_estimate_mm": 6.425308063626289,
+        "maximum_negative_nearest_normal_sample_distance_mm": 8.062542416155338,
+        "minimum_unsigned_sample_clearance_mm": 0.028852404284407385,
+        "deepest_sample": {
+          "armor_vertex": 195,
+          "target_triangle": 6282,
+          "point_metres": [
+            0.15133540332317352,
+            -0.13934394717216492,
+            0.996046245098114
+          ],
+          "surface_metres": [
+            0.15310148894786835,
+            -0.13872724771499634,
+            1.0021932125091553
+          ]
+        },
+        "contact_triangle_pairs_by_dominant_target_bone": {
+          "thigh_twist_01_l": 266
+        },
+        "maximum_contact_penetration_estimate_mm_by_dominant_target_bone": {
+          "thigh_twist_01_l": 6.425308063626289
+        }
+      }
+    }
+  ],
+  "probe_script": "import json,sys,hashlib\nfrom pathlib import Path\nimport bpy\nfrom mathutils import Vector\nroot=Path('/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai')\nsys.path.insert(0,str(root/'SourceArt/Characters/Samurai/Kusazuri01/Scripts'))\nimport review_kusazuri as r\nreview=r.Review()\nreport=json.loads((r.OUTPUT/'motion-validation.json').read_text())\nassert report['source_sha256']==review.source_hash\nassert report['motion_script_sha256']==review.motion_hash\nreview.scene.render.resolution_x=review.scene.render.resolution_y=900\nreview.scene.render.resolution_percentage=100\nreview.scene.render.image_settings.file_format='PNG'\nreview.scene.cycles.samples=16\nreview.visibility(True)\nfor pose,part,side in [('A_Run:31','Kusazuri_01_Front_L_Interior',1),('A_Run:40','Kusazuri_01_Front_R_Interior',-1),('knee-lift','Kusazuri_01_Front_L',1)]:\n    record=next(c for c in report['checks'] if c['pose']==pose)\n    review.apply(record)\n    contact=record['surface_intersections']['body'][part]\n    target=Vector(contact['deepest_sample']['point_metres'])\n    eye=target+Vector((side*1.25,-2.5,.40))\n    review.render('contact-close-'+pose.replace(':','-'),eye,target,.72,kind='body contact close view',pose=pose,measured_component=part,measured_contact=contact)\n    if pose=='knee-lift':\n        review.render('contact-close-knee-lift-side',target+Vector((2.7,-.50,.15)),target,.72,kind='body contact close view from left side',pose=pose,measured_component=part,measured_contact=contact)\nr.write_json(r.OUTPUT/'capture-contact-closeups.json',{'source_sha256':review.source_hash,'motion_script_sha256':review.motion_hash,'resolution':900,'cycles_samples':16,'captures':review.captures,'probe_script':Path(__file__).read_text(),'source_file_unchanged':r.sha256(review.source)==review.source_hash})\nprint('KUSAZURI_CONTACT_CLOSEUPS_COMPLETE',flush=True)\n",
+  "source_file_unchanged": true,
+  "review_script_sha256": "6fc1d4730204ff782c1074a55ccf15f112c54548f87d5267991a5800fd1de4c5",
+  "input_motion_report_sha256": "5b6f9d542daad4dbf64d9ed787efce2c72132a3f0a3f2bee542b0fcf4e94dead"
+}

@@ -1,0 +1,1798 @@
+{
+  "asset": "Kusazuri01",
+  "blender_version": "5.1.2",
+  "source_collection": "Kusazuri01_Source",
+  "source_components": {
+    "Kusazuri_01_Belt": 4416,
+    "Kusazuri_01_Front_Center": 3920,
+    "Kusazuri_01_Front_Center_Interior": 1080,
+    "Kusazuri_01_Front_Center_Lacing": 6720,
+    "Kusazuri_01_Front_Center_Trim": 5108,
+    "Kusazuri_01_Front_L": 4312,
+    "Kusazuri_01_Front_L_Interior": 1080,
+    "Kusazuri_01_Front_L_Lacing": 6720,
+    "Kusazuri_01_Front_L_Trim": 5108,
+    "Kusazuri_01_Front_R": 4312,
+    "Kusazuri_01_Front_R_Interior": 1080,
+    "Kusazuri_01_Front_R_Lacing": 6720,
+    "Kusazuri_01_Front_R_Trim": 5108,
+    "Kusazuri_01_Lacing": 22844,
+    "Kusazuri_01_Rear_L": 4312,
+    "Kusazuri_01_Rear_L_Interior": 1080,
+    "Kusazuri_01_Rear_L_Lacing": 6720,
+    "Kusazuri_01_Rear_L_Trim": 5108,
+    "Kusazuri_01_Rear_R": 4312,
+    "Kusazuri_01_Rear_R_Interior": 1080,
+    "Kusazuri_01_Rear_R_Lacing": 6720,
+    "Kusazuri_01_Rear_R_Trim": 5108,
+    "Kusazuri_01_Side_L": 4312,
+    "Kusazuri_01_Side_L_Interior": 1080,
+    "Kusazuri_01_Side_L_Lacing": 6720,
+    "Kusazuri_01_Side_L_Trim": 5108,
+    "Kusazuri_01_Side_R": 4312,
+    "Kusazuri_01_Side_R_Interior": 1080,
+    "Kusazuri_01_Side_R_Lacing": 6720,
+    "Kusazuri_01_Side_R_Trim": 5108
+  },
+  "source_component_objects": 30,
+  "source_triangles_before_modifiers": 147408,
+  "source_materials": 1,
+  "runtime_materials": 1,
+  "shared_material": "M_Kusazuri01",
+  "material_base": "M_Sode01",
+  "material_variant": "Indigo quilted tile12 and woven obi masked by ArmorTint vertex color; existing textures unchanged",
+  "texture_dimensions": [
+    2048,
+    2048
+  ],
+  "source_bone_count": 88,
+  "native_reference_bone_count": 89,
+  "panels": [
+    {
+      "name": "Front_Center",
+      "bone": "spine_01",
+      "theta": 0,
+      "half_angle": 0.34,
+      "height_m": 0.332,
+      "hinge_metres": [
+        0.0,
+        -0.16200000047683716,
+        1.00600004196167
+      ],
+      "radial_blender": [
+        0.0,
+        -1.0,
+        0.0
+      ],
+      "rows": 7,
+      "lamellae_per_row": 10
+    },
+    {
+      "name": "Front_L",
+      "bone": "thigh_l",
+      "theta": 0.84,
+      "half_angle": 0.41,
+      "height_m": 0.332,
+      "hinge_metres": [
+        0.14905695617198944,
+        -0.12487981468439102,
+        1.00600004196167
+      ],
+      "radial_blender": [
+        0.7446430921554565,
+        -0.6674628257751465,
+        0.0
+      ],
+      "rows": 7,
+      "lamellae_per_row": 11
+    },
+    {
+      "name": "Front_R",
+      "bone": "thigh_r",
+      "theta": -0.84,
+      "half_angle": 0.41,
+      "height_m": 0.332,
+      "hinge_metres": [
+        -0.14905695617198944,
+        -0.12487981468439102,
+        1.00600004196167
+      ],
+      "radial_blender": [
+        -0.7446430921554565,
+        -0.6674628257751465,
+        0.0
+      ],
+      "rows": 7,
+      "lamellae_per_row": 11
+    },
+    {
+      "name": "Side_L",
+      "bone": "thigh_twist_01_l",
+      "theta": 1.7,
+      "half_angle": 0.4,
+      "height_m": 0.324,
+      "hinge_metres": [
+        0.1829032152891159,
+        0.020244788378477097,
+        1.00600004196167
+      ],
+      "radial_blender": [
+        0.9916648268699646,
+        0.1288444995880127,
+        0.0
+      ],
+      "rows": 7,
+      "lamellae_per_row": 11
+    },
+    {
+      "name": "Side_R",
+      "bone": "thigh_twist_01_r",
+      "theta": -1.7,
+      "half_angle": 0.4,
+      "height_m": 0.324,
+      "hinge_metres": [
+        -0.1829032152891159,
+        0.020244788378477097,
+        1.00600004196167
+      ],
+      "radial_blender": [
+        -0.9916648268699646,
+        0.1288444995880127,
+        0.0
+      ],
+      "rows": 7,
+      "lamellae_per_row": 11
+    },
+    {
+      "name": "Rear_L",
+      "bone": "thigh_twist_02_l",
+      "theta": 2.64,
+      "half_angle": 0.45,
+      "height_m": 0.338,
+      "hinge_metres": [
+        0.10905966907739639,
+        0.12073571234941483,
+        1.00600004196167
+      ],
+      "radial_blender": [
+        0.4808226227760315,
+        0.8768178820610046,
+        0.0
+      ],
+      "rows": 7,
+      "lamellae_per_row": 11
+    },
+    {
+      "name": "Rear_R",
+      "bone": "thigh_twist_02_r",
+      "theta": -2.64,
+      "half_angle": 0.45,
+      "height_m": 0.338,
+      "hinge_metres": [
+        -0.10905966907739639,
+        0.12073571234941483,
+        1.00600004196167
+      ],
+      "radial_blender": [
+        -0.4808226227760315,
+        0.8768178820610046,
+        0.0
+      ],
+      "rows": 7,
+      "lamellae_per_row": 11
+    }
+  ],
+  "major_panel_count": 7,
+  "attachment_method": "Seven rigid leaf panels and pelvis belt; armor-only stateless hinge poses use unchanged native spine_01 and thigh/twist channels. One full-weight influence per rigid section. No skeleton edit or physics.",
+  "review_contract": {
+    "body_component_yaw_degrees": -90,
+    "helmet_offset_from_head_cm": [
+      0,
+      1.8368773,
+      -2.77510097
+    ],
+    "helmet_rotation_degrees": [
+      0,
+      0,
+      0
+    ],
+    "helmet_scale": [
+      1,
+      1,
+      1
+    ],
+    "pose_turn_bone": "spine_04",
+    "pose_bend_bone": "spine_04"
+  },
+  "dependencies": {
+    "SourceArt/Characters/Samurai/Do01/Do01.blend": "7963892cbe29ce4036ca33484f6c5e8232578c80b323ff55d26072dbfd571d7b",
+    "SourceArt/Characters/Samurai/Sode01/Sode01.blend": "009e3fd8ba1f89119f874e94673b2abee187284e1e386e23eb77acbbea3f0d9a",
+    "SourceArt/Characters/Mannequins/Manny/Manny.blend": "46032c0e10b7b0ff0f13ff82195a82f8b82d307d684e6c408544f385ecd617de",
+    "SourceArt/Characters/Samurai/Kabuto01/Kabuto01.blend": "8e7a80e3e36c6b2acbd19fa0385d49da476140864370e53ea6f6c85d4f3f45f1"
+  },
+  "source_blend_sha256": "cf7c0ec0578b7fe2aca7d1b30439c521e8cecc3e63d4f36b0c8820b31dc9eb9e",
+  "evaluated_source_triangles": 147408,
+  "exported_triangles": 147408,
+  "separate_attachment_belts": 1,
+  "panel_bone_mapping": {
+    "Kusazuri_01_Belt": "pelvis",
+    "Kusazuri_01_Front_Center": "spine_01",
+    "Kusazuri_01_Front_L": "thigh_l",
+    "Kusazuri_01_Front_R": "thigh_r",
+    "Kusazuri_01_Side_L": "thigh_twist_01_l",
+    "Kusazuri_01_Side_R": "thigh_twist_01_r",
+    "Kusazuri_01_Rear_L": "thigh_twist_02_l",
+    "Kusazuri_01_Rear_R": "thigh_twist_02_r"
+  },
+  "runtime_lod_triangles": [
+    147408,
+    44210,
+    15734
+  ],
+  "runtime_material_slots": [
+    "M_Kusazuri01"
+  ],
+  "runtime_mesh_sections": 1,
+  "runtime_attachment_controller": "Requires KusazuriHinges on an armor-only instance of the native Manny skeleton; seven rigid leaves hinge around authored waist pivots and the independent belt follows pelvis",
+  "vertex_color": {
+    "name": "ArmorTint",
+    "domain": "CORNER",
+    "data_type": "FLOAT_COLOR",
+    "export_channels": 1,
+    "fbx_encoding": "LINEAR",
+    "prioritize_active_color": true,
+    "mask_channel": "R",
+    "semantics": "0 = indigo obi cord; 1 = ordinary armor; alpha = 1",
+    "source_components": {
+      "Kusazuri_01_Belt": {
+        "attribute_names": [
+          "ArmorTint"
+        ],
+        "name": "ArmorTint",
+        "domain": "CORNER",
+        "data_type": "FLOAT_COLOR",
+        "corners": 9216,
+        "black_corners": 0,
+        "white_corners": 9216,
+        "invalid_corners": 0,
+        "black_triangles": 0,
+        "white_triangles": 4416,
+        "mixed_triangles": 0,
+        "color_data_sha256": "c55fb48abc008ef495bd4a882549123eb75a3607f926a8321a8d822c708be6ad",
+        "valid": true
+      },
+      "Kusazuri_01_Front_Center": {
+        "attribute_names": [
+          "ArmorTint"
+        ],
+        "name": "ArmorTint",
+        "domain": "CORNER",
+        "data_type": "FLOAT_COLOR",
+        "corners": 7840,
+        "black_corners": 0,
+        "white_corners": 7840,
+        "invalid_corners": 0,
+        "black_triangles": 0,
+        "white_triangles": 3920,
+        "mixed_triangles": 0,
+        "color_data_sha256": "886a6b9f9bffa8dbb303ed7a2f8629c5badfcdb7a5ce33b817069a5ea75027c3",
+        "valid": true
+      },
+      "Kusazuri_01_Front_Center_Interior": {
+        "attribute_names": [
+          "ArmorTint"
+        ],
+        "name": "ArmorTint",
+        "domain": "CORNER",
+        "data_type": "FLOAT_COLOR",
+        "corners": 2160,
+        "black_corners": 0,
+        "white_corners": 2160,
+        "invalid_corners": 0,
+        "black_triangles": 0,
+        "white_triangles": 1080,
+        "mixed_triangles": 0,
+        "color_data_sha256": "54609627b125acb701a2f33bd15460d57e78721ebc53ec52448b10c288c4148d",
+        "valid": true
+      },
+      "Kusazuri_01_Front_Center_Lacing": {
+        "attribute_names": [
+          "ArmorTint"
+        ],
+        "name": "ArmorTint",
+        "domain": "CORNER",
+        "data_type": "FLOAT_COLOR",
+        "corners": 13104,
+        "black_corners": 0,
+        "white_corners": 13104,
+        "invalid_corners": 0,
+        "black_triangles": 0,
+        "white_triangles": 6720,
+        "mixed_triangles": 0,
+        "color_data_sha256": "bba4cd9b5c247e2dc33994733a4299e389367fa79431789e39b12555339db2da",
+        "valid": true
+      },
+      "Kusazuri_01_Front_Center_Trim": {
+        "attribute_names": [
+          "ArmorTint"
+        ],
+        "name": "ArmorTint",
+        "domain": "CORNER",
+        "data_type": "FLOAT_COLOR",
+        "corners": 10860,
+        "black_corners": 0,
+        "white_corners": 10860,
+        "invalid_corners": 0,
+        "black_triangles": 0,
+        "white_triangles": 5108,
+        "mixed_triangles": 0,
+        "color_data_sha256": "6de314b63670c05a3b7dab7008442299b643f9a49ed110cb45bf64c4e92c6d42",
+        "valid": true
+      },
+      "Kusazuri_01_Front_L": {
+        "attribute_names": [
+          "ArmorTint"
+        ],
+        "name": "ArmorTint",
+        "domain": "CORNER",
+        "data_type": "FLOAT_COLOR",
+        "corners": 8624,
+        "black_corners": 0,
+        "white_corners": 8624,
+        "invalid_corners": 0,
+        "black_triangles": 0,
+        "white_triangles": 4312,
+        "mixed_triangles": 0,
+        "color_data_sha256": "4272696aa83f54163e88269b936d9648a7b53294ffb635c7de3179f1d718f2a6",
+        "valid": true
+      },
+      "Kusazuri_01_Front_L_Interior": {
+        "attribute_names": [
+          "ArmorTint"
+        ],
+        "name": "ArmorTint",
+        "domain": "CORNER",
+        "data_type": "FLOAT_COLOR",
+        "corners": 2160,
+        "black_corners": 0,
+        "white_corners": 2160,
+        "invalid_corners": 0,
+        "black_triangles": 0,
+        "white_triangles": 1080,
+        "mixed_triangles": 0,
+        "color_data_sha256": "54609627b125acb701a2f33bd15460d57e78721ebc53ec52448b10c288c4148d",
+        "valid": true
+      },
+      "Kusazuri_01_Front_L_Lacing": {
+        "attribute_names": [
+          "ArmorTint"
+        ],
+        "name": "ArmorTint",
+        "domain": "CORNER",
+        "data_type": "FLOAT_COLOR",
+        "corners": 13104,
+        "black_corners": 0,
+        "white_corners": 13104,
+        "invalid_corners": 0,
+        "black_triangles": 0,
+        "white_triangles": 6720,
+        "mixed_triangles": 0,
+        "color_data_sha256": "bba4cd9b5c247e2dc33994733a4299e389367fa79431789e39b12555339db2da",
+        "valid": true
+      },
+      "Kusazuri_01_Front_L_Trim": {
+        "attribute_names": [
+          "ArmorTint"
+        ],
+        "name": "ArmorTint",
+        "domain": "CORNER",
+        "data_type": "FLOAT_COLOR",
+        "corners": 10860,
+        "black_corners": 0,
+        "white_corners": 10860,
+        "invalid_corners": 0,
+        "black_triangles": 0,
+        "white_triangles": 5108,
+        "mixed_triangles": 0,
+        "color_data_sha256": "6de314b63670c05a3b7dab7008442299b643f9a49ed110cb45bf64c4e92c6d42",
+        "valid": true
+      },
+      "Kusazuri_01_Front_R": {
+        "attribute_names": [
+          "ArmorTint"
+        ],
+        "name": "ArmorTint",
+        "domain": "CORNER",
+        "data_type": "FLOAT_COLOR",
+        "corners": 8624,
+        "black_corners": 0,
+        "white_corners": 8624,
+        "invalid_corners": 0,
+        "black_triangles": 0,
+        "white_triangles": 4312,
+        "mixed_triangles": 0,
+        "color_data_sha256": "4272696aa83f54163e88269b936d9648a7b53294ffb635c7de3179f1d718f2a6",
+        "valid": true
+      },
+      "Kusazuri_01_Front_R_Interior": {
+        "attribute_names": [
+          "ArmorTint"
+        ],
+        "name": "ArmorTint",
+        "domain": "CORNER",
+        "data_type": "FLOAT_COLOR",
+        "corners": 2160,
+        "black_corners": 0,
+        "white_corners": 2160,
+        "invalid_corners": 0,
+        "black_triangles": 0,
+        "white_triangles": 1080,
+        "mixed_triangles": 0,
+        "color_data_sha256": "54609627b125acb701a2f33bd15460d57e78721ebc53ec52448b10c288c4148d",
+        "valid": true
+      },
+      "Kusazuri_01_Front_R_Lacing": {
+        "attribute_names": [
+          "ArmorTint"
+        ],
+        "name": "ArmorTint",
+        "domain": "CORNER",
+        "data_type": "FLOAT_COLOR",
+        "corners": 13104,
+        "black_corners": 0,
+        "white_corners": 13104,
+        "invalid_corners": 0,
+        "black_triangles": 0,
+        "white_triangles": 6720,
+        "mixed_triangles": 0,
+        "color_data_sha256": "bba4cd9b5c247e2dc33994733a4299e389367fa79431789e39b12555339db2da",
+        "valid": true
+      },
+      "Kusazuri_01_Front_R_Trim": {
+        "attribute_names": [
+          "ArmorTint"
+        ],
+        "name": "ArmorTint",
+        "domain": "CORNER",
+        "data_type": "FLOAT_COLOR",
+        "corners": 10860,
+        "black_corners": 0,
+        "white_corners": 10860,
+        "invalid_corners": 0,
+        "black_triangles": 0,
+        "white_triangles": 5108,
+        "mixed_triangles": 0,
+        "color_data_sha256": "6de314b63670c05a3b7dab7008442299b643f9a49ed110cb45bf64c4e92c6d42",
+        "valid": true
+      },
+      "Kusazuri_01_Lacing": {
+        "attribute_names": [
+          "ArmorTint"
+        ],
+        "name": "ArmorTint",
+        "domain": "CORNER",
+        "data_type": "FLOAT_COLOR",
+        "corners": 45608,
+        "black_corners": 45608,
+        "white_corners": 0,
+        "invalid_corners": 0,
+        "black_triangles": 22844,
+        "white_triangles": 0,
+        "mixed_triangles": 0,
+        "color_data_sha256": "898b9947d4c0bddb5892333004a088ddb981dd9e741043ca5de7571cb46e46d8",
+        "valid": true
+      },
+      "Kusazuri_01_Rear_L": {
+        "attribute_names": [
+          "ArmorTint"
+        ],
+        "name": "ArmorTint",
+        "domain": "CORNER",
+        "data_type": "FLOAT_COLOR",
+        "corners": 8624,
+        "black_corners": 0,
+        "white_corners": 8624,
+        "invalid_corners": 0,
+        "black_triangles": 0,
+        "white_triangles": 4312,
+        "mixed_triangles": 0,
+        "color_data_sha256": "4272696aa83f54163e88269b936d9648a7b53294ffb635c7de3179f1d718f2a6",
+        "valid": true
+      },
+      "Kusazuri_01_Rear_L_Interior": {
+        "attribute_names": [
+          "ArmorTint"
+        ],
+        "name": "ArmorTint",
+        "domain": "CORNER",
+        "data_type": "FLOAT_COLOR",
+        "corners": 2160,
+        "black_corners": 0,
+        "white_corners": 2160,
+        "invalid_corners": 0,
+        "black_triangles": 0,
+        "white_triangles": 1080,
+        "mixed_triangles": 0,
+        "color_data_sha256": "54609627b125acb701a2f33bd15460d57e78721ebc53ec52448b10c288c4148d",
+        "valid": true
+      },
+      "Kusazuri_01_Rear_L_Lacing": {
+        "attribute_names": [
+          "ArmorTint"
+        ],
+        "name": "ArmorTint",
+        "domain": "CORNER",
+        "data_type": "FLOAT_COLOR",
+        "corners": 13104,
+        "black_corners": 0,
+        "white_corners": 13104,
+        "invalid_corners": 0,
+        "black_triangles": 0,
+        "white_triangles": 6720,
+        "mixed_triangles": 0,
+        "color_data_sha256": "bba4cd9b5c247e2dc33994733a4299e389367fa79431789e39b12555339db2da",
+        "valid": true
+      },
+      "Kusazuri_01_Rear_L_Trim": {
+        "attribute_names": [
+          "ArmorTint"
+        ],
+        "name": "ArmorTint",
+        "domain": "CORNER",
+        "data_type": "FLOAT_COLOR",
+        "corners": 10860,
+        "black_corners": 0,
+        "white_corners": 10860,
+        "invalid_corners": 0,
+        "black_triangles": 0,
+        "white_triangles": 5108,
+        "mixed_triangles": 0,
+        "color_data_sha256": "6de314b63670c05a3b7dab7008442299b643f9a49ed110cb45bf64c4e92c6d42",
+        "valid": true
+      },
+      "Kusazuri_01_Rear_R": {
+        "attribute_names": [
+          "ArmorTint"
+        ],
+        "name": "ArmorTint",
+        "domain": "CORNER",
+        "data_type": "FLOAT_COLOR",
+        "corners": 8624,
+        "black_corners": 0,
+        "white_corners": 8624,
+        "invalid_corners": 0,
+        "black_triangles": 0,
+        "white_triangles": 4312,
+        "mixed_triangles": 0,
+        "color_data_sha256": "4272696aa83f54163e88269b936d9648a7b53294ffb635c7de3179f1d718f2a6",
+        "valid": true
+      },
+      "Kusazuri_01_Rear_R_Interior": {
+        "attribute_names": [
+          "ArmorTint"
+        ],
+        "name": "ArmorTint",
+        "domain": "CORNER",
+        "data_type": "FLOAT_COLOR",
+        "corners": 2160,
+        "black_corners": 0,
+        "white_corners": 2160,
+        "invalid_corners": 0,
+        "black_triangles": 0,
+        "white_triangles": 1080,
+        "mixed_triangles": 0,
+        "color_data_sha256": "54609627b125acb701a2f33bd15460d57e78721ebc53ec52448b10c288c4148d",
+        "valid": true
+      },
+      "Kusazuri_01_Rear_R_Lacing": {
+        "attribute_names": [
+          "ArmorTint"
+        ],
+        "name": "ArmorTint",
+        "domain": "CORNER",
+        "data_type": "FLOAT_COLOR",
+        "corners": 13104,
+        "black_corners": 0,
+        "white_corners": 13104,
+        "invalid_corners": 0,
+        "black_triangles": 0,
+        "white_triangles": 6720,
+        "mixed_triangles": 0,
+        "color_data_sha256": "bba4cd9b5c247e2dc33994733a4299e389367fa79431789e39b12555339db2da",
+        "valid": true
+      },
+      "Kusazuri_01_Rear_R_Trim": {
+        "attribute_names": [
+          "ArmorTint"
+        ],
+        "name": "ArmorTint",
+        "domain": "CORNER",
+        "data_type": "FLOAT_COLOR",
+        "corners": 10860,
+        "black_corners": 0,
+        "white_corners": 10860,
+        "invalid_corners": 0,
+        "black_triangles": 0,
+        "white_triangles": 5108,
+        "mixed_triangles": 0,
+        "color_data_sha256": "6de314b63670c05a3b7dab7008442299b643f9a49ed110cb45bf64c4e92c6d42",
+        "valid": true
+      },
+      "Kusazuri_01_Side_L": {
+        "attribute_names": [
+          "ArmorTint"
+        ],
+        "name": "ArmorTint",
+        "domain": "CORNER",
+        "data_type": "FLOAT_COLOR",
+        "corners": 8624,
+        "black_corners": 0,
+        "white_corners": 8624,
+        "invalid_corners": 0,
+        "black_triangles": 0,
+        "white_triangles": 4312,
+        "mixed_triangles": 0,
+        "color_data_sha256": "4272696aa83f54163e88269b936d9648a7b53294ffb635c7de3179f1d718f2a6",
+        "valid": true
+      },
+      "Kusazuri_01_Side_L_Interior": {
+        "attribute_names": [
+          "ArmorTint"
+        ],
+        "name": "ArmorTint",
+        "domain": "CORNER",
+        "data_type": "FLOAT_COLOR",
+        "corners": 2160,
+        "black_corners": 0,
+        "white_corners": 2160,
+        "invalid_corners": 0,
+        "black_triangles": 0,
+        "white_triangles": 1080,
+        "mixed_triangles": 0,
+        "color_data_sha256": "54609627b125acb701a2f33bd15460d57e78721ebc53ec52448b10c288c4148d",
+        "valid": true
+      },
+      "Kusazuri_01_Side_L_Lacing": {
+        "attribute_names": [
+          "ArmorTint"
+        ],
+        "name": "ArmorTint",
+        "domain": "CORNER",
+        "data_type": "FLOAT_COLOR",
+        "corners": 13104,
+        "black_corners": 0,
+        "white_corners": 13104,
+        "invalid_corners": 0,
+        "black_triangles": 0,
+        "white_triangles": 6720,
+        "mixed_triangles": 0,
+        "color_data_sha256": "bba4cd9b5c247e2dc33994733a4299e389367fa79431789e39b12555339db2da",
+        "valid": true
+      },
+      "Kusazuri_01_Side_L_Trim": {
+        "attribute_names": [
+          "ArmorTint"
+        ],
+        "name": "ArmorTint",
+        "domain": "CORNER",
+        "data_type": "FLOAT_COLOR",
+        "corners": 10860,
+        "black_corners": 0,
+        "white_corners": 10860,
+        "invalid_corners": 0,
+        "black_triangles": 0,
+        "white_triangles": 5108,
+        "mixed_triangles": 0,
+        "color_data_sha256": "6de314b63670c05a3b7dab7008442299b643f9a49ed110cb45bf64c4e92c6d42",
+        "valid": true
+      },
+      "Kusazuri_01_Side_R": {
+        "attribute_names": [
+          "ArmorTint"
+        ],
+        "name": "ArmorTint",
+        "domain": "CORNER",
+        "data_type": "FLOAT_COLOR",
+        "corners": 8624,
+        "black_corners": 0,
+        "white_corners": 8624,
+        "invalid_corners": 0,
+        "black_triangles": 0,
+        "white_triangles": 4312,
+        "mixed_triangles": 0,
+        "color_data_sha256": "4272696aa83f54163e88269b936d9648a7b53294ffb635c7de3179f1d718f2a6",
+        "valid": true
+      },
+      "Kusazuri_01_Side_R_Interior": {
+        "attribute_names": [
+          "ArmorTint"
+        ],
+        "name": "ArmorTint",
+        "domain": "CORNER",
+        "data_type": "FLOAT_COLOR",
+        "corners": 2160,
+        "black_corners": 0,
+        "white_corners": 2160,
+        "invalid_corners": 0,
+        "black_triangles": 0,
+        "white_triangles": 1080,
+        "mixed_triangles": 0,
+        "color_data_sha256": "54609627b125acb701a2f33bd15460d57e78721ebc53ec52448b10c288c4148d",
+        "valid": true
+      },
+      "Kusazuri_01_Side_R_Lacing": {
+        "attribute_names": [
+          "ArmorTint"
+        ],
+        "name": "ArmorTint",
+        "domain": "CORNER",
+        "data_type": "FLOAT_COLOR",
+        "corners": 13104,
+        "black_corners": 0,
+        "white_corners": 13104,
+        "invalid_corners": 0,
+        "black_triangles": 0,
+        "white_triangles": 6720,
+        "mixed_triangles": 0,
+        "color_data_sha256": "bba4cd9b5c247e2dc33994733a4299e389367fa79431789e39b12555339db2da",
+        "valid": true
+      },
+      "Kusazuri_01_Side_R_Trim": {
+        "attribute_names": [
+          "ArmorTint"
+        ],
+        "name": "ArmorTint",
+        "domain": "CORNER",
+        "data_type": "FLOAT_COLOR",
+        "corners": 10860,
+        "black_corners": 0,
+        "white_corners": 10860,
+        "invalid_corners": 0,
+        "black_triangles": 0,
+        "white_triangles": 5108,
+        "mixed_triangles": 0,
+        "color_data_sha256": "6de314b63670c05a3b7dab7008442299b643f9a49ed110cb45bf64c4e92c6d42",
+        "valid": true
+      }
+    },
+    "runtime_lods": [
+      {
+        "attribute_names": [
+          "ArmorTint"
+        ],
+        "name": "ArmorTint",
+        "domain": "CORNER",
+        "data_type": "FLOAT_COLOR",
+        "corners": 442224,
+        "black_corners": 68532,
+        "white_corners": 373692,
+        "invalid_corners": 0,
+        "black_triangles": 22844,
+        "white_triangles": 124564,
+        "mixed_triangles": 0,
+        "color_data_sha256": "4af8d98f5d0ffc817551ff1216d4b4d7134db6dcc526f8817501cc6d7c111c71",
+        "valid": true
+      },
+      {
+        "attribute_names": [
+          "ArmorTint"
+        ],
+        "name": "ArmorTint",
+        "domain": "CORNER",
+        "data_type": "FLOAT_COLOR",
+        "corners": 132630,
+        "black_corners": 35310,
+        "white_corners": 97320,
+        "invalid_corners": 0,
+        "black_triangles": 11770,
+        "white_triangles": 32440,
+        "mixed_triangles": 0,
+        "color_data_sha256": "039c9cd15afb0f4ac13bba54efdf57911b78ade56edb4fa138ee5db3f3d9e605",
+        "valid": true
+      },
+      {
+        "attribute_names": [
+          "ArmorTint"
+        ],
+        "name": "ArmorTint",
+        "domain": "CORNER",
+        "data_type": "FLOAT_COLOR",
+        "corners": 47202,
+        "black_corners": 13572,
+        "white_corners": 33630,
+        "invalid_corners": 0,
+        "black_triangles": 4524,
+        "white_triangles": 11210,
+        "mixed_triangles": 0,
+        "color_data_sha256": "35772329f6bea0547d70ae779c1fbbc38905bcce143fe343271612d2680f1f9f",
+        "valid": true
+      }
+    ]
+  },
+  "runtime_lod_bone_influences": [
+    {
+      "max": 1,
+      "min": 1,
+      "vertices": 77088,
+      "weight_sum_min": 1.0,
+      "weight_sum_max": 1.0
+    },
+    {
+      "max": 1,
+      "min": 1,
+      "vertices": 25477,
+      "weight_sum_min": 1.0,
+      "weight_sum_max": 1.0
+    },
+    {
+      "max": 1,
+      "min": 1,
+      "vertices": 9177,
+      "weight_sum_min": 1.0,
+      "weight_sum_max": 1.0
+    }
+  ],
+  "runtime_lod_max_bone_influences": [
+    1,
+    1,
+    1
+  ],
+  "runtime_lod_normal_repairs": [
+    {
+      "lod": "SK_Kusazuri01_LOD0",
+      "invalid_corners_before_final_refresh": 0,
+      "flat_shaded_incident_lod2_face_count": 0,
+      "face_examples": [],
+      "invalid_corners_after": 0,
+      "geometry_and_weights_unchanged": true
+    },
+    {
+      "lod": "SK_Kusazuri01_LOD1",
+      "invalid_corners_before_final_refresh": 0,
+      "flat_shaded_incident_lod2_face_count": 0,
+      "face_examples": [],
+      "invalid_corners_after": 0,
+      "geometry_and_weights_unchanged": true
+    },
+    {
+      "lod": "SK_Kusazuri01_LOD2",
+      "invalid_corners_before_final_refresh": 0,
+      "flat_shaded_incident_lod2_face_count": 0,
+      "face_examples": [],
+      "invalid_corners_after": 0,
+      "geometry_and_weights_unchanged": true
+    }
+  ],
+  "runtime_lod_weight_normalization": [
+    {
+      "lod": "SK_Kusazuri01_LOD1",
+      "vertices": 25477,
+      "max_influences_before": 1,
+      "vertices_with_pruned_influences": 0,
+      "max_discarded_weight": 0.0
+    },
+    {
+      "lod": "SK_Kusazuri01_LOD2",
+      "vertices": 9177,
+      "max_influences_before": 1,
+      "vertices_with_pruned_influences": 0,
+      "max_discarded_weight": 0.0
+    }
+  ],
+  "armor_bounds_metres": [
+    [
+      -0.26618558168411255,
+      -0.22837884724140167,
+      0.6686333417892456
+    ],
+    [
+      0.26618558168411255,
+      0.2011115849018097,
+      1.0398082733154297
+    ]
+  ],
+  "bounds_cm": {
+    "min": [
+      -26.618558168411255,
+      -20.11115849018097,
+      66.86333417892456
+    ],
+    "max": [
+      26.618558168411255,
+      22.837884724140167,
+      103.98082733154297
+    ],
+    "size": [
+      53.23711633682251,
+      42.94904321432114,
+      37.11749315261841
+    ]
+  },
+  "reduction_ratios": [
+    1.0,
+    0.3,
+    null
+  ],
+  "lod2_reduction_policy": {
+    "Kusazuri_01_Belt": {
+      "evaluated_source_triangles": 4416,
+      "protected_input_topology": {
+        "nonmanifold_edges": 0,
+        "boundary_edges": 0,
+        "wire_edges": 0,
+        "connected_islands": 82
+      },
+      "policy": "dissolve face angles below 8 degrees; preserve closed shell/lining/belt or selected hem",
+      "edges_after_reduction": {
+        "nonmanifold_edges": 0,
+        "boundary_edges": 0,
+        "wire_edges": 0,
+        "connected_islands": 82
+      },
+      "edges_after_flat_island_cleanup": {
+        "nonmanifold_edges": 0,
+        "boundary_edges": 0,
+        "wire_edges": 0,
+        "connected_islands": 82
+      },
+      "edges_after_uv_triangulation": {
+        "nonmanifold_edges": 0,
+        "boundary_edges": 0,
+        "wire_edges": 0,
+        "connected_islands": 82
+      },
+      "edges_after_triangulation": {
+        "nonmanifold_edges": 0,
+        "boundary_edges": 0,
+        "wire_edges": 0,
+        "connected_islands": 82
+      },
+      "runtime_triangles": 3246
+    },
+    "Kusazuri_01_Front_Center": {
+      "evaluated_source_triangles": 3920,
+      "protected_input_topology": {
+        "nonmanifold_edges": 0,
+        "boundary_edges": 0,
+        "wire_edges": 0,
+        "connected_islands": 70
+      },
+      "policy": "dissolve face angles below 25 degrees; preserve closed shell/lining/belt or selected hem",
+      "edges_after_reduction": {
+        "nonmanifold_edges": 0,
+        "boundary_edges": 0,
+        "wire_edges": 0,
+        "connected_islands": 70
+      },
+      "edges_after_flat_island_cleanup": {
+        "nonmanifold_edges": 0,
+        "boundary_edges": 0,
+        "wire_edges": 0,
+        "connected_islands": 70
+      },
+      "edges_after_uv_triangulation": {
+        "nonmanifold_edges": 0,
+        "boundary_edges": 0,
+        "wire_edges": 0,
+        "connected_islands": 70
+      },
+      "edges_after_triangulation": {
+        "nonmanifold_edges": 0,
+        "boundary_edges": 0,
+        "wire_edges": 0,
+        "connected_islands": 70
+      },
+      "runtime_triangles": 840
+    },
+    "Kusazuri_01_Front_Center_Interior": {
+      "evaluated_source_triangles": 1080,
+      "protected_input_topology": {
+        "nonmanifold_edges": 0,
+        "boundary_edges": 0,
+        "wire_edges": 0,
+        "connected_islands": 3
+      },
+      "policy": "dissolve face angles below 8 degrees; preserve closed shell/lining/belt or selected hem",
+      "edges_after_reduction": {
+        "nonmanifold_edges": 0,
+        "boundary_edges": 0,
+        "wire_edges": 0,
+        "connected_islands": 3
+      },
+      "edges_after_flat_island_cleanup": {
+        "nonmanifold_edges": 0,
+        "boundary_edges": 0,
+        "wire_edges": 0,
+        "connected_islands": 3
+      },
+      "edges_after_uv_triangulation": {
+        "nonmanifold_edges": 0,
+        "boundary_edges": 0,
+        "wire_edges": 0,
+        "connected_islands": 3
+      },
+      "edges_after_triangulation": {
+        "nonmanifold_edges": 0,
+        "boundary_edges": 0,
+        "wire_edges": 0,
+        "connected_islands": 3
+      },
+      "runtime_triangles": 116
+    },
+    "Kusazuri_01_Front_Center_Lacing": {
+      "policy": "omit repeated physical stitches; detailed atlas remains on every shell",
+      "runtime_triangles": 0
+    },
+    "Kusazuri_01_Front_Center_Trim": {
+      "evaluated_source_triangles": 5108,
+      "retained_hem_islands": 1,
+      "protected_input_topology": {
+        "nonmanifold_edges": 0,
+        "boundary_edges": 0,
+        "wire_edges": 0,
+        "connected_islands": 1
+      },
+      "policy": "dissolve face angles below 8 degrees; preserve closed shell/lining/belt or selected hem",
+      "edges_after_reduction": {
+        "nonmanifold_edges": 0,
+        "boundary_edges": 0,
+        "wire_edges": 0,
+        "connected_islands": 1
+      },
+      "edges_after_flat_island_cleanup": {
+        "nonmanifold_edges": 0,
+        "boundary_edges": 0,
+        "wire_edges": 0,
+        "connected_islands": 1
+      },
+      "edges_after_uv_triangulation": {
+        "nonmanifold_edges": 0,
+        "boundary_edges": 0,
+        "wire_edges": 0,
+        "connected_islands": 1
+      },
+      "edges_after_triangulation": {
+        "nonmanifold_edges": 0,
+        "boundary_edges": 0,
+        "wire_edges": 0,
+        "connected_islands": 1
+      },
+      "runtime_triangles": 76
+    },
+    "Kusazuri_01_Front_L": {
+      "evaluated_source_triangles": 4312,
+      "protected_input_topology": {
+        "nonmanifold_edges": 0,
+        "boundary_edges": 0,
+        "wire_edges": 0,
+        "connected_islands": 77
+      },
+      "policy": "dissolve face angles below 25 degrees; preserve closed shell/lining/belt or selected hem",
+      "edges_after_reduction": {
+        "nonmanifold_edges": 0,
+        "boundary_edges": 0,
+        "wire_edges": 0,
+        "connected_islands": 77
+      },
+      "edges_after_flat_island_cleanup": {
+        "nonmanifold_edges": 0,
+        "boundary_edges": 0,
+        "wire_edges": 0,
+        "connected_islands": 77
+      },
+      "edges_after_uv_triangulation": {
+        "nonmanifold_edges": 0,
+        "boundary_edges": 0,
+        "wire_edges": 0,
+        "connected_islands": 77
+      },
+      "edges_after_triangulation": {
+        "nonmanifold_edges": 0,
+        "boundary_edges": 0,
+        "wire_edges": 0,
+        "connected_islands": 77
+      },
+      "runtime_triangles": 924
+    },
+    "Kusazuri_01_Front_L_Interior": {
+      "evaluated_source_triangles": 1080,
+      "protected_input_topology": {
+        "nonmanifold_edges": 0,
+        "boundary_edges": 0,
+        "wire_edges": 0,
+        "connected_islands": 3
+      },
+      "policy": "dissolve face angles below 8 degrees; preserve closed shell/lining/belt or selected hem",
+      "edges_after_reduction": {
+        "nonmanifold_edges": 0,
+        "boundary_edges": 0,
+        "wire_edges": 0,
+        "connected_islands": 3
+      },
+      "edges_after_flat_island_cleanup": {
+        "nonmanifold_edges": 0,
+        "boundary_edges": 0,
+        "wire_edges": 0,
+        "connected_islands": 3
+      },
+      "edges_after_uv_triangulation": {
+        "nonmanifold_edges": 0,
+        "boundary_edges": 0,
+        "wire_edges": 0,
+        "connected_islands": 3
+      },
+      "edges_after_triangulation": {
+        "nonmanifold_edges": 0,
+        "boundary_edges": 0,
+        "wire_edges": 0,
+        "connected_islands": 3
+      },
+      "runtime_triangles": 132
+    },
+    "Kusazuri_01_Front_L_Lacing": {
+      "policy": "omit repeated physical stitches; detailed atlas remains on every shell",
+      "runtime_triangles": 0
+    },
+    "Kusazuri_01_Front_L_Trim": {
+      "evaluated_source_triangles": 5108,
+      "retained_hem_islands": 1,
+      "protected_input_topology": {
+        "nonmanifold_edges": 0,
+        "boundary_edges": 0,
+        "wire_edges": 0,
+        "connected_islands": 1
+      },
+      "policy": "dissolve face angles below 8 degrees; preserve closed shell/lining/belt or selected hem",
+      "edges_after_reduction": {
+        "nonmanifold_edges": 0,
+        "boundary_edges": 0,
+        "wire_edges": 0,
+        "connected_islands": 1
+      },
+      "edges_after_flat_island_cleanup": {
+        "nonmanifold_edges": 0,
+        "boundary_edges": 0,
+        "wire_edges": 0,
+        "connected_islands": 1
+      },
+      "edges_after_uv_triangulation": {
+        "nonmanifold_edges": 0,
+        "boundary_edges": 0,
+        "wire_edges": 0,
+        "connected_islands": 1
+      },
+      "edges_after_triangulation": {
+        "nonmanifold_edges": 0,
+        "boundary_edges": 0,
+        "wire_edges": 0,
+        "connected_islands": 1
+      },
+      "runtime_triangles": 108
+    },
+    "Kusazuri_01_Front_R": {
+      "evaluated_source_triangles": 4312,
+      "protected_input_topology": {
+        "nonmanifold_edges": 0,
+        "boundary_edges": 0,
+        "wire_edges": 0,
+        "connected_islands": 77
+      },
+      "policy": "dissolve face angles below 25 degrees; preserve closed shell/lining/belt or selected hem",
+      "edges_after_reduction": {
+        "nonmanifold_edges": 0,
+        "boundary_edges": 0,
+        "wire_edges": 0,
+        "connected_islands": 77
+      },
+      "edges_after_flat_island_cleanup": {
+        "nonmanifold_edges": 0,
+        "boundary_edges": 0,
+        "wire_edges": 0,
+        "connected_islands": 77
+      },
+      "edges_after_uv_triangulation": {
+        "nonmanifold_edges": 0,
+        "boundary_edges": 0,
+        "wire_edges": 0,
+        "connected_islands": 77
+      },
+      "edges_after_triangulation": {
+        "nonmanifold_edges": 0,
+        "boundary_edges": 0,
+        "wire_edges": 0,
+        "connected_islands": 77
+      },
+      "runtime_triangles": 924
+    },
+    "Kusazuri_01_Front_R_Interior": {
+      "evaluated_source_triangles": 1080,
+      "protected_input_topology": {
+        "nonmanifold_edges": 0,
+        "boundary_edges": 0,
+        "wire_edges": 0,
+        "connected_islands": 3
+      },
+      "policy": "dissolve face angles below 8 degrees; preserve closed shell/lining/belt or selected hem",
+      "edges_after_reduction": {
+        "nonmanifold_edges": 0,
+        "boundary_edges": 0,
+        "wire_edges": 0,
+        "connected_islands": 3
+      },
+      "edges_after_flat_island_cleanup": {
+        "nonmanifold_edges": 0,
+        "boundary_edges": 0,
+        "wire_edges": 0,
+        "connected_islands": 3
+      },
+      "edges_after_uv_triangulation": {
+        "nonmanifold_edges": 0,
+        "boundary_edges": 0,
+        "wire_edges": 0,
+        "connected_islands": 3
+      },
+      "edges_after_triangulation": {
+        "nonmanifold_edges": 0,
+        "boundary_edges": 0,
+        "wire_edges": 0,
+        "connected_islands": 3
+      },
+      "runtime_triangles": 132
+    },
+    "Kusazuri_01_Front_R_Lacing": {
+      "policy": "omit repeated physical stitches; detailed atlas remains on every shell",
+      "runtime_triangles": 0
+    },
+    "Kusazuri_01_Front_R_Trim": {
+      "evaluated_source_triangles": 5108,
+      "retained_hem_islands": 1,
+      "protected_input_topology": {
+        "nonmanifold_edges": 0,
+        "boundary_edges": 0,
+        "wire_edges": 0,
+        "connected_islands": 1
+      },
+      "policy": "dissolve face angles below 8 degrees; preserve closed shell/lining/belt or selected hem",
+      "edges_after_reduction": {
+        "nonmanifold_edges": 0,
+        "boundary_edges": 0,
+        "wire_edges": 0,
+        "connected_islands": 1
+      },
+      "edges_after_flat_island_cleanup": {
+        "nonmanifold_edges": 0,
+        "boundary_edges": 0,
+        "wire_edges": 0,
+        "connected_islands": 1
+      },
+      "edges_after_uv_triangulation": {
+        "nonmanifold_edges": 0,
+        "boundary_edges": 0,
+        "wire_edges": 0,
+        "connected_islands": 1
+      },
+      "edges_after_triangulation": {
+        "nonmanifold_edges": 0,
+        "boundary_edges": 0,
+        "wire_edges": 0,
+        "connected_islands": 1
+      },
+      "runtime_triangles": 108
+    },
+    "Kusazuri_01_Lacing": {
+      "evaluated_source_triangles": 22844,
+      "protected_input_topology": {
+        "nonmanifold_edges": 0,
+        "boundary_edges": 0,
+        "wire_edges": 0,
+        "connected_islands": 37
+      },
+      "policy": "obi only: collapse ratio .20 with collapse-time triangulation; preserve indigo corner mask",
+      "edges_after_reduction": {
+        "nonmanifold_edges": 0,
+        "boundary_edges": 0,
+        "wire_edges": 0,
+        "connected_islands": 37
+      },
+      "edges_after_flat_island_cleanup": {
+        "nonmanifold_edges": 0,
+        "boundary_edges": 0,
+        "wire_edges": 0,
+        "connected_islands": 15
+      },
+      "edges_after_uv_triangulation": {
+        "nonmanifold_edges": 0,
+        "boundary_edges": 0,
+        "wire_edges": 0,
+        "connected_islands": 15
+      },
+      "edges_after_triangulation": {
+        "nonmanifold_edges": 0,
+        "boundary_edges": 0,
+        "wire_edges": 0,
+        "connected_islands": 15
+      },
+      "runtime_triangles": 4524
+    },
+    "Kusazuri_01_Rear_L": {
+      "evaluated_source_triangles": 4312,
+      "protected_input_topology": {
+        "nonmanifold_edges": 0,
+        "boundary_edges": 0,
+        "wire_edges": 0,
+        "connected_islands": 77
+      },
+      "policy": "dissolve face angles below 25 degrees; preserve closed shell/lining/belt or selected hem",
+      "edges_after_reduction": {
+        "nonmanifold_edges": 0,
+        "boundary_edges": 0,
+        "wire_edges": 0,
+        "connected_islands": 77
+      },
+      "edges_after_flat_island_cleanup": {
+        "nonmanifold_edges": 0,
+        "boundary_edges": 0,
+        "wire_edges": 0,
+        "connected_islands": 77
+      },
+      "edges_after_uv_triangulation": {
+        "nonmanifold_edges": 0,
+        "boundary_edges": 0,
+        "wire_edges": 0,
+        "connected_islands": 77
+      },
+      "edges_after_triangulation": {
+        "nonmanifold_edges": 0,
+        "boundary_edges": 0,
+        "wire_edges": 0,
+        "connected_islands": 77
+      },
+      "runtime_triangles": 924
+    },
+    "Kusazuri_01_Rear_L_Interior": {
+      "evaluated_source_triangles": 1080,
+      "protected_input_topology": {
+        "nonmanifold_edges": 0,
+        "boundary_edges": 0,
+        "wire_edges": 0,
+        "connected_islands": 3
+      },
+      "policy": "dissolve face angles below 8 degrees; preserve closed shell/lining/belt or selected hem",
+      "edges_after_reduction": {
+        "nonmanifold_edges": 0,
+        "boundary_edges": 0,
+        "wire_edges": 0,
+        "connected_islands": 3
+      },
+      "edges_after_flat_island_cleanup": {
+        "nonmanifold_edges": 0,
+        "boundary_edges": 0,
+        "wire_edges": 0,
+        "connected_islands": 3
+      },
+      "edges_after_uv_triangulation": {
+        "nonmanifold_edges": 0,
+        "boundary_edges": 0,
+        "wire_edges": 0,
+        "connected_islands": 3
+      },
+      "edges_after_triangulation": {
+        "nonmanifold_edges": 0,
+        "boundary_edges": 0,
+        "wire_edges": 0,
+        "connected_islands": 3
+      },
+      "runtime_triangles": 132
+    },
+    "Kusazuri_01_Rear_L_Lacing": {
+      "policy": "omit repeated physical stitches; detailed atlas remains on every shell",
+      "runtime_triangles": 0
+    },
+    "Kusazuri_01_Rear_L_Trim": {
+      "evaluated_source_triangles": 5108,
+      "retained_hem_islands": 1,
+      "protected_input_topology": {
+        "nonmanifold_edges": 0,
+        "boundary_edges": 0,
+        "wire_edges": 0,
+        "connected_islands": 1
+      },
+      "policy": "dissolve face angles below 8 degrees; preserve closed shell/lining/belt or selected hem",
+      "edges_after_reduction": {
+        "nonmanifold_edges": 0,
+        "boundary_edges": 0,
+        "wire_edges": 0,
+        "connected_islands": 1
+      },
+      "edges_after_flat_island_cleanup": {
+        "nonmanifold_edges": 0,
+        "boundary_edges": 0,
+        "wire_edges": 0,
+        "connected_islands": 1
+      },
+      "edges_after_uv_triangulation": {
+        "nonmanifold_edges": 0,
+        "boundary_edges": 0,
+        "wire_edges": 0,
+        "connected_islands": 1
+      },
+      "edges_after_triangulation": {
+        "nonmanifold_edges": 0,
+        "boundary_edges": 0,
+        "wire_edges": 0,
+        "connected_islands": 1
+      },
+      "runtime_triangles": 108
+    },
+    "Kusazuri_01_Rear_R": {
+      "evaluated_source_triangles": 4312,
+      "protected_input_topology": {
+        "nonmanifold_edges": 0,
+        "boundary_edges": 0,
+        "wire_edges": 0,
+        "connected_islands": 77
+      },
+      "policy": "dissolve face angles below 25 degrees; preserve closed shell/lining/belt or selected hem",
+      "edges_after_reduction": {
+        "nonmanifold_edges": 0,
+        "boundary_edges": 0,
+        "wire_edges": 0,
+        "connected_islands": 77
+      },
+      "edges_after_flat_island_cleanup": {
+        "nonmanifold_edges": 0,
+        "boundary_edges": 0,
+        "wire_edges": 0,
+        "connected_islands": 77
+      },
+      "edges_after_uv_triangulation": {
+        "nonmanifold_edges": 0,
+        "boundary_edges": 0,
+        "wire_edges": 0,
+        "connected_islands": 77
+      },
+      "edges_after_triangulation": {
+        "nonmanifold_edges": 0,
+        "boundary_edges": 0,
+        "wire_edges": 0,
+        "connected_islands": 77
+      },
+      "runtime_triangles": 924
+    },
+    "Kusazuri_01_Rear_R_Interior": {
+      "evaluated_source_triangles": 1080,
+      "protected_input_topology": {
+        "nonmanifold_edges": 0,
+        "boundary_edges": 0,
+        "wire_edges": 0,
+        "connected_islands": 3
+      },
+      "policy": "dissolve face angles below 8 degrees; preserve closed shell/lining/belt or selected hem",
+      "edges_after_reduction": {
+        "nonmanifold_edges": 0,
+        "boundary_edges": 0,
+        "wire_edges": 0,
+        "connected_islands": 3
+      },
+      "edges_after_flat_island_cleanup": {
+        "nonmanifold_edges": 0,
+        "boundary_edges": 0,
+        "wire_edges": 0,
+        "connected_islands": 3
+      },
+      "edges_after_uv_triangulation": {
+        "nonmanifold_edges": 0,
+        "boundary_edges": 0,
+        "wire_edges": 0,
+        "connected_islands": 3
+      },
+      "edges_after_triangulation": {
+        "nonmanifold_edges": 0,
+        "boundary_edges": 0,
+        "wire_edges": 0,
+        "connected_islands": 3
+      },
+      "runtime_triangles": 132
+    },
+    "Kusazuri_01_Rear_R_Lacing": {
+      "policy": "omit repeated physical stitches; detailed atlas remains on every shell",
+      "runtime_triangles": 0
+    },
+    "Kusazuri_01_Rear_R_Trim": {
+      "evaluated_source_triangles": 5108,
+      "retained_hem_islands": 1,
+      "protected_input_topology": {
+        "nonmanifold_edges": 0,
+        "boundary_edges": 0,
+        "wire_edges": 0,
+        "connected_islands": 1
+      },
+      "policy": "dissolve face angles below 8 degrees; preserve closed shell/lining/belt or selected hem",
+      "edges_after_reduction": {
+        "nonmanifold_edges": 0,
+        "boundary_edges": 0,
+        "wire_edges": 0,
+        "connected_islands": 1
+      },
+      "edges_after_flat_island_cleanup": {
+        "nonmanifold_edges": 0,
+        "boundary_edges": 0,
+        "wire_edges": 0,
+        "connected_islands": 1
+      },
+      "edges_after_uv_triangulation": {
+        "nonmanifold_edges": 0,
+        "boundary_edges": 0,
+        "wire_edges": 0,
+        "connected_islands": 1
+      },
+      "edges_after_triangulation": {
+        "nonmanifold_edges": 0,
+        "boundary_edges": 0,
+        "wire_edges": 0,
+        "connected_islands": 1
+      },
+      "runtime_triangles": 108
+    },
+    "Kusazuri_01_Side_L": {
+      "evaluated_source_triangles": 4312,
+      "protected_input_topology": {
+        "nonmanifold_edges": 0,
+        "boundary_edges": 0,
+        "wire_edges": 0,
+        "connected_islands": 77
+      },
+      "policy": "dissolve face angles below 25 degrees; preserve closed shell/lining/belt or selected hem",
+      "edges_after_reduction": {
+        "nonmanifold_edges": 0,
+        "boundary_edges": 0,
+        "wire_edges": 0,
+        "connected_islands": 77
+      },
+      "edges_after_flat_island_cleanup": {
+        "nonmanifold_edges": 0,
+        "boundary_edges": 0,
+        "wire_edges": 0,
+        "connected_islands": 77
+      },
+      "edges_after_uv_triangulation": {
+        "nonmanifold_edges": 0,
+        "boundary_edges": 0,
+        "wire_edges": 0,
+        "connected_islands": 77
+      },
+      "edges_after_triangulation": {
+        "nonmanifold_edges": 0,
+        "boundary_edges": 0,
+        "wire_edges": 0,
+        "connected_islands": 77
+      },
+      "runtime_triangles": 924
+    },
+    "Kusazuri_01_Side_L_Interior": {
+      "evaluated_source_triangles": 1080,
+      "protected_input_topology": {
+        "nonmanifold_edges": 0,
+        "boundary_edges": 0,
+        "wire_edges": 0,
+        "connected_islands": 3
+      },
+      "policy": "dissolve face angles below 8 degrees; preserve closed shell/lining/belt or selected hem",
+      "edges_after_reduction": {
+        "nonmanifold_edges": 0,
+        "boundary_edges": 0,
+        "wire_edges": 0,
+        "connected_islands": 3
+      },
+      "edges_after_flat_island_cleanup": {
+        "nonmanifold_edges": 0,
+        "boundary_edges": 0,
+        "wire_edges": 0,
+        "connected_islands": 3
+      },
+      "edges_after_uv_triangulation": {
+        "nonmanifold_edges": 0,
+        "boundary_edges": 0,
+        "wire_edges": 0,
+        "connected_islands": 3
+      },
+      "edges_after_triangulation": {
+        "nonmanifold_edges": 0,
+        "boundary_edges": 0,
+        "wire_edges": 0,
+        "connected_islands": 3
+      },
+      "runtime_triangles": 120
+    },
+    "Kusazuri_01_Side_L_Lacing": {
+      "policy": "omit repeated physical stitches; detailed atlas remains on every shell",
+      "runtime_triangles": 0
+    },
+    "Kusazuri_01_Side_L_Trim": {
+      "evaluated_source_triangles": 5108,
+      "retained_hem_islands": 1,
+      "protected_input_topology": {
+        "nonmanifold_edges": 0,
+        "boundary_edges": 0,
+        "wire_edges": 0,
+        "connected_islands": 1
+      },
+      "policy": "dissolve face angles below 8 degrees; preserve closed shell/lining/belt or selected hem",
+      "edges_after_reduction": {
+        "nonmanifold_edges": 0,
+        "boundary_edges": 0,
+        "wire_edges": 0,
+        "connected_islands": 1
+      },
+      "edges_after_flat_island_cleanup": {
+        "nonmanifold_edges": 0,
+        "boundary_edges": 0,
+        "wire_edges": 0,
+        "connected_islands": 1
+      },
+      "edges_after_uv_triangulation": {
+        "nonmanifold_edges": 0,
+        "boundary_edges": 0,
+        "wire_edges": 0,
+        "connected_islands": 1
+      },
+      "edges_after_triangulation": {
+        "nonmanifold_edges": 0,
+        "boundary_edges": 0,
+        "wire_edges": 0,
+        "connected_islands": 1
+      },
+      "runtime_triangles": 94
+    },
+    "Kusazuri_01_Side_R": {
+      "evaluated_source_triangles": 4312,
+      "protected_input_topology": {
+        "nonmanifold_edges": 0,
+        "boundary_edges": 0,
+        "wire_edges": 0,
+        "connected_islands": 77
+      },
+      "policy": "dissolve face angles below 25 degrees; preserve closed shell/lining/belt or selected hem",
+      "edges_after_reduction": {
+        "nonmanifold_edges": 0,
+        "boundary_edges": 0,
+        "wire_edges": 0,
+        "connected_islands": 77
+      },
+      "edges_after_flat_island_cleanup": {
+        "nonmanifold_edges": 0,
+        "boundary_edges": 0,
+        "wire_edges": 0,
+        "connected_islands": 77
+      },
+      "edges_after_uv_triangulation": {
+        "nonmanifold_edges": 0,
+        "boundary_edges": 0,
+        "wire_edges": 0,
+        "connected_islands": 77
+      },
+      "edges_after_triangulation": {
+        "nonmanifold_edges": 0,
+        "boundary_edges": 0,
+        "wire_edges": 0,
+        "connected_islands": 77
+      },
+      "runtime_triangles": 924
+    },
+    "Kusazuri_01_Side_R_Interior": {
+      "evaluated_source_triangles": 1080,
+      "protected_input_topology": {
+        "nonmanifold_edges": 0,
+        "boundary_edges": 0,
+        "wire_edges": 0,
+        "connected_islands": 3
+      },
+      "policy": "dissolve face angles below 8 degrees; preserve closed shell/lining/belt or selected hem",
+      "edges_after_reduction": {
+        "nonmanifold_edges": 0,
+        "boundary_edges": 0,
+        "wire_edges": 0,
+        "connected_islands": 3
+      },
+      "edges_after_flat_island_cleanup": {
+        "nonmanifold_edges": 0,
+        "boundary_edges": 0,
+        "wire_edges": 0,
+        "connected_islands": 3
+      },
+      "edges_after_uv_triangulation": {
+        "nonmanifold_edges": 0,
+        "boundary_edges": 0,
+        "wire_edges": 0,
+        "connected_islands": 3
+      },
+      "edges_after_triangulation": {
+        "nonmanifold_edges": 0,
+        "boundary_edges": 0,
+        "wire_edges": 0,
+        "connected_islands": 3
+      },
+      "runtime_triangles": 120
+    },
+    "Kusazuri_01_Side_R_Lacing": {
+      "policy": "omit repeated physical stitches; detailed atlas remains on every shell",
+      "runtime_triangles": 0
+    },
+    "Kusazuri_01_Side_R_Trim": {
+      "evaluated_source_triangles": 5108,
+      "retained_hem_islands": 1,
+      "protected_input_topology": {
+        "nonmanifold_edges": 0,
+        "boundary_edges": 0,
+        "wire_edges": 0,
+        "connected_islands": 1
+      },
+      "policy": "dissolve face angles below 8 degrees; preserve closed shell/lining/belt or selected hem",
+      "edges_after_reduction": {
+        "nonmanifold_edges": 0,
+        "boundary_edges": 0,
+        "wire_edges": 0,
+        "connected_islands": 1
+      },
+      "edges_after_flat_island_cleanup": {
+        "nonmanifold_edges": 0,
+        "boundary_edges": 0,
+        "wire_edges": 0,
+        "connected_islands": 1
+      },
+      "edges_after_uv_triangulation": {
+        "nonmanifold_edges": 0,
+        "boundary_edges": 0,
+        "wire_edges": 0,
+        "connected_islands": 1
+      },
+      "edges_after_triangulation": {
+        "nonmanifold_edges": 0,
+        "boundary_edges": 0,
+        "wire_edges": 0,
+        "connected_islands": 1
+      },
+      "runtime_triangles": 94
+    }
+  },
+  "runtime_actual_triangle_ratios": [
+    1.0,
+    0.2999158797351568,
+    0.10673776185824378
+  ],
+  "native_root_representation": "Original Manny root is the Blender armature object; local-cm geometry under .01-scale root",
+  "export_operation": "Saved editable source evaluated in rig REST pose; one combined weighted mesh and two distance LODs",
+  "export_root_motion_handling": "Temporarily disable root action/NLA and use canonical .01 rest transform; restore action, slot, frame, root transform and pose matrices",
+  "exported_from_source_sha256": "0eab1407b905db5294dee7792ab1d6b57332338d8979e951ee36166309ba3adb",
+  "editable_geometry_sha256": "ccbc0e390ef18da01c85dcdd2ea58ec88ff4b5f4acfc735f25a4441c0c0db02e",
+  "editable_geometry_preserved_during_export": true,
+  "rig_pose_and_fixtures_preserved_during_export": true,
+  "textures": "Reuse unchanged Do01/Textures/T_Do01_{BaseColor,Normal,ORM}.png through M_Kusazuri01; detailed lamella tiles 8/9/13/14, indigo lining tile 12 and woven obi tile 3 tinted by ArmorTint.R",
+  "animation_source": "Existing native Epic Manny clips drive the body and armor-only stateless panel hinges; no new skeleton or animation asset exported",
+  "export_files": {
+    "Review/Exports/SM_Kusazuri01.fbx": {
+      "bytes": 11808140,
+      "sha256": "0811f157f86f6ea2f25874d8522a18e971e8e5021dfed2f377693f4e3841fe3b"
+    },
+    "Exports/SK_Kusazuri01.fbx": {
+      "bytes": 12086124,
+      "sha256": "5f77a7ec3c6ddc8c82c7fddad6e0961f341ebac1a7d28026a3eb60d08a4de287"
+    },
+    "Review/Exports/SM_Kusazuri01_LOD1.fbx": {
+      "bytes": 4066028,
+      "sha256": "67319198fb3649cb3f93f580f656edb68176be2b63f696486ab2d9919b38e9ae"
+    },
+    "Exports/SK_Kusazuri01_LOD1.fbx": {
+      "bytes": 4270156,
+      "sha256": "0f631e205b1742b38cd14a44de79a4a17c3adfd9ac556aad2b9c551e143fe99c"
+    },
+    "Review/Exports/SM_Kusazuri01_LOD2.fbx": {
+      "bytes": 1562796,
+      "sha256": "1421b45c96fbf98d2678dec9f21cc7c92f2a95bb18b0e37c2d1c6af69750374c"
+    },
+    "Exports/SK_Kusazuri01_LOD2.fbx": {
+      "bytes": 1741804,
+      "sha256": "5b5421be68194526d5a66a01fd76c3a231463f71f938e90e2407ed0f2e125243"
+    }
+  }
+}

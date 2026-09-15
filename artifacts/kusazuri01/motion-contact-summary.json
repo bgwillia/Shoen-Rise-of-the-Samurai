@@ -1,0 +1,464 @@
+{
+  "source_sha256": "cf7c0ec0578b7fe2aca7d1b30439c521e8cecc3e63d4f36b0c8820b31dc9eb9e",
+  "motion_script_sha256": "d08a47004a1fba6614fd59171d231e1f6b6349162c14c9f8e0a2006461b8f88d",
+  "review_script_sha256": "6fc1d4730204ff782c1074a55ccf15f112c54548f87d5267991a5800fd1de4c5",
+  "pose_count": 372,
+  "native_frame_count": 363,
+  "clips": {
+    "A_Idle": {
+      "frames": 229,
+      "leg_contact_frames": [],
+      "hand_contact_frame_count": 229,
+      "max_leg_estimate_mm": 0,
+      "max_hand_estimate_mm": 9.796065278351307,
+      "max_Do_signed_nearest_surface_diagnostic_mm": 9.09042451530695
+    },
+    "A_Walk": {
+      "frames": 47,
+      "leg_contact_frames": [],
+      "hand_contact_frame_count": 14,
+      "max_leg_estimate_mm": 0,
+      "max_hand_estimate_mm": 11.219566687941551,
+      "max_Do_signed_nearest_surface_diagnostic_mm": 17.12859608232975
+    },
+    "A_Run": {
+      "frames": 55,
+      "leg_contact_frames": [
+        {
+          "pose": "A_Run:31",
+          "leg_contact": {
+            "triangle_pairs": 66,
+            "max_estimate_mm": 2.2609883453696966,
+            "components": {
+              "Kusazuri_01_Front_L": {
+                "triangle_pairs": 4,
+                "max_estimate_mm": 0.8960841805674136
+              },
+              "Kusazuri_01_Front_L_Interior": {
+                "triangle_pairs": 62,
+                "max_estimate_mm": 2.2609883453696966
+              }
+            }
+          },
+          "hand_contact": {
+            "triangle_pairs": 0,
+            "max_estimate_mm": 0,
+            "components": {}
+          },
+          "body_triangle_pairs": 66,
+          "Do_triangle_pairs": 18536,
+          "Do_signed_nearest_surface_diagnostic_mm": 3.516450524330139,
+          "leg_max_shell_mm": 0.8960841805674136,
+          "leg_max_lining_mm": 2.2609883453696966
+        },
+        {
+          "pose": "A_Run:40",
+          "leg_contact": {
+            "triangle_pairs": 45,
+            "max_estimate_mm": 1.1786951217800379,
+            "components": {
+              "Kusazuri_01_Front_R": {
+                "triangle_pairs": 5,
+                "max_estimate_mm": 0.003428806621741387
+              },
+              "Kusazuri_01_Front_R_Interior": {
+                "triangle_pairs": 40,
+                "max_estimate_mm": 1.1786951217800379
+              }
+            }
+          },
+          "hand_contact": {
+            "triangle_pairs": 0,
+            "max_estimate_mm": 0,
+            "components": {}
+          },
+          "body_triangle_pairs": 45,
+          "Do_triangle_pairs": 18868,
+          "Do_signed_nearest_surface_diagnostic_mm": 3.4062403719872236,
+          "leg_max_shell_mm": 0.003428806621741387,
+          "leg_max_lining_mm": 1.1786951217800379
+        }
+      ],
+      "hand_contact_frame_count": 12,
+      "max_leg_estimate_mm": 2.2609883453696966,
+      "max_hand_estimate_mm": 8.938394486904144,
+      "max_Do_signed_nearest_surface_diagnostic_mm": 17.509520053863525
+    },
+    "A_Attack": {
+      "frames": 32,
+      "leg_contact_frames": [],
+      "hand_contact_frame_count": 0,
+      "max_leg_estimate_mm": 0,
+      "max_hand_estimate_mm": 0,
+      "max_Do_signed_nearest_surface_diagnostic_mm": 8.569429628551006
+    }
+  },
+  "diagnostics": [
+    {
+      "pose": "neutral",
+      "leg_contact": {
+        "triangle_pairs": 0,
+        "max_estimate_mm": 0,
+        "components": {}
+      },
+      "hand_contact": {
+        "triangle_pairs": 0,
+        "max_estimate_mm": 0,
+        "components": {}
+      },
+      "body_triangle_pairs": 0,
+      "Do_triangle_pairs": 12295,
+      "Do_signed_nearest_surface_diagnostic_mm": 4.013773985207081,
+      "leg_max_shell_mm": 0,
+      "leg_max_lining_mm": 0
+    },
+    {
+      "pose": "wide-step",
+      "leg_contact": {
+        "triangle_pairs": 0,
+        "max_estimate_mm": 0,
+        "components": {}
+      },
+      "hand_contact": {
+        "triangle_pairs": 0,
+        "max_estimate_mm": 0,
+        "components": {}
+      },
+      "body_triangle_pairs": 0,
+      "Do_triangle_pairs": 12295,
+      "Do_signed_nearest_surface_diagnostic_mm": 4.013773985207081,
+      "leg_max_shell_mm": 0,
+      "leg_max_lining_mm": 0
+    },
+    {
+      "pose": "wide-stance",
+      "leg_contact": {
+        "triangle_pairs": 0,
+        "max_estimate_mm": 0,
+        "components": {}
+      },
+      "hand_contact": {
+        "triangle_pairs": 0,
+        "max_estimate_mm": 0,
+        "components": {}
+      },
+      "body_triangle_pairs": 0,
+      "Do_triangle_pairs": 12295,
+      "Do_signed_nearest_surface_diagnostic_mm": 4.013772588223219,
+      "leg_max_shell_mm": 0,
+      "leg_max_lining_mm": 0
+    },
+    {
+      "pose": "knee-lift",
+      "leg_contact": {
+        "triangle_pairs": 478,
+        "max_estimate_mm": 6.425308063626289,
+        "components": {
+          "Kusazuri_01_Front_Center_Interior": {
+            "triangle_pairs": 50,
+            "max_estimate_mm": 1.4330116100609303
+          },
+          "Kusazuri_01_Front_L": {
+            "triangle_pairs": 266,
+            "max_estimate_mm": 6.425308063626289
+          },
+          "Kusazuri_01_Front_L_Interior": {
+            "triangle_pairs": 116,
+            "max_estimate_mm": 6.093945354223251
+          },
+          "Kusazuri_01_Front_L_Lacing": {
+            "triangle_pairs": 26,
+            "max_estimate_mm": 1.5054448740556836
+          },
+          "Kusazuri_01_Front_L_Trim": {
+            "triangle_pairs": 20,
+            "max_estimate_mm": 3.0446152668446302
+          }
+        }
+      },
+      "hand_contact": {
+        "triangle_pairs": 0,
+        "max_estimate_mm": 0,
+        "components": {}
+      },
+      "body_triangle_pairs": 478,
+      "Do_triangle_pairs": 12983,
+      "Do_signed_nearest_surface_diagnostic_mm": 4.013773985207081,
+      "leg_max_shell_mm": 6.425308063626289,
+      "leg_max_lining_mm": 6.093945354223251
+    },
+    {
+      "pose": "crouch",
+      "leg_contact": {
+        "triangle_pairs": 0,
+        "max_estimate_mm": 0,
+        "components": {}
+      },
+      "hand_contact": {
+        "triangle_pairs": 0,
+        "max_estimate_mm": 0,
+        "components": {}
+      },
+      "body_triangle_pairs": 0,
+      "Do_triangle_pairs": 7414,
+      "Do_signed_nearest_surface_diagnostic_mm": 3.0494825914502144,
+      "leg_max_shell_mm": 0,
+      "leg_max_lining_mm": 0
+    },
+    {
+      "pose": "combat-stance",
+      "leg_contact": {
+        "triangle_pairs": 0,
+        "max_estimate_mm": 0,
+        "components": {}
+      },
+      "hand_contact": {
+        "triangle_pairs": 0,
+        "max_estimate_mm": 0,
+        "components": {}
+      },
+      "body_triangle_pairs": 0,
+      "Do_triangle_pairs": 9117,
+      "Do_signed_nearest_surface_diagnostic_mm": 2.2182485554367304,
+      "leg_max_shell_mm": 0,
+      "leg_max_lining_mm": 0
+    },
+    {
+      "pose": "torso-turn",
+      "leg_contact": {
+        "triangle_pairs": 0,
+        "max_estimate_mm": 0,
+        "components": {}
+      },
+      "hand_contact": {
+        "triangle_pairs": 0,
+        "max_estimate_mm": 0,
+        "components": {}
+      },
+      "body_triangle_pairs": 0,
+      "Do_triangle_pairs": 6232,
+      "Do_signed_nearest_surface_diagnostic_mm": 5.109918769448996,
+      "leg_max_shell_mm": 0,
+      "leg_max_lining_mm": 0
+    },
+    {
+      "pose": "hip-rotation",
+      "leg_contact": {
+        "triangle_pairs": 0,
+        "max_estimate_mm": 0,
+        "components": {}
+      },
+      "hand_contact": {
+        "triangle_pairs": 0,
+        "max_estimate_mm": 0,
+        "components": {}
+      },
+      "body_triangle_pairs": 0,
+      "Do_triangle_pairs": 12297,
+      "Do_signed_nearest_surface_diagnostic_mm": 3.477903548628092,
+      "leg_max_shell_mm": 0,
+      "leg_max_lining_mm": 0
+    },
+    {
+      "pose": "bow-diagnostic",
+      "leg_contact": {
+        "triangle_pairs": 0,
+        "max_estimate_mm": 0,
+        "components": {}
+      },
+      "hand_contact": {
+        "triangle_pairs": 0,
+        "max_estimate_mm": 0,
+        "components": {}
+      },
+      "body_triangle_pairs": 0,
+      "Do_triangle_pairs": 9117,
+      "Do_signed_nearest_surface_diagnostic_mm": 2.2182485554367304,
+      "leg_max_shell_mm": 0,
+      "leg_max_lining_mm": 0
+    }
+  ],
+  "regression_frames": [
+    {
+      "pose": "A_Walk:19",
+      "leg_contact": {
+        "triangle_pairs": 0,
+        "max_estimate_mm": 0,
+        "components": {}
+      },
+      "hand_contact": {
+        "triangle_pairs": 0,
+        "max_estimate_mm": 0,
+        "components": {}
+      },
+      "body_triangle_pairs": 0,
+      "Do_triangle_pairs": 20795,
+      "Do_signed_nearest_surface_diagnostic_mm": 2.223268151283264,
+      "leg_max_shell_mm": 0,
+      "leg_max_lining_mm": 0
+    },
+    {
+      "pose": "A_Run:22",
+      "leg_contact": {
+        "triangle_pairs": 0,
+        "max_estimate_mm": 0,
+        "components": {}
+      },
+      "hand_contact": {
+        "triangle_pairs": 99,
+        "max_estimate_mm": 0.6741014658473432,
+        "components": {
+          "Kusazuri_01_Side_R": {
+            "triangle_pairs": 28,
+            "max_estimate_mm": 0.4649871843867004
+          },
+          "Kusazuri_01_Side_R_Lacing": {
+            "triangle_pairs": 22,
+            "max_estimate_mm": 0.6741014658473432
+          },
+          "Kusazuri_01_Side_R_Trim": {
+            "triangle_pairs": 49,
+            "max_estimate_mm": 0
+          }
+        }
+      },
+      "body_triangle_pairs": 99,
+      "Do_triangle_pairs": 19153,
+      "Do_signed_nearest_surface_diagnostic_mm": 2.1110856905579567,
+      "leg_max_shell_mm": 0,
+      "leg_max_lining_mm": 0
+    },
+    {
+      "pose": "A_Run:32",
+      "leg_contact": {
+        "triangle_pairs": 0,
+        "max_estimate_mm": 0,
+        "components": {}
+      },
+      "hand_contact": {
+        "triangle_pairs": 0,
+        "max_estimate_mm": 0,
+        "components": {}
+      },
+      "body_triangle_pairs": 0,
+      "Do_triangle_pairs": 18908,
+      "Do_signed_nearest_surface_diagnostic_mm": 2.4726889096200466,
+      "leg_max_shell_mm": 0,
+      "leg_max_lining_mm": 0
+    },
+    {
+      "pose": "A_Run:39",
+      "leg_contact": {
+        "triangle_pairs": 0,
+        "max_estimate_mm": 0,
+        "components": {}
+      },
+      "hand_contact": {
+        "triangle_pairs": 724,
+        "max_estimate_mm": 4.510138183832169,
+        "components": {
+          "Kusazuri_01_Belt": {
+            "triangle_pairs": 192,
+            "max_estimate_mm": 0
+          },
+          "Kusazuri_01_Lacing": {
+            "triangle_pairs": 301,
+            "max_estimate_mm": 4.510138183832169
+          },
+          "Kusazuri_01_Side_R_Interior": {
+            "triangle_pairs": 231,
+            "max_estimate_mm": 2.6939797680824995
+          }
+        }
+      },
+      "body_triangle_pairs": 724,
+      "Do_triangle_pairs": 18738,
+      "Do_signed_nearest_surface_diagnostic_mm": 3.274838672950864,
+      "leg_max_shell_mm": 0,
+      "leg_max_lining_mm": 0
+    },
+    {
+      "pose": "A_Attack:13",
+      "leg_contact": {
+        "triangle_pairs": 0,
+        "max_estimate_mm": 0,
+        "components": {}
+      },
+      "hand_contact": {
+        "triangle_pairs": 0,
+        "max_estimate_mm": 0,
+        "components": {}
+      },
+      "body_triangle_pairs": 0,
+      "Do_triangle_pairs": 10809,
+      "Do_signed_nearest_surface_diagnostic_mm": 1.9657243974506855,
+      "leg_max_shell_mm": 0,
+      "leg_max_lining_mm": 0
+    }
+  ],
+  "rigidity_preserved": true,
+  "controller_targets_reproduced": true,
+  "source_file_unchanged": true,
+  "maximum_pair_distance_error_metres": 1.0060741799100548e-06,
+  "maximum_all_vertex_rigid_transform_error_metres": 4.807789863616728e-07,
+  "inverted_or_collapsed_triangles": 0,
+  "surface_clear_in_all_samples": false,
+  "limits": [
+    "Body-region labels use dominant skin influence per contacted body triangle.",
+    "Depth estimates use negative nearest-face signs at vertices of contacting triangles. They are not exact Boolean solid penetration.",
+    "Do signed-nearest diagnostic outliers require the separate do-outlier-solid-containment.json investigation. Actual triangle crossings remain even when an outlier point is outside all Do solids.",
+    "Integer frames do not establish subframe clearance. Existing body/upper armor animation and remaining hand contacts are preserved."
+  ],
+  "Do_outlier_solid_investigation": {
+    "source_sha256": "cf7c0ec0578b7fe2aca7d1b30439c521e8cecc3e63d4f36b0c8820b31dc9eb9e",
+    "all_archived_outlier_points_reproduced_exactly": true,
+    "all_outlier_points_outside_closed_Do_solids": true,
+    "maximum_sampled_distance_to_containing_Do_solid_surface_mm": 1.8460327992215753,
+    "scope": "Reproduce archived panel target matrices on unchanged source panel/Do geometry; final tail/material edits do not affect these panels. Per connected closed Do island, classify contact vertices by majority of three independent ray parity tests. Surface distance is per containing solid, not exact penetration of a union or unsampled triangle interiors.",
+    "report": "artifacts/kusazuri01/do-outlier-solid-containment.json"
+  },
+  "final_Do_outlier_solid_investigation": {
+    "report": "artifacts/kusazuri01/do-final-outlier-solid-containment.json",
+    "script": "SourceArt/Characters/Samurai/Kusazuri01/Scripts/diagnose_do_contacts.py",
+    "input_report_sha256": "5b6f9d542daad4dbf64d9ed787efce2c72132a3f0a3f2bee542b0fcf4e94dead",
+    "input_fixture_sha256": "2bfa75ed81b51dd4071e9e937bfe172802d5f0c8b6b1f64d581c8c856903a8b0",
+    "source_sha256": "cf7c0ec0578b7fe2aca7d1b30439c521e8cecc3e63d4f36b0c8820b31dc9eb9e",
+    "all_outlier_points_reproduced_exactly": true,
+    "all_max_outlier_points_outside_closed_Do_solids": true,
+    "cases": [
+      {
+        "pose": "A_Idle:2",
+        "component": "Kusazuri_01_Belt",
+        "reference_estimate_mm": 9.09042451530695,
+        "triangle_pairs_reproduced": 1602,
+        "maximum_sampled_distance_to_containing_Do_solid_surface_mm": 1.9636449869722128,
+        "ray_disagreements_resolved_by_winding": 3
+      },
+      {
+        "pose": "A_Walk:41",
+        "component": "Kusazuri_01_Front_Center_Trim",
+        "reference_estimate_mm": 17.12859608232975,
+        "triangle_pairs_reproduced": 189,
+        "maximum_sampled_distance_to_containing_Do_solid_surface_mm": 1.587449456565082,
+        "ray_disagreements_resolved_by_winding": 0
+      },
+      {
+        "pose": "A_Run:29",
+        "component": "Kusazuri_01_Front_Center_Interior",
+        "reference_estimate_mm": 17.509520053863525,
+        "triangle_pairs_reproduced": 441,
+        "maximum_sampled_distance_to_containing_Do_solid_surface_mm": 1.9596244674175978,
+        "ray_disagreements_resolved_by_winding": 0
+      },
+      {
+        "pose": "A_Attack:23",
+        "component": "Kusazuri_01_Belt",
+        "reference_estimate_mm": 8.569429628551006,
+        "triangle_pairs_reproduced": 1422,
+        "maximum_sampled_distance_to_containing_Do_solid_surface_mm": 1.9929981790482998,
+        "ray_disagreements_resolved_by_winding": 5
+      }
+    ],
+    "limits": "Restore explicitly selected frozen panel targets. Final mode checks the largest Do signed-nearest outlier per native clip on matching frozen source/controller. Pre-lateral mode replays the archived four points on unchanged panel/Do geometry; tail and material edits do not alter these panels. Point reproduction error must be zero before interpreting the old comparison. Per connected closed Do island, classify contact vertices by three independent ray parity tests, resolving disagreements with closed-island signed solid-angle winding. Surface distance is per containing solid, not exact penetration of a union or unsampled triangle interiors."
+  }
+}

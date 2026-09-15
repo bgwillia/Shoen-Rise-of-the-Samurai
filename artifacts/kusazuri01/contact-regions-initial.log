@@ -1,0 +1,41 @@
+00:00.760  blend            | Read blend: "/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/SourceArt/Characters/Samurai/Kusazuri01/Kusazuri01.blend"
+BODY_REGIONS knee-lift
+Kusazuri_01_Belt [('thigh_twist_01_l', 12.317784249782562), ('thigh_twist_02_l', 4.776928409934044), ('pelvis', 0.9052872434258461)]
+Kusazuri_01_Front_Center [('thigh_twist_01_l', 9.912199527025223), ('thigh_twist_02_l', 6.558068215847015), ('pelvis', 1.52973220217973)]
+Kusazuri_01_Front_Center_Interior [('thigh_twist_01_l', 9.596169888973236), ('thigh_twist_02_l', 6.924162685871124), ('pelvis', 1.4796673506498337)]
+Kusazuri_01_Front_Center_Lacing [('thigh_twist_02_l', 11.671717584133148), ('thigh_twist_01_l', 5.96687276661396), ('pelvis', 0.36140994168817997)]
+Kusazuri_01_Front_Center_Trim [('thigh_twist_01_l', 8.853680938482285), ('thigh_twist_02_l', 8.221301555633545), ('pelvis', 0.9250171901658177)]
+Kusazuri_01_Front_L [('thigh_twist_01_l', 11.276020228862762), ('thigh_twist_02_l', 6.151140600442886), ('pelvis', 0.5728389453142881)]
+Kusazuri_01_Front_L_Interior [('thigh_twist_01_l', 11.14773765206337), ('thigh_twist_02_l', 6.283344775438309), ('pelvis', 0.5689173750579357)]
+Kusazuri_01_Front_L_Lacing [('thigh_twist_01_l', 10.820019632577896), ('thigh_twist_02_l', 6.782726854085922), ('pelvis', 0.3972533829510212)]
+Kusazuri_01_Front_L_Trim [('thigh_twist_01_l', 9.206088364124298), ('thigh_twist_02_l', 8.783520340919495), ('pelvis', 0.010391393676400185)]
+Kusazuri_01_Lacing [('thigh_twist_01_l', 11.720271646976471), ('thigh_twist_02_l', 5.22516205906868), ('pelvis', 1.0545662716031075)]
+BODY_REGIONS A_Idle:1
+Kusazuri_01_Front_L [('middle_03_l', 15.0)]
+Kusazuri_01_Front_L_Interior [('middle_03_l', 15.0)]
+Kusazuri_01_Front_L_Trim [('index_03_l', 15.0)]
+Kusazuri_01_Front_R [('middle_03_r', 16.231067299842834), ('middle_02_r', 1.7689325958490372)]
+Kusazuri_01_Front_R_Interior [('ring_03_r', 15.0), ('middle_03_r', 3.0)]
+Kusazuri_01_Front_R_Lacing [('middle_03_r', 14.124681562185287), ('middle_02_r', 3.8753185644745827)]
+Kusazuri_01_Front_R_Trim [('middle_03_r', 9.543236553668976), ('middle_02_r', 8.456763498485088)]
+Kusazuri_01_Side_L_Interior [('thigh_twist_01_l', 11.212344408035278), ('thigh_twist_02_l', 6.654337406158447), ('pelvis', 0.1333180759102106)]
+Kusazuri_01_Side_R [('pinky_03_r', 15.0), ('ring_03_r', 2.5204394459724426), ('ring_02_r', 0.4795605391263962)]
+Kusazuri_01_Side_R_Interior [('pinky_03_r', 15.0)]
+Kusazuri_01_Side_R_Lacing [('pinky_03_r', 14.521461844444275), ('ring_03_r', 2.5793850421905518), ('pinky_02_r', 0.47853819467127323), ('ring_02_r', 0.42061493545770645)]
+Kusazuri_01_Side_R_Trim [('ring_03_r', 16.325810432434082), ('ring_02_r', 1.6741893403232098)]
+BODY_REGIONS A_Walk:1
+Kusazuri_01_Side_L [('thumb_03_l', 18.0)]
+Kusazuri_01_Side_L_Interior [('thumb_03_l', 18.0)]
+Kusazuri_01_Side_L_Lacing [('thumb_03_l', 15.54410620778799), ('thumb_02_l', 2.4558937549591064)]
+Kusazuri_01_Side_L_Trim [('thumb_03_l', 18.0)]
+BODY_REGIONS A_Run:28
+Kusazuri_01_Front_L [('pinky_01_l', 13.832669496536255), ('pinky_02_l', 4.167330470867455)]
+Kusazuri_01_Front_L_Interior [('pinky_02_l', 10.185671895742416), ('pinky_03_l', 7.693675089627504), ('pinky_01_l', 0.12065308354794979)]
+Kusazuri_01_Front_L_Lacing [('pinky_02_l', 14.03868168592453), ('ring_02_l', 1.872205674648285), ('ring_03_l', 1.127794310450554), ('pinky_01_l', 0.9613183792680502)]
+Kusazuri_01_Front_L_Trim [('pinky_02_l', 12.723521769046783), ('pinky_01_l', 5.194598371163011), ('pinky_03_l', 0.08187991380691528)]
+Kusazuri_01_Front_R [('thigh_twist_01_r', 9.533165395259857), ('thigh_twist_02_r', 8.17047393321991), ('pelvis', 0.29636072739958763)]
+Kusazuri_01_Front_R_Interior [('thigh_twist_01_r', 10.460181474685669), ('thigh_twist_02_r', 6.843625485897064), ('pelvis', 0.6961928866803646)]
+Kusazuri_01_Side_L_Interior [('thigh_twist_01_l', 12.311528086662292), ('thigh_twist_02_l', 5.301564037799835), ('pelvis', 0.3869077507406473)]
+Blender 5.1.2 (hash ec6e62d40fa9 built 2026-05-19 01:30:33)
+
+Blender quit
