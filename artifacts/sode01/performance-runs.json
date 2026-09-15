@@ -1,0 +1,44 @@
+[
+  {
+    "label": "cost-close-mannequin",
+    "validated": true,
+    "rhi": "Metal",
+    "frames": 1054,
+    "median_fps": 69.90909008044473
+  },
+  {
+    "label": "cost-close-armor",
+    "validated": true,
+    "rhi": "Metal",
+    "frames": 887,
+    "median_fps": 59.00488264656897
+  },
+  {
+    "label": "cost-close-sode",
+    "validated": true,
+    "rhi": "Metal",
+    "frames": 869,
+    "median_fps": 57.49108052892518
+  },
+  {
+    "label": "cost-tactical-mannequin",
+    "validated": true,
+    "rhi": "Metal",
+    "frames": 986,
+    "median_fps": 64.85137154372022
+  },
+  {
+    "label": "cost-tactical-armor",
+    "validated": true,
+    "rhi": "Metal",
+    "frames": 952,
+    "median_fps": 62.314351091274055
+  },
+  {
+    "label": "cost-tactical-sode",
+    "validated": true,
+    "rhi": "Metal",
+    "frames": 940,
+    "median_fps": 61.363969203196724
+  }
+]

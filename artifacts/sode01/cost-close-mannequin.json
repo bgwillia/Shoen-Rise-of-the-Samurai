@@ -1,0 +1,150 @@
+{
+	"rendered": true,
+	"validated": true,
+	"mode": "mannequin",
+	"camera": "close",
+	"pose": "animation",
+	"requested_animation": "idle",
+	"animation_asset": "/Game/Characters/Mannequins/Anims/Unarmed/MM_Idle.MM_Idle",
+	"root_motion_handling": "One transient native-clip duplicate shared by review bodies; force root lock to reference pose, no locomotion applied; saved Epic clip unchanged",
+	"max_root_position_error_cm": 0,
+	"max_root_rotation_error_degrees": 0.0011349603286128498,
+	"animation_advanced": true,
+	"observed_animation_position_range_seconds": 7.5569901466369629,
+	"animation_play_rate": 1,
+	"animation": "idle",
+	"crowd_representation": "single skeletal/poseable fixture",
+	"armor_pose_method": "absent",
+	"engine": "5.8.2-56702186+++UE5+Release-5.8",
+	"platform": "Mac",
+	"rhi": "Metal",
+	"build": "Development editor game; opt-in isolated Sode pair art review",
+	"requested_count": 1,
+	"rendered_bodies": 1,
+	"rendered_helmets": 0,
+	"rendered_armors": 0,
+	"rendered_sode_left": 0,
+	"rendered_sode_right": 0,
+	"rendered_sode": 0,
+	"skeletal_components": 1,
+	"camera_distance_cm": 359.17617112921567,
+	"camera_horizontal_fov": 40,
+	"camera_elevation_degrees": 15,
+	"body_helmet_armor_cast_shadows": true,
+	"warmup_seconds": 3,
+	"capture_seconds": 15.008002251386642,
+	"frames": 1054,
+	"median_fps": 69.909090080444727,
+	"interval_fps": 70.229200552166574,
+	"peak_process_physical_bytes": 3241889128,
+	"max_attachment_position_error_cm": 0,
+	"max_armor_bone_position_error_cm": 0,
+	"max_armor_bone_rotation_error_degrees": 0,
+	"max_component_world_scale_error": 0,
+	"armor_skeleton_compatible": true,
+	"max_sode_bone_position_error_cm": 0,
+	"max_sode_bone_rotation_error_degrees": 0,
+	"sode_skeleton_compatible": true,
+	"sode_pose_method": "absent",
+	"sode_suspension_samples": 0,
+	"sode_error_reference": "Copied body pose with intended controlled upperarm and propagated child transforms; raw body/armor upperarm differences are expected suspension motion",
+	"sode_motion_source": "SourceArt/Characters/Samurai/Sode01/Scripts/sode_motion.py",
+	"sode_suspension": [],
+	"handedness": "Sode_L_01 = anatomical left, native +X; Sode_R_01 = anatomical right, native -X; component yaw -90 degrees",
+	"bow_pose_limit": "not requested",
+	"body_standard": "Epic Unreal Manny — SKM_Manny_Simple",
+	"review_contract_file": "/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/SourceArt/Characters/Samurai/Sode01/asset-manifest.json",
+	"body_component_yaw_degrees": -90,
+	"composed_head_reference_transform": "-0.000000,0.663123,162.575101|90.000000,0.000002,0.000000|1.000000,1.000000,1.000000",
+	"helmet_reference_transform": "-0.000000,2.500000,159.800000|0.000000,0.000000,-0.000000|1.000000,1.000000,1.000000",
+	"helmet_relative_transform": "-2.775101,1.836877,0.000000|-90.000000,0.000002,0.000000|1.000000,1.000000,1.000000",
+	"expected_helmet_world_scale": "X=1.000 Y=1.000 Z=1.000",
+	"armor_bones_checked": [],
+	"sode_bones_checked": [],
+	"body_bones_world_at_capture":
+	{
+		"spine_04": "3.638936,-0.282757,119.360957|88.073200,5.330545,73.627314|1.000000,1.000000,1.000000",
+		"head": "8.683790,1.042627,159.714256|76.764400,8.881092,94.388937|1.000000,1.000000,1.000000",
+		"upperarm_l": "9.009384,-18.792554,141.507767|-72.420410,-95.930169,44.989375|1.000000,1.000000,1.000000",
+		"upperarm_r": "-4.191401,16.953890,142.388068|71.449409,-39.446740,-120.214321|1.000000,1.000000,1.000000"
+	},
+	"viewport_width": 1280,
+	"viewport_height": 720,
+	"screenshot": "/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/artifacts/sode01/cost-close-mannequin.png",
+	"screenshot_exists": true,
+	"measurement_notes": "Wall frame intervals include review validation overhead. Engine CPU counters exclude idle time and may describe earlier frames; positive RHI GPU samples only, unavailable counters null. Screenshot readback follows sampling. Mesh LOD inventory is not GPU draw counts. Single-body incremental art cost only; includes animation/skinning and validation, no combat or population simulation. Matching bones/scale do not certify surface clearance or visual quality.",
+	"frame":
+	{
+		"samples": 1054,
+		"median_ms": 14.30429145693779,
+		"p95_ms": 16.694456338882446,
+		"worst_ms": 28.60650047659874
+	},
+	"game_thread":
+	{
+		"samples": 1054,
+		"median_ms": 1.1504166126251221,
+		"p95_ms": 1.8457916975021362,
+		"worst_ms": 9.2559995651245117
+	},
+	"render_thread":
+	{
+		"samples": 1054,
+		"median_ms": 14.296667098999023,
+		"p95_ms": 16.686832427978516,
+		"worst_ms": 28.6319580078125
+	},
+	"gpu":
+	{
+		"samples": 1054,
+		"median_ms": 13.862916946411133,
+		"p95_ms": 15.850000381469727,
+		"worst_ms": 29.666416168212891
+	},
+	"median_rhi_draw_calls_all_passes": null,
+	"median_rhi_primitives_all_passes": null,
+	"body_skeletal_mesh":
+	{
+		"asset": "/Game/Characters/Mannequins/Meshes/SKM_Manny_Simple.SKM_Manny_Simple",
+		"material_slots": 2,
+		"bones": 89,
+		"lods": [
+			{
+				"lod": 0,
+				"triangles": 92178,
+				"vertices": 48705,
+				"sections": 2,
+				"uv_channels": 1,
+				"max_bone_influences": 8,
+				"section_material_slots": [
+					0,
+					1
+				]
+			},
+			{
+				"lod": 1,
+				"triangles": 26998,
+				"vertices": 15096,
+				"sections": 2,
+				"uv_channels": 1,
+				"max_bone_influences": 8,
+				"section_material_slots": [
+					0,
+					1
+				]
+			},
+			{
+				"lod": 2,
+				"triangles": 12998,
+				"vertices": 7793,
+				"sections": 2,
+				"uv_channels": 1,
+				"max_bone_influences": 4,
+				"section_material_slots": [
+					0,
+					1
+				]
+			}
+		]
+	}
+}

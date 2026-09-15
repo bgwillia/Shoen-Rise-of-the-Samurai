@@ -1,0 +1,170 @@
+{
+  "SK_Sode_L_01_LOD2": {
+    "raw": [],
+    "evaluated": [
+      {
+        "loop": 217,
+        "vertex": 82,
+        "polygon": 72,
+        "smooth": true,
+        "normal": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "length": 0.0,
+        "triangle_cross_length": 1.5541647395804574,
+        "geometric_normal": [
+          0.510028600692749,
+          -0.06590209901332855,
+          -0.857629120349884
+        ],
+        "points": [
+          [
+            33.02534484863281,
+            9.902462005615234,
+            140.1127166748047
+          ],
+          [
+            30.023683547973633,
+            14.931175231933594,
+            137.94122314453125
+          ],
+          [
+            32.83203887939453,
+            10.67036247253418,
+            139.93875122070312
+          ]
+        ]
+      },
+      {
+        "loop": 221,
+        "vertex": 82,
+        "polygon": 73,
+        "smooth": true,
+        "normal": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "length": 0.0,
+        "triangle_cross_length": 2.651957621439247,
+        "geometric_normal": [
+          -0.4928096830844879,
+          0.09630339592695236,
+          0.8647913932800293
+        ],
+        "points": [
+          [
+            33.71817398071289,
+            8.413261413574219,
+            140.77239990234375
+          ],
+          [
+            31.589723587036133,
+            12.789087295532227,
+            139.0721893310547
+          ],
+          [
+            30.023683547973633,
+            14.931175231933594,
+            137.94122314453125
+          ]
+        ]
+      },
+      {
+        "loop": 223,
+        "vertex": 82,
+        "polygon": 74,
+        "smooth": true,
+        "normal": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "length": 0.0,
+        "triangle_cross_length": 0.8516537413471976,
+        "geometric_normal": [
+          0.6340072751045227,
+          0.05629749968647957,
+          -0.7712751626968384
+        ],
+        "points": [
+          [
+            32.83203887939453,
+            10.67036247253418,
+            139.93875122070312
+          ],
+          [
+            30.023683547973633,
+            14.931175231933594,
+            137.94122314453125
+          ],
+          [
+            31.589723587036133,
+            12.789087295532227,
+            139.0721893310547
+          ]
+        ]
+      },
+      {
+        "loop": 4535,
+        "vertex": 82,
+        "polygon": 1511,
+        "smooth": true,
+        "normal": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "length": 0.0,
+        "triangle_cross_length": 1.0979595779131115,
+        "geometric_normal": [
+          -0.07611239701509476,
+          -0.4332323670387268,
+          -0.8980626463890076
+        ],
+        "points": [
+          [
+            33.02534484863281,
+            9.902462005615234,
+            140.1127166748047
+          ],
+          [
+            33.71817398071289,
+            8.413261413574219,
+            140.77239990234375
+          ],
+          [
+            30.023683547973633,
+            14.931175231933594,
+            137.94122314453125
+          ]
+        ]
+      }
+    ],
+    "reported_fallbacks": 0,
+    "temporary_copy_after_normal_helper": [],
+    "new_fallback_count": 0,
+    "temporary_metres_after_normal_helper": [],
+    "after_transform_back_to_cm": []
+  },
+  "SM_Sode_L_01_LOD2": {
+    "raw": [],
+    "evaluated": [],
+    "reported_fallbacks": 0,
+    "temporary_copy_after_normal_helper": [],
+    "new_fallback_count": 0,
+    "temporary_metres_after_normal_helper": [],
+    "after_transform_back_to_cm": []
+  },
+  "SK_Sode_R_01_LOD2": {
+    "raw": [],
+    "evaluated": [],
+    "reported_fallbacks": 0,
+    "temporary_copy_after_normal_helper": [],
+    "new_fallback_count": 0,
+    "temporary_metres_after_normal_helper": [],
+    "after_transform_back_to_cm": []
+  }
+}

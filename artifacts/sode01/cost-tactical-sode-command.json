@@ -1,0 +1,22 @@
+[
+  "/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/UnrealEditor.app/Contents/MacOS/UnrealEditor",
+  "/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/game/Shoen.uproject",
+  "/Game/Art/Characters/Samurai/Sode01/Review/Sode01_Review?game=/Script/Shoen.SodeReviewGameMode",
+  "-game",
+  "-windowed",
+  "-ResX=1600",
+  "-ResY=900",
+  "-NoVSync",
+  "-nop4",
+  "-nosplash",
+  "-stdout",
+  "-FullStdOutLogOutput",
+  "-SodeMode=sode",
+  "-SodeCamera=tactical",
+  "-SodeAnimation=idle",
+  "-SodePose=animation",
+  "-SodeContract=/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/SourceArt/Characters/Samurai/Sode01/asset-manifest.json",
+  "-SodeSeconds=15.0",
+  "-SodeOutput=/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/artifacts/sode01/cost-tactical-sode.json",
+  "-SodeScreenshot=/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/artifacts/sode01/cost-tactical-sode.png"
+]

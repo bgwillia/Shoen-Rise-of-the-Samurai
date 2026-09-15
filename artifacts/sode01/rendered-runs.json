@@ -1,0 +1,93 @@
+[
+  {
+    "label": "final-front",
+    "validated": true,
+    "rhi": "Metal",
+    "frames": 541,
+    "median_fps": 89.64256110100187
+  },
+  {
+    "label": "final-back",
+    "validated": true,
+    "rhi": "Metal",
+    "frames": 582,
+    "median_fps": 96.64597645447564
+  },
+  {
+    "label": "final-left",
+    "validated": true,
+    "rhi": "Metal",
+    "frames": 578,
+    "median_fps": 96.01228108139043
+  },
+  {
+    "label": "final-right",
+    "validated": true,
+    "rhi": "Metal",
+    "frames": 455,
+    "median_fps": 77.09975919560303
+  },
+  {
+    "label": "final-rear",
+    "validated": true,
+    "rhi": "Metal",
+    "frames": 390,
+    "median_fps": 65.01491246065167
+  },
+  {
+    "label": "final-detail",
+    "validated": true,
+    "rhi": "Metal",
+    "frames": 338,
+    "median_fps": 58.15573104923866
+  },
+  {
+    "label": "final-tactical",
+    "validated": true,
+    "rhi": "Metal",
+    "frames": 421,
+    "median_fps": 69.67103368139159
+  },
+  {
+    "label": "final-walk",
+    "validated": true,
+    "rhi": "Metal",
+    "frames": 508,
+    "median_fps": 63.73265829324452
+  },
+  {
+    "label": "final-run",
+    "validated": true,
+    "rhi": "Metal",
+    "frames": 512,
+    "median_fps": 65.0819359173074
+  },
+  {
+    "label": "final-attack",
+    "validated": true,
+    "rhi": "Metal",
+    "frames": 514,
+    "median_fps": 67.40588804567327
+  },
+  {
+    "label": "final-arms-raised",
+    "validated": true,
+    "rhi": "Metal",
+    "frames": 235,
+    "median_fps": 59.014170543814984
+  },
+  {
+    "label": "final-arms-forward",
+    "validated": true,
+    "rhi": "Metal",
+    "frames": 236,
+    "median_fps": 59.38184584571121
+  },
+  {
+    "label": "final-bow",
+    "validated": true,
+    "rhi": "Metal",
+    "frames": 234,
+    "median_fps": 58.78951556084776
+  }
+]

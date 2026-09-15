@@ -1,0 +1,1772 @@
+{
+  "asset": "Sode01",
+  "source_sha256": "3f2bdd4e70273b88962e64572d8c158345d427395832f02cfd187f4530644a1b",
+  "controlled_rigid_suspension": true,
+  "source_file_unchanged": true,
+  "checks": [
+    {
+      "suspension_targets": {
+        "l": {
+          "opening_cm": 0.047555343053499066,
+          "lift_clearance_cm": 0.0,
+          "direction": [
+            0.5760331153869629,
+            -0.0234137661755085,
+            -0.8170909285545349
+          ],
+          "target_blender_cm": [
+            [
+              0.5760336518287659,
+              -0.046067822724580765,
+              0.8161267638206482,
+              19.057443618774414
+            ],
+            [
+              -0.02341350167989731,
+              0.9970710277557373,
+              0.07280711084604263,
+              2.5572376251220703
+            ],
+            [
+              -0.8170909285545349,
+              -0.06104772537946701,
+              0.5732680559158325,
+              143.58352661132812
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "upper_reference_blender_cm": [
+            [
+              0.5760334134101868,
+              -0.03259218856692314,
+              0.8167759776115417,
+              19.009885787963867
+            ],
+            [
+              -0.02341352589428425,
+              0.9981369376182556,
+              0.056341540068387985,
+              2.557236433029175
+            ],
+            [
+              -0.8170908093452454,
+              -0.05157821625471115,
+              0.5741972923278809,
+              143.58352661132812
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "shoulder_blender_cm": [
+            19.009885787963867,
+            2.557236433029175,
+            143.58352661132812
+          ],
+          "elbow_blender_cm": [
+            35.006996154785156,
+            1.9070091247558594,
+            120.89196014404297
+          ],
+          "torso_delta_blender_cm": [
+            [
+              1.0,
+              -5.447031714567174e-16,
+              4.308836273891892e-15,
+              -1.9953483310075626e-13
+            ],
+            [
+              8.881784197001252e-16,
+              1.0,
+              -1.4901160305669237e-08,
+              -6.339373470609644e-14
+            ],
+            [
+              -2.220446049250313e-16,
+              2.6892345810236335e-16,
+              1.0,
+              -1.9073488601861754e-06
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        },
+        "r": {
+          "opening_cm": 0.047559578503882136,
+          "lift_clearance_cm": 0.0,
+          "direction": [
+            -0.5760332942008972,
+            -0.023413918912410736,
+            -0.8170908093452454
+          ],
+          "target_blender_cm": [
+            [
+              0.5760279893875122,
+              -0.046067655086517334,
+              0.8161262273788452,
+              -19.057443618774414
+            ],
+            [
+              0.02341492287814617,
+              -0.9970707297325134,
+              -0.07280638813972473,
+              2.557281017303467
+            ],
+            [
+              0.8170908093452454,
+              0.06104787811636925,
+              -0.5732664465904236,
+              143.5830078125
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "upper_reference_blender_cm": [
+            [
+              0.5760277509689331,
+              -0.03259199112653732,
+              0.8167754411697388,
+              -19.009883880615234
+            ],
+            [
+              0.023414766415953636,
+              -0.9981366395950317,
+              -0.05634072795510292,
+              2.5572762489318848
+            ],
+            [
+              0.8170908689498901,
+              0.05157822370529175,
+              -0.5741958022117615,
+              143.5830078125
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "shoulder_blender_cm": [
+            -19.009883880615234,
+            2.5572762489318848,
+            143.5830078125
+          ],
+          "elbow_blender_cm": [
+            -35.00673294067383,
+            1.9070554971694946,
+            120.8918228149414
+          ],
+          "torso_delta_blender_cm": [
+            [
+              1.0,
+              -5.447031714567174e-16,
+              4.308836273891892e-15,
+              -1.9953483310075626e-13
+            ],
+            [
+              8.881784197001252e-16,
+              1.0,
+              -1.4901160305669237e-08,
+              -6.339373470609644e-14
+            ],
+            [
+              -2.220446049250313e-16,
+              2.6892345810236335e-16,
+              1.0,
+              -1.9073488601861754e-06
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      },
+      "pose": "neutral",
+      "type": "diagnostic; not a native animation clip",
+      "frame": 1,
+      "surface_intersections": {
+        "body": {
+          "Sode_L_01_Bindings": {
+            "triangle_intersections": 0,
+            "attachment_junction": false,
+            "examples": [],
+            "sampled_vertices": 120,
+            "minimum_unsigned_sample_clearance_mm": 42.151693254709244
+          },
+          "Sode_L_01_Fittings": {
+            "triangle_intersections": 0,
+            "attachment_junction": false,
+            "examples": [],
+            "sampled_vertices": 124,
+            "minimum_unsigned_sample_clearance_mm": 45.58027908205986
+          },
+          "Sode_L_01_InteriorPadding": {
+            "triangle_intersections": 0,
+            "attachment_junction": false,
+            "examples": [],
+            "sampled_vertices": 122,
+            "minimum_unsigned_sample_clearance_mm": 22.34359085559845
+          },
+          "Sode_L_01_Lacing": {
+            "triangle_intersections": 0,
+            "attachment_junction": false,
+            "examples": [],
+            "sampled_vertices": 128,
+            "minimum_unsigned_sample_clearance_mm": 42.124126106500626
+          },
+          "Sode_L_01_LowerEdgeRow": {
+            "triangle_intersections": 0,
+            "attachment_junction": false,
+            "examples": [],
+            "sampled_vertices": 128,
+            "minimum_unsigned_sample_clearance_mm": 77.72912085056305
+          },
+          "Sode_L_01_MainPlateRows": {
+            "triangle_intersections": 0,
+            "attachment_junction": false,
+            "examples": [],
+            "sampled_vertices": 128,
+            "minimum_unsigned_sample_clearance_mm": 33.04741904139519
+          },
+          "Sode_L_01_Suspension": {
+            "triangle_intersections": 0,
+            "attachment_junction": true,
+            "examples": [],
+            "sampled_vertices": 122,
+            "minimum_unsigned_sample_clearance_mm": 29.381023719906807
+          },
+          "Sode_L_01_UpperAttachment": {
+            "triangle_intersections": 0,
+            "attachment_junction": false,
+            "examples": [],
+            "sampled_vertices": 117,
+            "minimum_unsigned_sample_clearance_mm": 37.70625218749046
+          },
+          "Sode_R_01_Bindings": {
+            "triangle_intersections": 0,
+            "attachment_junction": false,
+            "examples": [],
+            "sampled_vertices": 120,
+            "minimum_unsigned_sample_clearance_mm": 38.24816271662712
+          },
+          "Sode_R_01_Fittings": {
+            "triangle_intersections": 0,
+            "attachment_junction": false,
+            "examples": [],
+            "sampled_vertices": 124,
+            "minimum_unsigned_sample_clearance_mm": 45.57756334543228
+          },
+          "Sode_R_01_InteriorPadding": {
+            "triangle_intersections": 0,
+            "attachment_junction": false,
+            "examples": [],
+            "sampled_vertices": 122,
+            "minimum_unsigned_sample_clearance_mm": 21.83319441974163
+          },
+          "Sode_R_01_Lacing": {
+            "triangle_intersections": 0,
+            "attachment_junction": false,
+            "examples": [],
+            "sampled_vertices": 128,
+            "minimum_unsigned_sample_clearance_mm": 43.075621128082275
+          },
+          "Sode_R_01_LowerEdgeRow": {
+            "triangle_intersections": 0,
+            "attachment_junction": false,
+            "examples": [],
+            "sampled_vertices": 128,
+            "minimum_unsigned_sample_clearance_mm": 77.291339635849
+          },
+          "Sode_R_01_MainPlateRows": {
+            "triangle_intersections": 0,
+            "attachment_junction": false,
+            "examples": [],
+            "sampled_vertices": 128,
+            "minimum_unsigned_sample_clearance_mm": 33.59866887331009
+          },
+          "Sode_R_01_Suspension": {
+            "triangle_intersections": 0,
+            "attachment_junction": true,
+            "examples": [],
+            "sampled_vertices": 122,
+            "minimum_unsigned_sample_clearance_mm": 31.211737543344498
+          },
+          "Sode_R_01_UpperAttachment": {
+            "triangle_intersections": 0,
+            "attachment_junction": false,
+            "examples": [],
+            "sampled_vertices": 117,
+            "minimum_unsigned_sample_clearance_mm": 36.92629933357239
+          }
+        },
+        "kabuto": {
+          "Sode_L_01_Bindings": {
+            "triangle_intersections": 0,
+            "attachment_junction": false,
+            "examples": [],
+            "sampled_vertices": 120,
+            "minimum_unsigned_sample_clearance_mm": 50.59971660375595
+          },
+          "Sode_L_01_Fittings": {
+            "triangle_intersections": 0,
+            "attachment_junction": false,
+            "examples": [],
+            "sampled_vertices": 124,
+            "minimum_unsigned_sample_clearance_mm": 62.66561150550842
+          },
+          "Sode_L_01_InteriorPadding": {
+            "triangle_intersections": 0,
+            "attachment_junction": false,
+            "examples": [],
+            "sampled_vertices": 122,
+            "minimum_unsigned_sample_clearance_mm": 116.31077527999878
+          },
+          "Sode_L_01_Lacing": {
+            "triangle_intersections": 0,
+            "attachment_junction": false,
+            "examples": [],
+            "sampled_vertices": 128,
+            "minimum_unsigned_sample_clearance_mm": 85.00699698925018
+          },
+          "Sode_L_01_LowerEdgeRow": {
+            "triangle_intersections": 0,
+            "attachment_junction": false,
+            "examples": [],
+            "sampled_vertices": 128,
+            "minimum_unsigned_sample_clearance_mm": 308.1118166446686
+          },
+          "Sode_L_01_MainPlateRows": {
+            "triangle_intersections": 0,
+            "attachment_junction": false,
+            "examples": [],
+            "sampled_vertices": 128,
+            "minimum_unsigned_sample_clearance_mm": 133.4138810634613
+          },
+          "Sode_L_01_Suspension": {
+            "triangle_intersections": 0,
+            "attachment_junction": true,
+            "examples": [],
+            "sampled_vertices": 122,
+            "minimum_unsigned_sample_clearance_mm": 61.00895628333092
+          },
+          "Sode_L_01_UpperAttachment": {
+            "triangle_intersections": 0,
+            "attachment_junction": false,
+            "examples": [],
+            "sampled_vertices": 117,
+            "minimum_unsigned_sample_clearance_mm": 50.713568925857544
+          },
+          "Sode_R_01_Bindings": {
+            "triangle_intersections": 0,
+            "attachment_junction": false,
+            "examples": [],
+            "sampled_vertices": 120,
+            "minimum_unsigned_sample_clearance_mm": 54.54176664352417
+          },
+          "Sode_R_01_Fittings": {
+            "triangle_intersections": 0,
+            "attachment_junction": false,
+            "examples": [],
+            "sampled_vertices": 124,
+            "minimum_unsigned_sample_clearance_mm": 63.35533410310745
+          },
+          "Sode_R_01_InteriorPadding": {
+            "triangle_intersections": 0,
+            "attachment_junction": false,
+            "examples": [],
+            "sampled_vertices": 122,
+            "minimum_unsigned_sample_clearance_mm": 116.85244739055634
+          },
+          "Sode_R_01_Lacing": {
+            "triangle_intersections": 0,
+            "attachment_junction": false,
+            "examples": [],
+            "sampled_vertices": 128,
+            "minimum_unsigned_sample_clearance_mm": 83.7426483631134
+          },
+          "Sode_R_01_LowerEdgeRow": {
+            "triangle_intersections": 0,
+            "attachment_junction": false,
+            "examples": [],
+            "sampled_vertices": 128,
+            "minimum_unsigned_sample_clearance_mm": 308.218389749527
+          },
+          "Sode_R_01_MainPlateRows": {
+            "triangle_intersections": 0,
+            "attachment_junction": false,
+            "examples": [],
+            "sampled_vertices": 128,
+            "minimum_unsigned_sample_clearance_mm": 133.41744244098663
+          },
+          "Sode_R_01_Suspension": {
+            "triangle_intersections": 0,
+            "attachment_junction": true,
+            "examples": [],
+            "sampled_vertices": 122,
+            "minimum_unsigned_sample_clearance_mm": 61.67745962738991
+          },
+          "Sode_R_01_UpperAttachment": {
+            "triangle_intersections": 0,
+            "attachment_junction": false,
+            "examples": [],
+            "sampled_vertices": 117,
+            "minimum_unsigned_sample_clearance_mm": 50.43978989124298
+          }
+        },
+        "do": {
+          "Sode_L_01_Bindings": {
+            "triangle_intersections": 0,
+            "attachment_junction": false,
+            "examples": [],
+            "sampled_vertices": 120,
+            "minimum_unsigned_sample_clearance_mm": 46.49936780333519
+          },
+          "Sode_L_01_Fittings": {
+            "triangle_intersections": 0,
+            "attachment_junction": false,
+            "examples": [],
+            "sampled_vertices": 124,
+            "minimum_unsigned_sample_clearance_mm": 46.990346163511276
+          },
+          "Sode_L_01_InteriorPadding": {
+            "triangle_intersections": 0,
+            "attachment_junction": false,
+            "examples": [],
+            "sampled_vertices": 122,
+            "minimum_unsigned_sample_clearance_mm": 49.256615340709686
+          },
+          "Sode_L_01_Lacing": {
+            "triangle_intersections": 0,
+            "attachment_junction": false,
+            "examples": [],
+            "sampled_vertices": 128,
+            "minimum_unsigned_sample_clearance_mm": 72.89962470531464
+          },
+          "Sode_L_01_LowerEdgeRow": {
+            "triangle_intersections": 0,
+            "attachment_junction": false,
+            "examples": [],
+            "sampled_vertices": 128,
+            "minimum_unsigned_sample_clearance_mm": 140.56631922721863
+          },
+          "Sode_L_01_MainPlateRows": {
+            "triangle_intersections": 0,
+            "attachment_junction": false,
+            "examples": [],
+            "sampled_vertices": 128,
+            "minimum_unsigned_sample_clearance_mm": 64.73761796951294
+          },
+          "Sode_L_01_Suspension": {
+            "triangle_intersections": 0,
+            "attachment_junction": true,
+            "examples": [],
+            "sampled_vertices": 122,
+            "minimum_unsigned_sample_clearance_mm": 4.662470892071724
+          },
+          "Sode_L_01_UpperAttachment": {
+            "triangle_intersections": 0,
+            "attachment_junction": false,
+            "examples": [],
+            "sampled_vertices": 117,
+            "minimum_unsigned_sample_clearance_mm": 36.32770478725433
+          },
+          "Sode_R_01_Bindings": {
+            "triangle_intersections": 0,
+            "attachment_junction": false,
+            "examples": [],
+            "sampled_vertices": 120,
+            "minimum_unsigned_sample_clearance_mm": 46.676743775606155
+          },
+          "Sode_R_01_Fittings": {
+            "triangle_intersections": 0,
+            "attachment_junction": false,
+            "examples": [],
+            "sampled_vertices": 124,
+            "minimum_unsigned_sample_clearance_mm": 50.49840733408928
+          },
+          "Sode_R_01_InteriorPadding": {
+            "triangle_intersections": 0,
+            "attachment_junction": false,
+            "examples": [],
+            "sampled_vertices": 122,
+            "minimum_unsigned_sample_clearance_mm": 49.37174543738365
+          },
+          "Sode_R_01_Lacing": {
+            "triangle_intersections": 0,
+            "attachment_junction": false,
+            "examples": [],
+            "sampled_vertices": 128,
+            "minimum_unsigned_sample_clearance_mm": 69.5486068725586
+          },
+          "Sode_R_01_LowerEdgeRow": {
+            "triangle_intersections": 0,
+            "attachment_junction": false,
+            "examples": [],
+            "sampled_vertices": 128,
+            "minimum_unsigned_sample_clearance_mm": 141.80651307106018
+          },
+          "Sode_R_01_MainPlateRows": {
+            "triangle_intersections": 0,
+            "attachment_junction": false,
+            "examples": [],
+            "sampled_vertices": 128,
+            "minimum_unsigned_sample_clearance_mm": 65.39648771286011
+          },
+          "Sode_R_01_Suspension": {
+            "triangle_intersections": 0,
+            "attachment_junction": true,
+            "examples": [],
+            "sampled_vertices": 122,
+            "minimum_unsigned_sample_clearance_mm": 5.780630744993687
+          },
+          "Sode_R_01_UpperAttachment": {
+            "triangle_intersections": 0,
+            "attachment_junction": false,
+            "examples": [],
+            "sampled_vertices": 117,
+            "minimum_unsigned_sample_clearance_mm": 36.36559844017029
+          }
+        }
+      },
+      "rigid_shell_maximum_sample_distance_error_metres": 0.0,
+      "rigid_components_distance_errors_metres": {
+        "Sode_L_01_Bindings": 0.0,
+        "Sode_L_01_Fittings": 0.0,
+        "Sode_L_01_InteriorPadding": 0.0,
+        "Sode_L_01_Lacing": 0.0,
+        "Sode_L_01_LowerEdgeRow": 0.0,
+        "Sode_L_01_MainPlateRows": 0.0,
+        "Sode_L_01_UpperAttachment": 0.0,
+        "Sode_R_01_Bindings": 0.0,
+        "Sode_R_01_Fittings": 0.0,
+        "Sode_R_01_InteriorPadding": 0.0,
+        "Sode_R_01_Lacing": 0.0,
+        "Sode_R_01_LowerEdgeRow": 0.0,
+        "Sode_R_01_MainPlateRows": 0.0,
+        "Sode_R_01_UpperAttachment": 0.0
+      },
+      "totals": {
+        "body": {
+          "rigid_shell_triangle_pairs": 0,
+          "flexible_suspension_triangle_pairs": 0
+        },
+        "kabuto": {
+          "rigid_shell_triangle_pairs": 0,
+          "flexible_suspension_triangle_pairs": 0
+        },
+        "do": {
+          "rigid_shell_triangle_pairs": 0,
+          "flexible_suspension_triangle_pairs": 0
+        }
+      }
+    },
+    {
+      "suspension_targets": {
+        "l": {
+          "opening_cm": 2.690152366082748,
+          "lift_clearance_cm": 0.0,
+          "direction": [
+            0.6685813665390015,
+            -0.3276985287666321,
+            -0.6675426363945007
+          ],
+          "target_blender_cm": [
+            [
+              0.12917093932628632,
+              0.7378931641578674,
+              0.6624411344528198,
+              14.405619621276855
+            ],
+            [
+              -0.7829082012176514,
+              0.48587775230407715,
+              -0.3885580897331238,
+              -12.32413101196289
+            ],
+            [
+              -0.6085802316665649,
+              -0.46844011545181274,
+              0.6404640078544617,
+              136.38693237304688
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "upper_reference_blender_cm": [
+            [
+              0.5760334134101868,
+              -0.03259218856692314,
+              0.8167759776115417,
+              19.009885787963867
+            ],
+            [
+              -0.02341352589428425,
+              0.9981369376182556,
+              0.056341540068387985,
+              2.557236433029175
+            ],
+            [
+              -0.8170908093452454,
+              -0.05157821625471115,
+              0.5741972923278809,
+              143.58352661132812
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "shoulder_blender_cm": [
+            12.93337631225586,
+            -10.085145950317383,
+            136.1494903564453
+          ],
+          "elbow_blender_cm": [
+            16.520587921142578,
+            -31.827407836914062,
+            119.2485122680664
+          ],
+          "torso_delta_blender_cm": [
+            [
+              0.547270655632019,
+              0.8351238965988159,
+              -0.05534377694129944,
+              8.384933471679688
+            ],
+            [
+              -0.832288384437561,
+              0.5500012636184692,
+              0.0692405179142952,
+              -5.635216236114502
+            ],
+            [
+              0.08826354146003723,
+              0.008168608881533146,
+              0.9960634112358093,
+              -11.423795700073242
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        },
+        "r": {
+          "opening_cm": 9.965268755188356,
+          "lift_clearance_cm": 4.0,
+          "direction": [
+            -0.9745373725891113,
+            0.1907861828804016,
+            0.11780475080013275
+          ],
+          "target_blender_cm": [
+            [
+              0.380525141954422,
+              -0.9226334691047668,
+              -0.06282947957515717,
+              -11.944704055786133
+            ],
+            [
+              -0.9241825938224792,
+              -0.3818216025829315,
+              0.00963890366256237,
+              30.94363021850586
+            ],
+            [
+              -0.03287886455655098,
+              0.05439891293644905,
+              -0.9979763627052307,
+              136.460205078125
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "upper_reference_blender_cm": [
+            [
+              0.5760277509689331,
+              -0.03259199112653732,
+              0.8167754411697388,
+              -19.009883880615234
+            ],
+            [
+              0.023414766415953636,
+              -0.9981366395950317,
+              -0.05634072795510292,
+              2.5572762489318848
+            ],
+            [
+              0.8170908689498901,
+              0.05157822370529175,
+              -0.5741958022117615,
+              143.5830078125
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "shoulder_blender_cm": [
+            -6.533943176269531,
+            22.77421760559082,
+            133.34194946289062
+          ],
+          "elbow_blender_cm": [
+            -17.101396560668945,
+            48.43949508666992,
+            134.25514221191406
+          ],
+          "torso_delta_blender_cm": [
+            [
+              0.547270655632019,
+              0.8351238965988159,
+              -0.05534377694129944,
+              8.384933471679688
+            ],
+            [
+              -0.832288384437561,
+              0.5500012636184692,
+              0.0692405179142952,
+              -5.635216236114502
+            ],
+            [
+              0.08826354146003723,
+              0.008168608881533146,
+              0.9960634112358093,
+              -11.423795700073242
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      },
+      "pose": "A_Attack:6",
+      "type": "native Manny bone animation, root locked in place",
+      "frame": 6,
+      "surface_intersections": {
+        "body": {
+          "Sode_L_01_Bindings": {
+            "triangle_intersections": 0,
+            "attachment_junction": false,
+            "examples": [],
+            "sampled_vertices": 120,
+            "minimum_unsigned_sample_clearance_mm": 47.30017110705376
+          },
+          "Sode_L_01_Fittings": {
+            "triangle_intersections": 0,
+            "attachment_junction": false,
+            "examples": [],
+            "sampled_vertices": 124,
+            "minimum_unsigned_sample_clearance_mm": 49.237340688705444
+          },
+          "Sode_L_01_InteriorPadding": {
+            "triangle_intersections": 0,
+            "attachment_junction": false,
+            "examples": [],
+            "sampled_vertices": 122,
+            "minimum_unsigned_sample_clearance_mm": 32.63220563530922
+          },
+          "Sode_L_01_Lacing": {
+            "triangle_intersections": 0,
+            "attachment_junction": false,
+            "examples": [],
+            "sampled_vertices": 128,
+            "minimum_unsigned_sample_clearance_mm": 43.66133734583855
+          },
+          "Sode_L_01_LowerEdgeRow": {
+            "triangle_intersections": 0,
+            "attachment_junction": false,
+            "examples": [],
+            "sampled_vertices": 128,
+            "minimum_unsigned_sample_clearance_mm": 39.804067462682724
+          },
+          "Sode_L_01_MainPlateRows": {
+            "triangle_intersections": 0,
+            "attachment_junction": false,
+            "examples": [],
+            "sampled_vertices": 128,
+            "minimum_unsigned_sample_clearance_mm": 40.88347777724266
+          },
+          "Sode_L_01_Suspension": {
+            "triangle_intersections": 0,
+            "attachment_junction": true,
+            "examples": [],
+            "sampled_vertices": 122,
+            "minimum_unsigned_sample_clearance_mm": 16.74896664917469
+          },
+          "Sode_L_01_UpperAttachment": {
+            "triangle_intersections": 0,
+            "attachment_junction": false,
+            "examples": [],
+            "sampled_vertices": 117,
+            "minimum_unsigned_sample_clearance_mm": 48.5338531434536
+          },
+          "Sode_R_01_Bindings": {
+            "triangle_intersections": 0,
+            "attachment_junction": false,
+            "examples": [],
+            "sampled_vertices": 120,
+            "minimum_unsigned_sample_clearance_mm": 24.17427860200405
+          },
+          "Sode_R_01_Fittings": {
+            "triangle_intersections": 0,
+            "attachment_junction": false,
+            "examples": [],
+            "sampled_vertices": 124,
+            "minimum_unsigned_sample_clearance_mm": 35.47521308064461
+          },
+          "Sode_R_01_InteriorPadding": {
+            "triangle_intersections": 0,
+            "attachment_junction": false,
+            "examples": [],
+            "sampled_vertices": 122,
+            "minimum_unsigned_sample_clearance_mm": 12.777411378920078
+          },
+          "Sode_R_01_Lacing": {
+            "triangle_intersections": 0,
+            "attachment_junction": false,
+            "examples": [],
+            "sampled_vertices": 128,
+            "minimum_unsigned_sample_clearance_mm": 21.571002900600433
+          },
+          "Sode_R_01_LowerEdgeRow": {
+            "triangle_intersections": 0,
+            "attachment_junction": false,
+            "examples": [],
+            "sampled_vertices": 128,
+            "minimum_unsigned_sample_clearance_mm": 83.4672749042511
+          },
+          "Sode_R_01_MainPlateRows": {
+            "triangle_intersections": 0,
+            "attachment_junction": false,
+            "examples": [],
+            "sampled_vertices": 128,
+            "minimum_unsigned_sample_clearance_mm": 28.319943696260452
+          },
+          "Sode_R_01_Suspension": {
+            "triangle_intersections": 0,
+            "attachment_junction": true,
+            "examples": [],
+            "sampled_vertices": 122,
+            "minimum_unsigned_sample_clearance_mm": 10.246815159916878
+          },
+          "Sode_R_01_UpperAttachment": {
+            "triangle_intersections": 0,
+            "attachment_junction": false,
+            "examples": [],
+            "sampled_vertices": 117,
+            "minimum_unsigned_sample_clearance_mm": 22.99998514354229
+          }
+        },
+        "kabuto": {
+          "Sode_L_01_Bindings": {
+            "triangle_intersections": 0,
+            "attachment_junction": false,
+            "examples": [],
+            "sampled_vertices": 120,
+            "minimum_unsigned_sample_clearance_mm": 62.66032159328461
+          },
+          "Sode_L_01_Fittings": {
+            "triangle_intersections": 0,
+            "attachment_junction": false,
+            "examples": [],
+            "sampled_vertices": 124,
+            "minimum_unsigned_sample_clearance_mm": 60.1993203163147
+          },
+          "Sode_L_01_InteriorPadding": {
+            "triangle_intersections": 0,
+            "attachment_junction": false,
+            "examples": [],
+            "sampled_vertices": 122,
+            "minimum_unsigned_sample_clearance_mm": 74.37542825937271
+          },
+          "Sode_L_01_Lacing": {
+            "triangle_intersections": 0,
+            "attachment_junction": false,
+            "examples": [],
+            "sampled_vertices": 128,
+            "minimum_unsigned_sample_clearance_mm": 84.98446643352509
+          },
+          "Sode_L_01_LowerEdgeRow": {
+            "triangle_intersections": 0,
+            "attachment_junction": false,
+            "examples": [],
+            "sampled_vertices": 128,
+            "minimum_unsigned_sample_clearance_mm": 249.69004094600677
+          },
+          "Sode_L_01_MainPlateRows": {
+            "triangle_intersections": 0,
+            "attachment_junction": false,
+            "examples": [],
+            "sampled_vertices": 128,
+            "minimum_unsigned_sample_clearance_mm": 101.50977224111557
+          },
+          "Sode_L_01_Suspension": {
+            "triangle_intersections": 0,
+            "attachment_junction": true,
+            "examples": [],
+            "sampled_vertices": 122,
+            "minimum_unsigned_sample_clearance_mm": 53.57704684138298
+          },
+          "Sode_L_01_UpperAttachment": {
+            "triangle_intersections": 0,
+            "attachment_junction": false,
+            "examples": [],
+            "sampled_vertices": 117,
+            "minimum_unsigned_sample_clearance_mm": 49.44900795817375
+          },
+          "Sode_R_01_Bindings": {
+            "triangle_intersections": 0,
+            "attachment_junction": false,
+            "examples": [],
+            "sampled_vertices": 120,
+            "minimum_unsigned_sample_clearance_mm": 52.72615700960159
+          },
+          "Sode_R_01_Fittings": {
+            "triangle_intersections": 0,
+            "attachment_junction": false,
+            "examples": [],
+            "sampled_vertices": 124,
+            "minimum_unsigned_sample_clearance_mm": 62.10993975400925
+          },
+          "Sode_R_01_InteriorPadding": {
+            "triangle_intersections": 0,
+            "attachment_junction": false,
+            "examples": [],
+            "sampled_vertices": 122,
+            "minimum_unsigned_sample_clearance_mm": 116.10449105501175
+          },
+          "Sode_R_01_Lacing": {
+            "triangle_intersections": 0,
+            "attachment_junction": false,
+            "examples": [],
+            "sampled_vertices": 128,
+            "minimum_unsigned_sample_clearance_mm": 81.6773772239685
+          },
+          "Sode_R_01_LowerEdgeRow": {
+            "triangle_intersections": 0,
+            "attachment_junction": false,
+            "examples": [],
+            "sampled_vertices": 128,
+            "minimum_unsigned_sample_clearance_mm": 307.0466220378876
+          },
+          "Sode_R_01_MainPlateRows": {
+            "triangle_intersections": 0,
+            "attachment_junction": false,
+            "examples": [],
+            "sampled_vertices": 128,
+            "minimum_unsigned_sample_clearance_mm": 130.76132535934448
+          },
+          "Sode_R_01_Suspension": {
+            "triangle_intersections": 0,
+            "attachment_junction": true,
+            "examples": [],
+            "sampled_vertices": 122,
+            "minimum_unsigned_sample_clearance_mm": 58.19263681769371
+          },
+          "Sode_R_01_UpperAttachment": {
+            "triangle_intersections": 0,
+            "attachment_junction": false,
+            "examples": [],
+            "sampled_vertices": 117,
+            "minimum_unsigned_sample_clearance_mm": 51.90816521644592
+          }
+        },
+        "do": {
+          "Sode_L_01_Bindings": {
+            "triangle_intersections": 0,
+            "attachment_junction": false,
+            "examples": [],
+            "sampled_vertices": 120,
+            "minimum_unsigned_sample_clearance_mm": 82.08595216274261
+          },
+          "Sode_L_01_Fittings": {
+            "triangle_intersections": 0,
+            "attachment_junction": false,
+            "examples": [],
+            "sampled_vertices": 124,
+            "minimum_unsigned_sample_clearance_mm": 84.4457745552063
+          },
+          "Sode_L_01_InteriorPadding": {
+            "triangle_intersections": 0,
+            "attachment_junction": false,
+            "examples": [],
+            "sampled_vertices": 122,
+            "minimum_unsigned_sample_clearance_mm": 74.52347129583359
+          },
+          "Sode_L_01_Lacing": {
+            "triangle_intersections": 0,
+            "attachment_junction": false,
+            "examples": [],
+            "sampled_vertices": 128,
+            "minimum_unsigned_sample_clearance_mm": 97.43601083755493
+          },
+          "Sode_L_01_LowerEdgeRow": {
+            "triangle_intersections": 0,
+            "attachment_junction": false,
+            "examples": [],
+            "sampled_vertices": 128,
+            "minimum_unsigned_sample_clearance_mm": 184.14761126041412
+          },
+          "Sode_L_01_MainPlateRows": {
+            "triangle_intersections": 0,
+            "attachment_junction": false,
+            "examples": [],
+            "sampled_vertices": 128,
+            "minimum_unsigned_sample_clearance_mm": 89.65015411376953
+          },
+          "Sode_L_01_Suspension": {
+            "triangle_intersections": 0,
+            "attachment_junction": true,
+            "examples": [],
+            "sampled_vertices": 122,
+            "minimum_unsigned_sample_clearance_mm": 3.5476074554026127
+          },
+          "Sode_L_01_UpperAttachment": {
+            "triangle_intersections": 0,
+            "attachment_junction": false,
+            "examples": [],
+            "sampled_vertices": 117,
+            "minimum_unsigned_sample_clearance_mm": 73.7852230668068
+          },
+          "Sode_R_01_Bindings": {
+            "triangle_intersections": 0,
+            "attachment_junction": false,
+            "examples": [],
+            "sampled_vertices": 120,
+            "minimum_unsigned_sample_clearance_mm": 59.2830665409565
+          },
+          "Sode_R_01_Fittings": {
+            "triangle_intersections": 0,
+            "attachment_junction": false,
+            "examples": [],
+            "sampled_vertices": 124,
+            "minimum_unsigned_sample_clearance_mm": 68.65225732326508
+          },
+          "Sode_R_01_InteriorPadding": {
+            "triangle_intersections": 0,
+            "attachment_junction": false,
+            "examples": [],
+            "sampled_vertices": 122,
+            "minimum_unsigned_sample_clearance_mm": 105.5278554558754
+          },
+          "Sode_R_01_Lacing": {
+            "triangle_intersections": 0,
+            "attachment_junction": false,
+            "examples": [],
+            "sampled_vertices": 128,
+            "minimum_unsigned_sample_clearance_mm": 89.23092484474182
+          },
+          "Sode_R_01_LowerEdgeRow": {
+            "triangle_intersections": 0,
+            "attachment_junction": false,
+            "examples": [],
+            "sampled_vertices": 128,
+            "minimum_unsigned_sample_clearance_mm": 292.90881752967834
+          },
+          "Sode_R_01_MainPlateRows": {
+            "triangle_intersections": 0,
+            "attachment_junction": false,
+            "examples": [],
+            "sampled_vertices": 128,
+            "minimum_unsigned_sample_clearance_mm": 121.27165496349335
+          },
+          "Sode_R_01_Suspension": {
+            "triangle_intersections": 0,
+            "attachment_junction": true,
+            "examples": [],
+            "sampled_vertices": 122,
+            "minimum_unsigned_sample_clearance_mm": 5.2397544495761395
+          },
+          "Sode_R_01_UpperAttachment": {
+            "triangle_intersections": 0,
+            "attachment_junction": false,
+            "examples": [],
+            "sampled_vertices": 117,
+            "minimum_unsigned_sample_clearance_mm": 56.27178028225899
+          }
+        }
+      },
+      "rigid_shell_maximum_sample_distance_error_metres": 5.686992657905066e-07,
+      "rigid_components_distance_errors_metres": {
+        "Sode_L_01_Bindings": 2.568323922147453e-07,
+        "Sode_L_01_Fittings": 3.1488404289570227e-07,
+        "Sode_L_01_InteriorPadding": 3.4996740856663155e-07,
+        "Sode_L_01_Lacing": 2.441980793688181e-07,
+        "Sode_L_01_LowerEdgeRow": 1.1090031121208099e-07,
+        "Sode_L_01_MainPlateRows": 3.550736770302487e-07,
+        "Sode_L_01_UpperAttachment": 2.2277897921557654e-07,
+        "Sode_R_01_Bindings": 4.88877997528725e-07,
+        "Sode_R_01_Fittings": 4.0200985240712583e-07,
+        "Sode_R_01_InteriorPadding": 5.686992657905066e-07,
+        "Sode_R_01_Lacing": 3.9756919451017225e-07,
+        "Sode_R_01_LowerEdgeRow": 1.044451315157513e-07,
+        "Sode_R_01_MainPlateRows": 3.232620619519899e-07,
+        "Sode_R_01_UpperAttachment": 2.980497136595428e-07
+      },
+      "totals": {
+        "body": {
+          "rigid_shell_triangle_pairs": 0,
+          "flexible_suspension_triangle_pairs": 0
+        },
+        "kabuto": {
+          "rigid_shell_triangle_pairs": 0,
+          "flexible_suspension_triangle_pairs": 0
+        },
+        "do": {
+          "rigid_shell_triangle_pairs": 0,
+          "flexible_suspension_triangle_pairs": 0
+        }
+      }
+    },
+    {
+      "suspension_targets": {
+        "l": {
+          "opening_cm": 2.8263838841364946,
+          "lift_clearance_cm": 0.0,
+          "direction": [
+            0.6496797204017639,
+            -0.6035246849060059,
+            -0.46224871277809143
+          ],
+          "target_blender_cm": [
+            [
+              0.9307389259338379,
+              -0.1750730276107788,
+              0.3210524916648865,
+              5.665687084197998
+            ],
+            [
+              -0.18592792749404907,
+              0.5294440984725952,
+              0.8277196288108826,
+              2.415069103240967
+            ],
+            [
+              -0.31489095091819763,
+              -0.8300832509994507,
+              0.46022331714630127,
+              143.25303649902344
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "upper_reference_blender_cm": [
+            [
+              0.5760334134101868,
+              -0.03259218856692314,
+              0.8167759776115417,
+              19.009885787963867
+            ],
+            [
+              -0.02341352589428425,
+              0.9981369376182556,
+              0.056341540068387985,
+              2.557236433029175
+            ],
+            [
+              -0.8170908093452454,
+              -0.05157821625471115,
+              0.5741972923278809,
+              143.58352661132812
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "shoulder_blender_cm": [
+            3.246692180633545,
+            1.044939398765564,
+            142.7434539794922
+          ],
+          "elbow_blender_cm": [
+            29.094388961791992,
+            -4.118511199951172,
+            133.99856567382812
+          ],
+          "torso_delta_blender_cm": [
+            [
+              0.855862021446228,
+              -0.4865890443325043,
+              -0.17530320584774017,
+              13.989198684692383
+            ],
+            [
+              0.4847617447376251,
+              0.8728470206260681,
+              -0.056066129356622696,
+              -2.1845510005950928
+            ],
+            [
+              0.18029415607452393,
+              -0.036995500326156616,
+              0.9829164147377014,
+              -5.839956283569336
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        },
+        "r": {
+          "opening_cm": 9.88330325901836,
+          "lift_clearance_cm": 4.0,
+          "direction": [
+            -0.995954692363739,
+            -0.028436899185180664,
+            0.0852365717291832
+          ],
+          "target_blender_cm": [
+            [
+              0.8535016179084778,
+              0.5045236349105835,
+              0.13032492995262146,
+              -38.89930725097656
+            ],
+            [
+              0.5124003291130066,
+              -0.8580772280693054,
+              -0.033885885030031204,
+              -21.51559829711914
+            ],
+            [
+              0.09473641961812973,
+              0.09570106118917465,
+              -0.9908907413482666,
+              140.70957946777344
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "upper_reference_blender_cm": [
+            [
+              0.5760277509689331,
+              -0.03259199112653732,
+              0.8167754411697388,
+              -19.009883880615234
+            ],
+            [
+              0.023414766415953636,
+              -0.9981366395950317,
+              -0.05634072795510292,
+              2.5572762489318848
+            ],
+            [
+              0.8170908689498901,
+              0.05157822370529175,
+              -0.5741958022117615,
+              143.5830078125
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "shoulder_blender_cm": [
+            -30.033823013305664,
+            -16.66645050048828,
+            138.51263427734375
+          ],
+          "elbow_blender_cm": [
+            -53.73625183105469,
+            -30.896181106567383,
+            135.88185119628906
+          ],
+          "torso_delta_blender_cm": [
+            [
+              0.855862021446228,
+              -0.4865890443325043,
+              -0.17530320584774017,
+              13.989198684692383
+            ],
+            [
+              0.4847617447376251,
+              0.8728470206260681,
+              -0.056066129356622696,
+              -2.1845510005950928
+            ],
+            [
+              0.18029415607452393,
+              -0.036995500326156616,
+              0.9829164147377014,
+              -5.839956283569336
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      },
+      "pose": "A_Attack:12",
+      "type": "native Manny bone animation, root locked in place",
+      "frame": 12,
+      "surface_intersections": {
+        "body": {
+          "Sode_L_01_Bindings": {
+            "triangle_intersections": 0,
+            "attachment_junction": false,
+            "examples": [],
+            "sampled_vertices": 120,
+            "minimum_unsigned_sample_clearance_mm": 46.96471616625786
+          },
+          "Sode_L_01_Fittings": {
+            "triangle_intersections": 0,
+            "attachment_junction": false,
+            "examples": [],
+            "sampled_vertices": 124,
+            "minimum_unsigned_sample_clearance_mm": 51.35275050997734
+          },
+          "Sode_L_01_InteriorPadding": {
+            "triangle_intersections": 0,
+            "attachment_junction": false,
+            "examples": [],
+            "sampled_vertices": 122,
+            "minimum_unsigned_sample_clearance_mm": 27.922727167606354
+          },
+          "Sode_L_01_Lacing": {
+            "triangle_intersections": 0,
+            "attachment_junction": false,
+            "examples": [],
+            "sampled_vertices": 128,
+            "minimum_unsigned_sample_clearance_mm": 48.39983209967613
+          },
+          "Sode_L_01_LowerEdgeRow": {
+            "triangle_intersections": 0,
+            "attachment_junction": false,
+            "examples": [],
+            "sampled_vertices": 128,
+            "minimum_unsigned_sample_clearance_mm": 84.30863171815872
+          },
+          "Sode_L_01_MainPlateRows": {
+            "triangle_intersections": 0,
+            "attachment_junction": false,
+            "examples": [],
+            "sampled_vertices": 128,
+            "minimum_unsigned_sample_clearance_mm": 40.20479694008827
+          },
+          "Sode_L_01_Suspension": {
+            "triangle_intersections": 0,
+            "attachment_junction": true,
+            "examples": [],
+            "sampled_vertices": 122,
+            "minimum_unsigned_sample_clearance_mm": 15.787862241268158
+          },
+          "Sode_L_01_UpperAttachment": {
+            "triangle_intersections": 0,
+            "attachment_junction": false,
+            "examples": [],
+            "sampled_vertices": 117,
+            "minimum_unsigned_sample_clearance_mm": 43.31326484680176
+          },
+          "Sode_R_01_Bindings": {
+            "triangle_intersections": 0,
+            "attachment_junction": false,
+            "examples": [],
+            "sampled_vertices": 120,
+            "minimum_unsigned_sample_clearance_mm": 56.31374195218086
+          },
+          "Sode_R_01_Fittings": {
+            "triangle_intersections": 0,
+            "attachment_junction": false,
+            "examples": [],
+            "sampled_vertices": 124,
+            "minimum_unsigned_sample_clearance_mm": 58.83704125881195
+          },
+          "Sode_R_01_InteriorPadding": {
+            "triangle_intersections": 0,
+            "attachment_junction": false,
+            "examples": [],
+            "sampled_vertices": 122,
+            "minimum_unsigned_sample_clearance_mm": 42.988140136003494
+          },
+          "Sode_R_01_Lacing": {
+            "triangle_intersections": 0,
+            "attachment_junction": false,
+            "examples": [],
+            "sampled_vertices": 128,
+            "minimum_unsigned_sample_clearance_mm": 77.36014574766159
+          },
+          "Sode_R_01_LowerEdgeRow": {
+            "triangle_intersections": 0,
+            "attachment_junction": false,
+            "examples": [],
+            "sampled_vertices": 128,
+            "minimum_unsigned_sample_clearance_mm": 55.78756332397461
+          },
+          "Sode_R_01_MainPlateRows": {
+            "triangle_intersections": 0,
+            "attachment_junction": false,
+            "examples": [],
+            "sampled_vertices": 128,
+            "minimum_unsigned_sample_clearance_mm": 74.95439797639847
+          },
+          "Sode_R_01_Suspension": {
+            "triangle_intersections": 21,
+            "attachment_junction": true,
+            "examples": [
+              [
+                33802,
+                524
+              ],
+              [
+                33802,
+                527
+              ],
+              [
+                33802,
+                366
+              ],
+              [
+                33802,
+                364
+              ],
+              [
+                33802,
+                367
+              ]
+            ],
+            "sampled_vertices": 122,
+            "minimum_unsigned_sample_clearance_mm": 0.21253306476864964
+          },
+          "Sode_R_01_UpperAttachment": {
+            "triangle_intersections": 0,
+            "attachment_junction": false,
+            "examples": [],
+            "sampled_vertices": 117,
+            "minimum_unsigned_sample_clearance_mm": 71.76471501588821
+          }
+        },
+        "kabuto": {
+          "Sode_L_01_Bindings": {
+            "triangle_intersections": 0,
+            "attachment_junction": false,
+            "examples": [],
+            "sampled_vertices": 120,
+            "minimum_unsigned_sample_clearance_mm": 90.61933308839798
+          },
+          "Sode_L_01_Fittings": {
+            "triangle_intersections": 0,
+            "attachment_junction": false,
+            "examples": [],
+            "sampled_vertices": 124,
+            "minimum_unsigned_sample_clearance_mm": 94.42828595638275
+          },
+          "Sode_L_01_InteriorPadding": {
+            "triangle_intersections": 0,
+            "attachment_junction": false,
+            "examples": [],
+            "sampled_vertices": 122,
+            "minimum_unsigned_sample_clearance_mm": 86.77475154399872
+          },
+          "Sode_L_01_Lacing": {
+            "triangle_intersections": 0,
+            "attachment_junction": false,
+            "examples": [],
+            "sampled_vertices": 128,
+            "minimum_unsigned_sample_clearance_mm": 109.06143486499786
+          },
+          "Sode_L_01_LowerEdgeRow": {
+            "triangle_intersections": 0,
+            "attachment_junction": false,
+            "examples": [],
+            "sampled_vertices": 128,
+            "minimum_unsigned_sample_clearance_mm": 228.1636744737625
+          },
+          "Sode_L_01_MainPlateRows": {
+            "triangle_intersections": 0,
+            "attachment_junction": false,
+            "examples": [],
+            "sampled_vertices": 128,
+            "minimum_unsigned_sample_clearance_mm": 124.28026646375656
+          },
+          "Sode_L_01_Suspension": {
+            "triangle_intersections": 0,
+            "attachment_junction": true,
+            "examples": [],
+            "sampled_vertices": 122,
+            "minimum_unsigned_sample_clearance_mm": 23.150263354182243
+          },
+          "Sode_L_01_UpperAttachment": {
+            "triangle_intersections": 0,
+            "attachment_junction": false,
+            "examples": [],
+            "sampled_vertices": 117,
+            "minimum_unsigned_sample_clearance_mm": 85.10029315948486
+          },
+          "Sode_R_01_Bindings": {
+            "triangle_intersections": 0,
+            "attachment_junction": false,
+            "examples": [],
+            "sampled_vertices": 120,
+            "minimum_unsigned_sample_clearance_mm": 51.18774622678757
+          },
+          "Sode_R_01_Fittings": {
+            "triangle_intersections": 0,
+            "attachment_junction": false,
+            "examples": [],
+            "sampled_vertices": 124,
+            "minimum_unsigned_sample_clearance_mm": 61.61264702677727
+          },
+          "Sode_R_01_InteriorPadding": {
+            "triangle_intersections": 0,
+            "attachment_junction": false,
+            "examples": [],
+            "sampled_vertices": 122,
+            "minimum_unsigned_sample_clearance_mm": 112.61958628892899
+          },
+          "Sode_R_01_Lacing": {
+            "triangle_intersections": 0,
+            "attachment_junction": false,
+            "examples": [],
+            "sampled_vertices": 128,
+            "minimum_unsigned_sample_clearance_mm": 84.08715575933456
+          },
+          "Sode_R_01_LowerEdgeRow": {
+            "triangle_intersections": 0,
+            "attachment_junction": false,
+            "examples": [],
+            "sampled_vertices": 128,
+            "minimum_unsigned_sample_clearance_mm": 301.47239565849304
+          },
+          "Sode_R_01_MainPlateRows": {
+            "triangle_intersections": 0,
+            "attachment_junction": false,
+            "examples": [],
+            "sampled_vertices": 128,
+            "minimum_unsigned_sample_clearance_mm": 135.46611368656158
+          },
+          "Sode_R_01_Suspension": {
+            "triangle_intersections": 0,
+            "attachment_junction": true,
+            "examples": [],
+            "sampled_vertices": 122,
+            "minimum_unsigned_sample_clearance_mm": 30.020026490092278
+          },
+          "Sode_R_01_UpperAttachment": {
+            "triangle_intersections": 0,
+            "attachment_junction": false,
+            "examples": [],
+            "sampled_vertices": 117,
+            "minimum_unsigned_sample_clearance_mm": 49.81354624032974
+          }
+        },
+        "do": {
+          "Sode_L_01_Bindings": {
+            "triangle_intersections": 0,
+            "attachment_junction": false,
+            "examples": [],
+            "sampled_vertices": 120,
+            "minimum_unsigned_sample_clearance_mm": 87.15113997459412
+          },
+          "Sode_L_01_Fittings": {
+            "triangle_intersections": 0,
+            "attachment_junction": false,
+            "examples": [],
+            "sampled_vertices": 124,
+            "minimum_unsigned_sample_clearance_mm": 96.98662161827087
+          },
+          "Sode_L_01_InteriorPadding": {
+            "triangle_intersections": 0,
+            "attachment_junction": false,
+            "examples": [],
+            "sampled_vertices": 122,
+            "minimum_unsigned_sample_clearance_mm": 84.09688621759415
+          },
+          "Sode_L_01_Lacing": {
+            "triangle_intersections": 0,
+            "attachment_junction": false,
+            "examples": [],
+            "sampled_vertices": 128,
+            "minimum_unsigned_sample_clearance_mm": 95.5851674079895
+          },
+          "Sode_L_01_LowerEdgeRow": {
+            "triangle_intersections": 0,
+            "attachment_junction": false,
+            "examples": [],
+            "sampled_vertices": 128,
+            "minimum_unsigned_sample_clearance_mm": 166.4503812789917
+          },
+          "Sode_L_01_MainPlateRows": {
+            "triangle_intersections": 0,
+            "attachment_junction": false,
+            "examples": [],
+            "sampled_vertices": 128,
+            "minimum_unsigned_sample_clearance_mm": 91.76604449748993
+          },
+          "Sode_L_01_Suspension": {
+            "triangle_intersections": 0,
+            "attachment_junction": true,
+            "examples": [],
+            "sampled_vertices": 122,
+            "minimum_unsigned_sample_clearance_mm": 2.1425301674753428
+          },
+          "Sode_L_01_UpperAttachment": {
+            "triangle_intersections": 0,
+            "attachment_junction": false,
+            "examples": [],
+            "sampled_vertices": 117,
+            "minimum_unsigned_sample_clearance_mm": 85.55598556995392
+          },
+          "Sode_R_01_Bindings": {
+            "triangle_intersections": 0,
+            "attachment_junction": false,
+            "examples": [],
+            "sampled_vertices": 120,
+            "minimum_unsigned_sample_clearance_mm": 69.05870139598846
+          },
+          "Sode_R_01_Fittings": {
+            "triangle_intersections": 0,
+            "attachment_junction": false,
+            "examples": [],
+            "sampled_vertices": 124,
+            "minimum_unsigned_sample_clearance_mm": 78.45700532197952
+          },
+          "Sode_R_01_InteriorPadding": {
+            "triangle_intersections": 0,
+            "attachment_junction": false,
+            "examples": [],
+            "sampled_vertices": 122,
+            "minimum_unsigned_sample_clearance_mm": 119.2253902554512
+          },
+          "Sode_R_01_Lacing": {
+            "triangle_intersections": 0,
+            "attachment_junction": false,
+            "examples": [],
+            "sampled_vertices": 128,
+            "minimum_unsigned_sample_clearance_mm": 99.73108768463135
+          },
+          "Sode_R_01_LowerEdgeRow": {
+            "triangle_intersections": 0,
+            "attachment_junction": false,
+            "examples": [],
+            "sampled_vertices": 128,
+            "minimum_unsigned_sample_clearance_mm": 307.22159147262573
+          },
+          "Sode_R_01_MainPlateRows": {
+            "triangle_intersections": 0,
+            "attachment_junction": false,
+            "examples": [],
+            "sampled_vertices": 128,
+            "minimum_unsigned_sample_clearance_mm": 148.11073243618011
+          },
+          "Sode_R_01_Suspension": {
+            "triangle_intersections": 0,
+            "attachment_junction": true,
+            "examples": [],
+            "sampled_vertices": 122,
+            "minimum_unsigned_sample_clearance_mm": 3.410692559555173
+          },
+          "Sode_R_01_UpperAttachment": {
+            "triangle_intersections": 0,
+            "attachment_junction": false,
+            "examples": [],
+            "sampled_vertices": 117,
+            "minimum_unsigned_sample_clearance_mm": 63.95342946052551
+          }
+        }
+      },
+      "rigid_shell_maximum_sample_distance_error_metres": 6.195652972607046e-07,
+      "rigid_components_distance_errors_metres": {
+        "Sode_L_01_Bindings": 2.0875487544147475e-07,
+        "Sode_L_01_Fittings": 2.8386860850826423e-07,
+        "Sode_L_01_InteriorPadding": 3.154874204797098e-07,
+        "Sode_L_01_Lacing": 2.595793869297758e-07,
+        "Sode_L_01_LowerEdgeRow": 2.2336721894333778e-07,
+        "Sode_L_01_MainPlateRows": 2.4673498180693976e-07,
+        "Sode_L_01_UpperAttachment": 1.913562969191318e-07,
+        "Sode_R_01_Bindings": 5.138377963120888e-07,
+        "Sode_R_01_Fittings": 4.06285024109887e-07,
+        "Sode_R_01_InteriorPadding": 6.195652972607046e-07,
+        "Sode_R_01_Lacing": 4.2673856592845283e-07,
+        "Sode_R_01_LowerEdgeRow": 1.5662425084661535e-07,
+        "Sode_R_01_MainPlateRows": 3.2416486123176824e-07,
+        "Sode_R_01_UpperAttachment": 3.04698382053159e-07
+      },
+      "totals": {
+        "body": {
+          "rigid_shell_triangle_pairs": 0,
+          "flexible_suspension_triangle_pairs": 21
+        },
+        "kabuto": {
+          "rigid_shell_triangle_pairs": 0,
+          "flexible_suspension_triangle_pairs": 0
+        },
+        "do": {
+          "rigid_shell_triangle_pairs": 0,
+          "flexible_suspension_triangle_pairs": 0
+        }
+      }
+    }
+  ],
+  "captures": [],
+  "unavailable_native_actions": [],
+  "native_bow_clip_available": false,
+  "diagnostic_definitions": {
+    "arms-forward": "upper arms directed (\u00b1.13,-1,-.12)",
+    "arms-raised": "upper arms directed (\u00b1.90,-.2,.10)",
+    "bow-diagnostic": "left upper arm toward (.18,-1,.08), right toward (-.75,.6,.12), right hand toward draw point (0,-.04,1.57)m; no bow asset"
+  },
+  "scope": "Sampled existing native Manny motions and explicit static diagnostics on saved source and preserved armor fixtures. No source is saved. Native bone channels are unchanged on temporary action copies with object-root channels removed.",
+  "limitations": [
+    "Triangle overlap counts are surface intersections, not penetration depth or continuous motion clearance.",
+    "Only the suspension ties may flex; rigidity uses sampled vertex-pair lengths and does not prove every pair.",
+    "A native bow-use animation is unavailable; bow pose is an explicitly labeled diagnostic, without a weapon.",
+    "Blender evidence does not substitute for Unreal import/render/animation checks."
+  ]
+}

@@ -1,0 +1,635 @@
+{
+  "asset": "Sode01",
+  "blender_version": "5.1.2",
+  "source_collection": "Sode01_Source",
+  "source_components": {
+    "Sode_L_01_MainPlateRows": 19360,
+    "Sode_L_01_Lacing": 8916,
+    "Sode_L_01_Bindings": 6036,
+    "Sode_L_01_Fittings": 7496,
+    "Sode_L_01_LowerEdgeRow": 4840,
+    "Sode_L_01_UpperAttachment": 1224,
+    "Sode_L_01_InteriorPadding": 7498,
+    "Sode_L_01_Suspension": 4728,
+    "Sode_R_01_MainPlateRows": 19360,
+    "Sode_R_01_Lacing": 8916,
+    "Sode_R_01_Bindings": 6036,
+    "Sode_R_01_Fittings": 7496,
+    "Sode_R_01_LowerEdgeRow": 4840,
+    "Sode_R_01_UpperAttachment": 1224,
+    "Sode_R_01_InteriorPadding": 7498,
+    "Sode_R_01_Suspension": 4728
+  },
+  "source_materials": 1,
+  "runtime_materials": 1,
+  "shared_material": "M_Sode01",
+  "shared_textures": "unchanged Do01 BaseColor, Normal, ORM",
+  "texture_dimensions": [
+    2048,
+    2048
+  ],
+  "skeleton_source": "SourceArt/Characters/Mannequins/Manny/Manny.blend",
+  "source_bone_count": 88,
+  "native_reference_bone_count": 89,
+  "left_right_assignment": {
+    "Sode_L_01": "wearer left, +X in Blender, upperarm_l",
+    "Sode_R_01": "wearer right, -X in Blender, upperarm_r"
+  },
+  "construction": {
+    "rows": 5,
+    "lamellae_per_row": 22,
+    "panel_width_metres": 0.252,
+    "panel_height_metres": 0.337
+  },
+  "attachment_method": "Rigid panels 100% upperarm_l/r; only two suspension braids interpolate between spine_05 at the D\u014d strap and same-side upperarm. No new bones or physics.",
+  "reference_priority": "3/4 silhouette, front, outer side, inner/back, exploded, decorative details",
+  "review_contract": {
+    "body_component_yaw_degrees": -90,
+    "helmet_offset_from_head_cm": [
+      0,
+      1.8368773,
+      -2.77510097
+    ],
+    "helmet_rotation_degrees": [
+      0,
+      0,
+      0
+    ],
+    "helmet_scale": [
+      1,
+      1,
+      1
+    ],
+    "pose_turn_bone": "spine_04",
+    "pose_bend_bone": "spine_04"
+  },
+  "side_frames": {
+    "L": {
+      "pivot": [
+        0.190098837018013,
+        0.02557235211133957,
+        1.4358352422714233
+      ],
+      "down": [
+        0.5760330557823181,
+        -0.02341378666460514,
+        -0.8170909881591797
+      ],
+      "outward": [
+        0.8173151016235352,
+        0.0,
+        0.5761910676956177
+      ],
+      "across": [
+        0.013490812852978706,
+        0.9997258186340332,
+        -0.019136440008878708
+      ]
+    },
+    "R": {
+      "pivot": [
+        -0.190098837018013,
+        0.02557271346449852,
+        1.435829997062683
+      ],
+      "down": [
+        -0.5760332345962524,
+        -0.023413829505443573,
+        -0.8170909285545349
+      ],
+      "outward": [
+        -0.8173149824142456,
+        0.0,
+        0.5761911869049072
+      ],
+      "across": [
+        -0.013490840792655945,
+        0.9997258186340332,
+        -0.019136471673846245
+      ]
+    }
+  },
+  "existing_actions": [
+    "A_Idle",
+    "A_Walk",
+    "A_Run",
+    "A_Attack"
+  ],
+  "unavailable_actions": [
+    "native bow-use clip"
+  ],
+  "dependencies": {
+    "SourceArt/Characters/Samurai/Do01/Do01.blend": "7963892cbe29ce4036ca33484f6c5e8232578c80b323ff55d26072dbfd571d7b",
+    "SourceArt/Characters/Mannequins/Manny/Manny.blend": "46032c0e10b7b0ff0f13ff82195a82f8b82d307d684e6c408544f385ecd617de",
+    "SourceArt/Characters/Samurai/Kabuto01/Kabuto01.blend": "8e7a80e3e36c6b2acbd19fa0385d49da476140864370e53ea6f6c85d4f3f45f1"
+  },
+  "source_triangles_before_modifiers": 120196,
+  "source_blend_sha256": "009e3fd8ba1f89119f874e94673b2abee187284e1e386e23eb77acbbea3f0d9a",
+  "sides": {
+    "L": {
+      "asset": "Sode_L_01",
+      "anatomical_side": "left",
+      "source_components": {
+        "Sode_L_01_Bindings": 6036,
+        "Sode_L_01_Fittings": 7496,
+        "Sode_L_01_InteriorPadding": 7498,
+        "Sode_L_01_Lacing": 8916,
+        "Sode_L_01_LowerEdgeRow": 4840,
+        "Sode_L_01_MainPlateRows": 19360,
+        "Sode_L_01_Suspension": 4728,
+        "Sode_L_01_UpperAttachment": 1224
+      },
+      "source_component_objects": 8,
+      "source_triangles_before_modifiers": 60098,
+      "evaluated_source_triangles": 60098,
+      "evaluated_source_bounds_metres": [
+        [
+          0.16581106185913086,
+          -0.1367407590150833,
+          1.2715175151824951
+        ],
+        [
+          0.43362826108932495,
+          0.16393308341503143,
+          1.5585373640060425
+        ]
+      ],
+      "runtime_lod_triangles": [
+        36058,
+        13192,
+        3982
+      ],
+      "runtime_lod_source_relative_ratios": [
+        0.5999866884089321,
+        0.21950813671004027,
+        0.06625844454058372
+      ],
+      "runtime_lod_bounds_metres": [
+        [
+          [
+            0.16581106185913086,
+            -0.1367407590150833,
+            1.2715175151824951
+          ],
+          [
+            0.43362826108932495,
+            0.16393308341503143,
+            1.5585373640060425
+          ]
+        ],
+        [
+          [
+            0.16615955531597137,
+            -0.13655242323875427,
+            1.2716275453567505
+          ],
+          [
+            0.4336952865123749,
+            0.163772314786911,
+            1.5581834316253662
+          ]
+        ],
+        [
+          [
+            0.16674084961414337,
+            -0.13669638335704803,
+            1.271038293838501
+          ],
+          [
+            0.4341718256473541,
+            0.1638166755437851,
+            1.5588432550430298
+          ]
+        ]
+      ],
+      "runtime_lod_maximum_axis_bound_change_metres": [
+        0.0,
+        0.00035393238067626953,
+        0.0009297877550125122
+      ],
+      "runtime_materials": 1,
+      "runtime_lod_bone_influences": [
+        {
+          "max": 2,
+          "min": 1,
+          "vertices": 18639,
+          "weight_sum_min": 0.9999999701976776,
+          "weight_sum_max": 1.0000000298023224
+        },
+        {
+          "max": 2,
+          "min": 1,
+          "vertices": 7178,
+          "weight_sum_min": 0.9999999701976776,
+          "weight_sum_max": 1.0000000298023224
+        },
+        {
+          "max": 2,
+          "min": 1,
+          "vertices": 2377,
+          "weight_sum_min": 0.9999999701976776,
+          "weight_sum_max": 1.0000000298023224
+        }
+      ],
+      "runtime_lod_normal_repairs": [
+        {
+          "lod": "SK_Sode_L_01_LOD0",
+          "invalid_corners_before_final_refresh": 0,
+          "flat_shaded_incident_lod2_faces": [],
+          "invalid_corners_after": 0,
+          "geometry_and_weights_unchanged": true
+        },
+        {
+          "lod": "SK_Sode_L_01_LOD1",
+          "invalid_corners_before_final_refresh": 0,
+          "flat_shaded_incident_lod2_faces": [],
+          "invalid_corners_after": 0,
+          "geometry_and_weights_unchanged": true
+        },
+        {
+          "lod": "SK_Sode_L_01_LOD2",
+          "invalid_corners_before_final_refresh": 0,
+          "flat_shaded_incident_lod2_faces": [],
+          "invalid_corners_after": 0,
+          "geometry_and_weights_unchanged": true
+        }
+      ],
+      "runtime_lod_weight_normalization": [
+        {
+          "lod": "SK_Sode_L_01_LOD0",
+          "vertices": 18639,
+          "max_influences_before": 2,
+          "vertices_with_pruned_influences": 0,
+          "max_discarded_weight": 0.0
+        },
+        {
+          "lod": "SK_Sode_L_01_LOD1",
+          "vertices": 7178,
+          "max_influences_before": 2,
+          "vertices_with_pruned_influences": 0,
+          "max_discarded_weight": 0.0
+        },
+        {
+          "lod": "SK_Sode_L_01_LOD2",
+          "vertices": 2377,
+          "max_influences_before": 2,
+          "vertices_with_pruned_influences": 0,
+          "max_discarded_weight": 0.0
+        }
+      ],
+      "runtime_lod_orientation_repairs": [
+        {
+          "lod": "SK_Sode_L_01_LOD0",
+          "closed_islands": 310,
+          "reoriented_islands": [],
+          "vertices_or_triangles_removed": 0
+        },
+        {
+          "lod": "SK_Sode_L_01_LOD1",
+          "closed_islands": 296,
+          "reoriented_islands": [],
+          "vertices_or_triangles_removed": 0
+        },
+        {
+          "lod": "SK_Sode_L_01_LOD2",
+          "closed_islands": 198,
+          "reoriented_islands": [
+            {
+              "vertices": 4,
+              "faces": 4,
+              "signed_volume_before_metres3": -1.0585698377377734e-09
+            },
+            {
+              "vertices": 4,
+              "faces": 4,
+              "signed_volume_before_metres3": -1.0598762673505312e-09
+            }
+          ],
+          "vertices_or_triangles_removed": 0
+        }
+      ],
+      "armor_bounds_metres": [
+        [
+          0.16581106185913086,
+          -0.1367407590150833,
+          1.2715175151824951
+        ],
+        [
+          0.43362826108932495,
+          0.16393308341503143,
+          1.5585373640060425
+        ]
+      ],
+      "bounds_cm": {
+        "min": [
+          16.581106185913086,
+          -16.393308341503143,
+          127.15175151824951
+        ],
+        "max": [
+          43.362826108932495,
+          13.674075901508331,
+          155.85373640060425
+        ],
+        "size": [
+          26.78171992301941,
+          30.067384243011475,
+          28.701984882354736
+        ]
+      }
+    },
+    "R": {
+      "asset": "Sode_R_01",
+      "anatomical_side": "right",
+      "source_components": {
+        "Sode_R_01_Bindings": 6036,
+        "Sode_R_01_Fittings": 7496,
+        "Sode_R_01_InteriorPadding": 7498,
+        "Sode_R_01_Lacing": 8916,
+        "Sode_R_01_LowerEdgeRow": 4840,
+        "Sode_R_01_MainPlateRows": 19360,
+        "Sode_R_01_Suspension": 4728,
+        "Sode_R_01_UpperAttachment": 1224
+      },
+      "source_component_objects": 8,
+      "source_triangles_before_modifiers": 60098,
+      "evaluated_source_triangles": 60098,
+      "evaluated_source_bounds_metres": [
+        [
+          -0.4334007203578949,
+          -0.13671565055847168,
+          1.2715123891830444
+        ],
+        [
+          -0.16567370295524597,
+          0.1640314757823944,
+          1.5585323572158813
+        ]
+      ],
+      "runtime_lod_triangles": [
+        36058,
+        13196,
+        3994
+      ],
+      "runtime_lod_source_relative_ratios": [
+        0.5999866884089321,
+        0.21957469466537988,
+        0.06645811840660255
+      ],
+      "runtime_lod_bounds_metres": [
+        [
+          [
+            -0.4334007203578949,
+            -0.13671565055847168,
+            1.2715123891830444
+          ],
+          [
+            -0.16567370295524597,
+            0.1640314757823944,
+            1.5585323572158813
+          ]
+        ],
+        [
+          [
+            -0.4336029291152954,
+            -0.1365957111120224,
+            1.2716224193572998
+          ],
+          [
+            -0.16567370295524597,
+            0.1638890951871872,
+            1.5582044124603271
+          ]
+        ],
+        [
+          [
+            -0.4337371289730072,
+            -0.1362878680229187,
+            1.2717286348342896
+          ],
+          [
+            -0.1673554927110672,
+            0.16366399824619293,
+            1.556994915008545
+          ]
+        ]
+      ],
+      "runtime_lod_maximum_axis_bound_change_metres": [
+        0.0,
+        0.0003279447555541992,
+        0.001681789755821228
+      ],
+      "runtime_materials": 1,
+      "runtime_lod_bone_influences": [
+        {
+          "max": 2,
+          "min": 1,
+          "vertices": 18639,
+          "weight_sum_min": 0.9999999701976776,
+          "weight_sum_max": 1.0000000298023224
+        },
+        {
+          "max": 2,
+          "min": 1,
+          "vertices": 7184,
+          "weight_sum_min": 0.9999999701976776,
+          "weight_sum_max": 1.0000000298023224
+        },
+        {
+          "max": 2,
+          "min": 1,
+          "vertices": 2395,
+          "weight_sum_min": 0.9999999701976776,
+          "weight_sum_max": 1.0000000298023224
+        }
+      ],
+      "runtime_lod_normal_repairs": [
+        {
+          "lod": "SK_Sode_R_01_LOD0",
+          "invalid_corners_before_final_refresh": 0,
+          "flat_shaded_incident_lod2_faces": [],
+          "invalid_corners_after": 0,
+          "geometry_and_weights_unchanged": true
+        },
+        {
+          "lod": "SK_Sode_R_01_LOD1",
+          "invalid_corners_before_final_refresh": 3,
+          "flat_shaded_incident_lod2_faces": [],
+          "invalid_corners_after": 0,
+          "geometry_and_weights_unchanged": true
+        },
+        {
+          "lod": "SK_Sode_R_01_LOD2",
+          "invalid_corners_before_final_refresh": 0,
+          "flat_shaded_incident_lod2_faces": [],
+          "invalid_corners_after": 0,
+          "geometry_and_weights_unchanged": true
+        }
+      ],
+      "runtime_lod_weight_normalization": [
+        {
+          "lod": "SK_Sode_R_01_LOD0",
+          "vertices": 18639,
+          "max_influences_before": 2,
+          "vertices_with_pruned_influences": 0,
+          "max_discarded_weight": 0.0
+        },
+        {
+          "lod": "SK_Sode_R_01_LOD1",
+          "vertices": 7184,
+          "max_influences_before": 2,
+          "vertices_with_pruned_influences": 0,
+          "max_discarded_weight": 0.0
+        },
+        {
+          "lod": "SK_Sode_R_01_LOD2",
+          "vertices": 2395,
+          "max_influences_before": 2,
+          "vertices_with_pruned_influences": 0,
+          "max_discarded_weight": 0.0
+        }
+      ],
+      "runtime_lod_orientation_repairs": [
+        {
+          "lod": "SK_Sode_R_01_LOD0",
+          "closed_islands": 310,
+          "reoriented_islands": [],
+          "vertices_or_triangles_removed": 0
+        },
+        {
+          "lod": "SK_Sode_R_01_LOD1",
+          "closed_islands": 298,
+          "reoriented_islands": [],
+          "vertices_or_triangles_removed": 0
+        },
+        {
+          "lod": "SK_Sode_R_01_LOD2",
+          "closed_islands": 204,
+          "reoriented_islands": [
+            {
+              "vertices": 4,
+              "faces": 4,
+              "signed_volume_before_metres3": -1.0591159931178742e-09
+            },
+            {
+              "vertices": 4,
+              "faces": 4,
+              "signed_volume_before_metres3": -1.0590767247945662e-09
+            }
+          ],
+          "vertices_or_triangles_removed": 0
+        }
+      ],
+      "armor_bounds_metres": [
+        [
+          -0.4334007203578949,
+          -0.13671565055847168,
+          1.2715123891830444
+        ],
+        [
+          -0.16567370295524597,
+          0.1640314757823944,
+          1.5585323572158813
+        ]
+      ],
+      "bounds_cm": {
+        "min": [
+          -43.34007203578949,
+          -16.40314757823944,
+          127.15123891830444
+        ],
+        "max": [
+          -16.567370295524597,
+          13.671565055847168,
+          155.85323572158813
+        ],
+        "size": [
+          26.772701740264893,
+          30.07471263408661,
+          28.70199680328369
+        ]
+      }
+    }
+  },
+  "source_component_objects": 16,
+  "runtime_attachment_controller": "SodeSuspension pose controller required: same skeleton, rigid panel swing with axial twist filtered and overhead roll/opening; only Suspension braids blend",
+  "motion_script_sha256": "4be49293475eb901d476eb9a6a9be1ad5e037b325ed0780c1290432042314ef0",
+  "runtime_materials_per_piece": 1,
+  "pair_shared_material": "M_Sode01",
+  "runtime_lod_triangles_pair": [
+    72116,
+    26388,
+    7976
+  ],
+  "reduction_ratios": [
+    0.6,
+    0.22,
+    0.07
+  ],
+  "reduction_basis": "Each LOD independently reduced from complete evaluated source; LOD0 is also a generated reduced copy",
+  "runtime_budget_target_triangles_pair": [
+    73000,
+    27000,
+    9000
+  ],
+  "runtime_budget_note": "Approximate targets for current 120196-triangle pair; actual reduced topology and silhouette require validation and rendered review",
+  "native_root_representation": "Original Manny root is the Blender armature object; local-cm geometry under .01-scale root",
+  "export_operation": "Saved editable source evaluated in rig REST pose; one combined weighted mesh per side plus two distance LODs",
+  "export_root_motion_handling": "Temporarily disable root action/NLA and use canonical .01 rest transform; restore action, slot, frame, root transform and pose matrices",
+  "exported_from_source_sha256": "460efb4ec3a4eecdc9e9843e123e3db0e0ffb7ae46422cf19e04f84d3415593f",
+  "editable_geometry_sha256": "a70ad4a4fc3b1877c165c6a167c98b17a305dddcde1caaf39e0d96ec8637cc87",
+  "editable_geometry_preserved_during_export": true,
+  "rig_pose_and_fixtures_preserved_during_export": true,
+  "textures": "Reuse unchanged Do01/Textures/T_Do01_{BaseColor,Normal,ORM}.png with M_Sode01 finish variant",
+  "animation_source": "Existing native Epic Manny animations; no new skeleton or animation asset exported",
+  "export_files": {
+    "Review/Exports/SM_Sode_L_01.fbx": {
+      "bytes": 3190108,
+      "sha256": "310f09bb6ff9db1fd598cd23f03f3856bfcab3f9c4d866d68a950b140a25c62a"
+    },
+    "Exports/SK_Sode_L_01.fbx": {
+      "bytes": 3406588,
+      "sha256": "d8c6b0a33928479fae633f37151f9722012ac625a469a4d6fbcc9ff9c1aeae55"
+    },
+    "Review/Exports/SM_Sode_L_01_LOD1.fbx": {
+      "bytes": 1209836,
+      "sha256": "6912421386fb4e8d569d551ceaa39b4a4ac1d15b4ca81526a30af46b399edd78"
+    },
+    "Exports/SK_Sode_L_01_LOD1.fbx": {
+      "bytes": 1397468,
+      "sha256": "39a75e55456c0e25c4465d406cf4c5529641472aaba880e564f4191f378616fd"
+    },
+    "Review/Exports/SM_Sode_L_01_LOD2.fbx": {
+      "bytes": 404092,
+      "sha256": "cee6e4195b54c3c28e95e379aa18a568953ca847790417d649fee850e44ea5e0"
+    },
+    "Exports/SK_Sode_L_01_LOD2.fbx": {
+      "bytes": 577132,
+      "sha256": "238cf01f70aa0513cc1af13f378b20f21cccafebcd73779eef05fe385f6fb634"
+    },
+    "Review/Exports/SM_Sode_R_01.fbx": {
+      "bytes": 3182684,
+      "sha256": "3ef5dd4bbceb15eec67b88e0d5b47b3483cfab5f26bb80be8166bf5ab6f68177"
+    },
+    "Exports/SK_Sode_R_01.fbx": {
+      "bytes": 3399036,
+      "sha256": "fba94485fce9b87d5a07cf124f879ff893949e7591502ec0ff08b8dbd2bea96e"
+    },
+    "Review/Exports/SM_Sode_R_01_LOD1.fbx": {
+      "bytes": 1215868,
+      "sha256": "25472a0e9e36f755ea1f44ecd099bed2dca983bd2a3c9c139090e7b7fc5dfb2b"
+    },
+    "Exports/SK_Sode_R_01_LOD1.fbx": {
+      "bytes": 1403276,
+      "sha256": "62cc2e18e3cc0344d599379f25021ce7ca5737ec66b9074bbdf1acdf575c9798"
+    },
+    "Review/Exports/SM_Sode_R_01_LOD2.fbx": {
+      "bytes": 405788,
+      "sha256": "291a66374b198d16ff0147b831b0b131f02efbfafe80e2e2c7d0813c3ddac965"
+    },
+    "Exports/SK_Sode_R_01_LOD2.fbx": {
+      "bytes": 578908,
+      "sha256": "373e84e70b601988aa2e8247e7cbad36a3098a8281d8cdcdcae6051fc1b53a7f"
+    }
+  }
+}

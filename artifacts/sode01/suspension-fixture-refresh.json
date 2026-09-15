@@ -1,0 +1,177 @@
+{
+  "validated": true,
+  "previous_fixture_sha256": "7e6fd2ad776b9cb4d1f09795ad687a845229a5474268ab2d7804518112d61f22",
+  "previous_source_blend_sha256": "67b5144a492591edb47381b234316657307e5dbd87fa348fa77b0248c7f5d243",
+  "source_blend_sha256": "009e3fd8ba1f89119f874e94673b2abee187284e1e386e23eb77acbbea3f0d9a",
+  "motion_script_sha256": "4be49293475eb901d476eb9a6a9be1ad5e037b325ed0780c1290432042314ef0",
+  "pose_review": "artifacts/sode01/pose-review.json",
+  "pose_review_sha256": "3f5d07fd20cda0e116eda69bfa437f1acac5f20382f005252b9d3bfea1f14285",
+  "generator_sha256": "30c5f99c180f60d3aaf5d9510893e3615c46e416f9e76d91ccca15c76bb2a58b",
+  "source_validation_sha256": "1d684eda74e044a523696129ab2e21bf3bfadaddecef4f1946cc63ef0e932064",
+  "sample_count": 32,
+  "maximum_numeric_change": 0.0,
+  "comparison_tolerance": 0.0001,
+  "comparisons": [
+    {
+      "pose": "neutral",
+      "side": "l",
+      "maximum_numeric_change": 0.0
+    },
+    {
+      "pose": "neutral",
+      "side": "r",
+      "maximum_numeric_change": 0.0
+    },
+    {
+      "pose": "arms-forward",
+      "side": "l",
+      "maximum_numeric_change": 0.0
+    },
+    {
+      "pose": "arms-forward",
+      "side": "r",
+      "maximum_numeric_change": 0.0
+    },
+    {
+      "pose": "arms-raised",
+      "side": "l",
+      "maximum_numeric_change": 0.0
+    },
+    {
+      "pose": "arms-raised",
+      "side": "r",
+      "maximum_numeric_change": 0.0
+    },
+    {
+      "pose": "bow-diagnostic",
+      "side": "l",
+      "maximum_numeric_change": 0.0
+    },
+    {
+      "pose": "bow-diagnostic",
+      "side": "r",
+      "maximum_numeric_change": 0.0
+    },
+    {
+      "pose": "A_Idle:15",
+      "side": "l",
+      "maximum_numeric_change": 0.0
+    },
+    {
+      "pose": "A_Idle:15",
+      "side": "r",
+      "maximum_numeric_change": 0.0
+    },
+    {
+      "pose": "A_Idle:110",
+      "side": "l",
+      "maximum_numeric_change": 0.0
+    },
+    {
+      "pose": "A_Idle:110",
+      "side": "r",
+      "maximum_numeric_change": 0.0
+    },
+    {
+      "pose": "A_Walk:8",
+      "side": "l",
+      "maximum_numeric_change": 0.0
+    },
+    {
+      "pose": "A_Walk:8",
+      "side": "r",
+      "maximum_numeric_change": 0.0
+    },
+    {
+      "pose": "A_Walk:23",
+      "side": "l",
+      "maximum_numeric_change": 0.0
+    },
+    {
+      "pose": "A_Walk:23",
+      "side": "r",
+      "maximum_numeric_change": 0.0
+    },
+    {
+      "pose": "A_Walk:37",
+      "side": "l",
+      "maximum_numeric_change": 0.0
+    },
+    {
+      "pose": "A_Walk:37",
+      "side": "r",
+      "maximum_numeric_change": 0.0
+    },
+    {
+      "pose": "A_Run:8",
+      "side": "l",
+      "maximum_numeric_change": 0.0
+    },
+    {
+      "pose": "A_Run:8",
+      "side": "r",
+      "maximum_numeric_change": 0.0
+    },
+    {
+      "pose": "A_Run:23",
+      "side": "l",
+      "maximum_numeric_change": 0.0
+    },
+    {
+      "pose": "A_Run:23",
+      "side": "r",
+      "maximum_numeric_change": 0.0
+    },
+    {
+      "pose": "A_Run:40",
+      "side": "l",
+      "maximum_numeric_change": 0.0
+    },
+    {
+      "pose": "A_Run:40",
+      "side": "r",
+      "maximum_numeric_change": 0.0
+    },
+    {
+      "pose": "A_Attack:6",
+      "side": "l",
+      "maximum_numeric_change": 0.0
+    },
+    {
+      "pose": "A_Attack:6",
+      "side": "r",
+      "maximum_numeric_change": 0.0
+    },
+    {
+      "pose": "A_Attack:12",
+      "side": "l",
+      "maximum_numeric_change": 0.0
+    },
+    {
+      "pose": "A_Attack:12",
+      "side": "r",
+      "maximum_numeric_change": 0.0
+    },
+    {
+      "pose": "A_Attack:20",
+      "side": "l",
+      "maximum_numeric_change": 0.0
+    },
+    {
+      "pose": "A_Attack:20",
+      "side": "r",
+      "maximum_numeric_change": 0.0
+    },
+    {
+      "pose": "A_Attack:28",
+      "side": "l",
+      "maximum_numeric_change": 0.0
+    },
+    {
+      "pose": "A_Attack:28",
+      "side": "r",
+      "maximum_numeric_change": 0.0
+    }
+  ],
+  "refreshed_fixture_sha256": "d96dd389162d370cc56b18d16430b63a1801fcee8f11ac1156ab73c7ff16fc23"
+}

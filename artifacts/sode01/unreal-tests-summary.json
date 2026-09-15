@@ -1,0 +1,128 @@
+[
+  {
+    "fullTestPath": "Shoen.Art.Kusazuri.HingeMath",
+    "state": "Success",
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "fullTestPath": "Shoen.Art.Kusazuri.HingesMatchBlender",
+    "state": "Fail",
+    "errors": 1,
+    "warnings": 0
+  },
+  {
+    "fullTestPath": "Shoen.Art.Sode.SuspensionMatchesBlender",
+    "state": "Success",
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "fullTestPath": "Shoen.Foundation.ClockBinding",
+    "state": "Success",
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "fullTestPath": "Shoen.Foundation.InputConfiguration",
+    "state": "Success",
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "fullTestPath": "Shoen.Foundation.PopulationAndSave",
+    "state": "Success",
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "fullTestPath": "Shoen.Foundation.SelectionProjectionFailure",
+    "state": "Success",
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "fullTestPath": "Shoen.Foundation.ViewDoesNotResetPopulation",
+    "state": "Success",
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "fullTestPath": "Shoen.Inspection.SelectionLifecycleAndReload",
+    "state": "Success",
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "fullTestPath": "Shoen.Inspection.ViewIdentityAndHighlight",
+    "state": "Success",
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "fullTestPath": "Shoen.Inspection.ViewPicking",
+    "state": "Success",
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "fullTestPath": "Shoen.Placement.ContentTransactionAndSave",
+    "state": "Success",
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "fullTestPath": "Shoen.Placement.ContentValidation",
+    "state": "Success",
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "fullTestPath": "Shoen.Placement.InputCancelRotateAndConfirm",
+    "state": "Success",
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "fullTestPath": "Shoen.Placement.PassiveViewRecreation",
+    "state": "Success",
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "fullTestPath": "Shoen.Profiling.CollectorCapacityAndScopes",
+    "state": "Success",
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "fullTestPath": "Shoen.Profiling.ExactFrameVisualCorrelation",
+    "state": "Success",
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "fullTestPath": "Shoen.Profiling.FixtureIsolation",
+    "state": "Success",
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "fullTestPath": "Shoen.Profiling.InputSourceAssociation",
+    "state": "Success",
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "fullTestPath": "Shoen.Prototype.IntegratedLoop",
+    "state": "Success",
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "fullTestPath": "Shoen.Prototype.TerrainIntegration",
+    "state": "Success",
+    "errors": 0,
+    "warnings": 0
+  }
+]

@@ -1,0 +1,1844 @@
+{
+  "asset": "Sode01",
+  "validated": false,
+  "checks": {
+    "authoritative Blender source exists": {
+      "passed": true,
+      "detail": "SourceArt/Characters/Samurai/Sode01/Sode01.blend"
+    },
+    "source collections exist": {
+      "passed": true,
+      "detail": null
+    },
+    "source metre units": {
+      "passed": true,
+      "detail": null
+    },
+    "preserved D\u014d review fixture present": {
+      "passed": true,
+      "detail": [
+        "Do_Review_Upper",
+        "Do_Review_Straps",
+        "Do_Review_Side_R",
+        "Do_Review_Side_L",
+        "Do_Review_Main",
+        "Do_Review_Lining",
+        "Do_Review_Lacing",
+        "Do_Review_Fittings",
+        "Do_Review_Edge",
+        "Do_Review_Back"
+      ]
+    },
+    "generated separate skeletal runtime LODs exist": {
+      "passed": true,
+      "detail": []
+    },
+    "two modular anatomical source pieces": {
+      "passed": true,
+      "detail": {
+        "L": [
+          "Sode_L_01_Bindings",
+          "Sode_L_01_Fittings",
+          "Sode_L_01_InteriorPadding",
+          "Sode_L_01_Lacing",
+          "Sode_L_01_LowerEdgeRow",
+          "Sode_L_01_MainPlateRows",
+          "Sode_L_01_Suspension",
+          "Sode_L_01_UpperAttachment"
+        ],
+        "R": [
+          "Sode_R_01_Bindings",
+          "Sode_R_01_Fittings",
+          "Sode_R_01_InteriorPadding",
+          "Sode_R_01_Lacing",
+          "Sode_R_01_LowerEdgeRow",
+          "Sode_R_01_MainPlateRows",
+          "Sode_R_01_Suspension",
+          "Sode_R_01_UpperAttachment"
+        ]
+      }
+    },
+    "unchanged native Manny body proportions and reference skeleton": {
+      "passed": true,
+      "detail": {
+        "reference_fbx": "SourceArt/Characters/Mannequins/Manny/Exports/SKM_Manny_Simple.fbx",
+        "reference_fbx_sha256": "c15bf65d4b2788f8af9000e966972d7ba2f8468b9877891caf017305905250d8",
+        "matches_native_fixture_hash": true,
+        "body_geometry_sha256": "a817d9ce64001754c8f2cfd02774cc6d3d6f3e90385e961a729b2279e27fcae8",
+        "reference_body_geometry_sha256": "a817d9ce64001754c8f2cfd02774cc6d3d6f3e90385e961a729b2279e27fcae8",
+        "rig_sha256": "cc11ea4bb22d308cd1f6e231b3aa64e72812281de2e805cf8a6ac0a3624e15d7",
+        "reference_rig_sha256": "cc11ea4bb22d308cd1f6e231b3aa64e72812281de2e805cf8a6ac0a3624e15d7",
+        "identical_body_topology": true,
+        "maximum_body_world_error_metres": 0.0,
+        "identical_bone_hierarchy": true,
+        "maximum_rig_world_matrix_error": 0.0,
+        "blender_bones": 88,
+        "native_bones_including_object_root": 89
+      }
+    },
+    "native armature object root is retained": {
+      "passed": true,
+      "detail": null
+    },
+    "closed finite outward geometry and valid normals without duplicate or zero-area faces": {
+      "passed": false,
+      "detail": {
+        "SK_Sode_L_01_LOD2": {
+          "invalid_corner_normals": 4
+        }
+      }
+    },
+    "one shared D\u014d atlas with valid authored UVs": {
+      "passed": true,
+      "detail": null
+    },
+    "normalized weights with at most four native bone influences": {
+      "passed": true,
+      "detail": null
+    },
+    "sensible non-mirrored object transforms": {
+      "passed": true,
+      "detail": null
+    },
+    "L anatomical handedness and same-side bone weights": {
+      "passed": true,
+      "detail": {
+        "upperarm_bone_x_metres": 0.190098837018013,
+        "armor_bounds_metres": [
+          [
+            0.16204263269901276,
+            -0.11586219817399979,
+            1.2697011232376099
+          ],
+          [
+            0.43244749307632446,
+            0.16494259238243103,
+            1.5701868534088135
+          ]
+        ]
+      }
+    },
+    "L decreasing runtime LOD triangle counts": {
+      "passed": true,
+      "detail": [
+        25348,
+        10138,
+        3016
+      ]
+    },
+    "R anatomical handedness and same-side bone weights": {
+      "passed": true,
+      "detail": {
+        "upperarm_bone_x_metres": -0.190098837018013,
+        "armor_bounds_metres": [
+          [
+            -0.4324474632740021,
+            -0.11560817807912827,
+            1.2696959972381592
+          ],
+          [
+            -0.16189759969711304,
+            0.16502197086811066,
+            1.570186734199524
+          ]
+        ]
+      }
+    },
+    "R decreasing runtime LOD triangle counts": {
+      "passed": true,
+      "detail": [
+        25348,
+        10138,
+        3002
+      ]
+    },
+    "reused packed and external 2K textures with correct color spaces": {
+      "passed": true,
+      "detail": null
+    },
+    "neutral armor clearance against body": {
+      "passed": true,
+      "detail": {}
+    },
+    "neutral armor clearance against kabuto": {
+      "passed": true,
+      "detail": {}
+    },
+    "neutral armor clearance against do": {
+      "passed": true,
+      "detail": {}
+    },
+    "twelve separate side and LOD exports match manifest hashes": {
+      "passed": true,
+      "detail": {
+        "Exports/SK_Sode_L_01.fbx": true,
+        "Exports/SK_Sode_L_01_LOD1.fbx": true,
+        "Exports/SK_Sode_L_01_LOD2.fbx": true,
+        "Exports/SK_Sode_R_01.fbx": true,
+        "Exports/SK_Sode_R_01_LOD1.fbx": true,
+        "Exports/SK_Sode_R_01_LOD2.fbx": true,
+        "Review/Exports/SM_Sode_L_01.fbx": true,
+        "Review/Exports/SM_Sode_L_01_LOD1.fbx": true,
+        "Review/Exports/SM_Sode_L_01_LOD2.fbx": true,
+        "Review/Exports/SM_Sode_R_01.fbx": true,
+        "Review/Exports/SM_Sode_R_01_LOD1.fbx": true,
+        "Review/Exports/SM_Sode_R_01_LOD2.fbx": true
+      }
+    },
+    "manifest matches authoritative source hash": {
+      "passed": true,
+      "detail": null
+    },
+    "export preserved source geometry fixtures rig and saved pose": {
+      "passed": true,
+      "detail": null
+    }
+  },
+  "scope": "Reopened editable source and generated runtime copies, neutral geometry/weights and intersections; no rendering/performance claim",
+  "source": {
+    "file": "SourceArt/Characters/Samurai/Sode01/Sode01.blend",
+    "sha256": "2d72fd2596cda092e78a0653c90e4d8ff498977d930448c217fdb20a8b5032d5",
+    "blender_version": "5.1.2"
+  },
+  "preserved_manny": {
+    "reference_fbx": "SourceArt/Characters/Mannequins/Manny/Exports/SKM_Manny_Simple.fbx",
+    "reference_fbx_sha256": "c15bf65d4b2788f8af9000e966972d7ba2f8468b9877891caf017305905250d8",
+    "matches_native_fixture_hash": true,
+    "body_geometry_sha256": "a817d9ce64001754c8f2cfd02774cc6d3d6f3e90385e961a729b2279e27fcae8",
+    "reference_body_geometry_sha256": "a817d9ce64001754c8f2cfd02774cc6d3d6f3e90385e961a729b2279e27fcae8",
+    "rig_sha256": "cc11ea4bb22d308cd1f6e231b3aa64e72812281de2e805cf8a6ac0a3624e15d7",
+    "reference_rig_sha256": "cc11ea4bb22d308cd1f6e231b3aa64e72812281de2e805cf8a6ac0a3624e15d7",
+    "identical_body_topology": true,
+    "maximum_body_world_error_metres": 0.0,
+    "identical_bone_hierarchy": true,
+    "maximum_rig_world_matrix_error": 0.0,
+    "blender_bones": 88,
+    "native_bones_including_object_root": 89
+  },
+  "components": {
+    "Sode_L_01_Bindings": {
+      "nonmanifold_edges": 0,
+      "boundary_edges": 0,
+      "inconsistent_winding_edges": 0,
+      "connected_islands": 12,
+      "negative_volume_islands": 0,
+      "flat_volume_islands": 0,
+      "vertices": 1440,
+      "triangles": 2840,
+      "zero_area_triangles": 0,
+      "duplicate_faces": 0,
+      "duplicate_position_vertices": 0,
+      "finite": true,
+      "bounds_metres": [
+        [
+          0.2037472277879715,
+          -0.10727115720510483,
+          1.2729921340942383
+        ],
+        [
+          0.43244749307632446,
+          0.15393516421318054,
+          1.5573862791061401
+        ]
+      ],
+      "uv_layers": [
+        "UV0_DoAtlas"
+      ],
+      "uv0_1_valid": true,
+      "materials": [
+        "M_Do01"
+      ],
+      "material_indices": [
+        0
+      ],
+      "invalid_corner_normals": 0
+    },
+    "Sode_L_01_Fittings": {
+      "nonmanifold_edges": 0,
+      "boundary_edges": 0,
+      "inconsistent_winding_edges": 0,
+      "connected_islands": 62,
+      "negative_volume_islands": 0,
+      "flat_volume_islands": 0,
+      "vertices": 3086,
+      "triangles": 5928,
+      "zero_area_triangles": 0,
+      "duplicate_faces": 0,
+      "duplicate_position_vertices": 1,
+      "finite": true,
+      "bounds_metres": [
+        [
+          0.21436209976673126,
+          -0.10478658229112625,
+          1.2800849676132202
+        ],
+        [
+          0.4309472441673279,
+          0.150100439786911,
+          1.5502283573150635
+        ]
+      ],
+      "uv_layers": [
+        "UV0_DoAtlas"
+      ],
+      "uv0_1_valid": true,
+      "materials": [
+        "M_Do01"
+      ],
+      "material_indices": [
+        0
+      ],
+      "invalid_corner_normals": 0
+    },
+    "Sode_L_01_InteriorPadding": {
+      "nonmanifold_edges": 0,
+      "boundary_edges": 0,
+      "inconsistent_winding_edges": 0,
+      "connected_islands": 2,
+      "negative_volume_islands": 0,
+      "flat_volume_islands": 0,
+      "vertices": 608,
+      "triangles": 1212,
+      "zero_area_triangles": 0,
+      "duplicate_faces": 0,
+      "duplicate_position_vertices": 0,
+      "finite": true,
+      "bounds_metres": [
+        [
+          0.2184722125530243,
+          -0.10124006122350693,
+          1.2697011232376099
+        ],
+        [
+          0.4167634844779968,
+          0.14690466225147247,
+          1.4967445135116577
+        ]
+      ],
+      "uv_layers": [
+        "UV0_DoAtlas"
+      ],
+      "uv0_1_valid": true,
+      "materials": [
+        "M_Do01"
+      ],
+      "material_indices": [
+        0
+      ],
+      "invalid_corner_normals": 0
+    },
+    "Sode_L_01_Lacing": {
+      "nonmanifold_edges": 0,
+      "boundary_edges": 0,
+      "inconsistent_winding_edges": 0,
+      "connected_islands": 84,
+      "negative_volume_islands": 0,
+      "flat_volume_islands": 0,
+      "vertices": 1652,
+      "triangles": 2992,
+      "zero_area_triangles": 0,
+      "duplicate_faces": 0,
+      "duplicate_position_vertices": 0,
+      "finite": true,
+      "bounds_metres": [
+        [
+          0.23372264206409454,
+          -0.11586219817399979,
+          1.3047600984573364
+        ],
+        [
+          0.41488516330718994,
+          0.16494259238243103,
+          1.5377154350280762
+        ]
+      ],
+      "uv_layers": [
+        "UV0_DoAtlas"
+      ],
+      "uv0_1_valid": true,
+      "materials": [
+        "M_Do01"
+      ],
+      "material_indices": [
+        0
+      ],
+      "invalid_corner_normals": 0
+    },
+    "Sode_L_01_LowerEdgeRow": {
+      "nonmanifold_edges": 0,
+      "boundary_edges": 0,
+      "inconsistent_winding_edges": 0,
+      "connected_islands": 14,
+      "negative_volume_islands": 0,
+      "flat_volume_islands": 0,
+      "vertices": 1148,
+      "triangles": 2240,
+      "zero_area_triangles": 0,
+      "duplicate_faces": 0,
+      "duplicate_position_vertices": 0,
+      "finite": true,
+      "bounds_metres": [
+        [
+          0.3410454988479614,
+          -0.10525012761354446,
+          1.2727915048599243
+        ],
+        [
+          0.4284628629684448,
+          0.14642047882080078,
+          1.3508224487304688
+        ]
+      ],
+      "uv_layers": [
+        "UV0_DoAtlas"
+      ],
+      "uv0_1_valid": true,
+      "materials": [
+        "M_Do01"
+      ],
+      "material_indices": [
+        0
+      ],
+      "invalid_corner_normals": 0
+    },
+    "Sode_L_01_MainPlateRows": {
+      "nonmanifold_edges": 0,
+      "boundary_edges": 0,
+      "inconsistent_winding_edges": 0,
+      "connected_islands": 56,
+      "negative_volume_islands": 0,
+      "flat_volume_islands": 0,
+      "vertices": 4592,
+      "triangles": 8960,
+      "zero_area_triangles": 0,
+      "duplicate_faces": 0,
+      "duplicate_position_vertices": 0,
+      "finite": true,
+      "bounds_metres": [
+        [
+          0.23129428923130035,
+          -0.10421989113092422,
+          1.307268500328064
+        ],
+        [
+          0.40102502703666687,
+          0.1505412757396698,
+          1.4887304306030273
+        ]
+      ],
+      "uv_layers": [
+        "UV0_DoAtlas"
+      ],
+      "uv0_1_valid": true,
+      "materials": [
+        "M_Do01"
+      ],
+      "material_indices": [
+        0
+      ],
+      "invalid_corner_normals": 0
+    },
+    "Sode_L_01_Suspension": {
+      "nonmanifold_edges": 0,
+      "boundary_edges": 0,
+      "inconsistent_winding_edges": 0,
+      "connected_islands": 4,
+      "negative_volume_islands": 0,
+      "flat_volume_islands": 0,
+      "vertices": 364,
+      "triangles": 712,
+      "zero_area_triangles": 0,
+      "duplicate_faces": 0,
+      "duplicate_position_vertices": 0,
+      "finite": true,
+      "bounds_metres": [
+        [
+          0.16204263269901276,
+          -0.07906250655651093,
+          1.5018064975738525
+        ],
+        [
+          0.2618942856788635,
+          0.10982650518417358,
+          1.5701868534088135
+        ]
+      ],
+      "uv_layers": [
+        "UV0_DoAtlas"
+      ],
+      "uv0_1_valid": true,
+      "materials": [
+        "M_Do01"
+      ],
+      "material_indices": [
+        0
+      ],
+      "invalid_corner_normals": 0
+    },
+    "Sode_L_01_UpperAttachment": {
+      "nonmanifold_edges": 0,
+      "boundary_edges": 0,
+      "inconsistent_winding_edges": 0,
+      "connected_islands": 1,
+      "negative_volume_islands": 0,
+      "flat_volume_islands": 0,
+      "vertices": 234,
+      "triangles": 464,
+      "zero_area_triangles": 0,
+      "duplicate_faces": 0,
+      "duplicate_position_vertices": 0,
+      "finite": true,
+      "bounds_metres": [
+        [
+          0.20408695936203003,
+          -0.10028089582920074,
+          1.4511775970458984
+        ],
+        [
+          0.2897472381591797,
+          0.15129412710666656,
+          1.5542874336242676
+        ]
+      ],
+      "uv_layers": [
+        "UV0_DoAtlas"
+      ],
+      "uv0_1_valid": true,
+      "materials": [
+        "M_Do01"
+      ],
+      "material_indices": [
+        0
+      ],
+      "invalid_corner_normals": 0
+    },
+    "Sode_R_01_Bindings": {
+      "nonmanifold_edges": 0,
+      "boundary_edges": 0,
+      "inconsistent_winding_edges": 0,
+      "connected_islands": 12,
+      "negative_volume_islands": 0,
+      "flat_volume_islands": 0,
+      "vertices": 1440,
+      "triangles": 2840,
+      "zero_area_triangles": 0,
+      "duplicate_faces": 0,
+      "duplicate_position_vertices": 0,
+      "finite": true,
+      "bounds_metres": [
+        [
+          -0.4324474632740021,
+          -0.10727083683013916,
+          1.2729870080947876
+        ],
+        [
+          -0.20349839329719543,
+          0.1541658490896225,
+          1.557381272315979
+        ]
+      ],
+      "uv_layers": [
+        "UV0_DoAtlas"
+      ],
+      "uv0_1_valid": true,
+      "materials": [
+        "M_Do01"
+      ],
+      "material_indices": [
+        0
+      ],
+      "invalid_corner_normals": 0
+    },
+    "Sode_R_01_Fittings": {
+      "nonmanifold_edges": 0,
+      "boundary_edges": 0,
+      "inconsistent_winding_edges": 0,
+      "connected_islands": 62,
+      "negative_volume_islands": 0,
+      "flat_volume_islands": 0,
+      "vertices": 3086,
+      "triangles": 5928,
+      "zero_area_triangles": 0,
+      "duplicate_faces": 0,
+      "duplicate_position_vertices": 1,
+      "finite": true,
+      "bounds_metres": [
+        [
+          -0.4309472441673279,
+          -0.10478624701499939,
+          1.280079960823059
+        ],
+        [
+          -0.2143620103597641,
+          0.15010079741477966,
+          1.5502233505249023
+        ]
+      ],
+      "uv_layers": [
+        "UV0_DoAtlas"
+      ],
+      "uv0_1_valid": true,
+      "materials": [
+        "M_Do01"
+      ],
+      "material_indices": [
+        0
+      ],
+      "invalid_corner_normals": 0
+    },
+    "Sode_R_01_InteriorPadding": {
+      "nonmanifold_edges": 0,
+      "boundary_edges": 0,
+      "inconsistent_winding_edges": 0,
+      "connected_islands": 2,
+      "negative_volume_islands": 0,
+      "flat_volume_islands": 0,
+      "vertices": 608,
+      "triangles": 1212,
+      "zero_area_triangles": 0,
+      "duplicate_faces": 0,
+      "duplicate_position_vertices": 0,
+      "finite": true,
+      "bounds_metres": [
+        [
+          -0.4167634844779968,
+          -0.10123973339796066,
+          1.2696959972381592
+        ],
+        [
+          -0.21847213804721832,
+          0.14690500497817993,
+          1.4967395067214966
+        ]
+      ],
+      "uv_layers": [
+        "UV0_DoAtlas"
+      ],
+      "uv0_1_valid": true,
+      "materials": [
+        "M_Do01"
+      ],
+      "material_indices": [
+        0
+      ],
+      "invalid_corner_normals": 0
+    },
+    "Sode_R_01_Lacing": {
+      "nonmanifold_edges": 0,
+      "boundary_edges": 0,
+      "inconsistent_winding_edges": 0,
+      "connected_islands": 84,
+      "negative_volume_islands": 0,
+      "flat_volume_islands": 0,
+      "vertices": 1652,
+      "triangles": 2992,
+      "zero_area_triangles": 0,
+      "duplicate_faces": 0,
+      "duplicate_position_vertices": 0,
+      "finite": true,
+      "bounds_metres": [
+        [
+          -0.41455844044685364,
+          -0.11560817807912827,
+          1.3046423196792603
+        ],
+        [
+          -0.23402391374111176,
+          0.16502197086811066,
+          1.537710428237915
+        ]
+      ],
+      "uv_layers": [
+        "UV0_DoAtlas"
+      ],
+      "uv0_1_valid": true,
+      "materials": [
+        "M_Do01"
+      ],
+      "material_indices": [
+        0
+      ],
+      "invalid_corner_normals": 0
+    },
+    "Sode_R_01_LowerEdgeRow": {
+      "nonmanifold_edges": 0,
+      "boundary_edges": 0,
+      "inconsistent_winding_edges": 0,
+      "connected_islands": 14,
+      "negative_volume_islands": 0,
+      "flat_volume_islands": 0,
+      "vertices": 1148,
+      "triangles": 2240,
+      "zero_area_triangles": 0,
+      "duplicate_faces": 0,
+      "duplicate_position_vertices": 0,
+      "finite": true,
+      "bounds_metres": [
+        [
+          -0.4284628629684448,
+          -0.10524936765432358,
+          1.2727875709533691
+        ],
+        [
+          -0.3410414755344391,
+          0.14642082154750824,
+          1.3508175611495972
+        ]
+      ],
+      "uv_layers": [
+        "UV0_DoAtlas"
+      ],
+      "uv0_1_valid": true,
+      "materials": [
+        "M_Do01"
+      ],
+      "material_indices": [
+        0
+      ],
+      "invalid_corner_normals": 0
+    },
+    "Sode_R_01_MainPlateRows": {
+      "nonmanifold_edges": 0,
+      "boundary_edges": 0,
+      "inconsistent_winding_edges": 0,
+      "connected_islands": 56,
+      "negative_volume_islands": 0,
+      "flat_volume_islands": 0,
+      "vertices": 4592,
+      "triangles": 8960,
+      "zero_area_triangles": 0,
+      "duplicate_faces": 0,
+      "duplicate_position_vertices": 0,
+      "finite": true,
+      "bounds_metres": [
+        [
+          -0.40102508664131165,
+          -0.10421914607286453,
+          1.3072645664215088
+        ],
+        [
+          -0.23129026591777802,
+          0.15054164826869965,
+          1.4887250661849976
+        ]
+      ],
+      "uv_layers": [
+        "UV0_DoAtlas"
+      ],
+      "uv0_1_valid": true,
+      "materials": [
+        "M_Do01"
+      ],
+      "material_indices": [
+        0
+      ],
+      "invalid_corner_normals": 0
+    },
+    "Sode_R_01_Suspension": {
+      "nonmanifold_edges": 0,
+      "boundary_edges": 0,
+      "inconsistent_winding_edges": 0,
+      "connected_islands": 4,
+      "negative_volume_islands": 0,
+      "flat_volume_islands": 0,
+      "vertices": 364,
+      "triangles": 712,
+      "zero_area_triangles": 0,
+      "duplicate_faces": 0,
+      "duplicate_position_vertices": 0,
+      "finite": true,
+      "bounds_metres": [
+        [
+          -0.2616540789604187,
+          -0.07879579067230225,
+          1.501839280128479
+        ],
+        [
+          -0.16189759969711304,
+          0.10991156101226807,
+          1.570186734199524
+        ]
+      ],
+      "uv_layers": [
+        "UV0_DoAtlas"
+      ],
+      "uv0_1_valid": true,
+      "materials": [
+        "M_Do01"
+      ],
+      "material_indices": [
+        0
+      ],
+      "invalid_corner_normals": 0
+    },
+    "Sode_R_01_UpperAttachment": {
+      "nonmanifold_edges": 0,
+      "boundary_edges": 0,
+      "inconsistent_winding_edges": 0,
+      "connected_islands": 1,
+      "negative_volume_islands": 0,
+      "flat_volume_islands": 0,
+      "vertices": 234,
+      "triangles": 464,
+      "zero_area_triangles": 0,
+      "duplicate_faces": 0,
+      "duplicate_position_vertices": 0,
+      "finite": true,
+      "bounds_metres": [
+        [
+          -0.2897472381591797,
+          -0.10027912259101868,
+          1.451174259185791
+        ],
+        [
+          -0.20408691465854645,
+          0.1512944996356964,
+          1.554282307624817
+        ]
+      ],
+      "uv_layers": [
+        "UV0_DoAtlas"
+      ],
+      "uv0_1_valid": true,
+      "materials": [
+        "M_Do01"
+      ],
+      "material_indices": [
+        0
+      ],
+      "invalid_corner_normals": 0
+    }
+  },
+  "runtime_lods": {
+    "SK_Sode_L_01_LOD0": {
+      "nonmanifold_edges": 0,
+      "boundary_edges": 0,
+      "inconsistent_winding_edges": 0,
+      "connected_islands": 235,
+      "negative_volume_islands": 0,
+      "flat_volume_islands": 0,
+      "vertices": 13124,
+      "triangles": 25348,
+      "zero_area_triangles": 0,
+      "duplicate_faces": 0,
+      "duplicate_position_vertices": 1,
+      "finite": true,
+      "bounds_metres": [
+        [
+          0.16204269230365753,
+          -0.115862175822258,
+          1.2697010040283203
+        ],
+        [
+          0.43244749307632446,
+          0.16494256258010864,
+          1.5701868534088135
+        ]
+      ],
+      "uv_layers": [
+        "UV0_DoAtlas"
+      ],
+      "uv0_1_valid": true,
+      "materials": [
+        "M_Do01"
+      ],
+      "material_indices": [
+        0
+      ],
+      "invalid_corner_normals": 0
+    },
+    "SK_Sode_L_01_LOD1": {
+      "nonmanifold_edges": 0,
+      "boundary_edges": 0,
+      "inconsistent_winding_edges": 0,
+      "connected_islands": 235,
+      "negative_volume_islands": 0,
+      "flat_volume_islands": 0,
+      "vertices": 5519,
+      "triangles": 10138,
+      "zero_area_triangles": 0,
+      "duplicate_faces": 0,
+      "duplicate_position_vertices": 0,
+      "finite": true,
+      "bounds_metres": [
+        [
+          0.16208167374134064,
+          -0.115862175822258,
+          1.2697010040283203
+        ],
+        [
+          0.43244749307632446,
+          0.16494256258010864,
+          1.5701868534088135
+        ]
+      ],
+      "uv_layers": [
+        "UV0_DoAtlas"
+      ],
+      "uv0_1_valid": true,
+      "materials": [
+        "M_Do01"
+      ],
+      "material_indices": [
+        0
+      ],
+      "invalid_corner_normals": 0
+    },
+    "SK_Sode_L_01_LOD2": {
+      "nonmanifold_edges": 0,
+      "boundary_edges": 0,
+      "inconsistent_winding_edges": 0,
+      "connected_islands": 223,
+      "negative_volume_islands": 0,
+      "flat_volume_islands": 0,
+      "vertices": 1934,
+      "triangles": 3016,
+      "zero_area_triangles": 0,
+      "duplicate_faces": 0,
+      "duplicate_position_vertices": 0,
+      "finite": true,
+      "bounds_metres": [
+        [
+          0.16220788657665253,
+          -0.11591329425573349,
+          1.2697783708572388
+        ],
+        [
+          0.43221792578697205,
+          0.16466598212718964,
+          1.570663571357727
+        ]
+      ],
+      "uv_layers": [
+        "UV0_DoAtlas"
+      ],
+      "uv0_1_valid": true,
+      "materials": [
+        "M_Do01"
+      ],
+      "material_indices": [
+        0
+      ],
+      "invalid_corner_normals": 4
+    },
+    "SK_Sode_R_01_LOD0": {
+      "nonmanifold_edges": 0,
+      "boundary_edges": 0,
+      "inconsistent_winding_edges": 0,
+      "connected_islands": 235,
+      "negative_volume_islands": 0,
+      "flat_volume_islands": 0,
+      "vertices": 13124,
+      "triangles": 25348,
+      "zero_area_triangles": 0,
+      "duplicate_faces": 0,
+      "duplicate_position_vertices": 1,
+      "finite": true,
+      "bounds_metres": [
+        [
+          -0.4324474334716797,
+          -0.11560818552970886,
+          1.2696959972381592
+        ],
+        [
+          -0.16189762949943542,
+          0.16502195596694946,
+          1.5701866149902344
+        ]
+      ],
+      "uv_layers": [
+        "UV0_DoAtlas"
+      ],
+      "uv0_1_valid": true,
+      "materials": [
+        "M_Do01"
+      ],
+      "material_indices": [
+        0
+      ],
+      "invalid_corner_normals": 0
+    },
+    "SK_Sode_R_01_LOD1": {
+      "nonmanifold_edges": 0,
+      "boundary_edges": 0,
+      "inconsistent_winding_edges": 0,
+      "connected_islands": 235,
+      "negative_volume_islands": 0,
+      "flat_volume_islands": 0,
+      "vertices": 5519,
+      "triangles": 10138,
+      "zero_area_triangles": 0,
+      "duplicate_faces": 0,
+      "duplicate_position_vertices": 0,
+      "finite": true,
+      "bounds_metres": [
+        [
+          -0.4324474334716797,
+          -0.11560818552970886,
+          1.2696959972381592
+        ],
+        [
+          -0.16194991767406464,
+          0.16502195596694946,
+          1.5701866149902344
+        ]
+      ],
+      "uv_layers": [
+        "UV0_DoAtlas"
+      ],
+      "uv0_1_valid": true,
+      "materials": [
+        "M_Do01"
+      ],
+      "material_indices": [
+        0
+      ],
+      "invalid_corner_normals": 0
+    },
+    "SK_Sode_R_01_LOD2": {
+      "nonmanifold_edges": 0,
+      "boundary_edges": 0,
+      "inconsistent_winding_edges": 0,
+      "connected_islands": 216,
+      "negative_volume_islands": 0,
+      "flat_volume_islands": 0,
+      "vertices": 1913,
+      "triangles": 3002,
+      "zero_area_triangles": 0,
+      "duplicate_faces": 0,
+      "duplicate_position_vertices": 0,
+      "finite": true,
+      "bounds_metres": [
+        [
+          -0.43221789598464966,
+          -0.1153770312666893,
+          1.2698280811309814
+        ],
+        [
+          -0.16194991767406464,
+          0.1647455245256424,
+          1.5707873106002808
+        ]
+      ],
+      "uv_layers": [
+        "UV0_DoAtlas"
+      ],
+      "uv0_1_valid": true,
+      "materials": [
+        "M_Do01"
+      ],
+      "material_indices": [
+        0
+      ],
+      "invalid_corner_normals": 0
+    }
+  },
+  "weights": {
+    "Sode_L_01_Bindings": {
+      "vertices": 1440,
+      "influence_histogram": {
+        "1": 1440
+      },
+      "max_influences": 1,
+      "missing_weights": 0,
+      "invalid_groups_or_values": 0,
+      "maximum_weight_sum_error": 0.0,
+      "bones_used": [
+        "upperarm_l"
+      ],
+      "same_rig_modifier": true
+    },
+    "Sode_L_01_Fittings": {
+      "vertices": 3086,
+      "influence_histogram": {
+        "1": 3086
+      },
+      "max_influences": 1,
+      "missing_weights": 0,
+      "invalid_groups_or_values": 0,
+      "maximum_weight_sum_error": 0.0,
+      "bones_used": [
+        "upperarm_l"
+      ],
+      "same_rig_modifier": true
+    },
+    "Sode_L_01_InteriorPadding": {
+      "vertices": 608,
+      "influence_histogram": {
+        "1": 608
+      },
+      "max_influences": 1,
+      "missing_weights": 0,
+      "invalid_groups_or_values": 0,
+      "maximum_weight_sum_error": 0.0,
+      "bones_used": [
+        "upperarm_l"
+      ],
+      "same_rig_modifier": true
+    },
+    "Sode_L_01_Lacing": {
+      "vertices": 1652,
+      "influence_histogram": {
+        "1": 1652
+      },
+      "max_influences": 1,
+      "missing_weights": 0,
+      "invalid_groups_or_values": 0,
+      "maximum_weight_sum_error": 0.0,
+      "bones_used": [
+        "upperarm_l"
+      ],
+      "same_rig_modifier": true
+    },
+    "Sode_L_01_LowerEdgeRow": {
+      "vertices": 1148,
+      "influence_histogram": {
+        "1": 1148
+      },
+      "max_influences": 1,
+      "missing_weights": 0,
+      "invalid_groups_or_values": 0,
+      "maximum_weight_sum_error": 0.0,
+      "bones_used": [
+        "upperarm_l"
+      ],
+      "same_rig_modifier": true
+    },
+    "Sode_L_01_MainPlateRows": {
+      "vertices": 4592,
+      "influence_histogram": {
+        "1": 4592
+      },
+      "max_influences": 1,
+      "missing_weights": 0,
+      "invalid_groups_or_values": 0,
+      "maximum_weight_sum_error": 0.0,
+      "bones_used": [
+        "upperarm_l"
+      ],
+      "same_rig_modifier": true
+    },
+    "Sode_L_01_Suspension": {
+      "vertices": 364,
+      "influence_histogram": {
+        "1": 33,
+        "2": 331
+      },
+      "max_influences": 2,
+      "missing_weights": 0,
+      "invalid_groups_or_values": 0,
+      "maximum_weight_sum_error": 2.9802322387695312e-08,
+      "bones_used": [
+        "clavicle_l",
+        "upperarm_l"
+      ],
+      "same_rig_modifier": true
+    },
+    "Sode_L_01_UpperAttachment": {
+      "vertices": 234,
+      "influence_histogram": {
+        "1": 234
+      },
+      "max_influences": 1,
+      "missing_weights": 0,
+      "invalid_groups_or_values": 0,
+      "maximum_weight_sum_error": 0.0,
+      "bones_used": [
+        "upperarm_l"
+      ],
+      "same_rig_modifier": true
+    },
+    "Sode_R_01_Bindings": {
+      "vertices": 1440,
+      "influence_histogram": {
+        "1": 1440
+      },
+      "max_influences": 1,
+      "missing_weights": 0,
+      "invalid_groups_or_values": 0,
+      "maximum_weight_sum_error": 0.0,
+      "bones_used": [
+        "upperarm_r"
+      ],
+      "same_rig_modifier": true
+    },
+    "Sode_R_01_Fittings": {
+      "vertices": 3086,
+      "influence_histogram": {
+        "1": 3086
+      },
+      "max_influences": 1,
+      "missing_weights": 0,
+      "invalid_groups_or_values": 0,
+      "maximum_weight_sum_error": 0.0,
+      "bones_used": [
+        "upperarm_r"
+      ],
+      "same_rig_modifier": true
+    },
+    "Sode_R_01_InteriorPadding": {
+      "vertices": 608,
+      "influence_histogram": {
+        "1": 608
+      },
+      "max_influences": 1,
+      "missing_weights": 0,
+      "invalid_groups_or_values": 0,
+      "maximum_weight_sum_error": 0.0,
+      "bones_used": [
+        "upperarm_r"
+      ],
+      "same_rig_modifier": true
+    },
+    "Sode_R_01_Lacing": {
+      "vertices": 1652,
+      "influence_histogram": {
+        "1": 1652
+      },
+      "max_influences": 1,
+      "missing_weights": 0,
+      "invalid_groups_or_values": 0,
+      "maximum_weight_sum_error": 0.0,
+      "bones_used": [
+        "upperarm_r"
+      ],
+      "same_rig_modifier": true
+    },
+    "Sode_R_01_LowerEdgeRow": {
+      "vertices": 1148,
+      "influence_histogram": {
+        "1": 1148
+      },
+      "max_influences": 1,
+      "missing_weights": 0,
+      "invalid_groups_or_values": 0,
+      "maximum_weight_sum_error": 0.0,
+      "bones_used": [
+        "upperarm_r"
+      ],
+      "same_rig_modifier": true
+    },
+    "Sode_R_01_MainPlateRows": {
+      "vertices": 4592,
+      "influence_histogram": {
+        "1": 4592
+      },
+      "max_influences": 1,
+      "missing_weights": 0,
+      "invalid_groups_or_values": 0,
+      "maximum_weight_sum_error": 0.0,
+      "bones_used": [
+        "upperarm_r"
+      ],
+      "same_rig_modifier": true
+    },
+    "Sode_R_01_Suspension": {
+      "vertices": 364,
+      "influence_histogram": {
+        "1": 38,
+        "2": 326
+      },
+      "max_influences": 2,
+      "missing_weights": 0,
+      "invalid_groups_or_values": 0,
+      "maximum_weight_sum_error": 2.9802322387695312e-08,
+      "bones_used": [
+        "clavicle_r",
+        "upperarm_r"
+      ],
+      "same_rig_modifier": true
+    },
+    "Sode_R_01_UpperAttachment": {
+      "vertices": 234,
+      "influence_histogram": {
+        "1": 234
+      },
+      "max_influences": 1,
+      "missing_weights": 0,
+      "invalid_groups_or_values": 0,
+      "maximum_weight_sum_error": 0.0,
+      "bones_used": [
+        "upperarm_r"
+      ],
+      "same_rig_modifier": true
+    },
+    "SK_Sode_L_01_LOD0": {
+      "vertices": 13124,
+      "influence_histogram": {
+        "1": 12793,
+        "2": 331
+      },
+      "max_influences": 2,
+      "missing_weights": 0,
+      "invalid_groups_or_values": 0,
+      "maximum_weight_sum_error": 2.9802322387695312e-08,
+      "bones_used": [
+        "clavicle_l",
+        "upperarm_l"
+      ],
+      "same_rig_modifier": true
+    },
+    "SK_Sode_L_01_LOD1": {
+      "vertices": 5519,
+      "influence_histogram": {
+        "1": 5241,
+        "2": 278
+      },
+      "max_influences": 2,
+      "missing_weights": 0,
+      "invalid_groups_or_values": 0,
+      "maximum_weight_sum_error": 2.9802322387695312e-08,
+      "bones_used": [
+        "clavicle_l",
+        "upperarm_l"
+      ],
+      "same_rig_modifier": true
+    },
+    "SK_Sode_L_01_LOD2": {
+      "vertices": 1934,
+      "influence_histogram": {
+        "1": 1845,
+        "2": 89
+      },
+      "max_influences": 2,
+      "missing_weights": 0,
+      "invalid_groups_or_values": 0,
+      "maximum_weight_sum_error": 2.9802322387695312e-08,
+      "bones_used": [
+        "clavicle_l",
+        "upperarm_l"
+      ],
+      "same_rig_modifier": true
+    },
+    "SK_Sode_R_01_LOD0": {
+      "vertices": 13124,
+      "influence_histogram": {
+        "1": 12798,
+        "2": 326
+      },
+      "max_influences": 2,
+      "missing_weights": 0,
+      "invalid_groups_or_values": 0,
+      "maximum_weight_sum_error": 2.9802322387695312e-08,
+      "bones_used": [
+        "clavicle_r",
+        "upperarm_r"
+      ],
+      "same_rig_modifier": true
+    },
+    "SK_Sode_R_01_LOD1": {
+      "vertices": 5519,
+      "influence_histogram": {
+        "1": 5245,
+        "2": 274
+      },
+      "max_influences": 2,
+      "missing_weights": 0,
+      "invalid_groups_or_values": 0,
+      "maximum_weight_sum_error": 2.9802322387695312e-08,
+      "bones_used": [
+        "clavicle_r",
+        "upperarm_r"
+      ],
+      "same_rig_modifier": true
+    },
+    "SK_Sode_R_01_LOD2": {
+      "vertices": 1913,
+      "influence_histogram": {
+        "1": 1823,
+        "2": 90
+      },
+      "max_influences": 2,
+      "missing_weights": 0,
+      "invalid_groups_or_values": 0,
+      "maximum_weight_sum_error": 2.9802322387695312e-08,
+      "bones_used": [
+        "clavicle_r",
+        "upperarm_r"
+      ],
+      "same_rig_modifier": true
+    }
+  },
+  "sides": {
+    "L": {
+      "source_triangles": 25348,
+      "runtime_lod_triangles": [
+        25348,
+        10138,
+        3016
+      ],
+      "bounds_metres": [
+        [
+          0.16204263269901276,
+          -0.11586219817399979,
+          1.2697011232376099
+        ],
+        [
+          0.43244749307632446,
+          0.16494259238243103,
+          1.5701868534088135
+        ]
+      ],
+      "anatomical_assignment": "left"
+    },
+    "R": {
+      "source_triangles": 25348,
+      "runtime_lod_triangles": [
+        25348,
+        10138,
+        3002
+      ],
+      "bounds_metres": [
+        [
+          -0.4324474632740021,
+          -0.11560817807912827,
+          1.2696959972381592
+        ],
+        [
+          -0.16189759969711304,
+          0.16502197086811066,
+          1.570186734199524
+        ]
+      ],
+      "anatomical_assignment": "right"
+    }
+  },
+  "textures": {
+    "BaseColor": {
+      "packed": true,
+      "size": [
+        2048,
+        2048
+      ],
+      "shared_file": "SourceArt/Characters/Samurai/Do01/Textures/T_Do01_BaseColor.png",
+      "sha256": "a987214d9d41fa56e7a2ec20ea662991fa30bd5cc1232f314d9e87dd9cd9ba3b",
+      "png_size": [
+        2048,
+        2048
+      ],
+      "color_space": "sRGB"
+    },
+    "Normal": {
+      "packed": true,
+      "size": [
+        2048,
+        2048
+      ],
+      "shared_file": "SourceArt/Characters/Samurai/Do01/Textures/T_Do01_Normal.png",
+      "sha256": "a73d6728beda8ae1924b31463bbbf1fa6ca1ff50e3abd90d15a454c3a50f8dcd",
+      "png_size": [
+        2048,
+        2048
+      ],
+      "color_space": "Non-Color"
+    },
+    "ORM": {
+      "packed": true,
+      "size": [
+        2048,
+        2048
+      ],
+      "shared_file": "SourceArt/Characters/Samurai/Do01/Textures/T_Do01_ORM.png",
+      "sha256": "e752d552ab951f32967ae432ac035ff9ae4a53e79150111d7a88109c7369737a",
+      "png_size": [
+        2048,
+        2048
+      ],
+      "color_space": "Non-Color"
+    }
+  },
+  "neutral_intersections": {
+    "body": {
+      "Sode_L_01_Bindings": {
+        "triangle_intersections": 0,
+        "attachment_junction": false,
+        "examples": [],
+        "sampled_vertices": 120,
+        "minimum_unsigned_sample_clearance_mm": 41.86877980828285
+      },
+      "Sode_L_01_Fittings": {
+        "triangle_intersections": 0,
+        "attachment_junction": false,
+        "examples": [],
+        "sampled_vertices": 124,
+        "minimum_unsigned_sample_clearance_mm": 45.68229243159294
+      },
+      "Sode_L_01_InteriorPadding": {
+        "triangle_intersections": 0,
+        "attachment_junction": false,
+        "examples": [],
+        "sampled_vertices": 122,
+        "minimum_unsigned_sample_clearance_mm": 22.296251729130745
+      },
+      "Sode_L_01_Lacing": {
+        "triangle_intersections": 0,
+        "attachment_junction": false,
+        "examples": [],
+        "sampled_vertices": 128,
+        "minimum_unsigned_sample_clearance_mm": 42.196594178676605
+      },
+      "Sode_L_01_LowerEdgeRow": {
+        "triangle_intersections": 0,
+        "attachment_junction": false,
+        "examples": [],
+        "sampled_vertices": 128,
+        "minimum_unsigned_sample_clearance_mm": 77.35805958509445
+      },
+      "Sode_L_01_MainPlateRows": {
+        "triangle_intersections": 0,
+        "attachment_junction": false,
+        "examples": [],
+        "sampled_vertices": 128,
+        "minimum_unsigned_sample_clearance_mm": 33.01653265953064
+      },
+      "Sode_L_01_Suspension": {
+        "triangle_intersections": 0,
+        "attachment_junction": true,
+        "examples": [],
+        "sampled_vertices": 122,
+        "minimum_unsigned_sample_clearance_mm": 24.06655065715313
+      },
+      "Sode_L_01_UpperAttachment": {
+        "triangle_intersections": 0,
+        "attachment_junction": false,
+        "examples": [],
+        "sampled_vertices": 117,
+        "minimum_unsigned_sample_clearance_mm": 37.84943372011185
+      },
+      "Sode_R_01_Bindings": {
+        "triangle_intersections": 0,
+        "attachment_junction": false,
+        "examples": [],
+        "sampled_vertices": 120,
+        "minimum_unsigned_sample_clearance_mm": 38.23881968855858
+      },
+      "Sode_R_01_Fittings": {
+        "triangle_intersections": 0,
+        "attachment_junction": false,
+        "examples": [],
+        "sampled_vertices": 124,
+        "minimum_unsigned_sample_clearance_mm": 45.67930847406387
+      },
+      "Sode_R_01_InteriorPadding": {
+        "triangle_intersections": 0,
+        "attachment_junction": false,
+        "examples": [],
+        "sampled_vertices": 122,
+        "minimum_unsigned_sample_clearance_mm": 21.944230422377586
+      },
+      "Sode_R_01_Lacing": {
+        "triangle_intersections": 0,
+        "attachment_junction": false,
+        "examples": [],
+        "sampled_vertices": 128,
+        "minimum_unsigned_sample_clearance_mm": 43.15914958715439
+      },
+      "Sode_R_01_LowerEdgeRow": {
+        "triangle_intersections": 0,
+        "attachment_junction": false,
+        "examples": [],
+        "sampled_vertices": 128,
+        "minimum_unsigned_sample_clearance_mm": 77.19588279724121
+      },
+      "Sode_R_01_MainPlateRows": {
+        "triangle_intersections": 0,
+        "attachment_junction": false,
+        "examples": [],
+        "sampled_vertices": 128,
+        "minimum_unsigned_sample_clearance_mm": 33.56890752911568
+      },
+      "Sode_R_01_Suspension": {
+        "triangle_intersections": 0,
+        "attachment_junction": true,
+        "examples": [],
+        "sampled_vertices": 122,
+        "minimum_unsigned_sample_clearance_mm": 24.410877376794815
+      },
+      "Sode_R_01_UpperAttachment": {
+        "triangle_intersections": 0,
+        "attachment_junction": false,
+        "examples": [],
+        "sampled_vertices": 117,
+        "minimum_unsigned_sample_clearance_mm": 36.91711649298668
+      }
+    },
+    "kabuto": {
+      "Sode_L_01_Bindings": {
+        "triangle_intersections": 0,
+        "attachment_junction": false,
+        "examples": [],
+        "sampled_vertices": 120,
+        "minimum_unsigned_sample_clearance_mm": 49.527283757925034
+      },
+      "Sode_L_01_Fittings": {
+        "triangle_intersections": 0,
+        "attachment_junction": false,
+        "examples": [],
+        "sampled_vertices": 124,
+        "minimum_unsigned_sample_clearance_mm": 61.76038831472397
+      },
+      "Sode_L_01_InteriorPadding": {
+        "triangle_intersections": 0,
+        "attachment_junction": false,
+        "examples": [],
+        "sampled_vertices": 122,
+        "minimum_unsigned_sample_clearance_mm": 115.90678989887238
+      },
+      "Sode_L_01_Lacing": {
+        "triangle_intersections": 0,
+        "attachment_junction": false,
+        "examples": [],
+        "sampled_vertices": 128,
+        "minimum_unsigned_sample_clearance_mm": 84.03835445642471
+      },
+      "Sode_L_01_LowerEdgeRow": {
+        "triangle_intersections": 0,
+        "attachment_junction": false,
+        "examples": [],
+        "sampled_vertices": 128,
+        "minimum_unsigned_sample_clearance_mm": 307.75222182273865
+      },
+      "Sode_L_01_MainPlateRows": {
+        "triangle_intersections": 0,
+        "attachment_junction": false,
+        "examples": [],
+        "sampled_vertices": 128,
+        "minimum_unsigned_sample_clearance_mm": 132.85401463508606
+      },
+      "Sode_L_01_Suspension": {
+        "triangle_intersections": 0,
+        "attachment_junction": true,
+        "examples": [],
+        "sampled_vertices": 122,
+        "minimum_unsigned_sample_clearance_mm": 15.669235959649086
+      },
+      "Sode_L_01_UpperAttachment": {
+        "triangle_intersections": 0,
+        "attachment_junction": false,
+        "examples": [],
+        "sampled_vertices": 117,
+        "minimum_unsigned_sample_clearance_mm": 49.6535450220108
+      },
+      "Sode_R_01_Bindings": {
+        "triangle_intersections": 0,
+        "attachment_junction": false,
+        "examples": [],
+        "sampled_vertices": 120,
+        "minimum_unsigned_sample_clearance_mm": 53.403742611408234
+      },
+      "Sode_R_01_Fittings": {
+        "triangle_intersections": 0,
+        "attachment_junction": false,
+        "examples": [],
+        "sampled_vertices": 124,
+        "minimum_unsigned_sample_clearance_mm": 62.32774257659912
+      },
+      "Sode_R_01_InteriorPadding": {
+        "triangle_intersections": 0,
+        "attachment_junction": false,
+        "examples": [],
+        "sampled_vertices": 122,
+        "minimum_unsigned_sample_clearance_mm": 116.5974959731102
+      },
+      "Sode_R_01_Lacing": {
+        "triangle_intersections": 0,
+        "attachment_junction": false,
+        "examples": [],
+        "sampled_vertices": 128,
+        "minimum_unsigned_sample_clearance_mm": 82.78126269578934
+      },
+      "Sode_R_01_LowerEdgeRow": {
+        "triangle_intersections": 0,
+        "attachment_junction": false,
+        "examples": [],
+        "sampled_vertices": 128,
+        "minimum_unsigned_sample_clearance_mm": 307.8509569168091
+      },
+      "Sode_R_01_MainPlateRows": {
+        "triangle_intersections": 0,
+        "attachment_junction": false,
+        "examples": [],
+        "sampled_vertices": 128,
+        "minimum_unsigned_sample_clearance_mm": 132.85750150680542
+      },
+      "Sode_R_01_Suspension": {
+        "triangle_intersections": 0,
+        "attachment_junction": true,
+        "examples": [],
+        "sampled_vertices": 122,
+        "minimum_unsigned_sample_clearance_mm": 15.785528346896172
+      },
+      "Sode_R_01_UpperAttachment": {
+        "triangle_intersections": 0,
+        "attachment_junction": false,
+        "examples": [],
+        "sampled_vertices": 117,
+        "minimum_unsigned_sample_clearance_mm": 49.39514771103859
+      }
+    },
+    "do": {
+      "Sode_L_01_Bindings": {
+        "triangle_intersections": 0,
+        "attachment_junction": false,
+        "examples": [],
+        "sampled_vertices": 120,
+        "minimum_unsigned_sample_clearance_mm": 44.455334544181824
+      },
+      "Sode_L_01_Fittings": {
+        "triangle_intersections": 0,
+        "attachment_junction": false,
+        "examples": [],
+        "sampled_vertices": 124,
+        "minimum_unsigned_sample_clearance_mm": 45.038916170597076
+      },
+      "Sode_L_01_InteriorPadding": {
+        "triangle_intersections": 0,
+        "attachment_junction": false,
+        "examples": [],
+        "sampled_vertices": 122,
+        "minimum_unsigned_sample_clearance_mm": 50.27329921722412
+      },
+      "Sode_L_01_Lacing": {
+        "triangle_intersections": 0,
+        "attachment_junction": false,
+        "examples": [],
+        "sampled_vertices": 128,
+        "minimum_unsigned_sample_clearance_mm": 74.02506470680237
+      },
+      "Sode_L_01_LowerEdgeRow": {
+        "triangle_intersections": 0,
+        "attachment_junction": false,
+        "examples": [],
+        "sampled_vertices": 128,
+        "minimum_unsigned_sample_clearance_mm": 138.44716548919678
+      },
+      "Sode_L_01_MainPlateRows": {
+        "triangle_intersections": 0,
+        "attachment_junction": false,
+        "examples": [],
+        "sampled_vertices": 128,
+        "minimum_unsigned_sample_clearance_mm": 65.8232718706131
+      },
+      "Sode_L_01_Suspension": {
+        "triangle_intersections": 131,
+        "attachment_junction": true,
+        "examples": [
+          [
+            6431,
+            365
+          ],
+          [
+            6431,
+            366
+          ],
+          [
+            6431,
+            367
+          ],
+          [
+            6431,
+            363
+          ],
+          [
+            6431,
+            362
+          ]
+        ],
+        "sampled_vertices": 122,
+        "minimum_unsigned_sample_clearance_mm": 0.9202304063364863
+      },
+      "Sode_L_01_UpperAttachment": {
+        "triangle_intersections": 0,
+        "attachment_junction": false,
+        "examples": [],
+        "sampled_vertices": 117,
+        "minimum_unsigned_sample_clearance_mm": 34.42860767245293
+      },
+      "Sode_R_01_Bindings": {
+        "triangle_intersections": 0,
+        "attachment_junction": false,
+        "examples": [],
+        "sampled_vertices": 120,
+        "minimum_unsigned_sample_clearance_mm": 44.66269910335541
+      },
+      "Sode_R_01_Fittings": {
+        "triangle_intersections": 0,
+        "attachment_junction": false,
+        "examples": [],
+        "sampled_vertices": 124,
+        "minimum_unsigned_sample_clearance_mm": 48.5476590692997
+      },
+      "Sode_R_01_InteriorPadding": {
+        "triangle_intersections": 0,
+        "attachment_junction": false,
+        "examples": [],
+        "sampled_vertices": 122,
+        "minimum_unsigned_sample_clearance_mm": 50.39304494857788
+      },
+      "Sode_R_01_Lacing": {
+        "triangle_intersections": 0,
+        "attachment_junction": false,
+        "examples": [],
+        "sampled_vertices": 128,
+        "minimum_unsigned_sample_clearance_mm": 68.65870207548141
+      },
+      "Sode_R_01_LowerEdgeRow": {
+        "triangle_intersections": 0,
+        "attachment_junction": false,
+        "examples": [],
+        "sampled_vertices": 128,
+        "minimum_unsigned_sample_clearance_mm": 139.61675763130188
+      },
+      "Sode_R_01_MainPlateRows": {
+        "triangle_intersections": 0,
+        "attachment_junction": false,
+        "examples": [],
+        "sampled_vertices": 128,
+        "minimum_unsigned_sample_clearance_mm": 66.47814065217972
+      },
+      "Sode_R_01_Suspension": {
+        "triangle_intersections": 122,
+        "attachment_junction": true,
+        "examples": [
+          [
+            2717,
+            527
+          ],
+          [
+            2717,
+            356
+          ],
+          [
+            2717,
+            528
+          ],
+          [
+            2717,
+            364
+          ],
+          [
+            2717,
+            365
+          ]
+        ],
+        "sampled_vertices": 122,
+        "minimum_unsigned_sample_clearance_mm": 0.44861945207230747
+      },
+      "Sode_R_01_UpperAttachment": {
+        "triangle_intersections": 0,
+        "attachment_junction": false,
+        "examples": [],
+        "sampled_vertices": 117,
+        "minimum_unsigned_sample_clearance_mm": 34.470658749341965
+      }
+    }
+  },
+  "limitations": [
+    "Neutral-pose source check; sampled animation, actual rendering and Unreal import are separate evidence.",
+    "Surface-triangle intersections do not detect every enclosed volume or establish continuous collision-free movement.",
+    "D\u014d attachment contact is allowed only on the flexible Suspension objects and is recorded explicitly.",
+    "Unsigned clearances are vertex samples, not exhaustive minimum separation.",
+    "Intentional intersections within lamellar armor construction are not checked as a boolean union."
+  ],
+  "error": "Traceback (most recent call last):\n  File \"/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/SourceArt/Characters/Samurai/Sode01/Scripts/validate_sode.py\", line 306, in <module>\n    main()\n    ~~~~^^\n  File \"/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/SourceArt/Characters/Samurai/Sode01/Scripts/validate_sode.py\", line 300, in main\n    raise RuntimeError('Sode source checks failed: ' + '; '.join(name for name, item in REPORT['checks'].items() if not item['passed']))\nRuntimeError: Sode source checks failed: closed finite outward geometry and valid normals without duplicate or zero-area faces\n"
+}

@@ -1,0 +1,51 @@
+{
+  "asset": "Sode01",
+  "validated": false,
+  "checks": {
+    "authoritative Blender source exists": {
+      "passed": true,
+      "detail": "SourceArt/Characters/Samurai/Sode01/Sode01.blend"
+    },
+    "source collections exist": {
+      "passed": true,
+      "detail": null
+    },
+    "source metre units": {
+      "passed": true,
+      "detail": null
+    },
+    "preserved D\u014d review fixture present": {
+      "passed": true,
+      "detail": [
+        "Do_Review_Upper",
+        "Do_Review_Straps",
+        "Do_Review_Side_R",
+        "Do_Review_Side_L",
+        "Do_Review_Main",
+        "Do_Review_Lining",
+        "Do_Review_Lacing",
+        "Do_Review_Fittings",
+        "Do_Review_Edge",
+        "Do_Review_Back"
+      ]
+    },
+    "generated separate skeletal runtime LODs exist": {
+      "passed": false,
+      "detail": [
+        "SK_Sode_L_01_LOD0",
+        "SK_Sode_L_01_LOD1",
+        "SK_Sode_L_01_LOD2",
+        "SK_Sode_R_01_LOD0",
+        "SK_Sode_R_01_LOD1",
+        "SK_Sode_R_01_LOD2"
+      ]
+    }
+  },
+  "scope": "Reopened editable source and generated runtime copies, neutral geometry/weights and intersections; no rendering/performance claim",
+  "source": {
+    "file": "SourceArt/Characters/Samurai/Sode01/Sode01.blend",
+    "sha256": "aca61691357c4c7901c62c5e251df69c53da81299c36301806bcc036c3b30790",
+    "blender_version": "5.1.2"
+  },
+  "error": "Traceback (most recent call last):\n  File \"/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/SourceArt/Characters/Samurai/Sode01/Scripts/validate_sode.py\", line 306, in <module>\n    main()\n    ~~~~^^\n  File \"/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/SourceArt/Characters/Samurai/Sode01/Scripts/validate_sode.py\", line 210, in main\n    raise RuntimeError('Missing generated runtime exports: ' + ', '.join(missing_runtime))\nRuntimeError: Missing generated runtime exports: SK_Sode_L_01_LOD0, SK_Sode_L_01_LOD1, SK_Sode_L_01_LOD2, SK_Sode_R_01_LOD0, SK_Sode_R_01_LOD1, SK_Sode_R_01_LOD2\n"
+}

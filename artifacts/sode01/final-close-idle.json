@@ -1,0 +1,362 @@
+{
+	"rendered": true,
+	"validated": true,
+	"mode": "sode",
+	"camera": "close",
+	"pose": "animation",
+	"requested_animation": "idle",
+	"animation_asset": "/Game/Characters/Mannequins/Anims/Unarmed/MM_Idle.MM_Idle",
+	"root_motion_handling": "One transient native-clip duplicate shared by review bodies; force root lock to reference pose, no locomotion applied; saved Epic clip unchanged",
+	"max_root_position_error_cm": 0,
+	"max_root_rotation_error_degrees": 0.0011349603286128498,
+	"animation_advanced": true,
+	"observed_animation_position_range_seconds": 7.5567326545715332,
+	"animation_play_rate": 1,
+	"animation": "idle",
+	"crowd_representation": "single skeletal/poseable fixture",
+	"armor_pose_method": "SetLeaderPoseComponent(body)",
+	"engine": "5.8.2-56702186+++UE5+Release-5.8",
+	"platform": "Mac",
+	"rhi": "Metal",
+	"build": "Development editor game; opt-in isolated Sode pair art review",
+	"requested_count": 1,
+	"rendered_bodies": 1,
+	"rendered_helmets": 1,
+	"rendered_armors": 1,
+	"rendered_sode_left": 1,
+	"rendered_sode_right": 1,
+	"rendered_sode": 2,
+	"skeletal_components": 4,
+	"camera_distance_cm": 359.17617112921567,
+	"camera_horizontal_fov": 40,
+	"camera_elevation_degrees": 15,
+	"body_helmet_armor_cast_shadows": true,
+	"warmup_seconds": 3,
+	"capture_seconds": 8.0025103352963924,
+	"frames": 732,
+	"median_fps": 101.11347848458298,
+	"interval_fps": 91.471297046802079,
+	"peak_process_physical_bytes": 3248868664,
+	"max_attachment_position_error_cm": 2.8491013872314571e-14,
+	"max_armor_bone_position_error_cm": 0,
+	"max_armor_bone_rotation_error_degrees": 0.0016050808309001137,
+	"max_component_world_scale_error": 0,
+	"armor_skeleton_compatible": true,
+	"max_sode_bone_position_error_cm": 3.6146219905597677e-08,
+	"max_sode_bone_rotation_error_degrees": 0.0039316234702252671,
+	"sode_skeleton_compatible": true,
+	"sode_pose_method": "copied native local pose, then stateless rigid suspension override on the same upperarm bone",
+	"sode_suspension_samples": 897,
+	"sode_error_reference": "Copied body pose with intended controlled upperarm and propagated child transforms; raw body/armor upperarm differences are expected suspension motion",
+	"sode_motion_source": "SourceArt/Characters/Samurai/Sode01/Scripts/sode_motion.py",
+	"sode_suspension": [
+		{
+			"side": "left",
+			"opening_at_capture_cm": 0.097886154308300263,
+			"maximum_opening_cm": 0.20143481413835726,
+			"lift_clearance_at_capture_cm": 0,
+			"maximum_lift_clearance_cm": 0,
+			"maximum_body_rotation_difference_degrees": 21.190018105809234,
+			"direction_in_blender_torso_axes": "X=0.273 Y=-0.049 Z=-0.961",
+			"controlled_upperarm_component_transform": "18.826855,9.117260,141.521750|-72.362636,-5.966237,25.736322|1.000000,1.000000,1.000000"
+		},
+		{
+			"side": "right",
+			"opening_at_capture_cm": 0.072394473576307738,
+			"maximum_opening_cm": 0.11949783179427902,
+			"lift_clearance_at_capture_cm": 0,
+			"maximum_lift_clearance_cm": 0,
+			"maximum_body_rotation_difference_degrees": 34.103625610333033,
+			"direction_in_blender_torso_axes": "X=-0.273 Y=-0.036 Z=-0.961",
+			"controlled_upperarm_component_transform": "-17.062625,-4.187870,142.350633|71.489480,50.774033,-153.001193|1.000000,1.000000,1.000000"
+		}
+	],
+	"handedness": "Sode_L_01 = anatomical left, native +X; Sode_R_01 = anatomical right, native -X; component yaw -90 degrees",
+	"bow_pose_limit": "not requested",
+	"body_standard": "Epic Unreal Manny — SKM_Manny_Simple",
+	"review_contract_file": "/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/SourceArt/Characters/Samurai/Sode01/asset-manifest.json",
+	"body_component_yaw_degrees": -90,
+	"composed_head_reference_transform": "-0.000000,0.663123,162.575101|90.000000,0.000002,0.000000|1.000000,1.000000,1.000000",
+	"helmet_reference_transform": "-0.000000,2.500000,159.800000|0.000000,0.000000,-0.000000|1.000000,1.000000,1.000000",
+	"helmet_relative_transform": "-2.775101,1.836877,0.000000|-90.000000,0.000002,0.000000|1.000000,1.000000,1.000000",
+	"expected_helmet_world_scale": "X=1.000 Y=1.000 Z=1.000",
+	"armor_bones_checked": [
+		"spine_02",
+		"spine_01",
+		"spine_03",
+		"spine_04",
+		"spine_05",
+		"clavicle_r",
+		"clavicle_l"
+	],
+	"sode_bones_checked": [
+		"upperarm_l",
+		"spine_05",
+		"upperarm_r"
+	],
+	"sode_left_world_scale": "X=1.000 Y=1.000 Z=1.000",
+	"sode_right_world_scale": "X=1.000 Y=1.000 Z=1.000",
+	"sode_left_native_bounds_center_cm": "X=29.972 Y=-1.360 Z=141.503",
+	"sode_right_native_bounds_center_cm": "X=-29.954 Y=-1.366 Z=141.502",
+	"armor_world_scale": "X=1.000 Y=1.000 Z=1.000",
+	"helmet_world_scale": "X=1.000 Y=1.000 Z=1.000",
+	"body_bones_world_at_capture":
+	{
+		"spine_04": "3.681264,-0.254593,119.348576|88.024470,7.210777,75.465513|1.000000,1.000000,1.000000",
+		"head": "8.752183,1.134435,159.695953|76.776162,9.094030,94.547708|1.000000,1.000000,1.000000",
+		"upperarm_l": "9.080899,-18.735974,141.522223|-72.362636,-95.966237,45.052446|1.000000,1.000000,1.000000",
+		"upperarm_r": "-4.160978,16.995411,142.350283|71.489480,-39.225967,-120.120108|1.000000,1.000000,1.000000"
+	},
+	"viewport_width": 1280,
+	"viewport_height": 720,
+	"screenshot": "/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/artifacts/sode01/final-close-idle.png",
+	"screenshot_exists": true,
+	"measurement_notes": "Wall frame intervals include review validation overhead. Engine CPU counters exclude idle time and may describe earlier frames; positive RHI GPU samples only, unavailable counters null. Screenshot readback follows sampling. Mesh LOD inventory is not GPU draw counts. Single-body incremental art cost only; includes animation/skinning and validation, no combat or population simulation. Matching bones/scale do not certify surface clearance or visual quality.",
+	"frame":
+	{
+		"samples": 732,
+		"median_ms": 9.8898783326148987,
+		"p95_ms": 13.759668916463852,
+		"worst_ms": 204.0790393948555
+	},
+	"game_thread":
+	{
+		"samples": 732,
+		"median_ms": 1.2874166965484619,
+		"p95_ms": 2.5518333911895752,
+		"worst_ms": 10.278291702270508
+	},
+	"render_thread":
+	{
+		"samples": 732,
+		"median_ms": 9.9099578857421875,
+		"p95_ms": 13.511833190917969,
+		"worst_ms": 213.41046142578125
+	},
+	"gpu":
+	{
+		"samples": 732,
+		"median_ms": 9.2491245269775391,
+		"p95_ms": 12.193083763122559,
+		"worst_ms": 79.986289978027344
+	},
+	"median_rhi_draw_calls_all_passes": null,
+	"median_rhi_primitives_all_passes": null,
+	"helmet_mesh":
+	{
+		"asset": "/Game/Art/Characters/Samurai/Kabuto01/SM_Kabuto01.SM_Kabuto01",
+		"material_slots": 1,
+		"lods": [
+			{
+				"lod": 0,
+				"triangles": 94608,
+				"vertices": 96430,
+				"sections": 1
+			},
+			{
+				"lod": 1,
+				"triangles": 31238,
+				"vertices": 28811,
+				"sections": 1
+			},
+			{
+				"lod": 2,
+				"triangles": 7062,
+				"vertices": 9149,
+				"sections": 1
+			}
+		]
+	},
+	"armor_static_mesh":
+	{
+		"asset": "/Game/Art/Characters/Samurai/Do01/Review/SM_Do01.SM_Do01",
+		"material_slots": 1,
+		"lods": [
+			{
+				"lod": 0,
+				"triangles": 81392,
+				"vertices": 104293,
+				"sections": 1
+			},
+			{
+				"lod": 1,
+				"triangles": 32556,
+				"vertices": 43728,
+				"sections": 1
+			},
+			{
+				"lod": 2,
+				"triangles": 5504,
+				"vertices": 7723,
+				"sections": 1
+			}
+		]
+	},
+	"body_skeletal_mesh":
+	{
+		"asset": "/Game/Characters/Mannequins/Meshes/SKM_Manny_Simple.SKM_Manny_Simple",
+		"material_slots": 2,
+		"bones": 89,
+		"lods": [
+			{
+				"lod": 0,
+				"triangles": 92178,
+				"vertices": 48705,
+				"sections": 2,
+				"uv_channels": 1,
+				"max_bone_influences": 8,
+				"section_material_slots": [
+					0,
+					1
+				]
+			},
+			{
+				"lod": 1,
+				"triangles": 26998,
+				"vertices": 15096,
+				"sections": 2,
+				"uv_channels": 1,
+				"max_bone_influences": 8,
+				"section_material_slots": [
+					0,
+					1
+				]
+			},
+			{
+				"lod": 2,
+				"triangles": 12998,
+				"vertices": 7793,
+				"sections": 2,
+				"uv_channels": 1,
+				"max_bone_influences": 4,
+				"section_material_slots": [
+					0,
+					1
+				]
+			}
+		]
+	},
+	"armor_skeletal_mesh":
+	{
+		"asset": "/Game/Art/Characters/Samurai/Do01/SK_Do01.SK_Do01",
+		"material_slots": 1,
+		"bones": 89,
+		"lods": [
+			{
+				"lod": 0,
+				"triangles": 81392,
+				"vertices": 104298,
+				"sections": 1,
+				"uv_channels": 1,
+				"max_bone_influences": 4,
+				"section_material_slots": [
+					0
+				]
+			},
+			{
+				"lod": 1,
+				"triangles": 32556,
+				"vertices": 43728,
+				"sections": 1,
+				"uv_channels": 1,
+				"max_bone_influences": 4,
+				"section_material_slots": [
+					0
+				]
+			},
+			{
+				"lod": 2,
+				"triangles": 5504,
+				"vertices": 7723,
+				"sections": 1,
+				"uv_channels": 1,
+				"max_bone_influences": 4,
+				"section_material_slots": [
+					0
+				]
+			}
+		]
+	},
+	"sode_left_skeletal_mesh":
+	{
+		"asset": "/Game/Art/Characters/Samurai/Sode01/SK_Sode_L_01.SK_Sode_L_01",
+		"material_slots": 1,
+		"bones": 89,
+		"lods": [
+			{
+				"lod": 0,
+				"triangles": 36058,
+				"vertices": 42535,
+				"sections": 1,
+				"uv_channels": 1,
+				"max_bone_influences": 2,
+				"section_material_slots": [
+					0
+				]
+			},
+			{
+				"lod": 1,
+				"triangles": 13192,
+				"vertices": 15484,
+				"sections": 1,
+				"uv_channels": 1,
+				"max_bone_influences": 2,
+				"section_material_slots": [
+					0
+				]
+			},
+			{
+				"lod": 2,
+				"triangles": 3982,
+				"vertices": 4669,
+				"sections": 1,
+				"uv_channels": 1,
+				"max_bone_influences": 2,
+				"section_material_slots": [
+					0
+				]
+			}
+		]
+	},
+	"sode_right_skeletal_mesh":
+	{
+		"asset": "/Game/Art/Characters/Samurai/Sode01/SK_Sode_R_01.SK_Sode_R_01",
+		"material_slots": 1,
+		"bones": 89,
+		"lods": [
+			{
+				"lod": 0,
+				"triangles": 36058,
+				"vertices": 42241,
+				"sections": 1,
+				"uv_channels": 1,
+				"max_bone_influences": 2,
+				"section_material_slots": [
+					0
+				]
+			},
+			{
+				"lod": 1,
+				"triangles": 13196,
+				"vertices": 15507,
+				"sections": 1,
+				"uv_channels": 1,
+				"max_bone_influences": 2,
+				"section_material_slots": [
+					0
+				]
+			},
+			{
+				"lod": 2,
+				"triangles": 3994,
+				"vertices": 4664,
+				"sections": 1,
+				"uv_channels": 1,
+				"max_bone_influences": 2,
+				"section_material_slots": [
+					0
+				]
+			}
+		]
+	}
+}
