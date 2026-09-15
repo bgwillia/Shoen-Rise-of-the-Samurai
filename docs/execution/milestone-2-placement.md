@@ -89,7 +89,7 @@ Baseline and later red/green logs belong in `artifacts/placement/`; raw Unreal l
 
 ## Handoff
 
-VERIFIED functional placement/save slice, committed on `codex/milestone-2-placement`. Tooling25/25, core37 suites (CTest2/2), Unreal foundation5/5 and placement4/4, Mac Development build, and final rendered save/alter/load all pass. Captured intermittent glyph loss remains an explicit visual acceptance limitation; physical text/new HUD-click attestation is not claimed. No Milestone 2B work.
+ACCEPTED Milestone 2A placement/save slice, committed on `codex/milestone-2-placement`. Tooling25/25, core37 suites (CTest2/2), Unreal foundation5/5 and placement4/4, Mac Development build, and final rendered save/alter/load all pass. The user subsequently physically accepted Milestone 2A, including HUD text, continuous preview movement, HUD/building controls and the placement/save loop. Slight UI response delay is a known, unmeasured follow-up with no observed missed input or incorrect behavior. No Milestone 2B work.
 
 ### Verification progress
 
@@ -97,7 +97,7 @@ VERIFIED functional placement/save slice, committed on `codex/milestone-2-placem
 - Retained failing tests precede core geometry/transaction/save implementation and passive Unreal view implementation.
 - Independent core review found a saved-terrain rejection gap. Frozen original terrain tolerances and whole-footprint validation fix it; 17 placement suites plus 20 original suites pass. Current placement ASan+UBSan run passes.
 - Final tooling: 25/25. Final Unreal content, transaction/save, input lifecycle and passive recreation tests pass after removal of the failed HUD experiment. Final commands/reports are listed in STATUS.md.
-- Rendered loop: choose/rotate, Enter and native-position click placement, exact resource debit, overlap/boundary/slope rejection, two-building save, third-building alteration and F9 restoration. Paused save bytes match exactly after reload and invalid attempts. Continuous physical mouse movement/new HUD-button clicks are not claimed as human observations.
+- Rendered loop: choose/rotate, Enter and native-position click placement, exact resource debit, overlap/boundary/slope rejection, two-building save, third-building alteration and F9 restoration. Paused save bytes match exactly after reload and invalid attempts. These specific historical tool-driven steps are separate from the user's subsequent physical acceptance.
 - Intermittent Canvas glyph corruption reproduced with placed instances. Initial draw-command-merging workaround failed extended validation and was removed. Fresh Metal binding-reset/serialization diagnostics also reproduced it. A temporary Slate overlay also reproduced glyph loss and was removed. No engine/global CVar/input correction or speculative batch-backend change remains. See renderer-isolation.md.
 
-Final evidence is under `artifacts/placement/`. Scene captures retain the intermittent glyph symptom; functional state is verified separately from unresolved physical text stability.
+Final evidence is under `artifacts/placement/`. Scene captures retain the intermittent glyph symptom; the user subsequently confirmed correct physical text and explicitly accepted the slice. The acceptance-only update adds no runtime code or speculative latency fix; see milestone-2a-latency.md.

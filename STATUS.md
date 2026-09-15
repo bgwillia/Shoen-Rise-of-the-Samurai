@@ -2,7 +2,7 @@
 
 ## Current milestone
 
-**Milestone 2 — settlement foundation, first Small Storehouse placement slice.** The complete placement/save loop is implemented and functionally verified. All required regressions and the final rendered functional replay pass; intermittent captured HUD glyph loss remains a visual acceptance limitation. The coherent slice is committed on `codex/milestone-2-placement`. **Milestone 2B has not begun.**
+**Milestone 2A — first persistent Small Storehouse placement slice: ACCEPTED.** On 2026-09-15 the user physically verified the actual Unreal game and explicitly accepted this slice. The tested game implementation is `90d4d1fe9c4275908665d4f00c8159d0aecc6953`; this acceptance update changes documentation only. The existing automated regressions and rendered functional replay pass. **Milestone 2B has not begun.**
 
 Milestone 1 remains accepted at `44c33ca14de4669031e7e85ab7f157476f5a0a23`. Its complete physical-input acceptance, root-cause investigation, tests and performance evidence are preserved in [Milestone 1 status](docs/execution/milestone-1-status.md). The prior Mac physical-input issue remains resolved. No engine patches or pointer coordinate corrections were added.
 
@@ -16,12 +16,24 @@ Scope and design: [user request](docs/execution/milestone-2-request.md), [execut
 - `domain::World` owns building records and terrain. Stable global ID, definition/version, settlement/district, integer-centimeter position, integer-degree yaw, frozen dimensions/terrain tolerances, completed state and placement transaction ID persist. Unreal presents batched wall/roof instances with no per-building actor Tick.
 - Separate deterministic oriented-footprint/boundary/terrain and resource validation. Terrain clipping checks interior ridges as well as corners. Edge contact within 1e-6 cm is allowed. Typed reason codes drive UI; no string parsing drives rules.
 - Candidate-world transaction commits one building and both costs together. Failures preserve the entire world, including ID/transaction counters and revision. A matching accepted retry returns the same ID without spending; conflicting reuse rejects. Same-frame UI confirmation is guarded, and reset/load invalidate stale gestures.
-- Original Canvas HUD and explicit building ISM batches are retained. Extended rendering checks disproved the attempted command-merging and Slate text workarounds; neither remains. Intermittent missing HUD glyph sections in captures are documented without claiming a fix or an established engine cause. [Renderer investigation](artifacts/placement/renderer-isolation.md).
+- Original Canvas HUD and explicit building ISM batches are retained. Extended rendering checks disproved the attempted command-merging and Slate text workarounds; neither remains. The user now confirms the physical HUD renders correctly; earlier captured glyph anomalies are retained as historical evidence and no longer qualify acceptance. No renderer fix or established engine cause is claimed. [Renderer investigation](artifacts/placement/renderer-isolation.md).
 - Passive view recreation preserves the entire simulation and stable transforms. Terrain meshes are reused while unchanged; render-only meshes do not cook physics. No storage, production, workers or housing systems were added.
 
-## Manual acceptance
+## Human physical acceptance
 
-Actual Metal-rendered 1280×720 game, launched with `python3 tools/dev.py run --scenario settlement`. The complete placement/save loop was exercised through the rendered interface. Functional acceptance is verified; text-presentation acceptance remains qualified by the captured glyph issue below.
+On 2026-09-15 the user explicitly accepted Milestone 2A after testing in the actual Unreal game:
+
+- HUD text renders correctly.
+- The building-placement preview follows the physical mouse correctly.
+- New HUD/building controls respond correctly to physical mouse input.
+- Placement, rotation, validation, cancellation and save/load appear correct.
+- There is a small but perceptible UI response delay, with no observed missed inputs or incorrect interaction. This is a known issue, not an acceptance blocker.
+
+This resolves the previous physical-input/text acceptance qualifications. It does not establish the cause of the older capture anomalies. [Human acceptance record](artifacts/placement/human-acceptance.md).
+
+## Prior tool-driven rendered verification
+
+Actual Metal-rendered 1280×720 game, launched with `python3 tools/dev.py run --scenario settlement`. The following historical checks supplement the human acceptance above:
 
 - B selects Small Storehouse and enters placement with a green body/footprint at the native pointer's ground intersection.
 - Bracket rotation changes facing 0→15 degrees and rotates the rendered footprint/roof.
@@ -36,13 +48,21 @@ Actual Metal-rendered 1280×720 game, launched with `python3 tools/dev.py run --
 
 The final ordinary-launch replay again verified native-position mouse placement, overlap rejection, cancellation and separately observed save/alter/load. The final resave remains byte-identical. [Full manual record](artifacts/placement/manual-acceptance.md), [final layout](artifacts/placement/final-restored-layout.png).
 
-These are tool-driven actions in the visible native game, not human observations. Continuous physical pointer movement and direct new HUD-button clicks have no new human attestation. The computer-control pointer-movement limitation remains; M1's human physical-input acceptance is unchanged. No coordinate correction was introduced.
+These earlier detailed actions were tool-driven. The user's subsequent physical acceptance is recorded separately above. The computer-control pointer-movement limitation does not invalidate that human evidence. No coordinate correction was introduced.
+
+## UI/input latency follow-up
+
+**Known issue: slight, perceptible response delay reported by the user.** No missed inputs or incorrect behavior were observed. Magnitude in milliseconds, frequency, affected stage and root cause are **not measured**. The accepted build is unchanged; no speculative latency fix, new runtime instrumentation or permanent diagnostic presentation was added.
+
+Existing **F12** diagnostics remain available and off by default. They log controller mouse-event receipt (`SHOEN_INPUT`), polled clicks (`SHOEN_CLICK`) and periodic native/Slate/viewport cursor state (`SHOEN_CURSOR`). These logs do not correlate all stages or measure input-to-display latency.
+
+A reliable five-stage measurement needs an event/frame correlation through the platform/Slate input path and actual presentation timing. Adding only controller/HUD timestamps would miss both ends. Defer that instrumentation to a focused profiling pass; the exact measurement boundaries and opt-in requirements are documented in [latency profiling notes](docs/execution/milestone-2a-latency.md).
 
 ## Automated verification
 
 Host: Unreal 5.8.2 / CL 56702186, macOS 26.6.2, Xcode 26.6.0, Apple Clang 21.0.0; Apple M1 Max (10 CPU / 32 GPU cores), 32 GB RAM. Editor `-game`, Metal SM5, 1280×720; content schema 1 and Small Storehouse definition version 1. Source starts from accepted M1 commit above on `codex/milestone-2-placement`.
 
-Final regression results after the saved-terrain fix and removal of ineffective renderer experiments:
+Regression evidence for the physically accepted game implementation `90d4d1fe9c4275908665d4f00c8159d0aecc6953` follows. This acceptance commit changes only Markdown documentation, so no build or runtime regressions were required or rerun; documentation links, scope and whitespace were checked.
 
 | Exact command | Result |
 |---|---|
@@ -70,8 +90,8 @@ All buildings, terrain, colors and Canvas controls are temporary technical prese
 
 ## Known limitations
 
-- Automated captures intermittently lose sections of HUD letters. Physical text stability has no new human attestation; the root cause is not established. The issue reproduced through Canvas and a temporary Slate experiment, even with instance drawing hidden. Ineffective workarounds were removed. This is an unresolved visual acceptance limitation.
-- Continuous physical pointer movement and direct HUD-button clicks have no new human attestation for this slice. Rendered keyboard controls and a native-position mouse press were exercised; the M1 physical-input acceptance remains valid.
+- Slight UI/input response delay is human-observed and unquantified, with no missed input or incorrect interaction. Its cause remains open for measurement; no speculative fixes were applied.
+- Earlier automated captures intermittently lose sections of HUD letters. The user physically confirmed correct HUD text; the capture anomaly's cause remains unknown and it is not an acceptance blocker.
 - Multiple save/load shortcuts arriving within one game update use the existing fixed polling order (F5 before F9). Acceptance separates each operation and observes its result; a rapid automated batch is recorded as rejected evidence.
 - Only the Mac editor/game workflow is verified. Standalone packaging and other platforms are untested; JSON staging is configured but not packaged acceptance.
 - The HUD targets at least 1280×720. A single fixture and building family are exposed. New-fixture controls intentionally replace the unsaved test world.
@@ -82,4 +102,4 @@ All buildings, terrain, colors and Canvas controls are temporary technical prese
 
 ## Next recommended task
 
-After the remaining text-presentation question is settled: **Milestone 2B — select an existing building and inspect its authoritative ID, type, transform, completed state and placement transaction, including after load.** This gives a small useful interaction foundation before demolition, construction phases or economy. Recommendation only; no Milestone 2B implementation.
+**Milestone 2B — select an existing building and inspect its authoritative ID, type, transform, completed state and placement transaction, including after load.** This gives a small useful interaction foundation before demolition, construction phases or economy. Recommendation only; no Milestone 2B implementation.

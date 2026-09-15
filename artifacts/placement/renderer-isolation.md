@@ -16,10 +16,14 @@ Independent installed-source review found Canvas disables depth tests and preser
 7. A temporary settlement-only Slate text overlay reproduced the same missing glyph sections during extended interaction. It was removed; this is not established as Canvas-only.
 8. With all ISM drawing hidden, several changing preview frames were clean, but enabling F12 with the static preview visible reproduced missing text again. Explicit building instancing is therefore not a necessary cause. No speculative change to the batch backend is retained.
 
-## Conclusion and remaining issue
+## Historical conclusion before human acceptance
 
-Intermittent missing HUD glyph sections are visible in automated captures of the actual Metal game. Some frames are complete; some are not. This investigation has not isolated a specific project, engine, driver or capture-path cause. A new human physical check of whether text visibly flickers/disappears was requested; no answer is recorded at completion.
+Intermittent missing HUD glyph sections are visible in automated captures of the actual Metal game. Some frames are complete; some are not. This investigation has not isolated a specific project, engine, driver or capture-path cause. At the implementation commit, a human physical check was still pending.
 
 The functional placement loop, resource transactions and save restoration are independently verified. The final project retains the original Canvas HUD and passive building ISM batches, plus the existing F12 diagnostics. Ineffective renderer overrides, diagnostic launch flags and the failed Slate overlay are absent. No engine patch, global CVar policy or pointer correction was added.
 
-This remains a visual acceptance limitation, not a claimed fix. Inspect the physical Unreal window before treating the text presentation as fully accepted. If physically reproducible, investigate the rendering path before expanding the interface. Existing screenshots are functional-state evidence and may contain the symptom.
+At that point this was a visual acceptance limitation, not a claimed fix. Existing screenshots preserve the observed capture symptom.
+
+## Human acceptance update — 2026-09-15
+
+The user physically verified the actual game and confirms that HUD text renders correctly, the preview follows the physical mouse, the new controls respond correctly, and placement/rotation/validation/cancellation/save-load appear correct. Milestone 2A is explicitly accepted. The earlier capture anomaly no longer qualifies acceptance; its underlying cause is not established, and no renderer fix is claimed. A slight UI response delay, without missed inputs or incorrect behavior, is tracked separately in STATUS.md and the latency profiling notes.

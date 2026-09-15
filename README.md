@@ -1,6 +1,6 @@
 # SHŌEN — settlement foundation
 
-Milestone 1 is accepted. Milestone 2 adds the first persistent Small Storehouse placement slice for the Unreal strategy/city-building prototype. See [STATUS.md](STATUS.md) for exactly what has been verified. The authoritative product handoff remains in `japan_strategy_codex_handoff/`; the asset workbook is a separate future production backlog.
+Milestones 1 and 2A are accepted. Milestone 2A adds the first persistent Small Storehouse placement slice for the Unreal strategy/city-building prototype. See [STATUS.md](STATUS.md) for exactly what has been verified. The authoritative product handoff remains in `japan_strategy_codex_handoff/`; the asset workbook is a separate future production backlog.
 
 ## Run on this Mac
 
@@ -63,7 +63,7 @@ The computer-control screenshot can display a click marker at a different positi
 
 The user physically verified pointer alignment, the 1,000-soldier button, and camera/formation controls. Milestone 1 is accepted; see [STATUS.md](STATUS.md). Z/X/C/V remain the preset shortcuts. No coordinate correction or engine patch is enabled.
 
-Automated captures intermittently show missing sections of HUD letters in the settlement scene. The placement/save loop is verified, but physical confirmation of this text symptom is pending. No speculative renderer override is enabled; see STATUS.md and the renderer investigation for the remaining visual limitation.
+The user physically accepted Milestone 2A: HUD text, mouse-following preview, HUD/building controls, placement, rotation, validation, cancellation and save/load are correct. A slight UI response delay remains a known, unmeasured issue with no missed inputs or incorrect interaction. F12 diagnostics remain optional and off by default. No speculative renderer or latency fix is enabled; see STATUS.md and the latency profiling notes.
 
 ### Population proof
 

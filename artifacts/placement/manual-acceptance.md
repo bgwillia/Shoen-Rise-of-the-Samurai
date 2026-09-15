@@ -4,7 +4,7 @@
 
 ## Evidence type
 
-Actions below were performed through the visible native game interface using computer control. They are not headless automation and are not a new human physical-input attestation. The tool can deliver mouse presses at the native pointer but cannot reliably move that pointer. Camera zoom/rotation therefore moved the pointer's terrain intersection during this pass. M1's separately documented human physical-input acceptance remains unchanged. Direct new HUD-button clicks and continuous physical preview movement remain unverified details.
+Actions below were performed through the visible native game interface using computer control. They are not headless automation and are not a new human physical-input attestation. The tool can deliver mouse presses at the native pointer but cannot reliably move that pointer. Camera zoom/rotation therefore moved the pointer's terrain intersection during this pass. M1's separately documented human physical-input acceptance remains unchanged. At this original tool-driven pass, direct new HUD-button clicks and continuous physical preview movement were unverified; the subsequent human acceptance below resolves that qualification.
 
 ## Complete functional loop
 
@@ -28,4 +28,8 @@ Final original-HUD build and ordinary launch passed the functional replay: F9 re
 
 One rapid automated F10/F9/F5 batch was rejected as acceptance evidence: both save/load events reached the same game update, whose existing polling order processes F5 before F9. The `.bak` still matched the original two-building fixture; that fixture was restored for a new, separately observed full replay. `final-batched-input.shoen` records the rejected three-building batch result. No save-format failure was observed. Do not batch opposing save/load shortcuts in a single update.
 
-The attempted Slate fallback also reproduced missing glyphs and was removed. Final captures still show intermittent glyph loss, although some frames are complete. No glyph fix or human text acceptance is claimed.
+The attempted Slate fallback also reproduced missing glyphs and was removed. Final captures still show intermittent glyph loss, although some frames are complete. No glyph fix was established during that pass. Human acceptance was subsequently supplied as recorded below.
+
+## Subsequent human physical acceptance — 2026-09-15
+
+The user confirms correct physical HUD text, physical mouse-following preview, responsive HUD/building controls, and correct placement, rotation, validation, cancellation and save/load. Milestone 2A is explicitly accepted. A small perceptible UI delay causes no observed missed inputs or incorrect interaction; its duration and cause are not measured. See human-acceptance.md and STATUS.md. This acceptance update changes documentation only.
