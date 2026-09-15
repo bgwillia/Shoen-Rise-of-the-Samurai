@@ -31,3 +31,8 @@ add_test(NAME domain_profiling_fixture_invariants COMMAND domain_profiling_fixtu
 add_executable(domain_prototype_tests tests/test_prototype.cpp)
 target_link_libraries(domain_prototype_tests PRIVATE domain_core)
 add_test(NAME domain_prototype_invariants COMMAND domain_prototype_tests)
+
+target_sources(domain_core PRIVATE "${DOMAIN_SOURCE}/Private/sim/Terrain.cpp")
+add_executable(domain_terrain_tests tests/test_terrain.cpp)
+target_link_libraries(domain_terrain_tests PRIVATE domain_core)
+add_test(NAME domain_terrain_invariants COMMAND domain_terrain_tests)

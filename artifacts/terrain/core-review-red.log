@@ -1,0 +1,9 @@
+PASS authored terrain
+PASS real representative muster
+FAIL reserved deterministic line orders: original_order*(state.navigation.player_paths.at(pair[0]).destination.y-state.navigation.player_paths.at(pair[1]).destination.y)>0
+BRIDGE30 crossed=30 overlap_peak=0 stuck=0 waits=0 requests=1666 failed=1615 sim360s_cpu_ms=103.812
+PASS 30 formation bridge traffic
+SECOND_WAR first_dead=58 elite_dead=58 second_elite=62 second_away=2262
+PASS persistent second war and elite depletion
+TERRAIN_COMBAT 1000v1000 sim180s_cpu_ms=58.8621 navmedian_ms=0.00975 navp95_ms=0.043292 contact=1700 ranged=0 bridge=2 ford=1 overlap_peak=0 dead=136 hill=200 flank=269
+FAIL actual constrained terrain combat: p.battle.contact_events>0 && p.battle.ranged_attacks>0

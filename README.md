@@ -1,8 +1,41 @@
-# SHŌEN — core-loop feasibility prototype
+# SHŌEN — constrained battlefield feasibility prototype
 
-The active task is a playable settlement → army → battle → settlement loop. See [STATUS.md](STATUS.md) for verification and measured limits. The accepted foundation and its old save slots remain separate legacy scenarios.
+Prototype B evaluates mixed armies on constrained terrain, then returns their losses to the settlement before a second war. Prototype A established the settlement → army → battle → settlement loop. See [STATUS.md](STATUS.md) for verification and measured limits. The accepted foundation and its old save slots remain separate legacy scenarios.
 
-## Play the integrated prototype
+## Play Prototype B: terrain and repeated warfare
+
+```sh
+python3 tools/dev.py build
+python3 tools/dev.py run --scenario terrain
+```
+
+Use the existing settlement ledger for both wars. **N resets the entire society**; avoid it between wars. F5/F9 remain unavailable in the session-only prototypes and leave legacy saves untouched.
+
+1. **Space** pauses; inspect ready workers, daily output and elite availability. **U** musters the representative mixed army from actual available people and gear. It never replenishes the settlement. **F** deploys against a finite enemy army.
+2. **Tab** selects all; **comma** selects polearms, **period** bows, **slash** elite. Click or drag a box for individual/custom selections; Shift adds. **Ctrl+1–9** assigns groups; **1–9** recalls them.
+3. **I** deploys the selected troops in a line on the west bank. **Right-click** gives a group destination; **right-drag** sets facing from the destination toward the release point. **[ / ]** rotates the selected destination line in 15-degree steps and keeps a common bridge/ford choice. **Home** frames the battlefield; WASD, wheel, Q/E and middle-drag camera controls remain available.
+4. **Y** orders the selected group across the narrow primary bridge. **O** orders it through the distant ford. With nothing selected these commands use all eligible formations. **G** attacks toward the nearest enemies using terrain routes; **Y/O** explicitly choose a crossing. Split the army into groups: infantry at the bridge, bows supporting them, a smaller force at the ford. After the ford, issue a destination toward the enemy flank.
+5. Woods slow movement; the raised hill gives defenders an advantage. Blue/cyan/purple are your polearms/bows/elite; red/orange/magenta are enemies. Gold marks selection, orange rings mark routed formations. The header reports selected count, strength, role, morale, fatigue and group; world labels are limited to selected formations.
+6. Fight to a result, then **H** returns the army. H during fighting retreats. Compare dead, recovering workers, food/equipment output and elite availability. **P** advances seven days of recovery. **U** musters the second army from what remains; **F** starts its next battle. No reset is needed.
+
+The bridge is a real single-lane bottleneck: split traffic and use the ford for passing or flanking. Formations holding outside enemy range need another attack order. Battle time is pause/1×; settlement speed controls retain their faster rates. See [movement limits and measured results](STATUS.md).
+
+Manual recruitment stays available: **M** farmer polearms, **L** laborer polearms, **J** smith polearms, **K** farmer bows and **T** smaller samurai formations. Recruitment is constrained by available cohort members and gear.
+
+**Optional diagnostics:** F7 writes a read-only terrain/army/economy snapshot under `game/Saved/Profiling/`; F10 captures a screenshot. F6 profiling and F12 cursor diagnostics remain off by default. The F7 snapshot is a software state observation, not a physical latency measurement.
+
+### Constrained combat measurements
+
+```sh
+python3 tools/dev.py combat-benchmark --terrain --per-side 1000 --seconds 120
+python3 tools/dev.py combat-benchmark --terrain --per-side 2000 --seconds 120
+```
+
+Run one Unreal process at a time with no concurrent heavy tests/builds. These use actual rendered combat, collect frame/simulation timings and optional formation-navigation timings, and report crossing progress, queue/stuck counts and overlaps. See [STATUS.md](STATUS.md) for measured results and explicit limitations.
+
+<a id="play-the-integrated-prototype"></a>
+
+## Play Prototype A: the integrated core loop
 
 ```sh
 python3 tools/dev.py build

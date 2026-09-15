@@ -1,0 +1,5 @@
+FAIL authored terrain: TerrainWalkable(0,0)
+FAIL real representative muster: MakeTerrainPrototype(w,p)
+FAIL reserved deterministic line orders: MakeTerrainCombatFixture(w,p,1000)
+FAIL 30 formation bridge traffic: MakeTerrainPrototype(w,p)
+FAIL persistent second war and elite depletion: MakeTerrainPrototype(w,p)

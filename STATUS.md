@@ -1,86 +1,85 @@
 # SHŌEN status
 
-## Current task: core-loop feasibility prototype
+## Prototype B — constrained battlefield and repeated warfare
 
-**VERIFIED — the integrated settlement → army → tactical battle → settlement consequence loop is playable.** Work stops at this prototype. This is feasibility evidence, not a completed beta or production acceptance. [Authorized request](docs/execution/core-loop-prototype-request.md), [execution plan](docs/execution/core-loop-prototype.md), [play instructions](README.md#play-the-integrated-prototype).
+**Prototype B is complete and committed as a playable feasibility prototype.** Prototype A was accepted at `60ca49fb0416d12423eb8c57ed3e234eba17dedb`; its evidence is archived in [Prototype A status](docs/execution/prototype-a-status.md). M1, M2A and M2B remain accepted. This work follows the [Prototype B request](docs/execution/prototype-b-request.md), on `codex/prototype-b-terrain`. It does not start Prototype C or restore production-hardening approval milestones.
 
-Implementation is on `codex/core-loop-prototype`, based on the profiling preservation checkpoint `8d69fa3`. The earlier accepted foundation remains M1 `44c33ca14de4669031e7e85ab7f157476f5a0a23`, M2A `f27632b05e124934779b3dc574b017851608859d`, and M2B `396bf5e0f2dd22222edf1a6cbf5bb6c873cfc954`.
+### What is playable
 
-## What is playable
+Run `python3 tools/dev.py run --scenario terrain` after `python3 tools/dev.py build`. [Controls and two-war walkthrough](README.md#play-prototype-b-terrain-and-repeated-warfare).
 
-- **640-person settlement:** 320 farmers, 160 laborers, 40 smiths, 40 retainers and 80 dependents. Six placed placeholder building types: houses, agricultural fields, granary, smithy, manor and retainer training. Existing placement/rotation/validation/cancellation handles additional buildings.
-- **Daily economy:** food consumption, continuous simplified agriculture, general-labor timber/iron/fuel production, smith production using those resources, and distinct basic/elite gear. Houses affect workforce productivity, farms enable food, granaries add food capacity, smithies enable equipment, manor/training enable elite recruitment and production. Rules are data-driven in [prototype.json](game/Content/Domain/Data/prototype.json).
-- **Real mobilization:** M farmer spears, L laborer spears, J emergency smith spears, K farmer bows, T samurai. Ordinary formations default to 50, smith levy to 20, elite foot to 20. Recruitment removes available workers and appropriate gear; exact district/cohort/occupation/skill/estate origins remain in service records. No presentation object creates people.
-- **Actual tactical battle:** F deploys against a finite equal-size enemy army. Movement, facing, contact melee, ranged attacks/tracers, casualties, morale, routing and fatigue run at 20 Hz while campaign time freezes. Every player formation remains selectable; right-click/drag orders and existing groups remain available. G advances selected formations, or all if none are selected. Elite foot troops are stronger, but lose effectiveness when flanked/exhausted and can lose to overwhelming numbers.
-- **Return and consequences:** H returns after a result or retreats during fighting. One atomic candidate applies battle dispositions and demobilization through the existing ledger, returns surviving equipment and commits one operational day. Dead remain dead; wounded recover into their original cohorts after seven days. Repeated return cannot duplicate people, gear or the day. P advances seven campaign days; normal speed controls also work.
-- **Minimal presentation:** workforce/away/recovering, food/materials/gear, production, army composition, battle losses and last outcome. F6 profiling and F12 cursor diagnostics remain off by default.
+- One authored west/east battlefield: impassable river, narrow bridge, distant ford, open ground, slowing woods and a defensive hill. Shared geometry controls movement, height, selection and passive rendering.
+- A real 6,000-person settlement fields **16×100 polearms, 6×100 bows and 3×40 samurai: 25 formations / 2,320 people**. Recruitment removes workers from their occupations and consumes gear. The opposing finite army has comparable mixed roles.
+- Individual/box selection remains available. Tab/category keys select armies or roles; group line destinations reserve separate spaces, preserve approximate frontage order and accept facing rotation. Ctrl+1–9 assigns groups; 1–9 recalls. Y chooses bridge, O ford, G nearest-enemy attack, I western deployment line.
+- Formation-level reservations produce real queues without soldier Actors or per-person pathfinding. Bows have range and weaker melee; samurai have stronger combat/higher morale but finite estate manpower and elite gear. Facing, flank, woods and hill modifiers matter. Simple enemies guard the east bank, position bows behind infantry and react to nearby flank threats.
+- H ends an active battle as a retreat, or returns the army after a result. Casualties return transactionally to their original occupations. P advances recovery; U remusters from the same diminished World. N is the explicit whole-session reset and must not be used between wars.
 
-## Rendered gameplay demonstration
+### Crossing failure found and fixed
 
-Launch: `python3 tools/dev.py run --scenario prototype`. Actual 1280×720 windowed Unreal game on this Mac. [Full observed sequence and representative screenshots](artifacts/prototype/rendered-demo.md).
+The first rendered run exposed a genuine opposing-traffic deadlock: at 109 seconds, routed troops returning through the single-lane ford blocked all outgoing samurai. At 183 seconds it remained stalled, with zero friendly overlap. [Preserved failure and gameplay evidence](artifacts/terrain/rendered-demo.md).
 
-| Stage | Farmers available | Smiths available | Retainers available | Food produced / day | Basic gear / day |
-|---|---:|---:|---:|---:|---:|
-| Before mobilization | 320 | 40 | 40 | 960 | 8 |
-| 240 people mobilized | 170 | 20 | 20 | 510 | 4 |
-| Returned after battle | 278 | 28 | 35 | 834 | 5 |
-| Seven days after return | 291 | 32 | 36 | 873 | 6 |
+The cause was a one-cell ford plus retreating formations sharing a final home-exit destination. The fix is confined to the authored terrain/navigation model: a three-row ford, separate eastbound/westbound lanes, unique reserved retreat exits and no repeated orders for settled retreats. Renderer and simulation consume the same widened geometry. Mid-transit retargeting keeps its committed adjacent leg; facing rotation preserves a common chosen crossing. The Unreal attack helper also moves invalid bow standoff points out of impassable river terrain. No engine patch or mouse-coordinate adjustment was made.
 
-The rendered **240 vs 240** battle ended in victory after approximately **43 simulated seconds**, with **57 player deaths, 26 wounded and 157 healthy survivors**. The smaller samurai formation retained 15 of 20 soldiers while ordinary formations routed. Return advanced Day 8 to Day 9 once. Seven days later, all wounds had healed but 57 deaths remained: 29 farmers, 16 laborers, 8 smiths and 4 retainers. Living population was 583. Food net changed from +320 before mobilization to −130 while mobilized, +251 immediately after return, and +290 after recovery.
+Targeted results: **30/30 one-way bridge formations cross by 209.1 simulated seconds**, with zero overlaps and no remaining stuck formations at the 360-second budget; **12/12 opposing ford formations cross**, also without overlap or a remaining stall. The actual 2,320-person command sequence gets all three elite formations across. [Core evidence, including RED failures](artifacts/terrain/core-evidence.md).
 
-Keyboard recruitment, deployment, advance orders, pause/resume, return and fast-forward were visibly exercised through computer control. Bow tracers, contact losses, shrinking formations, morale, fatigue and routing were observed. The final readability changes were subsequently viewed during rendered combat.
+### First war → recovery → second war, in the final rendered build
 
-**Input evidence boundary:** this was not new human physical-input acceptance. Computer-control mouse click and Ctrl+A did not activate their intended actions in the ordinary demo, matching the existing automation limitation; no new human cursor failure was reported. Earlier human physical M1/M2A/M2B acceptance remains distinct. Core/group tests and scripted benchmark orders provide separate command evidence. This does not create another approval gate under the user's feasibility-mode request.
+The final ordinary game fought for 129.7 seconds, then H explicitly retreated: **482 dead, 232 wounded, 1,606 healthy returned**. The dead were 388 farmers, 39 laborers, 1 smith and 54 retainers. After P recovered the wounded, U raised a second army and F deployed it, with **no reset or resource refill**.
 
-## Actual combat performance
+| Capability | First army | Second army |
+|---|---:|---:|
+| Soldiers | 2,320 | 2,266 |
+| Samurai | 120 | 66 |
+| Food produced/day while away | 4,800 | 3,636 |
+| Food deficit/day while away | 1,200 | 1,882 |
+| Basic equipment produced/day while away | 20 | 19 |
 
-Unreal **5.8.2 / CL 56702186**, Mac Development editor/game, **Metal SM5**, Apple **M1 Max / 32 GB**, macOS 26.6.2. Actual **1280×720 windowed** viewport. Each run starts full armies, uses 50-person spear/bow formations, has a three-second warmup and measures 45 seconds of real combat. Standing counts decline with casualties. Runs were serial, with no concurrent builds/heavy tests; F6/F12 off, VSync off, `t.MaxFPS 0`.
+Elite replacement was limited by the 66 surviving retainers, despite sufficient gear. Ordinary reserves still supplied 2,200 levies; the first war damages economic support before exhausting all ordinary recruitment. The unsupported elite flank was expensive. The final combat snapshot had 9 ford completions (including returning troops), zero friendly overlap, and real melee/ranged/flank/hill activity; bridge congestion still left 14 reserved-cell waits over ten seconds. [Full rendered sequence, snapshots and images](artifacts/terrain/rendered-demo.md#final-rendered-verification-after-the-correction).
 
-| Soldiers per side | Formations total | Median FPS | Frame median / p95 | Simulation CPU p95 per game tick | Peak friendly overlap pairs |
-|---|---:|---:|---:|---:|---:|
-| 500 vs 500 | 20 | 120.0 | 8.33 / 9.00 ms | 0.011 ms | 4 |
-| 1,000 vs 1,000 | 40 | 113.3 | 8.82 / 9.39 ms | 0.022 ms | 24 |
-| 2,000 vs 2,000 | 80 | 120.0 | 8.33 / 8.99 ms | 0.047 ms | 103 |
+### Commands and input evidence
 
-All runs recorded genuine contact, ranged attacks and casualties on both sides. Scripted selection/group/advance batches accepted **23 / 27 / 28 formation orders**, with p95 dispatch cost below 0.010 ms. This is not physical input latency. Worst observed frames were **44.13 / 41.72 / 75.14 ms**; short-run host/render pacing variation remains. The faster 2,000 run does not imply inverse scaling. Most render ticks have no combat step, so near-zero simulation medians are not per-step costs. Peak process memory was roughly 3.3 GiB.
+Rendered keyboard play exercises pause/resume, muster, deployment, army/category selection, bridge/ford commands, attack, line deployment/facing rotation, return, recovery, second muster and optional F7/F10 capture. Automated integration additionally covers line rotation preserving route, hill-aligned formation rendering and population conservation. Benchmark setup selects and assigns main/elite control groups through the authoritative command path.
 
-[Detailed measurements, exact commands and limitations](artifacts/combat/measurements.md). Raw JSON: [500](artifacts/combat/combat-500.json), [1,000](artifacts/combat/combat-1000.json), [2,000](artifacts/combat/combat-2000.json). The 500/1,000 combat windows were visually inspected; 2,000 was measured through the same actual rendered path and finished before direct visual inspection. No claim of final graphics, obstacle pathfinding, other hardware or packaged performance.
+Prior **human physical input acceptance** remains recorded: cursor alignment, camera/formation controls, UI clicks and building interactions worked. This B run uses computer-controlled keyboard input; it is **not new human physical mouse acceptance**. Synthetic mouse/modifier delivery limitations remain, including an unsuccessful synthetic Ctrl+1 attempt. No reproducible physical pointer regression was established. The user's slight UI delay remains non-blocking; no speculative latency fix was applied.
 
-## Automated verification
+F7 snapshots, F6 profiling and F12 cursor diagnostics are optional. Normal play has no permanent profiling or diagnostic cursor overlay. F7 records software state, not physical input-to-display latency.
 
-Final commands and observed results (2026-09-15):
+### Final rendered combat performance
 
-| Command | Result |
+Final corrected build, 120 seconds per size after three-second warmup, one Unreal process at a time. Actual 1280×720 windowed Metal, Mac Development editor-game, M1 Max / 32 GB. Both runs exited 0 and validated real combat, both crossings and navigation samples.
+
+| Per side | Median FPS | Frame p95 / worst ms | Simulation CPU p95 ms | Navigation p95 / worst ms | Peak overlaps |
+|---|---:|---|---:|---|---:|
+| 1,000 | 109.4 | 10.002 / 54.785 | 0.0308 | 0.0428 / 0.1435 | 0 |
+| 2,000 | 108.6 | 10.083 / 43.295 | 0.0863 | 0.1131 / 0.2947 | 0 |
+
+Navigation is not the measured frame-budget bottleneck; its largest sample is 0.295ms. Simulation samples are per render tick, navigation samples per 20Hz step, so their percentiles are not directly comparable. Frame hitches remain, with no established cause. Peak reserved-cell waits over ten seconds were 8 / 17 formations; low CPU cost does not remove tactical congestion. [Full measurement methodology, queue counts, raw reports and limitations](artifacts/terrain/measurements.md).
+
+### Automated verification
+
+Final code passed on 2026-09-15:
+
+| Exact command | Result |
 |---|---|
-| `python3 -m unittest discover -s tools/tests -v` | Exit 0; **47/47** |
-| `python3 tools/dev.py core-test` | Exit 0; **CTest 5/5**, including seven targeted prototype suites |
-| `python3 tools/dev.py build` | Exit 0; **ShoenEditor Mac Development** |
-| `python3 artifacts/prototype/run-unreal-smoke.py` | Exit 0; **17/17 Unreal tests**, zero test errors/warnings; includes `Shoen.Prototype.IntegratedLoop` |
-| `python3 tools/dev.py combat-benchmark --per-side 500 --seconds 45` | Exit 0; rendered report validated |
-| `python3 tools/dev.py combat-benchmark --per-side 1000 --seconds 45` | Exit 0; rendered report validated |
-| `python3 tools/dev.py combat-benchmark --per-side 2000 --seconds 45` | Exit 0; rendered report validated |
+| `python3 -m unittest discover -s tools/tests -v` | 51/51 passed |
+| `python3 tools/dev.py core-test` | 6/6 CTest targets passed, including ten terrain suites and accepted A invariants |
+| `python3 tools/dev.py build` | ShoenEditor Mac Development succeeded, 22.66 seconds |
+| `python3 artifacts/terrain/run-unreal-smoke.py` | 18/18 Shoen Unreal tests passed; zero errors/warnings, including foundation, placement, inspection, profiling, A and B |
+| `python3 tools/dev.py combat-benchmark --terrain --per-side 1000 --seconds 120` | Exit 0, 13,041 rendered frames; validated |
+| `python3 tools/dev.py combat-benchmark --terrain --per-side 2000 --seconds 120` | Exit 0, 12,957 rendered frames; validated |
 
-The single-process Unreal runner executes `-ExecCmds=Automation RunTests Shoen.` with `-TestExit=Automation Test Queue Empty -unattended -NullRHI`; [exact argument array](artifacts/prototype/unreal-command.json), [per-test results](artifacts/prototype/unreal-summary.json), [logs](artifacts/prototype/). NullRHI tests are not rendering measurements. `python3 tools/dev.py editor-test --suite prototype` is also available for the focused integrated smoke test.
+[Tooling log](artifacts/terrain/tooling-tests.log), [core log](artifacts/terrain/core-tests.log), [build log](artifacts/terrain/build.log), [Unreal summary](artifacts/terrain/unreal-summary.json), [exact Unreal command](artifacts/terrain/unreal-command.json), [bounded integration review](artifacts/terrain/review-integration.md). Unreal regression automation uses NullRHI and makes no rendering claim; rendered gameplay and benchmarks are separate.
 
-Targeted core tests cover worker/output reduction, equipment/estate/origin constraints, deterministic combat and frozen/paused clocks, real ranged/contact damage, elite strength and counters, outcome/recovery conservation, duplicate-return rejection and scale smoke. Integration review fixed battle pause, inherited seed reserve conflicting with food depletion, forward contact overshoot and the one-time operational day. [Focused independent review](artifacts/prototype/review.md).
+### Remaining limits and risks
 
-## Simplifications and remaining risks
+- The navigation model is an authored four-neighbor grid with visible snapping/cardinal travel. A 30-formation unopposed bridge queue takes about 3.5 minutes. Opposing manual orders on the single-lane bridge can still require regrouping or the ford; contact deliberately stops traffic. Passing is a corridor rule, not general crowd avoidance.
+- A formation holding outside enemy range needs another attack/order. The simple AI does not guarantee every battle resolves without further commands. The next enemy scales to the newly raised army; there is no persistent opposing society yet. H retreat is a valid finish. This prototype does not establish polished attack-move behavior or enjoyable command pacing.
+- UI labels are selected-only and capped to limit clutter; the temporary sidebar/status panel occupies substantial screen space. Automatic frontage and coarse target reservations need human tactical playtesting. Physical B-specific mouse and modifier usability has not been newly accepted.
+- Frame outliers require investigation; no GPU, engine or input-latency cause is assumed. These are placeholder, Development editor-game measurements on one Mac, not packaged/final-art capacity claims.
+- Terrain and both prototype sessions are session-only; F5/F9 protect the legacy save slots. Economy remains the deliberately coarse A model: free immediate prototype construction, simplified recovery/production, no final balance or extended samurai politics.
 
-- **Movement quality is the main technical risk.** Contact standoff works, but no friendly avoidance, obstacle navigation or congestion resolution exists. Friendly overlaps rose to 103 pairs at the largest tested size. Targeting/congestion work is quadratic in formation count; it remains cheap at 80 formations on this host. A formation-level spatial grid/local avoidance and terrain corridor planning are plausible next approaches if bottleneck tests require them. No engine rewrite is justified by these results.
-- Placeholder bodies, rigid formations, pulsed arrow tracers and labels. No individual combat animation/collision, siege or terrain effects. Routing labels can overlap HUD text at scale, and recruited formations overlap while idle in the settlement. These are known presentation limits; further polish is deferred.
-- **Session-only prototype.** No prototype/battle persistence. F5/F9 explain the limitation and do not overwrite accepted legacy saves. Existing foundation/placement saves still work in their separate scenarios.
-- Instant, free prototype construction; simple capacity/eligibility building functions. Agriculture is continuous daily production; general labor produces an abstract resource basket. No worker assignment logistics, seasons, construction labor, storage transport or final balance. Food shortfall is reported; starvation, migration and growth are not implemented.
-- Basic gear is a shared bow/polearm abstraction; elite gear is separate. No final smith apprenticeship/quality progression, horses or bespoke cavalry mechanics. Cavalry was not evaluated.
-- Enemy army is an authored finite fixture, with nearest-visible-enemy battlefield logic, no campaign AI or opponent economy. Casualty allocation and two-dead/one-wounded split are deterministic approximations. No morale contagion, supply lines, pursuit/capture or army campaign travel.
-- **Design risk remains:** this proves the mechanical connection, not that the balance is fun. Current stocks/production are generous, losses can reduce consumption as well as output, and open-ground fights resolve quickly. Terrain, recovery pacing and meaningful deployment choices need playtesting.
-- Development editor/game only, one Mac and short measurements. No certification of larger armies, final animated art, packaging or other platforms. Minor UI latency remains known and non-blocking.
+### Feasibility and recommended Prototype C
 
-## Latency work preserved
+The results reinforce technical feasibility of formation-scale navigation and a shared population/economy/combat ledger. They also expose the larger design risk: affordable computation does not ensure readable orders or satisfying congestion and flank timing.
 
-The user explicitly made M2C latency non-blocking and changed strategy. [Preserved investigation](docs/execution/milestone-2c-status.md), [F6 profiling guide](docs/execution/milestone-2c-profiling.md), [measurements](artifacts/latency/measurements.md). Selection logic measured about 0.03–0.05 ms and replay-to-backbuffer about 16 ms; placement about 24 ms including the next-frame view update. These are software endpoints, not physical input-to-photon measurements. No speculative engine/coordinate fix or default frame cap was applied. Final physical M2C capture was not completed and is no longer blocking. Revisit only if interaction becomes materially worse.
-
-## Feasibility assessment and next prototype
-
-**The central loop is technically and mechanically feasible at the tested prototype scale, and promising enough to continue.** The shared population ledger, worker-dependent economy, equipment gates, tactical casualties and return-home consequences work together. No measured compute/representation limit materially threatening the concept appeared through 2,000 vs 2,000. Fun and terrain-aware tactical quality remain unproven.
-
-**Recommended next feasibility prototype:** one constrained battlefield with a village edge, a narrow crossing and a flanking route. Test formation separation, pathfinding/congestion and group commands at the same army sizes, then carry losses through a second mobilization cycle. Evaluate whether terrain and deployment choices create better decisions. Do not begin it automatically.
+**Recommended C:** a bounded combined-arms command and battle-pacing playtest on this same map. Make attack/hold intent and queue feedback clear, test line width and supported flanks with a human, and profile the observed frame hitches. Keep the same society and terrain; do not add campaign systems or final art. **C has not begun.**

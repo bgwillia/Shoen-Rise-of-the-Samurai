@@ -1,0 +1,41 @@
++ ["/opt/homebrew/bin/cmake", "-S", "/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/core", "-B", "/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/build/core", "-DCMAKE_BUILD_TYPE=Debug"]
+-- Configuring done (0.2s)
+-- Generating done (0.1s)
+-- Build files have been written to: /Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/build/core
++ ["/opt/homebrew/bin/cmake", "--build", "/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/build/core", "--config", "Debug"]
+[  4%] Building CXX object CMakeFiles/domain_core.dir/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/game/Source/DomainCore/Private/sim/Prototype.cpp.o
+[  9%] Building CXX object CMakeFiles/domain_core.dir/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/game/Source/DomainCore/Private/sim/Terrain.cpp.o
+[ 14%] Linking CXX static library libdomain_core.a
+[ 42%] Built target domain_core
+[ 47%] Linking CXX executable domain_core_tests
+[ 52%] Built target domain_core_tests
+[ 57%] Linking CXX executable domain_building_tests
+[ 61%] Built target domain_building_tests
+[ 66%] Linking CXX executable domain_inspection_tests
+[ 71%] Built target domain_inspection_tests
+[ 76%] Linking CXX executable domain_profiling_fixture_tests
+[ 80%] Built target domain_profiling_fixture_tests
+[ 85%] Building CXX object CMakeFiles/domain_prototype_tests.dir/tests/test_prototype.cpp.o
+[ 90%] Linking CXX executable domain_prototype_tests
+[ 90%] Built target domain_prototype_tests
+[ 95%] Building CXX object CMakeFiles/domain_terrain_tests.dir/tests/test_terrain.cpp.o
+[100%] Linking CXX executable domain_terrain_tests
+[100%] Built target domain_terrain_tests
++ ["/opt/homebrew/bin/ctest", "--test-dir", "/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/build/core", "-C", "Debug", "--output-on-failure", "--no-tests=error"]
+Test project /Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/build/core
+    Start 1: domain_core_invariants
+1/6 Test #1: domain_core_invariants ................   Passed    7.10 sec
+    Start 2: domain_building_invariants
+2/6 Test #2: domain_building_invariants ............   Passed    0.32 sec
+    Start 3: domain_inspection_invariants
+3/6 Test #3: domain_inspection_invariants ..........   Passed    0.22 sec
+    Start 4: domain_profiling_fixture_invariants
+4/6 Test #4: domain_profiling_fixture_invariants ...   Passed    0.85 sec
+    Start 5: domain_prototype_invariants
+5/6 Test #5: domain_prototype_invariants ...........   Passed    0.52 sec
+    Start 6: domain_terrain_invariants
+6/6 Test #6: domain_terrain_invariants .............   Passed    7.18 sec
+
+100% tests passed out of 6
+
+Total Test time (real) =  16.20 sec

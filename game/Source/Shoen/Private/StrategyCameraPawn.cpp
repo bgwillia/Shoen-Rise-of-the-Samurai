@@ -70,7 +70,7 @@ void AStrategyCameraPawn::Tick(float Dt)
     if (PC->IsInputKeyDown(EKeys::W)) Input += Forward;
     if (PC->IsInputKeyDown(EKeys::S)) Input -= Forward;
     if (PC->IsInputKeyDown(EKeys::D)) Input += Right;
-    if (PC->IsInputKeyDown(EKeys::A) && !PC->IsInputKeyDown(EKeys::LeftControl)) Input -= Right;
+    if (PC->IsInputKeyDown(EKeys::A) && !PC->IsInputKeyDown(EKeys::LeftControl) && !PC->IsInputKeyDown(EKeys::RightControl)) Input -= Right;
     TargetFocus += Input.GetClampedToMaxSize(1) * (TargetZoom * 0.65f) * Dt;
     float DX = 0, DY = 0;
     PC->GetInputMouseDelta(DX, DY);

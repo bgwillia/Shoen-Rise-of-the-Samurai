@@ -6,6 +6,7 @@
 #include "Misc/Paths.h"
 #include "Serialization/JsonSerializer.h"
 #include "domain/Battle.h"
+#include "domain/Terrain.h"
 #include <cmath>
 #include <limits>
 #include <type_traits>
@@ -127,7 +128,11 @@ void UShoenSimulationSubsystem::OrderPrototypeAttack()
         }
         if (!Target) continue;
         const double Facing=std::atan2(Target->y-F.y,Target->x-F.x);
-        const double Standoff=F.role==domain::TroopRole::Bow ? Prototype.config.troops[1].range_cm*.8 : 0;
+        double Standoff=F.role==domain::TroopRole::Bow ? Prototype.config.troops[1].range_cm*.8 : 0;
+        // A ranged stand-off point may fall in the river. Advance to the next
+        // traversable point along that approach instead of silently rejecting it.
+        while (Prototype.terrain_enabled && Standoff>0 && !domain::TerrainWalkable(Target->x-std::cos(Facing)*Standoff,Target->y-std::sin(Facing)*Standoff))
+            Standoff=FMath::Max(0.,Standoff-domain::PrototypeTerrain().grid_cm);
         const auto Result=domain::IssuePrototypeOrder(State,Prototype,{Id},Target->x-std::cos(Facing)*Standoff,Target->y-std::sin(Facing)*Standoff,Facing);
         if (Result.ok) ++Issued;
     }

@@ -1,6 +1,8 @@
 #include "FoundationGameMode.h"
 #include "FormationView.h"
 #include "SettlementView.h"
+#include "BattlefieldView.h"
+#include "domain/Terrain.h"
 #include "FoundationPlayerController.h"
 #include "FoundationHUD.h"
 #include "StrategyCameraPawn.h"
@@ -47,7 +49,8 @@ void AFoundationGameMode::BeginPlay()
     auto* Sim = GetGameInstance()->GetSubsystem<UShoenSimulationSubsystem>();
     FString Scenario;
     FParse::Value(FCommandLine::Get(),TEXT("ShoenScenario="),Scenario);
-    if (Scenario==TEXT("prototype")) { Sim->ResetPrototype(); Sim->bHasPresentedLevel=true; }
+    if (Scenario==TEXT("terrain")) { Sim->ResetTerrainPrototype(); Sim->bHasPresentedLevel=true; }
+    else if (Scenario==TEXT("prototype")) { Sim->ResetPrototype(); Sim->bHasPresentedLevel=true; }
     else if (Scenario==TEXT("settlement")) Sim->PrepareSettlementForLevel();
     else Sim->PrepareForLevel(RequestedSoldiers);
     BeginCombatBenchmark();
@@ -112,7 +115,7 @@ void AFoundationGameMode::NewSettlement()
 void AFoundationGameMode::NewPrototype()
 {
     auto* Sim=GetGameInstance()->GetSubsystem<UShoenSimulationSubsystem>();
-    if (!Sim->ResetPrototype()) return;
+    if (!(Sim->Prototype.terrain_enabled ? Sim->ResetTerrainPrototype() : Sim->ResetPrototype())) return;
     RebuildViews(); FrameCurrentScenario();
 }
 void AFoundationGameMode::FrameCurrentScenario()
@@ -125,6 +128,11 @@ void AFoundationGameMode::FrameCurrentScenario()
     if (!Camera) return;
     if (!Sim->Prototype.enabled)
     { if (Sim->IsSettlement()) Camera->FrameSettlement(); else Camera->FrameScenario(int32(Sim->State.formations.size())); return; }
+    if (Sim->Prototype.terrain_enabled && Sim->IsPrototypeBattle())
+    {
+        Camera->FramePrototype(FVector(0,-3000,0),31000);
+        return;
+    }
     FBox Bounds(ForceInit);
     if (Sim->IsPrototypeBattle())
     {
@@ -151,6 +159,7 @@ void AFoundationGameMode::RebuildViews()
     {
         if (domain::ActiveFormationCount(Sim->State,Id) == 0) continue;
         auto* View = GetWorld()->SpawnActor<AFormationView>();
+        View->bTerrain=Sim->Prototype.terrain_enabled && Sim->IsPrototypeBattle();
         View->Rebuild(Sim->State,F);
         Views.Add(View);
     }
@@ -160,9 +169,12 @@ void AFoundationGameMode::RebuildViews()
             if (domain::ActiveFormationCount(Sim->Prototype.enemy,Id)==0) continue;
             auto* View=GetWorld()->SpawnActor<AFormationView>();
             View->SetEnemy(true);
+            View->bTerrain=Sim->Prototype.terrain_enabled;
             View->Rebuild(Sim->Prototype.enemy,F);
             Views.Add(View);
         }
+    if (Sim->Prototype.terrain_enabled && Sim->IsPrototypeBattle() && !IsValid(BattlefieldView)) BattlefieldView=GetWorld()->SpawnActor<ABattlefieldView>();
+    if (IsValid(BattlefieldView)) BattlefieldView->SetActorHiddenInGame(!(Sim->Prototype.terrain_enabled && Sim->IsPrototypeBattle()));
     if (!IsValid(SettlementView)) SettlementView=GetWorld()->SpawnActor<ASettlementView>();
     SettlementView->Rebuild(Sim->State);
     SettlementView->SetActorHiddenInGame(Sim->IsPrototypeBattle());
@@ -203,7 +215,8 @@ void AFoundationGameMode::Tick(float Dt)
                 const auto Target=Opponent.formations.find(Combat->target_formation_id);
                 if (Target!=Opponent.formations.end())
                 {
-                    const FVector A(It->second.x,It->second.y,160),B(Target->second.x,Target->second.y,100);
+                    const auto Height=[&](double X,double Y) { return Sim->Prototype.terrain_enabled ? domain::TerrainHeight(X,Y) : 0.; };
+                    const FVector A(It->second.x,It->second.y,Height(It->second.x,It->second.y)+160),B(Target->second.x,Target->second.y,Height(Target->second.x,Target->second.y)+100);
                     const FVector Apex=(A+B)*.5+FVector(0,0,650);
                     const FColor Color=View->bEnemy ? FColor(255,130,90) : FColor(130,215,255);
                     DrawDebugLine(GetWorld(),A,Apex,Color,false,-1,0,3);

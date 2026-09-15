@@ -36,9 +36,9 @@ void SnapshotUnits(const World& w,PrototypeState& p,CombatSide side) {
   u.service_states.assign(f.service_ids.size(),ServiceStatus::Active);units.emplace(id,std::move(u));
  }
 }
-void UpdateReport(PrototypeState& p) {
- auto& r=p.battle;r.player_started=r.player_alive=r.player_dead=r.player_wounded=0;r.enemy_started=r.enemy_alive=r.enemy_dead=r.enemy_wounded=0;
- for(const auto& [id,u]:p.player_units) {r.player_started+=u.starting;r.player_alive+=u.alive;r.player_dead+=u.dead;r.player_wounded+=u.wounded;}
+void UpdateReport(const World& w,PrototypeState& p) {
+ auto& r=p.battle;r.player_elite_started=r.player_elite_dead=r.player_elite_wounded=0;r.player_started=r.player_alive=r.player_dead=r.player_wounded=0;r.enemy_started=r.enemy_alive=r.enemy_dead=r.enemy_wounded=0;
+ for(const auto& [id,u]:p.player_units) {r.player_started+=u.starting;r.player_alive+=u.alive;r.player_dead+=u.dead;r.player_wounded+=u.wounded;if(Elite(w.formations.at(id).role)){r.player_elite_started+=u.starting;r.player_elite_dead+=u.dead;r.player_elite_wounded+=u.wounded;}}
  for(const auto& [id,u]:p.enemy_units) {r.enemy_started+=u.starting;r.enemy_alive+=u.alive;r.enemy_dead+=u.dead;r.enemy_wounded+=u.wounded;}
  r.seconds=static_cast<double>(p.battle_steps)*Dt;
 }
@@ -63,11 +63,12 @@ void MoveTowards(Formation& f,double x,double y,double distance,bool face) {
  const auto move=std::min(distance,remaining);f.x+=dx/remaining*move;f.y+=dy/remaining*move;if(face)f.facing=std::atan2(dy,dx);
 }
 void BattleStep(World& w,PrototypeState& p) {
+ if(p.terrain_enabled)StepTerrainMovement(w,p,Dt);
  std::vector<Fighter> fighters;fighters.reserve(p.player_units.size()+p.enemy_units.size());
  for(auto& [id,u]:p.player_units) fighters.push_back({&u,&w.formations.at(id),&p.config.troops[static_cast<std::size_t>(w.formations.at(id).role)]});
  for(auto& [id,u]:p.enemy_units) fighters.push_back({&u,&p.enemy.formations.at(id),&p.config.troops[static_cast<std::size_t>(p.enemy.formations.at(id).role)]});
  for(auto& a:fighters) {
-  auto& u=*a.unit;auto& f=*a.formation;u.engaged=false;u.target_formation_id=0;u.ranged_attacking=false;if(u.alive==0)continue;
+  auto& u=*a.unit;auto& f=*a.formation;u.engaged=false;u.target_formation_id=0;u.ranged_attacking=false;if(u.alive==0 || p.terrain_enabled)continue;
   Fighter* nearest=nullptr;double best=1e100;
   for(auto& b:fighters) if(u.side!=b.unit->side && b.unit->alive>0 && !b.unit->routed) {const auto d=std::hypot(f.x-b.formation->x,f.y-b.formation->y);if(d<best){best=d;nearest=&b;}}
   if(u.routed) {f.moving=false;f.x+=(u.side==CombatSide::Player?-1:1)*850*Dt;continue;}
@@ -97,7 +98,7 @@ void BattleStep(World& w,PrototypeState& p) {
   Fighter* target=nullptr;double best=1e100;
   for(auto& b:fighters) if(u.side!=b.unit->side && b.unit->alive>0 && !b.unit->routed) {auto d=std::hypot(f.x-b.formation->x,f.y-b.formation->y);if(d<best){best=d;target=&b;}}
   if(!target || best>a.tuning->range_cm)continue;
-  const bool ranged=f.role==TroopRole::Bow && best>700;
+  const bool ranged=f.role==TroopRole::Bow && best>(p.terrain_enabled?1650:700);
   // A forward firing arc makes facing and flanking matter for ranged formations too.
   const auto dx=target->formation->x-f.x,dy=target->formation->y-f.y;
   if(ranged && best>.01 && (dx*std::cos(f.facing)+dy*std::sin(f.facing))/best<.2)continue;
@@ -106,6 +107,12 @@ void BattleStep(World& w,PrototypeState& p) {
   const double toward_attacker=best>.01 ? ((f.x-tf.x)*std::cos(tf.facing)+(f.y-tf.y)*std::sin(tf.facing))/best : 1;
   const bool flank=!ranged && toward_attacker<.25;target->flanked|=flank;
   double defense=target->tuning->damage_received+(flank?.75:0);
+  if(p.terrain_enabled){
+   if(flank)++p.navigation.flank_attack_ticks;
+   if(TerrainHeight(tf.x,tf.y)>TerrainHeight(f.x,f.y)+50)defense*=.75;
+   if(TerrainHeight(f.x,f.y)>TerrainHeight(tf.x,tf.y)+50){defense*=1.2;++p.navigation.hill_attack_ticks;}
+   if(ranged && TerrainMovementFactor(tf.x,tf.y)<1)defense*=.75;
+  }
   double attack=a.tuning->attack_per_soldier;if(f.role==TroopRole::Bow && !ranged)attack*=.5;
   const double damage=u.alive*attack*(1-u.fatigue*.008)*defense*(1+victim.fatigue*.01)*Dt;
   target->damage+=damage;if(ranged){target->ranged_damage+=damage;++p.battle.ranged_attacks;}else{++p.battle.contact_events;u.engaged=true;victim.engaged=true;}
@@ -127,9 +134,9 @@ void BattleStep(World& w,PrototypeState& p) {
    p.battle.ranged_casualties+=ranged;p.battle.melee_casualties+=static_cast<std::uint64_t>(losses)-ranged;
   }
   u.morale=std::max(0.0,u.morale-losses*140.0/std::max<Quantity>(1,u.starting)-(a.flanked?3.0*Dt:0));
-  if(u.morale<20 || u.alive*5<u.starting) {u.routed=true;a.formation->moving=false;}
+  if(!u.routed && (u.morale<20 || u.alive*5<u.starting)) {u.routed=true;a.formation->moving=false;}
  }
- ++p.battle_steps;UpdateReport(p);
+ ++p.battle_steps;UpdateReport(w,p);
  bool player=false,enemy=false;for(const auto& [id,u]:p.player_units)player|=u.alive>0&&!u.routed;for(const auto& [id,u]:p.enemy_units)enemy|=u.alive>0&&!u.routed;
  if(!player || !enemy) {p.phase=player?BattlePhase::Victory:BattlePhase::Defeat;p.battle.victory=player;}
 }
@@ -194,9 +201,17 @@ Result BeginPrototypeBattle(World& w,PrototypeState& p,Quantity enemy_count) {
  Quantity soldiers=0;for(const auto& [id,f]:w.formations)if(!f.demobilized)for(auto service:f.service_ids){if(w.services.at(service).status!=ServiceStatus::Active)return Fail("Only healthy equipped formations can enter this battle.");++soldiers;}
  if(!soldiers)return Fail("Recruit an army first.");if(enemy_count==0)enemy_count=soldiers;if(enemy_count<=0 || enemy_count>4000)return Fail("Enemy count must be 1 through 4000.");
  World enemy=MakeFoundationWorld();enemy.initial_population=enemy_count;enemy.cohorts.at(3).available=enemy_count;
- int index=0;for(Quantity remaining=enemy_count;remaining>0;remaining-=std::min<Quantity>(50,remaining)) {auto r=Mobilize(enemy,3,std::min<Quantity>(50,remaining));if(!r)return r;enemy.formations.at(r.id).role=(++index%4==0)?TroopRole::Bow:TroopRole::Polearm;}
+ if(p.terrain_enabled){
+  const Quantity elite=std::min<Quantity>(120,(enemy_count/20/40)*40),bows=(enemy_count/4/100)*100;
+  enemy.cohorts.at(3).available-=elite;
+  if(elite){enemy.cohorts.emplace(5,Cohort{5,1,2,Occupation::RetainerService,Skill::Expert,Estate::Warrior,elite});enemy.next_id=6;}
+  for(auto [role,count]:std::array<std::pair<TroopRole,Quantity>,3>{{{TroopRole::Polearm,enemy_count-elite-bows},{TroopRole::Bow,bows},{TroopRole::SamuraiFoot,elite}}})
+   for(Quantity remaining=count;remaining>0;){const auto size=std::min<Quantity>(role==TroopRole::SamuraiFoot?40:100,remaining);auto r=Mobilize(enemy,role==TroopRole::SamuraiFoot?5:3,size);if(!r)return r;enemy.formations.at(r.id).role=role;remaining-=size;}
+ }else{
+  int index=0;for(Quantity remaining=enemy_count;remaining>0;remaining-=std::min<Quantity>(50,remaining)) {auto r=Mobilize(enemy,3,std::min<Quantity>(50,remaining));if(!r)return r;enemy.formations.at(r.id).role=(++index%4==0)?TroopRole::Bow:TroopRole::Polearm;}
+ }
  p.enemy=std::move(enemy);PositionArmy(w,false);PositionArmy(p.enemy,true);p.phase=BattlePhase::Fighting;p.battle={};p.battle_steps=0;p.battle_substep_microseconds=0;
- SnapshotUnits(w,p,CombatSide::Player);SnapshotUnits(p.enemy,p,CombatSide::Enemy);UpdateReport(p);return {true,{},0};
+ SnapshotUnits(w,p,CombatSide::Player);SnapshotUnits(p.enemy,p,CombatSide::Enemy);if(p.terrain_enabled)PrepareTerrainBattle(w,p);UpdateReport(w,p);return {true,{},0};
 }
 Result MakeCombatFixture(World& w,PrototypeState& p,Quantity count) {
  if(count<50 || count>4000 || count%50)return Fail("Combat fixture needs a multiple of 50 from 50 through 4000 per side.");
@@ -210,6 +225,7 @@ Result MakeCombatFixture(World& w,PrototypeState& p,Quantity count) {
 }
 const CombatUnit* LookupCombatUnit(const PrototypeState& p,CombatSide side,EntityId id) {const auto& units=side==CombatSide::Player?p.player_units:p.enemy_units;auto it=units.find(id);return it==units.end()?nullptr:&it->second;}
 Result IssuePrototypeOrder(World& w,PrototypeState& p,const std::vector<EntityId>& ids,double x,double y,double facing) {
+ if(p.terrain_enabled)return IssueTerrainOrder(w,p,ids,x,y,facing);
  if(!p.enabled || p.phase!=BattlePhase::Fighting)return Fail("Movement orders require a fighting battle.");
  for(auto id:ids){auto it=p.player_units.find(id);if(it==p.player_units.end() || it->second.routed || it->second.alive==0)return Fail("Dead or routing formations cannot take orders.");}
  auto r=IssueMove(w,ids,x,y,facing);if(r)++p.battle.commands;return r;

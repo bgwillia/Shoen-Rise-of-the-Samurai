@@ -491,7 +491,13 @@ def command_benchmark(args: argparse.Namespace, root: Path, environment: Mapping
     return 0
 
 
-def validate_combat_benchmark_report(path: Path, per_side: int, seconds: float) -> list[str]:
+def validate_combat_benchmark_report(
+    path: Path,
+    per_side: int,
+    seconds: float,
+    *,
+    terrain: bool = False,
+) -> list[str]:
     if not path.is_file():
         return [f"combat benchmark report file was not created at {path}"]
     try:
@@ -502,8 +508,9 @@ def validate_combat_benchmark_report(path: Path, per_side: int, seconds: float) 
         return ["combat benchmark report root must be an object"]
 
     problems: list[str] = []
-    if report.get("mode") != "actual_contact_combat":
-        problems.append(f"mode expected 'actual_contact_combat', got {report.get('mode')!r}")
+    expected_mode = "terrain_contact_combat" if terrain else "actual_contact_combat"
+    if report.get("mode") != expected_mode:
+        problems.append(f"mode expected {expected_mode!r}, got {report.get('mode')!r}")
     if _number(report.get("requested_soldiers_per_side")) != per_side:
         problems.append(
             f"requested_soldiers_per_side expected {per_side}, "
@@ -557,6 +564,67 @@ def validate_combat_benchmark_report(path: Path, per_side: int, seconds: float) 
             "simulation_cpu_p95_ms expected a finite nonnegative value at least "
             f"simulation_cpu_median_ms, got {report.get('simulation_cpu_p95_ms')!r}"
         )
+    if terrain:
+        problems.extend(validate_terrain_combat_fields(report))
+    return problems
+
+
+def validate_terrain_combat_fields(report: Mapping[str, Any]) -> list[str]:
+    problems: list[str] = []
+
+    def integer_field(name: str, *, positive: bool) -> int | None:
+        value = _number(report.get(name))
+        minimum = 1 if positive else 0
+        if value is None or not value.is_integer() or value < minimum:
+            qualifier = "positive" if positive else "nonnegative"
+            problems.append(f"{name} expected a {qualifier} integer, got {report.get(name)!r}")
+            return None
+        return int(value)
+
+    integer_field("navigation_cpu_sample_count", positive=True)
+    navigation_median = _number(report.get("navigation_cpu_median_ms"))
+    if navigation_median is None or navigation_median < 0:
+        problems.append(
+            "navigation_cpu_median_ms expected a finite nonnegative value, "
+            f"got {report.get('navigation_cpu_median_ms')!r}"
+        )
+    navigation_p95 = _number(report.get("navigation_cpu_p95_ms"))
+    if (
+        navigation_p95 is None
+        or navigation_p95 < 0
+        or (navigation_median is not None and navigation_p95 < navigation_median)
+    ):
+        problems.append(
+            "navigation_cpu_p95_ms expected a finite nonnegative value at least "
+            f"navigation_cpu_median_ms, got {report.get('navigation_cpu_p95_ms')!r}"
+        )
+    navigation_worst = _number(report.get("navigation_cpu_worst_ms"))
+    if (
+        navigation_worst is None
+        or navigation_worst < 0
+        or (navigation_p95 is not None and navigation_worst < navigation_p95)
+    ):
+        problems.append(
+            "navigation_cpu_worst_ms expected a finite nonnegative value at least "
+            f"navigation_cpu_p95_ms, got {report.get('navigation_cpu_worst_ms')!r}"
+        )
+    integer_field("path_requests", positive=True)
+    integer_field("path_failures", positive=False)
+    integer_field("peak_waiting_formations", positive=False)
+    integer_field("peak_stuck_formations", positive=False)
+    total_crossings = integer_field("crossing_completions", positive=True)
+    bridge_crossings = integer_field("bridge_completions", positive=True)
+    ford_crossings = integer_field("ford_completions", positive=True)
+    if (
+        total_crossings is not None
+        and bridge_crossings is not None
+        and ford_crossings is not None
+        and total_crossings != bridge_crossings + ford_crossings
+    ):
+        problems.append("crossing_completions must equal bridge_completions plus ford_completions")
+    integer_field("peak_friendly_overlap_pairs", positive=False)
+    integer_field("flank_attack_ticks", positive=False)
+    integer_field("hill_attack_ticks", positive=False)
     return problems
 
 
@@ -565,21 +633,29 @@ def command_combat_benchmark(
     root: Path,
     environment: Mapping[str, str],
 ) -> int:
+    if args.terrain and args.per_side == 500:
+        print(
+            "ERROR: terrain combat benchmark supports 1000 or 2000 soldiers per side",
+            file=sys.stderr,
+        )
+        return 2
     engine = resolve_engine_root(args.engine, environment)
     resolved = editor_base(root, engine)
     if resolved is None:
         return 2
     editor, project = resolved
+    seconds = args.seconds if args.seconds is not None else (120.0 if args.terrain else 45.0)
     if args.output:
         report = Path(args.output).expanduser()
         if not report.is_absolute():
             report = (root / report).resolve()
     else:
-        report = root / "artifacts" / "combat" / f"combat-{args.per_side}.json"
+        label = "combat-terrain" if args.terrain else "combat"
+        report = root / "artifacts" / "combat" / f"{label}-{args.per_side}.json"
     if report.exists():
         report.unlink()
     log = prepare_log(root, f"combat-benchmark-{args.per_side}")
-    seconds_flag = f"{args.seconds:g}"
+    seconds_flag = f"{seconds:g}"
     status = run_command(
         [
             editor,
@@ -587,7 +663,7 @@ def command_combat_benchmark(
             FOUNDATION_MAP,
             "-game",
             *RENDERED_WINDOW_ARGUMENTS,
-            "-ShoenScenario=prototype",
+            f"-ShoenScenario={'terrain' if args.terrain else 'prototype'}",
             f"-ShoenCombatSoldiersPerSide={args.per_side}",
             f"-ShoenCombatBenchmarkSeconds={seconds_flag}",
             f"-ShoenCombatBenchmarkOutput={report}",
@@ -600,7 +676,9 @@ def command_combat_benchmark(
     )
     if status:
         return status
-    problems = validate_combat_benchmark_report(report, args.per_side, args.seconds)
+    problems = validate_combat_benchmark_report(
+        report, args.per_side, seconds, terrain=args.terrain
+    )
     if problems:
         for problem in problems:
             print(f"ERROR: {problem}", file=sys.stderr)
@@ -908,7 +986,7 @@ def build_parser() -> argparse.ArgumentParser:
     add_engine_override(run)
     run.add_argument(
         "--scenario",
-        choices=("foundation", "scale_lab", "settlement", "prototype"),
+        choices=("foundation", "scale_lab", "settlement", "prototype", "terrain"),
         default="foundation",
     )
     run.add_argument("--soldiers", type=positive_integer)
@@ -927,7 +1005,14 @@ def build_parser() -> argparse.ArgumentParser:
     combat_benchmark.add_argument(
         "--per-side", type=int, choices=COMBAT_BENCHMARK_PER_SIDE, required=True
     )
-    combat_benchmark.add_argument("--seconds", type=positive_float, default=45)
+    combat_benchmark.add_argument(
+        "--seconds",
+        type=positive_float,
+        help="capture duration (default: 45 seconds open ground, 120 seconds terrain)",
+    )
+    combat_benchmark.add_argument(
+        "--terrain", action="store_true", help="benchmark constrained terrain combat"
+    )
     combat_benchmark.add_argument("--output", help="combat report path")
     add_timeout(combat_benchmark, 900)
 

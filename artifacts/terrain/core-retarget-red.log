@@ -1,0 +1,7 @@
+PASS authored terrain
+PASS real representative muster
+FAIL reserved deterministic line orders: std::hypot(path.transit.x-path.cell.x,path.transit.y-path.cell.y)<=1600.01
+BRIDGE30 crossed=30 overlap_peak=0 stuck=0 waits=0 requests=1666 failed=1615 sim360s_cpu_ms=81.1239
+PASS 30 formation bridge traffic
+SECOND_WAR first_dead=59 elite_dead=59 second_elite=61 second_away=2261
+PASS persistent second war and elite depletion

@@ -1,0 +1,69 @@
+{
+	"scenario": "prototype_b_terrain",
+	"phase": "Settlement",
+	"campaign_day": 9,
+	"battle_seconds": 224.20000000000002,
+	"world_revision": 104,
+	"population_total": 6000,
+	"available": 4077,
+	"away": 0,
+	"recovering": 209,
+	"dead": 434,
+	"elite_equipment": 148,
+	"food_produced_per_day": 8505,
+	"food_consumed_per_day": 5566,
+	"basic_equipment_per_day": 36,
+	"food_stock": 65000,
+	"basic_equipment_stock": 2102,
+	"cohorts": [
+		{
+			"id": 3,
+			"occupation": "Agriculture",
+			"available": 2835,
+			"recovering": 184
+		},
+		{
+			"id": 5,
+			"occupation": "General labor",
+			"available": 942,
+			"recovering": 19
+		},
+		{
+			"id": 6,
+			"occupation": "Smithing",
+			"available": 180,
+			"recovering": 6
+		},
+		{
+			"id": 7,
+			"occupation": "Retainer service",
+			"available": 120,
+			"recovering": 0
+		}
+	],
+	"path_requests": 7344,
+	"path_failures": 5467,
+	"waiting_formations": 26,
+	"stuck_formations": 26,
+	"crossing_completions": 2,
+	"bridge_completions": 2,
+	"ford_completions": 0,
+	"friendly_overlap_pairs": 0,
+	"peak_friendly_overlap_pairs": 0,
+	"flank_attack_ticks": 178,
+	"hill_attack_ticks": 3426,
+	"player_started": 2320,
+	"player_alive": 1677,
+	"player_dead": 434,
+	"player_wounded": 209,
+	"player_elite_started": 120,
+	"player_elite_dead": 0,
+	"player_elite_wounded": 0,
+	"enemy_started": 2320,
+	"enemy_alive": 1695,
+	"enemy_dead": 421,
+	"enemy_wounded": 204,
+	"contact_events": 1665,
+	"ranged_attacks": 8635,
+	"formations": []
+}

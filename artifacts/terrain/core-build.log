@@ -1,0 +1,9 @@
+[ 42%] Built target domain_core
+[ 52%] Built target domain_core_tests
+[ 61%] Built target domain_inspection_tests
+[ 71%] Built target domain_profiling_fixture_tests
+[ 80%] Built target domain_building_tests
+[ 90%] Built target domain_prototype_tests
+[ 95%] Building CXX object CMakeFiles/domain_terrain_tests.dir/tests/test_terrain.cpp.o
+[100%] Linking CXX executable domain_terrain_tests
+[100%] Built target domain_terrain_tests

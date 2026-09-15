@@ -6,6 +6,7 @@
 #include "Engine/GameInstance.h"
 #include "InputCoreTypes.h"
 #include "domain/Battle.h"
+#include "domain/Terrain.h"
 #include <algorithm>
 #include "UnrealClient.h"
 #include "Misc/Paths.h"
@@ -50,6 +51,30 @@ bool AFoundationPlayerController::GroundAtCursor(FVector& Point) const
     const double T = -Origin.Z / Direction.Z;
     if (T < 0) return false;
     Point = Origin + Direction * T;
+    const auto* Sim=GetGameInstance()->GetSubsystem<UShoenSimulationSubsystem>();
+    if (Sim && Sim->Prototype.terrain_enabled && Sim->IsPrototypeBattle())
+    {
+        // Intersect the shared authored height field, including the raised hill.
+        // Search front-to-back so hill targets stay under the visible pointer.
+        const double Start=FMath::Max(0.,(domain::PrototypeTerrain().hill_height_cm-Origin.Z)/Direction.Z);
+        double Previous=Start;
+        for (int32 Step=1;Step<=64;++Step)
+        {
+            const double At=FMath::Lerp(Start,T,Step/64.);
+            const FVector Sample=Origin+Direction*At;
+            if (Sample.Z<=domain::TerrainHeight(Sample.X,Sample.Y))
+            {
+                double Low=Previous,High=At;
+                for (int32 Iteration=0;Iteration<18;++Iteration)
+                {
+                    const double Mid=(Low+High)*.5; const FVector P=Origin+Direction*Mid;
+                    if (P.Z>domain::TerrainHeight(P.X,P.Y)) Low=Mid; else High=Mid;
+                }
+                Point=Origin+Direction*High; return true;
+            }
+            Previous=At;
+        }
+    }
     return true;
 }
 void AFoundationPlayerController::RefreshInspection()
@@ -249,6 +274,18 @@ void AFoundationPlayerController::SelectAll()
             if (!Sim->IsPrototypeBattle() || (Unit && Unit->alive>0)) Selected.Add(Id);
         }
 }
+void AFoundationPlayerController::SelectTroopRole(domain::TroopRole Role)
+{
+    SelectAll();
+    auto* Sim=GetGameInstance()->GetSubsystem<UShoenSimulationSubsystem>();
+    for (auto It=Selected.CreateIterator(); It; ++It)
+    {
+        const auto& F=Sim->State.formations.at(*It);
+        const bool Elite=F.role==domain::TroopRole::SamuraiFoot || F.role==domain::TroopRole::RetainerInfantry || F.role==domain::TroopRole::MountedSamurai;
+        if (Role==domain::TroopRole::SamuraiFoot ? !Elite : F.role!=Role) It.RemoveCurrent();
+    }
+    Sim->Message=FString::Printf(TEXT("Selected %d formations. Right-drag orders a line and facing; Ctrl+1..9 assigns a group."),Selected.Num());
+}
 void AFoundationPlayerController::FinishSelection()
 {
     float MouseX = 0, MouseY = 0;
@@ -275,7 +312,7 @@ void AFoundationPlayerController::FinishSelection()
         const auto* Unit=domain::LookupCombatUnit(Sim->Prototype,domain::CombatSide::Player,Id);
         if (Sim->IsPrototypeBattle() && (!Unit || Unit->alive==0)) continue;
         FVector2D Screen;
-        const FVector Center(F.x,F.y,100);
+        const FVector Center(F.x,F.y,(Sim->Prototype.terrain_enabled && Sim->IsPrototypeBattle() ? domain::TerrainHeight(F.x,F.y) : 0)+100);
         if (Box && ProjectWorldLocationToScreen(Center, Screen) && Rect.IsInside(Screen)) Selected.Add(Id);
         if (!Box)
         {
@@ -372,6 +409,7 @@ void AFoundationPlayerController::PlayerTick(float Dt)
             Sim->Message=ShoenProfile::Start(GetWorld(),Path) ? TEXT("Input profiling active. F6 stops and saves; F12 stays optional.") : TEXT("Input profiling could not start.");
         }
     }
+    if (Sim->Prototype.terrain_enabled && WasInputKeyJustPressed(EKeys::F7)) Sim->WriteTerrainSnapshot();
     if (WasInputKeyJustPressed(EKeys::F12)) bMouseDiagnostics = !bMouseDiagnostics;
     if (bMouseDiagnostics && (DiagnosticLogTime -= Dt) <= 0)
     {
@@ -384,16 +422,29 @@ void AFoundationPlayerController::PlayerTick(float Dt)
         if (WasInputKeyJustPressed(EKeys::N)) { if (Sim->Prototype.enabled) Mode->NewPrototype(); else Mode->NewSettlement(); }
         if (Sim->Prototype.enabled)
         {
-            if (WasInputKeyJustPressed(EKeys::M)) Sim->RecruitPrototypeTroops(domain::Occupation::Agriculture,domain::TroopRole::Polearm,50);
-            if (WasInputKeyJustPressed(EKeys::L)) Sim->RecruitPrototypeTroops(domain::Occupation::GeneralLabor,domain::TroopRole::Polearm,50);
-            if (WasInputKeyJustPressed(EKeys::J)) Sim->RecruitPrototypeTroops(domain::Occupation::Smithing,domain::TroopRole::Polearm,20);
-            if (WasInputKeyJustPressed(EKeys::K)) Sim->RecruitPrototypeTroops(domain::Occupation::Agriculture,domain::TroopRole::Bow,50);
-            if (WasInputKeyJustPressed(EKeys::T)) Sim->RecruitPrototypeTroops(domain::Occupation::RetainerService,domain::TroopRole::SamuraiFoot,20);
+            if (WasInputKeyJustPressed(EKeys::M)) Sim->RecruitPrototypeTroops(domain::Occupation::Agriculture,domain::TroopRole::Polearm,int32(Sim->Prototype.config.ordinary_formation_size));
+            if (WasInputKeyJustPressed(EKeys::L)) Sim->RecruitPrototypeTroops(domain::Occupation::GeneralLabor,domain::TroopRole::Polearm,int32(Sim->Prototype.config.ordinary_formation_size));
+            if (WasInputKeyJustPressed(EKeys::J)) Sim->RecruitPrototypeTroops(domain::Occupation::Smithing,domain::TroopRole::Polearm,Sim->Prototype.terrain_enabled ? 100 : 20);
+            if (WasInputKeyJustPressed(EKeys::K)) Sim->RecruitPrototypeTroops(domain::Occupation::Agriculture,domain::TroopRole::Bow,int32(Sim->Prototype.config.ordinary_formation_size));
+            if (WasInputKeyJustPressed(EKeys::T)) Sim->RecruitPrototypeTroops(domain::Occupation::RetainerService,domain::TroopRole::SamuraiFoot,int32(Sim->Prototype.config.elite_formation_size));
             if (WasInputKeyJustPressed(EKeys::F)) Sim->StartPrototypeBattle();
             if (WasInputKeyJustPressed(EKeys::G)) Sim->OrderPrototypeAttack();
             if (WasInputKeyJustPressed(EKeys::H)) Sim->ReturnPrototypeArmy();
             if (WasInputKeyJustPressed(EKeys::P)) Sim->FastForwardPrototype(7);
             if (WasInputKeyJustPressed(EKeys::Home)) Mode->FrameCurrentScenario();
+            if (Sim->Prototype.terrain_enabled && !bPlacementGesture)
+            {
+                if (WasInputKeyJustPressed(EKeys::U)) Sim->MusterTerrainArmy();
+                if (WasInputKeyJustPressed(EKeys::Y)) Sim->OrderTerrainCrossing(false);
+                if (WasInputKeyJustPressed(EKeys::O)) Sim->OrderTerrainCrossing(true);
+                if (WasInputKeyJustPressed(EKeys::I)) Sim->DeployTerrainLine();
+                if (WasInputKeyJustPressed(EKeys::Tab)) SelectAll();
+                if (WasInputKeyJustPressed(EKeys::Comma)) SelectTroopRole(domain::TroopRole::Polearm);
+                if (WasInputKeyJustPressed(EKeys::Period)) SelectTroopRole(domain::TroopRole::Bow);
+                if (WasInputKeyJustPressed(EKeys::Slash)) SelectTroopRole(domain::TroopRole::SamuraiFoot);
+                if (WasInputKeyJustPressed(EKeys::LeftBracket)) Sim->RotateTerrainLine(-PI/12);
+                if (WasInputKeyJustPressed(EKeys::RightBracket)) Sim->RotateTerrainLine(PI/12);
+            }
         }
         else
         {
@@ -422,7 +473,7 @@ void AFoundationPlayerController::PlayerTick(float Dt)
         }
         else { InspectedEntity={}; RefreshInspection(); }
     }
-    if (IsInputKeyDown(EKeys::LeftControl) && WasInputKeyJustPressed(EKeys::A)) SelectAll();
+    if ((IsInputKeyDown(EKeys::LeftControl) || IsInputKeyDown(EKeys::RightControl)) && WasInputKeyJustPressed(EKeys::A)) SelectAll();
     const FKey Keys[] = { EKeys::One,EKeys::Two,EKeys::Three,EKeys::Four,EKeys::Five,EKeys::Six,EKeys::Seven,EKeys::Eight,EKeys::Nine };
     for (int32 Index=0; Index<9; ++Index)
     {

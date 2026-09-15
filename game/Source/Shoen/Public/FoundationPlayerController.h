@@ -23,6 +23,7 @@ public:
     FVector2D SelectionStart;
     FVector2D SelectionEnd;
     void SelectAll();
+    void SelectTroopRole(domain::TroopRole Role);
     void BeginPlacement();
     void BeginPlacementType(const FString& DefinitionId);
     void CancelPlacement();

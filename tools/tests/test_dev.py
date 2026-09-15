@@ -432,6 +432,16 @@ with Path(os.environ["SHOEN_FAKE_CALLS"]).open("a", encoding="utf-8") as stream:
         self.assertIn("/Game/Domain/Maps/Foundation", argv)
         self.assertIn("-ShoenScenario=prototype", argv)
 
+    def test_run_passes_terrain_scenario_on_the_foundation_map(self) -> None:
+        engine = self.make_engine()
+
+        result = self.run_cli("--engine", str(engine), "run", "--scenario", "terrain")
+
+        self.assertEqual(result.returncode, 0, result.stdout)
+        argv = self.read_calls()[0]["argv"]
+        self.assertIn("/Game/Domain/Maps/Foundation", argv)
+        self.assertIn("-ShoenScenario=terrain", argv)
+
     def test_combat_benchmark_constructs_rendered_command_and_validates_evidence(self) -> None:
         editor_body = """
         output_arg = next(value for value in sys.argv if value.startswith("-ShoenCombatBenchmarkOutput="))
@@ -511,6 +521,88 @@ with Path(os.environ["SHOEN_FAKE_CALLS"]).open("a", encoding="utf-8") as stream:
         result = self.run_cli("--engine", str(engine), "combat-benchmark", "--per-side", "2000")
 
         self.assertEqual(result.returncode, 7, result.stdout)
+
+    def test_combat_benchmark_terrain_selects_distinct_scenario_mode_and_report(self) -> None:
+        editor_body = """
+        output_arg = next(value for value in sys.argv if value.startswith("-ShoenCombatBenchmarkOutput="))
+        output = Path(output_arg.split("=", 1)[1])
+        output.parent.mkdir(parents=True, exist_ok=True)
+        output.write_text(json.dumps({
+            "mode": "terrain_contact_combat",
+            "requested_soldiers_per_side": 2000,
+            "seconds": 120,
+            "contact_events": 12,
+            "ranged_attacks": 8,
+            "casualties_side_a": 4,
+            "casualties_side_b": 7,
+            "frames": 1200,
+            "median_frame_ms": 14.0,
+            "p95_frame_ms": 20.0,
+            "simulation_cpu_median_ms": 1.5,
+            "simulation_cpu_p95_ms": 2.5,
+            "navigation_cpu_sample_count": 1800,
+            "navigation_cpu_median_ms": 0.4,
+            "navigation_cpu_p95_ms": 0.8,
+            "navigation_cpu_worst_ms": 1.4,
+            "path_requests": 40,
+            "path_failures": 0,
+            "peak_waiting_formations": 18,
+            "peak_stuck_formations": 1,
+            "crossing_completions": 36,
+            "bridge_completions": 28,
+            "ford_completions": 8,
+            "peak_friendly_overlap_pairs": 3,
+            "flank_attack_ticks": 12,
+            "hill_attack_ticks": 9
+        }), encoding="utf-8-sig")
+        """
+        engine = self.make_engine(editor_body)
+
+        result = self.run_cli(
+            "--engine", str(engine), "combat-benchmark", "--terrain",
+            "--per-side", "2000"
+        )
+
+        self.assertEqual(result.returncode, 0, result.stdout)
+        argv = self.read_calls()[0]["argv"]
+        self.assertIn("-ShoenScenario=terrain", argv)
+        self.assertNotIn("-ShoenScenario=prototype", argv)
+        self.assertIn("-ShoenCombatBenchmarkSeconds=120", argv)
+        self.assertIn(
+            f"-ShoenCombatBenchmarkOutput={self.root.resolve() / 'artifacts' / 'combat' / 'combat-terrain-2000.json'}",
+            argv,
+        )
+
+    def test_terrain_combat_benchmark_rejects_500_per_side(self) -> None:
+        result = self.run_cli("combat-benchmark", "--terrain", "--per-side", "500")
+
+        self.assertEqual(result.returncode, 2, result.stdout)
+        self.assertIn("terrain combat benchmark supports 1000 or 2000 soldiers per side", result.stdout)
+        self.assertFalse(self.calls.exists())
+
+    def test_terrain_combat_report_requires_navigation_and_crossing_evidence(self) -> None:
+        dev = load_dev_module()
+        report = self.root / "terrain-missing-navigation.json"
+        report.write_text(json.dumps({
+            "mode": "terrain_contact_combat",
+            "requested_soldiers_per_side": 1000,
+            "seconds": 90,
+            "contact_events": 1,
+            "ranged_attacks": 1,
+            "casualties_side_a": 1,
+            "casualties_side_b": 0,
+            "frames": 10,
+            "median_frame_ms": 14.0,
+            "p95_frame_ms": 20.0,
+            "simulation_cpu_median_ms": 1.5,
+            "simulation_cpu_p95_ms": 2.5
+        }), encoding="utf-8")
+
+        problems = dev.validate_combat_benchmark_report(report, 1000, 90, terrain=True)
+
+        self.assertTrue(any("navigation_cpu_sample_count" in item for item in problems), problems)
+        self.assertTrue(any("bridge_completions" in item for item in problems), problems)
+        self.assertTrue(any("ford_completions" in item for item in problems), problems)
 
     def test_benchmark_is_rendered_and_requires_valid_fresh_counts(self) -> None:
         editor_body = """

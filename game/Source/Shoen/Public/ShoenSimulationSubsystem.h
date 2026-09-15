@@ -25,6 +25,13 @@ public:
     bool IsSettlement() const { return !State.build_areas.empty() && !IsPrototypeBattle(); }
     bool IsPrototypeBattle() const { return Prototype.enabled && Prototype.phase != domain::BattlePhase::Settlement; }
     bool ResetPrototype();
+    bool ResetTerrainPrototype();
+    bool MusterTerrainArmy();
+    void OrderTerrainCrossing(bool bFord);
+    void DeployTerrainLine();
+    void RotateTerrainLine(double Radians);
+    bool ResetTerrainCombatFixture(int32 PerSide);
+    bool WriteTerrainSnapshot();
     bool RecruitPrototypeTroops(domain::Occupation Occupation, domain::TroopRole Role, int32 Count);
     bool StartPrototypeBattle();
     bool ReturnPrototypeArmy();

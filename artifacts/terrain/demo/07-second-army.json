@@ -1,0 +1,295 @@
+{
+	"scenario": "prototype_b_terrain",
+	"phase": "Settlement",
+	"campaign_day": 16,
+	"battle_seconds": 224.20000000000002,
+	"world_revision": 136,
+	"population_total": 6000,
+	"available": 1966,
+	"away": 2320,
+	"recovering": 0,
+	"dead": 434,
+	"elite_equipment": 46,
+	"food_produced_per_day": 3657,
+	"food_consumed_per_day": 5566,
+	"basic_equipment_per_day": 17,
+	"food_stock": 65000,
+	"basic_equipment_stock": 160,
+	"cohorts": [
+		{
+			"id": 3,
+			"occupation": "Agriculture",
+			"available": 1219,
+			"recovering": 0
+		},
+		{
+			"id": 5,
+			"occupation": "General labor",
+			"available": 661,
+			"recovering": 0
+		},
+		{
+			"id": 6,
+			"occupation": "Smithing",
+			"available": 86,
+			"recovering": 0
+		},
+		{
+			"id": 7,
+			"occupation": "Retainer service",
+			"available": 0,
+			"recovering": 0
+		}
+	],
+	"path_requests": 7344,
+	"path_failures": 5467,
+	"waiting_formations": 26,
+	"stuck_formations": 26,
+	"crossing_completions": 2,
+	"bridge_completions": 2,
+	"ford_completions": 0,
+	"friendly_overlap_pairs": 0,
+	"peak_friendly_overlap_pairs": 0,
+	"flank_attack_ticks": 178,
+	"hill_attack_ticks": 3426,
+	"player_started": 2320,
+	"player_alive": 1677,
+	"player_dead": 434,
+	"player_wounded": 209,
+	"player_elite_started": 120,
+	"player_elite_dead": 0,
+	"player_elite_wounded": 0,
+	"enemy_started": 2320,
+	"enemy_alive": 1695,
+	"enemy_dead": 421,
+	"enemy_wounded": 204,
+	"contact_events": 1665,
+	"ranged_attacks": 8635,
+	"formations": [
+		{
+			"id": 2373,
+			"role": 0,
+			"x": 0,
+			"y": 0,
+			"facing": 0,
+			"group": 0,
+			"strength": 100
+		},
+		{
+			"id": 2474,
+			"role": 0,
+			"x": 0,
+			"y": 0,
+			"facing": 0,
+			"group": 0,
+			"strength": 100
+		},
+		{
+			"id": 2575,
+			"role": 0,
+			"x": 0,
+			"y": 0,
+			"facing": 0,
+			"group": 0,
+			"strength": 100
+		},
+		{
+			"id": 2676,
+			"role": 0,
+			"x": 0,
+			"y": 0,
+			"facing": 0,
+			"group": 0,
+			"strength": 100
+		},
+		{
+			"id": 2777,
+			"role": 0,
+			"x": 0,
+			"y": 0,
+			"facing": 0,
+			"group": 0,
+			"strength": 100
+		},
+		{
+			"id": 2878,
+			"role": 0,
+			"x": 0,
+			"y": 0,
+			"facing": 0,
+			"group": 0,
+			"strength": 100
+		},
+		{
+			"id": 2979,
+			"role": 0,
+			"x": 0,
+			"y": 0,
+			"facing": 0,
+			"group": 0,
+			"strength": 100
+		},
+		{
+			"id": 3080,
+			"role": 0,
+			"x": 0,
+			"y": 0,
+			"facing": 0,
+			"group": 0,
+			"strength": 100
+		},
+		{
+			"id": 3181,
+			"role": 0,
+			"x": 0,
+			"y": 0,
+			"facing": 0,
+			"group": 0,
+			"strength": 100
+		},
+		{
+			"id": 3282,
+			"role": 0,
+			"x": 0,
+			"y": 0,
+			"facing": 0,
+			"group": 0,
+			"strength": 100
+		},
+		{
+			"id": 3383,
+			"role": 0,
+			"x": 0,
+			"y": 0,
+			"facing": 0,
+			"group": 0,
+			"strength": 100
+		},
+		{
+			"id": 3484,
+			"role": 0,
+			"x": 0,
+			"y": 0,
+			"facing": 0,
+			"group": 0,
+			"strength": 100
+		},
+		{
+			"id": 3585,
+			"role": 0,
+			"x": 0,
+			"y": 0,
+			"facing": 0,
+			"group": 0,
+			"strength": 100
+		},
+		{
+			"id": 3686,
+			"role": 0,
+			"x": 0,
+			"y": 0,
+			"facing": 0,
+			"group": 0,
+			"strength": 100
+		},
+		{
+			"id": 3787,
+			"role": 0,
+			"x": 0,
+			"y": 0,
+			"facing": 0,
+			"group": 0,
+			"strength": 100
+		},
+		{
+			"id": 3888,
+			"role": 0,
+			"x": 0,
+			"y": 0,
+			"facing": 0,
+			"group": 0,
+			"strength": 100
+		},
+		{
+			"id": 3989,
+			"role": 1,
+			"x": 0,
+			"y": 0,
+			"facing": 0,
+			"group": 0,
+			"strength": 100
+		},
+		{
+			"id": 4090,
+			"role": 1,
+			"x": 0,
+			"y": 0,
+			"facing": 0,
+			"group": 0,
+			"strength": 100
+		},
+		{
+			"id": 4191,
+			"role": 1,
+			"x": 0,
+			"y": 0,
+			"facing": 0,
+			"group": 0,
+			"strength": 100
+		},
+		{
+			"id": 4292,
+			"role": 1,
+			"x": 0,
+			"y": 0,
+			"facing": 0,
+			"group": 0,
+			"strength": 100
+		},
+		{
+			"id": 4393,
+			"role": 1,
+			"x": 0,
+			"y": 0,
+			"facing": 0,
+			"group": 0,
+			"strength": 100
+		},
+		{
+			"id": 4494,
+			"role": 1,
+			"x": 0,
+			"y": 0,
+			"facing": 0,
+			"group": 0,
+			"strength": 100
+		},
+		{
+			"id": 4595,
+			"role": 3,
+			"x": 0,
+			"y": 0,
+			"facing": 0,
+			"group": 0,
+			"strength": 40
+		},
+		{
+			"id": 4636,
+			"role": 3,
+			"x": 0,
+			"y": 0,
+			"facing": 0,
+			"group": 0,
+			"strength": 40
+		},
+		{
+			"id": 4677,
+			"role": 3,
+			"x": 0,
+			"y": 0,
+			"facing": 0,
+			"group": 0,
+			"strength": 40
+		}
+	]
+}

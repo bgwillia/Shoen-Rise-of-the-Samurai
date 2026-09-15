@@ -1,5 +1,6 @@
 #pragma once
 #include "domain/World.h"
+#include "domain/Terrain.h"
 
 namespace domain {
 // Prototype-only runtime state. Not part of the versioned World save format.
@@ -48,12 +49,14 @@ struct CombatUnit {
 struct BattleReport {
     Quantity player_started=0, player_alive=0, player_dead=0, player_wounded=0;
     Quantity enemy_started=0, enemy_alive=0, enemy_dead=0, enemy_wounded=0;
+    Quantity player_elite_started=0, player_elite_dead=0, player_elite_wounded=0;
     std::uint64_t contact_events=0, ranged_attacks=0, melee_casualties=0, ranged_casualties=0;
     std::uint64_t peak_congestion_pairs=0, commands=0;
     double seconds=0; bool victory=false, retreated=false;
     bool operator==(const BattleReport&) const = default;
 };
 struct PrototypeState {
+    bool terrain_enabled=false; TerrainNavigation navigation;
     bool enabled=false; BattlePhase phase=BattlePhase::Settlement;
     PrototypeConfig config;
     World enemy;

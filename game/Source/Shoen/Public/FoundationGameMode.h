@@ -4,6 +4,7 @@
 #include "FoundationGameMode.generated.h"
 class AFormationView;
 class ASettlementView;
+class ABattlefieldView;
 UCLASS()
 class SHOEN_API AFoundationGameMode : public AGameModeBase
 {
@@ -23,6 +24,7 @@ private:
     friend class FShoenInspectionLifecycle;
     UPROPERTY() TArray<TObjectPtr<AFormationView>> Views;
     UPROPERTY() TObjectPtr<ASettlementView> SettlementView;
+    UPROPERTY() TObjectPtr<ABattlefieldView> BattlefieldView;
     UPROPERTY() TArray<TObjectPtr<AActor>> LabDecorations;
     uint64 SeenGeneration = MAX_uint64;
     void RebuildViews();
@@ -33,6 +35,9 @@ private:
     void CombatBenchmarkTick(float DeltaSeconds);
     void FinishCombatBenchmark();
     bool bCombatBenchmark = false;
+    bool bTerrainCombatBenchmark=false;
+    uint64 CombatPathRequests=0, CombatPathFailures=0, CombatCrossingCompletions=0, CombatBridgeCompletions=0, CombatFordCompletions=0, CombatFlankAttackTicks=0, CombatHillAttackTicks=0;
+    uint64 CombatPeakWaiting=0, CombatPeakStuck=0, CombatPeakTerrainOverlap=0;
     int32 CombatPerSide = 0, CombatRuns = 0;
     double CombatSeconds = 0, CombatCaptureSeconds = 0, CombatLastFrameTime = 0;
     double CombatWarmupUntil = 0, CombatNextOrder = 5;

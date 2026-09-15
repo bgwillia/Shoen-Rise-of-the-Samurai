@@ -9,6 +9,7 @@
 #include "domain/Buildings.h"
 #include "domain/Inspection.h"
 #include "domain/Prototype.h"
+#include "domain/Terrain.h"
 #include "InteractionProfiler.h"
 #include "InputCoreTypes.h"
 
@@ -209,11 +210,17 @@ void AFoundationHUD::NotifyHitBoxClick(FName Id)
     if (Id==TEXT("proto_reset")) { Mode->NewPrototype(); return; }
     if (Sim->Prototype.enabled)
     {
-        if (Id==TEXT("proto_farmer")) Sim->RecruitPrototypeTroops(domain::Occupation::Agriculture,domain::TroopRole::Polearm,50);
-        if (Id==TEXT("proto_labor")) Sim->RecruitPrototypeTroops(domain::Occupation::GeneralLabor,domain::TroopRole::Polearm,50);
-        if (Id==TEXT("proto_smith")) Sim->RecruitPrototypeTroops(domain::Occupation::Smithing,domain::TroopRole::Polearm,20);
-        if (Id==TEXT("proto_bow")) Sim->RecruitPrototypeTroops(domain::Occupation::Agriculture,domain::TroopRole::Bow,50);
-        if (Id==TEXT("proto_samurai")) Sim->RecruitPrototypeTroops(domain::Occupation::RetainerService,domain::TroopRole::SamuraiFoot,20);
+        const int32 Ordinary=int32(Sim->Prototype.config.ordinary_formation_size),Elite=int32(Sim->Prototype.config.elite_formation_size);
+        const int32 Smiths=Sim->Prototype.terrain_enabled ? Ordinary : 20;
+        if (Id==TEXT("terrain_muster")) Sim->MusterTerrainArmy();
+        if (Id==TEXT("terrain_bridge")) Sim->OrderTerrainCrossing(false);
+        if (Id==TEXT("terrain_ford")) Sim->OrderTerrainCrossing(true);
+        if (Id==TEXT("terrain_line")) Sim->DeployTerrainLine();
+        if (Id==TEXT("proto_farmer")) Sim->RecruitPrototypeTroops(domain::Occupation::Agriculture,domain::TroopRole::Polearm,Ordinary);
+        if (Id==TEXT("proto_labor")) Sim->RecruitPrototypeTroops(domain::Occupation::GeneralLabor,domain::TroopRole::Polearm,Ordinary);
+        if (Id==TEXT("proto_smith")) Sim->RecruitPrototypeTroops(domain::Occupation::Smithing,domain::TroopRole::Polearm,Smiths);
+        if (Id==TEXT("proto_bow")) Sim->RecruitPrototypeTroops(domain::Occupation::Agriculture,domain::TroopRole::Bow,Ordinary);
+        if (Id==TEXT("proto_samurai")) Sim->RecruitPrototypeTroops(domain::Occupation::RetainerService,domain::TroopRole::SamuraiFoot,Elite);
         if (Id==TEXT("proto_fight")) { if (Sim->StartPrototypeBattle()) Mode->FrameCurrentScenario(); }
         if (Id==TEXT("proto_attack")) Sim->OrderPrototypeAttack();
         if (Id==TEXT("proto_return")) { if (Sim->ReturnPrototypeArmy()) Mode->FrameCurrentScenario(); }
@@ -251,11 +258,12 @@ void AFoundationHUD::DrawPrototypeHUD(UShoenSimulationSubsystem* Sim,AFoundation
 {
     const auto& W=Sim->State; const auto& Proto=Sim->Prototype;
     const auto Pop=domain::Summarize(W); const auto Economy=domain::ForecastPrototype(W,Proto);
-    const bool Battle=Sim->IsPrototypeBattle();
+    const bool Battle=Sim->IsPrototypeBattle(),Terrain=Proto.terrain_enabled;
+    const int32 Ordinary=int32(Proto.config.ordinary_formation_size),Elite=int32(Proto.config.elite_formation_size),Smiths=Terrain ? Ordinary : 20;
     const FLinearColor Muted(.62,.72,.73),Gold(.95,.74,.37),Cyan(.3,.85,1);
     DrawRect(FLinearColor(.025,.04,.045,.96),0,0,Canvas->SizeX,64);
     DrawRect(FLinearColor(.035,.055,.06,.96),0,64,410,Canvas->SizeY-64);
-    Label(TEXT("SHOEN / CORE LOOP PROTOTYPE"),20,16,Gold,1.2f);
+    Label(Terrain ? TEXT("SHOEN / TERRAIN PROTOTYPE B") : TEXT("SHOEN / CORE LOOP PROTOTYPE"),20,16,Gold,1.2f);
     Label(FString::Printf(TEXT("Day %lld | %dx | %s"),W.campaign_day+1,W.speed,UTF8_TO_TCHAR(domain::BattlePhaseName(Proto.phase))),440,17,FLinearColor::White,1.2f);
     Label(Battle ? TEXT("Blue: your army | Red: enemy | Purple: elite") : TEXT("Settlement -> mobilize -> battle -> return -> recover"),440,41,Muted);
     Button(TEXT("proto_reset"),TEXT("Reset entire prototype"),Canvas->SizeX-220,17,200);
@@ -276,6 +284,14 @@ void AFoundationHUD::DrawPrototypeHUD(UShoenSimulationSubsystem* Sim,AFoundation
         const auto& S=Pair.second; const auto I=static_cast<int32>(S.origin.occupation);
         if (I>=0 && I<6 && S.status!=domain::ServiceStatus::Dead && S.status!=domain::ServiceStatus::ReturnedHealthy && S.status!=domain::ServiceStatus::ReturnedWounded) ++Away[I];
     }
+    domain::Quantity EliteOriginal=Available[5]+Recovering[5],EliteDead=0;
+    for (const auto& Pair:W.services)
+        if (Pair.second.origin.occupation==domain::Occupation::RetainerService)
+        {
+            if (Pair.second.status==domain::ServiceStatus::Dead) ++EliteDead;
+        }
+    // Returned survivors are already in their cohort; count away/dead records once.
+    EliteOriginal+=Away[5]+EliteDead;
     const TCHAR* Occupations[]={TEXT("Farmers"),TEXT("Laborers"),TEXT("Smiths"),TEXT("Commerce"),TEXT("Maritime"),TEXT("Retainers")};
     for (int32 I=0;I<6;++I)
     {
@@ -300,27 +316,35 @@ void AFoundationHUD::DrawPrototypeHUD(UShoenSimulationSubsystem* Sim,AFoundation
         if (I>=0 && I<5) Roles[I]+=Battle && Unit ? Unit->alive : domain::ActiveFormationCount(W,Pair.first);
     }
     Label(FString::Printf(TEXT("Army: %lld spear | %lld bow | %lld elite"),Roles[0],Roles[1],Roles[2]+Roles[3]+Roles[4]),20,417,Gold);
-    Button(TEXT("proto_farmer"),TEXT("M  50 farmer spears"),20,442); Button(TEXT("proto_labor"),TEXT("L  50 labor spears"),211,442);
-    Button(TEXT("proto_smith"),TEXT("J  20 smith spears"),20,474); Button(TEXT("proto_bow"),TEXT("K  50 farmer bows"),211,474);
-    Button(TEXT("proto_samurai"),TEXT("T  20 samurai"),20,506); Button(TEXT("proto_days"),TEXT("P  Advance 7 days"),211,506);
+    Button(TEXT("proto_farmer"),FString::Printf(TEXT("M  %d farmer spears"),Ordinary),20,442); Button(TEXT("proto_labor"),FString::Printf(TEXT("L  %d labor spears"),Ordinary),211,442);
+    Button(TEXT("proto_smith"),FString::Printf(TEXT("J  %d smith spears"),Smiths),20,474); Button(TEXT("proto_bow"),FString::Printf(TEXT("K  %d farmer bows"),Ordinary),211,474);
+    Button(TEXT("proto_samurai"),FString::Printf(TEXT("T  %d samurai"),Elite),20,506); Button(TEXT("proto_days"),TEXT("P  Advance 7 days"),211,506);
     Button(TEXT("proto_fight"),TEXT("F  Take army to battle"),20,542); Button(TEXT("proto_attack"),TEXT("G  Advance / attack"),211,542);
     Button(TEXT("proto_return"),Battle && Proto.phase==domain::BattlePhase::Fighting ? TEXT("H  Retreat to settlement") : TEXT("H  Return survivors"),20,574,366);
     Label(TEXT("WASD pan | Wheel zoom | Q/E rotate"),20,611,Muted);
     Label(TEXT("Middle-drag rotate | Shift-middle pan"),20,628,Muted);
     Label(TEXT("Click/box select | Shift adds | Right move"),20,645,Muted);
-    Label(TEXT("Right-drag facing | Ctrl+1..9 set group"),20,662,Muted);
-    Label(TEXT("1..9 recall | Ctrl+A all | Space pause"),20,679,Muted);
-    Label(TEXT("F6 profile / F12 diagnostics: optional"),20,696,Muted);
+    Label(Terrain ? TEXT("[ / ] face line | Ctrl+1..9 set group") : TEXT("Right-drag facing | Ctrl+1..9 set group"),20,662,Muted);
+    Label(Terrain ? TEXT("Tab all | , infantry | . bows | / elite") : TEXT("1..9 recall | Ctrl+A all | Space pause"),20,679,Muted);
+    Label(Terrain ? TEXT("1..9 recall | Space pause | F12 optional") : TEXT("F6 profile / F12 diagnostics: optional"),20,696,Muted);
     if (Battle)
     {
         const auto& R=Proto.battle;
-        DrawRect(FLinearColor(.035,.055,.06,.94),420,70,Canvas->SizeX-440,110);
+        DrawRect(FLinearColor(.035,.055,.06,.94),420,70,Canvas->SizeX-440,146);
+        AddHitBox(FVector2D(420,70),FVector2D(Canvas->SizeX-440,146),TEXT("battle_status"),true,1);
         Label(FString::Printf(TEXT("YOUR ARMY: %lld standing | %lld dead | %lld wounded"),R.player_alive,R.player_dead,R.player_wounded),440,82,Cyan,1.1f);
         Label(FString::Printf(TEXT("ENEMY: %lld standing | %lld dead | %lld wounded"),R.enemy_alive,R.enemy_dead,R.enemy_wounded),440,105,FLinearColor(1,.45,.4));
         int32 Routed=0; double Fatigue=0; int32 Units=0;
         for (const auto& Pair:Proto.player_units) { Routed+=Pair.second.routed ? 1 : 0; Fatigue+=Pair.second.fatigue; ++Units; }
         Label(FString::Printf(TEXT("%.0fs battle | Routing %d formations | Average fatigue %.0f | Selected %d"),R.seconds,Routed,Units ? Fatigue/Units : 0,PC ? PC->Selected.Num() : 0),440,128,Gold);
-        if (Proto.phase!=domain::BattlePhase::Fighting) Label(Proto.phase==domain::BattlePhase::Victory ? TEXT("VICTORY - H returns survivors; wounded need recovery time") : TEXT("DEFEAT - H returns remaining survivors"),440,153,Gold,1.15f);
+        DrawBattleSelection(Sim,PC,(Terrain ? 266.f : 230.f)+(Proto.phase!=domain::BattlePhase::Fighting ? 24.f : 0.f));
+        if (Terrain)
+        {
+            Button(TEXT("terrain_bridge"),TEXT("Y  Primary bridge"),440,224,240);
+            Button(TEXT("terrain_ford"),TEXT("O  Flanking ford"),690,224,240);
+            Button(TEXT("terrain_line"),TEXT("I  Deploy selected line"),940,224,240);
+        }
+        if (Proto.phase!=domain::BattlePhase::Fighting) Label(Proto.phase==domain::BattlePhase::Victory ? TEXT("VICTORY - H returns survivors") : TEXT("DEFEAT - H returns remaining survivors"),440,Terrain ? 262 : 220,Gold,1.05f);
     }
     else
     {
@@ -338,6 +362,14 @@ void AFoundationHUD::DrawPrototypeHUD(UShoenSimulationSubsystem* Sim,AFoundation
             const FString Type=UTF8_TO_TCHAR(Pair.first.c_str());
             Button(FName(*(TEXT("proto_build_")+Type)),UTF8_TO_TCHAR(Pair.second.display_name.c_str()),440+(I%3)*250,128+(I/3)*32,240); ++I;
         }
+        if (Terrain && (!PC || !PC->IsPlacing()))
+        {
+            DrawRect(FLinearColor(.035,.055,.06,.96),420,190,Canvas->SizeX-440,95);
+            AddHitBox(FVector2D(420,190),FVector2D(Canvas->SizeX-440,95),TEXT("terrain_muster_status"),true,-1);
+            Button(TEXT("terrain_muster"),TEXT("U  Muster remaining population"),440,198,300);
+            Label(FString::Printf(TEXT("Elite ready %lld / %lld original | Last war: %lld dead, %lld wounded"),Available[5],EliteOriginal,Proto.last_outcome.player_elite_dead,Proto.last_outcome.player_elite_wounded),440,236,Gold);
+            Label(TEXT("Muster uses remaining people and equipment; it never resets the settlement."),440,257,Muted);
+        }
         if (PC && PC->IsPlacing())
         {
             Label(FString::Printf(TEXT("PLACE: %s | %s"),UTF8_TO_TCHAR(PC->Placement().definition_id.c_str()),PC->HasPlacementPoint() ? UTF8_TO_TCHAR(domain::PlacementReason(PC->PlacementStatus().code)) : TEXT("move pointer onto ground")),440,199,Gold);
@@ -346,7 +378,8 @@ void AFoundationHUD::DrawPrototypeHUD(UShoenSimulationSubsystem* Sim,AFoundation
         if (PC) for (const auto& Pair:W.buildings)
         {
             const auto& B=Pair.second; FVector2D Screen;
-            if (PC->ProjectWorldLocationToScreen(FVector(B.x_cm,B.y_cm,B.z_cm+B.height_cm+120),Screen,false) && Screen.X>420 && Screen.Y>240 && Screen.Y<Canvas->SizeY-64)
+            if (Terrain && PC->InspectionSelection().id!=B.id) continue;
+            if (PC->ProjectWorldLocationToScreen(FVector(B.x_cm,B.y_cm,B.z_cm+B.height_cm+120),Screen,false) && Screen.X>420 && Screen.Y>(Terrain ? 290 : 240) && Screen.Y<Canvas->SizeY-64)
             {
                 const auto Definition=Proto.catalog.find(B.definition_id);
                 const FString Name=Definition!=Proto.catalog.end() ? UTF8_TO_TCHAR(Definition->second.display_name.c_str()) : UTF8_TO_TCHAR(B.definition_id.c_str());
@@ -369,7 +402,7 @@ void AFoundationHUD::DrawPrototypeHUD(UShoenSimulationSubsystem* Sim,AFoundation
     }
     DrawRect(FLinearColor(.025,.04,.045,.95),410,Canvas->SizeY-54,Canvas->SizeX-410,54);
     Label(Sim->Message,430,Canvas->SizeY-42,Gold);
-    Label(Battle ? TEXT("Formation labels: M morale / F fatigue. Casualties return to the population ledger.") : TEXT("Mobilizing workers lowers production. Return survivors and advance days to see the consequence."),430,Canvas->SizeY-23,Muted);
+    Label(Battle ? TEXT("Selected labels only: M morale / F fatigue / G group. Orange ring: routing.") : TEXT("Mobilizing workers lowers production. Return survivors and advance days to see the consequence."),430,Canvas->SizeY-23,Muted);
     if (PC && PC->bMouseDiagnostics)
     {
         const auto Diagnostic=ReadFoundationCursorDiagnostics(*PC);
@@ -385,4 +418,102 @@ void AFoundationHUD::DrawPrototypeHUD(UShoenSimulationSubsystem* Sim,AFoundation
         }
     }
     ShoenProfile::CaptureHud(Sim->Message);
+}
+
+void AFoundationHUD::DrawBattleSelection(UShoenSimulationSubsystem* Sim,AFoundationPlayerController* PC,float WorldLabelTop)
+{
+    const FLinearColor Gold(.95,.74,.37),Muted(.62,.72,.73);
+    TArray<const domain::Formation*> Formations;
+    domain::Quantity Strength=0,Starting=0;
+    int32 RoleCount[5]{},Routed=0;
+    double Morale=0,Fatigue=0;
+    TArray<uint8> Groups;
+    if (PC) for (const uint64 Id:PC->Selected)
+    {
+        const auto Found=Sim->State.formations.find(Id);
+        if (Found==Sim->State.formations.end() || Found->second.demobilized) continue;
+        const auto* Unit=domain::LookupCombatUnit(Sim->Prototype,domain::CombatSide::Player,Id);
+        if (!Unit) continue;
+        Formations.Add(&Found->second); Strength+=Unit->alive; Starting+=Unit->starting;
+        Morale+=Unit->morale*Unit->alive; Fatigue+=Unit->fatigue*Unit->alive;
+        Routed+=Unit->routed ? 1 : 0;
+        const int32 Role=int32(Found->second.role); if (Role>=0 && Role<5) ++RoleCount[Role];
+        Groups.AddUnique(Found->second.control_group);
+    }
+    Groups.Sort(); FString GroupText;
+    for (const uint8 Group:Groups)
+    {
+        if (!GroupText.IsEmpty()) GroupText+=TEXT(",");
+        GroupText+=Group ? FString::FromInt(Group) : TEXT("none");
+    }
+    if (GroupText.IsEmpty()) GroupText=TEXT("none");
+    const auto RoleName=[](domain::TroopRole Role)->const TCHAR*
+    {
+        switch (Role)
+        {
+        case domain::TroopRole::Bow: return TEXT("BOW");
+        case domain::TroopRole::RetainerInfantry: return TEXT("RETAINER");
+        case domain::TroopRole::SamuraiFoot: return TEXT("SAMURAI");
+        case domain::TroopRole::MountedSamurai: return TEXT("CAVALRY");
+        default: return TEXT("POLEARM");
+        }
+    };
+    Label(FString::Printf(TEXT("SELECTED %d formations | Strength %lld / %lld | Groups: %s"),Formations.Num(),Strength,Starting,*GroupText),440,151,Gold);
+    if (Formations.Num()==1)
+    {
+        const auto& F=*Formations[0]; const auto* Unit=domain::LookupCombatUnit(Sim->Prototype,domain::CombatSide::Player,F.id);
+        Label(FString::Printf(TEXT("%s #%llu | Morale %.0f | Fatigue %.0f | %s"),RoleName(F.role),uint64(F.id),Unit->morale,Unit->fatigue,Unit->routed ? TEXT("ROUTING") : Unit->engaged ? TEXT("ENGAGED") : TEXT("READY")),440,173);
+        Label(FString::Printf(TEXT("Dead %lld | Wounded %lld | Group %s | Right-drag facing"),Unit->dead,Unit->wounded,*GroupText),440,195,Muted);
+    }
+    else
+    {
+        Label(FString::Printf(TEXT("Polearm %d | Bows %d | Elite %d | Routing %d"),RoleCount[0],RoleCount[1],RoleCount[2]+RoleCount[3]+RoleCount[4],Routed),440,173);
+        Label(FString::Printf(TEXT("Weighted morale %.0f | Fatigue %.0f | Click one for detailed status"),Strength ? Morale/Strength : 0,Strength ? Fatigue/Strength : 0),440,195,Muted);
+    }
+    // Labels belong to HUD coordinates so they cannot spill over the sidebar,
+    // command strip or footer. At army scale the aggregate header carries detail.
+    TArray<FBox2D> Occupied;
+    for (const auto* F:Formations)
+    {
+        if (Occupied.Num()==12) break;
+        const auto* Unit=domain::LookupCombatUnit(Sim->Prototype,domain::CombatSide::Player,F->id);
+        if (!Unit || Unit->alive==0) continue;
+        FVector2D Screen;
+        const double Z=Sim->Prototype.terrain_enabled ? domain::TerrainHeight(F->x,F->y) : 0;
+        if (!PC->ProjectWorldLocationToScreen(FVector(F->x,F->y,Z+340),Screen,false)) continue;
+        const FString Text=FString::Printf(TEXT("%s %lld | M%.0f F%.0f G%d%s"),RoleName(F->role),Unit->alive,Unit->morale,Unit->fatigue,F->control_group,Unit->routed ? TEXT(" ROUT") : TEXT(""));
+        float Width=0,Height=0; GetTextSize(Text,Width,Height,GEngine->GetSmallFont(),1.f);
+        const FVector2D Min(Screen.X-Width*.5-5,Screen.Y-3),Max(Min.X+Width+10,Min.Y+Height+6);
+        if (Min.X<420 || Max.X>Canvas->SizeX-10 || Min.Y<WorldLabelTop || Max.Y>Canvas->SizeY-64) continue;
+        bool Overlaps=false;
+        for (const auto& Bounds:Occupied)
+            if (Min.X<Bounds.Max.X && Max.X>Bounds.Min.X && Min.Y<Bounds.Max.Y && Max.Y>Bounds.Min.Y) { Overlaps=true; break; }
+        if (Overlaps) continue;
+        Occupied.Add(FBox2D(Min,Max));
+        DrawRect(FLinearColor(.02,.025,.03,.9),Min.X,Min.Y,Width+10,Height+6);
+        Label(Text,Min.X+5,Min.Y+3,Unit->routed ? FLinearColor(1,.5,.1) : Gold);
+    }
+    if (PC && Sim->Prototype.terrain_enabled)
+    {
+        const auto& Geometry=domain::PrototypeTerrain();
+        const TCHAR* Names[]={TEXT("BRIDGE"),TEXT("LONG FORD"),TEXT("WOODS"),TEXT("HILL")};
+        const domain::TerrainRect Rects[]={Geometry.bridge,Geometry.ford,Geometry.forest,Geometry.hill};
+        for (int32 I=0;I<4;++I)
+        {
+            const double X=(Rects[I].min_x+Rects[I].max_x)*.5,Y=(Rects[I].min_y+Rects[I].max_y)*.5;
+            FVector2D Screen;
+            if (!PC->ProjectWorldLocationToScreen(FVector(X,Y,domain::TerrainHeight(X,Y)+60),Screen,false)) continue;
+            float Width=0,Height=0; GetTextSize(Names[I],Width,Height,GEngine->GetSmallFont(),1.f);
+            const FVector2D Min(Screen.X-Width*.5-5,Screen.Y-3),Max(Min.X+Width+10,Min.Y+Height+6);
+            if (Min.X<420 || Max.X>Canvas->SizeX-10 || Min.Y<WorldLabelTop || Max.Y>Canvas->SizeY-64) continue;
+            bool Overlaps=false;
+            for (const auto& Bounds:Occupied)
+                if (Min.X<Bounds.Max.X && Max.X>Bounds.Min.X && Min.Y<Bounds.Max.Y && Max.Y>Bounds.Min.Y) { Overlaps=true; break; }
+            if (Overlaps) continue;
+            Occupied.Add(FBox2D(Min,Max));
+            DrawRect(FLinearColor(.02,.025,.03,.8),Min.X,Min.Y,Width+10,Height+6);
+            Label(Names[I],Min.X+5,Min.Y+3,FLinearColor(.65,.82,.7));
+        }
+    }
+
 }

@@ -1,0 +1,18 @@
+PASS authored terrain
+PASS real representative muster
+PASS reserved deterministic line orders
+BRIDGE30 clear_seconds=209.1 crossed=30 overlap_peak=0 stuck=0 waits=0 requests=1663 failed=1612 sim360s_cpu_ms=73.3273
+PASS 30 formation bridge traffic
+SECOND_WAR first_dead=60 elite_dead=60 second_elite=60 second_away=2260
+PASS persistent second war and elite depletion
+TERRAIN_COMBAT 1000v1000 budget180s_actual_seconds=180 navsteps=3600 cpu_ms=33.1024 navmedian_ms=0.003125 navp95_ms=0.018459 contact=2416 ranged=3198 bridge=2 ford=7 overlap_peak=0 dead=455 hill=1978 flank=353
+TERRAIN_COMBAT 2000v2000 budget180s_actual_seconds=180 navsteps=3600 cpu_ms=343.998 navmedian_ms=0.012791 navp95_ms=0.069125 contact=3105 ranged=5380 bridge=4 ford=11 overlap_peak=0 dead=758 hill=4288 flank=899
+PASS actual constrained terrain combat
+OPPOSING_FORD east=6 west=6 overlap_peak=0 stuck=0
+PASS opposing ford traffic
+MANUAL2320 G_orders=10 G_rejected=1 elite_crossed=3 bridge=2 ford=20 wait=0 stuck=0 overlap_peak=0 phase=Battle actual_seconds=360
+PASS manual 2320 order sequence
+COMMITTED_RETREAT routed_x=-22400 following_x=8000 overlap=0
+PASS committed crossing retreat
+ROUTED_EXITS settled=3 stuck=0 overlap=0
+PASS unique routed exits
