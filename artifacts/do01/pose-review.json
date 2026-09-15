@@ -1,0 +1,320 @@
+{
+  "asset": "Do01",
+  "checks": [
+    {
+      "pose": "neutral",
+      "body_intersecting_triangle_pairs": 0,
+      "helmet_intersecting_triangle_pairs": 0,
+      "components": {
+        "Do_Main": 0,
+        "Do_Lacing": 0,
+        "Do_Edge": 0,
+        "Do_Fittings": 0,
+        "Do_Back": 0,
+        "Do_Side_L": 0,
+        "Do_Side_R": 0,
+        "Do_Upper": 0,
+        "Do_Lining": 0,
+        "Do_Straps": 0
+      }
+    },
+    {
+      "pose": "arms-forward",
+      "body_intersecting_triangle_pairs": 488,
+      "helmet_intersecting_triangle_pairs": 0,
+      "components": {
+        "Do_Main": 0,
+        "Do_Lacing": 0,
+        "Do_Edge": 188,
+        "Do_Fittings": 0,
+        "Do_Back": 0,
+        "Do_Side_L": 0,
+        "Do_Side_R": 0,
+        "Do_Upper": 134,
+        "Do_Lining": 0,
+        "Do_Straps": 166
+      }
+    },
+    {
+      "pose": "arms-raised",
+      "body_intersecting_triangle_pairs": 0,
+      "helmet_intersecting_triangle_pairs": 0,
+      "components": {
+        "Do_Main": 0,
+        "Do_Lacing": 0,
+        "Do_Edge": 0,
+        "Do_Fittings": 0,
+        "Do_Back": 0,
+        "Do_Side_L": 0,
+        "Do_Side_R": 0,
+        "Do_Upper": 0,
+        "Do_Lining": 0,
+        "Do_Straps": 0
+      }
+    },
+    {
+      "pose": "turn",
+      "body_intersecting_triangle_pairs": 0,
+      "helmet_intersecting_triangle_pairs": 0,
+      "components": {
+        "Do_Main": 0,
+        "Do_Lacing": 0,
+        "Do_Edge": 0,
+        "Do_Fittings": 0,
+        "Do_Back": 0,
+        "Do_Side_L": 0,
+        "Do_Side_R": 0,
+        "Do_Upper": 0,
+        "Do_Lining": 0,
+        "Do_Straps": 0
+      }
+    },
+    {
+      "pose": "bend",
+      "body_intersecting_triangle_pairs": 0,
+      "helmet_intersecting_triangle_pairs": 0,
+      "components": {
+        "Do_Main": 0,
+        "Do_Lacing": 0,
+        "Do_Edge": 0,
+        "Do_Fittings": 0,
+        "Do_Back": 0,
+        "Do_Side_L": 0,
+        "Do_Side_R": 0,
+        "Do_Upper": 0,
+        "Do_Lining": 0,
+        "Do_Straps": 0
+      }
+    },
+    {
+      "pose": "head",
+      "body_intersecting_triangle_pairs": 0,
+      "helmet_intersecting_triangle_pairs": 0,
+      "components": {
+        "Do_Main": 0,
+        "Do_Lacing": 0,
+        "Do_Edge": 0,
+        "Do_Fittings": 0,
+        "Do_Back": 0,
+        "Do_Side_L": 0,
+        "Do_Side_R": 0,
+        "Do_Upper": 0,
+        "Do_Lining": 0,
+        "Do_Straps": 0
+      }
+    },
+    {
+      "pose": "A_Idle:15",
+      "body_intersecting_triangle_pairs": 1098,
+      "helmet_intersecting_triangle_pairs": 0,
+      "components": {
+        "Do_Main": 0,
+        "Do_Lacing": 80,
+        "Do_Edge": 202,
+        "Do_Fittings": 26,
+        "Do_Back": 190,
+        "Do_Side_L": 130,
+        "Do_Side_R": 128,
+        "Do_Upper": 0,
+        "Do_Lining": 241,
+        "Do_Straps": 101
+      }
+    },
+    {
+      "pose": "A_Idle:110",
+      "body_intersecting_triangle_pairs": 1427,
+      "helmet_intersecting_triangle_pairs": 106,
+      "components": {
+        "Do_Main": 0,
+        "Do_Lacing": 154,
+        "Do_Edge": 290,
+        "Do_Fittings": 120,
+        "Do_Back": 224,
+        "Do_Side_L": 129,
+        "Do_Side_R": 156,
+        "Do_Upper": 0,
+        "Do_Lining": 260,
+        "Do_Straps": 94
+      }
+    },
+    {
+      "pose": "A_Walk:8",
+      "body_intersecting_triangle_pairs": 1849,
+      "helmet_intersecting_triangle_pairs": 0,
+      "components": {
+        "Do_Main": 152,
+        "Do_Lacing": 100,
+        "Do_Edge": 322,
+        "Do_Fittings": 97,
+        "Do_Back": 296,
+        "Do_Side_L": 116,
+        "Do_Side_R": 81,
+        "Do_Upper": 0,
+        "Do_Lining": 345,
+        "Do_Straps": 340
+      }
+    },
+    {
+      "pose": "A_Walk:23",
+      "body_intersecting_triangle_pairs": 2191,
+      "helmet_intersecting_triangle_pairs": 0,
+      "components": {
+        "Do_Main": 0,
+        "Do_Lacing": 124,
+        "Do_Edge": 357,
+        "Do_Fittings": 62,
+        "Do_Back": 479,
+        "Do_Side_L": 191,
+        "Do_Side_R": 223,
+        "Do_Upper": 0,
+        "Do_Lining": 394,
+        "Do_Straps": 361
+      }
+    },
+    {
+      "pose": "A_Walk:37",
+      "body_intersecting_triangle_pairs": 1975,
+      "helmet_intersecting_triangle_pairs": 0,
+      "components": {
+        "Do_Main": 0,
+        "Do_Lacing": 198,
+        "Do_Edge": 250,
+        "Do_Fittings": 102,
+        "Do_Back": 285,
+        "Do_Side_L": 181,
+        "Do_Side_R": 245,
+        "Do_Upper": 0,
+        "Do_Lining": 372,
+        "Do_Straps": 342
+      }
+    },
+    {
+      "pose": "A_Run:8",
+      "body_intersecting_triangle_pairs": 936,
+      "helmet_intersecting_triangle_pairs": 0,
+      "components": {
+        "Do_Main": 145,
+        "Do_Lacing": 100,
+        "Do_Edge": 80,
+        "Do_Fittings": 0,
+        "Do_Back": 0,
+        "Do_Side_L": 120,
+        "Do_Side_R": 0,
+        "Do_Upper": 0,
+        "Do_Lining": 140,
+        "Do_Straps": 351
+      }
+    },
+    {
+      "pose": "A_Run:23",
+      "body_intersecting_triangle_pairs": 1143,
+      "helmet_intersecting_triangle_pairs": 0,
+      "components": {
+        "Do_Main": 256,
+        "Do_Lacing": 8,
+        "Do_Edge": 159,
+        "Do_Fittings": 0,
+        "Do_Back": 0,
+        "Do_Side_L": 0,
+        "Do_Side_R": 0,
+        "Do_Upper": 82,
+        "Do_Lining": 102,
+        "Do_Straps": 536
+      }
+    },
+    {
+      "pose": "A_Run:40",
+      "body_intersecting_triangle_pairs": 617,
+      "helmet_intersecting_triangle_pairs": 0,
+      "components": {
+        "Do_Main": 75,
+        "Do_Lacing": 0,
+        "Do_Edge": 64,
+        "Do_Fittings": 18,
+        "Do_Back": 0,
+        "Do_Side_L": 0,
+        "Do_Side_R": 0,
+        "Do_Upper": 0,
+        "Do_Lining": 0,
+        "Do_Straps": 460
+      }
+    },
+    {
+      "pose": "A_Attack:6",
+      "body_intersecting_triangle_pairs": 193,
+      "helmet_intersecting_triangle_pairs": 879,
+      "components": {
+        "Do_Main": 0,
+        "Do_Lacing": 0,
+        "Do_Edge": 0,
+        "Do_Fittings": 0,
+        "Do_Back": 0,
+        "Do_Side_L": 0,
+        "Do_Side_R": 0,
+        "Do_Upper": 0,
+        "Do_Lining": 0,
+        "Do_Straps": 193
+      }
+    },
+    {
+      "pose": "A_Attack:12",
+      "body_intersecting_triangle_pairs": 410,
+      "helmet_intersecting_triangle_pairs": 1123,
+      "components": {
+        "Do_Main": 0,
+        "Do_Lacing": 0,
+        "Do_Edge": 0,
+        "Do_Fittings": 0,
+        "Do_Back": 0,
+        "Do_Side_L": 0,
+        "Do_Side_R": 0,
+        "Do_Upper": 0,
+        "Do_Lining": 0,
+        "Do_Straps": 410
+      }
+    },
+    {
+      "pose": "A_Attack:20",
+      "body_intersecting_triangle_pairs": 2989,
+      "helmet_intersecting_triangle_pairs": 878,
+      "components": {
+        "Do_Main": 752,
+        "Do_Lacing": 259,
+        "Do_Edge": 399,
+        "Do_Fittings": 253,
+        "Do_Back": 0,
+        "Do_Side_L": 341,
+        "Do_Side_R": 0,
+        "Do_Upper": 231,
+        "Do_Lining": 542,
+        "Do_Straps": 212
+      }
+    },
+    {
+      "pose": "A_Attack:28",
+      "body_intersecting_triangle_pairs": 2266,
+      "helmet_intersecting_triangle_pairs": 826,
+      "components": {
+        "Do_Main": 658,
+        "Do_Lacing": 324,
+        "Do_Edge": 382,
+        "Do_Fittings": 67,
+        "Do_Back": 14,
+        "Do_Side_L": 141,
+        "Do_Side_R": 0,
+        "Do_Upper": 148,
+        "Do_Lining": 390,
+        "Do_Straps": 142
+      }
+    }
+  ],
+  "scope": "Saved Blender source and native Manny fit fixtures, actual sampled poses. Root translation/rotation channels locked on temporary action copies for in-place review. Triangle overlaps are surface intersection counts, not global penetration depths. Diagnostic poses are temporary, not exported animation assets.",
+  "run": "Original Epic MF_Unarmed_Jog_Fwd native clip; A_Run is export filename alias.",
+  "pose_definitions": {
+    "arms-forward": "upper arms directed (\u00b1.13,-1,-.12)",
+    "arms-raised": "upper arms directed (\u00b1.90,-.2,.10)",
+    "turn": "spine_04 25 degrees around component Z",
+    "bend": "spine_04 20 degrees around component X",
+    "head": "head32 degrees around componentZ"
+  }
+}

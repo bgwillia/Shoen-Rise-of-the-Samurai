@@ -1,0 +1,133 @@
+{
+  "source": "Epic UE 5.8 template High/Characters; binary-identical copied asset data",
+  "mesh": "/Game/Characters/Mannequins/Meshes/SKM_Manny_Simple",
+  "skeleton": "/Game/Characters/Mannequins/Meshes/SK_Mannequin",
+  "records": [
+    {
+      "package": "/Game/Characters/Mannequins/Meshes/SKM_Manny_Simple",
+      "source": "/Users/Shared/Epic Games/UE_5.8/Templates/TemplateResources/High/Characters/Content/Mannequins/Meshes/SKM_Manny_Simple.uasset",
+      "destination": "game/Content/Characters/Mannequins/Meshes/SKM_Manny_Simple.uasset",
+      "bytes": 15825101,
+      "sha256": "be9f011191ee1887b97cd13bce09886a6066c2fd62c619991070ec142184e1bf"
+    },
+    {
+      "package": "/Game/Characters/Mannequins/Meshes/SK_Mannequin",
+      "source": "/Users/Shared/Epic Games/UE_5.8/Templates/TemplateResources/High/Characters/Content/Mannequins/Meshes/SK_Mannequin.uasset",
+      "destination": "game/Content/Characters/Mannequins/Meshes/SK_Mannequin.uasset",
+      "bytes": 191198,
+      "sha256": "22029d47455f24471195b26a0e04a1e1389f27d6a924e88c9f46a0f600c9a530"
+    },
+    {
+      "package": "/Game/Characters/Mannequins/Rigs/PA_Mannequin",
+      "source": "/Users/Shared/Epic Games/UE_5.8/Templates/TemplateResources/High/Characters/Content/Mannequins/Rigs/PA_Mannequin.uasset",
+      "destination": "game/Content/Characters/Mannequins/Rigs/PA_Mannequin.uasset",
+      "bytes": 301538,
+      "sha256": "c0ceaf003947088ff076555b81a46e5ccb11149c94025eb2a9e74263fbaa0d67"
+    },
+    {
+      "package": "/Game/Characters/Mannequins/Materials/M_Mannequin",
+      "source": "/Users/Shared/Epic Games/UE_5.8/Templates/TemplateResources/High/Characters/Content/Mannequins/Materials/M_Mannequin.uasset",
+      "destination": "game/Content/Characters/Mannequins/Materials/M_Mannequin.uasset",
+      "bytes": 59292,
+      "sha256": "d7ffe412d906380bd5bd4462f464b2a1fe48fdb79b9077f29bd0f958a782035c"
+    },
+    {
+      "package": "/Game/Characters/Mannequins/Materials/Manny/MI_Manny_01_New",
+      "source": "/Users/Shared/Epic Games/UE_5.8/Templates/TemplateResources/High/Characters/Content/Mannequins/Materials/Manny/MI_Manny_01_New.uasset",
+      "destination": "game/Content/Characters/Mannequins/Materials/Manny/MI_Manny_01_New.uasset",
+      "bytes": 17963,
+      "sha256": "9f1e4ed382304d020b750c81505140fc1de4d339b0909430adb5380a6bb89b65"
+    },
+    {
+      "package": "/Game/Characters/Mannequins/Materials/Manny/MI_Manny_02_New",
+      "source": "/Users/Shared/Epic Games/UE_5.8/Templates/TemplateResources/High/Characters/Content/Mannequins/Materials/Manny/MI_Manny_02_New.uasset",
+      "destination": "game/Content/Characters/Mannequins/Materials/Manny/MI_Manny_02_New.uasset",
+      "bytes": 18706,
+      "sha256": "26389db06f0b7928b487494bef3320d6b0e6bccd58193bccedd67c2c89132a46"
+    },
+    {
+      "package": "/Game/Characters/Mannequins/Textures/Shared/T_UE_Logo_M",
+      "source": "/Users/Shared/Epic Games/UE_5.8/Templates/TemplateResources/High/Characters/Content/Mannequins/Textures/Shared/T_UE_Logo_M.uasset",
+      "destination": "game/Content/Characters/Mannequins/Textures/Shared/T_UE_Logo_M.uasset",
+      "bytes": 59927,
+      "sha256": "34e6fa3414c04a86b7a5287e5569ea9d6e53c319d6e7dbfc8b09dab5b70611a6"
+    },
+    {
+      "package": "/Game/Characters/Mannequins/Textures/Manny/T_Manny_01_BN",
+      "source": "/Users/Shared/Epic Games/UE_5.8/Templates/TemplateResources/High/Characters/Content/Mannequins/Textures/Manny/T_Manny_01_BN.uasset",
+      "destination": "game/Content/Characters/Mannequins/Textures/Manny/T_Manny_01_BN.uasset",
+      "bytes": 1422785,
+      "sha256": "2f623209571ecbd8185b5b463786be033c3284190b4fc7b249e8d1d2ed995fd8"
+    },
+    {
+      "package": "/Game/Characters/Mannequins/Textures/Manny/T_Manny_01_D",
+      "source": "/Users/Shared/Epic Games/UE_5.8/Templates/TemplateResources/High/Characters/Content/Mannequins/Textures/Manny/T_Manny_01_D.uasset",
+      "destination": "game/Content/Characters/Mannequins/Textures/Manny/T_Manny_01_D.uasset",
+      "bytes": 699555,
+      "sha256": "6ae0f4f9908c30ecc9aedf1ebb442e4983e526a7832ec791542064c7853f9999"
+    },
+    {
+      "package": "/Game/Characters/Mannequins/Textures/Manny/T_Manny_01_MRA",
+      "source": "/Users/Shared/Epic Games/UE_5.8/Templates/TemplateResources/High/Characters/Content/Mannequins/Textures/Manny/T_Manny_01_MRA.uasset",
+      "destination": "game/Content/Characters/Mannequins/Textures/Manny/T_Manny_01_MRA.uasset",
+      "bytes": 712594,
+      "sha256": "3e42e888aed8aefff68da7d7dda4f177c5647b19473e4e913f61375c1319abd8"
+    },
+    {
+      "package": "/Game/Characters/Mannequins/Textures/Manny/T_Manny_02_BN",
+      "source": "/Users/Shared/Epic Games/UE_5.8/Templates/TemplateResources/High/Characters/Content/Mannequins/Textures/Manny/T_Manny_02_BN.uasset",
+      "destination": "game/Content/Characters/Mannequins/Textures/Manny/T_Manny_02_BN.uasset",
+      "bytes": 20999487,
+      "sha256": "c9575d21c9e2872b3358c0efb9e202535ce2efce94c338b9d3bd04cb9831e353"
+    },
+    {
+      "package": "/Game/Characters/Mannequins/Textures/Manny/T_Manny_02_D",
+      "source": "/Users/Shared/Epic Games/UE_5.8/Templates/TemplateResources/High/Characters/Content/Mannequins/Textures/Manny/T_Manny_02_D.uasset",
+      "destination": "game/Content/Characters/Mannequins/Textures/Manny/T_Manny_02_D.uasset",
+      "bytes": 1036712,
+      "sha256": "474728713232c6833f55c041548f555bc62c5c49e74082a5d16e68a5ce488cfe"
+    },
+    {
+      "package": "/Game/Characters/Mannequins/Textures/Manny/T_Manny_02_MRA",
+      "source": "/Users/Shared/Epic Games/UE_5.8/Templates/TemplateResources/High/Characters/Content/Mannequins/Textures/Manny/T_Manny_02_MRA.uasset",
+      "destination": "game/Content/Characters/Mannequins/Textures/Manny/T_Manny_02_MRA.uasset",
+      "bytes": 1059559,
+      "sha256": "6697972eaf2dfe201923dba6a302f024b0ef4c4e46b4ecf578178717098e8277"
+    },
+    {
+      "package": "/Game/Characters/Mannequins/Anims/Unarmed/MM_Idle",
+      "source": "/Users/Shared/Epic Games/UE_5.8/Templates/TemplateResources/High/Characters/Content/Mannequins/Anims/Unarmed/MM_Idle.uasset",
+      "destination": "game/Content/Characters/Mannequins/Anims/Unarmed/MM_Idle.uasset",
+      "bytes": 1436554,
+      "sha256": "11ee7fdeb84db89c1a66785b43b9bfc1415782122b8ac229517f4c5125d9cb0d"
+    },
+    {
+      "package": "/Game/Characters/Mannequins/Anims/Unarmed/Walk/MF_Unarmed_Walk_Fwd",
+      "source": "/Users/Shared/Epic Games/UE_5.8/Templates/TemplateResources/High/Characters/Content/Mannequins/Anims/Unarmed/Walk/MF_Unarmed_Walk_Fwd.uasset",
+      "destination": "game/Content/Characters/Mannequins/Anims/Unarmed/Walk/MF_Unarmed_Walk_Fwd.uasset",
+      "bytes": 475783,
+      "sha256": "c74b2fc0cb651c4924804b364e534856a1b44dee818127c408dc055e4bda5ed9"
+    },
+    {
+      "package": "/Game/Characters/Mannequins/Anims/Unarmed/Jog/MF_Unarmed_Jog_Fwd",
+      "source": "/Users/Shared/Epic Games/UE_5.8/Templates/TemplateResources/High/Characters/Content/Mannequins/Anims/Unarmed/Jog/MF_Unarmed_Jog_Fwd.uasset",
+      "destination": "game/Content/Characters/Mannequins/Anims/Unarmed/Jog/MF_Unarmed_Jog_Fwd.uasset",
+      "bytes": 531789,
+      "sha256": "0ccbe851f85a6d4cd7c6438c219cb6af8e281784107b5be8e9b052e4df3069cb"
+    },
+    {
+      "package": "/Game/Characters/Mannequins/Anims/Unarmed/Attack/MM_Attack_01",
+      "source": "/Users/Shared/Epic Games/UE_5.8/Templates/TemplateResources/High/Characters/Content/Mannequins/Anims/Unarmed/Attack/MM_Attack_01.uasset",
+      "destination": "game/Content/Characters/Mannequins/Anims/Unarmed/Attack/MM_Attack_01.uasset",
+      "bytes": 757637,
+      "sha256": "f796113f17c91eca7e48ef57bbadc4fc36245a86b127e75a34ca4771500639ed"
+    }
+  ],
+  "total_bytes": 45606180,
+  "omitted_soft_editor_references": [
+    "Quinn preview mesh",
+    "CR_Mannequin_Body default editor animation rig",
+    "MM_Attack_01 original editable LevelSequence and full-Manny preview mesh"
+  ],
+  "rendering_verified": false
+}

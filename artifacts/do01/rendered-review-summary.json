@@ -1,0 +1,20 @@
+{
+  "review_count": 14,
+  "all_technical_checks_passed": true,
+  "all_actual_viewports": [
+    [
+      1280,
+      720
+    ]
+  ],
+  "maximum_errors": {
+    "max_root_position_error_cm": 0,
+    "max_root_rotation_error_degrees": 0.0011349603286128498,
+    "max_attachment_position_error_cm": 1.32871522464038e-08,
+    "max_armor_bone_position_error_cm": 0,
+    "max_armor_bone_rotation_error_degrees": 0.0027800726348385283,
+    "max_component_world_scale_error": 4.76837158203125e-07
+  },
+  "native_animations_advanced": true,
+  "note": "Technical transform agreement and clip advancement do not certify geometric clearance. Read the surface-intersection report and visual review."
+}

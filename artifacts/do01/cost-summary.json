@@ -1,0 +1,195 @@
+{
+  "method": "Sequential real-Metal Development editor game,1280x720,110m tactical camera,3s warmup then12s per run. Shadows enabled. Static ISM groups of100; separate100-person native walk skeletal probe. No concurrent Blender renders/builds/tests. Single runs are a rough sanity check, not confidence-bounded benchmark estimates.",
+  "rows": [
+    {
+      "representation": "static",
+      "count": 100,
+      "mode": "mannequin",
+      "median_fps": 60.18989961229281,
+      "interval_fps": 59.72964731884828,
+      "median_frame_ms": 16.61408320069313,
+      "p95_frame_ms": 21.867085248231888,
+      "worst_frame_ms": 57.703543454408646,
+      "median_game_ms": 1.1704167127609253,
+      "median_gpu_ms": 16.133291244506836,
+      "peak_process_gib": 2.8712340965867043,
+      "source_report": "cost-static-100-mannequin.json"
+    },
+    {
+      "representation": "static",
+      "count": 100,
+      "mode": "helmet",
+      "median_fps": 59.14432636481633,
+      "interval_fps": 58.674330093364674,
+      "median_frame_ms": 16.907792538404465,
+      "p95_frame_ms": 22.022247314453125,
+      "worst_frame_ms": 40.29249772429466,
+      "median_game_ms": 1.1392083168029785,
+      "median_gpu_ms": 16.450416564941406,
+      "peak_process_gib": 2.8940460309386253,
+      "source_report": "cost-static-100-helmet.json"
+    },
+    {
+      "representation": "static",
+      "count": 100,
+      "mode": "armor",
+      "median_fps": 58.64343493284532,
+      "interval_fps": 56.166524490391,
+      "median_frame_ms": 17.05220714211464,
+      "p95_frame_ms": 23.218873888254166,
+      "worst_frame_ms": 96.28970921039581,
+      "median_game_ms": 1.1130833625793457,
+      "median_gpu_ms": 16.62933349609375,
+      "peak_process_gib": 2.9689972922205925,
+      "source_report": "cost-static-100-armor.json"
+    },
+    {
+      "representation": "static",
+      "count": 500,
+      "mode": "mannequin",
+      "median_fps": 46.22318406399309,
+      "interval_fps": 45.765848718874174,
+      "median_frame_ms": 21.634165197610855,
+      "p95_frame_ms": 26.61745622754097,
+      "worst_frame_ms": 76.24033465981483,
+      "median_game_ms": 1.1001249551773071,
+      "median_gpu_ms": 21.404083251953125,
+      "peak_process_gib": 2.8773986026644707,
+      "source_report": "cost-static-500-mannequin.json"
+    },
+    {
+      "representation": "static",
+      "count": 500,
+      "mode": "helmet",
+      "median_fps": 40.236388436714,
+      "interval_fps": 39.84904933234944,
+      "median_frame_ms": 24.85312521457672,
+      "p95_frame_ms": 33.12862664461136,
+      "worst_frame_ms": 55.470749735832214,
+      "median_game_ms": 1.0770000219345093,
+      "median_gpu_ms": 24.51504135131836,
+      "peak_process_gib": 2.9299805015325546,
+      "source_report": "cost-static-500-helmet.json"
+    },
+    {
+      "representation": "static",
+      "count": 500,
+      "mode": "armor",
+      "median_fps": 36.363301595506826,
+      "interval_fps": 34.606134535704115,
+      "median_frame_ms": 27.500253170728683,
+      "p95_frame_ms": 34.878455102443695,
+      "worst_frame_ms": 213.4828343987465,
+      "median_game_ms": 1.0242083072662354,
+      "median_gpu_ms": 26.542583465576172,
+      "peak_process_gib": 3.0090973898768425,
+      "source_report": "cost-static-500-armor.json"
+    },
+    {
+      "representation": "static",
+      "count": 1000,
+      "mode": "mannequin",
+      "median_fps": 35.374386713005734,
+      "interval_fps": 34.92641598401272,
+      "median_frame_ms": 28.26904132962227,
+      "p95_frame_ms": 35.58491915464401,
+      "worst_frame_ms": 43.13495755195618,
+      "median_game_ms": 1.0362499952316284,
+      "median_gpu_ms": 27.507375717163086,
+      "peak_process_gib": 2.8970367088913918,
+      "source_report": "cost-static-1000-mannequin.json"
+    },
+    {
+      "representation": "static",
+      "count": 1000,
+      "mode": "helmet",
+      "median_fps": 30.619275869927698,
+      "interval_fps": 29.231807663201547,
+      "median_frame_ms": 32.65916556119919,
+      "p95_frame_ms": 53.302500396966934,
+      "worst_frame_ms": 90.45916423201561,
+      "median_game_ms": 1.0352916717529297,
+      "median_gpu_ms": 32.029415130615234,
+      "peak_process_gib": 2.9456665366888046,
+      "source_report": "cost-static-1000-helmet.json"
+    },
+    {
+      "representation": "static",
+      "count": 1000,
+      "mode": "armor",
+      "median_fps": 28.45243400468958,
+      "interval_fps": 27.279343719939213,
+      "median_frame_ms": 35.146377980709076,
+      "p95_frame_ms": 49.653708934783936,
+      "worst_frame_ms": 61.916083097457886,
+      "median_game_ms": 1.0210000276565552,
+      "median_gpu_ms": 34.567832946777344,
+      "peak_process_gib": 3.0297730937600136,
+      "source_report": "cost-static-1000-armor.json"
+    },
+    {
+      "representation": "skeletal",
+      "count": 100,
+      "mode": "mannequin",
+      "median_fps": 53.28289779391492,
+      "interval_fps": 51.4275088121417,
+      "median_frame_ms": 18.767748028039932,
+      "p95_frame_ms": 25.592166930437088,
+      "worst_frame_ms": 48.31583425402641,
+      "median_game_ms": 3.1776249408721924,
+      "median_gpu_ms": 18.085416793823242,
+      "peak_process_gib": 2.951602227985859,
+      "source_report": "cost-skeletal-100-mannequin.json"
+    },
+    {
+      "representation": "skeletal",
+      "count": 100,
+      "mode": "helmet",
+      "median_fps": 53.636672727636025,
+      "interval_fps": 51.515664815369156,
+      "median_frame_ms": 18.64396035671234,
+      "p95_frame_ms": 26.256170123815536,
+      "worst_frame_ms": 51.90020799636841,
+      "median_game_ms": 3.91504168510437,
+      "median_gpu_ms": 17.979333877563477,
+      "peak_process_gib": 2.982653930783272,
+      "source_report": "cost-skeletal-100-helmet.json"
+    },
+    {
+      "representation": "skeletal",
+      "count": 100,
+      "mode": "armor",
+      "median_fps": 55.90547640940146,
+      "interval_fps": 42.95296888447907,
+      "median_frame_ms": 17.887335270643234,
+      "p95_frame_ms": 52.65545845031738,
+      "worst_frame_ms": 225.6656251847744,
+      "median_game_ms": 6.280916690826416,
+      "median_gpu_ms": 16.849374771118164,
+      "peak_process_gib": 3.5836519226431847,
+      "source_report": "cost-skeletal-100-armor.json"
+    }
+  ],
+  "deltas": [
+    {
+      "representation": "static",
+      "count": 100,
+      "armor_minus_helmet_median_frame_ms": 0.14441460371017456
+    },
+    {
+      "representation": "static",
+      "count": 500,
+      "armor_minus_helmet_median_frame_ms": 2.6471279561519623
+    },
+    {
+      "representation": "static",
+      "count": 1000,
+      "armor_minus_helmet_median_frame_ms": 2.4872124195098877
+    },
+    {
+      "representation": "skeletal",
+      "count": 100,
+      "armor_minus_helmet_median_frame_ms": -0.7566250860691071
+    }
+  ]
+}

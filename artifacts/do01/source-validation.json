@@ -1,0 +1,1074 @@
+{
+  "asset": "Do01",
+  "validated": true,
+  "checks": {
+    "named components and collections": {
+      "passed": true,
+      "detail": null
+    },
+    "source metre units": {
+      "passed": true,
+      "detail": null
+    },
+    "unchanged native Manny geometry and world reference bones": {
+      "passed": true,
+      "detail": {
+        "reference_fbx": "SourceArt/Characters/Mannequins/Manny/Exports/SKM_Manny_Simple.fbx",
+        "reference_fbx_sha256": "c15bf65d4b2788f8af9000e966972d7ba2f8468b9877891caf017305905250d8",
+        "matches_validated_native_unreal_export": true,
+        "body_geometry_sha256": "a817d9ce64001754c8f2cfd02774cc6d3d6f3e90385e961a729b2279e27fcae8",
+        "reference_body_geometry_sha256": "a817d9ce64001754c8f2cfd02774cc6d3d6f3e90385e961a729b2279e27fcae8",
+        "rig_sha256": "cc11ea4bb22d308cd1f6e231b3aa64e72812281de2e805cf8a6ac0a3624e15d7",
+        "reference_rig_sha256": "cc11ea4bb22d308cd1f6e231b3aa64e72812281de2e805cf8a6ac0a3624e15d7",
+        "identical_body_topology": true,
+        "maximum_body_world_error_metres": 0.0,
+        "identical_bone_hierarchy": true,
+        "maximum_rig_world_matrix_error": 0.0,
+        "blender_bones": 88,
+        "native_bones_including_object_root": 89,
+        "native_unreal_bones": 89
+      }
+    },
+    "native Manny source identity": {
+      "passed": true,
+      "detail": null
+    },
+    "closed finite geometry without duplicate or zero-area faces": {
+      "passed": true,
+      "detail": {}
+    },
+    "one material and consistent atlas UVs": {
+      "passed": true,
+      "detail": null
+    },
+    "decreasing runtime LOD triangles": {
+      "passed": true,
+      "detail": [
+        81392,
+        32556,
+        5504
+      ]
+    },
+    "normalized weights with at most four native bone influences": {
+      "passed": true,
+      "detail": null
+    },
+    "unit scale and stable origins": {
+      "passed": true,
+      "detail": null
+    },
+    "packed and external 2K textures with correct color spaces": {
+      "passed": true,
+      "detail": null
+    },
+    "no neutral armor intersections with body": {
+      "passed": true,
+      "detail": {
+        "Do_Back": {
+          "triangle_intersections": 0,
+          "examples": [],
+          "sampled_vertices": 127,
+          "minimum_unsigned_sample_clearance_mm": 7.9312678426504135
+        },
+        "Do_Edge": {
+          "triangle_intersections": 0,
+          "examples": [],
+          "sampled_vertices": 128,
+          "minimum_unsigned_sample_clearance_mm": 6.568985525518656
+        },
+        "Do_Fittings": {
+          "triangle_intersections": 0,
+          "examples": [],
+          "sampled_vertices": 128,
+          "minimum_unsigned_sample_clearance_mm": 9.214998222887516
+        },
+        "Do_Lacing": {
+          "triangle_intersections": 0,
+          "examples": [],
+          "sampled_vertices": 128,
+          "minimum_unsigned_sample_clearance_mm": 3.9044576697051525
+        },
+        "Do_Lining": {
+          "triangle_intersections": 0,
+          "examples": [],
+          "sampled_vertices": 128,
+          "minimum_unsigned_sample_clearance_mm": 10.371995158493519
+        },
+        "Do_Main": {
+          "triangle_intersections": 0,
+          "examples": [],
+          "sampled_vertices": 127,
+          "minimum_unsigned_sample_clearance_mm": 26.69818140566349
+        },
+        "Do_Side_L": {
+          "triangle_intersections": 0,
+          "examples": [],
+          "sampled_vertices": 110,
+          "minimum_unsigned_sample_clearance_mm": 7.0968265645205975
+        },
+        "Do_Side_R": {
+          "triangle_intersections": 0,
+          "examples": [],
+          "sampled_vertices": 110,
+          "minimum_unsigned_sample_clearance_mm": 7.280008867383003
+        },
+        "Do_Straps": {
+          "triangle_intersections": 0,
+          "examples": [],
+          "sampled_vertices": 125,
+          "minimum_unsigned_sample_clearance_mm": 0.7848701789043844
+        },
+        "Do_Upper": {
+          "triangle_intersections": 0,
+          "examples": [],
+          "sampled_vertices": 127,
+          "minimum_unsigned_sample_clearance_mm": 19.313348457217216
+        }
+      }
+    },
+    "no neutral armor intersections with kabuto": {
+      "passed": true,
+      "detail": {
+        "Do_Back": {
+          "triangle_intersections": 0,
+          "examples": [],
+          "sampled_vertices": 127,
+          "minimum_unsigned_sample_clearance_mm": 218.35407614707947
+        },
+        "Do_Edge": {
+          "triangle_intersections": 0,
+          "examples": [],
+          "sampled_vertices": 128,
+          "minimum_unsigned_sample_clearance_mm": 76.6233578324318
+        },
+        "Do_Fittings": {
+          "triangle_intersections": 0,
+          "examples": [],
+          "sampled_vertices": 128,
+          "minimum_unsigned_sample_clearance_mm": 100.23200511932373
+        },
+        "Do_Lacing": {
+          "triangle_intersections": 0,
+          "examples": [],
+          "sampled_vertices": 128,
+          "minimum_unsigned_sample_clearance_mm": 196.2132304906845
+        },
+        "Do_Lining": {
+          "triangle_intersections": 0,
+          "examples": [],
+          "sampled_vertices": 128,
+          "minimum_unsigned_sample_clearance_mm": 192.02055037021637
+        },
+        "Do_Main": {
+          "triangle_intersections": 0,
+          "examples": [],
+          "sampled_vertices": 127,
+          "minimum_unsigned_sample_clearance_mm": 195.6252008676529
+        },
+        "Do_Side_L": {
+          "triangle_intersections": 0,
+          "examples": [],
+          "sampled_vertices": 110,
+          "minimum_unsigned_sample_clearance_mm": 255.1257610321045
+        },
+        "Do_Side_R": {
+          "triangle_intersections": 0,
+          "examples": [],
+          "sampled_vertices": 110,
+          "minimum_unsigned_sample_clearance_mm": 254.69627976417542
+        },
+        "Do_Straps": {
+          "triangle_intersections": 0,
+          "examples": [],
+          "sampled_vertices": 125,
+          "minimum_unsigned_sample_clearance_mm": 10.025634430348873
+        },
+        "Do_Upper": {
+          "triangle_intersections": 0,
+          "examples": [],
+          "sampled_vertices": 127,
+          "minimum_unsigned_sample_clearance_mm": 78.09137552976608
+        }
+      }
+    }
+  },
+  "scope": "Reopened source, neutral-pose geometry/skin weights and static intersections",
+  "source": {
+    "file": "SourceArt/Characters/Samurai/Do01/Do01.blend",
+    "sha256": "7963892cbe29ce4036ca33484f6c5e8232578c80b323ff55d26072dbfd571d7b",
+    "blender_version": "5.1.2"
+  },
+  "preserved_manny": {
+    "reference_fbx": "SourceArt/Characters/Mannequins/Manny/Exports/SKM_Manny_Simple.fbx",
+    "reference_fbx_sha256": "c15bf65d4b2788f8af9000e966972d7ba2f8468b9877891caf017305905250d8",
+    "matches_validated_native_unreal_export": true,
+    "body_geometry_sha256": "a817d9ce64001754c8f2cfd02774cc6d3d6f3e90385e961a729b2279e27fcae8",
+    "reference_body_geometry_sha256": "a817d9ce64001754c8f2cfd02774cc6d3d6f3e90385e961a729b2279e27fcae8",
+    "rig_sha256": "cc11ea4bb22d308cd1f6e231b3aa64e72812281de2e805cf8a6ac0a3624e15d7",
+    "reference_rig_sha256": "cc11ea4bb22d308cd1f6e231b3aa64e72812281de2e805cf8a6ac0a3624e15d7",
+    "identical_body_topology": true,
+    "maximum_body_world_error_metres": 0.0,
+    "identical_bone_hierarchy": true,
+    "maximum_rig_world_matrix_error": 0.0,
+    "blender_bones": 88,
+    "native_bones_including_object_root": 89,
+    "native_unreal_bones": 89
+  },
+  "components": {
+    "Do_Back": {
+      "vertices": 4680,
+      "triangles": 8736,
+      "nonmanifold_edges": 0,
+      "boundary_edges": 0,
+      "zero_area_triangles": 0,
+      "duplicate_faces": 0,
+      "duplicate_position_vertices": 0,
+      "finite": true,
+      "bounds_metres": [
+        [
+          -0.20130236446857452,
+          0.014425712637603283,
+          1.0146461725234985
+        ],
+        [
+          0.20130236446857452,
+          0.1770656853914261,
+          1.3560000658035278
+        ]
+      ],
+      "uv_layers": [
+        "UV0_DoAtlas"
+      ],
+      "uv0_1_valid": true,
+      "materials": [
+        "M_Do01"
+      ],
+      "material_indices": [
+        0
+      ]
+    },
+    "Do_Edge": {
+      "vertices": 9344,
+      "triangles": 18496,
+      "nonmanifold_edges": 0,
+      "boundary_edges": 0,
+      "zero_area_triangles": 0,
+      "duplicate_faces": 0,
+      "duplicate_position_vertices": 0,
+      "finite": true,
+      "bounds_metres": [
+        [
+          -0.20508074760437012,
+          -0.19626331329345703,
+          1.0137287378311157
+        ],
+        [
+          0.20508074760437012,
+          0.17880000174045563,
+          1.494634985923767
+        ]
+      ],
+      "uv_layers": [
+        "UV0_DoAtlas"
+      ],
+      "uv0_1_valid": true,
+      "materials": [
+        "M_Do01"
+      ],
+      "material_indices": [
+        0
+      ]
+    },
+    "Do_Fittings": {
+      "vertices": 7916,
+      "triangles": 15312,
+      "nonmanifold_edges": 0,
+      "boundary_edges": 0,
+      "zero_area_triangles": 0,
+      "duplicate_faces": 0,
+      "duplicate_position_vertices": 0,
+      "finite": true,
+      "bounds_metres": [
+        [
+          -0.20844998955726624,
+          -0.19503329694271088,
+          1.0223000049591064
+        ],
+        [
+          0.20845000445842743,
+          0.1696312129497528,
+          1.4716923236846924
+        ]
+      ],
+      "uv_layers": [
+        "UV0_DoAtlas"
+      ],
+      "uv0_1_valid": true,
+      "materials": [
+        "M_Do01"
+      ],
+      "material_indices": [
+        0
+      ]
+    },
+    "Do_Lacing": {
+      "vertices": 9660,
+      "triangles": 17880,
+      "nonmanifold_edges": 0,
+      "boundary_edges": 0,
+      "zero_area_triangles": 0,
+      "duplicate_faces": 0,
+      "duplicate_position_vertices": 6,
+      "finite": true,
+      "bounds_metres": [
+        [
+          -0.217849999666214,
+          -0.19673335552215576,
+          1.0275522470474243
+        ],
+        [
+          0.217849999666214,
+          0.18106098473072052,
+          1.3503257036209106
+        ]
+      ],
+      "uv_layers": [
+        "UV0_DoAtlas"
+      ],
+      "uv0_1_valid": true,
+      "materials": [
+        "M_Do01"
+      ],
+      "material_indices": [
+        0
+      ]
+    },
+    "Do_Lining": {
+      "vertices": 1152,
+      "triangles": 2304,
+      "nonmanifold_edges": 0,
+      "boundary_edges": 0,
+      "zero_area_triangles": 0,
+      "duplicate_faces": 0,
+      "duplicate_position_vertices": 0,
+      "finite": true,
+      "bounds_metres": [
+        [
+          -0.19420211017131805,
+          -0.1848999708890915,
+          1.0242512226104736
+        ],
+        [
+          0.19420211017131805,
+          0.1688000112771988,
+          1.3384848833084106
+        ]
+      ],
+      "uv_layers": [
+        "UV0_DoAtlas"
+      ],
+      "uv0_1_valid": true,
+      "materials": [
+        "M_Do01"
+      ],
+      "material_indices": [
+        0
+      ]
+    },
+    "Do_Main": {
+      "vertices": 4680,
+      "triangles": 8736,
+      "nonmanifold_edges": 0,
+      "boundary_edges": 0,
+      "zero_area_triangles": 0,
+      "duplicate_faces": 0,
+      "duplicate_position_vertices": 0,
+      "finite": true,
+      "bounds_metres": [
+        [
+          -0.20130236446857452,
+          -0.1933315247297287,
+          1.0148835182189941
+        ],
+        [
+          0.20130236446857452,
+          -0.06524927914142609,
+          1.3560000658035278
+        ]
+      ],
+      "uv_layers": [
+        "UV0_DoAtlas"
+      ],
+      "uv0_1_valid": true,
+      "materials": [
+        "M_Do01"
+      ],
+      "material_indices": [
+        0
+      ]
+    },
+    "Do_Side_L": {
+      "vertices": 660,
+      "triangles": 1296,
+      "nonmanifold_edges": 0,
+      "boundary_edges": 0,
+      "zero_area_triangles": 0,
+      "duplicate_faces": 0,
+      "duplicate_position_vertices": 0,
+      "finite": true,
+      "bounds_metres": [
+        [
+          0.16896836459636688,
+          -0.08180629462003708,
+          1.0147606134414673
+        ],
+        [
+          0.19963327050209045,
+          0.049366313964128494,
+          1.314323902130127
+        ]
+      ],
+      "uv_layers": [
+        "UV0_DoAtlas"
+      ],
+      "uv0_1_valid": true,
+      "materials": [
+        "M_Do01"
+      ],
+      "material_indices": [
+        0
+      ]
+    },
+    "Do_Side_R": {
+      "vertices": 660,
+      "triangles": 1296,
+      "nonmanifold_edges": 0,
+      "boundary_edges": 0,
+      "zero_area_triangles": 0,
+      "duplicate_faces": 0,
+      "duplicate_position_vertices": 0,
+      "finite": true,
+      "bounds_metres": [
+        [
+          -0.19963327050209045,
+          -0.08180628716945648,
+          1.0147606134414673
+        ],
+        [
+          -0.16896839439868927,
+          0.04936632141470909,
+          1.314323902130127
+        ]
+      ],
+      "uv_layers": [
+        "UV0_DoAtlas"
+      ],
+      "uv0_1_valid": true,
+      "materials": [
+        "M_Do01"
+      ],
+      "material_indices": [
+        0
+      ]
+    },
+    "Do_Straps": {
+      "vertices": 2744,
+      "triangles": 5320,
+      "nonmanifold_edges": 0,
+      "boundary_edges": 0,
+      "zero_area_triangles": 0,
+      "duplicate_faces": 0,
+      "duplicate_position_vertices": 0,
+      "finite": true,
+      "bounds_metres": [
+        [
+          -0.17319995164871216,
+          -0.15483692288398743,
+          1.4129372835159302
+        ],
+        [
+          0.17319995164871216,
+          0.14677371084690094,
+          1.561140537261963
+        ]
+      ],
+      "uv_layers": [
+        "UV0_DoAtlas"
+      ],
+      "uv0_1_valid": true,
+      "materials": [
+        "M_Do01"
+      ],
+      "material_indices": [
+        0
+      ]
+    },
+    "Do_Upper": {
+      "vertices": 1012,
+      "triangles": 2016,
+      "nonmanifold_edges": 0,
+      "boundary_edges": 0,
+      "zero_area_triangles": 0,
+      "duplicate_faces": 0,
+      "duplicate_position_vertices": 0,
+      "finite": true,
+      "bounds_metres": [
+        [
+          -0.17426058650016785,
+          -0.1928548365831375,
+          1.3336820602416992
+        ],
+        [
+          0.17426058650016785,
+          0.17547962069511414,
+          1.4934242963790894
+        ]
+      ],
+      "uv_layers": [
+        "UV0_DoAtlas"
+      ],
+      "uv0_1_valid": true,
+      "materials": [
+        "M_Do01"
+      ],
+      "material_indices": [
+        0
+      ]
+    }
+  },
+  "runtime_lods": [
+    {
+      "vertices": 42508,
+      "triangles": 81392,
+      "nonmanifold_edges": 0,
+      "boundary_edges": 0,
+      "zero_area_triangles": 0,
+      "duplicate_faces": 0,
+      "duplicate_position_vertices": 6,
+      "finite": true,
+      "bounds_metres": [
+        [
+          -0.217849999666214,
+          -0.19673335552215576,
+          1.0137287378311157
+        ],
+        [
+          0.217849999666214,
+          0.18106098473072052,
+          1.5611406564712524
+        ]
+      ],
+      "uv_layers": [
+        "UV0_DoAtlas"
+      ],
+      "uv0_1_valid": true,
+      "materials": [
+        "M_Do01"
+      ],
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "vertices": 18090,
+      "triangles": 32556,
+      "nonmanifold_edges": 0,
+      "boundary_edges": 0,
+      "zero_area_triangles": 0,
+      "duplicate_faces": 0,
+      "duplicate_position_vertices": 0,
+      "finite": true,
+      "bounds_metres": [
+        [
+          -0.21792195737361908,
+          -0.19697536528110504,
+          1.013728141784668
+        ],
+        [
+          0.21792195737361908,
+          0.18131312727928162,
+          1.5606828927993774
+        ]
+      ],
+      "uv_layers": [
+        "UV0_DoAtlas"
+      ],
+      "uv0_1_valid": true,
+      "materials": [
+        "M_Do01"
+      ],
+      "material_indices": [
+        0
+      ]
+    },
+    {
+      "vertices": 3558,
+      "triangles": 5504,
+      "nonmanifold_edges": 0,
+      "boundary_edges": 0,
+      "zero_area_triangles": 0,
+      "duplicate_faces": 0,
+      "duplicate_position_vertices": 0,
+      "finite": true,
+      "bounds_metres": [
+        [
+          -0.2180335968732834,
+          -0.19579017162322998,
+          1.0132073163986206
+        ],
+        [
+          0.21788085997104645,
+          0.17970755696296692,
+          1.5580112934112549
+        ]
+      ],
+      "uv_layers": [
+        "UV0_DoAtlas"
+      ],
+      "uv0_1_valid": true,
+      "materials": [
+        "M_Do01"
+      ],
+      "material_indices": [
+        0
+      ]
+    }
+  ],
+  "weights": {
+    "Do_Back": {
+      "vertices": 4680,
+      "influence_histogram": {
+        "3": 1560,
+        "4": 2340,
+        "2": 780
+      },
+      "max_influences": 4,
+      "missing_weights": 0,
+      "invalid_groups": 0,
+      "maximum_weight_sum_error": 2.60770320892334e-08,
+      "bones_used": [
+        "spine_01",
+        "spine_02",
+        "spine_03",
+        "spine_04"
+      ],
+      "same_rig_modifier": true
+    },
+    "Do_Edge": {
+      "vertices": 9344,
+      "influence_histogram": {
+        "3": 3200,
+        "4": 3888,
+        "2": 1136,
+        "1": 1120
+      },
+      "max_influences": 4,
+      "missing_weights": 0,
+      "invalid_groups": 0,
+      "maximum_weight_sum_error": 2.60770320892334e-08,
+      "bones_used": [
+        "spine_01",
+        "spine_02",
+        "spine_03",
+        "spine_04",
+        "spine_05"
+      ],
+      "same_rig_modifier": true
+    },
+    "Do_Fittings": {
+      "vertices": 7916,
+      "influence_histogram": {
+        "3": 1320,
+        "4": 1896,
+        "2": 312,
+        "1": 4388
+      },
+      "max_influences": 4,
+      "missing_weights": 0,
+      "invalid_groups": 0,
+      "maximum_weight_sum_error": 2.60770320892334e-08,
+      "bones_used": [
+        "spine_01",
+        "spine_02",
+        "spine_03",
+        "spine_04",
+        "spine_05"
+      ],
+      "same_rig_modifier": true
+    },
+    "Do_Lacing": {
+      "vertices": 9660,
+      "influence_histogram": {
+        "3": 3421,
+        "4": 4952,
+        "2": 1223,
+        "1": 64
+      },
+      "max_influences": 4,
+      "missing_weights": 0,
+      "invalid_groups": 0,
+      "maximum_weight_sum_error": 2.60770320892334e-08,
+      "bones_used": [
+        "spine_01",
+        "spine_02",
+        "spine_03",
+        "spine_04",
+        "spine_05"
+      ],
+      "same_rig_modifier": true
+    },
+    "Do_Lining": {
+      "vertices": 1152,
+      "influence_histogram": {
+        "3": 292,
+        "4": 512,
+        "2": 348
+      },
+      "max_influences": 4,
+      "missing_weights": 0,
+      "invalid_groups": 0,
+      "maximum_weight_sum_error": 2.60770320892334e-08,
+      "bones_used": [
+        "spine_01",
+        "spine_02",
+        "spine_03",
+        "spine_04"
+      ],
+      "same_rig_modifier": true
+    },
+    "Do_Main": {
+      "vertices": 4680,
+      "influence_histogram": {
+        "3": 1560,
+        "4": 2340,
+        "2": 780
+      },
+      "max_influences": 4,
+      "missing_weights": 0,
+      "invalid_groups": 0,
+      "maximum_weight_sum_error": 2.60770320892334e-08,
+      "bones_used": [
+        "spine_01",
+        "spine_02",
+        "spine_03",
+        "spine_04"
+      ],
+      "same_rig_modifier": true
+    },
+    "Do_Side_L": {
+      "vertices": 660,
+      "influence_histogram": {
+        "3": 266,
+        "4": 330,
+        "2": 64
+      },
+      "max_influences": 4,
+      "missing_weights": 0,
+      "invalid_groups": 0,
+      "maximum_weight_sum_error": 2.60770320892334e-08,
+      "bones_used": [
+        "spine_01",
+        "spine_02",
+        "spine_03",
+        "spine_04"
+      ],
+      "same_rig_modifier": true
+    },
+    "Do_Side_R": {
+      "vertices": 660,
+      "influence_histogram": {
+        "3": 266,
+        "4": 330,
+        "2": 64
+      },
+      "max_influences": 4,
+      "missing_weights": 0,
+      "invalid_groups": 0,
+      "maximum_weight_sum_error": 2.60770320892334e-08,
+      "bones_used": [
+        "spine_01",
+        "spine_02",
+        "spine_03",
+        "spine_04"
+      ],
+      "same_rig_modifier": true
+    },
+    "Do_Straps": {
+      "vertices": 2744,
+      "influence_histogram": {
+        "2": 2688,
+        "1": 56
+      },
+      "max_influences": 2,
+      "missing_weights": 0,
+      "invalid_groups": 0,
+      "maximum_weight_sum_error": 2.9802322387695312e-08,
+      "bones_used": [
+        "clavicle_l",
+        "clavicle_r",
+        "spine_05"
+      ],
+      "same_rig_modifier": true
+    },
+    "Do_Upper": {
+      "vertices": 1012,
+      "influence_histogram": {
+        "1": 680,
+        "2": 332
+      },
+      "max_influences": 2,
+      "missing_weights": 0,
+      "invalid_groups": 0,
+      "maximum_weight_sum_error": 1.4901161193847656e-08,
+      "bones_used": [
+        "spine_03",
+        "spine_04",
+        "spine_05"
+      ],
+      "same_rig_modifier": true
+    },
+    "SK_Do01_LOD0": {
+      "vertices": 42508,
+      "influence_histogram": {
+        "3": 11885,
+        "4": 16588,
+        "2": 7727,
+        "1": 6308
+      },
+      "max_influences": 4,
+      "missing_weights": 0,
+      "invalid_groups": 0,
+      "maximum_weight_sum_error": 2.9802322387695312e-08,
+      "bones_used": [
+        "clavicle_l",
+        "clavicle_r",
+        "spine_01",
+        "spine_02",
+        "spine_03",
+        "spine_04",
+        "spine_05"
+      ],
+      "same_rig_modifier": true
+    },
+    "SK_Do01_LOD1": {
+      "vertices": 18090,
+      "influence_histogram": {
+        "3": 5497,
+        "4": 7703,
+        "2": 3315,
+        "1": 1575
+      },
+      "max_influences": 4,
+      "missing_weights": 0,
+      "invalid_groups": 0,
+      "maximum_weight_sum_error": 4.190951585769653e-08,
+      "bones_used": [
+        "clavicle_l",
+        "clavicle_r",
+        "spine_01",
+        "spine_02",
+        "spine_03",
+        "spine_04",
+        "spine_05"
+      ],
+      "same_rig_modifier": true
+    },
+    "SK_Do01_LOD2": {
+      "vertices": 3558,
+      "influence_histogram": {
+        "3": 1119,
+        "4": 1484,
+        "2": 673,
+        "1": 282
+      },
+      "max_influences": 4,
+      "missing_weights": 0,
+      "invalid_groups": 0,
+      "maximum_weight_sum_error": 3.91155481338501e-08,
+      "bones_used": [
+        "clavicle_l",
+        "clavicle_r",
+        "spine_01",
+        "spine_02",
+        "spine_03",
+        "spine_04",
+        "spine_05"
+      ],
+      "same_rig_modifier": true
+    }
+  },
+  "source_triangles": 81392,
+  "textures": {
+    "BaseColor": {
+      "packed": true,
+      "size": [
+        2048,
+        2048
+      ],
+      "png_size": [
+        2048,
+        2048
+      ],
+      "color_space": "sRGB",
+      "sha256": "a987214d9d41fa56e7a2ec20ea662991fa30bd5cc1232f314d9e87dd9cd9ba3b"
+    },
+    "Normal": {
+      "packed": true,
+      "size": [
+        2048,
+        2048
+      ],
+      "png_size": [
+        2048,
+        2048
+      ],
+      "color_space": "Non-Color",
+      "sha256": "a73d6728beda8ae1924b31463bbbf1fa6ca1ff50e3abd90d15a454c3a50f8dcd"
+    },
+    "ORM": {
+      "packed": true,
+      "size": [
+        2048,
+        2048
+      ],
+      "png_size": [
+        2048,
+        2048
+      ],
+      "color_space": "Non-Color",
+      "sha256": "e752d552ab951f32967ae432ac035ff9ae4a53e79150111d7a88109c7369737a"
+    }
+  },
+  "neutral_intersections": {
+    "body": {
+      "Do_Back": {
+        "triangle_intersections": 0,
+        "examples": [],
+        "sampled_vertices": 127,
+        "minimum_unsigned_sample_clearance_mm": 7.9312678426504135
+      },
+      "Do_Edge": {
+        "triangle_intersections": 0,
+        "examples": [],
+        "sampled_vertices": 128,
+        "minimum_unsigned_sample_clearance_mm": 6.568985525518656
+      },
+      "Do_Fittings": {
+        "triangle_intersections": 0,
+        "examples": [],
+        "sampled_vertices": 128,
+        "minimum_unsigned_sample_clearance_mm": 9.214998222887516
+      },
+      "Do_Lacing": {
+        "triangle_intersections": 0,
+        "examples": [],
+        "sampled_vertices": 128,
+        "minimum_unsigned_sample_clearance_mm": 3.9044576697051525
+      },
+      "Do_Lining": {
+        "triangle_intersections": 0,
+        "examples": [],
+        "sampled_vertices": 128,
+        "minimum_unsigned_sample_clearance_mm": 10.371995158493519
+      },
+      "Do_Main": {
+        "triangle_intersections": 0,
+        "examples": [],
+        "sampled_vertices": 127,
+        "minimum_unsigned_sample_clearance_mm": 26.69818140566349
+      },
+      "Do_Side_L": {
+        "triangle_intersections": 0,
+        "examples": [],
+        "sampled_vertices": 110,
+        "minimum_unsigned_sample_clearance_mm": 7.0968265645205975
+      },
+      "Do_Side_R": {
+        "triangle_intersections": 0,
+        "examples": [],
+        "sampled_vertices": 110,
+        "minimum_unsigned_sample_clearance_mm": 7.280008867383003
+      },
+      "Do_Straps": {
+        "triangle_intersections": 0,
+        "examples": [],
+        "sampled_vertices": 125,
+        "minimum_unsigned_sample_clearance_mm": 0.7848701789043844
+      },
+      "Do_Upper": {
+        "triangle_intersections": 0,
+        "examples": [],
+        "sampled_vertices": 127,
+        "minimum_unsigned_sample_clearance_mm": 19.313348457217216
+      }
+    },
+    "kabuto": {
+      "Do_Back": {
+        "triangle_intersections": 0,
+        "examples": [],
+        "sampled_vertices": 127,
+        "minimum_unsigned_sample_clearance_mm": 218.35407614707947
+      },
+      "Do_Edge": {
+        "triangle_intersections": 0,
+        "examples": [],
+        "sampled_vertices": 128,
+        "minimum_unsigned_sample_clearance_mm": 76.6233578324318
+      },
+      "Do_Fittings": {
+        "triangle_intersections": 0,
+        "examples": [],
+        "sampled_vertices": 128,
+        "minimum_unsigned_sample_clearance_mm": 100.23200511932373
+      },
+      "Do_Lacing": {
+        "triangle_intersections": 0,
+        "examples": [],
+        "sampled_vertices": 128,
+        "minimum_unsigned_sample_clearance_mm": 196.2132304906845
+      },
+      "Do_Lining": {
+        "triangle_intersections": 0,
+        "examples": [],
+        "sampled_vertices": 128,
+        "minimum_unsigned_sample_clearance_mm": 192.02055037021637
+      },
+      "Do_Main": {
+        "triangle_intersections": 0,
+        "examples": [],
+        "sampled_vertices": 127,
+        "minimum_unsigned_sample_clearance_mm": 195.6252008676529
+      },
+      "Do_Side_L": {
+        "triangle_intersections": 0,
+        "examples": [],
+        "sampled_vertices": 110,
+        "minimum_unsigned_sample_clearance_mm": 255.1257610321045
+      },
+      "Do_Side_R": {
+        "triangle_intersections": 0,
+        "examples": [],
+        "sampled_vertices": 110,
+        "minimum_unsigned_sample_clearance_mm": 254.69627976417542
+      },
+      "Do_Straps": {
+        "triangle_intersections": 0,
+        "examples": [],
+        "sampled_vertices": 125,
+        "minimum_unsigned_sample_clearance_mm": 10.025634430348873
+      },
+      "Do_Upper": {
+        "triangle_intersections": 0,
+        "examples": [],
+        "sampled_vertices": 127,
+        "minimum_unsigned_sample_clearance_mm": 78.09137552976608
+      }
+    }
+  },
+  "limitations": [
+    "Neutral pose only: motion clearance requires the separate pose renders and Unreal review.",
+    "Nearest clearances are unsigned samples of armor vertices, not continuous minimum thickness or all-pose clearance.",
+    "Plate/trim/lacing overlaps within the armor are intentional construction and are not tested as a boolean union.",
+    "Duplicate positions are reported; only duplicate faces are rejected. Procedural/generated texture detail is not a sculpt bake."
+  ]
+}

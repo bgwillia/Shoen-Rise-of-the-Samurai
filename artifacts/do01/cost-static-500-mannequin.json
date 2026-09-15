@@ -1,0 +1,155 @@
+{
+	"rendered": true,
+	"validated": true,
+	"mode": "mannequin",
+	"camera": "tactical",
+	"pose": "animation",
+	"requested_animation": "idle",
+	"animation_asset": "",
+	"root_motion_handling": "Reference pose; no locomotion animation",
+	"max_root_position_error_cm": 0,
+	"max_root_rotation_error_degrees": 0,
+	"animation_advanced": false,
+	"observed_animation_position_range_seconds": null,
+	"animation_play_rate": 1,
+	"animation": "static instances",
+	"crowd_representation": "static",
+	"armor_pose_method": "static reference-pose instances or absent",
+	"engine": "5.8.2-56702186+++UE5+Release-5.8",
+	"platform": "Mac",
+	"rhi": "Metal",
+	"build": "Development editor game; opt-in isolated Dō art review",
+	"requested_count": 500,
+	"rendered_bodies": 500,
+	"rendered_helmets": 0,
+	"rendered_armors": 0,
+	"instance_components": 5,
+	"skeletal_components": 0,
+	"camera_distance_cm": 11000,
+	"camera_horizontal_fov": 55,
+	"camera_elevation_degrees": 60,
+	"body_helmet_armor_cast_shadows": true,
+	"warmup_seconds": 3,
+	"capture_seconds": 12.017694752663374,
+	"frames": 550,
+	"median_fps": 46.223184063993088,
+	"interval_fps": 45.765848718874174,
+	"peak_process_physical_bytes": 3089583224,
+	"max_attachment_position_error_cm": 0,
+	"max_armor_bone_position_error_cm": 0,
+	"max_armor_bone_rotation_error_degrees": 0,
+	"max_component_world_scale_error": 0,
+	"armor_skeleton_compatible": true,
+	"body_standard": "Epic Unreal Manny — SKM_Manny_Simple",
+	"review_contract_file": "/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/SourceArt/Characters/Samurai/Do01/asset-manifest.json",
+	"body_component_yaw_degrees": -90,
+	"composed_head_reference_transform": "-0.000000,0.663123,162.575101|90.000000,0.000002,0.000000|1.000000,1.000000,1.000000",
+	"helmet_reference_transform": "-0.000000,2.500000,159.800000|0.000000,0.000000,-0.000000|1.000000,1.000000,1.000000",
+	"helmet_relative_transform": "-2.775101,1.836877,0.000000|-90.000000,0.000002,0.000000|1.000000,1.000000,1.000000",
+	"expected_helmet_world_scale": "X=1.000 Y=1.000 Z=1.000",
+	"armor_bones_checked": [],
+	"viewport_width": 1280,
+	"viewport_height": 720,
+	"screenshot": "/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/artifacts/do01/cost-static-500-mannequin.png",
+	"screenshot_exists": true,
+	"measurement_notes": "Wall frame intervals include review validation overhead. Engine CPU counters exclude idle time and may describe earlier frames; positive RHI GPU samples only, unavailable counters null. Screenshot readback follows sampling. Mesh LOD inventory is not GPU draw counts. Static crowds do not measure skinning; the optional 100-body skeletal probe includes animation/skinning and validation, not combat or population simulation. Matching bones/scale do not certify surface clearance or visual quality.",
+	"frame":
+	{
+		"samples": 550,
+		"median_ms": 21.634165197610855,
+		"p95_ms": 26.61745622754097,
+		"worst_ms": 76.240334659814835
+	},
+	"game_thread":
+	{
+		"samples": 550,
+		"median_ms": 1.1001249551773071,
+		"p95_ms": 1.9163750410079956,
+		"worst_ms": 5.5852084159851074
+	},
+	"render_thread":
+	{
+		"samples": 550,
+		"median_ms": 21.625999450683594,
+		"p95_ms": 26.547000885009766,
+		"worst_ms": 76.807960510253906
+	},
+	"gpu":
+	{
+		"samples": 550,
+		"median_ms": 21.404083251953125,
+		"p95_ms": 26.030666351318359,
+		"worst_ms": 42.512042999267578
+	},
+	"median_rhi_draw_calls_all_passes": null,
+	"median_rhi_primitives_all_passes": null,
+	"mannequin_static_mesh":
+	{
+		"asset": "/Game/Art/Characters/Samurai/Do01/Review/SM_Manny.SM_Manny",
+		"material_slots": 2,
+		"lods": [
+			{
+				"lod": 0,
+				"triangles": 92178,
+				"vertices": 48705,
+				"sections": 2
+			},
+			{
+				"lod": 1,
+				"triangles": 29495,
+				"vertices": 16699,
+				"sections": 2
+			},
+			{
+				"lod": 2,
+				"triangles": 13825,
+				"vertices": 8387,
+				"sections": 2
+			}
+		]
+	},
+	"body_skeletal_mesh":
+	{
+		"asset": "/Game/Characters/Mannequins/Meshes/SKM_Manny_Simple.SKM_Manny_Simple",
+		"material_slots": 2,
+		"bones": 89,
+		"lods": [
+			{
+				"lod": 0,
+				"triangles": 92178,
+				"vertices": 48705,
+				"sections": 2,
+				"uv_channels": 1,
+				"max_bone_influences": 8,
+				"section_material_slots": [
+					0,
+					1
+				]
+			},
+			{
+				"lod": 1,
+				"triangles": 26998,
+				"vertices": 15096,
+				"sections": 2,
+				"uv_channels": 1,
+				"max_bone_influences": 8,
+				"section_material_slots": [
+					0,
+					1
+				]
+			},
+			{
+				"lod": 2,
+				"triangles": 12998,
+				"vertices": 7793,
+				"sections": 2,
+				"uv_channels": 1,
+				"max_bone_influences": 4,
+				"section_material_slots": [
+					0,
+					1
+				]
+			}
+		]
+	}
+}

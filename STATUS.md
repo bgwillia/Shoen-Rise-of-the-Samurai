@@ -1,5 +1,9 @@
 # SHŌEN status
 
+## Dō 01 / official Manny art-pipeline note — 2026-09-15
+
+The user's follow-up replaces the custom art-fit body with Epic's official Manny. Dō01 now has ten editable Blender components, an imported skeletal mesh on Manny's unchanged native skeleton, three LODs (81,392 / 32,556 / 5,504 triangles), one 2K atlas and fourteen rendered Unreal fit/animation views. Static full-outfit review crowds measured 58.6 / 36.4 / 28.5 median FPS at 100 / 500 / 1,000 figures on this Mac; this is an asset-cost probe, not full battle performance. The revised finish, smooth strap weighting and rear lining correction are preserved in the source. Neutral/raised/bend/turn/head samples are clear; stock unarmed attacks retain documented shoulder/helmet contact. [Asset/workflow](SourceArt/Characters/Samurai/Do01/README.md), [verification and incremental cost evidence](artifacts/do01/verification.md). Kabuto geometry and gameplay are preserved; this task adds no further armor component.
+
 ## Kabuto 01 art-pipeline note — 2026-09-15
 
 Kabuto 01 now has a modular Blender source, three runtime LODs (Unreal: 94,608 / 31,238 / 7,062 triangles), one opaque material atlas, and an isolated Unreal review on the unchanged prototype mannequin. The revised construction and materials passed source/import checks, a current Unreal build, portable tests, and rendered idle/walk/head-turn checks; static 100 / 500 / 1,000 helmet crowds measured 108.3 / 89.4 / 63.5 median FPS, with timing outliers and remaining visual regularity documented in the [evidence](artifacts/kabuto01/verification.md). [Asset and workflow](SourceArt/Characters/Samurai/Kabuto01/README.md); visual approval and full-army performance certification are not claimed, and no next armor component was started.

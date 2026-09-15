@@ -1,0 +1,61 @@
+{
+  "source": "Official Epic UE5 template SKM_Manny_Simple; unmodified mesh, reference skeleton and imported native clips",
+  "body": "FIT_Manny",
+  "rig": "root",
+  "rig_object_is_unreal_root_bone": true,
+  "blender_deform_bones": 88,
+  "native_reference_bones": 89,
+  "rig_object_scale": [
+    0.009999999776482582,
+    0.009999999776482582,
+    0.009999999776482582
+  ],
+  "axes": "Blender metres, -Y forward. Data coordinates centimetres under .01 root object scale. Native Unreal +Y forward.",
+  "body_vertices": 48705,
+  "body_triangles": 92178,
+  "actions": [
+    {
+      "name": "A_Idle",
+      "frames": [
+        1.0,
+        229.0
+      ],
+      "slots": [
+        "OBSlot"
+      ]
+    },
+    {
+      "name": "A_Walk",
+      "frames": [
+        1.0,
+        47.0
+      ],
+      "slots": [
+        "OBSlot"
+      ]
+    },
+    {
+      "name": "A_Run",
+      "frames": [
+        1.0,
+        55.0
+      ],
+      "slots": [
+        "OBSlot"
+      ]
+    },
+    {
+      "name": "A_Attack",
+      "frames": [
+        1.0,
+        32.0
+      ],
+      "slots": [
+        "OBSlot"
+      ]
+    }
+  ],
+  "preview_materials": "Neutral metal simplification for Blender only. Native Epic materials retained in Unreal.",
+  "source_fbx_sha256": "c15bf65d4b2788f8af9000e966972d7ba2f8468b9877891caf017305905250d8",
+  "blend_sha256": "46032c0e10b7b0ff0f13ff82195a82f8b82d307d684e6c408544f385ecd617de"
+}

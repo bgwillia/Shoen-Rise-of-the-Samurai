@@ -1,0 +1,102 @@
+{
+  "validated": true,
+  "rendering_validated": false,
+  "materials": [
+    {
+      "asset": "/Game/Art/Characters/Samurai/Do01/M_Do01.M_Do01",
+      "shader_types_before": 12,
+      "statistics": {
+        "num_vertex_shader_instructions": 170,
+        "num_pixel_shader_instructions": 117,
+        "num_samplers": 4,
+        "num_vertex_texture_samples": 3,
+        "num_pixel_texture_samples": 3,
+        "num_uv_scalars": 2
+      },
+      "shader_types_after": 12,
+      "vertex_factories": [
+        "FLocalVertexFactory",
+        "TGPUSkinVertexFactoryDefault"
+      ],
+      "compiled_shaders": 12
+    },
+    {
+      "asset": "/Game/Characters/Mannequins/Materials/M_Mannequin.M_Mannequin",
+      "shader_types_before": 46,
+      "statistics": {
+        "num_vertex_shader_instructions": 186,
+        "num_pixel_shader_instructions": 119,
+        "num_samplers": 4,
+        "num_vertex_texture_samples": 3,
+        "num_pixel_texture_samples": 3,
+        "num_uv_scalars": 2
+      },
+      "shader_types_after": 46,
+      "vertex_factories": [
+        "FLocalVertexFactory",
+        "TGPUSkinVertexFactoryDefault"
+      ],
+      "compiled_shaders": 46
+    },
+    {
+      "asset": "/Game/Characters/Mannequins/Materials/Manny/MI_Manny_01_New.MI_Manny_01_New",
+      "shader_types_before": 46,
+      "statistics": {
+        "num_vertex_shader_instructions": 186,
+        "num_pixel_shader_instructions": 119,
+        "num_samplers": 4,
+        "num_vertex_texture_samples": 3,
+        "num_pixel_texture_samples": 3,
+        "num_uv_scalars": 2
+      },
+      "shader_types_after": 46,
+      "vertex_factories": [
+        "FLocalVertexFactory",
+        "TGPUSkinVertexFactoryDefault"
+      ],
+      "compiled_shaders": 46
+    },
+    {
+      "asset": "/Game/Characters/Mannequins/Materials/Manny/MI_Manny_02_New.MI_Manny_02_New",
+      "shader_types_before": 46,
+      "statistics": {
+        "num_vertex_shader_instructions": 186,
+        "num_pixel_shader_instructions": 122,
+        "num_samplers": 5,
+        "num_vertex_texture_samples": 3,
+        "num_pixel_texture_samples": 4,
+        "num_uv_scalars": 2
+      },
+      "shader_types_after": 46,
+      "vertex_factories": [
+        "FLocalVertexFactory",
+        "TGPUSkinVertexFactoryDefault"
+      ],
+      "compiled_shaders": 46
+    }
+  ],
+  "scope": "Real-RHI shader compilation; no mesh, texture, animation or native material package edits",
+  "command_line": "-ExecutePythonScript=/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/SourceArt/Characters/Samurai/Do01/Scripts/compile_do_materials.py -unattended -nop4 -nosplash -stdout -FullStdOutLogOutput",
+  "do_usage": {
+    "used_with_skeletal_mesh": true,
+    "used_with_instanced_static_meshes": true
+  },
+  "stage": "complete; rendered verification still required",
+  "native_package_hashes": {
+    "/Game/Characters/Mannequins/Materials/M_Mannequin": {
+      "before": "d7ffe412d906380bd5bd4462f464b2a1fe48fdb79b9077f29bd0f958a782035c",
+      "after": "d7ffe412d906380bd5bd4462f464b2a1fe48fdb79b9077f29bd0f958a782035c"
+    },
+    "/Game/Characters/Mannequins/Materials/Manny/MI_Manny_01_New": {
+      "before": "9f1e4ed382304d020b750c81505140fc1de4d339b0909430adb5380a6bb89b65",
+      "after": "9f1e4ed382304d020b750c81505140fc1de4d339b0909430adb5380a6bb89b65"
+    },
+    "/Game/Characters/Mannequins/Materials/Manny/MI_Manny_02_New": {
+      "before": "26389db06f0b7928b487494bef3320d6b0e6bccd58193bccedd67c2c89132a46",
+      "after": "26389db06f0b7928b487494bef3320d6b0e6bccd58193bccedd67c2c89132a46"
+    }
+  },
+  "saved_assets": [
+    "/Game/Art/Characters/Samurai/Do01/M_Do01.M_Do01"
+  ]
+}

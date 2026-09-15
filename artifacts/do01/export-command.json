@@ -1,0 +1,9 @@
+[
+  "/Applications/Blender.app/Contents/MacOS/Blender",
+  "--background",
+  "--factory-startup",
+  "--python-exit-code",
+  "1",
+  "--python",
+  "/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/SourceArt/Characters/Samurai/Do01/Scripts/export_do.py"
+]

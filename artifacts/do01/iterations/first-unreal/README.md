@@ -1,0 +1,1 @@
+First actual Unreal capture, before real-RHI material preflight and close framing fix. Shows fallback materials; not final visual evidence. JSON was written by Unreal as UTF-16. Timings overlap Blender rendering and are not valid performance comparisons.

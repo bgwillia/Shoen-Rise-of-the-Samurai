@@ -1,0 +1,40 @@
+{
+  "asset": "Do01",
+  "blender_version": "5.1.2",
+  "source_components": {
+    "Do_Main": 33696,
+    "Do_Back": 33696,
+    "Do_Side_L": 1296,
+    "Do_Side_R": 1296,
+    "Do_Upper": 2016,
+    "Do_Straps": 5320,
+    "Do_Edge": 19552,
+    "Do_Lacing": 17352,
+    "Do_Fittings": 9824,
+    "Do_Lining": 1024
+  },
+  "source_component_objects": 10,
+  "source_materials": 1,
+  "runtime_materials": 1,
+  "texture_dimensions": [
+    2048,
+    2048
+  ],
+  "skeleton_source": "SourceArt/Characters/Samurai/Kabuto01/Kabuto01.blend",
+  "skeleton_source_sha256": "8e7a80e3e36c6b2acbd19fa0385d49da476140864370e53ea6f6c85d4f3f45f1",
+  "source_bone_count": 63,
+  "weighting": "Main rigid plates match original rigid spine_02 torso. Shoulder straps blend at most22% to existingclavicle bones, maximum2boneinfluences.",
+  "existing_actions": [
+    "A_Neutral",
+    "A_Idle",
+    "A_Walk",
+    "A_Attack"
+  ],
+  "unavailable_actions": [
+    "authored run",
+    "bow draw"
+  ],
+  "reference_priority": "Supplied Do01 sheet: 3/4 hero, front, side, rear, construction, decorative microdetails.",
+  "source_blend_sha256": "bc9c8be434a9c6168373c7bd488a6ff07c65f9a0ee008a038223cc6325e2ff46",
+  "source_triangles_before_modifiers": 125072
+}
