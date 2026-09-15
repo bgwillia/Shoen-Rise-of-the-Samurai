@@ -1,0 +1,11 @@
+[
+  "/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/UnrealEditor.app/Contents/MacOS/UnrealEditor",
+  "/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/game/Shoen.uproject",
+  "-ExecutePythonScript=/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/SourceArt/Characters/Samurai/Kabuto01/Scripts/import_unreal.py",
+  "-unattended",
+  "-NullRHI",
+  "-nop4",
+  "-nosplash",
+  "-stdout",
+  "-FullStdOutLogOutput"
+]

@@ -1,5 +1,9 @@
 # SHŌEN status
 
+## Kabuto 01 art-pipeline note — 2026-09-15
+
+Kabuto 01 now has a modular Blender source, three runtime LODs (Unreal: 94,608 / 31,238 / 7,062 triangles), one opaque material atlas, and an isolated Unreal review on the unchanged prototype mannequin. The revised construction and materials passed source/import checks, a current Unreal build, portable tests, and rendered idle/walk/head-turn checks; static 100 / 500 / 1,000 helmet crowds measured 108.3 / 89.4 / 63.5 median FPS, with timing outliers and remaining visual regularity documented in the [evidence](artifacts/kabuto01/verification.md). [Asset and workflow](SourceArt/Characters/Samurai/Kabuto01/README.md); visual approval and full-army performance certification are not claimed, and no next armor component was started.
+
 ## Prototype B — constrained battlefield and repeated warfare
 
 **Prototype B is complete and committed as a playable feasibility prototype.** Prototype A was accepted at `60ca49fb0416d12423eb8c57ed3e234eba17dedb`; its evidence is archived in [Prototype A status](docs/execution/prototype-a-status.md). M1, M2A and M2B remain accepted. This work follows the [Prototype B request](docs/execution/prototype-b-request.md), on `codex/prototype-b-terrain`. It does not start Prototype C or restore production-hardening approval milestones.

@@ -1,0 +1,21 @@
+[
+  "/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/UnrealEditor.app/Contents/MacOS/UnrealEditor",
+  "/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/game/Shoen.uproject",
+  "/Game/Art/Characters/Samurai/Kabuto01/Review/Kabuto01_Review?game=/Script/Shoen.KabutoReviewGameMode",
+  "-game",
+  "-windowed",
+  "-ResX=1600",
+  "-ResY=900",
+  "-NoVSync",
+  "-nop4",
+  "-nosplash",
+  "-stdout",
+  "-FullStdOutLogOutput",
+  "-KabutoCount=500",
+  "-KabutoMode=helmet",
+  "-KabutoCamera=tactical",
+  "-KabutoAnimation=none",
+  "-KabutoSeconds=12.0",
+  "-KabutoOutput=/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/artifacts/kabuto01/helmet-500-tactical.json",
+  "-KabutoScreenshot=/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/artifacts/kabuto01/helmet-500-tactical.png"
+]

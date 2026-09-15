@@ -1,0 +1,63 @@
+{
+	"rendered": true,
+	"validated": true,
+	"mode": "placeholder",
+	"camera": "tactical",
+	"animation": "static instances",
+	"engine": "5.8.2-56702186+++UE5+Release-5.8",
+	"platform": "Mac",
+	"rhi": "Metal",
+	"build": "Development editor game; opt-in isolated art review",
+	"requested_count": 1000,
+	"rendered_bodies": 1000,
+	"rendered_helmets": 0,
+	"instance_components": 10,
+	"skeletal_components": 0,
+	"camera_distance_cm": 11000,
+	"camera_horizontal_fov": 55,
+	"camera_elevation_degrees": 60,
+	"body_and_helmet_cast_shadows": true,
+	"warmup_seconds": 3,
+	"capture_seconds": 12.001717749983072,
+	"frames": 846,
+	"median_fps": 75.032355805406766,
+	"peak_process_physical_bytes": 2954562608,
+	"max_attachment_position_error_cm": 0,
+	"max_helmet_rotation_from_first_degrees": 0,
+	"composed_head_reference_transform": "0.000000,0.000000,0.000000|0.000000,0.000000,-0.000000|1.000000,1.000000,1.000000",
+	"viewport_width": 1280,
+	"viewport_height": 720,
+	"screenshot": "/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/artifacts/kabuto01/placeholder-1000-tactical.png",
+	"screenshot_exists": true,
+	"measurement_notes": "Frame intervals use game-thread wall time. Engine game/render counters exclude their idle time and may describe earlier frames; GPU samples are provided by the RHI when positive. Missing counters remain null. Screenshot readback occurs after sampling. Mesh LOD geometry is asset inventory, not GPU draw counts. Crowd views are static and do not measure animation, combat or population simulation.",
+	"frame":
+	{
+		"samples": 846,
+		"median_ms": 13.32758367061615,
+		"p95_ms": 21.192997694015503,
+		"worst_ms": 48.582542687654495
+	},
+	"game_thread":
+	{
+		"samples": 846,
+		"median_ms": 0.9725416898727417,
+		"p95_ms": 1.8786666393280029,
+		"worst_ms": 6.1301665306091309
+	},
+	"render_thread":
+	{
+		"samples": 846,
+		"median_ms": 13.333416938781738,
+		"p95_ms": 21.079666137695312,
+		"worst_ms": 46.359291076660156
+	},
+	"gpu":
+	{
+		"samples": 846,
+		"median_ms": 12.598291397094727,
+		"p95_ms": 20.649124145507812,
+		"worst_ms": 52.207916259765625
+	},
+	"median_rhi_draw_calls_all_passes": null,
+	"median_rhi_primitives_all_passes": null
+}

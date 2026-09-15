@@ -1,0 +1,2254 @@
+{
+  "asset": "Kabuto01",
+  "validated": true,
+  "checks": [
+    {
+      "name": "fit actions survive reopening the source",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "metre source units",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "head attachment exists without exported leaf bones",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "fit body preserves original geometry",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "fit head preserves original geometry",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "editable helmet components present",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Fukigaeshi_L: finite nonempty geometry",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Fukigaeshi_L: no zero-area triangles",
+      "passed": true,
+      "detail": {
+        "count": 0,
+        "area_tolerance_m2": 1e-12
+      }
+    },
+    {
+      "name": "Fukigaeshi_L: no duplicate faces",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "name": "Fukigaeshi_L: closed manifold parts",
+      "passed": true,
+      "detail": {
+        "nonmanifold_edges": 0,
+        "boundary_edges": 0,
+        "wire_edges": 0
+      }
+    },
+    {
+      "name": "Fukigaeshi_L: one atlas material",
+      "passed": true,
+      "detail": [
+        "M_Kabuto01"
+      ]
+    },
+    {
+      "name": "Fukigaeshi_L: finite 0-1 UV atlas",
+      "passed": true,
+      "detail": [
+        {
+          "name": "UV0_ArmorAtlas",
+          "loops": 5944,
+          "finite": true,
+          "min": [
+            0.25624996423721313,
+            0.0062500000931322575
+          ],
+          "max": [
+            0.9937499761581421,
+            0.49375003576278687
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Fukigaeshi_L: unit scale and zero rotation",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Fukigaeshi_L: consistent head attachment pivot",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Fukigaeshi_R: finite nonempty geometry",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Fukigaeshi_R: no zero-area triangles",
+      "passed": true,
+      "detail": {
+        "count": 0,
+        "area_tolerance_m2": 1e-12
+      }
+    },
+    {
+      "name": "Fukigaeshi_R: no duplicate faces",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "name": "Fukigaeshi_R: closed manifold parts",
+      "passed": true,
+      "detail": {
+        "nonmanifold_edges": 0,
+        "boundary_edges": 0,
+        "wire_edges": 0
+      }
+    },
+    {
+      "name": "Fukigaeshi_R: one atlas material",
+      "passed": true,
+      "detail": [
+        "M_Kabuto01"
+      ]
+    },
+    {
+      "name": "Fukigaeshi_R: finite 0-1 UV atlas",
+      "passed": true,
+      "detail": [
+        {
+          "name": "UV0_ArmorAtlas",
+          "loops": 5944,
+          "finite": true,
+          "min": [
+            0.25624996423721313,
+            0.0062500000931322575
+          ],
+          "max": [
+            0.9937499761581421,
+            0.49375006556510925
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Fukigaeshi_R: unit scale and zero rotation",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Fukigaeshi_R: consistent head attachment pivot",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Hachi: finite nonempty geometry",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Hachi: no zero-area triangles",
+      "passed": true,
+      "detail": {
+        "count": 0,
+        "area_tolerance_m2": 1e-12
+      }
+    },
+    {
+      "name": "Hachi: no duplicate faces",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "name": "Hachi: closed manifold parts",
+      "passed": true,
+      "detail": {
+        "nonmanifold_edges": 0,
+        "boundary_edges": 0,
+        "wire_edges": 0
+      }
+    },
+    {
+      "name": "Hachi: one atlas material",
+      "passed": true,
+      "detail": [
+        "M_Kabuto01"
+      ]
+    },
+    {
+      "name": "Hachi: finite 0-1 UV atlas",
+      "passed": true,
+      "detail": [
+        {
+          "name": "UV0_ArmorAtlas",
+          "loops": 25920,
+          "finite": true,
+          "min": [
+            0.0040433998219668865,
+            0.00624999962747097
+          ],
+          "max": [
+            0.24188989400863647,
+            0.24375003576278687
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Hachi: unit scale and zero rotation",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Hachi: consistent head attachment pivot",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Hachi_Fittings: finite nonempty geometry",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Hachi_Fittings: no zero-area triangles",
+      "passed": true,
+      "detail": {
+        "count": 0,
+        "area_tolerance_m2": 1e-12
+      }
+    },
+    {
+      "name": "Hachi_Fittings: no duplicate faces",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "name": "Hachi_Fittings: closed manifold parts",
+      "passed": true,
+      "detail": {
+        "nonmanifold_edges": 0,
+        "boundary_edges": 0,
+        "wire_edges": 0
+      }
+    },
+    {
+      "name": "Hachi_Fittings: one atlas material",
+      "passed": true,
+      "detail": [
+        "M_Kabuto01"
+      ]
+    },
+    {
+      "name": "Hachi_Fittings: finite 0-1 UV atlas",
+      "passed": true,
+      "detail": [
+        {
+          "name": "UV0_ArmorAtlas",
+          "loops": 35136,
+          "finite": true,
+          "min": [
+            0.0062500000931322575,
+            0.0062500000931322575
+          ],
+          "max": [
+            0.7437499761581421,
+            0.24375000596046448
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Hachi_Fittings: unit scale and zero rotation",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Hachi_Fittings: consistent head attachment pivot",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Mabisashi: finite nonempty geometry",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Mabisashi: no zero-area triangles",
+      "passed": true,
+      "detail": {
+        "count": 0,
+        "area_tolerance_m2": 1e-12
+      }
+    },
+    {
+      "name": "Mabisashi: no duplicate faces",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "name": "Mabisashi: closed manifold parts",
+      "passed": true,
+      "detail": {
+        "nonmanifold_edges": 0,
+        "boundary_edges": 0,
+        "wire_edges": 0
+      }
+    },
+    {
+      "name": "Mabisashi: one atlas material",
+      "passed": true,
+      "detail": [
+        "M_Kabuto01"
+      ]
+    },
+    {
+      "name": "Mabisashi: finite 0-1 UV atlas",
+      "passed": true,
+      "detail": [
+        {
+          "name": "UV0_ArmorAtlas",
+          "loops": 3256,
+          "finite": true,
+          "min": [
+            0.00624999962747097,
+            0.0062499986961483955
+          ],
+          "max": [
+            0.24375003576278687,
+            0.24375002086162567
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Mabisashi: unit scale and zero rotation",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Mabisashi: consistent head attachment pivot",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Mabisashi_Edge: finite nonempty geometry",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Mabisashi_Edge: no zero-area triangles",
+      "passed": true,
+      "detail": {
+        "count": 0,
+        "area_tolerance_m2": 1e-12
+      }
+    },
+    {
+      "name": "Mabisashi_Edge: no duplicate faces",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "name": "Mabisashi_Edge: closed manifold parts",
+      "passed": true,
+      "detail": {
+        "nonmanifold_edges": 0,
+        "boundary_edges": 0,
+        "wire_edges": 0
+      }
+    },
+    {
+      "name": "Mabisashi_Edge: one atlas material",
+      "passed": true,
+      "detail": [
+        "M_Kabuto01"
+      ]
+    },
+    {
+      "name": "Mabisashi_Edge: finite 0-1 UV atlas",
+      "passed": true,
+      "detail": [
+        {
+          "name": "UV0_ArmorAtlas",
+          "loops": 2232,
+          "finite": true,
+          "min": [
+            0.5062500238418579,
+            0.0062500000931322575
+          ],
+          "max": [
+            0.7437499761581421,
+            0.24375000596046448
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Mabisashi_Edge: unit scale and zero rotation",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Mabisashi_Edge: consistent head attachment pivot",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Maedate: finite nonempty geometry",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Maedate: no zero-area triangles",
+      "passed": true,
+      "detail": {
+        "count": 0,
+        "area_tolerance_m2": 1e-12
+      }
+    },
+    {
+      "name": "Maedate: no duplicate faces",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "name": "Maedate: closed manifold parts",
+      "passed": true,
+      "detail": {
+        "nonmanifold_edges": 0,
+        "boundary_edges": 0,
+        "wire_edges": 0
+      }
+    },
+    {
+      "name": "Maedate: one atlas material",
+      "passed": true,
+      "detail": [
+        "M_Kabuto01"
+      ]
+    },
+    {
+      "name": "Maedate: finite 0-1 UV atlas",
+      "passed": true,
+      "detail": [
+        {
+          "name": "UV0_ArmorAtlas",
+          "loops": 14984,
+          "finite": true,
+          "min": [
+            0.0062500000931322575,
+            0.0062500000931322575
+          ],
+          "max": [
+            0.7437499761581421,
+            0.4937500059604645
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Maedate: unit scale and zero rotation",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Maedate: consistent head attachment pivot",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Padding rolled rim: finite nonempty geometry",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Padding rolled rim: no zero-area triangles",
+      "passed": true,
+      "detail": {
+        "count": 0,
+        "area_tolerance_m2": 1e-12
+      }
+    },
+    {
+      "name": "Padding rolled rim: no duplicate faces",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "name": "Padding rolled rim: closed manifold parts",
+      "passed": true,
+      "detail": {
+        "nonmanifold_edges": 0,
+        "boundary_edges": 0,
+        "wire_edges": 0
+      }
+    },
+    {
+      "name": "Padding rolled rim: one atlas material",
+      "passed": true,
+      "detail": [
+        "M_Kabuto01"
+      ]
+    },
+    {
+      "name": "Padding rolled rim: finite 0-1 UV atlas",
+      "passed": true,
+      "detail": [
+        {
+          "name": "UV0_ArmorAtlas",
+          "loops": 2048,
+          "finite": true,
+          "min": [
+            0.0062500000931322575,
+            0.2562499940395355
+          ],
+          "max": [
+            0.24375000596046448,
+            0.4937500059604645
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Padding rolled rim: unit scale and zero rotation",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Padding rolled rim: consistent head attachment pivot",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Shikoro: finite nonempty geometry",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Shikoro: no zero-area triangles",
+      "passed": true,
+      "detail": {
+        "count": 0,
+        "area_tolerance_m2": 1e-12
+      }
+    },
+    {
+      "name": "Shikoro: no duplicate faces",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "name": "Shikoro: closed manifold parts",
+      "passed": true,
+      "detail": {
+        "nonmanifold_edges": 0,
+        "boundary_edges": 0,
+        "wire_edges": 0
+      }
+    },
+    {
+      "name": "Shikoro: one atlas material",
+      "passed": true,
+      "detail": [
+        "M_Kabuto01"
+      ]
+    },
+    {
+      "name": "Shikoro: finite 0-1 UV atlas",
+      "passed": true,
+      "detail": [
+        {
+          "name": "UV0_ArmorAtlas",
+          "loops": 82360,
+          "finite": true,
+          "min": [
+            0.0062500000931322575,
+            0.006249999161809683
+          ],
+          "max": [
+            0.9937499761581421,
+            0.24375003576278687
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Shikoro: unit scale and zero rotation",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Shikoro: consistent head attachment pivot",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "ShinHimo: finite nonempty geometry",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "ShinHimo: no zero-area triangles",
+      "passed": true,
+      "detail": {
+        "count": 0,
+        "area_tolerance_m2": 1e-12
+      }
+    },
+    {
+      "name": "ShinHimo: no duplicate faces",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "name": "ShinHimo: closed manifold parts",
+      "passed": true,
+      "detail": {
+        "nonmanifold_edges": 0,
+        "boundary_edges": 0,
+        "wire_edges": 0
+      }
+    },
+    {
+      "name": "ShinHimo: one atlas material",
+      "passed": true,
+      "detail": [
+        "M_Kabuto01"
+      ]
+    },
+    {
+      "name": "ShinHimo: finite 0-1 UV atlas",
+      "passed": true,
+      "detail": [
+        {
+          "name": "UV0_ArmorAtlas",
+          "loops": 8608,
+          "finite": true,
+          "min": [
+            0.7562500238418579,
+            0.0062500000931322575
+          ],
+          "max": [
+            0.9937499761581421,
+            0.24375000596046448
+          ]
+        }
+      ]
+    },
+    {
+      "name": "ShinHimo: unit scale and zero rotation",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "ShinHimo: consistent head attachment pivot",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Uchiwa: finite nonempty geometry",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Uchiwa: no zero-area triangles",
+      "passed": true,
+      "detail": {
+        "count": 0,
+        "area_tolerance_m2": 1e-12
+      }
+    },
+    {
+      "name": "Uchiwa: no duplicate faces",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "name": "Uchiwa: closed manifold parts",
+      "passed": true,
+      "detail": {
+        "nonmanifold_edges": 0,
+        "boundary_edges": 0,
+        "wire_edges": 0
+      }
+    },
+    {
+      "name": "Uchiwa: one atlas material",
+      "passed": true,
+      "detail": [
+        "M_Kabuto01"
+      ]
+    },
+    {
+      "name": "Uchiwa: finite 0-1 UV atlas",
+      "passed": true,
+      "detail": [
+        {
+          "name": "UV0_ArmorAtlas",
+          "loops": 5120,
+          "finite": true,
+          "min": [
+            0.7560838460922241,
+            0.25624996423721313
+          ],
+          "max": [
+            0.9902050495147705,
+            0.49375003576278687
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Uchiwa: unit scale and zero rotation",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Uchiwa: consistent head attachment pivot",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "SM_Kabuto01_LOD0: finite nonempty geometry",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "SM_Kabuto01_LOD0: no zero-area triangles",
+      "passed": true,
+      "detail": {
+        "count": 0,
+        "area_tolerance_m2": 1e-12
+      }
+    },
+    {
+      "name": "SM_Kabuto01_LOD0: no duplicate faces",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "name": "SM_Kabuto01_LOD0: closed manifold parts",
+      "passed": true,
+      "detail": {
+        "nonmanifold_edges": 0,
+        "boundary_edges": 0,
+        "wire_edges": 0
+      }
+    },
+    {
+      "name": "SM_Kabuto01_LOD0: one atlas material",
+      "passed": true,
+      "detail": [
+        "M_Kabuto01"
+      ]
+    },
+    {
+      "name": "SM_Kabuto01_LOD0: finite 0-1 UV atlas",
+      "passed": true,
+      "detail": [
+        {
+          "name": "UV0_ArmorAtlas",
+          "loops": 283992,
+          "finite": true,
+          "min": [
+            0.0040433998219668865,
+            0.005949999671429396
+          ],
+          "max": [
+            0.9937499761581421,
+            0.4940500259399414
+          ]
+        }
+      ]
+    },
+    {
+      "name": "SM_Kabuto01_LOD0: unit scale and zero rotation",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "SM_Kabuto01_LOD0: head-local origin",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "SM_Kabuto01_LOD1: finite nonempty geometry",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "SM_Kabuto01_LOD1: no zero-area triangles",
+      "passed": true,
+      "detail": {
+        "count": 0,
+        "area_tolerance_m2": 1e-12
+      }
+    },
+    {
+      "name": "SM_Kabuto01_LOD1: no duplicate faces",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "name": "SM_Kabuto01_LOD1: closed manifold parts",
+      "passed": true,
+      "detail": {
+        "nonmanifold_edges": 0,
+        "boundary_edges": 0,
+        "wire_edges": 0
+      }
+    },
+    {
+      "name": "SM_Kabuto01_LOD1: one atlas material",
+      "passed": true,
+      "detail": [
+        "M_Kabuto01"
+      ]
+    },
+    {
+      "name": "SM_Kabuto01_LOD1: finite 0-1 UV atlas",
+      "passed": true,
+      "detail": [
+        {
+          "name": "UV0_ArmorAtlas",
+          "loops": 93714,
+          "finite": true,
+          "min": [
+            0.00595000060275197,
+            0.0056500001810491085
+          ],
+          "max": [
+            0.9937500357627869,
+            0.49417126178741455
+          ]
+        }
+      ]
+    },
+    {
+      "name": "SM_Kabuto01_LOD1: unit scale and zero rotation",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "SM_Kabuto01_LOD1: head-local origin",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "SM_Kabuto01_LOD2: finite nonempty geometry",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "SM_Kabuto01_LOD2: no zero-area triangles",
+      "passed": true,
+      "detail": {
+        "count": 0,
+        "area_tolerance_m2": 1e-12
+      }
+    },
+    {
+      "name": "SM_Kabuto01_LOD2: no duplicate faces",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "name": "SM_Kabuto01_LOD2: closed manifold parts",
+      "passed": true,
+      "detail": {
+        "nonmanifold_edges": 0,
+        "boundary_edges": 0,
+        "wire_edges": 0
+      }
+    },
+    {
+      "name": "SM_Kabuto01_LOD2: one atlas material",
+      "passed": true,
+      "detail": [
+        "M_Kabuto01"
+      ]
+    },
+    {
+      "name": "SM_Kabuto01_LOD2: finite 0-1 UV atlas",
+      "passed": true,
+      "detail": [
+        {
+          "name": "UV0_ArmorAtlas",
+          "loops": 21186,
+          "finite": true,
+          "min": [
+            0.0010000000474974513,
+            0.0056500001810491085
+          ],
+          "max": [
+            0.9937500357627869,
+            0.49417126178741455
+          ]
+        }
+      ]
+    },
+    {
+      "name": "SM_Kabuto01_LOD2: unit scale and zero rotation",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "SM_Kabuto01_LOD2: head-local origin",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "runtime LOD triangle counts decrease",
+      "passed": true,
+      "detail": [
+        94664,
+        31238,
+        7062
+      ]
+    },
+    {
+      "name": "manifest matches reopened runtime counts",
+      "passed": true,
+      "detail": {
+        "measured": [
+          94664,
+          31238,
+          7062
+        ],
+        "manifest": [
+          94664,
+          31238,
+          7062
+        ]
+      }
+    },
+    {
+      "name": "T_Kabuto01_BaseColor: packed and external 2K texture",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "T_Kabuto01_BaseColor: opaque alpha",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "T_Kabuto01_Normal: packed and external 2K texture",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "T_Kabuto01_Normal: opaque alpha",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "T_Kabuto01_Normal: linear data",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "T_Kabuto01_ORM: packed and external 2K texture",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "T_Kabuto01_ORM: opaque alpha",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "T_Kabuto01_ORM: linear data",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "opaque shader alpha",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Fukigaeshi_L: no head surface intersections",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "name": "Fukigaeshi_R: no head surface intersections",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "name": "Hachi: no head surface intersections",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "name": "Hachi_Fittings: no head surface intersections",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "name": "Mabisashi: no head surface intersections",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "name": "Mabisashi_Edge: no head surface intersections",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "name": "Maedate: no head surface intersections",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "name": "Padding rolled rim: no head surface intersections",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "name": "Shikoro: no head surface intersections",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "name": "ShinHimo: no head surface intersections",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "name": "Uchiwa: no head surface intersections",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "name": "Hachi: upper-skull radial clearance",
+      "passed": true,
+      "detail": {
+        "sampled_skull_vertices": 291,
+        "surface_hits": 291,
+        "open_region_rays": 0,
+        "axial_crown_aperture_rays": 0,
+        "min_clearance_mm": 19.886092324030283,
+        "median_clearance_mm": 32.422410068858944
+      }
+    },
+    {
+      "name": "bowl covers sampled upper skull outside crown aperture",
+      "passed": true,
+      "detail": {
+        "sampled_skull_vertices": 291,
+        "surface_hits": 291,
+        "open_region_rays": 0,
+        "axial_crown_aperture_rays": 0,
+        "min_clearance_mm": 19.886092324030283,
+        "median_clearance_mm": 32.422410068858944
+      }
+    },
+    {
+      "name": "Uchiwa: horizontal skull clearance at least 3mm",
+      "passed": true,
+      "detail": {
+        "method": "Horizontal outward rays from the collar center to its inside surface at each actual skull vertex height",
+        "height_interval_metres": [
+          1.695,
+          1.735
+        ],
+        "ray_origin_xy_metres": [
+          0.0,
+          0.006
+        ],
+        "sampled_skull_vertices": 108,
+        "surface_hits": 108,
+        "missed_rays": 0,
+        "required_clearance_mm": 3.0,
+        "min_clearance_mm": 11.962036998888925,
+        "median_clearance_mm": 44.282622205786
+      }
+    },
+    {
+      "name": "eyes have unobstructed forward clearance",
+      "passed": true,
+      "detail": {
+        "sampled_points": 835,
+        "obstructions": {
+          "Fukigaeshi_L": 0,
+          "Fukigaeshi_R": 0,
+          "Hachi": 0,
+          "Hachi_Fittings": 0,
+          "Mabisashi": 0,
+          "Mabisashi_Edge": 0,
+          "Maedate": 0,
+          "Padding rolled rim": 0,
+          "Shikoro": 0,
+          "ShinHimo": 0,
+          "Uchiwa": 0
+        }
+      }
+    },
+    {
+      "name": "Exports/SM_Kabuto01.fbx: binary FBX exists",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Exports/SM_Kabuto01_LOD1.fbx: binary FBX exists",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Exports/SM_Kabuto01_LOD2.fbx: binary FBX exists",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Review/Exports/SK_FitMannequin.fbx: binary FBX exists",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Review/Exports/SM_FitMannequin.fbx: binary FBX exists",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Review/Exports/A_Idle.fbx: binary FBX exists",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Review/Exports/A_Walk.fbx: binary FBX exists",
+      "passed": true,
+      "detail": null
+    }
+  ],
+  "scope": "Saved Blender source, static neutral fit and export files; no rendering or Unreal claim",
+  "blender_version": "5.1.2",
+  "source": {
+    "file": "SourceArt/Characters/Samurai/Kabuto01/Kabuto01.blend",
+    "sha256": "8e7a80e3e36c6b2acbd19fa0385d49da476140864370e53ea6f6c85d4f3f45f1"
+  },
+  "fit_body": {
+    "vertices": 3365,
+    "head_vertices": 2140,
+    "geometry_sha256": "46adab1d763b74c084c996c0fc0a8fc976c578b77693c6d252e71ebe528486bb",
+    "head_geometry_sha256": "67b618e44b3060beb7707edcfe784a53306ef8ca840b7a458ba60d2c85fb1283",
+    "bone_count": 63,
+    "head_pivot_metres": [
+      0.0,
+      0.0,
+      1.5700000524520874
+    ],
+    "original_geometry_sha256": "46adab1d763b74c084c996c0fc0a8fc976c578b77693c6d252e71ebe528486bb",
+    "original_head_geometry_sha256": "67b618e44b3060beb7707edcfe784a53306ef8ca840b7a458ba60d2c85fb1283"
+  },
+  "source_component_count": 11,
+  "components": {
+    "Fukigaeshi_L": {
+      "vertices": 1486,
+      "triangles": 2968,
+      "nonmanifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0,
+      "degenerate_triangles": 0,
+      "duplicate_position_vertices": 0,
+      "duplicate_geometric_triangles": 0,
+      "signed_volume_m3": 1.5850800518232424e-05,
+      "bounds_world_metres": [
+        [
+          0.09748520702123642,
+          -0.09489999711513519,
+          1.6649999618530273
+        ],
+        [
+          0.16827046871185303,
+          -0.06257280707359314,
+          1.75600004196167
+        ]
+      ],
+      "materials": [
+        "M_Kabuto01"
+      ],
+      "polygon_material_indices": [
+        0
+      ],
+      "uv_layers": [
+        {
+          "name": "UV0_ArmorAtlas",
+          "loops": 5944,
+          "finite": true,
+          "min": [
+            0.25624996423721313,
+            0.0062500000931322575
+          ],
+          "max": [
+            0.9937499761581421,
+            0.49375003576278687
+          ]
+        }
+      ],
+      "location": [
+        0.0,
+        0.0,
+        1.5700000524520874
+      ],
+      "rotation_euler": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "modifiers": []
+    },
+    "Fukigaeshi_R": {
+      "vertices": 1486,
+      "triangles": 2968,
+      "nonmanifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0,
+      "degenerate_triangles": 0,
+      "duplicate_position_vertices": 0,
+      "duplicate_geometric_triangles": 0,
+      "signed_volume_m3": 1.5854921856280925e-05,
+      "bounds_world_metres": [
+        [
+          -0.16827042400836945,
+          -0.09489999711513519,
+          1.6649999618530273
+        ],
+        [
+          -0.09748520702123642,
+          -0.06257280707359314,
+          1.75600004196167
+        ]
+      ],
+      "materials": [
+        "M_Kabuto01"
+      ],
+      "polygon_material_indices": [
+        0
+      ],
+      "uv_layers": [
+        {
+          "name": "UV0_ArmorAtlas",
+          "loops": 5944,
+          "finite": true,
+          "min": [
+            0.25624996423721313,
+            0.0062500000931322575
+          ],
+          "max": [
+            0.9937499761581421,
+            0.49375006556510925
+          ]
+        }
+      ],
+      "location": [
+        0.0,
+        0.0,
+        1.5700000524520874
+      ],
+      "rotation_euler": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "modifiers": []
+    },
+    "Hachi": {
+      "vertices": 6480,
+      "triangles": 12960,
+      "nonmanifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0,
+      "degenerate_triangles": 0,
+      "duplicate_position_vertices": 0,
+      "duplicate_geometric_triangles": 0,
+      "signed_volume_m3": 0.00022152313196508946,
+      "bounds_world_metres": [
+        [
+          -0.10728482902050018,
+          -0.1112835556268692,
+          1.6939142942428589
+        ],
+        [
+          0.10728482902050018,
+          0.12128355354070663,
+          1.8126130104064941
+        ]
+      ],
+      "materials": [
+        "M_Kabuto01"
+      ],
+      "polygon_material_indices": [
+        0
+      ],
+      "uv_layers": [
+        {
+          "name": "UV0_ArmorAtlas",
+          "loops": 25920,
+          "finite": true,
+          "min": [
+            0.0040433998219668865,
+            0.00624999962747097
+          ],
+          "max": [
+            0.24188989400863647,
+            0.24375003576278687
+          ]
+        }
+      ],
+      "location": [
+        0.0,
+        0.0,
+        1.5700000524520874
+      ],
+      "rotation_euler": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "modifiers": [
+        {
+          "name": "Plate thickness \u2022 editable",
+          "type": "SOLIDIFY"
+        },
+        {
+          "name": "Soft maintained edges",
+          "type": "BEVEL"
+        }
+      ]
+    },
+    "Hachi_Fittings": {
+      "vertices": 8496,
+      "triangles": 16416,
+      "nonmanifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0,
+      "degenerate_triangles": 0,
+      "duplicate_position_vertices": 0,
+      "duplicate_geometric_triangles": 0,
+      "signed_volume_m3": 2.1317222665718518e-05,
+      "bounds_world_metres": [
+        [
+          -0.1099550649523735,
+          -0.11401879787445068,
+          1.6924411058425903
+        ],
+        [
+          0.1099550649523735,
+          0.12401879578828812,
+          1.8159526586532593
+        ]
+      ],
+      "materials": [
+        "M_Kabuto01"
+      ],
+      "polygon_material_indices": [
+        0
+      ],
+      "uv_layers": [
+        {
+          "name": "UV0_ArmorAtlas",
+          "loops": 35136,
+          "finite": true,
+          "min": [
+            0.0062500000931322575,
+            0.0062500000931322575
+          ],
+          "max": [
+            0.7437499761581421,
+            0.24375000596046448
+          ]
+        }
+      ],
+      "location": [
+        0.0,
+        0.0,
+        1.5700000524520874
+      ],
+      "rotation_euler": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "modifiers": []
+    },
+    "Mabisashi": {
+      "vertices": 814,
+      "triangles": 1624,
+      "nonmanifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0,
+      "degenerate_triangles": 0,
+      "duplicate_position_vertices": 0,
+      "duplicate_geometric_triangles": 0,
+      "signed_volume_m3": 2.4438856476843517e-05,
+      "bounds_world_metres": [
+        [
+          -0.11179427057504654,
+          -0.14688944816589355,
+          1.685167908668518
+        ],
+        [
+          0.11180338263511658,
+          -0.05200992524623871,
+          1.698364019393921
+        ]
+      ],
+      "materials": [
+        "M_Kabuto01"
+      ],
+      "polygon_material_indices": [
+        0
+      ],
+      "uv_layers": [
+        {
+          "name": "UV0_ArmorAtlas",
+          "loops": 3256,
+          "finite": true,
+          "min": [
+            0.00624999962747097,
+            0.0062499986961483955
+          ],
+          "max": [
+            0.24375003576278687,
+            0.24375002086162567
+          ]
+        }
+      ],
+      "location": [
+        0.0,
+        0.0,
+        1.5700000524520874
+      ],
+      "rotation_euler": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "modifiers": [
+        {
+          "name": "Plate thickness \u2022 editable",
+          "type": "SOLIDIFY"
+        },
+        {
+          "name": "Soft maintained edges",
+          "type": "BEVEL"
+        }
+      ]
+    },
+    "Mabisashi_Edge": {
+      "vertices": 540,
+      "triangles": 1048,
+      "nonmanifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0,
+      "degenerate_triangles": 0,
+      "duplicate_position_vertices": 0,
+      "duplicate_geometric_triangles": 0,
+      "signed_volume_m3": 2.322665942747254e-06,
+      "bounds_world_metres": [
+        [
+          -0.11166150122880936,
+          -0.1469999998807907,
+          1.6869056224822998
+        ],
+        [
+          0.11166150122880936,
+          -0.06739659607410431,
+          1.7000073194503784
+        ]
+      ],
+      "materials": [
+        "M_Kabuto01"
+      ],
+      "polygon_material_indices": [
+        0
+      ],
+      "uv_layers": [
+        {
+          "name": "UV0_ArmorAtlas",
+          "loops": 2232,
+          "finite": true,
+          "min": [
+            0.5062500238418579,
+            0.0062500000931322575
+          ],
+          "max": [
+            0.7437499761581421,
+            0.24375000596046448
+          ]
+        }
+      ],
+      "location": [
+        0.0,
+        0.0,
+        1.5700000524520874
+      ],
+      "rotation_euler": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "modifiers": []
+    },
+    "Maedate": {
+      "vertices": 3712,
+      "triangles": 7328,
+      "nonmanifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0,
+      "degenerate_triangles": 0,
+      "duplicate_position_vertices": 4,
+      "duplicate_geometric_triangles": 0,
+      "signed_volume_m3": 6.896243030995466e-05,
+      "bounds_world_metres": [
+        [
+          -0.11902662366628647,
+          -0.1526000052690506,
+          1.7225412130355835
+        ],
+        [
+          0.11902662366628647,
+          -0.10271421819925308,
+          1.9122235774993896
+        ]
+      ],
+      "materials": [
+        "M_Kabuto01"
+      ],
+      "polygon_material_indices": [
+        0
+      ],
+      "uv_layers": [
+        {
+          "name": "UV0_ArmorAtlas",
+          "loops": 14984,
+          "finite": true,
+          "min": [
+            0.0062500000931322575,
+            0.0062500000931322575
+          ],
+          "max": [
+            0.7437499761581421,
+            0.4937500059604645
+          ]
+        }
+      ],
+      "location": [
+        0.0,
+        0.0,
+        1.5700000524520874
+      ],
+      "rotation_euler": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "modifiers": []
+    },
+    "Padding rolled rim": {
+      "vertices": 512,
+      "triangles": 1024,
+      "nonmanifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0,
+      "degenerate_triangles": 0,
+      "duplicate_position_vertices": 0,
+      "duplicate_geometric_triangles": 0,
+      "signed_volume_m3": 2.768370124306718e-05,
+      "bounds_world_metres": [
+        [
+          -0.0989999994635582,
+          -0.09799999743700027,
+          1.687000036239624
+        ],
+        [
+          0.0989999994635582,
+          0.10999999940395355,
+          1.6949999332427979
+        ]
+      ],
+      "materials": [
+        "M_Kabuto01"
+      ],
+      "polygon_material_indices": [
+        0
+      ],
+      "uv_layers": [
+        {
+          "name": "UV0_ArmorAtlas",
+          "loops": 2048,
+          "finite": true,
+          "min": [
+            0.0062500000931322575,
+            0.2562499940395355
+          ],
+          "max": [
+            0.24375000596046448,
+            0.4937500059604645
+          ]
+        }
+      ],
+      "location": [
+        0.0,
+        0.0,
+        1.5700000524520874
+      ],
+      "rotation_euler": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "modifiers": []
+    },
+    "Shikoro": {
+      "vertices": 20890,
+      "triangles": 41440,
+      "nonmanifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0,
+      "degenerate_triangles": 0,
+      "duplicate_position_vertices": 0,
+      "duplicate_geometric_triangles": 0,
+      "signed_volume_m3": 0.00045339971945290594,
+      "bounds_world_metres": [
+        [
+          -0.16758330166339874,
+          -0.11063198745250702,
+          1.5384007692337036
+        ],
+        [
+          0.16758330166339874,
+          0.19259999692440033,
+          1.6967790126800537
+        ]
+      ],
+      "materials": [
+        "M_Kabuto01"
+      ],
+      "polygon_material_indices": [
+        0
+      ],
+      "uv_layers": [
+        {
+          "name": "UV0_ArmorAtlas",
+          "loops": 82360,
+          "finite": true,
+          "min": [
+            0.0062500000931322575,
+            0.006249999161809683
+          ],
+          "max": [
+            0.9937499761581421,
+            0.24375003576278687
+          ]
+        }
+      ],
+      "location": [
+        0.0,
+        0.0,
+        1.5700000524520874
+      ],
+      "rotation_euler": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "modifiers": []
+    },
+    "ShinHimo": {
+      "vertices": 2176,
+      "triangles": 4328,
+      "nonmanifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0,
+      "degenerate_triangles": 0,
+      "duplicate_position_vertices": 4,
+      "duplicate_geometric_triangles": 0,
+      "signed_volume_m3": 3.1022069685733565e-05,
+      "bounds_world_metres": [
+        [
+          -0.10190950334072113,
+          -0.09849999845027924,
+          1.481972098350525
+        ],
+        [
+          0.10190950334072113,
+          -0.044144753366708755,
+          1.675335168838501
+        ]
+      ],
+      "materials": [
+        "M_Kabuto01"
+      ],
+      "polygon_material_indices": [
+        0
+      ],
+      "uv_layers": [
+        {
+          "name": "UV0_ArmorAtlas",
+          "loops": 8608,
+          "finite": true,
+          "min": [
+            0.7562500238418579,
+            0.0062500000931322575
+          ],
+          "max": [
+            0.9937499761581421,
+            0.24375000596046448
+          ]
+        }
+      ],
+      "location": [
+        0.0,
+        0.0,
+        1.5700000524520874
+      ],
+      "rotation_euler": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "modifiers": []
+    },
+    "Uchiwa": {
+      "vertices": 1280,
+      "triangles": 2560,
+      "nonmanifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0,
+      "degenerate_triangles": 0,
+      "duplicate_position_vertices": 0,
+      "duplicate_geometric_triangles": 0,
+      "signed_volume_m3": 0.00020156779238962778,
+      "bounds_world_metres": [
+        [
+          -0.09700000286102295,
+          -0.09600000083446503,
+          1.690000057220459
+        ],
+        [
+          0.09700000286102295,
+          0.1080000028014183,
+          1.7463759183883667
+        ]
+      ],
+      "materials": [
+        "M_Kabuto01"
+      ],
+      "polygon_material_indices": [
+        0
+      ],
+      "uv_layers": [
+        {
+          "name": "UV0_ArmorAtlas",
+          "loops": 5120,
+          "finite": true,
+          "min": [
+            0.7560838460922241,
+            0.25624996423721313
+          ],
+          "max": [
+            0.9902050495147705,
+            0.49375003576278687
+          ]
+        }
+      ],
+      "location": [
+        0.0,
+        0.0,
+        1.5700000524520874
+      ],
+      "rotation_euler": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "modifiers": [
+        {
+          "name": "Plate thickness \u2022 editable",
+          "type": "SOLIDIFY"
+        },
+        {
+          "name": "Soft maintained edges",
+          "type": "BEVEL"
+        }
+      ]
+    }
+  },
+  "evaluated_source_triangles": 94664,
+  "runtime_lods": [
+    {
+      "vertices": 47872,
+      "triangles": 94664,
+      "nonmanifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0,
+      "degenerate_triangles": 0,
+      "duplicate_position_vertices": 8,
+      "duplicate_geometric_triangles": 0,
+      "signed_volume_m3": 0.0010847144659472717,
+      "bounds_world_metres": [
+        [
+          -0.16827042400836945,
+          -0.1526000052690506,
+          -0.0880279541015625
+        ],
+        [
+          0.16827046871185303,
+          0.19259999692440033,
+          0.34222352504730225
+        ]
+      ],
+      "materials": [
+        "M_Kabuto01"
+      ],
+      "polygon_material_indices": [
+        0
+      ],
+      "uv_layers": [
+        {
+          "name": "UV0_ArmorAtlas",
+          "loops": 283992,
+          "finite": true,
+          "min": [
+            0.0040433998219668865,
+            0.005949999671429396
+          ],
+          "max": [
+            0.9937499761581421,
+            0.4940500259399414
+          ]
+        }
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_euler": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "modifiers": []
+    },
+    {
+      "vertices": 16159,
+      "triangles": 31238,
+      "nonmanifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0,
+      "degenerate_triangles": 0,
+      "duplicate_position_vertices": 0,
+      "duplicate_geometric_triangles": 0,
+      "signed_volume_m3": 0.0010601000871321286,
+      "bounds_world_metres": [
+        [
+          -0.16829819977283478,
+          -0.15259301662445068,
+          -0.08802362531423569
+        ],
+        [
+          0.16829822957515717,
+          0.19259411096572876,
+          0.34214454889297485
+        ]
+      ],
+      "materials": [
+        "M_Kabuto01"
+      ],
+      "polygon_material_indices": [
+        0
+      ],
+      "uv_layers": [
+        {
+          "name": "UV0_ArmorAtlas",
+          "loops": 93714,
+          "finite": true,
+          "min": [
+            0.00595000060275197,
+            0.0056500001810491085
+          ],
+          "max": [
+            0.9937500357627869,
+            0.49417126178741455
+          ]
+        }
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_euler": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "modifiers": []
+    },
+    {
+      "vertices": 4035,
+      "triangles": 7062,
+      "nonmanifold_edges": 0,
+      "boundary_edges": 0,
+      "wire_edges": 0,
+      "degenerate_triangles": 0,
+      "duplicate_position_vertices": 0,
+      "duplicate_geometric_triangles": 0,
+      "signed_volume_m3": 0.0009901475680409641,
+      "bounds_world_metres": [
+        [
+          -0.16841068863868713,
+          -0.1523178070783615,
+          -0.08780485391616821
+        ],
+        [
+          0.16841070353984833,
+          0.19182051718235016,
+          0.3422589898109436
+        ]
+      ],
+      "materials": [
+        "M_Kabuto01"
+      ],
+      "polygon_material_indices": [
+        0
+      ],
+      "uv_layers": [
+        {
+          "name": "UV0_ArmorAtlas",
+          "loops": 21186,
+          "finite": true,
+          "min": [
+            0.0010000000474974513,
+            0.0056500001810491085
+          ],
+          "max": [
+            0.9937500357627869,
+            0.49417126178741455
+          ]
+        }
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_euler": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "modifiers": []
+    }
+  ],
+  "textures": {
+    "BaseColor": {
+      "packed": true,
+      "blend_size": [
+        2048,
+        2048
+      ],
+      "external_png_size": [
+        2048,
+        2048
+      ],
+      "color_space": "sRGB",
+      "external_sha256": "db6ceacfa8b2ea2f74b61bd755517db8f3271f162c288bda3c20b6f0e33a42cc",
+      "channel_min": [
+        0.03529411926865578,
+        0.03921568766236305,
+        0.02352941408753395,
+        1.0
+      ],
+      "channel_max": [
+        0.9098039865493774,
+        0.7333333492279053,
+        0.4745098352432251,
+        1.0
+      ]
+    },
+    "Normal": {
+      "packed": true,
+      "blend_size": [
+        2048,
+        2048
+      ],
+      "external_png_size": [
+        2048,
+        2048
+      ],
+      "color_space": "Non-Color",
+      "external_sha256": "96da4d7933f199784e4f2716a5d299c628f40695e5cfb79490e9f9f8b05c8321",
+      "channel_min": [
+        0.13333334028720856,
+        0.22745099663734436,
+        0.8352941870689392,
+        1.0
+      ],
+      "channel_max": [
+        0.8705883026123047,
+        0.7725490927696228,
+        1.0,
+        1.0
+      ]
+    },
+    "ORM": {
+      "packed": true,
+      "blend_size": [
+        2048,
+        2048
+      ],
+      "external_png_size": [
+        2048,
+        2048
+      ],
+      "color_space": "Non-Color",
+      "external_sha256": "d61203ce0db7585f868394606587b6812cb3670ce6aac7bc4e2ce3a79d216e9d",
+      "channel_min": [
+        0.6313725709915161,
+        0.29411765933036804,
+        0.0,
+        1.0
+      ],
+      "channel_max": [
+        1.0,
+        0.9098039865493774,
+        1.0,
+        1.0
+      ]
+    }
+  },
+  "material": {
+    "name": "M_Kabuto01",
+    "normal_strengths": [
+      0.6499999761581421
+    ],
+    "uses_transparency": false
+  },
+  "head_to_helmet_bvh": {
+    "Fukigaeshi_L": {
+      "triangle_pairs": 0,
+      "examples": []
+    },
+    "Fukigaeshi_R": {
+      "triangle_pairs": 0,
+      "examples": []
+    },
+    "Hachi": {
+      "triangle_pairs": 0,
+      "examples": []
+    },
+    "Hachi_Fittings": {
+      "triangle_pairs": 0,
+      "examples": []
+    },
+    "Mabisashi": {
+      "triangle_pairs": 0,
+      "examples": []
+    },
+    "Mabisashi_Edge": {
+      "triangle_pairs": 0,
+      "examples": []
+    },
+    "Maedate": {
+      "triangle_pairs": 0,
+      "examples": []
+    },
+    "Padding rolled rim": {
+      "triangle_pairs": 0,
+      "examples": []
+    },
+    "Shikoro": {
+      "triangle_pairs": 0,
+      "examples": []
+    },
+    "ShinHimo": {
+      "triangle_pairs": 0,
+      "examples": []
+    },
+    "Uchiwa": {
+      "triangle_pairs": 0,
+      "examples": []
+    }
+  },
+  "upper_skull_clearance": {
+    "center_metres": [
+      0.0,
+      -0.010999999940395355,
+      1.694000005722046
+    ],
+    "results": {
+      "Hachi": {
+        "sampled_skull_vertices": 291,
+        "surface_hits": 291,
+        "open_region_rays": 0,
+        "axial_crown_aperture_rays": 0,
+        "min_clearance_mm": 19.886092324030283,
+        "median_clearance_mm": 32.422410068858944
+      }
+    }
+  },
+  "padding_clearance": {
+    "method": "Horizontal outward rays from the collar center to its inside surface at each actual skull vertex height",
+    "height_interval_metres": [
+      1.695,
+      1.735
+    ],
+    "ray_origin_xy_metres": [
+      0.0,
+      0.006
+    ],
+    "sampled_skull_vertices": 108,
+    "surface_hits": 108,
+    "missed_rays": 0,
+    "required_clearance_mm": 3.0,
+    "min_clearance_mm": 11.962036998888925,
+    "median_clearance_mm": 44.282622205786
+  },
+  "eye_region_forward_visibility": {
+    "sampled_points": 835,
+    "obstructions": {
+      "Fukigaeshi_L": 0,
+      "Fukigaeshi_R": 0,
+      "Hachi": 0,
+      "Hachi_Fittings": 0,
+      "Mabisashi": 0,
+      "Mabisashi_Edge": 0,
+      "Maedate": 0,
+      "Padding rolled rim": 0,
+      "Shikoro": 0,
+      "ShinHimo": 0,
+      "Uchiwa": 0
+    }
+  },
+  "exports": {
+    "Exports/SM_Kabuto01.fbx": {
+      "bytes": 7405132,
+      "sha256": "3995a987387304b24513837cb2536d77d93c5dc27352406ddce26c3404928acd"
+    },
+    "Exports/SM_Kabuto01_LOD1.fbx": {
+      "bytes": 2600508,
+      "sha256": "cf0e9e769bc9ac2dc083e5010f8bf52c8932ba3020517480abc3858d86c9eafc"
+    },
+    "Exports/SM_Kabuto01_LOD2.fbx": {
+      "bytes": 700652,
+      "sha256": "b45926355ee2a441481edabd81af12444e74ac0e708137ba739673e7608d45a3"
+    },
+    "Review/Exports/SK_FitMannequin.fbx": {
+      "bytes": 247324,
+      "sha256": "7dfd0316106935444ff85affcb495d665a23cf488dc2d1e58473480cfb2ff3e1"
+    },
+    "Review/Exports/SM_FitMannequin.fbx": {
+      "bytes": 123756,
+      "sha256": "8a517e3ada418694ed8aaa8c713ef9bae2567ab59de07baa9c797abfafbe6f69"
+    },
+    "Review/Exports/A_Idle.fbx": {
+      "bytes": 626396,
+      "sha256": "8f625e73ffcb9c6d9eda66ec05876f8166b6ca42bea5eed66c24e1f9ae6a2ad6"
+    },
+    "Review/Exports/A_Walk.fbx": {
+      "bytes": 553004,
+      "sha256": "2559b87656a2aa058e21bf186dfc8a8aafcead427059103da9ccf4b4fb0c1a44"
+    }
+  },
+  "limitations": [
+    "Texture detail is procedural tangent-space relief, not a sculpt-to-low-poly bake.",
+    "ORM red contains procedural pore and cord-contact occlusion, not mesh-baked ambient occlusion.",
+    "Disconnected closed plates, trim, rivets and cords intentionally overlap each other; no boolean union or inter-part self-intersection acceptance is claimed.",
+    "Duplicate vertex positions are reported separately from duplicate faces because UV seams and intersecting independent parts can share coordinates.",
+    "Bowl clearance samples the preserved mannequin's upper head; padding clearance uses horizontal rays within the collar height. Both use the neutral pose. Eye rays check forward visibility, not peripheral vision or animated neck clearance.",
+    "The fit mannequin is existing original prototype anatomy, not a certified production retarget standard."
+  ]
+}

@@ -1,0 +1,101 @@
+{
+	"rendered": true,
+	"validated": true,
+	"mode": "helmet",
+	"camera": "far",
+	"animation": "static instances",
+	"engine": "5.8.2-56702186+++UE5+Release-5.8",
+	"platform": "Mac",
+	"rhi": "Metal",
+	"build": "Development editor game; opt-in isolated art review",
+	"requested_count": 1000,
+	"rendered_bodies": 1000,
+	"rendered_helmets": 1000,
+	"instance_components": 20,
+	"skeletal_components": 0,
+	"camera_distance_cm": 31000,
+	"camera_horizontal_fov": 55,
+	"camera_elevation_degrees": 60,
+	"body_and_helmet_cast_shadows": true,
+	"warmup_seconds": 3,
+	"capture_seconds": 6.0138477049767971,
+	"frames": 435,
+	"median_fps": 73.521320009947615,
+	"peak_process_physical_bytes": 2983922760,
+	"max_attachment_position_error_cm": 0,
+	"max_helmet_rotation_from_first_degrees": 0,
+	"composed_head_reference_transform": "0.000000,0.000000,0.000000|0.000000,0.000000,-0.000000|1.000000,1.000000,1.000000",
+	"viewport_width": 1280,
+	"viewport_height": 720,
+	"screenshot": "/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/artifacts/kabuto01/helmet-1000-far.png",
+	"screenshot_exists": true,
+	"measurement_notes": "Frame intervals use game-thread wall time. Engine game/render counters exclude their idle time and may describe earlier frames; GPU samples are provided by the RHI when positive. Missing counters remain null. Screenshot readback occurs after sampling. Mesh LOD geometry is asset inventory, not GPU draw counts. Crowd views are static and do not measure animation, combat or population simulation.",
+	"frame":
+	{
+		"samples": 435,
+		"median_ms": 13.601496815681458,
+		"p95_ms": 15.970122069120407,
+		"worst_ms": 35.262040793895721
+	},
+	"game_thread":
+	{
+		"samples": 435,
+		"median_ms": 0.92020833492279053,
+		"p95_ms": 1.343416690826416,
+		"worst_ms": 21.272375106811523
+	},
+	"render_thread":
+	{
+		"samples": 435,
+		"median_ms": 13.611916542053223,
+		"p95_ms": 15.932666778564453,
+		"worst_ms": 35.554206848144531
+	},
+	"gpu":
+	{
+		"samples": 435,
+		"median_ms": 12.938875198364258,
+		"p95_ms": 14.835249900817871,
+		"worst_ms": 29.150541305541992
+	},
+	"median_rhi_draw_calls_all_passes": null,
+	"median_rhi_primitives_all_passes": null,
+	"helmet_mesh":
+	{
+		"asset": "/Game/Art/Characters/Samurai/Kabuto01/SM_Kabuto01.SM_Kabuto01",
+		"material_slots": 1,
+		"lods": [
+			{
+				"lod": 0,
+				"triangles": 94608,
+				"vertices": 96430,
+				"sections": 1
+			},
+			{
+				"lod": 1,
+				"triangles": 31238,
+				"vertices": 28811,
+				"sections": 1
+			},
+			{
+				"lod": 2,
+				"triangles": 7062,
+				"vertices": 9149,
+				"sections": 1
+			}
+		]
+	},
+	"mannequin_mesh":
+	{
+		"asset": "/Game/Art/Characters/Samurai/Kabuto01/Review/SM_FitMannequin.SM_FitMannequin",
+		"material_slots": 1,
+		"lods": [
+			{
+				"lod": 0,
+				"triangles": 5518,
+				"vertices": 3524,
+				"sections": 1
+			}
+		]
+	}
+}

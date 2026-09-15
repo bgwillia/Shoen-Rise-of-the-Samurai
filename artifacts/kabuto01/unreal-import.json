@@ -1,0 +1,334 @@
+{
+  "asset": "Kabuto01",
+  "engine_version": "5.8.2-56702186+++UE5+Release-5.8",
+  "validated": true,
+  "rendering_validated": false,
+  "imports": [
+    {
+      "source": "SourceArt/Characters/Samurai/Kabuto01/Textures/T_Kabuto01_BaseColor.png",
+      "assets": [
+        "/Game/Art/Characters/Samurai/Kabuto01/T_Kabuto01_BaseColor.T_Kabuto01_BaseColor"
+      ]
+    },
+    {
+      "source": "SourceArt/Characters/Samurai/Kabuto01/Textures/T_Kabuto01_Normal.png",
+      "assets": [
+        "/Game/Art/Characters/Samurai/Kabuto01/T_Kabuto01_Normal.T_Kabuto01_Normal"
+      ]
+    },
+    {
+      "source": "SourceArt/Characters/Samurai/Kabuto01/Textures/T_Kabuto01_ORM.png",
+      "assets": [
+        "/Game/Art/Characters/Samurai/Kabuto01/T_Kabuto01_ORM.T_Kabuto01_ORM"
+      ]
+    },
+    {
+      "source": "SourceArt/Characters/Samurai/Kabuto01/Exports/SM_Kabuto01.fbx",
+      "assets": [
+        "/Game/Art/Characters/Samurai/Kabuto01/SM_Kabuto01.SM_Kabuto01"
+      ]
+    },
+    {
+      "source": "SourceArt/Characters/Samurai/Kabuto01/Exports/SM_Kabuto01_LOD1.fbx",
+      "asset": "/Game/Art/Characters/Samurai/Kabuto01/SM_Kabuto01.SM_Kabuto01",
+      "lod": 1
+    },
+    {
+      "source": "SourceArt/Characters/Samurai/Kabuto01/Exports/SM_Kabuto01_LOD2.fbx",
+      "asset": "/Game/Art/Characters/Samurai/Kabuto01/SM_Kabuto01.SM_Kabuto01",
+      "lod": 2
+    },
+    {
+      "source": "SourceArt/Characters/Samurai/Kabuto01/Review/Exports/SK_FitMannequin.fbx",
+      "assets": [
+        "/Game/Art/Characters/Samurai/Kabuto01/Review/SK_FitMannequin.SK_FitMannequin"
+      ]
+    },
+    {
+      "source": "SourceArt/Characters/Samurai/Kabuto01/Review/Exports/SM_FitMannequin.fbx",
+      "assets": [
+        "/Game/Art/Characters/Samurai/Kabuto01/Review/SM_FitMannequin.SM_FitMannequin"
+      ]
+    },
+    {
+      "source": "SourceArt/Characters/Samurai/Kabuto01/Review/Exports/A_Idle.fbx",
+      "assets": [
+        "/Game/Art/Characters/Samurai/Kabuto01/Review/A_Idle.A_Idle"
+      ]
+    },
+    {
+      "source": "SourceArt/Characters/Samurai/Kabuto01/Review/Exports/A_Walk.fbx",
+      "assets": [
+        "/Game/Art/Characters/Samurai/Kabuto01/Review/A_Walk.A_Walk"
+      ]
+    }
+  ],
+  "fbx_import": {
+    "convert_scene": false,
+    "convert_scene_unit": true,
+    "force_front_x_axis": false,
+    "coordinate_contract": "Blender metres (x, y, z) -> Unreal cm (100x, -100y, 100z)"
+  },
+  "textures": {
+    "BaseColor": {
+      "asset": "/Game/Art/Characters/Samurai/Kabuto01/T_Kabuto01_BaseColor.T_Kabuto01_BaseColor",
+      "width": 2048,
+      "height": 2048,
+      "srgb": true,
+      "compression": "<TextureCompressionSettings.TC_DEFAULT: 0>",
+      "flip_green_channel": false
+    },
+    "Normal": {
+      "asset": "/Game/Art/Characters/Samurai/Kabuto01/T_Kabuto01_Normal.T_Kabuto01_Normal",
+      "width": 2048,
+      "height": 2048,
+      "srgb": false,
+      "compression": "<TextureCompressionSettings.TC_NORMALMAP: 1>",
+      "flip_green_channel": true
+    },
+    "ORM": {
+      "asset": "/Game/Art/Characters/Samurai/Kabuto01/T_Kabuto01_ORM.T_Kabuto01_ORM",
+      "width": 2048,
+      "height": 2048,
+      "srgb": false,
+      "compression": "<TextureCompressionSettings.TC_MASKS: 2>",
+      "flip_green_channel": false
+    }
+  },
+  "helmet": {
+    "asset": "/Game/Art/Characters/Samurai/Kabuto01/SM_Kabuto01.SM_Kabuto01",
+    "material_slots": 1,
+    "bounds_cm": {
+      "min": [
+        -16.827041625976562,
+        -19.260000228881836,
+        -8.80279541015625
+      ],
+      "max": [
+        16.82704734802246,
+        15.260000228881836,
+        34.22235107421875
+      ],
+      "size": [
+        33.65408897399902,
+        34.52000045776367,
+        43.025146484375
+      ]
+    },
+    "lods": [
+      {
+        "lod": 0,
+        "triangles": 94608,
+        "render_vertices": 96430,
+        "sections": 1,
+        "uv_channels": 1,
+        "section_material_slots": [
+          0
+        ],
+        "uv0": {
+          "vertex_instances_checked": 283824,
+          "min": [
+            0.0040433998219668865,
+            0.5059499740600586
+          ],
+          "max": [
+            0.9937499761581421,
+            0.9940500259399414
+          ]
+        }
+      },
+      {
+        "lod": 1,
+        "triangles": 31238,
+        "render_vertices": 28811,
+        "sections": 1,
+        "uv_channels": 1,
+        "section_material_slots": [
+          0
+        ],
+        "uv0": {
+          "vertex_instances_checked": 93714,
+          "min": [
+            0.00595000060275197,
+            0.5058287382125854
+          ],
+          "max": [
+            0.9937500357627869,
+            0.994350016117096
+          ]
+        }
+      },
+      {
+        "lod": 2,
+        "triangles": 7062,
+        "render_vertices": 9149,
+        "sections": 1,
+        "uv_channels": 1,
+        "section_material_slots": [
+          0
+        ],
+        "uv0": {
+          "vertex_instances_checked": 21186,
+          "min": [
+            0.0010000000474974513,
+            0.5058287382125854
+          ],
+          "max": [
+            0.9937500357627869,
+            0.994350016117096
+          ]
+        }
+      }
+    ],
+    "material": {
+      "asset": "/Game/Art/Characters/Samurai/Kabuto01/M_Kabuto01.M_Kabuto01",
+      "blend_mode": "<BlendMode.BLEND_OPAQUE: 0>",
+      "two_sided": false
+    }
+  },
+  "fit_mannequin_static": {
+    "asset": "/Game/Art/Characters/Samurai/Kabuto01/Review/SM_FitMannequin.SM_FitMannequin",
+    "material_slots": 1,
+    "bounds_cm": {
+      "min": [
+        -47.29999923706055,
+        -10.5,
+        13.0
+      ],
+      "max": [
+        47.29999923706055,
+        10.699999809265137,
+        177.6999969482422
+      ],
+      "size": [
+        94.5999984741211,
+        21.199999809265137,
+        164.6999969482422
+      ]
+    },
+    "lods": [
+      {
+        "lod": 0,
+        "triangles": 5518,
+        "render_vertices": 3524,
+        "sections": 1,
+        "uv_channels": 1,
+        "section_material_slots": [
+          0
+        ]
+      }
+    ]
+  },
+  "fit_mannequin_skeletal": {
+    "asset": "/Game/Art/Characters/Samurai/Kabuto01/Review/SK_FitMannequin.SK_FitMannequin",
+    "skeleton": "/Game/Art/Characters/Samurai/Kabuto01/Review/SK_FitMannequin_Skeleton.SK_FitMannequin_Skeleton",
+    "bone_count": 64,
+    "bone_names": [
+      "FIT_Rig",
+      "root",
+      "pelvis",
+      "spine_01",
+      "spine_02",
+      "spine_03",
+      "neck_01",
+      "head",
+      "clavicle_r",
+      "upperarm_r",
+      "lowerarm_r",
+      "hand_r",
+      "thumb_01_r",
+      "thumb_02_r",
+      "thumb_03_r",
+      "index_01_r",
+      "index_02_r",
+      "index_03_r",
+      "middle_01_r",
+      "middle_02_r",
+      "middle_03_r",
+      "ring_01_r",
+      "ring_02_r",
+      "ring_03_r",
+      "pinky_01_r",
+      "pinky_02_r",
+      "pinky_03_r",
+      "sode_r",
+      "clavicle_l",
+      "upperarm_l",
+      "lowerarm_l",
+      "hand_l",
+      "thumb_01_l",
+      "thumb_02_l",
+      "thumb_03_l",
+      "index_01_l",
+      "index_02_l",
+      "index_03_l",
+      "middle_01_l",
+      "middle_02_l",
+      "middle_03_l",
+      "ring_01_l",
+      "ring_02_l",
+      "ring_03_l",
+      "pinky_01_l",
+      "pinky_02_l",
+      "pinky_03_l",
+      "bow_socket",
+      "sode_l",
+      "quiver_socket",
+      "thigh_r",
+      "calf_r",
+      "foot_r",
+      "ball_r",
+      "thigh_l",
+      "calf_l",
+      "foot_l",
+      "ball_l",
+      "skirt_front",
+      "skirt_back",
+      "skirt_l",
+      "skirt_r",
+      "sword_socket",
+      "sheath_socket"
+    ],
+    "head_parent": "neck_01",
+    "head_local_reference_transform": "<Struct 'Transform' (0x160cad530) {rotation: {x: 0.000000, y: -0.000000, z: 0.000000, w: -1.000000}, translation: {x: 0.000000, y: -0.110000, z: 0.000000}, scale3d: {x: 1.000000, y: 1.000000, z: 1.000000}}>",
+    "lods": [
+      {
+        "lod": 0,
+        "render_vertices": 4195,
+        "sections": 1
+      }
+    ],
+    "material_slots": 1
+  },
+  "animations": [
+    {
+      "asset": "/Game/Art/Characters/Samurai/Kabuto01/Review/A_Idle.A_Idle",
+      "duration_seconds": 2.0,
+      "frames": 60,
+      "skeleton": "/Game/Art/Characters/Samurai/Kabuto01/Review/SK_FitMannequin_Skeleton.SK_FitMannequin_Skeleton"
+    },
+    {
+      "asset": "/Game/Art/Characters/Samurai/Kabuto01/Review/A_Walk.A_Walk",
+      "duration_seconds": 1.0,
+      "frames": 30,
+      "skeleton": "/Game/Art/Characters/Samurai/Kabuto01/Review/SK_FitMannequin_Skeleton.SK_FitMannequin_Skeleton"
+    }
+  ],
+  "review_map": {
+    "asset": "/Game/Art/Characters/Samurai/Kabuto01/Review/Kabuto01_Review",
+    "default_game_mode": "/Script/Shoen.KabutoReviewGameMode"
+  },
+  "saved_assets": [
+    "/Game/Art/Characters/Samurai/Kabuto01/M_Kabuto01.M_Kabuto01",
+    "/Game/Art/Characters/Samurai/Kabuto01/Review/A_Idle.A_Idle",
+    "/Game/Art/Characters/Samurai/Kabuto01/Review/A_Walk.A_Walk",
+    "/Game/Art/Characters/Samurai/Kabuto01/Review/M_FitMannequin.M_FitMannequin",
+    "/Game/Art/Characters/Samurai/Kabuto01/Review/SK_FitMannequin.SK_FitMannequin",
+    "/Game/Art/Characters/Samurai/Kabuto01/Review/SK_FitMannequin_Skeleton.SK_FitMannequin_Skeleton",
+    "/Game/Art/Characters/Samurai/Kabuto01/Review/SM_FitMannequin.SM_FitMannequin",
+    "/Game/Art/Characters/Samurai/Kabuto01/SM_Kabuto01.SM_Kabuto01",
+    "/Game/Art/Characters/Samurai/Kabuto01/T_Kabuto01_BaseColor.T_Kabuto01_BaseColor",
+    "/Game/Art/Characters/Samurai/Kabuto01/T_Kabuto01_Normal.T_Kabuto01_Normal",
+    "/Game/Art/Characters/Samurai/Kabuto01/T_Kabuto01_ORM.T_Kabuto01_ORM"
+  ]
+}

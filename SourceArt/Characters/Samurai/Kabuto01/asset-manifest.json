@@ -1,0 +1,133 @@
+{
+  "asset": "Kabuto01",
+  "blender_version": "5.1.2",
+  "source_components": {
+    "Hachi": 4800,
+    "Hachi_Fittings": 16416,
+    "Mabisashi": 160,
+    "Mabisashi_Edge": 1048,
+    "Shikoro": 41440,
+    "Fukigaeshi_L": 2968,
+    "Fukigaeshi_R": 2968,
+    "Maedate": 7328,
+    "Uchiwa": 384,
+    "Padding rolled rim": 1024,
+    "ShinHimo": 4328
+  },
+  "source_triangles_before_modifiers": 82864,
+  "runtime_lod_triangles": [
+    94664,
+    31238,
+    7062
+  ],
+  "runtime_materials": 1,
+  "source_materials": 1,
+  "surface_classes": [
+    "lacquered iron",
+    "aged brass",
+    "dark red cord",
+    "leather padding"
+  ],
+  "source_component_objects": 11,
+  "head_bounds_metres": [
+    [
+      -0.09099999815225601,
+      -0.10700000077486038,
+      1.5449999570846558
+    ],
+    [
+      0.09099999815225601,
+      0.08500000089406967,
+      1.7769999504089355
+    ]
+  ],
+  "head_pivot_metres": [
+    0.0,
+    0.0,
+    1.5700000524520874
+  ],
+  "source_fit_file": "SourceArt/Characters/Samurai/Prototype01/Samurai01.blend",
+  "source_fit_sha256": "8ef9b52e33a70196616add1b71522dd643a7c2429d2a577687193777ed1a9917",
+  "fit_body_geometry_unchanged": true,
+  "helmet_bounds_head_relative_metres": [
+    [
+      -0.16827042400836945,
+      -0.1526000052690506,
+      -0.0880279541015625
+    ],
+    [
+      0.16827046871185303,
+      0.19259999692440033,
+      0.34222352504730225
+    ]
+  ],
+  "texture_dimensions": [
+    2048,
+    2048
+  ],
+  "fbx_import": {
+    "convert_scene": false,
+    "convert_scene_unit": true,
+    "source_to_unreal": [
+      100,
+      -100,
+      100
+    ],
+    "component_yaw": -90
+  },
+  "reference_priority": "3D sheet hero silhouette, crescent and red cord; turnaround bowl/neck construction. Dimensions in generated sheets are approximate.",
+  "evaluated_source_triangles": 94664,
+  "exported_triangles": 94664,
+  "export_operation": "Saved Blender source -> evaluated runtime copies; no source reconstruction",
+  "exported_from_source_sha256": "241d813ecab6e9920b6c3d62ab2d53a3267e0b2944cdbd226cd06490987d1e89",
+  "source_blend_sha256": "8e7a80e3e36c6b2acbd19fa0385d49da476140864370e53ea6f6c85d4f3f45f1",
+  "editable_geometry_sha256": "f5d538961a317fb8c7fed382dfe081d19e0e39b8e70d6088f6da23eba167f466",
+  "editable_geometry_preserved_during_export": true,
+  "reduction_ratios": [
+    1.0,
+    0.33,
+    0.075
+  ],
+  "export_files": {
+    "Exports/SM_Kabuto01.fbx": {
+      "bytes": 7405132,
+      "sha256": "3995a987387304b24513837cb2536d77d93c5dc27352406ddce26c3404928acd"
+    },
+    "Exports/SM_Kabuto01_LOD1.fbx": {
+      "bytes": 2600508,
+      "sha256": "cf0e9e769bc9ac2dc083e5010f8bf52c8932ba3020517480abc3858d86c9eafc"
+    },
+    "Exports/SM_Kabuto01_LOD2.fbx": {
+      "bytes": 700652,
+      "sha256": "b45926355ee2a441481edabd81af12444e74ac0e708137ba739673e7608d45a3"
+    },
+    "Review/Exports/A_Idle.fbx": {
+      "bytes": 626396,
+      "sha256": "8f625e73ffcb9c6d9eda66ec05876f8166b6ca42bea5eed66c24e1f9ae6a2ad6"
+    },
+    "Review/Exports/A_Walk.fbx": {
+      "bytes": 553004,
+      "sha256": "2559b87656a2aa058e21bf186dfc8a8aafcead427059103da9ccf4b4fb0c1a44"
+    },
+    "Review/Exports/SK_FitMannequin.fbx": {
+      "bytes": 247324,
+      "sha256": "7dfd0316106935444ff85affcb495d665a23cf488dc2d1e58473480cfb2ff3e1"
+    },
+    "Review/Exports/SM_FitMannequin.fbx": {
+      "bytes": 123756,
+      "sha256": "8a517e3ada418694ed8aaa8c713ef9bae2567ab59de07baa9c797abfafbe6f69"
+    },
+    "Textures/T_Kabuto01_BaseColor.png": {
+      "bytes": 7267377,
+      "sha256": "db6ceacfa8b2ea2f74b61bd755517db8f3271f162c288bda3c20b6f0e33a42cc"
+    },
+    "Textures/T_Kabuto01_Normal.png": {
+      "bytes": 6987466,
+      "sha256": "96da4d7933f199784e4f2716a5d299c628f40695e5cfb79490e9f9f8b05c8321"
+    },
+    "Textures/T_Kabuto01_ORM.png": {
+      "bytes": 4622411,
+      "sha256": "d61203ce0db7585f868394606587b6812cb3670ce6aac7bc4e2ce3a79d216e9d"
+    }
+  }
+}

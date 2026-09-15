@@ -1,0 +1,19 @@
+Final import log excerpt; full local log is artifacts/local/kabuto01/import.log.
+No tangent/binormal messages occurred in this final log.
+UnifiedErrorTest lines are engine startup self-test output, not failed helmet import assertions.
+
+[2026.09.15-15.38.54:851][  0]LogUObjectGlobals: Warning: Failed to find object 'Object /ACLPlugin/ACLAnimBoneCompressionSettings'
+[2026.09.15-15.38.54:851][  0]LogAnimationCompression: Warning: Couldn't load default compression settings asset with path '/ACLPlugin/ACLAnimBoneCompressionSettings'
+[2026.09.15-15.38.54:852][  0]LogUObjectGlobals: Warning: Failed to find object 'Object /ACLPlugin/ACLAnimCurveCompressionSettings'
+[2026.09.15-15.38.54:852][  0]LogAnimationCompression: Warning: Couldn't load default compression settings asset with path '/ACLPlugin/ACLAnimCurveCompressionSettings'
+[2026.09.15-15.38.55:161][  0]LogTemp: Error test: UE::UnifiedErrorTest::Empty: [Empty error]
+[2026.09.15-15.38.55:161][  0]LogTemp: Error with param: UE::UnifiedErrorTest::WithInt: [Error with int -7]
+[2026.09.15-15.38.55:161][  0]LogTemp: Error with context: UE::UnifiedErrorTest::Empty: [Empty error]
+[2026.09.15-15.38.55:161][  0]LogTemp: FError that has been invalidated: ::: []
+[2026.09.15-15.38.55:161][  0]LogTemp: FError that has been moved from: ::: []
+[2026.09.15-15.38.55:438][  0]LogAudioMixerAudioUnit: Warning: Error querying Sample Rate: 2003332927
+[2026.09.15-15.38.57:315][  0]MapCheck: Map check complete: 0 Error(s), 0 Warning(s), took 0.046ms to complete.
+[2026.09.15-15.38.58:263][  1]LogPython: Warning: /Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/SourceArt/Characters/Samurai/Kabuto01/Scripts/import_unreal.py:245: DeprecationWarning: MaterialEditingLibrary: Function 'set_material_usage' on 'MaterialEditingLibrary' is deprecated: Use SetBaseMaterialUsage instead
+[2026.09.15-15.39.13:427][  1]LogPython: Warning: /Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/SourceArt/Characters/Samurai/Kabuto01/Scripts/import_unreal.py:286: DeprecationWarning: MaterialEditingLibrary: Function 'set_material_usage' on 'MaterialEditingLibrary' is deprecated: Use SetBaseMaterialUsage instead
+[2026.09.15-15.39.13:427][  1]LogPython: Warning: /Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/SourceArt/Characters/Samurai/Kabuto01/Scripts/import_unreal.py:287: DeprecationWarning: MaterialEditingLibrary: Function 'set_material_usage' on 'MaterialEditingLibrary' is deprecated: Use SetBaseMaterialUsage instead
+[2026.09.15-15.39.13:799][  1]MapCheck: Map check complete: 0 Error(s), 0 Warning(s), took 0.043ms to complete.

@@ -1,0 +1,76 @@
+{
+	"rendered": true,
+	"validated": true,
+	"mode": "mannequin",
+	"camera": "tactical",
+	"animation": "static instances",
+	"engine": "5.8.2-56702186+++UE5+Release-5.8",
+	"platform": "Mac",
+	"rhi": "Metal",
+	"build": "Development editor game; opt-in isolated art review",
+	"requested_count": 500,
+	"rendered_bodies": 500,
+	"rendered_helmets": 0,
+	"instance_components": 5,
+	"skeletal_components": 0,
+	"camera_distance_cm": 11000,
+	"camera_horizontal_fov": 55,
+	"camera_elevation_degrees": 60,
+	"body_and_helmet_cast_shadows": true,
+	"warmup_seconds": 3,
+	"capture_seconds": 12.008434001356363,
+	"frames": 1064,
+	"median_fps": 94.181897921570595,
+	"peak_process_physical_bytes": 2965720112,
+	"max_attachment_position_error_cm": 0,
+	"max_helmet_rotation_from_first_degrees": 0,
+	"composed_head_reference_transform": "0.000000,0.000000,0.000000|0.000000,0.000000,-0.000000|1.000000,1.000000,1.000000",
+	"viewport_width": 1280,
+	"viewport_height": 720,
+	"screenshot": "/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/artifacts/kabuto01/mannequin-500-tactical.png",
+	"screenshot_exists": true,
+	"measurement_notes": "Frame intervals use game-thread wall time. Engine game/render counters exclude their idle time and may describe earlier frames; GPU samples are provided by the RHI when positive. Missing counters remain null. Screenshot readback occurs after sampling. Mesh LOD geometry is asset inventory, not GPU draw counts. Crowd views are static and do not measure animation, combat or population simulation.",
+	"frame":
+	{
+		"samples": 1064,
+		"median_ms": 10.617751628160477,
+		"p95_ms": 15.654627233743668,
+		"worst_ms": 40.879666805267334
+	},
+	"game_thread":
+	{
+		"samples": 1064,
+		"median_ms": 0.89170831441879272,
+		"p95_ms": 1.3715833425521851,
+		"worst_ms": 12.685041427612305
+	},
+	"render_thread":
+	{
+		"samples": 1064,
+		"median_ms": 10.610791206359863,
+		"p95_ms": 15.649791717529297,
+		"worst_ms": 52.781623840332031
+	},
+	"gpu":
+	{
+		"samples": 1064,
+		"median_ms": 10.045042037963867,
+		"p95_ms": 15.072375297546387,
+		"worst_ms": 24.881542205810547
+	},
+	"median_rhi_draw_calls_all_passes": null,
+	"median_rhi_primitives_all_passes": null,
+	"mannequin_mesh":
+	{
+		"asset": "/Game/Art/Characters/Samurai/Kabuto01/Review/SM_FitMannequin.SM_FitMannequin",
+		"material_slots": 1,
+		"lods": [
+			{
+				"lod": 0,
+				"triangles": 5518,
+				"vertices": 3524,
+				"sections": 1
+			}
+		]
+	}
+}
