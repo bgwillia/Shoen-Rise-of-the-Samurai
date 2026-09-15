@@ -47,9 +47,9 @@ namespace
 {
 const TCHAR* SodeMannyAsset = TEXT("/Game/Characters/Mannequins/Meshes/SKM_Manny_Simple");
 const TCHAR* SodeMannyAnimations = TEXT("/Game/Characters/Mannequins/Anims/Unarmed/");
-const TCHAR* KabutoRoot = TEXT("/Game/Art/Characters/Samurai/Kabuto01/");
+const TCHAR* SodeKabutoRoot = TEXT("/Game/Art/Characters/Samurai/Kabuto01/");
 const TCHAR* SodeRoot = TEXT("/Game/Art/Characters/Samurai/Sode01/");
-const TCHAR* DoRoot = TEXT("/Game/Art/Characters/Samurai/Do01/");
+const TCHAR* SodeDoRoot = TEXT("/Game/Art/Characters/Samurai/Do01/");
 template<typename T> T* SodeArt(const TCHAR* Root, const TCHAR* Name)
 {
     return LoadObject<T>(nullptr, *(FString(Root) + Name));
@@ -111,7 +111,7 @@ void SodeConfigurePrimitive(UPrimitiveComponent* Component)
 
 namespace
 {
-bool ValidArmor(USkeletalMesh* Armor, USkeletalMesh* Body)
+bool SodeValidArmor(USkeletalMesh* Armor, USkeletalMesh* Body)
 {
     if (!Armor || !Body || Armor->GetSkeleton() != Body->GetSkeleton() || Armor->GetMaterials().IsEmpty()) return false;
     const auto* Data = Armor->GetResourceForRendering();
@@ -191,7 +191,7 @@ bool SodeSuspensionTarget(const FTransform& RefTorso, const FTransform& RefUpper
     return !Target.ContainsNaN() && FMath::IsFinite(Opening);
 }
 
-void AddSkeletalInfo(const TSharedRef<FJsonObject>& Json, const TCHAR* Key, USkeletalMesh* Mesh)
+void SodeAddSkeletalInfo(const TSharedRef<FJsonObject>& Json, const TCHAR* Key, USkeletalMesh* Mesh)
 {
     if (!Mesh) return;
     auto Info = MakeShared<FJsonObject>();
@@ -410,14 +410,14 @@ bool ASodeReviewGameMode::CreateReview()
     if (!Cube || !Basic || !BodyMesh) return false;
     if (Mode != TEXT("mannequin"))
     {
-        HelmetMesh = SodeArt<UStaticMesh>(KabutoRoot, TEXT("SM_Kabuto01"));
+        HelmetMesh = SodeArt<UStaticMesh>(SodeKabutoRoot, TEXT("SM_Kabuto01"));
         if (!HelmetMesh || HelmetMesh->GetStaticMaterials().IsEmpty()) return false;
     }
     if (Mode == TEXT("armor") || Mode == TEXT("sode"))
     {
-        ArmorMesh = SodeArt<USkeletalMesh>(DoRoot, TEXT("SK_Do01"));
-        ArmorStaticMesh = SodeArt<UStaticMesh>(DoRoot, TEXT("Review/SM_Do01"));
-        if (!ValidArmor(ArmorMesh, BodyMesh) || !ArmorStaticMesh || ArmorStaticMesh->GetStaticMaterials().IsEmpty()) return false;
+        ArmorMesh = SodeArt<USkeletalMesh>(SodeDoRoot, TEXT("SK_Do01"));
+        ArmorStaticMesh = SodeArt<UStaticMesh>(SodeDoRoot, TEXT("Review/SM_Do01"));
+        if (!SodeValidArmor(ArmorMesh, BodyMesh) || !ArmorStaticMesh || ArmorStaticMesh->GetStaticMaterials().IsEmpty()) return false;
         for (const auto& Section : ArmorMesh->GetResourceForRendering()->LODRenderData[0].RenderSections)
             for (const auto Index : Section.BoneMap)
             {
@@ -434,7 +434,7 @@ bool ASodeReviewGameMode::CreateReview()
     {
         SodeLeftMesh = SodeArt<USkeletalMesh>(SodeRoot, TEXT("SK_Sode_L_01"));
         SodeRightMesh = SodeArt<USkeletalMesh>(SodeRoot, TEXT("SK_Sode_R_01"));
-        if (!ValidArmor(SodeLeftMesh, BodyMesh) || !ValidArmor(SodeRightMesh, BodyMesh)) return false;
+        if (!SodeValidArmor(SodeLeftMesh, BodyMesh) || !SodeValidArmor(SodeRightMesh, BodyMesh)) return false;
         // Native Manny faces +Y; after the unchanged -90 degree component yaw,
         // positive source X is anatomical left and negative source X is right.
         if (SodeLeftMesh->GetImportedBounds().Origin.X <= 0 || SodeRightMesh->GetImportedBounds().Origin.X >= 0) return false;
@@ -519,8 +519,8 @@ bool ASodeReviewGameMode::CreateReview()
         const FTransform BodyTransform(FRotator(0,ComponentYaw,0));
         // Use the same waist-to-crest envelope in every comparison mode.
         // Manny's full arm/leg bounds otherwise push the torso too far away.
-        auto* FramingArmor = SodeArt<USkeletalMesh>(DoRoot, TEXT("SK_Do01"));
-        auto* FramingHelmet = SodeArt<UStaticMesh>(KabutoRoot, TEXT("SM_Kabuto01"));
+        auto* FramingArmor = SodeArt<USkeletalMesh>(SodeDoRoot, TEXT("SK_Do01"));
+        auto* FramingHelmet = SodeArt<UStaticMesh>(SodeKabutoRoot, TEXT("SM_Kabuto01"));
         if (!FramingArmor || !FramingHelmet) return false;
         FBox Bounds = FramingArmor->GetImportedBounds().GetBox().TransformBy(BodyTransform);
         Bounds += FramingHelmet->GetBoundingBox().TransformBy(HelmetAtReference*BodyTransform);
@@ -795,10 +795,10 @@ void ASodeReviewGameMode::CompleteReview()
     Json->SetNumberField(TEXT("max_armor_bone_position_error_cm"), MaxArmorBonePositionError);
     Json->SetNumberField(TEXT("max_armor_bone_rotation_error_degrees"), MaxArmorBoneRotationError);
     Json->SetNumberField(TEXT("max_component_world_scale_error"), MaxWorldScaleError);
-    Json->SetBoolField(TEXT("armor_skeleton_compatible"), !ArmorMesh || ValidArmor(ArmorMesh,BodyMesh));
+    Json->SetBoolField(TEXT("armor_skeleton_compatible"), !ArmorMesh || SodeValidArmor(ArmorMesh,BodyMesh));
     Json->SetNumberField(TEXT("max_sode_bone_position_error_cm"), MaxSodeBonePositionError);
     Json->SetNumberField(TEXT("max_sode_bone_rotation_error_degrees"), MaxSodeBoneRotationError);
-    Json->SetBoolField(TEXT("sode_skeleton_compatible"), !SodeLeftMesh || (ValidArmor(SodeLeftMesh, BodyMesh) && ValidArmor(SodeRightMesh, BodyMesh)));
+    Json->SetBoolField(TEXT("sode_skeleton_compatible"), !SodeLeftMesh || (SodeValidArmor(SodeLeftMesh, BodyMesh) && SodeValidArmor(SodeRightMesh, BodyMesh)));
     Json->SetStringField(TEXT("sode_pose_method"), Sodes.IsEmpty() ? TEXT("absent") : TEXT("copied native local pose, then stateless rigid suspension override on the same upperarm bone"));
     Json->SetNumberField(TEXT("sode_suspension_samples"),SuspensionSamples);
     Json->SetStringField(TEXT("sode_error_reference"),TEXT("Copied body pose with intended controlled upperarm and propagated child transforms; raw body/armor upperarm differences are expected suspension motion"));
@@ -864,10 +864,10 @@ void ASodeReviewGameMode::CompleteReview()
     else Json->SetField(TEXT("median_rhi_primitives_all_passes"),MakeShared<FJsonValueNull>());
     SodeAddMeshInfo(Json,TEXT("helmet_mesh"),HelmetMesh);
     SodeAddMeshInfo(Json,TEXT("armor_static_mesh"),ArmorStaticMesh);
-    AddSkeletalInfo(Json,TEXT("body_skeletal_mesh"),BodyMesh);
-    AddSkeletalInfo(Json,TEXT("armor_skeletal_mesh"),ArmorMesh);
-    AddSkeletalInfo(Json,TEXT("sode_left_skeletal_mesh"),SodeLeftMesh);
-    AddSkeletalInfo(Json,TEXT("sode_right_skeletal_mesh"),SodeRightMesh);
+    SodeAddSkeletalInfo(Json,TEXT("body_skeletal_mesh"),BodyMesh);
+    SodeAddSkeletalInfo(Json,TEXT("armor_skeletal_mesh"),ArmorMesh);
+    SodeAddSkeletalInfo(Json,TEXT("sode_left_skeletal_mesh"),SodeLeftMesh);
+    SodeAddSkeletalInfo(Json,TEXT("sode_right_skeletal_mesh"),SodeRightMesh);
     FString Text;
     FJsonSerializer::Serialize(Json,TJsonWriterFactory<>::Create(&Text));
     IFileManager::Get().MakeDirectory(*FPaths::GetPath(Output),true);
