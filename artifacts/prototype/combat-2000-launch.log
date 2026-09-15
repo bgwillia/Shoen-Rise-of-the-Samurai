@@ -1,0 +1,935 @@
++ ["/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/UnrealEditor.app/Contents/MacOS/UnrealEditor", "/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/game/Shoen.uproject", "/Game/Domain/Maps/Foundation", "-game", "-windowed", "-ResX=1600", "-ResY=900", "-NoVSync", "-ShoenScenario=prototype", "-ShoenCombatSoldiersPerSide=2000", "-ShoenCombatBenchmarkSeconds=45", "-ShoenCombatBenchmarkOutput=/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/artifacts/combat/combat-2000.json", "-stdout", "-FullStdOutLogOutput"]
+Opening shared memory
+Existing instance is the same age or newer
+LogInit: Running DelayedAutoRegister Phase StartOfEnginePreInit
+LogInit: Display: Running engine for game: Shoen
+LogCore: UTS: Unreal Trace Server launched successfully
+LogTrace: Initializing trace...
+LogCore: Display: Requested channels: 'cpu,gpu,frame,log,bookmark,screenshot,region'
+LogCore: No trace connection. Tracing to in-memory cache.
+LogTrace: Display: Control listening on port 1985
+LogTrace: Finished trace initialization.
+LogCsvProfiler: Display: Metadata set : platform="Mac"
+LogCsvProfiler: Display: Metadata set : config="Development"
+LogCsvProfiler: Display: Metadata set : buildversion="++UE5+Release-5.8-CL-56702186"
+LogCsvProfiler: Display: Metadata set : engineversion="5.8.2-56702186+++UE5+Release-5.8"
+LogCsvProfiler: Display: Metadata set : enginereleaseversion="5.8.2"
+LogCsvProfiler: Display: Metadata set : os="macOS 26.6.2 25G83"
+LogCsvProfiler: Display: Metadata set : cpu="Apple|Apple M1 Max"
+LogCsvProfiler: Display: Metadata set : pgoenabled="0"
+LogCsvProfiler: Display: Metadata set : pgoprofilingenabled="0"
+LogCsvProfiler: Display: Metadata set : ltoenabled="0"
+LogCsvProfiler: Display: Metadata set : asan="0"
+LogCsvProfiler: Display: Metadata set : mergedmodules="0"
+LogCsvProfiler: Display: Metadata set : compacttset="0"
+LogCsvProfiler: Display: Metadata set : commandline="" /Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/game/Shoen.uproject /Game/Domain/Maps/Foundation -game -windowed -ResX=1600 -ResY=900 -NoVSync -ShoenScenario=prototype -ShoenCombatSoldiersPerSide=2000 -ShoenCombatBenchmarkSeconds=45 -ShoenCombatBenchmarkOutput=/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/artifacts/combat/combat-2000.json -stdout -FullStdOutLogOutput""
+LogCsvProfiler: Display: Metadata set : loginid="898795cd524a67e1bea765b2b41cff8f"
+LogCsvProfiler: Display: Metadata set : llm="0"
+LogModuleManager: InternalLoadLibrary: 'StorageServerClient' ('/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/libUnrealEditor-StorageServerClient.dylib')
+LogModuleManager: InternalLoadLibrary: 'CookOnTheFly' ('/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/libUnrealEditor-CookOnTheFly.dylib')
+LogModuleManager: InternalLoadLibrary: 'StreamingFile' ('/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/libUnrealEditor-StreamingFile.dylib')
+LogModuleManager: InternalLoadLibrary: 'NetworkFile' ('/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/libUnrealEditor-NetworkFile.dylib')
+LogModuleManager: InternalLoadLibrary: 'PakFile' ('/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/libUnrealEditor-PakFile.dylib')
+LogModuleManager: InternalLoadLibrary: 'RSA' ('/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/libUnrealEditor-RSA.dylib')
+LogModuleManager: InternalLoadLibrary: 'SandboxFile' ('/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/libUnrealEditor-SandboxFile.dylib')
+LogCsvProfiler: Display: Metadata set : zenstreaming="0"
+LogInit: Running DelayedAutoRegister Phase FileSystemReady
+LogModuleManager: InternalLoadLibrary: 'DesktopPlatform' ('/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/libUnrealEditor-DesktopPlatform.dylib')
+Launching UnrealBuildTool... [/Users/Shared/Epic Games/UE_5.8/Engine/Build/BatchFiles/Mac/Build.sh -Mode=ValidatePlatforms -OutputSDKs  -AllPlatforms  -project="/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/game/Shoen.uproject" -log="/Users/brianwilliams/Library/Logs/Shoen/AutoSDKInfo.txt" -verbose -timestamps]
+LogInit: Running DelayedAutoRegister Phase TaskGraphSystemReady
+LogStats: Stats thread started at 0.783066
+LogInit: Running DelayedAutoRegister Phase StatSystemReady
+LogModuleManager: InternalLoadLibrary: 'CoreUObject' ('/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/libUnrealEditor-CoreUObject.dylib')
+Setting up bundled DotNet SDK
+/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/ThirdParty/DotNet/10.0/mac-arm64
+Running dotnet Engine/Binaries/DotNET/UnrealBuildTool/UnrealBuildTool.dll -Mode=ValidatePlatforms -OutputSDKs -AllPlatforms -project=/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/game/Shoen.uproject -log=/Users/brianwilliams/Library/Logs/Shoen/AutoSDKInfo.txt -verbose -timestamps
+LogCsvProfiler: Display: Metadata set : systemresolution.resx="1280"
+LogCsvProfiler: Display: Metadata set : systemresolution.resy="720"
+LogModuleManager: InternalLoadLibrary: 'Engine' ('/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/libUnrealEditor-Engine.dylib')
+LogModuleManager: InternalLoadLibrary: 'UniversalObjectLocator' ('/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/libUnrealEditor-UniversalObjectLocator.dylib')
+LogModuleManager: InternalLoadLibrary: 'Renderer' ('/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/libUnrealEditor-Renderer.dylib')
+LogModuleManager: InternalLoadLibrary: 'AnimGraphRuntime' ('/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/libUnrealEditor-AnimGraphRuntime.dylib')
+LogModuleManager: InternalLoadLibrary: 'AudioMixerCoreAudio' ('/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/libUnrealEditor-AudioMixerCoreAudio.dylib')
+LogModuleManager: InternalLoadLibrary: 'AudioMixerCore' ('/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/libUnrealEditor-AudioMixerCore.dylib')
+LogModuleManager: InternalLoadLibrary: 'SignalProcessing' ('/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/libUnrealEditor-SignalProcessing.dylib')
+LogModuleManager: InternalLoadLibrary: 'SlateRHIRenderer' ('/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/libUnrealEditor-SlateRHIRenderer.dylib')
+LogModuleManager: InternalLoadLibrary: 'Landscape' ('/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/libUnrealEditor-Landscape.dylib')
+LogModuleManager: InternalLoadLibrary: 'RHICore' ('/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/libUnrealEditor-RHICore.dylib')
+LogModuleManager: InternalLoadLibrary: 'RenderCore' ('/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/libUnrealEditor-RenderCore.dylib')
+LogModuleManager: InternalLoadLibrary: 'TextureCompressor' ('/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/libUnrealEditor-TextureCompressor.dylib')
+LogModuleManager: InternalLoadLibrary: 'OpenColorIOWrapper' ('/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/libUnrealEditor-OpenColorIOWrapper.dylib')
+LogModuleManager: InternalLoadLibrary: 'Virtualization' ('/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/libUnrealEditor-Virtualization.dylib')
+LogModuleManager: InternalLoadLibrary: 'MessageLog' ('/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/libUnrealEditor-MessageLog.dylib')
+LogModuleManager: InternalLoadLibrary: 'AudioEditor' ('/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/libUnrealEditor-AudioEditor.dylib')
+LogModuleManager: InternalLoadLibrary: 'PropertyEditor' ('/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/libUnrealEditor-PropertyEditor.dylib')
+LogModuleManager: InternalLoadLibrary: 'AudioExtensions' ('/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/libUnrealEditor-AudioExtensions.dylib')
+LogModuleManager: InternalLoadLibrary: 'AnimationModifiers' ('/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/libUnrealEditor-AnimationModifiers.dylib')
+LogICUInternationalization: ICU TimeZone Detection - Raw Offset: -5:00, Platform Override: ''
+LogInit: Session CrashGUID >====================================================
+         Session CrashGUID >   UECC-Mac-1938EB7E324361CDEA017C8EC1E105CA
+         Session CrashGUID >====================================================
+LogConfig: No local boot hotfix file found at: [../../../../../../brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/game/Saved/PersistentDownloadDir/HotfixForNextBoot.txt]
+LogInit: Running DelayedAutoRegister Phase IniSystemReady
+LogAudio: Display: Pre-Initializing Audio Device Manager...
+LogModuleManager: InternalLoadLibrary: 'OpusAudioDecoder' ('/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/libUnrealEditor-OpusAudioDecoder.dylib')
+LogConfig: Display: Loading VulkanPC ini files took 0.01 seconds
+LogConfig: Display: Loading LinuxArm64 ini files took 0.02 seconds
+LogConfig: Display: Loading IOS ini files took 0.01 seconds
+LogConfig: Display: Loading Mac ini files took 0.01 seconds
+LogConfig: Display: Loading Unix ini files took 0.02 seconds
+LogAudio: Display: AudioInfo: 'OPUS' Registered
+LogModuleManager: InternalLoadLibrary: 'VorbisAudioDecoder' ('/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/libUnrealEditor-VorbisAudioDecoder.dylib')
+LogConfig: Display: Loading TVOS ini files took 0.02 seconds
+LogConfig: Display: Loading Android ini files took 0.01 seconds
+LogConfig: Display: Loading Linux ini files took 0.02 seconds
+LogAudio: Display: AudioInfo: 'OGG' Registered
+LogModuleManager: InternalLoadLibrary: 'AdpcmAudioDecoder' ('/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/libUnrealEditor-AdpcmAudioDecoder.dylib')
+LogConfig: Display: Loading VisionOS ini files took 0.02 seconds
+LogConfig: Display: Loading Windows ini files took 0.02 seconds
+LogAudio: Display: AudioInfo: 'ADPCM' Registered
+LogAudio: Display: AudioInfo: 'PCM' Registered
+LogModuleManager: InternalLoadLibrary: 'BinkAudioDecoder' ('/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/libUnrealEditor-BinkAudioDecoder.dylib')
+LogAudio: Display: AudioInfo: 'BINKA' Registered
+LogModuleManager: InternalLoadLibrary: 'RadAudioDecoder' ('/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/libUnrealEditor-RadAudioDecoder.dylib')
+Log file: /Users/brianwilliams/Library/Logs/Shoen/AutoSDKInfo.txt
+LogAudio: Display: AudioInfo: 'RADA' Registered
+LogAudio: Display: Audio Device Manager Pre-Initialized
+LogModuleManager: InternalLoadLibrary: 'TelemetryUtils' ('/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/libUnrealEditor-TelemetryUtils.dylib')
+LogPluginManager: Looking for build plugins target receipt
+LogPluginManager: Found matching target receipt: ../../../../../../brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/game/Binaries/Mac/ShoenEditor.target
+LogPluginManager: Looking for enabled plugins target receipt
+LogPluginManager: Found matching target receipt: ../../../../../../brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/game/Binaries/Mac/ShoenEditor.target
+LogPluginManager: Mounting Engine plugin EditorScriptingUtilities
+LogPluginManager: Mounting Engine plugin PythonScriptPlugin
+LogPluginManager: Mounting Engine plugin ContentBrowserFileDataSource
+LogModuleManager: InternalLoadLibrary: 'PythonScriptPluginPreload' ('/Users/Shared/Epic Games/UE_5.8/Engine/Plugins/Experimental/PythonScriptPlugin/Binaries/Mac/libUnrealEditor-PythonScriptPluginPreload.dylib')
+LogInit: Running DelayedAutoRegister Phase EarliestPossiblePluginsLoaded
+LogInit: ExecutableName: UnrealEditor
+LogInit: Build: ++UE5+Release-5.8-CL-56702186
+LogInit: Platform=MacEditor
+LogInit: MachineId=898795cd524a67e1bea765b2b41cff8f
+LogInit: DeviceId=
+LogInit: Engine Version: 5.8.2-56702186+++UE5+Release-5.8
+LogInit: Compatible Engine Version: 5.8.0-55116800+++UE5+Release-5.8
+LogInit: Net CL: 55116800
+LogInit: OS: macOS 26.6.2 (25G83), CPU: Apple M1 Max, GPU: Apple M1 Max
+LogInit: CPU Model ID: 0, microcode revision: 0
+LogInit: Compiled (64-bit): Aug  7 2026 11:08:04
+LogInit: Architecture: arm64
+LogInit: Compiled with Clang: 17.0.0 (clang-1700.4.4.1)
+LogInit: Build Configuration: Development
+LogInit: Branch Name: ++UE5+Release-5.8
+LogInit: Command Line: /Game/Domain/Maps/Foundation -game -windowed -ResX=1600 -ResY=900 -NoVSync -ShoenScenario=prototype -ShoenCombatSoldiersPerSide=2000 -ShoenCombatBenchmarkSeconds=45 -ShoenCombatBenchmarkOutput=/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/artifacts/combat/combat-2000.json -stdout -FullStdOutLogOutput
+LogInit: Base Directory: /Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/
+LogInit: Allocator: Mimalloc
+LogInit: Installed Engine Build: 1
+LogInit: This binary is optimized with LTO: no, PGO: no, instrumented for PGO data collection: no
+LogDevObjectVersion: Number of dev versions registered: 35
+LogDevObjectVersion:   Dev-Blueprints (B0D832E4-1F89-4F0D-ACCF-7EB736FD4AA2): 10
+LogDevObjectVersion:   Dev-Build (E1C64328-A22C-4D53-A36C-8E866417BD8C): 0
+LogDevObjectVersion:   Dev-Core (375EC13C-06E4-48FB-B500-84F0262A717E): 4
+LogDevObjectVersion:   Dev-Editor (E4B068ED-F494-42E9-A231-DA0B2E46BB41): 40
+LogDevObjectVersion:   Dev-Framework (CFFC743F-43B0-4480-9391-14DF171D2073): 37
+LogDevObjectVersion:   Dev-Mobile (B02B49B5-BB20-44E9-A304-32B752E40360): 3
+LogDevObjectVersion:   Dev-Networking (A4E4105C-59A1-49B5-A7C5-40C4547EDFEE): 0
+LogDevObjectVersion:   Dev-Online (39C831C9-5AE6-47DC-9A44-9C173E1C8E7C): 0
+LogDevObjectVersion:   Dev-Physics (78F01B33-EBEA-4F98-B9B4-84EACCB95AA2): 20
+LogDevObjectVersion:   Dev-Platform (6631380F-2D4D-43E0-8009-CF276956A95A): 0
+LogDevObjectVersion:   Dev-Rendering (12F88B9F-8875-4AFC-A67C-D90C383ABD29): 49
+LogDevObjectVersion:   Dev-Sequencer (7B5AE74C-D270-4C10-A958-57980B212A5A): 13
+LogDevObjectVersion:   Dev-VR (D7296918-1DD6-4BDD-9DE2-64A83CC13884): 3
+LogDevObjectVersion:   Dev-LoadTimes (C2A15278-BFE7-4AFE-6C17-90FF531DF755): 1
+LogDevObjectVersion:   Private-Geometry (6EACA3D4-40EC-4CC1-B786-8BED09428FC5): 3
+LogDevObjectVersion:   Dev-AnimPhys (29E575DD-E0A3-4627-9D10-D276232CDCEA): 17
+LogDevObjectVersion:   Dev-Anim (AF43A65D-7FD3-4947-9873-3E8ED9C1BB05): 15
+LogDevObjectVersion:   Dev-ReflectionCapture (6B266CEC-1EC7-4B8F-A30B-E4D90942FC07): 1
+LogDevObjectVersion:   Dev-Automation (0DF73D61-A23F-47EA-B727-89E90C41499A): 1
+LogDevObjectVersion:   FortniteMain (601D1886-AC64-4F84-AA16-D3DE0DEAC7D6): 268
+LogDevObjectVersion:   FortniteValkyrie (8DBC2C5B-54A7-43E0-A768-FCBB7DA29060): 8
+LogDevObjectVersion:   FortniteSeason (5B4C06B7-2463-4AF8-805B-BF70CDF5D0DD): 15
+LogDevObjectVersion:   FortniteRelease (E7086368-6B23-4C58-8439-1B7016265E91): 20
+LogDevObjectVersion:   Dev-Enterprise (9DFFBCD6-494F-0158-E221-12823C92A888): 11
+LogDevObjectVersion:   Dev-Niagara (F2AED0AC-9AFE-416F-8664-AA7FFA26D6FC): 1
+LogDevObjectVersion:   Dev-Destruction (174F1F0B-B4C6-45A5-B13F-2EE8D0FB917D): 10
+LogDevObjectVersion:   Dev-Physics-Ext (35F94A83-E258-406C-A318-09F59610247C): 41
+LogDevObjectVersion:   Dev-PhysicsMaterial-Chaos (B68FC16E-8B1B-42E2-B453-215C058844FE): 1
+LogDevObjectVersion:   Dev-CineCamera (B2E18506-4273-CFC2-A54E-F4BB758BBA07): 1
+LogDevObjectVersion:   Dev-VirtualProduction (64F58936-FD1B-42BA-BA96-7289D5D0FA4E): 1
+LogDevObjectVersion:   UE5-Main (697DD581-E64F-41AB-AA4A-51ECBEB7B628): 123
+LogDevObjectVersion:   UE5-Release (D89B5E42-24BD-4D46-8412-ACA8DF641779): 68
+LogDevObjectVersion:   UE5-SpecialProject (59DA5D52-1232-4948-B878-597870B8E98B): 9
+LogDevObjectVersion:   Dev-MediaFramework (6F0ED827-A609-4895-9C91-998D90180EA4): 2
+LogDevObjectVersion:   Dev-NaniteResearch (30D58BE3-95EA-4282-A6E3-B159D8EBB06A): 1
+LogInit: Presizing for max 25165824 objects, including 0 objects not considered by GC.
+LogStreaming: Display: AsyncLoading2 - Created: Async Loading Thread: false, Async Post Load: false, Multithreaded: false
+LogInit: Object subsystem initialized
+LogConfig: Set CVar [[con.DebugEarlyDefault:1]]
+LogConfig: CVar [[con.DebugLateDefault:1]] deferred - dummy variable created
+LogConfig: CVar [[con.DebugLateCheat:1]] deferred - dummy variable created
+LogConfig: CVar [[LogNamedEventFilters:Frame *]] deferred - dummy variable created
+LogConfig: Set CVar [[r.setres:1280x720]]
+LogConfig: Set CVar [[g.TimeoutForBlockOnRenderFence:300000]]
+LogConfig: CVar [[framepro.ScopeMinTimeMicroseconds:10]] deferred - dummy variable created
+LogConfig: CVar [[fx.NiagaraAllowRuntimeScalabilityChanges:1]] deferred - dummy variable created
+LogConfig: CVar [[QualityLevelMapping:high]] deferred - dummy variable created
+[2026.09.15-12.29.15:914][  0]LogConfig: CVar [[con.DebugLateDefault:1]] deferred - dummy variable created
+[2026.09.15-12.29.15:914][  0]LogConfig: CVar [[con.DebugLateCheat:1]] deferred - dummy variable created
+[2026.09.15-12.29.15:914][  0]LogConfig: CVar [[LogNamedEventFilters:Frame *]] deferred - dummy variable created
+[2026.09.15-12.29.15:914][  0]LogConfig: CVar [[framepro.ScopeMinTimeMicroseconds:10]] deferred - dummy variable created
+[2026.09.15-12.29.15:914][  0]LogConfig: CVar [[fx.NiagaraAllowRuntimeScalabilityChanges:1]] deferred - dummy variable created
+[2026.09.15-12.29.15:914][  0]LogConfig: CVar [[QualityLevelMapping:high]] deferred - dummy variable created
+[2026.09.15-12.29.15:914][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.RendererSettings] File [Engine]
+[2026.09.15-12.29.15:914][  0]LogConfig: CVar [[VisualizeCalibrationColorMaterialPath:/Engine/EngineMaterials/PPM_DefaultCalibrationColor.PPM_DefaultCalibrationColor]] deferred - dummy variable created
+[2026.09.15-12.29.15:914][  0]LogConfig: CVar [[VisualizeCalibrationGrayscaleMaterialPath:/Engine/EngineMaterials/PPM_DefaultCalibrationGrayscale.PPM_DefaultCalibrationGrayscale]] deferred - dummy variable created
+[2026.09.15-12.29.15:914][  0]LogConfig: Set CVar [[r.GPUCrashDebugging:0]]
+[2026.09.15-12.29.15:914][  0]LogConfig: CVar [[MaxSkinBones:(Default=65536,PerPlatform=(("Mobile", 256)))]] deferred - dummy variable created
+[2026.09.15-12.29.15:914][  0]LogConfig: Set CVar [[r.Substrate.RoughDiffuse:1]]
+[2026.09.15-12.29.15:914][  0]LogConfig: Set CVar [[r.Substrate.ShadingQuality:1]]
+[2026.09.15-12.29.15:914][  0]LogConfig: Set CVar [[r.Substrate.TileCoord8bits:0]]
+[2026.09.15-12.29.15:914][  0]LogConfig: Set CVar [[r.Substrate.Glints:1]]
+[2026.09.15-12.29.15:914][  0]LogConfig: Set CVar [[r.Substrate.ClosuresPerPixel:4]]
+[2026.09.15-12.29.15:914][  0]LogConfig: Set CVar [[r.Refraction.Blur:1]]
+[2026.09.15-12.29.15:914][  0]LogConfig: Set CVar [[r.DefaultFeature.AutoExposure:0]]
+[2026.09.15-12.29.15:914][  0]LogConfig: Set CVar [[r.DefaultFeature.MotionBlur:0]]
+[2026.09.15-12.29.15:914][  0]LogConfig: Set CVar [[r.DynamicGlobalIlluminationMethod:0]]
+[2026.09.15-12.29.15:914][  0]LogConfig: Set CVar [[r.ReflectionMethod:0]]
+[2026.09.15-12.29.15:915][  0]LogConfig: Set CVar [[r.Shadow.Virtual.Enable:0]]
+[2026.09.15-12.29.15:915][  0]LogConfig: Set CVar [[r.Nanite.ProjectEnabled:0]]
+[2026.09.15-12.29.15:915][  0]LogConfig: Set CVar [[r.AllowStaticLighting:0]]
+[2026.09.15-12.29.15:915][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.RendererOverrideSettings] File [Engine]
+[2026.09.15-12.29.15:915][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.StreamingSettings] File [Engine]
+[2026.09.15-12.29.15:915][  0]LogConfig: Set CVar [[s.MinBulkDataSizeForAsyncLoading:131072]]
+[2026.09.15-12.29.15:915][  0]LogConfig: Set CVar [[s.AsyncLoadingThreadEnabled:1]]
+[2026.09.15-12.29.15:915][  0]LogConfig: Set CVar [[s.EventDrivenLoaderEnabled:1]]
+[2026.09.15-12.29.15:915][  0]LogConfig: Set CVar [[s.WarnIfTimeLimitExceeded:0]]
+[2026.09.15-12.29.15:915][  0]LogConfig: Set CVar [[s.TimeLimitExceededMultiplier:1.5]]
+[2026.09.15-12.29.15:915][  0]LogConfig: Set CVar [[s.TimeLimitExceededMinTime:0.005]]
+[2026.09.15-12.29.15:915][  0]LogConfig: Set CVar [[s.UseBackgroundLevelStreaming:1]]
+[2026.09.15-12.29.15:915][  0]LogConfig: Set CVar [[s.PriorityAsyncLoadingExtraTime:15.0]]
+[2026.09.15-12.29.15:915][  0]LogConfig: Set CVar [[s.LevelStreamingActorsUpdateTimeLimit:5.0]]
+[2026.09.15-12.29.15:915][  0]LogConfig: Set CVar [[s.PriorityLevelStreamingActorsUpdateExtraTime:5.0]]
+[2026.09.15-12.29.15:915][  0]LogConfig: Set CVar [[s.LevelStreamingComponentsRegistrationGranularity:10]]
+[2026.09.15-12.29.15:915][  0]LogConfig: Set CVar [[s.UnregisterComponentsTimeLimit:1.0]]
+[2026.09.15-12.29.15:915][  0]LogConfig: Set CVar [[s.LevelStreamingComponentsUnregistrationGranularity:5]]
+[2026.09.15-12.29.15:915][  0]LogConfig: CVar [[s.MaxPackageSummarySize:16384]] deferred - dummy variable created
+[2026.09.15-12.29.15:915][  0]LogConfig: Set CVar [[s.FlushStreamingOnExit:1]]
+[2026.09.15-12.29.15:915][  0]LogConfig: CVar [[FixedBootOrder:/Script/Engine/Default__SoundBase]] deferred - dummy variable created
+[2026.09.15-12.29.15:915][  0]LogConfig: CVar [[FixedBootOrder:/Script/Engine/Default__MaterialInterface]] deferred - dummy variable created
+[2026.09.15-12.29.15:915][  0]LogConfig: CVar [[FixedBootOrder:/Script/Engine/Default__DeviceProfileManager]] deferred - dummy variable created
+[2026.09.15-12.29.15:915][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.GarbageCollectionSettings] File [Engine]
+[2026.09.15-12.29.15:915][  0]LogConfig: Set CVar [[gc.MaxObjectsNotConsideredByGC:1]]
+[2026.09.15-12.29.15:915][  0]LogConfig: Set CVar [[gc.NumRetriesBeforeForcingGC:10]]
+[2026.09.15-12.29.15:915][  0]LogConfig: Set CVar [[gc.AllowParallelGC:1]]
+[2026.09.15-12.29.15:915][  0]LogConfig: Set CVar [[gc.TimeBetweenPurgingPendingKillObjects:61.1]]
+[2026.09.15-12.29.15:915][  0]LogConfig: Set CVar [[gc.MaxObjectsInEditor:25165824]]
+[2026.09.15-12.29.15:915][  0]LogConfig: Set CVar [[gc.IncrementalBeginDestroyEnabled:1]]
+[2026.09.15-12.29.15:915][  0]LogConfig: Set CVar [[gc.CreateGCClusters:1]]
+[2026.09.15-12.29.15:915][  0]LogConfig: Set CVar [[gc.MinGCClusterSize:5]]
+[2026.09.15-12.29.15:915][  0]LogConfig: Set CVar [[gc.AssetClustreringEnabled:0]]
+[2026.09.15-12.29.15:915][  0]LogConfig: Set CVar [[gc.ActorClusteringEnabled:0]]
+[2026.09.15-12.29.15:915][  0]LogConfig: Set CVar [[gc.VerifyUObjectsAreNotFGCObjects:0]]
+[2026.09.15-12.29.15:915][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.NetworkSettings] File [Engine]
+[2026.09.15-12.29.15:915][  0]LogConfig: CVar [[NetworkEmulationProfiles:(ProfileName="Average",ToolTip="Simulates average internet conditions")]] deferred - dummy variable created
+[2026.09.15-12.29.15:915][  0]LogConfig: CVar [[NetworkEmulationProfiles:(ProfileName="Bad",ToolTip="Simulates laggy internet conditions")]] deferred - dummy variable created
+[2026.09.15-12.29.15:915][  0]LogConfig: CVar [[NetworkEmulationProfiles:(ProfileName="BufferBloat",ToolTip="Simulates a connection affected by buffer bloat (in and out)")]] deferred - dummy variable created
+[2026.09.15-12.29.15:915][  0]LogConfig: Applying CVar settings from Section [/Script/UnrealEd.CookerSettings] File [Engine]
+[2026.09.15-12.29.15:915][  0]LogConfig: CVar [[DefaultASTCQualityBySpeed:2]] deferred - dummy variable created
+[2026.09.15-12.29.15:915][  0]LogConfig: CVar [[DefaultASTCQualityBySize:3]] deferred - dummy variable created
+[2026.09.15-12.29.15:915][  0]LogConfig: CVar [[DefaultASTCQualityBySizeHQ:4]] deferred - dummy variable created
+[2026.09.15-12.29.15:915][  0]LogConfig: CVar [[ClassesExcludedOnDedicatedServer:WidgetBlueprint]] deferred - dummy variable created
+[2026.09.15-12.29.15:915][  0]LogConfig: CVar [[ClassesExcludedOnDedicatedServer:GroupActor]] deferred - dummy variable created
+[2026.09.15-12.29.15:915][  0]LogConfig: CVar [[ClassesExcludedOnDedicatedServer:MetaData]] deferred - dummy variable created
+[2026.09.15-12.29.15:915][  0]LogConfig: CVar [[ClassesExcludedOnDedicatedServer:ObjectRedirector]] deferred - dummy variable created
+[2026.09.15-12.29.15:915][  0]LogConfig: CVar [[ClassesExcludedOnDedicatedServer:NavMeshRenderingComponent]] deferred - dummy variable created
+[2026.09.15-12.29.15:915][  0]LogConfig: CVar [[ClassesExcludedOnDedicatedServer:ReflectionCaptureComponent]] deferred - dummy variable created
+[2026.09.15-12.29.15:915][  0]LogConfig: CVar [[ClassesExcludedOnDedicatedServer:TextRenderComponent]] deferred - dummy variable created
+[2026.09.15-12.29.15:915][  0]LogConfig: CVar [[ClassesExcludedOnDedicatedServer:Font]] deferred - dummy variable created
+[2026.09.15-12.29.15:915][  0]LogConfig: CVar [[ClassesExcludedOnDedicatedServer:InterpCurveEdSetup]] deferred - dummy variable created
+[2026.09.15-12.29.15:915][  0]LogConfig: CVar [[ClassesExcludedOnDedicatedServer:MaterialExpression]] deferred - dummy variable created
+[2026.09.15-12.29.15:915][  0]LogConfig: CVar [[ClassesExcludedOnDedicatedServer:NiagaraEmitter]] deferred - dummy variable created
+[2026.09.15-12.29.15:915][  0]LogConfig: CVar [[ClassesExcludedOnDedicatedServer:NiagaraScript]] deferred - dummy variable created
+[2026.09.15-12.29.15:915][  0]LogConfig: CVar [[ClassesExcludedOnDedicatedServer:ParticleEmitter]] deferred - dummy variable created
+[2026.09.15-12.29.15:915][  0]LogConfig: CVar [[ClassesExcludedOnDedicatedServer:ParticleLODLevel]] deferred - dummy variable created
+[2026.09.15-12.29.15:915][  0]LogConfig: CVar [[ClassesExcludedOnDedicatedServer:ParticleModule]] deferred - dummy variable created
+[2026.09.15-12.29.15:915][  0]LogConfig: CVar [[ClassesExcludedOnDedicatedServer:SubUVAnimation]] deferred - dummy variable created
+[2026.09.15-12.29.15:915][  0]LogConfig: CVar [[ClassesExcludedOnDedicatedServer:SoundNode]] deferred - dummy variable created
+[2026.09.15-12.29.15:915][  0]LogConfig: CVar [[ClassesExcludedOnDedicatedServer:GameplayEffectUIData]] deferred - dummy variable created
+[2026.09.15-12.29.15:915][  0]LogConfig: CVar [[ClassesExcludedOnDedicatedServer:AmbientSound]] deferred - dummy variable created
+[2026.09.15-12.29.15:915][  0]LogConfig: CVar [[ClassesExcludedOnDedicatedClient:WidgetBlueprint]] deferred - dummy variable created
+[2026.09.15-12.29.15:915][  0]LogConfig: CVar [[ClassesExcludedOnDedicatedClient:GroupActor]] deferred - dummy variable created
+[2026.09.15-12.29.15:915][  0]LogConfig: CVar [[ClassesExcludedOnDedicatedClient:MetaData]] deferred - dummy variable created
+[2026.09.15-12.29.15:915][  0]LogConfig: CVar [[ClassesExcludedOnDedicatedClient:ObjectRedirector]] deferred - dummy variable created
+[2026.09.15-12.29.15:915][  0]LogConfig: CVar [[ClassesExcludedOnDedicatedClient:InterpCurveEdSetup]] deferred - dummy variable created
+[2026.09.15-12.29.15:915][  0]LogConfig: CVar [[VersionedIntRValues:r.AllowStaticLighting]] deferred - dummy variable created
+[2026.09.15-12.29.15:915][  0]LogConfig: CVar [[VersionedIntRValues:r.MaterialEditor.LWCTruncateMode]] deferred - dummy variable created
+[2026.09.15-12.29.15:915][  0]LogConfig: CVar [[VersionedIntRValues:r.VelocityOutputPass]] deferred - dummy variable created
+[2026.09.15-12.29.15:915][  0]LogConfig: CVar [[VersionedIntRValues:r.SelectiveBasePassOutputs]] deferred - dummy variable created
+[2026.09.15-12.29.15:915][  0]LogConfig: CVar [[VersionedIntRValues:r.DBuffer]] deferred - dummy variable created
+[2026.09.15-12.29.15:915][  0]LogConfig: CVar [[VersionedIntRValues:r.Mobile.DBuffer]] deferred - dummy variable created
+[2026.09.15-12.29.15:915][  0]LogConfig: CVar [[VersionedIntRValues:r.Shaders.Symbols]] deferred - dummy variable created
+[2026.09.15-12.29.15:915][  0]LogConfig: CVar [[VersionedIntRValues:r.Shaders.GenerateSymbols]] deferred - dummy variable created
+[2026.09.15-12.29.15:915][  0]LogConfig: CVar [[VersionedIntRValues:r.Shaders.WriteSymbols]] deferred - dummy variable created
+[2026.09.15-12.29.15:915][  0]LogConfig: CVar [[VersionedIntRValues:r.Shaders.AllowUniqueSymbols]] deferred - dummy variable created
+[2026.09.15-12.29.15:915][  0]LogConfig: CVar [[VersionedIntRValues:r.Shaders.ExtraData]] deferred - dummy variable created
+[2026.09.15-12.29.15:915][  0]LogConfig: CVar [[VersionedIntRValues:r.Shaders.Optimize]] deferred - dummy variable created
+[2026.09.15-12.29.15:915][  0]LogConfig: CVar [[VersionedIntRValues:r.CompileShadersForDevelopment]] deferred - dummy variable created
+[2026.09.15-12.29.15:915][  0]LogConfig: CVar [[VersionedIntRValues:r.MobileHDR]] deferred - dummy variable created
+[2026.09.15-12.29.15:915][  0]LogConfig: CVar [[VersionedIntRValues:r.UsePreExposure]] deferred - dummy variable created
+[2026.09.15-12.29.15:917][  0]LogCsvProfiler: Display: Metadata set : systemresolution.resx="1600"
+[2026.09.15-12.29.15:917][  0]LogCsvProfiler: Display: Metadata set : systemresolution.resy="900"
+[2026.09.15-12.29.15:917][  0]LogConfig: Applying CVar settings from Section [ViewDistanceQuality@3] File [Scalability]
+[2026.09.15-12.29.15:917][  0]LogConfig: Set CVar [[r.SkeletalMeshLODBias:0]]
+[2026.09.15-12.29.15:917][  0]LogConfig: Set CVar [[r.ViewDistanceScale:1.0]]
+[2026.09.15-12.29.15:917][  0]LogConfig: Applying CVar settings from Section [AntiAliasingQuality@3] File [Scalability]
+[2026.09.15-12.29.15:917][  0]LogConfig: Set CVar [[r.FXAA.Quality:4]]
+[2026.09.15-12.29.15:917][  0]LogConfig: Set CVar [[r.TemporalAA.Quality:2]]
+[2026.09.15-12.29.15:917][  0]LogConfig: Set CVar [[r.TSR.History.R11G11B10:1]]
+[2026.09.15-12.29.15:917][  0]LogConfig: Set CVar [[r.TSR.History.ScreenPercentage:200]]
+[2026.09.15-12.29.15:917][  0]LogConfig: Set CVar [[r.TSR.History.UpdateQuality:3]]
+[2026.09.15-12.29.15:917][  0]LogConfig: Set CVar [[r.TSR.ShadingRejection.Flickering:1]]
+[2026.09.15-12.29.15:917][  0]LogConfig: Set CVar [[r.TSR.RejectionAntiAliasingQuality:2]]
+[2026.09.15-12.29.15:917][  0]LogConfig: Set CVar [[r.TSR.ReprojectionField:1]]
+[2026.09.15-12.29.15:917][  0]LogConfig: Set CVar [[r.TSR.Resurrection:1]]
+[2026.09.15-12.29.15:917][  0]LogConfig: Applying CVar settings from Section [ShadowQuality@3] File [Scalability]
+[2026.09.15-12.29.15:917][  0]LogConfig: Set CVar [[r.LightFunctionQuality:1]]
+[2026.09.15-12.29.15:917][  0]LogConfig: Set CVar [[r.ShadowQuality:5]]
+[2026.09.15-12.29.15:917][  0]LogConfig: Set CVar [[r.Shadow.CSM.MaxCascades:10]]
+[2026.09.15-12.29.15:917][  0]LogConfig: Set CVar [[r.Shadow.MaxResolution:2048]]
+[2026.09.15-12.29.15:917][  0]LogConfig: Set CVar [[r.Shadow.MaxCSMResolution:2048]]
+[2026.09.15-12.29.15:917][  0]LogConfig: Set CVar [[r.Shadow.RadiusThreshold:0.01]]
+[2026.09.15-12.29.15:917][  0]LogConfig: Set CVar [[r.Shadow.DistanceScale:1.0]]
+[2026.09.15-12.29.15:917][  0]LogConfig: Set CVar [[r.Shadow.CSM.TransitionScale:1.0]]
+[2026.09.15-12.29.15:917][  0]LogConfig: Set CVar [[r.Shadow.PreShadowResolutionFactor:1.0]]
+[2026.09.15-12.29.15:917][  0]LogConfig: Set CVar [[r.DistanceFieldShadowing:1]]
+[2026.09.15-12.29.15:917][  0]LogConfig: Set CVar [[r.VolumetricFog:1]]
+[2026.09.15-12.29.15:917][  0]LogConfig: Set CVar [[r.VolumetricFog.GridPixelSize:8]]
+[2026.09.15-12.29.15:917][  0]LogConfig: Set CVar [[r.VolumetricFog.GridSizeZ:128]]
+[2026.09.15-12.29.15:917][  0]LogConfig: Set CVar [[r.VolumetricFog.HistoryMissSupersampleCount:4]]
+[2026.09.15-12.29.15:917][  0]LogConfig: Set CVar [[r.LightMaxDrawDistanceScale:1]]
+[2026.09.15-12.29.15:917][  0]LogConfig: Set CVar [[r.CapsuleShadows:1]]
+[2026.09.15-12.29.15:917][  0]LogConfig: Set CVar [[r.Shadow.Virtual.MaxPhysicalPages:4096]]
+[2026.09.15-12.29.15:917][  0]LogConfig: Set CVar [[r.Shadow.Virtual.ResolutionLodBiasDirectional:-1.5]]
+[2026.09.15-12.29.15:917][  0]LogConfig: Set CVar [[r.Shadow.Virtual.ResolutionLodBiasDirectionalMoving:-1.5]]
+[2026.09.15-12.29.15:917][  0]LogConfig: Set CVar [[r.Shadow.Virtual.ResolutionLodBiasLocal:0.0]]
+[2026.09.15-12.29.15:917][  0]LogConfig: Set CVar [[r.Shadow.Virtual.ResolutionLodBiasLocalMoving:1.0]]
+[2026.09.15-12.29.15:917][  0]LogConfig: Set CVar [[r.Shadow.Virtual.SMRT.RayCountDirectional:8]]
+[2026.09.15-12.29.15:917][  0]LogConfig: Set CVar [[r.Shadow.Virtual.SMRT.SamplesPerRayDirectional:4]]
+[2026.09.15-12.29.15:917][  0]LogConfig: Set CVar [[r.Shadow.Virtual.SMRT.RayCountLocal:8]]
+[2026.09.15-12.29.15:917][  0]LogConfig: Set CVar [[r.Shadow.Virtual.SMRT.SamplesPerRayLocal:4]]
+[2026.09.15-12.29.15:917][  0]LogConfig: Set CVar [[r.Shadow.Virtual.MarkCoarsePagesLocal:1]]
+[2026.09.15-12.29.15:917][  0]LogConfig: Set CVar [[r.MegaLights.NumSamplesPerPixel:4]]
+[2026.09.15-12.29.15:917][  0]LogConfig: Set CVar [[r.MegaLights.DownsampleMode:2]]
+[2026.09.15-12.29.15:917][  0]LogConfig: Set CVar [[r.MegaLights.ScreenTraces.Quality:1]]
+[2026.09.15-12.29.15:917][  0]LogConfig: Set CVar [[r.MegaLights.FrontLayerTranslucency.Allow:1]]
+[2026.09.15-12.29.15:917][  0]LogConfig: Set CVar [[r.MegaLights.FrontLayerTranslucency.SpecularOnly:1]]
+[2026.09.15-12.29.15:917][  0]LogConfig: Set CVar [[r.MegaLights.FrontLayerTranslucency.SoftShadows:0]]
+[2026.09.15-12.29.15:917][  0]LogConfig: Set CVar [[r.MegaLights.FrontLayerTranslucency.TexturedRectLights:0]]
+[2026.09.15-12.29.15:917][  0]LogConfig: Set CVar [[r.MegaLights.Spatial.UseHistorySpatialVariance:1]]
+[2026.09.15-12.29.15:917][  0]LogConfig: Set CVar [[r.MegaLights.Volume.GridPixelSize:8]]
+[2026.09.15-12.29.15:917][  0]LogConfig: Set CVar [[r.MegaLights.Volume.GridSizeZ:128]]
+[2026.09.15-12.29.15:917][  0]LogConfig: Applying CVar settings from Section [GlobalIlluminationQuality@3] File [Scalability]
+[2026.09.15-12.29.15:917][  0]LogConfig: Set CVar [[r.DistanceFieldAO:1]]
+[2026.09.15-12.29.15:917][  0]LogConfig: Set CVar [[r.SkylightIntensityMultiplier:1.0]]
+[2026.09.15-12.29.15:917][  0]LogConfig: Set CVar [[r.AOQuality:2]]
+[2026.09.15-12.29.15:918][  0]LogConfig: Set CVar [[r.Lumen.DiffuseIndirect.Allow:1]]
+[2026.09.15-12.29.15:918][  0]LogConfig: Set CVar [[r.Lumen.FinalGatherMethod:1]]
+[2026.09.15-12.29.15:918][  0]LogConfig: Set CVar [[r.LumenScene.SurfaceCache.AtlasSize:4096]]
+[2026.09.15-12.29.15:918][  0]LogConfig: Set CVar [[r.LumenScene.SurfaceCache.CardTexelDensityScale:100]]
+[2026.09.15-12.29.15:918][  0]LogConfig: Set CVar [[r.LumenScene.SurfaceCache.CardMinResolution:2]]
+[2026.09.15-12.29.15:918][  0]LogConfig: Set CVar [[r.LumenScene.SurfaceCache.CardMaxResolution:512]]
+[2026.09.15-12.29.15:918][  0]LogConfig: Set CVar [[r.LumenScene.DirectLighting.MaxLightsPerTile:8]]
+[2026.09.15-12.29.15:918][  0]LogConfig: Set CVar [[r.LumenScene.DirectLighting.UpdateFactor:32]]
+[2026.09.15-12.29.15:918][  0]LogConfig: Set CVar [[r.LumenScene.Radiosity.UpdateFactor:64]]
+[2026.09.15-12.29.15:918][  0]LogConfig: Set CVar [[r.LumenScene.Radiosity.ProbeSpacing:4]]
+[2026.09.15-12.29.15:918][  0]LogConfig: Set CVar [[r.LumenScene.Radiosity.HemisphereProbeResolution:4]]
+[2026.09.15-12.29.15:918][  0]LogConfig: Set CVar [[r.Lumen.TraceMeshSDFs.Allow:1]]
+[2026.09.15-12.29.15:918][  0]LogConfig: Set CVar [[r.Lumen.ScreenProbeGather.RadianceCache.ProbeResolution:32]]
+[2026.09.15-12.29.15:918][  0]LogConfig: Set CVar [[r.Lumen.ScreenProbeGather.RadianceCache.NumProbesToTraceBudget:150]]
+[2026.09.15-12.29.15:918][  0]LogConfig: Set CVar [[r.Lumen.ScreenProbeGather.DownsampleFactor:16]]
+[2026.09.15-12.29.15:918][  0]LogConfig: Set CVar [[r.Lumen.ScreenProbeGather.NumAdaptiveProbes:8]]
+[2026.09.15-12.29.15:918][  0]LogConfig: Set CVar [[r.Lumen.ScreenProbeGather.TracingOctahedronResolution:8]]
+[2026.09.15-12.29.15:918][  0]LogConfig: Set CVar [[r.Lumen.ScreenProbeGather.IrradianceFormat:0]]
+[2026.09.15-12.29.15:918][  0]LogConfig: Set CVar [[r.Lumen.ScreenProbeGather.StochasticInterpolation:0]]
+[2026.09.15-12.29.15:918][  0]LogConfig: Set CVar [[r.Lumen.ScreenProbeGather.FullResolutionJitterWidth:1]]
+[2026.09.15-12.29.15:918][  0]LogConfig: Set CVar [[r.Lumen.ScreenProbeGather.TwoSidedFoliageBackfaceDiffuse:1]]
+[2026.09.15-12.29.15:918][  0]LogConfig: Set CVar [[r.Lumen.ScreenProbeGather.ScreenTraces.HZBTraversal.FullResDepth:1]]
+[2026.09.15-12.29.15:918][  0]LogConfig: Set CVar [[r.Lumen.ScreenProbeGather.ShortRangeAO.DownsampleFactor:1]]
+[2026.09.15-12.29.15:918][  0]LogConfig: Set CVar [[r.Lumen.ScreenProbeGather.ShortRangeAO.HorizonSearch.SliceCount:2]]
+[2026.09.15-12.29.15:918][  0]LogConfig: Set CVar [[r.Lumen.ScreenProbeGather.ShortRangeAO.BentNormal:1]]
+[2026.09.15-12.29.15:918][  0]LogConfig: Set CVar [[r.Lumen.ScreenProbeGather.ShortRangeAO.HorizonSearch.HZB:0]]
+[2026.09.15-12.29.15:918][  0]LogConfig: Set CVar [[r.Lumen.ScreenProbeGather.ShortRangeAO.HorizonSearch.ForegroundSampleRejectPower:1]]
+[2026.09.15-12.29.15:918][  0]LogConfig: Set CVar [[r.Lumen.ScreenProbeGather.ShortRangeAO.FoliageOcclusionStrength:.7]]
+[2026.09.15-12.29.15:918][  0]LogConfig: Set CVar [[r.Lumen.TranslucencyVolume.GridPixelSize:32]]
+[2026.09.15-12.29.15:918][  0]LogConfig: Set CVar [[r.Lumen.TranslucencyVolume.TraceFromVolume:1]]
+[2026.09.15-12.29.15:918][  0]LogConfig: Set CVar [[r.Lumen.TranslucencyVolume.ShareRadianceCacheWithOpaque:0]]
+[2026.09.15-12.29.15:918][  0]LogConfig: Set CVar [[r.Lumen.TranslucencyVolume.SpatialFilter:1]]
+[2026.09.15-12.29.15:918][  0]LogConfig: Set CVar [[r.Lumen.TranslucencyVolume.TracingOctahedronResolution:3]]
+[2026.09.15-12.29.15:918][  0]LogConfig: Set CVar [[r.Lumen.TranslucencyVolume.RadianceCache.ProbeResolution:8]]
+[2026.09.15-12.29.15:918][  0]LogConfig: Set CVar [[r.Lumen.TranslucencyVolume.RadianceCache.GridResolution:24]]
+[2026.09.15-12.29.15:918][  0]LogConfig: Set CVar [[r.Lumen.TranslucencyVolume.RadianceCache.NumProbesToTraceBudget:100]]
+[2026.09.15-12.29.15:918][  0]LogConfig: Set CVar [[r.Lumen.HardwareRayTracing.HitLighting.Allowed:1]]
+[2026.09.15-12.29.15:918][  0]LogConfig: Set CVar [[r.RayTracing.Scene.BuildMode:1]]
+[2026.09.15-12.29.15:918][  0]LogConfig: Set CVar [[r.RayTracing.Geometry.SkeletalMeshes:1]]
+[2026.09.15-12.29.15:918][  0]LogConfig: Set CVar [[r.MeshCardRepresentation.SkeletalMesh:1]]
+[2026.09.15-12.29.15:918][  0]LogConfig: Set CVar [[r.RayTracing.DynamicGeometry.MaxUpdatePrimitivesPerFrame:-1]]
+[2026.09.15-12.29.15:918][  0]LogConfig: Applying CVar settings from Section [ReflectionQuality@3] File [Scalability]
+[2026.09.15-12.29.15:918][  0]LogConfig: Set CVar [[r.SSR.Quality:3]]
+[2026.09.15-12.29.15:918][  0]LogConfig: Set CVar [[r.SSR.HalfResSceneColor:0]]
+[2026.09.15-12.29.15:918][  0]LogConfig: Set CVar [[r.Lumen.Reflections.Allow:1]]
+[2026.09.15-12.29.15:918][  0]LogConfig: Set CVar [[r.Lumen.Reflections.DownsampleFactor:1]]
+[2026.09.15-12.29.15:918][  0]LogConfig: Set CVar [[r.Lumen.Reflections.MaxRoughnessToTraceForFoliage:0.4]]
+[2026.09.15-12.29.15:918][  0]LogConfig: Set CVar [[r.Lumen.ScreenProbeGather.MaxRoughnessToEvaluateRoughSpecularForFoliage:0.8]]
+[2026.09.15-12.29.15:918][  0]LogConfig: Set CVar [[r.Lumen.Reflections.ScreenSpaceReconstruction.NumSamples:5]]
+[2026.09.15-12.29.15:918][  0]LogConfig: Set CVar [[r.Lumen.Reflections.ScreenSpaceReconstruction.MinWeight:0]]
+[2026.09.15-12.29.15:918][  0]LogConfig: Set CVar [[r.Lumen.TranslucencyReflections.FrontLayer.Allow:1]]
+[2026.09.15-12.29.15:918][  0]LogConfig: Set CVar [[r.Lumen.TranslucencyReflections.FrontLayer.Enable:0]]
+[2026.09.15-12.29.15:918][  0]LogConfig: Applying CVar settings from Section [PostProcessQuality@3] File [Scalability]
+[2026.09.15-12.29.15:918][  0]LogConfig: Set CVar [[r.MotionBlurQuality:4]]
+[2026.09.15-12.29.15:918][  0]LogConfig: Set CVar [[r.MotionBlur.HalfResGather:0]]
+[2026.09.15-12.29.15:918][  0]LogConfig: Set CVar [[r.AmbientOcclusionMipLevelFactor:0.4]]
+[2026.09.15-12.29.15:918][  0]LogConfig: Set CVar [[r.AmbientOcclusionMaxQuality:100]]
+[2026.09.15-12.29.15:918][  0]LogConfig: Set CVar [[r.AmbientOcclusionLevels:-1]]
+[2026.09.15-12.29.15:918][  0]LogConfig: Set CVar [[r.AmbientOcclusionRadiusScale:1.0]]
+[2026.09.15-12.29.15:918][  0]LogConfig: Set CVar [[r.DepthOfFieldQuality:2]]
+[2026.09.15-12.29.15:918][  0]LogConfig: Set CVar [[r.RenderTargetPoolMin:400]]
+[2026.09.15-12.29.15:918][  0]LogConfig: Set CVar [[r.LensFlareQuality:2]]
+[2026.09.15-12.29.15:918][  0]LogConfig: Set CVar [[r.SceneColorFringeQuality:1]]
+[2026.09.15-12.29.15:918][  0]LogConfig: Set CVar [[r.EyeAdaptationQuality:2]]
+[2026.09.15-12.29.15:918][  0]LogConfig: Set CVar [[r.BloomQuality:5]]
+[2026.09.15-12.29.15:918][  0]LogConfig: Set CVar [[r.Bloom.ScreenPercentage:50.000]]
+[2026.09.15-12.29.15:918][  0]LogConfig: Set CVar [[r.FastBlurThreshold:100]]
+[2026.09.15-12.29.15:918][  0]LogConfig: Set CVar [[r.Upscale.Quality:3]]
+[2026.09.15-12.29.15:918][  0]LogConfig: Set CVar [[r.LightShaftQuality:1]]
+[2026.09.15-12.29.15:918][  0]LogConfig: Set CVar [[r.Filter.SizeScale:1]]
+[2026.09.15-12.29.15:918][  0]LogConfig: Set CVar [[r.LUT.Shaper:0]]
+[2026.09.15-12.29.15:918][  0]LogConfig: Set CVar [[r.LUT.Size:32]]
+[2026.09.15-12.29.15:918][  0]LogConfig: Set CVar [[r.Tonemapper.Quality:5]]
+[2026.09.15-12.29.15:918][  0]LogConfig: Set CVar [[r.DOF.Gather.ResolutionDivisor:2         ; lower gathering resolution]]
+[2026.09.15-12.29.15:918][  0]LogConfig: Set CVar [[r.DOF.Gather.AccumulatorQuality:1        ; higher gathering accumulator quality]]
+[2026.09.15-12.29.15:918][  0]LogConfig: Set CVar [[r.DOF.Gather.PostfilterMethod:1          ; Median3x3 postfilering method]]
+[2026.09.15-12.29.15:918][  0]LogConfig: Set CVar [[r.DOF.Gather.EnableBokehSettings:0       ; no bokeh simulation when gathering]]
+[2026.09.15-12.29.15:918][  0]LogConfig: Set CVar [[r.DOF.Gather.RingCount:4                 ; medium number of samples when gathering]]
+[2026.09.15-12.29.15:918][  0]LogConfig: Set CVar [[r.DOF.Scatter.ForegroundCompositing:1    ; additive foreground scattering]]
+[2026.09.15-12.29.15:918][  0]LogConfig: Set CVar [[r.DOF.Scatter.BackgroundCompositing:2    ; additive background scattering]]
+[2026.09.15-12.29.15:918][  0]LogConfig: Set CVar [[r.DOF.Scatter.EnableBokehSettings:1      ; bokeh simulation when scattering]]
+[2026.09.15-12.29.15:918][  0]LogConfig: Set CVar [[r.DOF.Scatter.MaxSpriteRatio:0.1         ; only a maximum of 10% of scattered bokeh]]
+[2026.09.15-12.29.15:918][  0]LogConfig: Set CVar [[r.DOF.Recombine.Quality:1                ; cheap slight out of focus]]
+[2026.09.15-12.29.15:918][  0]LogConfig: Set CVar [[r.DOF.Recombine.EnableBokehSettings:0    ; no bokeh simulation on slight out of focus]]
+[2026.09.15-12.29.15:918][  0]LogConfig: Set CVar [[r.DOF.TemporalAAQuality:1                ; more stable temporal accumulation]]
+[2026.09.15-12.29.15:918][  0]LogConfig: Set CVar [[r.DOF.Kernel.MaxForegroundRadius:0.025]]
+[2026.09.15-12.29.15:918][  0]LogConfig: Set CVar [[r.DOF.Kernel.MaxBackgroundRadius:0.025]]
+[2026.09.15-12.29.15:918][  0]LogConfig: Applying CVar settings from Section [TextureQuality@3] File [Scalability]
+[2026.09.15-12.29.15:918][  0]LogConfig: Set CVar [[r.Streaming.MipBias:0]]
+[2026.09.15-12.29.15:918][  0]LogConfig: Set CVar [[r.Streaming.AmortizeCPUToGPUCopy:0]]
+[2026.09.15-12.29.15:918][  0]LogConfig: Set CVar [[r.Streaming.MaxNumTexturesToStreamPerFrame:0]]
+[2026.09.15-12.29.15:918][  0]LogConfig: Set CVar [[r.Streaming.Boost:1]]
+[2026.09.15-12.29.15:918][  0]LogConfig: Set CVar [[r.MaxAnisotropy:8]]
+[2026.09.15-12.29.15:918][  0]LogConfig: Set CVar [[r.VT.MaxAnisotropy:8]]
+[2026.09.15-12.29.15:918][  0]LogConfig: Set CVar [[r.Streaming.LimitPoolSizeToVRAM:0]]
+[2026.09.15-12.29.15:918][  0]LogConfig: Set CVar [[r.Streaming.PoolSize:1000]]
+[2026.09.15-12.29.15:918][  0]LogConfig: Set CVar [[r.Streaming.MaxEffectiveScreenSize:0]]
+[2026.09.15-12.29.15:918][  0]LogConfig: Applying CVar settings from Section [EffectsQuality@3] File [Scalability]
+[2026.09.15-12.29.15:918][  0]LogConfig: Set CVar [[r.TranslucencyLightingVolume.Dim:64]]
+[2026.09.15-12.29.15:918][  0]LogConfig: Set CVar [[r.RefractionQuality:2]]
+[2026.09.15-12.29.15:918][  0]LogConfig: Set CVar [[r.SceneColorFormat:4]]
+[2026.09.15-12.29.15:918][  0]LogConfig: Set CVar [[r.DetailMode:3]]
+[2026.09.15-12.29.15:918][  0]LogConfig: Set CVar [[r.TranslucencyLightingVolume.Blur:1]]
+[2026.09.15-12.29.15:918][  0]LogConfig: Set CVar [[r.MaterialQualityLevel:1 ; High quality]]
+[2026.09.15-12.29.15:918][  0]LogConfig: Set CVar [[r.SSS.Scale:1]]
+[2026.09.15-12.29.15:918][  0]LogConfig: Set CVar [[r.SSS.SampleSet:2]]
+[2026.09.15-12.29.15:918][  0]LogConfig: Set CVar [[r.SSS.Quality:1]]
+[2026.09.15-12.29.15:918][  0]LogConfig: Set CVar [[r.SSS.HalfRes:0]]
+[2026.09.15-12.29.15:918][  0]LogConfig: Set CVar [[r.SSGI.Quality:3]]
+[2026.09.15-12.29.15:918][  0]LogConfig: Set CVar [[r.EmitterSpawnRateScale:1.0]]
+[2026.09.15-12.29.15:918][  0]LogConfig: Set CVar [[r.ParticleLightQuality:2]]
+[2026.09.15-12.29.15:918][  0]LogConfig: Set CVar [[r.SkyAtmosphere.AerialPerspectiveLUT.FastApplyOnOpaque:1 ; Always have FastSkyLUT 1 in this case to avoid wrong sky]]
+[2026.09.15-12.29.15:918][  0]LogConfig: Set CVar [[r.SkyAtmosphere.AerialPerspectiveLUT.SampleCountMaxPerSlice:4]]
+[2026.09.15-12.29.15:918][  0]LogConfig: Set CVar [[r.SkyAtmosphere.AerialPerspectiveLUT.DepthResolution:16.0]]
+[2026.09.15-12.29.15:918][  0]LogConfig: Set CVar [[r.SkyAtmosphere.FastSkyLUT:1]]
+[2026.09.15-12.29.15:918][  0]LogConfig: Set CVar [[r.SkyAtmosphere.FastSkyLUT.SampleCountMin:4.0]]
+[2026.09.15-12.29.15:918][  0]LogConfig: Set CVar [[r.SkyAtmosphere.FastSkyLUT.SampleCountMax:128.0]]
+[2026.09.15-12.29.15:918][  0]LogConfig: Set CVar [[r.SkyAtmosphere.SampleCountMin:4.0]]
+[2026.09.15-12.29.15:918][  0]LogConfig: Set CVar [[r.SkyAtmosphere.SampleCountMax:128.0]]
+[2026.09.15-12.29.15:918][  0]LogConfig: Set CVar [[r.SkyAtmosphere.TransmittanceLUT.UseSmallFormat:0]]
+[2026.09.15-12.29.15:918][  0]LogConfig: Set CVar [[r.SkyAtmosphere.TransmittanceLUT.SampleCount:10.0]]
+[2026.09.15-12.29.15:918][  0]LogConfig: Set CVar [[r.SkyAtmosphere.MultiScatteringLUT.SampleCount:15.0]]
+[2026.09.15-12.29.15:918][  0]LogConfig: Set CVar [[r.Fog.SeparateComposition:-1	; Allow fog separate composition when FSSS is enabled.]]
+[2026.09.15-12.29.15:918][  0]LogConfig: CVar [[fx.Niagara.QualityLevel:3]] deferred - dummy variable created
+[2026.09.15-12.29.15:918][  0]LogConfig: Set CVar [[r.Refraction.OffsetQuality:1]]
+[2026.09.15-12.29.15:918][  0]LogConfig: Set CVar [[r.HeterogeneousVolumes.Allowed:1]]
+[2026.09.15-12.29.15:918][  0]LogConfig: Set CVar [[r.HeterogeneousVolumes.DownsampleFactor:2]]
+[2026.09.15-12.29.15:918][  0]LogConfig: Set CVar [[r.HeterogeneousVolumes.MaxStepCount:256]]
+[2026.09.15-12.29.15:918][  0]LogConfig: Set CVar [[r.HeterogeneousVolumes.Shadows.Resolution:512]]
+[2026.09.15-12.29.15:918][  0]LogConfig: Set CVar [[r.HeterogeneousVolumes.Shadows.Precision:0]]
+[2026.09.15-12.29.15:918][  0]LogConfig: Set CVar [[r.HeterogeneousVolumes.UseExistenceMask:0]]
+[2026.09.15-12.29.15:918][  0]LogConfig: Applying CVar settings from Section [FoliageQuality@3] File [Scalability]
+[2026.09.15-12.29.15:918][  0]LogConfig: Set CVar [[foliage.DensityScale:1.0]]
+[2026.09.15-12.29.15:918][  0]LogConfig: Set CVar [[grass.DensityScale:1.0]]
+[2026.09.15-12.29.15:918][  0]LogConfig: CVar [[pcg.Quality:3]] deferred - dummy variable created
+[2026.09.15-12.29.15:918][  0]LogConfig: Applying CVar settings from Section [ShadingQuality@3] File [Scalability]
+[2026.09.15-12.29.15:918][  0]LogConfig: Set CVar [[r.HairStrands.SkyLighting.IntegrationType:2]]
+[2026.09.15-12.29.15:918][  0]LogConfig: Set CVar [[r.HairStrands.SkyAO.SampleCount:4]]
+[2026.09.15-12.29.15:918][  0]LogConfig: Set CVar [[r.HairStrands.Visibility.MSAA.SamplePerPixel:4]]
+[2026.09.15-12.29.15:918][  0]LogConfig: Set CVar [[r.AnisotropicMaterials:1]]
+[2026.09.15-12.29.15:918][  0]LogConfig: Applying CVar settings from Section [LandscapeQuality@3] File [Scalability]
+[2026.09.15-12.29.15:919][  0]LogInit: Selected Device Profile: [MacEditor]
+[2026.09.15-12.29.15:919][  0]LogHAL: Display: Platform has ~ 32 GB [34359738368 / 34359738368 / 32], which maps to Largest [LargestMinGB=32, LargerMinGB=12, DefaultMinGB=8, SmallerMinGB=6, SmallestMinGB=0)
+[2026.09.15-12.29.15:920][  0]LogDeviceProfileManager: Going up to parent DeviceProfile [Mac]
+[2026.09.15-12.29.15:920][  0]LogDeviceProfileManager: Going up to parent DeviceProfile []
+[2026.09.15-12.29.15:920][  0]LogDeviceProfileManager: Pushing Device Profile CVar: [[r.Shaders.ZeroInitialise:1 -> 1]]
+[2026.09.15-12.29.15:920][  0]LogDeviceProfileManager: Pushing Device Profile CVar: [[r.Shaders.BoundsChecking:1 -> 1]]
+[2026.09.15-12.29.15:920][  0]LogDeviceProfileManager: Pushing Device Profile CVar: [[UI.SlateSDFText.RasterizationMode:Bitmap -> Msdf]]
+[2026.09.15-12.29.15:920][  0]LogDeviceProfileManager: Pushing Device Profile CVar: [[UI.SlateSDFText.ResolutionLevel:2 -> 2]]
+[2026.09.15-12.29.15:920][  0]LogConfig: Applying CVar settings from Section [Startup] File [../../../Engine/Config/ConsoleVariables.ini]
+[2026.09.15-12.29.15:920][  0]LogConfig: Set CVar [[p.chaos.AllowCreatePhysxBodies:1]]
+[2026.09.15-12.29.15:920][  0]LogConfig: CVar [[fx.SkipVectorVMBackendOptimizations:1]] deferred - dummy variable created
+[2026.09.15-12.29.15:920][  0]LogConfig: Applying CVar settings from Section [Startup_Mac] File [../../../Engine/Config/ConsoleVariables.ini]
+[2026.09.15-12.29.15:920][  0]LogConfig: Applying CVar settings from Section [ConsoleVariables] File [Engine]
+[2026.09.15-12.29.15:920][  0]LogConfig: Set CVar [[r.HairStrands.Visibility.MSAA.SamplePerPixel:1]]
+[2026.09.15-12.29.15:920][  0]LogConfig: CVar [[r.SceneCulling.ExplicitCellBounds:1]] deferred - dummy variable created
+[2026.09.15-12.29.15:920][  0]LogConfig: Set CVar [[Slate.NoAnimationOnTabForegroundedEvent:1]]
+[2026.09.15-12.29.15:920][  0]LogConfig: Applying CVar settings from Section [ConsoleVariables] File [/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/game/Saved/Config/MacEditor/Editor.ini]
+[2026.09.15-12.29.15:921][  0]LogConfig: Set CVar [[SplineComponent.OnlyUpdateActiveSpline:0]]
+[2026.09.15-12.29.15:921][  0]LogInit: macOS 26.6.2 (25G83)
+[2026.09.15-12.29.15:921][  0]LogInit: Model: MacBookPro18,4
+[2026.09.15-12.29.15:921][  0]LogInit: CPU: Apple M1 Max
+[2026.09.15-12.29.15:921][  0]LogInit: CPU Page size=16384, Cores=10, HT=10
+[2026.09.15-12.29.15:921][  0]LogInit: Computer: Brians-MacBook-Pro-3.local
+[2026.09.15-12.29.15:921][  0]LogInit: User: brianwilliams
+[2026.09.15-12.29.15:921][  0]LogInit: High frequency timer resolution =24.000000 MHz
+[2026.09.15-12.29.15:921][  0]LogInit: Power Source: AC Power
+[2026.09.15-12.29.15:921][  0]LogInit: Xcode developer folder path: /Applications/Xcode.app/Contents/Developer, version 26.6.0
+[2026.09.15-12.29.15:921][  0]LogApplePlatformMisc: Network path changed (IsConstrained=0, IsExpensive=0)
+[2026.09.15-12.29.15:921][  0]LogInit: Memory total: Physical=32.0GB (32GB approx) Pagefile=4.0GB Virtual=36.0GB
+[2026.09.15-12.29.15:921][  0]LogCsvProfiler: Display: Metadata set : extradevelopmentmemorymb="0"
+[2026.09.15-12.29.15:921][  0]LogModuleManager: InternalLoadLibrary: 'IoStoreOnDemandCore' ('/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/libUnrealEditor-IoStoreOnDemandCore.dylib')
+[2026.09.15-12.29.15:922][  0]LogModuleManager: InternalLoadLibrary: 'BandwidthDebugDelegates' ('/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/libUnrealEditor-BandwidthDebugDelegates.dylib')
+[2026.09.15-12.29.15:922][  0]LogModuleManager: InternalLoadLibrary: 'ClientBandwidthDebugVisualizer' ('/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/libUnrealEditor-ClientBandwidthDebugVisualizer.dylib')
+[2026.09.15-12.29.15:961][  0]LogModuleManager: InternalLoadLibrary: 'BandwidthMeasurementTool' ('/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/libUnrealEditor-BandwidthMeasurementTool.dylib')
+[2026.09.15-12.29.15:961][  0]LogModuleManager: InternalLoadLibrary: 'DownlinkBandwidthManager' ('/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/libUnrealEditor-DownlinkBandwidthManager.dylib')
+[2026.09.15-12.29.15:961][  0]LogObj: Display: Attempting to load config data for Default__DownlinkBandwidthManagerConfig before the Class has been constructed/registered/linked (likely during module loading or early startup). This will result in the load silently failing and should be fixed.
+[2026.09.15-12.29.15:961][  0]LogModuleManager: InternalLoadLibrary: 'Chaos' ('/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/libUnrealEditor-Chaos.dylib')
+[2026.09.15-12.29.15:961][  0]LogModuleManager: InternalLoadLibrary: 'GeometryCore' ('/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/libUnrealEditor-GeometryCore.dylib')
+[2026.09.15-12.29.15:962][  0]LogSpline: Registered spline type: TypeId=0x54E3AD22, Impl=MultiSpline, Value=Vector
+[2026.09.15-12.29.15:963][  0]LogModuleManager: InternalLoadLibrary: 'ChaosSolverEngine' ('/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/libUnrealEditor-ChaosSolverEngine.dylib')
+[2026.09.15-12.29.15:963][  0]LogChaosDD: Chaos Debug Draw Startup
+[2026.09.15-12.29.15:963][  0]LogInit: Physics initialised using underlying interface: Chaos
+[2026.09.15-12.29.15:964][  0]LogInit: Using OS detected language (en-US).
+[2026.09.15-12.29.15:964][  0]LogInit: Using OS detected locale (en-US).
+[2026.09.15-12.29.15:968][  0]LogTextLocalizationManager: No specific localization for 'en-US' exists, so 'en' will be used for the language.
+##PlatformValidate: Win64 INVALID <UNKNOWN>
+##PlatformValidate: Mac VALID 26.1.1
+##PlatformValidate: IOS VALID 26.1.1
+##PlatformValidate: Android INVALID r27c
+##PlatformValidate: Linux INVALID <UNKNOWN>
+##PlatformValidate: LinuxArm64 INVALID <UNKNOWN>
+##PlatformValidate: TVOS VALID 26.1.1
+##PlatformValidate: VisionOS VALID 26.1.1
+Unable to find required SDK version 'MainVersion' for platform Win64. Check your SDK.json files
+Unable to find required SDK version 'MainVersion' for platform Linux. Check your SDK.json files
+Unable to find required SDK version 'MainVersion' for platform LinuxArm64. Check your SDK.json files
+Trace written to file /Users/brianwilliams/Library/Application Support/Epic/UnrealBuildTool/Trace.uba with size 330b
+*** Recognized (0x6c) family*** (24 cols X 18 rows)
+[2026.09.15-12.29.16:402][  0]LogAppleController: [HandleMouseConnected] Handling physical mouse connection...
+[2026.09.15-12.29.16:407][  0]LogObj: Display: Attempting to load config data for Default__SlateThemeManager before the Class has been constructed/registered/linked (likely during module loading or early startup). This will result in the load silently failing and should be fixed.
+[2026.09.15-12.29.16:410][  0]LogModuleManager: InternalLoadLibrary: 'Settings' ('/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/libUnrealEditor-Settings.dylib')
+[2026.09.15-12.29.16:411][  0]LogModuleManager: InternalLoadLibrary: 'InputCore' ('/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/libUnrealEditor-InputCore.dylib')
+[2026.09.15-12.29.16:413][  0]LogSlate: New Slate User Created. Platform User Id 0, User Index 0, Is Virtual User: 0
+[2026.09.15-12.29.16:413][  0]LogSlate: Slate User Registered.  User Index 0, Is Virtual User: 0
+[2026.09.15-12.29.16:478][  0]LogInit: Running DelayedAutoRegister Phase PreRHIInit
+[2026.09.15-12.29.16:481][  0]LogModuleManager: InternalLoadLibrary: 'MetalRHI' ('/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/libUnrealEditor-MetalRHI.dylib')
+[2026.09.15-12.29.17:413][  0]LogMetal: Warning: To use SM6 on this system, please ensure you are running Mac OS 15. Falling back to SM5
+[2026.09.15-12.29.17:414][  0]LogRHI: Texture pool is 17203 MB (70% of 24576 MB)
+[2026.09.15-12.29.17:414][  0]LogMetal: Display:       Vendor ID: 4203
+[2026.09.15-12.29.17:414][  0]LogMetal: Display:       Device ID: 875639626
+[2026.09.15-12.29.17:414][  0]LogMetal: Display:       VRAM (MB): 24576
+[2026.09.15-12.29.17:415][  0]LogMac: Attached monitors:
+[2026.09.15-12.29.17:415][  0]LogMac: Screen: Built-in Retina Display, Resolution: 1512x982, Points: 1512x982, WorkArea: (0, 60) -> (1512, 949), Scale: 2.00
+[2026.09.15-12.29.17:415][  0]LogMac: Found 1 attached monitors.
+[2026.09.15-12.29.17:424][  0]LogRHI: RHI Adapter Info:
+[2026.09.15-12.29.17:424][  0]LogRHI:             Name: Apple M1 Max
+[2026.09.15-12.29.17:424][  0]LogRHI:   Driver Version:  (internal:353.14, unified:353.14)
+[2026.09.15-12.29.17:424][  0]LogRHI:      Driver Date: 1-1-1970
+[2026.09.15-12.29.17:430][  0]LogVRS: Current RHI does not support Variable Rate Shading
+[2026.09.15-12.29.17:432][  0]LogRHI: Render tracing channels set: 'Submission' -> 0xf
+[2026.09.15-12.29.17:432][  0]LogCsvProfiler: Display: Metadata set : verbatimrhiname="Metal"
+[2026.09.15-12.29.17:432][  0]LogCsvProfiler: Display: Metadata set : rhiname="Metal"
+[2026.09.15-12.29.17:432][  0]LogCsvProfiler: Display: Metadata set : rhifeaturelevel="SM5"
+[2026.09.15-12.29.17:432][  0]LogCsvProfiler: Display: Metadata set : shaderplatform="METAL_SM5"
+[2026.09.15-12.29.17:432][  0]LogCsvProfiler: Display: Metadata set : gpu="Apple M1 Max"
+[2026.09.15-12.29.17:432][  0]LogCsvProfiler: Display: Metadata set : gpudriver=""
+[2026.09.15-12.29.17:432][  0]LogInit: Initializing FReadOnlyCVARCache
+[2026.09.15-12.29.17:432][  0]LogModuleManager: InternalLoadLibrary: 'TargetPlatform' ('/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/libUnrealEditor-TargetPlatform.dylib')
+[2026.09.15-12.29.17:433][  0]LogModuleManager: InternalLoadLibrary: 'TurnkeySupport' ('/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/libUnrealEditor-TurnkeySupport.dylib')
+[2026.09.15-12.29.17:468][  0]LogTurnkeySupport: Running Turnkey SDK detection: ' -ScriptsForProject="/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/game/Shoen.uproject" Turnkey -utf8output -WaitForUATMutex -command=VerifySdk -ReportFilename="/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/game/Intermediate/TurnkeyReport_0.log" -log="/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/game/Intermediate/TurnkeyLog_0.log" -project="/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/game/Shoen.uproject"  -platform=all'
+[2026.09.15-12.29.17:468][  0]LogMonitoredProcess: Running Serialized UAT: [ /usr/bin/env  -- "/Users/Shared/Epic Games/UE_5.8/Engine/Build/BatchFiles/RunUAT.command"  -ScriptsForProject="/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/game/Shoen.uproject" Turnkey -utf8output -WaitForUATMutex -command=VerifySdk -ReportFilename="/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/game/Intermediate/TurnkeyReport_0.log" -log="/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/game/Intermediate/TurnkeyLog_0.log" -project="/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/game/Shoen.uproject"  -platform=all ]
+[2026.09.15-12.29.17:469][  0]LogTargetPlatformManager: UBT AutoSDK ReturnCode: 0
+[2026.09.15-12.29.17:469][  0]LogModuleManager: InternalLoadLibrary: 'TextureFormat' ('/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/libUnrealEditor-TextureFormat.dylib')
+[2026.09.15-12.29.17:469][  0]LogModuleManager: InternalLoadLibrary: 'TextureFormatASTC' ('/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/libUnrealEditor-TextureFormatASTC.dylib')
+[2026.09.15-12.29.17:512][  0]LogModuleManager: InternalLoadLibrary: 'TextureFormatDXT' ('/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/libUnrealEditor-TextureFormatDXT.dylib')
+[2026.09.15-12.29.17:541][  0]LogModuleManager: InternalLoadLibrary: 'TextureFormatETC2' ('/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/libUnrealEditor-TextureFormatETC2.dylib')
+[2026.09.15-12.29.17:570][  0]LogModuleManager: InternalLoadLibrary: 'TextureFormatIntelISPCTexComp' ('/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/libUnrealEditor-TextureFormatIntelISPCTexComp.dylib')
+[2026.09.15-12.29.17:601][  0]LogModuleManager: InternalLoadLibrary: 'TextureFormatOodle' ('/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/libUnrealEditor-TextureFormatOodle.dylib')
+[2026.09.15-12.29.17:627][  0]LogModuleManager: InternalLoadLibrary: 'TextureFormatUncompressed' ('/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/libUnrealEditor-TextureFormatUncompressed.dylib')
+[2026.09.15-12.29.17:676][  0]LogTextureFormatASTC: Display: ASTCEnc version 5.0.1 library loaded
+[2026.09.15-12.29.17:677][  0]LogTextureFormatManager: Display: Loaded Base TextureFormat: TextureFormatASTC
+[2026.09.15-12.29.17:677][  0]LogTextureFormatManager: Display: Loaded Base TextureFormat: TextureFormatDXT
+[2026.09.15-12.29.17:677][  0]LogTextureFormatManager: Display: Loaded Base TextureFormat: TextureFormatETC2
+[2026.09.15-12.29.17:677][  0]LogTextureFormatManager: Display: Loaded Base TextureFormat: TextureFormatIntelISPCTexComp
+[2026.09.15-12.29.17:677][  0]LogTextureFormatOodle: Display: Oodle Texture TFO init; latest sdk version = 2.9.16
+[2026.09.15-12.29.17:677][  0]LogTextureFormatOodle: Display: Oodle Texture loading DLL: liboo2texmac64.2.9.16.dylib
+[2026.09.15-12.29.17:705][  0]LogTextureFormatManager: Display: Loaded Base TextureFormat: TextureFormatOodle
+[2026.09.15-12.29.17:706][  0]LogTextureFormatManager: Display: Loaded Base TextureFormat: TextureFormatUncompressed
+[2026.09.15-12.29.17:720][  0]LogModuleManager: InternalLoadLibrary: 'MacTargetPlatform' ('/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/libUnrealEditor-MacTargetPlatform.dylib')
+[2026.09.15-12.29.17:808][  0]LogModuleManager: InternalLoadLibrary: 'MacTargetPlatformSettings' ('/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/libUnrealEditor-MacTargetPlatformSettings.dylib')
+[2026.09.15-12.29.17:833][  0]LogModuleManager: InternalLoadLibrary: 'MacTargetPlatformControls' ('/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/libUnrealEditor-MacTargetPlatformControls.dylib')
+[2026.09.15-12.29.17:834][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'Mac'
+[2026.09.15-12.29.17:834][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'MacEditor'
+[2026.09.15-12.29.17:834][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'MacServer'
+[2026.09.15-12.29.17:834][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'MacClient'
+[2026.09.15-12.29.17:834][  0]LogTargetPlatformManager: Display: Building Assets For MacEditor
+[2026.09.15-12.29.17:834][  0]LogModuleManager: InternalLoadLibrary: 'AudioFormatOPUS' ('/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/libUnrealEditor-AudioFormatOpus.dylib')
+[2026.09.15-12.29.17:881][  0]LogModuleManager: InternalLoadLibrary: 'AudioFormatOGG' ('/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/libUnrealEditor-AudioFormatOgg.dylib')
+[2026.09.15-12.29.17:908][  0]LogModuleManager: InternalLoadLibrary: 'AudioFormatADPCM' ('/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/libUnrealEditor-AudioFormatADPCM.dylib')
+[2026.09.15-12.29.17:943][  0]LogModuleManager: InternalLoadLibrary: 'AudioFormatBINK' ('/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/libUnrealEditor-AudioFormatBink.dylib')
+[2026.09.15-12.29.17:971][  0]LogModuleManager: InternalLoadLibrary: 'AudioFormatRAD' ('/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/libUnrealEditor-AudioFormatRad.dylib')
+[2026.09.15-12.29.18:005][  0]LogModuleManager: InternalLoadLibrary: 'ShaderFormatVectorVM' ('/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/libUnrealEditor-ShaderFormatVectorVM.dylib')
+[2026.09.15-12.29.18:130][  0]LogTargetPlatformManager: Unable to find shader format SF_METAL_SM5 from hinted modules, loading all potential format modules to find it
+[2026.09.15-12.29.18:130][  0]LogModuleManager: InternalLoadLibrary: 'MetalShaderFormat' ('/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/libUnrealEditor-MetalShaderFormat.dylib')
+[2026.09.15-12.29.18:220][  0]LogTargetPlatformManager: Loaded format module MetalShaderFormat
+[2026.09.15-12.29.18:220][  0]LogTargetPlatformManager:   SF_METAL_ES3_1_IOS
+[2026.09.15-12.29.18:220][  0]LogTargetPlatformManager:   SF_METAL_SM5_IOS
+[2026.09.15-12.29.18:220][  0]LogTargetPlatformManager:   SF_METAL_SM6_IOS
+[2026.09.15-12.29.18:220][  0]LogTargetPlatformManager:   SF_METAL_ES3_1_TVOS
+[2026.09.15-12.29.18:220][  0]LogTargetPlatformManager:   SF_METAL_SM5_TVOS
+[2026.09.15-12.29.18:220][  0]LogTargetPlatformManager:   SF_METAL_SM5
+[2026.09.15-12.29.18:220][  0]LogTargetPlatformManager:   SF_METAL_SM6
+[2026.09.15-12.29.18:220][  0]LogTargetPlatformManager:   SF_METAL_SIM
+[2026.09.15-12.29.18:220][  0]LogTargetPlatformManager:   SF_METAL_ES3_1
+[2026.09.15-12.29.18:220][  0]LogModuleManager: InternalLoadLibrary: 'ShaderFormatOpenGL' ('/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/libUnrealEditor-ShaderFormatOpenGL.dylib')
+[2026.09.15-12.29.18:260][  0]LogTargetPlatformManager: Loaded format module ShaderFormatOpenGL
+[2026.09.15-12.29.18:260][  0]LogTargetPlatformManager:   GLSL_150_ES31
+[2026.09.15-12.29.18:260][  0]LogTargetPlatformManager:   GLSL_ES3_1_ANDROID
+[2026.09.15-12.29.18:260][  0]LogTargetPlatformManager: Loaded format module ShaderFormatVectorVM
+[2026.09.15-12.29.18:260][  0]LogTargetPlatformManager:   VVM_1_0
+[2026.09.15-12.29.18:260][  0]LogModuleManager: InternalLoadLibrary: 'VulkanShaderFormat' ('/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/libUnrealEditor-VulkanShaderFormat.dylib')
+[2026.09.15-12.29.18:293][  0]LogTargetPlatformManager: Loaded format module VulkanShaderFormat
+[2026.09.15-12.29.18:293][  0]LogTargetPlatformManager:   SF_VULKAN_SM5
+[2026.09.15-12.29.18:293][  0]LogTargetPlatformManager:   SF_VULKAN_ES31_ANDROID
+[2026.09.15-12.29.18:293][  0]LogTargetPlatformManager:   SF_VULKAN_ES31
+[2026.09.15-12.29.18:293][  0]LogTargetPlatformManager:   SF_VULKAN_SM5_ANDROID
+[2026.09.15-12.29.18:293][  0]LogTargetPlatformManager:   SF_VULKAN_SM6
+[2026.09.15-12.29.18:293][  0]LogRendererCore: Ray tracing is disabled. Reason: disabled through project setting (r.RayTracing=0).
+[2026.09.15-12.29.18:293][  0]LogModuleManager: InternalLoadLibrary: 'DerivedDataCache' ('/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/libUnrealEditor-DerivedDataCache.dylib')
+[2026.09.15-12.29.18:293][  0]LogModuleManager: InternalLoadLibrary: 'SSL' ('/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/libUnrealEditor-SSL.dylib')
+[2026.09.15-12.29.18:304][  0]LogDerivedDataCache: ProjectPak: Pak cache file ../../../../../../brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/game/DerivedDataCache/DDC.ddp not found, will not use a pak cache.
+[2026.09.15-12.29.18:304][  0]LogDerivedDataCache: InstalledProjectPak: Pak cache file ../../../../../../brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/game/DerivedDataCache/Compressed.ddp not found, will not use a pak cache.
+[2026.09.15-12.29.18:431][  0]LogTurnkeySupport: Completed SDK detection: ExitCode = 0
+[2026.09.15-12.29.18:669][  0]LogDerivedDataCache: Display: ../../../Engine/DerivedDataCache/Compressed.ddp: Opened pak cache for reading. (2978 MiB)
+[2026.09.15-12.29.18:669][  0]LogDerivedDataCache: EnterprisePak: Pak cache file ../../../Enterprise/DerivedDataCache/Compressed.ddp not found, will not use a pak cache.
+[2026.09.15-12.29.18:671][  0]LogZenServiceInstance: Found Zen config default=/Users/brianwilliams/Library/Application Support/Epic/UnrealEngine/Common/Zen/Data
+[2026.09.15-12.29.18:672][  0]LogZenServiceInstance: Display: Launching zen utility '/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/zen service status'.
+[2026.09.15-12.29.19:187][  0]LogZenServiceInstance: Display: Writing plugin version info to '/Users/brianwilliams/Library/Application Support/Epic/UnrealEngine/Common/Zen/Install/zen_plugin_versions.json'
+[2026.09.15-12.29.19:188][  0]LogZenServiceInstance: Display: Read zen version cache file from '/Users/brianwilliams/Library/Application Support/Epic/UnrealEngine/5.8/Saved/Zen/zen.version', version: '5.8.13-202605190511-macosx-arm64-release-094f62c'
+[2026.09.15-12.29.19:188][  0]LogZenServiceInstance: InTree version at '/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/zenserver' is '5.8.13-202605190511-macosx-arm64-release-094f62c'
+[2026.09.15-12.29.19:188][  0]LogZenServiceInstance: Display: Read zen version cache file from '/Users/brianwilliams/Library/Application Support/Epic/UnrealEngine/Common/Zen/Install/zen.version', version: '5.8.13-202605190511-macosx-arm64-release-094f62c'
+[2026.09.15-12.29.19:188][  0]LogZenServiceInstance: Installed version at '/Users/brianwilliams/Library/Application Support/Epic/UnrealEngine/Common/Zen/Install/zenserver' is '5.8.13-202605190511-macosx-arm64-release-094f62c'
+[2026.09.15-12.29.19:188][  0]LogZenServiceInstance: Display: Installed service at '/Users/brianwilliams/Library/Application Support/Epic/UnrealEngine/Common/Zen/Install/zenserver' is up to date
+[2026.09.15-12.29.19:190][  0]LogZenServiceInstance: No current process using the data dir found, launching a new instance
+[2026.09.15-12.29.19:190][  0]LogZenServiceInstance: Display: Launching executable '/Users/brianwilliams/Library/Application Support/Epic/UnrealEngine/Common/Zen/Install/zenserver', working dir '/Users/brianwilliams/Library/Application Support/Epic/UnrealEngine/Common/Zen/Install', data dir '/Users/brianwilliams/Library/Application Support/Epic/UnrealEngine/Common/Zen/Data', args '--port 8558 --data-dir "/Users/brianwilliams/Library/Application Support/Epic/UnrealEngine/Common/Zen/Data" --http asio --gc-cache-duration-seconds 1209600 --gc-interval-seconds 21600 --gc-low-diskspace-threshold 2147483648 --cache-bucket-limit-overwrites --quiet --restrict-content-types --allow-external-oidctoken-exe=false --plugins-config "/Users/brianwilliams/Library/Application Support/Epic/UnrealEngine/Common/Zen/Install/zen_plugins_v1.json" --security-config-path "/Users/brianwilliams/Library/Application Support/Epic/UnrealEngine/Common/Zen/Install/security-config.json" --owner-pid 48984  --child-id Zen_48984_Startup --detach'
+[2026.09.15-12.29.19:349][  0]LogZenServiceInstance: Display: Unreal Zen Storage Server HTTP service at http://[::1]:8558 status: OK!.
+[2026.09.15-12.29.19:349][  0]LogZenServiceInstance: Local ZenServer AutoLaunch initialization completed in 0.162 seconds
+[2026.09.15-12.29.19:357][  0]LogDerivedDataCache: Display: ZenLocal: Using ZenServer HTTP service at [::1] with namespace ue.ddc. Status: OK!.
+[2026.09.15-12.29.19:365][  0]LogDerivedDataCache: /Users/brianwilliams/Library/Application Support/Epic/UnrealEngine/Common/DerivedDataCache: Speed tests took 0.01 seconds.
+[2026.09.15-12.29.19:365][  0]LogDerivedDataCache: Display: /Users/brianwilliams/Library/Application Support/Epic/UnrealEngine/Common/DerivedDataCache: Performance: Latency=0.01ms. RandomReadSpeed=265.27MBs, RandomWriteSpeed=271.87MBs. Assigned SpeedClass 'Local'
+[2026.09.15-12.29.19:365][  0]LogDerivedDataCache: Local: Using data cache path /Users/brianwilliams/Library/Application Support/Epic/UnrealEngine/Common/DerivedDataCache: Writable
+[2026.09.15-12.29.19:365][  0]LogDerivedDataCache: ZenShared: Disabled because Host is set to 'None'
+[2026.09.15-12.29.19:365][  0]LogDerivedDataCache: Shared: Disabled because no path is configured.
+[2026.09.15-12.29.19:365][  0]LogDerivedDataCache: Cloud: Disabled because Host is set to 'None'
+[2026.09.15-12.29.19:368][  0]LogAsyncCompilation: Display: MemorySharingInfo: UsedMemory=430408MiB, MaxMemoryAvailable=36864MiB
+[2026.09.15-12.29.19:368][  0]LogModuleManager: InternalLoadLibrary: 'ShaderPreprocessor' ('/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/libUnrealEditor-ShaderPreprocessor.dylib')
+[2026.09.15-12.29.19:369][  0]LogShaderCompilers: Guid format shader working directory is 14 characters bigger than the processId version (../../../../../../brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/game/Intermediate/Shaders/WorkingDirectory/48984/).
+[2026.09.15-12.29.19:369][  0]LogShaderCompilers: Cleaned the shader compiler working directory '../../../../../../brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/game/Intermediate/Shaders/tmp/90AC5AA6B44C7E41DC28208B434FEDC7/'.
+[2026.09.15-12.29.19:369][  0]LogShaderCompilers: Display: No distributed shader compiler controller found
+[2026.09.15-12.29.19:369][  0]LogShaderCompilers: Display: Using 7 local workers for shader compilation
+[2026.09.15-12.29.19:370][  0]LogShaderCompilers: Display: Compiling shader autogen file: ../../../../../../brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/game/Intermediate/ShaderAutogen/METAL_SM5/AutogenShaderHeaders.ush
+[2026.09.15-12.29.19:370][  0]LogShaderCompilers: Display: Autogen file is unchanged, skipping write.
+[2026.09.15-12.29.20:255][  0]LogInit: Running DelayedAutoRegister Phase ShaderTypesReady
+[2026.09.15-12.29.20:683][  0]LogSlate: Using FreeType 2.14.1
+[2026.09.15-12.29.20:686][  0]LogSlate: SlateFontServices - WITH_FREETYPE: 1, WITH_HARFBUZZ: 1
+[2026.09.15-12.29.20:686][  0]LogModuleManager: InternalLoadLibrary: 'ImageWrapper' ('/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/libUnrealEditor-ImageWrapper.dylib')
+[2026.09.15-12.29.20:710][  0]LogCsvProfiler: Display: Metadata set : systemresolution.resx="1280"
+[2026.09.15-12.29.20:710][  0]LogCsvProfiler: Display: Metadata set : systemresolution.resy="720"
+[2026.09.15-12.29.20:743][  0]LogTurnkeySupport: Turnkey Platform: Mac: (Status=Valid, MinAllowed_Sdk=15.2.0, MaxAllowed_Sdk=27.9.0, Current_Sdk=26.6, Allowed_AutoSdk=26.1.1, Current_AutoSdk=, Flags="InstalledSdk_ValidVersionExists")
+[2026.09.15-12.29.20:743][  0]LogModuleManager: InternalLoadLibrary: 'TargetDeviceServices' ('/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/libUnrealEditor-TargetDeviceServices.dylib')
+[2026.09.15-12.29.20:744][  0]LogTurnkeySupport: Running Turnkey device detection: ' -ScriptsForProject="/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/game/Shoen.uproject" Turnkey -utf8output -WaitForUATMutex -command=VerifySdk -ReportFilename="/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/game/Intermediate/TurnkeyReport_1.log" -log="/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/game/Intermediate/TurnkeyLog_1.log" -project="/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/game/Shoen.uproject"  -Device=Mac@Brians-MacBook-Pro-3.local'
+[2026.09.15-12.29.20:744][  0]LogMonitoredProcess: Running Serialized UAT: [ /usr/bin/env  -- "/Users/Shared/Epic Games/UE_5.8/Engine/Build/BatchFiles/RunUAT.command"  -ScriptsForProject="/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/game/Shoen.uproject" Turnkey -utf8output -WaitForUATMutex -command=VerifySdk -ReportFilename="/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/game/Intermediate/TurnkeyReport_1.log" -log="/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/game/Intermediate/TurnkeyLog_1.log" -project="/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/game/Shoen.uproject"  -Device=Mac@Brians-MacBook-Pro-3.local -nocompile -nocompileuat ]
+[2026.09.15-12.29.20:747][  0]LogMetal: Display: Creating NativeLayer -2147483648 in Metal Viewport 0x685227ebb80
+[2026.09.15-12.29.20:775][  0]LogModuleManager: InternalLoadLibrary: 'NullInstallBundleManager' ('/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/libUnrealEditor-NullInstallBundleManager.dylib')
+[2026.09.15-12.29.20:813][  0]LogInit: Using OS detected language (en-US).
+[2026.09.15-12.29.20:813][  0]LogInit: Using OS detected locale (en-US).
+[2026.09.15-12.29.20:813][  0]LogTextLocalizationManager: No localization for 'en-US' exists, so 'en' will be used for the language.
+[2026.09.15-12.29.20:813][  0]LogTextLocalizationManager: No localization for 'en-US' exists, so 'en' will be used for the locale.
+[2026.09.15-12.29.20:813][  0]LogSlate: FontCache flush requested. Reason: Culture for localization was changed
+[2026.09.15-12.29.20:813][  0]LogSlate: FontCache flush requested. Reason: Culture for localization was changed
+[2026.09.15-12.29.20:814][  0]LogModuleManager: InternalLoadLibrary: 'AssetRegistry' ('/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/libUnrealEditor-AssetRegistry.dylib')
+[2026.09.15-12.29.20:816][  0]LogAssetRegistry: ActiveMountsLoading is disabled.
+[2026.09.15-12.29.20:816][  0]LogAssetRegistry: FAssetRegistry took 0.0013 seconds to start up
+[2026.09.15-12.29.20:817][  0]LogInit: Running DelayedAutoRegister Phase PreObjectSystemReady
+[2026.09.15-12.29.21:031][  0]LogDeviceProfileManager: Display: Deviceprofile LinuxArm64Editor not found.
+[2026.09.15-12.29.21:031][  0]LogDeviceProfileManager: Display: Deviceprofile LinuxArm64 not found.
+[2026.09.15-12.29.21:070][  0]LogDeviceProfileManager: Active device profile: [0x68531ccbe00][0x68531db5000 82] MacEditor
+[2026.09.15-12.29.21:070][  0]LogCsvProfiler: Display: Metadata set : deviceprofile="MacEditor"
+[2026.09.15-12.29.21:070][  0]LogInit: Running DelayedAutoRegister Phase DeviceProfileManagerReady
+[2026.09.15-12.29.21:076][  0]LogStreaming: Display: FlushAsyncLoading(1): 1 QueuedPackages, 0 AsyncPackages
+[2026.09.15-12.29.21:080][  0]LogPackageLocalizationCache: Processed 3 localized package path(s) for 1 prioritized culture(s) in 0.001797 seconds
+[2026.09.15-12.29.21:084][  0]LogTextureEncodingSettings: Display: Texture Encode Speed: Final (cook).
+[2026.09.15-12.29.21:084][  0]LogTextureEncodingSettings: Display: Oodle Texture Encode Speed settings: Fast: RDO Off Lambda=0, Effort=Normal Final: RDO Off Lambda=0, Effort=Normal
+[2026.09.15-12.29.21:084][  0]LogTextureEncodingSettings: Display: Shared linear texture encoding: Disabled
+[2026.09.15-12.29.21:183][  0]LogModuleManager: InternalLoadLibrary: 'DirectoryWatcher' ('/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/libUnrealEditor-DirectoryWatcher.dylib')
+[2026.09.15-12.29.21:274][  0]LogModuleManager: InternalLoadLibrary: 'MeshUtilities' ('/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/libUnrealEditor-MeshUtilities.dylib')
+[2026.09.15-12.29.21:275][  0]LogModuleManager: InternalLoadLibrary: 'MaterialBaking' ('/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/libUnrealEditor-MaterialBaking.dylib')
+[2026.09.15-12.29.21:275][  0]LogModuleManager: InternalLoadLibrary: 'MeshMergeUtilities' ('/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/libUnrealEditor-MeshMergeUtilities.dylib')
+[2026.09.15-12.29.21:340][  0]LogModuleManager: InternalLoadLibrary: 'MeshReductionInterface' ('/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/libUnrealEditor-MeshReductionInterface.dylib')
+[2026.09.15-12.29.21:340][  0]LogMeshReduction: Display: Skeletal mesh reduction module (r.SkeletalMeshReductionModule) set to "SkeletalMeshReduction" which doesn't exist.
+[2026.09.15-12.29.21:341][  0]LogMeshReduction: Display: HLOD mesh reduction module (r.ProxyLODMeshReductionModule) set to "ProxyLODMeshReduction" which doesn't exist.
+[2026.09.15-12.29.21:341][  0]LogModuleManager: InternalLoadLibrary: 'QuadricMeshReduction' ('/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/libUnrealEditor-QuadricMeshReduction.dylib')
+[2026.09.15-12.29.21:341][  0]LogMeshReduction: Display: Using QuadricMeshReduction for automatic static mesh reduction
+[2026.09.15-12.29.21:341][  0]LogMeshReduction: Display: No automatic skeletal mesh reduction module available
+[2026.09.15-12.29.21:341][  0]LogMeshReduction: Display: No automatic mesh merging module available
+[2026.09.15-12.29.21:341][  0]LogMeshReduction: Display: No distributed automatic mesh merging module available
+[2026.09.15-12.29.21:341][  0]LogMeshMerging: No automatic mesh merging module available
+[2026.09.15-12.29.21:341][  0]LogMeshMerging: No distributed automatic mesh merging module available
+[2026.09.15-12.29.21:341][  0]LogModuleManager: InternalLoadLibrary: 'StaticMeshDescription' ('/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/libUnrealEditor-StaticMeshDescription.dylib')
+[2026.09.15-12.29.21:342][  0]LogModuleManager: InternalLoadLibrary: 'GeometryProcessingInterfaces' ('/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/libUnrealEditor-GeometryProcessingInterfaces.dylib')
+[2026.09.15-12.29.21:372][  0]LogModuleManager: InternalLoadLibrary: 'MeshBoneReduction' ('/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/libUnrealEditor-MeshBoneReduction.dylib')
+[2026.09.15-12.29.21:373][  0]LogModuleManager: InternalLoadLibrary: 'NaniteBuilder' ('/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/libUnrealEditor-NaniteBuilder.dylib')
+[2026.09.15-12.29.21:405][  0]LogModuleManager: InternalLoadLibrary: 'MeshBuilder' ('/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/libUnrealEditor-MeshBuilder.dylib')
+[2026.09.15-12.29.21:445][  0]LogModuleManager: InternalLoadLibrary: 'KismetCompiler' ('/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/libUnrealEditor-KismetCompiler.dylib')
+[2026.09.15-12.29.21:446][  0]LogModuleManager: InternalLoadLibrary: 'MovieSceneTools' ('/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/libUnrealEditor-MovieSceneTools.dylib')
+[2026.09.15-12.29.21:448][  0]LogModuleManager: InternalLoadLibrary: 'Sequencer' ('/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/libUnrealEditor-Sequencer.dylib')
+[2026.09.15-12.29.21:484][  0]LogModuleManager: InternalLoadLibrary: 'AssetDefinition' ('/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/libUnrealEditor-AssetDefinition.dylib')
+[2026.09.15-12.29.21:485][  0]LogTurnkeySupport: Completed device detection: Code = 0
+[2026.09.15-12.29.21:557][  0]LogModuleManager: InternalLoadLibrary: 'Media' ('/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/libUnrealEditor-Media.dylib')
+[2026.09.15-12.29.21:636][  0]LogConfig: Applying CVar settings from Section [/Script/CQTest.CQTestSettings] File [Engine]
+[2026.09.15-12.29.21:660][  0]LogShaderCompilers: Display: Compiling shader autogen file: ../../../../../../brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/game/Intermediate/ShaderAutogen/METAL_SM6/AutogenShaderHeaders.ush
+[2026.09.15-12.29.21:660][  0]LogShaderCompilers: Display: Autogen file is unchanged, skipping write.
+[2026.09.15-12.29.21:660][  0]LogVirtualization: Display: VirtualizationSystem name found in ini file: None
+[2026.09.15-12.29.21:660][  0]LogVirtualization: Display: FNullVirtualizationSystem mounted, virtualization will be disabled
+[2026.09.15-12.29.21:660][  0]LogInit: Running DelayedAutoRegister Phase ObjectSystemReady
+[2026.09.15-12.29.21:660][  0]LogModuleManager: StartProcessingNewlyLoadedObjects
+[2026.09.15-12.29.21:660][  0]LogModuleManager: InternalLoadLibrary: 'Core' ('/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/libUnrealEditor-Core.dylib')
+[2026.09.15-12.29.21:661][  0]LogModuleManager: InternalLoadLibrary: 'Networking' ('/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/libUnrealEditor-Networking.dylib')
+[2026.09.15-12.29.21:661][  0]LogModuleManager: InternalLoadLibrary: 'Sockets' ('/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/libUnrealEditor-Sockets.dylib')
+[2026.09.15-12.29.21:662][  0]LogModuleManager: InternalLoadLibrary: 'Messaging' ('/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/libUnrealEditor-Messaging.dylib')
+[2026.09.15-12.29.21:662][  0]LogModuleManager: InternalLoadLibrary: 'MRMesh' ('/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/libUnrealEditor-MRMesh.dylib')
+[2026.09.15-12.29.21:662][  0]LogModuleManager: InternalLoadLibrary: 'UnrealEd' ('/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/libUnrealEditor-UnrealEd.dylib')
+[2026.09.15-12.29.21:663][  0]LogModuleManager: InternalLoadLibrary: 'LandscapeEditorUtilities' ('/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/libUnrealEditor-LandscapeEditorUtilities.dylib')
+[2026.09.15-12.29.21:701][  0]LogModuleManager: InternalLoadLibrary: 'SubobjectDataInterface' ('/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/libUnrealEditor-SubobjectDataInterface.dylib')
+[2026.09.15-12.29.21:701][  0]LogModuleManager: InternalLoadLibrary: 'SlateCore' ('/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/libUnrealEditor-SlateCore.dylib')
+[2026.09.15-12.29.21:702][  0]LogModuleManager: InternalLoadLibrary: 'Slate' ('/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/libUnrealEditor-Slate.dylib')
+[2026.09.15-12.29.21:702][  0]LogModuleManager: InternalLoadLibrary: 'MacMenu' ('/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/libUnrealEditor-MacMenu.dylib')
+[2026.09.15-12.29.21:730][  0]LogModuleManager: InternalLoadLibrary: 'SlateReflector' ('/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/libUnrealEditor-SlateReflector.dylib')
+[2026.09.15-12.29.21:733][  0]LogModuleManager: InternalLoadLibrary: 'EditorStyle' ('/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/libUnrealEditor-EditorStyle.dylib')
+[2026.09.15-12.29.21:733][  0]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.09.15-12.29.21:733][  0]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.09.15-12.29.21:751][  0]LogModuleManager: InternalLoadLibrary: 'UMG' ('/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/libUnrealEditor-UMG.dylib')
+[2026.09.15-12.29.21:751][  0]LogModuleManager: InternalLoadLibrary: 'UMGEditor' ('/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/libUnrealEditor-UMGEditor.dylib')
+[2026.09.15-12.29.21:753][  0]LogModuleManager: InternalLoadLibrary: 'ScriptableEditorWidgets' ('/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/libUnrealEditor-ScriptableEditorWidgets.dylib')
+[2026.09.15-12.29.21:778][  0]LogModuleManager: InternalLoadLibrary: 'CollisionAnalyzer' ('/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/libUnrealEditor-CollisionAnalyzer.dylib')
+[2026.09.15-12.29.21:780][  0]LogModuleManager: InternalLoadLibrary: 'WorkspaceMenuStructure' ('/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/libUnrealEditor-WorkspaceMenuStructure.dylib')
+[2026.09.15-12.29.21:783][  0]LogModuleManager: InternalLoadLibrary: 'FunctionalTesting' ('/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/libUnrealEditor-FunctionalTesting.dylib')
+[2026.09.15-12.29.21:784][  0]LogModuleManager: InternalLoadLibrary: 'BehaviorTreeEditor' ('/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/libUnrealEditor-BehaviorTreeEditor.dylib')
+[2026.09.15-12.29.21:843][  0]LogModuleManager: InternalLoadLibrary: 'GameplayTasksEditor' ('/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/libUnrealEditor-GameplayTasksEditor.dylib')
+[2026.09.15-12.29.21:871][  0]LogModuleManager: InternalLoadLibrary: 'StringTableEditor' ('/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/libUnrealEditor-StringTableEditor.dylib')
+[2026.09.15-12.29.21:901][  0]LogModuleManager: InternalLoadLibrary: 'AssetTools' ('/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/libUnrealEditor-AssetTools.dylib')
+[2026.09.15-12.29.21:902][  0]LogModuleManager: InternalLoadLibrary: 'VREditor' ('/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/libUnrealEditor-VREditor.dylib')
+[2026.09.15-12.29.21:903][  0]LogModuleManager: InternalLoadLibrary: 'MaterialEditor' ('/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/libUnrealEditor-MaterialEditor.dylib')
+[2026.09.15-12.29.21:908][  0]LogModuleManager: InternalLoadLibrary: 'Overlay' ('/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/libUnrealEditor-Overlay.dylib')
+[2026.09.15-12.29.21:908][  0]LogModuleManager: InternalLoadLibrary: 'OverlayEditor' ('/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/libUnrealEditor-OverlayEditor.dylib')
+[2026.09.15-12.29.21:939][  0]LogModuleManager: InternalLoadLibrary: 'MediaAssets' ('/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/libUnrealEditor-MediaAssets.dylib')
+[2026.09.15-12.29.21:939][  0]LogModuleManager: InternalLoadLibrary: 'ClothingSystemRuntimeNv' ('/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/libUnrealEditor-ClothingSystemRuntimeNv.dylib')
+[2026.09.15-12.29.21:940][  0]LogModuleManager: InternalLoadLibrary: 'ClothingSystemEditor' ('/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/libUnrealEditor-ClothingSystemEditor.dylib')
+[2026.09.15-12.29.21:940][  0]LogModuleManager: InternalLoadLibrary: 'AnimationDataController' ('/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/libUnrealEditor-AnimationDataController.dylib')
+[2026.09.15-12.29.21:968][  0]LogModuleManager: InternalLoadLibrary: 'TimeManagement' ('/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/libUnrealEditor-TimeManagement.dylib')
+[2026.09.15-12.29.21:968][  0]LogModuleManager: InternalLoadLibrary: 'AnimGraph' ('/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/libUnrealEditor-AnimGraph.dylib')
+[2026.09.15-12.29.21:969][  0]LogModuleManager: InternalLoadLibrary: 'WorldBookmark' ('/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/libUnrealEditor-WorldBookmark.dylib')
+[2026.09.15-12.29.21:998][  0]LogModuleManager: InternalLoadLibrary: 'WorldPartitionEditor' ('/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/libUnrealEditor-WorldPartitionEditor.dylib')
+[2026.09.15-12.29.22:092][  0]LogWorldPartition: Display: FWorldPartitionClassDescRegistry::Initialize started...
+[2026.09.15-12.29.22:095][  0]LogWorldPartition: Display: FWorldPartitionClassDescRegistry::Initialize took 3.088 ms
+[2026.09.15-12.29.22:095][  0]LogModuleManager: InternalLoadLibrary: 'SceneOutliner' ('/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/libUnrealEditor-SceneOutliner.dylib')
+[2026.09.15-12.29.22:097][  0]LogModuleManager: InternalLoadLibrary: 'PacketHandler' ('/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/libUnrealEditor-PacketHandler.dylib')
+[2026.09.15-12.29.22:097][  0]LogModuleManager: InternalLoadLibrary: 'NetworkReplayStreaming' ('/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/libUnrealEditor-NetworkReplayStreaming.dylib')
+[2026.09.15-12.29.22:097][  0]LogModuleManager: InternalLoadLibrary: 'MassEntity' ('/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/libUnrealEditor-MassEntity.dylib')
+[2026.09.15-12.29.22:157][  0]LogModuleManager: InternalLoadLibrary: 'MassEntityTestSuite' ('/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/libUnrealEditor-MassEntityTestSuite.dylib')
+[2026.09.15-12.29.22:196][  0]LogMoviePlayer: Initializing movie player
+[2026.09.15-12.29.22:199][  0]LogInit: XR: Instanced Stereo Rendering is Disabled
+[2026.09.15-12.29.22:199][  0]LogInit: XR: Mobile Multiview is Disabled
+[2026.09.15-12.29.22:200][  0]LogUObjectGlobals: Warning: Failed to find object 'Object /ACLPlugin/ACLAnimBoneCompressionSettings'
+[2026.09.15-12.29.22:200][  0]LogAnimationCompression: Warning: Couldn't load default compression settings asset with path '/ACLPlugin/ACLAnimBoneCompressionSettings'
+[2026.09.15-12.29.22:202][  0]LogUObjectGlobals: Warning: Failed to find object 'Object /ACLPlugin/ACLAnimCurveCompressionSettings'
+[2026.09.15-12.29.22:202][  0]LogAnimationCompression: Warning: Couldn't load default compression settings asset with path '/ACLPlugin/ACLAnimCurveCompressionSettings'
+[2026.09.15-12.29.22:202][  0]LogModuleManager: InternalLoadLibrary: 'PythonScriptPlugin' ('/Users/Shared/Epic Games/UE_5.8/Engine/Plugins/Experimental/PythonScriptPlugin/Binaries/Mac/libUnrealEditor-PythonScriptPlugin.dylib')
+[2026.09.15-12.29.22:264][  0]LogModuleManager: InternalLoadLibrary: 'DomainCore' ('/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/game/Binaries/Mac/libUnrealEditor-DomainCore.dylib')
+[2026.09.15-12.29.22:278][  0]LogModuleManager: InternalLoadLibrary: 'Shoen' ('/Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/game/Binaries/Mac/libUnrealEditor-Shoen.dylib')
+[2026.09.15-12.29.22:308][  0]LogUObjectArray: 26312 objects as part of root set at end of initial load.
+[2026.09.15-12.29.22:308][  0]LogUObjectArray: CloseDisregardForGC: 0/0 objects in disregard for GC pool
+[2026.09.15-12.29.22:315][  0]LogModuleManager: InternalLoadLibrary: 'ProfileVisualizer' ('/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/libUnrealEditor-ProfileVisualizer.dylib')
+[2026.09.15-12.29.22:355][  0]LogModuleManager: InternalLoadLibrary: 'ImageWriteQueue' ('/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/libUnrealEditor-ImageWriteQueue.dylib')
+[2026.09.15-12.29.22:452][  0]LogTemp: Error test: UE::UnifiedErrorTest::Empty: [Empty error]
+[2026.09.15-12.29.22:452][  0]LogTemp: Error with param: UE::UnifiedErrorTest::WithInt: [Error with int -7]
+[2026.09.15-12.29.22:452][  0]LogTemp: Error with context: UE::UnifiedErrorTest::Empty: [Empty error]
+[2026.09.15-12.29.22:452][  0]LogTemp: FError that has been invalidated: ::: []
+[2026.09.15-12.29.22:452][  0]LogTemp: FError that has been moved from: ::: []
+[2026.09.15-12.29.22:502][  0]LogEngine: Initializing Engine...
+[2026.09.15-12.29.22:503][  0]LogModuleManager: InternalLoadLibrary: 'TypedElementFramework' ('/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/libUnrealEditor-TypedElementFramework.dylib')
+[2026.09.15-12.29.22:503][  0]LogModuleManager: InternalLoadLibrary: 'TypedElementRuntime' ('/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/libUnrealEditor-TypedElementRuntime.dylib')
+[2026.09.15-12.29.22:557][  0]LogStats: UGameplayTagsManager::InitializeManager -  0.000 s
+[2026.09.15-12.29.22:643][  0]LogTextureFormatOodle: Display: Oodle Texture loading DLL: liboo2texmac64.2.9.12.dylib
+[2026.09.15-12.29.22:685][  0]LogTextureFormatOodle: Display: Oodle Texture loading DLL: liboo2texmac64.2.9.15.dylib
+[2026.09.15-12.29.22:731][  0]LogNetVersion: Set ProjectVersion to 0.1.0. Version Checksum will be recalculated on next use.
+[2026.09.15-12.29.22:731][  0]LogInit: Texture streaming: Enabled
+[2026.09.15-12.29.22:766][  0]LogModuleManager: InternalLoadLibrary: 'MessagingRpc' ('/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/libUnrealEditor-MessagingRpc.dylib')
+[2026.09.15-12.29.22:767][  0]LogModuleManager: InternalLoadLibrary: 'PortalRpc' ('/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/libUnrealEditor-PortalRpc.dylib')
+[2026.09.15-12.29.22:767][  0]LogModuleManager: InternalLoadLibrary: 'PortalServices' ('/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/libUnrealEditor-PortalServices.dylib')
+[2026.09.15-12.29.22:767][  0]LogAudio: Display: Initializing Audio Device Manager...
+[2026.09.15-12.29.22:767][  0]LogAudio: Display: Loading Default Audio Settings Objects...
+[2026.09.15-12.29.22:768][  0]LogAudio: Display: No default SoundConcurrencyObject specified (or failed to load).
+[2026.09.15-12.29.22:768][  0]LogAudio: Display: Registering Engine Module Parameter Interfaces...
+[2026.09.15-12.29.22:768][  0]LogModuleManager: InternalLoadLibrary: 'AudioMixer' ('/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/libUnrealEditor-AudioMixer.dylib')
+[2026.09.15-12.29.22:769][  0]LogAudio: Display: Audio Device Manager Initialized
+[2026.09.15-12.29.22:769][  0]LogAudio: Display: Creating Audio Device:                 Id: 1, Scope: Shared, Realtime: True
+[2026.09.15-12.29.22:769][  0]LogAudioMixer: Display: bUseRenderScheduler set to true.
+[2026.09.15-12.29.22:769][  0]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2026.09.15-12.29.22:769][  0]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2026.09.15-12.29.22:769][  0]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2026.09.15-12.29.22:769][  0]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2026.09.15-12.29.22:769][  0]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2026.09.15-12.29.22:769][  0]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2026.09.15-12.29.22:769][  0]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2026.09.15-12.29.22:769][  0]LogAudio: Display: AudioDevice MaxSources: 32
+[2026.09.15-12.29.22:770][  0]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2026.09.15-12.29.22:770][  0]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2026.09.15-12.29.22:770][  0]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2026.09.15-12.29.22:770][  0]LogAudioMixerAudioUnit: Display: Bytes per submitted buffer: 8192
+[2026.09.15-12.29.22:849][  0]LogAudioMixerAudioUnit: Warning: Error querying Sample Rate: 2003332927
+[2026.09.15-12.29.22:866][  0]LogAudioMixer: Display: Initializing audio mixer using platform API: 'CoreAudio'
+[2026.09.15-12.29.22:868][  0]LogAudioMixer: Display: Using Audio Hardware Device Unknown
+[2026.09.15-12.29.22:869][  0]LogAudioMixer: Display: Initializing Sound Submixes...
+[2026.09.15-12.29.22:871][  0]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2026.09.15-12.29.22:871][  0]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2026.09.15-12.29.22:872][  0]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=1
+[2026.09.15-12.29.22:872][  0]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=1
+[2026.09.15-12.29.22:902][  0]LogInit: FAudioDevice initialized with ID 1.
+[2026.09.15-12.29.22:902][  0]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 1
+[2026.09.15-12.29.22:903][  0]LogModuleManager: InternalLoadLibrary: 'StreamingPauseRendering' ('/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/libUnrealEditor-StreamingPauseRendering.dylib')
+[2026.09.15-12.29.22:939][  0]LogModuleManager: InternalLoadLibrary: 'MovieScene' ('/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/libUnrealEditor-MovieScene.dylib')
+[2026.09.15-12.29.22:939][  0]LogModuleManager: InternalLoadLibrary: 'MovieSceneTracks' ('/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/libUnrealEditor-MovieSceneTracks.dylib')
+[2026.09.15-12.29.22:939][  0]LogModuleManager: InternalLoadLibrary: 'LevelSequence' ('/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/libUnrealEditor-LevelSequence.dylib')
+[2026.09.15-12.29.22:939][  0]LogModuleManager: InternalLoadLibrary: 'CinematicCamera' ('/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/libUnrealEditor-CinematicCamera.dylib')
+[2026.09.15-12.29.22:940][  0]LogModuleManager: InternalLoadLibrary: 'SparseVolumeTexture' ('/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/libUnrealEditor-SparseVolumeTexture.dylib')
+[2026.09.15-12.29.22:975][  0]LogCsvProfiler: Display: Metadata set : largeworldcoordinates="1"
+[2026.09.15-12.29.22:977][  0]LogChaosDD: Creating Chaos Debug Draw Scene for world Untitled
+[2026.09.15-12.29.22:983][  0]LogModuleManager: InternalLoadLibrary: 'ChaosVDRuntime' ('/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/libUnrealEditor-ChaosVDRuntime.dylib')
+[2026.09.15-12.29.22:989][  0]LogModuleManager: InternalLoadLibrary: 'MovieSceneCapture' ('/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/libUnrealEditor-MovieSceneCapture.dylib')
+[2026.09.15-12.29.22:990][  0]LogAudio: Display: Audio Device (ID: 1) registered with world 'Untitled'.
+[2026.09.15-12.29.22:991][  0]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2026.09.15-12.29.22:991][  0]LogInit: Display: Game Engine Initialized.
+[2026.09.15-12.29.22:992][  0]LogPython: Python enabled via CVar 'Engine.Python.IsEnabledByDefault'
+[2026.09.15-12.29.22:992][  0]LogPython: Using Python 3.11.8
+[2026.09.15-12.29.23:272][  0]LogPython: Display: No pip-enabled plugins with python dependencies found, skipping
+[2026.09.15-12.29.23:442][  0]LogCsvProfiler: Display: Metadata set : raytracing="0"
+[2026.09.15-12.29.23:442][  0]LogModuleManager: InternalLoadLibrary: 'SessionServices' ('/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/libUnrealEditor-SessionServices.dylib')
+[2026.09.15-12.29.23:450][  0]LogInit: Display: Starting Game.
+[2026.09.15-12.29.23:450][  0]LogGlobalStatus: Browse Started Browse: "/Game/Domain/Maps/Foundation?Name=Player"
+[2026.09.15-12.29.23:450][  0]LogNet: Browse: /Game/Domain/Maps/Foundation?Name=Player
+[2026.09.15-12.29.23:450][  0]LogLoad: LoadMap: /Game/Domain/Maps/Foundation?Name=Player
+[2026.09.15-12.29.23:450][  0]LogWorld: BeginTearingDown for /Temp/Untitled_0
+[2026.09.15-12.29.23:450][  0]LogWorld: UWorld::CleanupWorld for Untitled, bSessionEnded=true, bCleanupResources=true
+[2026.09.15-12.29.23:450][  0]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.09.15-12.29.23:460][  0]LogAudio: Display: Audio Device unregistered from world 'Untitled'.
+[2026.09.15-12.29.23:462][  0]LogUObjectHash: Compacting FUObjectHashTables data took   0.23ms
+[2026.09.15-12.29.23:468][  0]LogAudio: Display: Audio Device (ID: 1) registered with world 'Foundation'.
+[2026.09.15-12.29.23:468][  0]LogChaosDD: Creating Chaos Debug Draw Scene for world Foundation
+[2026.09.15-12.29.23:469][  0]LogModuleManager: InternalLoadLibrary: 'AIModule' ('/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/libUnrealEditor-AIModule.dylib')
+[2026.09.15-12.29.23:469][  0]LogModuleManager: InternalLoadLibrary: 'NavigationSystem' ('/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/libUnrealEditor-NavigationSystem.dylib')
+[2026.09.15-12.29.23:469][  0]LogModuleManager: InternalLoadLibrary: 'AITestSuite' ('/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/libUnrealEditor-AITestSuite.dylib')
+[2026.09.15-12.29.23:469][  0]LogModuleManager: InternalLoadLibrary: 'GameplayDebugger' ('/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/libUnrealEditor-GameplayDebugger.dylib')
+[2026.09.15-12.29.23:471][  0]LogLoad: Game class is 'FoundationGameMode'
+[2026.09.15-12.29.23:476][  0]LogWorld: Bringing World /Game/Domain/Maps/Foundation.Foundation up for play (max tick rate 0) at 2026.09.15-08.29.23
+[2026.09.15-12.29.23:476][  0]LogWorld: Bringing up level for play took: 0.000389
+[2026.09.15-12.29.23:477][  0]LogGameMode: FindPlayerStart: PATHS NOT DEFINED or NO PLAYERSTART with positive rating
+[2026.09.15-12.29.23:496][  0]t.MaxFPS = "0"
+[2026.09.15-12.29.23:501][  0]LogLoad: Took 0.051507 seconds to LoadMap(/Game/Domain/Maps/Foundation)
+[2026.09.15-12.29.23:501][  0]LogGlobalStatus: LoadMap Load map complete /Game/Domain/Maps/Foundation
+[2026.09.15-12.29.23:512][  0]LogSlate: Display: Synchronously lazy loading font file '../../../Engine/Content/Slate/Fonts/Roboto-Regular.ttf' with subface index 0 in Game thread.
+[2026.09.15-12.29.23:512][  0]LogSlate: Display: Took 0.000681 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Regular.ttf' (155K) on Game thread.
+[2026.09.15-12.29.23:512][  0]LogSlate: Display: Freetype font face in memory successfully created with synchronously loaded raw font file '../../../Engine/Content/Slate/Fonts/Roboto-Regular.ttf' subface 0 in Game thread.
+[2026.09.15-12.29.23:512][  0]LogSlate: Display: Font face '../../../Engine/Content/Slate/Fonts/Roboto-Regular.ttf' subface index 0 successfully added to font face map in Game thread.
+[2026.09.15-12.29.23:514][  0]LogModuleManager: InternalLoadLibrary: 'AutomationWorker' ('/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/libUnrealEditor-AutomationWorker.dylib')
+[2026.09.15-12.29.23:516][  0]LogModuleManager: InternalLoadLibrary: 'AutomationController' ('/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/libUnrealEditor-AutomationController.dylib')
+[2026.09.15-12.29.23:517][  0]LogModuleManager: InternalLoadLibrary: 'SequenceRecorder' ('/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/libUnrealEditor-SequenceRecorder.dylib')
+[2026.09.15-12.29.23:520][  0]LogModuleManager: InternalLoadLibrary: 'SequenceRecorderSections' ('/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/libUnrealEditor-SequenceRecorderSections.dylib')
+[2026.09.15-12.29.23:525][  0]LogConsoleManager: Warning: Console variable 'r.MotionVectorSimulation' used in the render thread. Rendering artifacts could happen. Use ECVF_RenderThreadSafe or don't use in render thread.
+[2026.09.15-12.29.23:916][  0]LogAssetRegistry: Display: CleanupOrphanedCacheFiles (PreLoad): 1 .ref files found, 1 referenced binaries
+[2026.09.15-12.29.23:916][  0]LogAssetRegistry: Display: CleanupOrphanedCacheFiles: 1 total binaries, 1 referenced (kept), 0 old-style pre-migration (kept), 0 orphans deleted, 0 orphans locked (kept)
+[2026.09.15-12.29.23:916][  0]LogAssetRegistry: Display: FindShardedCacheFiles: 1 via .ref, 0 via migration fallback, 1 total
+[2026.09.15-12.29.23:916][  0]LogAssetRegistry: Display: LoadCacheFiles: loading 1 cache files, memory-mapping=enabled
+[2026.09.15-12.29.23:937][  0]LogAssetRegistry: Display: Asset registry cache read as 11.7 MiB from ../../../../../../brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/game/Intermediate/CachedAssetRegistry/CachedAssetRegistry_0_62080ABA3340BB6183A4F2884AA9BC80.bin (memory-mapped=no, platform unsupported)
+[2026.09.15-12.29.23:937][  0]LogAssetRegistry: Display: AssetDataGatherer spent 0.022s loading caches from ../../../../../../brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/game/Intermediate/CachedAssetRegistry.
+[2026.09.15-12.29.23:957][  0]LogAssetRegistry: AssetRegistryGather time 0.0400s: AssetDataDiscovery 0.0000s, AssetDataGather 0.0246s, StoreResults 0.0154s. Wall time 3.1410s.
+	NumCachedDirectories 0. NumUncachedDirectories 1063. NumCachedFiles 5262. NumUncachedFiles 0.
+	BackgroundTickInterruptions 0.
+[2026.09.15-12.29.23:957][  0]LogAssetRegistry: Display: Starting OnFilesLoaded.Broadcast
+[2026.09.15-12.29.23:957][  0]LogAssetRegistry: Display: Completed OnFilesLoaded.Broadcast: 0.000s
+[2026.09.15-12.29.23:958][  0]LogInit: Running DelayedAutoRegister Phase EndOfEngineInit
+[2026.09.15-12.29.23:958][  0]LogModuleManager: InternalLoadLibrary: 'ToolMenus' ('/Users/Shared/Epic Games/UE_5.8/Engine/Binaries/Mac/libUnrealEditor-ToolMenus.dylib')
+[2026.09.15-12.29.23:964][  0]LogInit: Display: Engine is initialized. Leaving FEngineLoop::Init()
+[2026.09.15-12.29.23:964][  0]LogLoad: (Engine Initialization) Total time: 9.46 seconds
+[2026.09.15-12.29.23:967][  0]LogContentStreaming: Texture pool size now 1000 MB
+[2026.09.15-12.29.23:967][  0]LogCsvProfiler: Display: Metadata set : streamingpoolsizemb="1000"
+[2026.09.15-12.29.23:970][  0]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.09.15-12.29.23:970][  0]LogSlate: Display: Flushing composite font cache on Game thread. Clearing 1 entries in composite font map and 1 entries in font face map.
+[2026.09.15-12.29.24:027][  0]LogSlate: Display: Synchronously lazy loading font file '../../../Engine/Content/Slate/Fonts/Roboto-Regular.ttf' with subface index 0 in Render thread.
+[2026.09.15-12.29.24:027][  0]LogSlate: Display: Took 0.000125 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Regular.ttf' (155K) on Render thread.
+[2026.09.15-12.29.24:027][  0]LogSlate: Display: Freetype font face in memory successfully created with synchronously loaded raw font file '../../../Engine/Content/Slate/Fonts/Roboto-Regular.ttf' subface 0 in Render thread.
+[2026.09.15-12.29.24:027][  0]LogSlate: Display: Font face '../../../Engine/Content/Slate/Fonts/Roboto-Regular.ttf' subface index 0 successfully added to font face map in Render thread.
+[2026.09.15-12.29.24:033][  0]LogAutomationController: Ignoring very large delta of 16864793.52 seconds in calls to FAutomationControllerManager::Tick() and not penalizing unresponsive tests
+[2026.09.15-12.29.24:033][  0]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.09.15-12.29.24:034][  0]r.VSync = "0"
+[2026.09.15-12.29.24:039][  1]LogSlate: Display: Synchronously lazy loading font file '../../../Engine/Content/Slate/Fonts/Roboto-Regular.ttf' with subface index 0 in Game thread.
+[2026.09.15-12.29.24:039][  1]LogSlate: Display: Took 0.000205 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Regular.ttf' (155K) on Game thread.
+[2026.09.15-12.29.24:039][  1]LogSlate: Display: Freetype font face in memory successfully created with synchronously loaded raw font file '../../../Engine/Content/Slate/Fonts/Roboto-Regular.ttf' subface 0 in Game thread.
+[2026.09.15-12.29.24:039][  1]LogSlate: Display: Font face '../../../Engine/Content/Slate/Fonts/Roboto-Regular.ttf' subface index 0 successfully added to font face map in Game thread.
+[2026.09.15-12.30.11:521][673]LogTemp: Display: SHOEN_COMBAT_BENCHMARK_WRITTEN /Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/artifacts/combat/combat-2000.json
+[2026.09.15-12.30.11:521][673]LogMac: FPlatformMisc::RequestExit(0, <NoCallSiteInfo>)
+[2026.09.15-12.30.11:521][673]LogCore: Engine exit requested (reason: Mac RequestExit)
+[2026.09.15-12.30.11:528][674]LogCore: Engine exit requested (reason: EngineExit() was called; note: exit was already requested)
+[2026.09.15-12.30.11:544][674]LogStaticMesh: Abandoning remaining async distance field tasks for shutdown
+[2026.09.15-12.30.11:544][674]LogStaticMesh: Abandoning remaining async card representation tasks for shutdown
+[2026.09.15-12.30.11:544][674]LogInit: Display: PreExit Game.
+[2026.09.15-12.30.11:544][674]LogWorld: BeginTearingDown for /Game/Domain/Maps/Foundation
+[2026.09.15-12.30.11:545][674]LogWorld: UWorld::CleanupWorld for Foundation, bSessionEnded=true, bCleanupResources=true
+[2026.09.15-12.30.11:545][674]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.09.15-12.30.11:548][674]LogAudio: Display: Beginning Audio Device Manager Shutdown (Module: AudioMixerCoreAudio)...
+[2026.09.15-12.30.11:548][674]LogAudio: Display: Destroying 1 Remaining Audio Device(s)...
+[2026.09.15-12.30.11:548][674]LogAudio: Display: Audio Device unregistered from world 'Foundation'.
+[2026.09.15-12.30.11:548][674]LogAudio: Display: Shutting down audio device while 1 references to it are still alive. For more information, compile with INSTRUMENT_AUDIODEVICE_HANDLES.
+[2026.09.15-12.30.11:591][674]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID -1
+[2026.09.15-12.30.11:591][674]LogAudio: Display: Audio Device Manager Shutdown
+[2026.09.15-12.30.11:591][674]LogSlate: Window 'Shoen (64-bit Development SF_METAL_SM5) ' being destroyed
+[2026.09.15-12.30.11:596][674]LogSlate: Slate User Destroyed.  User Index 0, Is Virtual User: 0
+[2026.09.15-12.30.11:596][674]LogExit: Preparing to exit.
+[2026.09.15-12.30.11:656][674]LogUObjectHash: Compacting FUObjectHashTables data took   0.16ms
+[2026.09.15-12.30.11:657][674]LogMoviePlayer: Shutting down movie player
+[2026.09.15-12.30.11:658][674]LogAssetRegistry: Display: CleanupOrphanedCacheFiles (PostWrite): 1 .ref files found, 1 referenced binaries
+[2026.09.15-12.30.11:658][674]LogAssetRegistry: Display: CleanupOrphanedCacheFiles: 1 total binaries, 1 referenced (kept), 0 old-style pre-migration (kept), 0 orphans deleted, 0 orphans locked (kept)
+[2026.09.15-12.30.11:667][674]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2026.09.15-12.30.11:668][674]LogDemo: Cleaned up 0 splitscreen connections, owner deletion: enabled
+[2026.09.15-12.30.11:671][674]LogExit: Game engine shut down
+[2026.09.15-12.30.11:706][674]LogExit: Object subsystem successfully closed.
+[2026.09.15-12.30.11:720][674]LogShaderCompilers: Display: Exiting ShaderCompilingThread
+[2026.09.15-12.30.11:802][674]LogChaosDD: Chaos Debug Draw Shutdown
+[2026.09.15-12.30.11:805][674]LogPakFile: Destroying PakPlatformFile
+[2026.09.15-12.30.11:836][674]LogExit: Exiting.
+validated actual-contact combat benchmark report: /Users/brianwilliams/Desktop/Shoen-Rise-of-the-Samurai/artifacts/combat/combat-2000.json

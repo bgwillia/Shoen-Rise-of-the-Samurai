@@ -112,6 +112,10 @@ void AFoundationPlayerController::PickAndInspect(const FVector& Origin,const FVe
 }
 void AFoundationPlayerController::BeginPlacement()
 {
+    BeginPlacementType(FString());
+}
+void AFoundationPlayerController::BeginPlacementType(const FString& DefinitionId)
+{
     ShoenProfile::FActionScope Profile(TEXT("enter"),EKeys::B);
     auto* Sim=GetGameInstance()->GetSubsystem<UShoenSimulationSubsystem>();
     if (!Sim || !Sim->IsSettlement() || Sim->BuildingDefinitions().empty())
@@ -121,7 +125,8 @@ void AFoundationPlayerController::BeginPlacement()
     }
     CancelPlacement();
     PendingPlacement={};
-    PendingPlacement.definition_id=Sim->BuildingDefinitions().begin()->first;
+    PendingPlacement.definition_id=DefinitionId.IsEmpty() ? Sim->BuildingDefinitions().begin()->first : std::string(TCHAR_TO_UTF8(*DefinitionId));
+    if (!Sim->BuildingDefinitions().contains(PendingPlacement.definition_id)) return;
     PendingPlacement.settlement_id=Sim->State.build_areas.begin()->first;
     for (const auto& [Id,District] : Sim->State.districts)
         if (District.settlement_id==PendingPlacement.settlement_id) { PendingPlacement.district_id=Id; break; }
@@ -238,7 +243,11 @@ void AFoundationPlayerController::SelectAll()
     auto* Sim = GetGameInstance()->GetSubsystem<UShoenSimulationSubsystem>();
     Selected.Reset();
     for (const auto& [Id, F] : Sim->State.formations)
-        if (domain::ActiveFormationCount(Sim->State, Id) > 0) Selected.Add(Id);
+        if (domain::ActiveFormationCount(Sim->State, Id) > 0)
+        {
+            const auto* Unit=domain::LookupCombatUnit(Sim->Prototype,domain::CombatSide::Player,Id);
+            if (!Sim->IsPrototypeBattle() || (Unit && Unit->alive>0)) Selected.Add(Id);
+        }
 }
 void AFoundationPlayerController::FinishSelection()
 {
@@ -263,6 +272,8 @@ void AFoundationPlayerController::FinishSelection()
     for (const auto& [Id, F] : Sim->State.formations)
     {
         if (domain::ActiveFormationCount(Sim->State, Id) == 0) continue;
+        const auto* Unit=domain::LookupCombatUnit(Sim->Prototype,domain::CombatSide::Player,Id);
+        if (Sim->IsPrototypeBattle() && (!Unit || Unit->alive==0)) continue;
         FVector2D Screen;
         const FVector Center(F.x,F.y,100);
         if (Box && ProjectWorldLocationToScreen(Center, Screen) && Rect.IsInside(Screen)) Selected.Add(Id);
@@ -287,7 +298,8 @@ void AFoundationPlayerController::PlayerTick(float Dt)
     const bool bHasMousePosition = GetMousePosition(MX, MY);
     if (bMouseDiagnostics && WasInputKeyJustPressed(EKeys::LeftMouseButton)) UE_LOG(LogTemp,Display,TEXT("SHOEN_CLICK %.1f %.1f"),MX,MY);
     int32 ViewWidth=0,ViewHeight=0; GetViewportSize(ViewWidth,ViewHeight);
-    const bool OverPanel = MX < 410 || MY < 66 || MY >= ViewHeight-54;
+    const bool OverPanel = MX < 410 || MY < 66 || MY >= ViewHeight-54
+        || (GetHUD() && GetHUD()->GetHitBoxAtCoordinates(FVector2D(MX,MY),true));
     RefreshInspection();
     if (WasInputKeyJustPressed(EKeys::B))
     {
@@ -337,7 +349,9 @@ void AFoundationPlayerController::PlayerTick(float Dt)
             std::sort(Ids.begin(), Ids.end());
             const FVector Direction = End - MoveStart;
             const double Facing = Direction.Size2D() > 180 ? FMath::Atan2(Direction.Y,Direction.X) : Sim->State.formations.at(Ids.front()).facing;
-            const auto Result = domain::IssueMove(Sim->State, Ids, MoveStart.X, MoveStart.Y, Facing);
+            const auto Result = Sim->Prototype.enabled
+                ? domain::IssuePrototypeOrder(Sim->State, Sim->Prototype, Ids, MoveStart.X, MoveStart.Y, Facing)
+                : domain::IssueMove(Sim->State, Ids, MoveStart.X, MoveStart.Y, Facing);
             Sim->Message = Result.ok ? TEXT("Move order issued. Drag from a destination toward the desired facing.") : UTF8_TO_TCHAR(Result.error.c_str());
         }
         bOrdering = false;
@@ -367,16 +381,32 @@ void AFoundationPlayerController::PlayerTick(float Dt)
     }
     if (auto* Mode = Cast<AFoundationGameMode>(GetWorld()->GetAuthGameMode()))
     {
-        if (WasInputKeyJustPressed(EKeys::N)) Mode->NewSettlement();
+        if (WasInputKeyJustPressed(EKeys::N)) { if (Sim->Prototype.enabled) Mode->NewPrototype(); else Mode->NewSettlement(); }
+        if (Sim->Prototype.enabled)
+        {
+            if (WasInputKeyJustPressed(EKeys::M)) Sim->RecruitPrototypeTroops(domain::Occupation::Agriculture,domain::TroopRole::Polearm,50);
+            if (WasInputKeyJustPressed(EKeys::L)) Sim->RecruitPrototypeTroops(domain::Occupation::GeneralLabor,domain::TroopRole::Polearm,50);
+            if (WasInputKeyJustPressed(EKeys::J)) Sim->RecruitPrototypeTroops(domain::Occupation::Smithing,domain::TroopRole::Polearm,20);
+            if (WasInputKeyJustPressed(EKeys::K)) Sim->RecruitPrototypeTroops(domain::Occupation::Agriculture,domain::TroopRole::Bow,50);
+            if (WasInputKeyJustPressed(EKeys::T)) Sim->RecruitPrototypeTroops(domain::Occupation::RetainerService,domain::TroopRole::SamuraiFoot,20);
+            if (WasInputKeyJustPressed(EKeys::F)) Sim->StartPrototypeBattle();
+            if (WasInputKeyJustPressed(EKeys::G)) Sim->OrderPrototypeAttack();
+            if (WasInputKeyJustPressed(EKeys::H)) Sim->ReturnPrototypeArmy();
+            if (WasInputKeyJustPressed(EKeys::P)) Sim->FastForwardPrototype(7);
+            if (WasInputKeyJustPressed(EKeys::Home)) Mode->FrameCurrentScenario();
+        }
+        else
+        {
         if (WasInputKeyJustPressed(EKeys::R)) Mode->NewScenario(0);
         if (WasInputKeyJustPressed(EKeys::Z)) Mode->NewScenario(1000);
         if (WasInputKeyJustPressed(EKeys::X)) Mode->NewScenario(4000);
         if (WasInputKeyJustPressed(EKeys::C)) Mode->NewScenario(8000);
         if (WasInputKeyJustPressed(EKeys::V)) Mode->NewScenario(20000);
+        }
     }
     if (WasInputKeyJustPressed(EKeys::F10))
         FScreenshotRequest::RequestScreenshot(FPaths::ProjectSavedDir() / TEXT("Screenshots/Foundation.png"),true,true);
-    if (!Sim->IsSettlement())
+    if (!Sim->Prototype.enabled && !Sim->IsSettlement())
     {
         if (WasInputKeyJustPressed(EKeys::M)) Sim->MobilizeProof();
         if (WasInputKeyJustPressed(EKeys::O)) Sim->ResolveProof();

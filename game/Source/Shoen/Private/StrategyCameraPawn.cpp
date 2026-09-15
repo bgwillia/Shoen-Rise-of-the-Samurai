@@ -40,6 +40,17 @@ void AStrategyCameraPawn::FrameSettlement()
     Arm->SetRelativeRotation(FRotator(-60,TargetYaw,0));
 }
 float AStrategyCameraPawn::Zoom() const { return Arm->TargetArmLength; }
+void AStrategyCameraPawn::FramePrototype(FVector Center, float Span)
+{
+    // Reserve the existing sidebar's screen space when framing either scene.
+    TargetFocus = Center - FVector(Span * .23f, 0, 0);
+    TargetZoom = FMath::Clamp(Span * 1.9f, 11000.0f, 58000.0f);
+    TargetYaw = -90;
+    ScenarioFocus = TargetFocus; ScenarioZoom = TargetZoom;
+    SetActorLocation(TargetFocus);
+    Arm->TargetArmLength = TargetZoom;
+    Arm->SetRelativeRotation(FRotator(-60,TargetYaw,0));
+}
 void AStrategyCameraPawn::Tick(float Dt)
 {
     Super::Tick(Dt);

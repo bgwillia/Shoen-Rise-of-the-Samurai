@@ -1,0 +1,25 @@
+{
+  "food_per_farmer": 3,
+  "food_per_person": 1,
+  "labor_per_timber": 8,
+  "labor_per_iron": 20,
+  "labor_per_fuel": 10,
+  "smiths_per_equipment": 5,
+  "timber_per_equipment": 1,
+  "iron_per_equipment": 1,
+  "fuel_per_equipment": 1,
+  "elite_iron_cost": 3,
+  "elite_timber_cost": 2,
+  "elite_fuel_cost": 2,
+  "recovery_days": 7,
+  "elite_production_period_days": 3,
+  "base_food_capacity": 1500,
+  "granary_food_capacity": 8000,
+  "troops": [
+    {"role":"polearm", "attack_per_soldier":0.028, "damage_received":1.0, "movement_cm_per_second":600, "range_cm":700, "starting_morale":100},
+    {"role":"bow", "attack_per_soldier":0.016, "damage_received":1.10, "movement_cm_per_second":580, "range_cm":5000, "starting_morale":85},
+    {"role":"retainer_infantry", "attack_per_soldier":0.072, "damage_received":0.55, "movement_cm_per_second":640, "range_cm":700, "starting_morale":120},
+    {"role":"samurai_foot", "attack_per_soldier":0.09, "damage_received":0.45, "movement_cm_per_second":660, "range_cm":700, "starting_morale":130},
+    {"role":"mounted_samurai", "attack_per_soldier":0.075, "damage_received":0.65, "movement_cm_per_second":1000, "range_cm":850, "starting_morale":120}
+  ]
+}

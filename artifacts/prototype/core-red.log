@@ -1,0 +1,7 @@
+FAIL daily economy and worker removal: MakePrototype(w,p)
+FAIL recruitment gear estate and origins: MakePrototype(w,p)
+FAIL deterministic combat and frozen campaign: MakeCombatFixture(a,p,500)
+FAIL return exactly once and recovery: MakePrototype(w,p)
+FAIL elite strength and counters: MakePrototype(w,p)
+FAIL ranged damage and real orders: MakePrototype(w,p)
+FAIL actual combat scale: MakeCombatFixture(w,p,n)

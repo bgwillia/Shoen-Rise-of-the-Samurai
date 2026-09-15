@@ -8,6 +8,7 @@
 #include "FoundationCursorDiagnostics.h"
 #include "domain/Buildings.h"
 #include "domain/Inspection.h"
+#include "domain/Prototype.h"
 #include "InteractionProfiler.h"
 #include "InputCoreTypes.h"
 
@@ -51,6 +52,7 @@ void AFoundationHUD::DrawHUD()
     auto* Mode = Cast<AFoundationGameMode>(GetWorld()->GetAuthGameMode());
     auto* PC = Cast<AFoundationPlayerController>(PlayerOwner);
     if (!Sim || !Mode || !Canvas) return;
+    if (Sim->Prototype.enabled) { DrawPrototypeHUD(Sim,Mode,PC); return; }
     const auto P = domain::Summarize(Sim->State);
     const FLinearColor Muted(.62,.72,.73), Gold(.95,.74,.37);
     DrawRect(FLinearColor(.025,.04,.045,.95),0,0,Canvas->SizeX,64);
@@ -204,6 +206,21 @@ void AFoundationHUD::NotifyHitBoxClick(FName Id)
     auto* Mode = Cast<AFoundationGameMode>(GetWorld()->GetAuthGameMode());
     if (!Sim || !Mode) return;
     auto* PC=Cast<AFoundationPlayerController>(PlayerOwner);
+    if (Id==TEXT("proto_reset")) { Mode->NewPrototype(); return; }
+    if (Sim->Prototype.enabled)
+    {
+        if (Id==TEXT("proto_farmer")) Sim->RecruitPrototypeTroops(domain::Occupation::Agriculture,domain::TroopRole::Polearm,50);
+        if (Id==TEXT("proto_labor")) Sim->RecruitPrototypeTroops(domain::Occupation::GeneralLabor,domain::TroopRole::Polearm,50);
+        if (Id==TEXT("proto_smith")) Sim->RecruitPrototypeTroops(domain::Occupation::Smithing,domain::TroopRole::Polearm,20);
+        if (Id==TEXT("proto_bow")) Sim->RecruitPrototypeTroops(domain::Occupation::Agriculture,domain::TroopRole::Bow,50);
+        if (Id==TEXT("proto_samurai")) Sim->RecruitPrototypeTroops(domain::Occupation::RetainerService,domain::TroopRole::SamuraiFoot,20);
+        if (Id==TEXT("proto_fight")) { if (Sim->StartPrototypeBattle()) Mode->FrameCurrentScenario(); }
+        if (Id==TEXT("proto_attack")) Sim->OrderPrototypeAttack();
+        if (Id==TEXT("proto_return")) { if (Sim->ReturnPrototypeArmy()) Mode->FrameCurrentScenario(); }
+        if (Id==TEXT("proto_days")) Sim->FastForwardPrototype(7);
+        const FString Name=Id.ToString();
+        if (PC && Name.StartsWith(TEXT("proto_build_"))) PC->BeginPlacementType(Name.RightChop(12));
+    }
     if (Id==TEXT("settlement")) Mode->NewSettlement();
     if (PC)
     {
@@ -228,4 +245,144 @@ void AFoundationHUD::NotifyHitBoxClick(FName Id)
     if (Id==TEXT("scale20000")) Mode->NewScenario(20000);
     if (Id==TEXT("save")) Sim->Save();
     if (Id==TEXT("load")) Sim->Load();
+}
+
+void AFoundationHUD::DrawPrototypeHUD(UShoenSimulationSubsystem* Sim,AFoundationGameMode* Mode,AFoundationPlayerController* PC)
+{
+    const auto& W=Sim->State; const auto& Proto=Sim->Prototype;
+    const auto Pop=domain::Summarize(W); const auto Economy=domain::ForecastPrototype(W,Proto);
+    const bool Battle=Sim->IsPrototypeBattle();
+    const FLinearColor Muted(.62,.72,.73),Gold(.95,.74,.37),Cyan(.3,.85,1);
+    DrawRect(FLinearColor(.025,.04,.045,.96),0,0,Canvas->SizeX,64);
+    DrawRect(FLinearColor(.035,.055,.06,.96),0,64,410,Canvas->SizeY-64);
+    Label(TEXT("SHOEN / CORE LOOP PROTOTYPE"),20,16,Gold,1.2f);
+    Label(FString::Printf(TEXT("Day %lld | %dx | %s"),W.campaign_day+1,W.speed,UTF8_TO_TCHAR(domain::BattlePhaseName(Proto.phase))),440,17,FLinearColor::White,1.2f);
+    Label(Battle ? TEXT("Blue: your army | Red: enemy | Purple: elite") : TEXT("Settlement -> mobilize -> battle -> return -> recover"),440,41,Muted);
+    Button(TEXT("proto_reset"),TEXT("Reset entire prototype"),Canvas->SizeX-220,17,200);
+    Label(TEXT("CAMPAIGN / BATTLE CLOCK"),20,76,Gold);
+    Button(TEXT("pause"),TEXT("Pause"),20,98,64); Button(TEXT("speed1"),TEXT("1x"),92,98,64);
+    Button(TEXT("speed3"),TEXT("3x"),164,98,64); Button(TEXT("speed5"),TEXT("5x"),236,98,64); Button(TEXT("speed10"),TEXT("10x"),308,98,78);
+    Label(FString::Printf(TEXT("Living %lld | Away %lld | Dead %lld"),Pop.living,Pop.away,Pop.dead),20,136,Gold);
+    Label(FString::Printf(TEXT("Available %lld | Recovering %lld | Dependents %lld"),Pop.available,Pop.recovering,Pop.dependent),20,156,Muted);
+    Label(TEXT("OCCUPATION             READY / AWAY / RECOVER"),20,180,Cyan);
+    domain::Quantity Available[6]{},Away[6]{},Recovering[6]{};
+    for (const auto& Pair:W.cohorts)
+    {
+        const auto I=static_cast<int32>(Pair.second.occupation);
+        if (I>=0 && I<6) { Available[I]+=Pair.second.available; Recovering[I]+=Pair.second.recovering_home; }
+    }
+    for (const auto& Pair:W.services)
+    {
+        const auto& S=Pair.second; const auto I=static_cast<int32>(S.origin.occupation);
+        if (I>=0 && I<6 && S.status!=domain::ServiceStatus::Dead && S.status!=domain::ServiceStatus::ReturnedHealthy && S.status!=domain::ServiceStatus::ReturnedWounded) ++Away[I];
+    }
+    const TCHAR* Occupations[]={TEXT("Farmers"),TEXT("Laborers"),TEXT("Smiths"),TEXT("Commerce"),TEXT("Maritime"),TEXT("Retainers")};
+    for (int32 I=0;I<6;++I)
+    {
+        Label(Occupations[I],20,201+I*17);
+        Label(FString::Printf(TEXT("%lld / %lld / %lld"),Available[I],Away[I],Recovering[I]),218,201+I*17);
+    }
+    if (!W.settlements.empty())
+    {
+        const auto& R=W.settlements.begin()->second.resources;
+        Label(FString::Printf(TEXT("Food %lld / %lld | Timber %lld"),R.food,Economy.food_capacity,R.timber),20,309,Gold);
+        Label(FString::Printf(TEXT("Iron %lld | Fuel %lld | Treasury %lld"),R.iron,R.fuel,R.treasury),20,329);
+        Label(FString::Printf(TEXT("Basic gear %lld | Elite gear %lld"),R.equipment,Proto.elite_equipment),20,349,Cyan);
+    }
+    Label(FString::Printf(TEXT("Daily food %+lld (%lld grown - %lld eaten)"),Economy.food_produced-Economy.food_consumed,Economy.food_produced,Economy.food_consumed),20,374,Economy.food_produced>=Economy.food_consumed ? FLinearColor(.4,1,.5) : FLinearColor(1,.45,.3));
+    Label(FString::Printf(TEXT("Smith output/day: %lld basic, %lld elite"),Economy.basic_equipment_produced,Economy.elite_equipment_produced),20,394,Muted);
+    domain::Quantity Roles[5]{};
+    for (const auto& Pair:W.formations)
+    {
+        if (Pair.second.demobilized) continue;
+        const auto I=static_cast<int32>(Pair.second.role);
+        const auto* Unit=domain::LookupCombatUnit(Proto,domain::CombatSide::Player,Pair.first);
+        if (I>=0 && I<5) Roles[I]+=Battle && Unit ? Unit->alive : domain::ActiveFormationCount(W,Pair.first);
+    }
+    Label(FString::Printf(TEXT("Army: %lld spear | %lld bow | %lld elite"),Roles[0],Roles[1],Roles[2]+Roles[3]+Roles[4]),20,417,Gold);
+    Button(TEXT("proto_farmer"),TEXT("M  50 farmer spears"),20,442); Button(TEXT("proto_labor"),TEXT("L  50 labor spears"),211,442);
+    Button(TEXT("proto_smith"),TEXT("J  20 smith spears"),20,474); Button(TEXT("proto_bow"),TEXT("K  50 farmer bows"),211,474);
+    Button(TEXT("proto_samurai"),TEXT("T  20 samurai"),20,506); Button(TEXT("proto_days"),TEXT("P  Advance 7 days"),211,506);
+    Button(TEXT("proto_fight"),TEXT("F  Take army to battle"),20,542); Button(TEXT("proto_attack"),TEXT("G  Advance / attack"),211,542);
+    Button(TEXT("proto_return"),Battle && Proto.phase==domain::BattlePhase::Fighting ? TEXT("H  Retreat to settlement") : TEXT("H  Return survivors"),20,574,366);
+    Label(TEXT("WASD pan | Wheel zoom | Q/E rotate"),20,611,Muted);
+    Label(TEXT("Middle-drag rotate | Shift-middle pan"),20,628,Muted);
+    Label(TEXT("Click/box select | Shift adds | Right move"),20,645,Muted);
+    Label(TEXT("Right-drag facing | Ctrl+1..9 set group"),20,662,Muted);
+    Label(TEXT("1..9 recall | Ctrl+A all | Space pause"),20,679,Muted);
+    Label(TEXT("F6 profile / F12 diagnostics: optional"),20,696,Muted);
+    if (Battle)
+    {
+        const auto& R=Proto.battle;
+        DrawRect(FLinearColor(.035,.055,.06,.94),420,70,Canvas->SizeX-440,110);
+        Label(FString::Printf(TEXT("YOUR ARMY: %lld standing | %lld dead | %lld wounded"),R.player_alive,R.player_dead,R.player_wounded),440,82,Cyan,1.1f);
+        Label(FString::Printf(TEXT("ENEMY: %lld standing | %lld dead | %lld wounded"),R.enemy_alive,R.enemy_dead,R.enemy_wounded),440,105,FLinearColor(1,.45,.4));
+        int32 Routed=0; double Fatigue=0; int32 Units=0;
+        for (const auto& Pair:Proto.player_units) { Routed+=Pair.second.routed ? 1 : 0; Fatigue+=Pair.second.fatigue; ++Units; }
+        Label(FString::Printf(TEXT("%.0fs battle | Routing %d formations | Average fatigue %.0f | Selected %d"),R.seconds,Routed,Units ? Fatigue/Units : 0,PC ? PC->Selected.Num() : 0),440,128,Gold);
+        if (Proto.phase!=domain::BattlePhase::Fighting) Label(Proto.phase==domain::BattlePhase::Victory ? TEXT("VICTORY - H returns survivors; wounded need recovery time") : TEXT("DEFEAT - H returns remaining survivors"),440,153,Gold,1.15f);
+    }
+    else
+    {
+        const auto& R=Proto.last_outcome;
+        if (R.player_started>0)
+        {
+            DrawRect(FLinearColor(.035,.055,.06,.94),420,70,Canvas->SizeX-440,48);
+            Label(FString::Printf(TEXT("LAST BATTLE: %s | Dead %lld | Wounded %lld | Healthy %lld"),R.retreated ? TEXT("retreated") : R.victory ? TEXT("victory") : TEXT("defeat"),R.player_dead,R.player_wounded,R.player_alive),440,79,Gold);
+            Label(TEXT("Dead workers stay lost. Wounded recover after 7 days; watch food and gear output."),440,100,Muted);
+        }
+        int32 I=0;
+        for (const auto& Pair:Proto.catalog)
+        {
+            if (I==6) break;
+            const FString Type=UTF8_TO_TCHAR(Pair.first.c_str());
+            Button(FName(*(TEXT("proto_build_")+Type)),UTF8_TO_TCHAR(Pair.second.display_name.c_str()),440+(I%3)*250,128+(I/3)*32,240); ++I;
+        }
+        if (PC && PC->IsPlacing())
+        {
+            Label(FString::Printf(TEXT("PLACE: %s | %s"),UTF8_TO_TCHAR(PC->Placement().definition_id.c_str()),PC->HasPlacementPoint() ? UTF8_TO_TCHAR(domain::PlacementReason(PC->PlacementStatus().code)) : TEXT("move pointer onto ground")),440,199,Gold);
+            Label(TEXT("Click / Enter confirm | [ / ] rotate | Right click / Esc cancel"),440,220,Muted);
+        }
+        if (PC) for (const auto& Pair:W.buildings)
+        {
+            const auto& B=Pair.second; FVector2D Screen;
+            if (PC->ProjectWorldLocationToScreen(FVector(B.x_cm,B.y_cm,B.z_cm+B.height_cm+120),Screen,false) && Screen.X>420 && Screen.Y>240 && Screen.Y<Canvas->SizeY-64)
+            {
+                const auto Definition=Proto.catalog.find(B.definition_id);
+                const FString Name=Definition!=Proto.catalog.end() ? UTF8_TO_TCHAR(Definition->second.display_name.c_str()) : UTF8_TO_TCHAR(B.definition_id.c_str());
+                FString Function;
+                if (B.definition_id=="house") Function=TEXT("Housing");
+                else if (B.definition_id=="farm") Function=TEXT("Food production");
+                else if (B.definition_id=="granary") Function=TEXT("Food storage");
+                else if (B.definition_id=="smithy") Function=TEXT("Military equipment");
+                else if (B.definition_id=="manor") Function=TEXT("Estate / retainers");
+                else Function=TEXT("Retainer training");
+                Label(Name+TEXT(" / ")+Function,Screen.X-75,Screen.Y,Gold);
+            }
+        }
+    }
+    if (PC && PC->bSelecting)
+    {
+        const FVector2D A=PC->SelectionStart,B=PC->SelectionEnd;
+        DrawLine(A.X,A.Y,B.X,A.Y,Gold); DrawLine(B.X,A.Y,B.X,B.Y,Gold);
+        DrawLine(B.X,B.Y,A.X,B.Y,Gold); DrawLine(A.X,B.Y,A.X,A.Y,Gold);
+    }
+    DrawRect(FLinearColor(.025,.04,.045,.95),410,Canvas->SizeY-54,Canvas->SizeX-410,54);
+    Label(Sim->Message,430,Canvas->SizeY-42,Gold);
+    Label(Battle ? TEXT("Formation labels: M morale / F fatigue. Casualties return to the population ledger.") : TEXT("Mobilizing workers lowers production. Return survivors and advance days to see the consequence."),430,Canvas->SizeY-23,Muted);
+    if (PC && PC->bMouseDiagnostics)
+    {
+        const auto Diagnostic=ReadFoundationCursorDiagnostics(*PC);
+        DrawRect(FLinearColor(0,0,0,.85),420,245,Canvas->SizeX-430,80);
+        for (int32 I=0;I<Diagnostic.Lines.Num();++I) Label(Diagnostic.Lines[I],430,250+I*18);
+        DrawLine(Diagnostic.Viewport.X-8,Diagnostic.Viewport.Y,Diagnostic.Viewport.X+8,Diagnostic.Viewport.Y,FLinearColor::Red,2);
+        DrawLine(Diagnostic.Viewport.X,Diagnostic.Viewport.Y-8,Diagnostic.Viewport.X,Diagnostic.Viewport.Y+8,FLinearColor::Red,2);
+        if (Diagnostic.bHasNative)
+        {
+            const auto P=Diagnostic.NativeViewport;
+            DrawLine(P.X-12,P.Y-12,P.X+12,P.Y+12,FLinearColor(0,1,1),1);
+            DrawLine(P.X-12,P.Y+12,P.X+12,P.Y-12,FLinearColor(0,1,1),1);
+        }
+    }
+    ShoenProfile::CaptureHud(Sim->Message);
 }

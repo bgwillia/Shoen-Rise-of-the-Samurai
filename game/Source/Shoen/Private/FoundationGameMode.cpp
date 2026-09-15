@@ -24,6 +24,7 @@
 #include "Serialization/JsonSerializer.h"
 #include "domain/Battle.h"
 #include "InteractionProfiler.h"
+#include "DrawDebugHelpers.h"
 
 AFoundationGameMode::AFoundationGameMode()
 {
@@ -46,12 +47,14 @@ void AFoundationGameMode::BeginPlay()
     auto* Sim = GetGameInstance()->GetSubsystem<UShoenSimulationSubsystem>();
     FString Scenario;
     FParse::Value(FCommandLine::Get(),TEXT("ShoenScenario="),Scenario);
-    if (Scenario==TEXT("settlement")) Sim->PrepareSettlementForLevel();
+    if (Scenario==TEXT("prototype")) { Sim->ResetPrototype(); Sim->bHasPresentedLevel=true; }
+    else if (Scenario==TEXT("settlement")) Sim->PrepareSettlementForLevel();
     else Sim->PrepareForLevel(RequestedSoldiers);
+    BeginCombatBenchmark();
     RebuildViews();
+    FrameCurrentScenario();
     if (auto* PC = GetWorld()->GetFirstPlayerController())
-        if (auto* Camera = Cast<AStrategyCameraPawn>(PC->GetPawn()))
-        { if (Sim->IsSettlement()) Camera->FrameSettlement(); else Camera->FrameScenario(Views.Num()); Camera->bBenchmarkMotion = bBenchmark; }
+        if (auto* Camera = Cast<AStrategyCameraPawn>(PC->GetPawn())) Camera->bBenchmarkMotion = bBenchmark || bCombatBenchmark;
     BenchmarkStart = FPlatformTime::Seconds();
     LastFrameWallTime = BenchmarkStart;
 }
@@ -106,6 +109,34 @@ void AFoundationGameMode::NewSettlement()
         if (auto* Camera=Cast<AStrategyCameraPawn>(PC->GetPawn())) Camera->FrameSettlement();
     }
 }
+void AFoundationGameMode::NewPrototype()
+{
+    auto* Sim=GetGameInstance()->GetSubsystem<UShoenSimulationSubsystem>();
+    if (!Sim->ResetPrototype()) return;
+    RebuildViews(); FrameCurrentScenario();
+}
+void AFoundationGameMode::FrameCurrentScenario()
+{
+    auto* Sim=GetGameInstance()->GetSubsystem<UShoenSimulationSubsystem>();
+    auto* PC=Cast<AFoundationPlayerController>(GetWorld()->GetFirstPlayerController());
+    if (!PC) return;
+    PC->CancelPlacement();
+    auto* Camera=Cast<AStrategyCameraPawn>(PC->GetPawn());
+    if (!Camera) return;
+    if (!Sim->Prototype.enabled)
+    { if (Sim->IsSettlement()) Camera->FrameSettlement(); else Camera->FrameScenario(int32(Sim->State.formations.size())); return; }
+    FBox Bounds(ForceInit);
+    if (Sim->IsPrototypeBattle())
+    {
+        for (const auto& [Id,F] : Sim->State.formations) if (!F.demobilized && !F.service_ids.empty()) Bounds+=FVector(F.x,F.y,0);
+        for (const auto& [Id,F] : Sim->Prototype.enemy.formations) if (!F.demobilized && !F.service_ids.empty()) Bounds+=FVector(F.x,F.y,0);
+    }
+    else for (const auto& [Id,B] : Sim->State.buildings) Bounds+=FVector(B.x_cm,B.y_cm,0);
+    const FVector Size=Bounds.IsValid ? Bounds.GetSize() : FVector(6000,6000,0);
+    const FVector Center=(Bounds.IsValid ? Bounds.GetCenter() : FVector::ZeroVector)
+        - (Sim->IsPrototypeBattle() ? FVector(0,600,0) : FVector::ZeroVector);
+    Camera->FramePrototype(Center,FMath::Max(Size.X,Size.Y)+(Sim->IsPrototypeBattle() ? 3700 : 2200));
+}
 void AFoundationGameMode::RebuildViews()
 {
     auto* Sim = GetGameInstance()->GetSubsystem<UShoenSimulationSubsystem>();
@@ -123,9 +154,19 @@ void AFoundationGameMode::RebuildViews()
         View->Rebuild(Sim->State,F);
         Views.Add(View);
     }
+    if (Sim->IsPrototypeBattle())
+        for (const auto& [Id,F] : Sim->Prototype.enemy.formations)
+        {
+            if (domain::ActiveFormationCount(Sim->Prototype.enemy,Id)==0) continue;
+            auto* View=GetWorld()->SpawnActor<AFormationView>();
+            View->SetEnemy(true);
+            View->Rebuild(Sim->Prototype.enemy,F);
+            Views.Add(View);
+        }
     if (!IsValid(SettlementView)) SettlementView=GetWorld()->SpawnActor<ASettlementView>();
     SettlementView->Rebuild(Sim->State);
-    for (const auto& Decor : LabDecorations) if (Decor) Decor->SetActorHiddenInGame(Sim->IsSettlement());
+    SettlementView->SetActorHiddenInGame(Sim->IsPrototypeBattle());
+    for (const auto& Decor : LabDecorations) if (Decor) Decor->SetActorHiddenInGame(Sim->IsSettlement() || Sim->Prototype.enabled);
     SeenGeneration = Sim->ViewGeneration;
     if (auto* PC = Cast<AFoundationPlayerController>(GetWorld()->GetFirstPlayerController()))
     {
@@ -147,10 +188,33 @@ void AFoundationGameMode::Tick(float Dt)
     auto* PC = Cast<AFoundationPlayerController>(GetWorld()->GetFirstPlayerController());
     for (const auto& View : Views)
     {
-        const auto It = Sim->State.formations.find(View->FormationId);
-        if (It != Sim->State.formations.end()) View->UpdatePose(It->second,PC && PC->Selected.Contains(View->FormationId));
+        const auto& World=View->bEnemy ? Sim->Prototype.enemy : Sim->State;
+        const auto It = World.formations.find(View->FormationId);
+        if (It == World.formations.end()) continue;
+        const bool Selected=!View->bEnemy && PC && PC->Selected.Contains(View->FormationId);
+        const auto* Combat=Sim->IsPrototypeBattle() ? domain::LookupCombatUnit(Sim->Prototype,View->bEnemy ? domain::CombatSide::Enemy : domain::CombatSide::Player,View->FormationId) : nullptr;
+        if (Combat)
+        {
+            View->UpdateCombat(World,It->second,*Combat,Selected);
+            // Sparse visual volleys use the real ranged target; damage remains in the fixed-step core.
+            if (Sim->Prototype.phase==domain::BattlePhase::Fighting && Combat->ranged_attacking && Sim->Prototype.battle_steps%12<3)
+            {
+                const auto& Opponent=View->bEnemy ? Sim->State : Sim->Prototype.enemy;
+                const auto Target=Opponent.formations.find(Combat->target_formation_id);
+                if (Target!=Opponent.formations.end())
+                {
+                    const FVector A(It->second.x,It->second.y,160),B(Target->second.x,Target->second.y,100);
+                    const FVector Apex=(A+B)*.5+FVector(0,0,650);
+                    const FColor Color=View->bEnemy ? FColor(255,130,90) : FColor(130,215,255);
+                    DrawDebugLine(GetWorld(),A,Apex,Color,false,-1,0,3);
+                    DrawDebugLine(GetWorld(),Apex,B,Color,false,-1,0,3);
+                }
+            }
+        }
+        else View->UpdatePose(It->second,Selected);
     }
     if (bBenchmark) BenchmarkTick(Dt);
+    if (bCombatBenchmark) CombatBenchmarkTick(Dt);
 }
 int32 AFoundationGameMode::LiveInstances() const
 {

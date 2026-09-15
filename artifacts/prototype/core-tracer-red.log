@@ -1,0 +1,10 @@
+PASS daily economy and worker removal
+PASS recruitment gear estate and origins
+PASS deterministic combat and frozen campaign
+PASS return exactly once and recovery
+PASS elite strength and counters
+FAIL ranged damage and real orders: bow && bow->ranged_attacking && bow->target_formation_id==p.enemy.formations.begin()->first
+COMBAT 500v500 30s simulation 1.20504ms, mean per 20Hz step 0.0020084ms
+COMBAT 1000v1000 30s simulation 3.70333ms, mean per 20Hz step 0.00617222ms
+COMBAT 2000v2000 30s simulation 13.8133ms, mean per 20Hz step 0.0230222ms
+PASS actual combat scale

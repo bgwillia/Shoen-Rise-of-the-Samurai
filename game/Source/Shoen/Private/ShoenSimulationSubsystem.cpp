@@ -18,6 +18,7 @@ void UShoenSimulationSubsystem::ResetScenario(int32 Soldiers)
 {
     if (IsProfilingFixture()) { Message=TEXT("End the profiling fixture before resetting the scenario."); return; }
     State = Soldiers > 0 ? domain::MakeScaleWorld(Soldiers) : domain::MakeFoundationWorld();
+    Prototype = {};
     BuildingCatalog.clear();
     Message = Soldiers > 0 ? FString::Printf(TEXT("New scale fixture: %d people mobilized from its source population."), Soldiers)
         : TEXT("Accounting fixture: 200 agricultural workers. Press M to mobilize 100.");
@@ -60,6 +61,7 @@ bool UShoenSimulationSubsystem::ResetSettlement()
     }
 
     State = std::move(Candidate);
+    Prototype = {};
     BuildingCatalog = std::move(CandidateCatalog);
     const domain::BuildingDefinition& Storehouse = BuildingCatalog.at("small_storehouse");
     Message = FString::Printf(
@@ -136,6 +138,15 @@ void UShoenSimulationSubsystem::Advance(float Seconds)
 {
     if (!FMath::IsFinite(Seconds) || Seconds < 0) return;
     const int64 Micros = FMath::RoundToInt64(double(Seconds) * 1000000.0);
+    if (Prototype.enabled)
+    {
+        const auto PreviousPhase = Prototype.phase;
+        const auto Result = domain::AdvancePrototype(State, Prototype, Micros);
+        if (!Result.ok) Message = UTF8_TO_TCHAR(Result.error.c_str());
+        else if (PreviousPhase != Prototype.phase)
+            Message = FString::Printf(TEXT("%s. H: return survivors and apply casualties to their home occupations."), UTF8_TO_TCHAR(domain::BattlePhaseName(Prototype.phase)));
+        return;
+    }
     const auto Clock = domain::AdvanceRealTime(State, Micros);
     if (!Clock.ok) Message = UTF8_TO_TCHAR(Clock.error.c_str());
     const auto Movement = domain::StepFormations(State, State.speed == 0 ? 0 : Micros);
@@ -148,6 +159,11 @@ bool UShoenSimulationSubsystem::Report(const domain::Result& Result, const FStri
 }
 void UShoenSimulationSubsystem::SetGameSpeed(int32 Speed)
 {
+    if (IsPrototypeBattle())
+    {
+        Report(domain::SetSpeed(State, Speed == 0 ? 0 : 1), Speed == 0 ? TEXT("Battle paused. Campaign time stays frozen.") : TEXT("Battle running at 1x. Campaign time stays frozen."));
+        return;
+    }
     Report(domain::SetSpeed(State, Speed), Speed == 0 ? TEXT("Campaign paused.") : FString::Printf(TEXT("Campaign speed %dx; fixed one-day steps."), Speed));
 }
 bool UShoenSimulationSubsystem::MobilizeProof()
@@ -186,6 +202,7 @@ bool UShoenSimulationSubsystem::DemobilizeProof()
 }
 bool UShoenSimulationSubsystem::SaveToPath(const FString& Path)
 {
+    if (Prototype.enabled) { Message=TEXT("Core-loop prototype is session-only. Existing foundation/settlement saves are separate."); return false; }
     if (IsProfilingFixture()) { Message=TEXT("Profiling fixture is transient; saving is disabled until it ends."); return false; }
     const auto Bytes = domain::EncodeSnapshot(State);
     if (Bytes.empty()) { Message = TEXT("Save rejected: invalid simulation state."); return false; }
@@ -202,6 +219,7 @@ bool UShoenSimulationSubsystem::SaveToPath(const FString& Path)
 }
 bool UShoenSimulationSubsystem::LoadFromPath(const FString& Path)
 {
+    if (Prototype.enabled) { Message=TEXT("Prototype persistence is deferred. N starts a fresh core-loop session."); return false; }
     if (IsProfilingFixture()) { Message=TEXT("End the transient profiling fixture before loading."); return false; }
     const int64 Size = IFileManager::Get().FileSize(*Path);
     if (Size <= 0 || Size > int64(domain::MaxSnapshotBytes))
@@ -266,7 +284,7 @@ bool UShoenSimulationSubsystem::BeginProfilingFixture(int32 BuildingCount)
 #if UE_BUILD_SHIPPING
     return false;
 #else
-    if (IsProfilingFixture()) return false;
+    if (IsProfilingFixture() || Prototype.enabled) return false;
     domain::World Candidate;
     const auto Result=domain::MakeProfilingFixture(BuildingCatalog,BuildingCount,Candidate);
     if (!Result.ok) return false;

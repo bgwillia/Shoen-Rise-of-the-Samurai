@@ -25,8 +25,10 @@ AUTOMATION_TEST_PREFIXES = {
     "placement": "Shoen.Placement",
     "inspection": "Shoen.Inspection",
     "profiling": "Shoen.Profiling",
+    "prototype": "Shoen.Prototype",
 }
 BENCHMARK_SOLDIER_COUNTS = (1000, 4000, 8000, 20000)
+COMBAT_BENCHMARK_PER_SIDE = (500, 1000, 2000)
 RENDERED_WINDOW_ARGUMENTS = ("-windowed", "-ResX=1600", "-ResY=900", "-NoVSync")
 TIMEOUT_EXIT_CODE = 124
 
@@ -489,6 +491,125 @@ def command_benchmark(args: argparse.Namespace, root: Path, environment: Mapping
     return 0
 
 
+def validate_combat_benchmark_report(path: Path, per_side: int, seconds: float) -> list[str]:
+    if not path.is_file():
+        return [f"combat benchmark report file was not created at {path}"]
+    try:
+        report = json.loads(path.read_text(encoding="utf-8-sig"))
+    except (OSError, UnicodeError, json.JSONDecodeError) as error:
+        return [f"combat benchmark report is not valid JSON: {error}"]
+    if not isinstance(report, dict):
+        return ["combat benchmark report root must be an object"]
+
+    problems: list[str] = []
+    if report.get("mode") != "actual_contact_combat":
+        problems.append(f"mode expected 'actual_contact_combat', got {report.get('mode')!r}")
+    if _number(report.get("requested_soldiers_per_side")) != per_side:
+        problems.append(
+            f"requested_soldiers_per_side expected {per_side}, "
+            f"got {report.get('requested_soldiers_per_side')!r}"
+        )
+    actual_seconds = _number(report.get("seconds"))
+    if actual_seconds is None or actual_seconds < seconds:
+        problems.append(f"seconds expected at least {seconds:g}, got {report.get('seconds')!r}")
+
+    def integer_field(name: str, *, positive: bool) -> int | None:
+        value = _number(report.get(name))
+        minimum = 1 if positive else 0
+        if value is None or not value.is_integer() or value < minimum:
+            qualifier = "positive" if positive else "nonnegative"
+            problems.append(f"{name} expected a {qualifier} integer, got {report.get(name)!r}")
+            return None
+        return int(value)
+
+    integer_field("contact_events", positive=True)
+    integer_field("ranged_attacks", positive=True)
+    side_a = integer_field("casualties_side_a", positive=False)
+    side_b = integer_field("casualties_side_b", positive=False)
+    if side_a is not None and side_b is not None and side_a + side_b == 0:
+        problems.append("casualties expected at least one actual casualty across both sides")
+    integer_field("frames", positive=True)
+
+    median_frame = _number(report.get("median_frame_ms"))
+    if median_frame is None or median_frame <= 0:
+        problems.append(
+            f"median_frame_ms expected a finite positive value, got {report.get('median_frame_ms')!r}"
+        )
+    p95_frame = _number(report.get("p95_frame_ms"))
+    if p95_frame is None or p95_frame <= 0 or (median_frame is not None and p95_frame < median_frame):
+        problems.append(
+            "p95_frame_ms expected a finite value at least median_frame_ms, "
+            f"got {report.get('p95_frame_ms')!r}"
+        )
+    simulation_median = _number(report.get("simulation_cpu_median_ms"))
+    if simulation_median is None or simulation_median < 0:
+        problems.append(
+            "simulation_cpu_median_ms expected a finite nonnegative value, "
+            f"got {report.get('simulation_cpu_median_ms')!r}"
+        )
+    simulation_p95 = _number(report.get("simulation_cpu_p95_ms"))
+    if (
+        simulation_p95 is None
+        or simulation_p95 < 0
+        or (simulation_median is not None and simulation_p95 < simulation_median)
+    ):
+        problems.append(
+            "simulation_cpu_p95_ms expected a finite nonnegative value at least "
+            f"simulation_cpu_median_ms, got {report.get('simulation_cpu_p95_ms')!r}"
+        )
+    return problems
+
+
+def command_combat_benchmark(
+    args: argparse.Namespace,
+    root: Path,
+    environment: Mapping[str, str],
+) -> int:
+    engine = resolve_engine_root(args.engine, environment)
+    resolved = editor_base(root, engine)
+    if resolved is None:
+        return 2
+    editor, project = resolved
+    if args.output:
+        report = Path(args.output).expanduser()
+        if not report.is_absolute():
+            report = (root / report).resolve()
+    else:
+        report = root / "artifacts" / "combat" / f"combat-{args.per_side}.json"
+    if report.exists():
+        report.unlink()
+    log = prepare_log(root, f"combat-benchmark-{args.per_side}")
+    seconds_flag = f"{args.seconds:g}"
+    status = run_command(
+        [
+            editor,
+            project,
+            FOUNDATION_MAP,
+            "-game",
+            *RENDERED_WINDOW_ARGUMENTS,
+            "-ShoenScenario=prototype",
+            f"-ShoenCombatSoldiersPerSide={args.per_side}",
+            f"-ShoenCombatBenchmarkSeconds={seconds_flag}",
+            f"-ShoenCombatBenchmarkOutput={report}",
+            "-stdout",
+            "-FullStdOutLogOutput",
+        ],
+        cwd=root,
+        log_path=log,
+        timeout=args.timeout,
+    )
+    if status:
+        return status
+    problems = validate_combat_benchmark_report(report, args.per_side, args.seconds)
+    if problems:
+        for problem in problems:
+            print(f"ERROR: {problem}", file=sys.stderr)
+            write_log(log, f"ERROR: {problem}")
+        return 3
+    print(f"validated actual-contact combat benchmark report: {report}")
+    return 0
+
+
 def command_package(args: argparse.Namespace, root: Path, environment: Mapping[str, str]) -> int:
     engine = resolve_engine_root(args.engine, environment)
     script = run_uat_script(engine)
@@ -787,7 +908,7 @@ def build_parser() -> argparse.ArgumentParser:
     add_engine_override(run)
     run.add_argument(
         "--scenario",
-        choices=("foundation", "scale_lab", "settlement"),
+        choices=("foundation", "scale_lab", "settlement", "prototype"),
         default="foundation",
     )
     run.add_argument("--soldiers", type=positive_integer)
@@ -798,6 +919,17 @@ def build_parser() -> argparse.ArgumentParser:
     benchmark.add_argument("--soldiers", type=int, choices=BENCHMARK_SOLDIER_COUNTS, required=True)
     benchmark.add_argument("--seconds", type=positive_float, default=120)
     add_timeout(benchmark, 900)
+
+    combat_benchmark = subcommands.add_parser(
+        "combat-benchmark", help="run and validate a rendered actual-combat benchmark"
+    )
+    add_engine_override(combat_benchmark)
+    combat_benchmark.add_argument(
+        "--per-side", type=int, choices=COMBAT_BENCHMARK_PER_SIDE, required=True
+    )
+    combat_benchmark.add_argument("--seconds", type=positive_float, default=45)
+    combat_benchmark.add_argument("--output", help="combat report path")
+    add_timeout(combat_benchmark, 900)
 
     package = subcommands.add_parser("package", help="package a Shipping Mac build with installed RunUAT")
     add_engine_override(package)
@@ -824,6 +956,8 @@ def main(argv: Sequence[str] | None = None, environment: Mapping[str, str] | Non
         return command_run(args, root, environment)
     if args.command == "benchmark":
         return command_benchmark(args, root, environment)
+    if args.command == "combat-benchmark":
+        return command_combat_benchmark(args, root, environment)
     if args.command == "package":
         return command_package(args, root, environment)
     raise AssertionError(f"unhandled command {args.command}")

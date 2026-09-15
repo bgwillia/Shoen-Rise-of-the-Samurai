@@ -24,6 +24,7 @@ public:
     FVector2D SelectionEnd;
     void SelectAll();
     void BeginPlacement();
+    void BeginPlacementType(const FString& DefinitionId);
     void CancelPlacement();
     void RotatePlacement(int32 Direction);
     void ConfirmPlacement();

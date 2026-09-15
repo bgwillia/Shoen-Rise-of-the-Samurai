@@ -3,6 +3,7 @@
 #include "Subsystems/GameInstanceSubsystem.h"
 #include "domain/Buildings.h"
 #include "domain/World.h"
+#include "domain/Prototype.h"
 #include "ShoenSimulationSubsystem.generated.h"
 
 UCLASS()
@@ -11,6 +12,7 @@ class SHOEN_API UShoenSimulationSubsystem : public UGameInstanceSubsystem
     GENERATED_BODY()
 public:
     domain::World State;
+    domain::PrototypeState Prototype;
     FString Message;
     uint64 ViewGeneration = 0;
     uint64 WorldGeneration = 0;
@@ -20,7 +22,15 @@ public:
     bool ResetSettlement();
     void PrepareForLevel(int32 RequestedSoldiers);
     bool PrepareSettlementForLevel();
-    bool IsSettlement() const { return !State.build_areas.empty(); }
+    bool IsSettlement() const { return !State.build_areas.empty() && !IsPrototypeBattle(); }
+    bool IsPrototypeBattle() const { return Prototype.enabled && Prototype.phase != domain::BattlePhase::Settlement; }
+    bool ResetPrototype();
+    bool RecruitPrototypeTroops(domain::Occupation Occupation, domain::TroopRole Role, int32 Count);
+    bool StartPrototypeBattle();
+    bool ReturnPrototypeArmy();
+    void OrderPrototypeAttack();
+    bool FastForwardPrototype(int32 Days);
+    bool ResetCombatFixture(int32 PerSide);
     const domain::BuildingCatalog& BuildingDefinitions() const { return BuildingCatalog; }
     domain::PlacementResult PreviewBuilding(const domain::PlacementCommand& Command) const;
     domain::PlacementResult PlaceBuilding(const domain::PlacementCommand& Command);

@@ -22,6 +22,9 @@ AFormationView::AFormationView()
 void AFormationView::Rebuild(const domain::World& State, const domain::Formation& Formation)
 {
     FormationId = Formation.id;
+    bCombatPresentation=false;
+    CachedAlive=CachedDead=CachedWounded=-1;
+    BaseTint=FLinearColor(.28,.45,.55);
     Instances->ClearInstances();
     TArray<FTransform> Transforms;
     const auto Slots = domain::FormationSlots(State, Formation.id);
@@ -44,7 +47,7 @@ void AFormationView::UpdatePose(const domain::Formation& Formation, bool Selecte
 {
     SetActorLocationAndRotation(FVector(Formation.x, Formation.y, 0), FRotator(0, FMath::RadiansToDegrees(Formation.facing), 0));
     if (Material && Selected != bWasSelected)
-        Material->SetVectorParameterValue(TEXT("Color"), Selected ? FLinearColor(0.95, 0.65, 0.14) : FLinearColor(0.28, 0.45, 0.55));
+        Material->SetVectorParameterValue(TEXT("Color"), Selected ? FLinearColor(0.95, 0.65, 0.14) : BaseTint);
     bWasSelected = Selected;
     if (Selected)
     {
@@ -54,3 +57,62 @@ void AFormationView::UpdatePose(const domain::Formation& Formation, bool Selecte
     }
 }
 int32 AFormationView::InstanceCount() const { return Instances->GetInstanceCount(); }
+
+void AFormationView::SetEnemy(bool Enemy)
+{
+    bEnemy=Enemy;
+    BaseTint=Enemy ? FLinearColor(.85,.17,.12) : FLinearColor(.12,.42,.95);
+    if (Material) Material->SetVectorParameterValue(TEXT("Color"),bWasSelected ? FLinearColor(.95,.65,.14) : BaseTint);
+}
+void AFormationView::UpdateCombat(const domain::World& State,const domain::Formation& Formation,const domain::CombatUnit& Unit,bool Selected)
+{
+    FormationId=Formation.id;
+    const bool Elite=Formation.role==domain::TroopRole::SamuraiFoot || Formation.role==domain::TroopRole::RetainerInfantry || Formation.role==domain::TroopRole::MountedSamurai;
+    const bool Bow=Formation.role==domain::TroopRole::Bow;
+    const bool Mounted=Formation.role==domain::TroopRole::MountedSamurai;
+    if (!bCombatPresentation || CachedAlive!=Unit.alive || CachedDead!=Unit.dead || CachedWounded!=Unit.wounded || CachedRole!=Formation.role)
+    {
+        int32 Standing=0;
+        for (const auto Status:Unit.service_states) if (Status==domain::ServiceStatus::Active) ++Standing;
+        Standing=FMath::Min(Standing,int32(Formation.service_ids.size()));
+        const int32 Existing=Instances->GetInstanceCount();
+        if (Existing>Standing)
+        {
+            TArray<int32> Removed;
+            for (int32 I=Existing-1;I>=Standing;--I) Removed.Add(I);
+            Instances->RemoveInstances(Removed,true);
+        }
+        TArray<FTransform> Transforms;
+        Transforms.Reserve(Standing);
+        const int32 Columns=FMath::Min(10,Standing), Rows=Columns ? (Standing+Columns-1)/Columns : 0;
+        const FVector Scale=Mounted ? FVector(.9,.45,2.0) : Elite ? FVector(.5,.5,2.2) : Bow ? FVector(.24,.5,1.55) : FVector(.35,.35,1.8);
+        for (int32 I=0;I<Standing;++I)
+            Transforms.Add(FTransform(FRotator::ZeroRotator,FVector((I%Columns-(Columns-1)*.5)*110,(I/Columns-(Rows-1)*.5)*110,Scale.Z*50),Scale));
+        const int32 Retained=Instances->GetInstanceCount();
+        if (Retained) Instances->BatchUpdateInstancesTransforms(0,TArrayView<const FTransform>(Transforms.GetData(),Retained),false,true,true);
+        if (Standing>Retained)
+        {
+            TArray<FTransform> Added;
+            for (int32 I=Retained;I<Standing;++I) Added.Add(Transforms[I]);
+            Instances->AddInstances(Added,false,false,false);
+        }
+        CachedAlive=Unit.alive; CachedDead=Unit.dead; CachedWounded=Unit.wounded; CachedRole=Formation.role;
+        bCombatPresentation=true;
+    }
+    const bool FirstMaterial=!Material;
+    if (!Material) Material=Instances->CreateDynamicMaterialInstance(0);
+    const FLinearColor Tint=bEnemy ? (Elite ? FLinearColor(.75,.12,.48) : FLinearColor(.85,.17,.12)) : (Elite ? FLinearColor(.42,.28,1) : FLinearColor(.12,.42,.95));
+    if (BaseTint!=Tint || FirstMaterial)
+    {
+        BaseTint=Tint;
+        if (Material) Material->SetVectorParameterValue(TEXT("Color"),Selected ? FLinearColor(.95,.65,.14) : BaseTint);
+    }
+    UpdatePose(Formation,Selected);
+    if (Instances->GetInstanceCount()>0)
+    {
+        const FVector Origin=GetActorLocation()+FVector(0,0,360);
+        const FColor Color=Unit.routed ? FColor::Orange : bEnemy ? FColor(255,100,90) : FColor(100,190,255);
+        const TCHAR* Role=Mounted ? TEXT("HORSE") : Elite ? TEXT("SAMURAI") : Bow ? TEXT("BOW") : TEXT("SPEAR");
+        DrawDebugString(GetWorld(),Origin,FString::Printf(TEXT("%s %d | M %.0f F %.0f%s"),Role,Instances->GetInstanceCount(),Unit.morale,Unit.fatigue,Unit.routed ? TEXT(" ROUTING") : TEXT("")),nullptr,Color,0,true,1.f);
+    }
+}

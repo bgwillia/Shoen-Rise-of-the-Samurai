@@ -14,6 +14,8 @@ public:
     virtual void Tick(float DeltaSeconds) override;
     void NewScenario(int32 Soldiers);
     void NewSettlement();
+    void NewPrototype();
+    void FrameCurrentScenario();
     ASettlementView* SettlementPresentation() const { return SettlementView; }
     int32 LiveInstances() const;
     int32 LiveFormations() const { return Views.Num(); }
@@ -27,6 +29,19 @@ private:
     void CreateEnvironment();
     void BenchmarkTick(float DeltaSeconds);
     void FinishBenchmark();
+    void BeginCombatBenchmark();
+    void CombatBenchmarkTick(float DeltaSeconds);
+    void FinishCombatBenchmark();
+    bool bCombatBenchmark = false;
+    int32 CombatPerSide = 0, CombatRuns = 0;
+    double CombatSeconds = 0, CombatCaptureSeconds = 0, CombatLastFrameTime = 0;
+    double CombatWarmupUntil = 0, CombatNextOrder = 5;
+    FString CombatOutput;
+    uint64 CombatContactEvents = 0, CombatRangedAttacks = 0;
+    int64 CombatPlayerCasualties = 0, CombatEnemyCasualties = 0;
+    int32 CombatPeakCongestion = 0, CombatOrders = 0;
+    TArray<double> CombatFrameTimes, CombatSimulationTimes;
+    TArray<double> CombatCommandTimes;
     bool bBenchmark = false;
     int32 RequestedSoldiers = 0;
     double BenchmarkSeconds = 0;

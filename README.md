@@ -1,6 +1,43 @@
-# SHŌEN — settlement foundation
+# SHŌEN — core-loop feasibility prototype
 
-Milestones 1, 2A and 2B are accepted. Milestone 2B adds selection and read-only inspection of persistent Small Storehouses. See [STATUS.md](STATUS.md) for exactly what has been verified. The authoritative product handoff remains in `japan_strategy_codex_handoff/`; the asset workbook is a separate future production backlog.
+The active task is a playable settlement → army → battle → settlement loop. See [STATUS.md](STATUS.md) for verification and measured limits. The accepted foundation and its old save slots remain separate legacy scenarios.
+
+## Play the integrated prototype
+
+```sh
+python3 tools/dev.py build
+python3 tools/dev.py run --scenario prototype
+```
+
+Start with **640 people** and six functional placeholder building types. The sidebar shows available workers, people away in service, recovery, food, materials, gear and production. The temporary economy uses one day per three seconds at 1×; change speed with the buttons or F1–F4. Space pauses either settlement or battle.
+
+A short loop to try:
+
+1. Watch food and equipment increase, then pause with **Space**.
+2. Press **M twice** for 100 farmer spears, **K** for 50 farmer archers, **L** for 50 laborer spears, **J** for 20 smith spears and **T** for 20 samurai. These 240 people leave their civilian occupations and consume appropriate equipment. Watch daily food and smith output fall.
+3. Press **F** to deploy against an equal-size opposing army. Campaign time freezes. Resume with **Space** if paused.
+4. Click/box-select formations; **right-click** moves and **right-drag** sets destination/facing. **G** advances selected formations toward enemies, or all formations if nothing is selected. Blue is yours, red the enemy; elite units are wider and purple. Bow volleys use visible tracers; labels show morale and fatigue. Routing troops cannot take orders.
+5. **Ctrl+A** selects all; **Ctrl+1** assigns group 1 and **1** recalls it. Every formation can still receive individual orders. **Home** frames the current scene.
+6. Fight to a result or press **H** to retreat. Press **H** after a result to return survivors. Deaths are permanent, wounds prevent work, and the original occupations/estates remain attached to the service records. Return applies one operational day once.
+7. Inspect reduced production and the last-battle report. **P** advances seven days; wounded recover into their original cohorts. Dead workers remain lost. Repeat recruitment to see the smaller labor/troop pool.
+
+Choose a building type from the six buttons above the world; point at ground, **[ / ]** rotate, **click / Enter** place, **Esc / right-click** cancel. Construction is immediate and free in this prototype. Houses provide housing, farms enable food, granaries add food capacity, smithies enable equipment, and manor/training buildings enable elite recruitment/production. This is a deliberately small functional proof, not a balanced city builder.
+
+**N / Reset entire prototype** discards this session and starts fresh. Prototype saving/loading is deferred; F5/F9 explain this and do not overwrite the legacy saves. **F6** profiling and **F12** cursor diagnostics are optional and off by default. Minor UI latency is known and non-blocking.
+
+## Combat scale measurements
+
+```sh
+python3 tools/dev.py combat-benchmark --per-side 500 --seconds 45
+python3 tools/dev.py combat-benchmark --per-side 1000 --seconds 45
+python3 tools/dev.py combat-benchmark --per-side 2000 --seconds 45
+```
+
+These run actual rendered combat with many 50-person formations and write `artifacts/combat/combat-N.json`. Run one Unreal process at a time and keep builds/heavy tests out of measurements. Completed battles restart for the capture; report counters accumulate across them. These are open-ground placeholder measurements, not final pathfinding/animation/packaged performance claims.
+
+## Legacy foundation instructions
+
+The sections below describe the separately accepted placement and population laboratories. Their controls and saves are unchanged; their historical limitations do not describe the new prototype.
 
 ## Run on this Mac
 

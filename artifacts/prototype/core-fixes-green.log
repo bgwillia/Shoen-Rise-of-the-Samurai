@@ -1,0 +1,10 @@
+PASS daily economy and worker removal
+PASS recruitment gear estate and origins
+PASS deterministic combat and frozen campaign
+PASS return exactly once and recovery
+PASS elite strength and counters
+PASS ranged damage and real orders
+COMBAT 500v500 30s simulation 1.23383ms, mean per 20Hz step 0.00205639ms
+COMBAT 1000v1000 30s simulation 3.84863ms, mean per 20Hz step 0.00641437ms
+COMBAT 2000v2000 30s simulation 13.7127ms, mean per 20Hz step 0.0228544ms
+PASS actual combat scale

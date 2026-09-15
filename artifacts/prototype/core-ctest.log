@@ -1,0 +1,15 @@
+Test project /tmp/shoen-prototype-core
+    Start 1: domain_core_invariants
+1/5 Test #1: domain_core_invariants ................   Passed    0.97 sec
+    Start 2: domain_building_invariants
+2/5 Test #2: domain_building_invariants ............   Passed    0.20 sec
+    Start 3: domain_inspection_invariants
+3/5 Test #3: domain_inspection_invariants ..........   Passed    0.15 sec
+    Start 4: domain_profiling_fixture_invariants
+4/5 Test #4: domain_profiling_fixture_invariants ...   Passed    0.24 sec
+    Start 5: domain_prototype_invariants
+5/5 Test #5: domain_prototype_invariants ...........   Passed    0.05 sec
+
+100% tests passed out of 5
+
+Total Test time (real) =   1.63 sec

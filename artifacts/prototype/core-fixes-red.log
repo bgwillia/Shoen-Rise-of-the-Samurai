@@ -1,0 +1,10 @@
+FAIL daily economy and worker removal: ValidateWorld(without)
+PASS recruitment gear estate and origins
+FAIL deterministic combat and frozen campaign: a==paused && p==paused_battle
+FAIL return exactly once and recovery: w.campaign_day==before_return_day+1
+PASS elite strength and counters
+FAIL ranged damage and real orders: friendly.x<hostile.x && std::hypot(friendly.x-hostile.x,friendly.y-hostile.y)>=620
+COMBAT 500v500 30s simulation 1.193ms, mean per 20Hz step 0.00198833ms
+COMBAT 1000v1000 30s simulation 3.53688ms, mean per 20Hz step 0.00589479ms
+COMBAT 2000v2000 30s simulation 13.7247ms, mean per 20Hz step 0.0228745ms
+PASS actual combat scale

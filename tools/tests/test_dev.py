@@ -422,6 +422,96 @@ with Path(os.environ["SHOEN_FAKE_CALLS"]).open("a", encoding="utf-8") as stream:
         self.assertNotIn("-ShoenScenario=foundation", argv)
         self.assertNotIn("-ShoenScenario=scale_lab", argv)
 
+    def test_run_passes_prototype_scenario_on_the_foundation_map(self) -> None:
+        engine = self.make_engine()
+
+        result = self.run_cli("--engine", str(engine), "run", "--scenario", "prototype")
+
+        self.assertEqual(result.returncode, 0, result.stdout)
+        argv = self.read_calls()[0]["argv"]
+        self.assertIn("/Game/Domain/Maps/Foundation", argv)
+        self.assertIn("-ShoenScenario=prototype", argv)
+
+    def test_combat_benchmark_constructs_rendered_command_and_validates_evidence(self) -> None:
+        editor_body = """
+        output_arg = next(value for value in sys.argv if value.startswith("-ShoenCombatBenchmarkOutput="))
+        output = Path(output_arg.split("=", 1)[1])
+        soldiers = int(next(value.split("=", 1)[1] for value in sys.argv if value.startswith("-ShoenCombatSoldiersPerSide=")))
+        seconds = float(next(value.split("=", 1)[1] for value in sys.argv if value.startswith("-ShoenCombatBenchmarkSeconds=")))
+        output.parent.mkdir(parents=True, exist_ok=True)
+        output.write_text(json.dumps({
+            "mode": "actual_contact_combat",
+            "requested_soldiers_per_side": soldiers,
+            "seconds": seconds,
+            "contact_events": 12,
+            "ranged_attacks": 8,
+            "casualties_side_a": 4,
+            "casualties_side_b": 7,
+            "frames": 1200,
+            "median_frame_ms": 14.0,
+            "p95_frame_ms": 20.0,
+            "simulation_cpu_median_ms": 1.5,
+            "simulation_cpu_p95_ms": 2.5
+        }), encoding="utf-8-sig")
+        """
+        engine = self.make_engine(editor_body)
+
+        result = self.run_cli(
+            "--engine", str(engine), "combat-benchmark", "--per-side", "1000", "--seconds", "45"
+        )
+
+        self.assertEqual(result.returncode, 0, result.stdout)
+        argv = self.read_calls()[0]["argv"]
+        self.assertIn("-game", argv)
+        self.assertNotIn("-NullRHI", argv)
+        self.assertIn("-windowed", argv)
+        self.assertIn("-ResX=1600", argv)
+        self.assertIn("-ResY=900", argv)
+        self.assertIn("-NoVSync", argv)
+        self.assertIn("-ShoenScenario=prototype", argv)
+        self.assertIn("-ShoenCombatSoldiersPerSide=1000", argv)
+        self.assertIn("-ShoenCombatBenchmarkSeconds=45", argv)
+        self.assertIn(
+            f"-ShoenCombatBenchmarkOutput={self.root.resolve() / 'artifacts' / 'combat' / 'combat-1000.json'}",
+            argv,
+        )
+
+    def test_combat_benchmark_rejects_report_without_real_combat_evidence(self) -> None:
+        editor_body = """
+        output_arg = next(value for value in sys.argv if value.startswith("-ShoenCombatBenchmarkOutput="))
+        output = Path(output_arg.split("=", 1)[1])
+        output.parent.mkdir(parents=True, exist_ok=True)
+        output.write_text(json.dumps({
+            "mode": "actual_contact_combat",
+            "requested_soldiers_per_side": 500,
+            "seconds": 45,
+            "contact_events": 0,
+            "ranged_attacks": 0,
+            "casualties_side_a": 0,
+            "casualties_side_b": 0,
+            "frames": 1,
+            "median_frame_ms": 16.0,
+            "p95_frame_ms": 16.0,
+            "simulation_cpu_median_ms": 0.0,
+            "simulation_cpu_p95_ms": 0.0
+        }), encoding="utf-8")
+        """
+        engine = self.make_engine(editor_body)
+
+        result = self.run_cli("--engine", str(engine), "combat-benchmark", "--per-side", "500")
+
+        self.assertNotEqual(result.returncode, 0)
+        self.assertIn("contact_events", result.stdout)
+        self.assertIn("ranged_attacks", result.stdout)
+        self.assertIn("casualties", result.stdout)
+
+    def test_combat_benchmark_propagates_editor_failure(self) -> None:
+        engine = self.make_engine("sys.exit(7)")
+
+        result = self.run_cli("--engine", str(engine), "combat-benchmark", "--per-side", "2000")
+
+        self.assertEqual(result.returncode, 7, result.stdout)
+
     def test_benchmark_is_rendered_and_requires_valid_fresh_counts(self) -> None:
         editor_body = """
         output_arg = next(value for value in sys.argv if value.startswith("-ShoenBenchmarkOutput="))

@@ -14,6 +14,7 @@ public:
     void FrameScenario(int32 FormationCount);
     float Zoom() const;
     void FrameSettlement();
+    void FramePrototype(FVector Center, float Span);
     bool bBenchmarkMotion = false;
 private:
     UPROPERTY() TObjectPtr<USpringArmComponent> Arm;
