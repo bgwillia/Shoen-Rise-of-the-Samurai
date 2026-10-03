@@ -109,6 +109,8 @@ const char* PlacementReason(PlacementCode code) {
     case PlacementCode::NoBuildArea:return "Settlement has no buildable area";
     case PlacementCode::OverlapsBuilding:return "Overlaps an existing building";
     case PlacementCode::OutsideBuildArea:return "Footprint extends outside the buildable area";
+    case PlacementCode::TerrainTooUneven:return "Ground is too uneven across the footprint";
+    case PlacementCode::InWater:return "Building footprint overlaps water";
     case PlacementCode::TerrainTooSteep:return "Ground slope or height variation is too large";
     case PlacementCode::InsufficientResources:return "Insufficient timber or treasury";
     case PlacementCode::TransactionConflict:return "Transaction ID was already used for another command";
@@ -157,8 +159,8 @@ Result ValidateBuildingState(const World& w) {
         if(b.placement_transaction_id==0 || b.placement_transaction_id>=w.next_transaction_id || !w.applied_transaction_ids.contains(b.placement_transaction_id) || !transactions.insert(b.placement_transaction_id).second) return Invalid("Building placement transaction is absent or duplicated.");
         auto corners=FootprintCorners(b.x_cm,b.y_cm,b.width_cm,b.depth_cm,b.yaw_degrees);
         if(!InsideArea(area->second,corners)) return Invalid("Building footprint extends outside its saved build area.");
-        if(!TerrainFits(area->second,corners,b.max_height_variation_cm,b.max_slope_permille)) return Invalid("Building footprint exceeds its frozen terrain limits.");
-        double ground=TerrainHeightAt(area->second,b.x_cm,b.y_cm); if(!std::isfinite(ground) || std::llround(ground)!=b.z_cm) return Invalid("Building elevation differs from its saved terrain.");
+        if(!area->second.live_terrain && !TerrainFits(area->second,corners,b.max_height_variation_cm,b.max_slope_permille)) return Invalid("Building footprint exceeds its frozen terrain limits.");
+        double ground=TerrainHeightAt(area->second,b.x_cm,b.y_cm); if(!area->second.live_terrain && (!std::isfinite(ground) || std::llround(ground)!=b.z_cm)) return Invalid("Building elevation differs from its saved terrain.");
         for(const auto& previous:footprints) if(Overlaps(corners,previous)) return Invalid("Saved building footprints overlap.");
         footprints.push_back(corners);
     }
@@ -174,6 +176,7 @@ PlacementResult ValidatePlacementGeometry(const World& w,const BuildingDefinitio
     const auto corners=FootprintCorners(c.x_cm,c.y_cm,d.width_cm,d.depth_cm,c.yaw_degrees);
     if(!InsideArea(area->second,corners) || !std::isfinite(height)) return rejected(PlacementCode::OutsideBuildArea);
     for(const auto& [id,b]:w.buildings) if(Overlaps(corners,FootprintCorners(b.x_cm,b.y_cm,b.width_cm,b.depth_cm,b.yaw_degrees))) return rejected(PlacementCode::OverlapsBuilding);
+    if(area->second.live_terrain) return area->second.live_terrain->Evaluate(c,d);
     if(!TerrainFits(area->second,corners,d.max_height_variation_cm,d.max_slope_permille)) return rejected(PlacementCode::TerrainTooSteep);
     return {true,PlacementCode::Valid,0,ground};
 }

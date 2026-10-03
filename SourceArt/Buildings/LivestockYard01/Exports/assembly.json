@@ -1,0 +1,471 @@
+{
+  "asset": "LivestockYard_01",
+  "units": "metres",
+  "instances": [
+    {
+      "mesh": "LY01_Shelter",
+      "name": "LY01_Shelter",
+      "location": [
+        -1.05,
+        1.67,
+        0
+      ],
+      "rotation_degrees": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "mesh": "LY01_Roof",
+      "name": "LY01_Roof",
+      "location": [
+        -1.05,
+        1.67,
+        0
+      ],
+      "rotation_degrees": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "mesh": "LY01_Fence_Corner",
+      "name": "LY01_Fence_Corner",
+      "location": [
+        -5,
+        -3.6,
+        0
+      ],
+      "rotation_degrees": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "mesh": "LY01_Fence_Straight",
+      "name": "LY01_Fence_Straight",
+      "location": [
+        -4,
+        -3.6,
+        0
+      ],
+      "rotation_degrees": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "mesh": "LY01_Fence_Straight",
+      "name": "LY01_Fence_Straight_01",
+      "location": [
+        -2,
+        -3.6,
+        0
+      ],
+      "rotation_degrees": 0,
+      "scale": [
+        0.565,
+        1,
+        1
+      ]
+    },
+    {
+      "mesh": "LY01_Fence_Straight",
+      "name": "LY01_Fence_Straight_02",
+      "location": [
+        0.87,
+        -3.6,
+        0
+      ],
+      "rotation_degrees": 0,
+      "scale": [
+        1.0325,
+        1,
+        1
+      ]
+    },
+    {
+      "mesh": "LY01_Fence_Straight",
+      "name": "LY01_Fence_Straight_03",
+      "location": [
+        2.935,
+        -3.6,
+        0
+      ],
+      "rotation_degrees": 0,
+      "scale": [
+        1.0325,
+        1,
+        1
+      ]
+    },
+    {
+      "mesh": "LY01_Fence_Straight",
+      "name": "LY01_Fence_Straight_04",
+      "location": [
+        -5,
+        -2.6,
+        0
+      ],
+      "rotation_degrees": 90,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "mesh": "LY01_Fence_Straight",
+      "name": "LY01_Fence_Straight_05",
+      "location": [
+        -5,
+        -0.6,
+        0
+      ],
+      "rotation_degrees": 90,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "mesh": "LY01_Fence_Straight",
+      "name": "LY01_Fence_Straight_06",
+      "location": [
+        -5,
+        1.4,
+        0
+      ],
+      "rotation_degrees": 90,
+      "scale": [
+        1.1,
+        1,
+        1
+      ]
+    },
+    {
+      "mesh": "LY01_Fence_Straight",
+      "name": "LY01_Fence_Straight_07",
+      "location": [
+        5,
+        -3.6,
+        0
+      ],
+      "rotation_degrees": 90,
+      "scale": [
+        1.2,
+        1,
+        1
+      ]
+    },
+    {
+      "mesh": "LY01_Fence_Straight",
+      "name": "LY01_Fence_Straight_08",
+      "location": [
+        5,
+        -1.2,
+        0
+      ],
+      "rotation_degrees": 90,
+      "scale": [
+        1.2,
+        1,
+        1
+      ]
+    },
+    {
+      "mesh": "LY01_Fence_Straight",
+      "name": "LY01_Fence_Straight_09",
+      "location": [
+        5,
+        1.2,
+        0
+      ],
+      "rotation_degrees": 90,
+      "scale": [
+        1.2,
+        1,
+        1
+      ]
+    },
+    {
+      "mesh": "LY01_Fence_Straight",
+      "name": "LY01_Fence_Straight_10",
+      "location": [
+        -5,
+        3.6,
+        0
+      ],
+      "rotation_degrees": 0,
+      "scale": [
+        1.25,
+        1,
+        1
+      ]
+    },
+    {
+      "mesh": "LY01_Fence_Straight",
+      "name": "LY01_Fence_Straight_11",
+      "location": [
+        -2.5,
+        3.6,
+        0
+      ],
+      "rotation_degrees": 0,
+      "scale": [
+        1.25,
+        1,
+        1
+      ]
+    },
+    {
+      "mesh": "LY01_Fence_Straight",
+      "name": "LY01_Fence_Straight_12",
+      "location": [
+        0,
+        3.6,
+        0
+      ],
+      "rotation_degrees": 0,
+      "scale": [
+        1.25,
+        1,
+        1
+      ]
+    },
+    {
+      "mesh": "LY01_Fence_Straight",
+      "name": "LY01_Fence_Straight_13",
+      "location": [
+        2.5,
+        3.6,
+        0
+      ],
+      "rotation_degrees": 0,
+      "scale": [
+        1.25,
+        1,
+        1
+      ]
+    },
+    {
+      "mesh": "LY01_Fence_Straight",
+      "name": "LY01_Fence_Straight_14",
+      "location": [
+        2.25,
+        -3.6,
+        0
+      ],
+      "rotation_degrees": 90,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "mesh": "LY01_Fence_Straight",
+      "name": "LY01_Fence_Straight_15",
+      "location": [
+        2.25,
+        -0.4,
+        0
+      ],
+      "rotation_degrees": 90,
+      "scale": [
+        0.325,
+        1,
+        1
+      ]
+    },
+    {
+      "mesh": "LY01_Fence_Straight",
+      "name": "LY01_Fence_Straight_16",
+      "location": [
+        2.25,
+        0.25,
+        0
+      ],
+      "rotation_degrees": 0,
+      "scale": [
+        1.375,
+        1,
+        1
+      ]
+    },
+    {
+      "mesh": "LY01_Gate",
+      "name": "LY01_Gate",
+      "location": [
+        0,
+        -3.6,
+        0
+      ],
+      "rotation_degrees": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "mesh": "LY01_PenGate",
+      "name": "LY01_PenGate",
+      "location": [
+        2.25,
+        -1.6,
+        0
+      ],
+      "rotation_degrees": 90,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "mesh": "LY01_FeedingTrough",
+      "name": "LY01_FeedingTrough",
+      "location": [
+        -3.45,
+        -1.5,
+        0
+      ],
+      "rotation_degrees": 90,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "mesh": "LY01_WaterTrough",
+      "name": "LY01_WaterTrough",
+      "location": [
+        4.35,
+        -1.88,
+        0
+      ],
+      "rotation_degrees": 90,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "mesh": "LY01_HayRack",
+      "name": "LY01_HayRack",
+      "location": [
+        0.45,
+        0.59,
+        0
+      ],
+      "rotation_degrees": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "mesh": "LY01_HayBundles",
+      "name": "LY01_HayBundles",
+      "location": [
+        -3.12,
+        2.25,
+        0.13
+      ],
+      "rotation_degrees": -14,
+      "scale": [
+        1.08,
+        1.08,
+        1.03
+      ]
+    },
+    {
+      "mesh": "LY01_HayBundles",
+      "name": "LY01_HayBundles_01",
+      "location": [
+        -2.48,
+        2.33,
+        0.13
+      ],
+      "rotation_degrees": 18,
+      "scale": [
+        1.02,
+        1.02,
+        0.87
+      ]
+    },
+    {
+      "mesh": "LY01_HayBundles",
+      "name": "LY01_HayBundles_02",
+      "location": [
+        0.2,
+        2.5,
+        0.22
+      ],
+      "rotation_degrees": -18,
+      "scale": [
+        1.02,
+        1.02,
+        0.95
+      ]
+    },
+    {
+      "mesh": "LY01_HayBundles",
+      "name": "LY01_HayBundles_03",
+      "location": [
+        0.85,
+        2.48,
+        0.22
+      ],
+      "rotation_degrees": 15,
+      "scale": [
+        0.95,
+        0.95,
+        0.89
+      ]
+    },
+    {
+      "mesh": "LY01_PropGroup",
+      "name": "LY01_PropGroup",
+      "location": [
+        1.1,
+        1.45,
+        0
+      ],
+      "rotation_degrees": -15,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "mesh": "LY01_GroundApron",
+      "name": "LY01_GroundApron",
+      "location": [
+        0,
+        0,
+        -0.008
+      ],
+      "rotation_degrees": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    }
+  ]
+}

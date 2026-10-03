@@ -38,19 +38,31 @@ private:
     UPROPERTY() TObjectPtr<UStaticMeshComponent> Terrain;
     UPROPERTY() TObjectPtr<UInstancedStaticMeshComponent> Bodies;
     UPROPERTY() TObjectPtr<UInstancedStaticMeshComponent> Roofs;
+    UPROPERTY() TObjectPtr<UInstancedStaticMeshComponent> Storehouses;
+    UPROPERTY() TObjectPtr<UInstancedStaticMeshComponent> StorehouseProps;
+    UPROPERTY() TObjectPtr<UInstancedStaticMeshComponent> Granaries;
     UPROPERTY() TObjectPtr<UInstancedStaticMeshComponent> Boundary;
     UPROPERTY() TObjectPtr<UStaticMeshComponent> PreviewBody;
     UPROPERTY() TObjectPtr<UStaticMeshComponent> PreviewRoof;
+    UPROPERTY() TObjectPtr<UStaticMeshComponent> PreviewStorehouse;
+    UPROPERTY() TObjectPtr<UStaticMeshComponent> PreviewStorehouseProps;
+    UPROPERTY() TObjectPtr<UStaticMeshComponent> PreviewGranary;
     UPROPERTY() TObjectPtr<UInstancedStaticMeshComponent> PreviewFootprint;
     UPROPERTY() TObjectPtr<UInstancedStaticMeshComponent> SelectedFootprint;
     UPROPERTY() TObjectPtr<UStaticMesh> TerrainMesh;
     UPROPERTY() TObjectPtr<UStaticMesh> RoofMesh;
+    UPROPERTY() TObjectPtr<UStaticMesh> StorehouseMesh;
+    UPROPERTY() TObjectPtr<UStaticMesh> StorehousePropsMesh;
+    UPROPERTY() TObjectPtr<UStaticMesh> GranaryMesh;
     UPROPERTY() TObjectPtr<UMaterialInterface> BaseMaterial;
     UPROPERTY() TObjectPtr<UMaterialInstanceDynamic> PreviewMaterial;
 
     TMap<uint64, FTransform> BuildingTransforms;
     // Presentation-only decoding table. Instance indices never persist as selection.
     TArray<uint64> InstanceBuildingIds;
+    // Saved dimensions remain the stable selection envelope for art replacements.
+    TArray<FTransform> PickBodyTransforms;
+    TArray<FTransform> PickRoofTransforms;
     uint64 SelectedId = 0;
     std::map<domain::EntityId, domain::BuildArea> PresentedAreas;
     int32 BuiltTerrainTriangles = 0;

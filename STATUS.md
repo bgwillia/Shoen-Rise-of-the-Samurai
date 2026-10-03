@@ -1,5 +1,22 @@
 # SHŌEN status
 
+## G01–G05 mature olive-grass refinement — 2026-09-20
+
+Completed and saved only G01–G05 with the verified existing M11 asset and exact M11/M6 target mixtures: 40/60, 45/55, 30/70, 25/75 and 28/72. Delivered XY cubics, priorities, influence and variable inward fades are retained, with a 0.52 m inward filtering reserve. M6/M11 source assets, all earlier material nodes, all 2,404 actor transforms and terrain are preserved. Actual Metal matching views show restrained green variation; [whole-map overview, comparisons and evidence](artifacts/grass-ground-refinement/README.md). Portable tests 7/7 and Unreal build passed. Initial sampler overflow was resolved by sharing the grass sampler; final height matches the verified hill-pass readback (initial asynchronous zero readback is documented as invalid). Existing rock grain and terrain edges remain outside this pass. No further IDs started.
+
+## H01–H09 ground-material refinement — 2026-09-20
+
+Nine hill treatments applied in six local groups with the completed M10 and existing M6/M8 branches. Delivered cubic boundaries, target ratios, ascending priorities and broad inward widths are preserved. H01/H03/H05/H07/H08 influence was locally reduced to 0.62 after full strength produced an artificial green separation from older outer rock margins. Shared materials, previous river/pond/road coverage, physical terrain and placed objects are unchanged. Original M8 repetition/bright grain and pale traces outside the envelopes remain documented limitations. Portable tests 7/7 and Unreal build passed; matched strategy and lower-oblique renders and preservation checks are in [the hill-pass evidence](artifacts/hills-ground-refinement/README.md). No G treatments or new geometry were added.
+
+
+## Unreal-MCP local editor integration — 2026-09-17
+
+Installed Unreal-MCP 0.17.0 with a local Codex-managed server. UE build and 7 portable targets passed; real stdio tool discovery returned 61 tools, editor state identified SettlementMap_01, and a rendered viewport capture was inspected. Four upstream plugin files needed narrow Mac compilation fixes. Codex restart is required to load its new tools; setup, patch and evidence are in [the integration note](docs/execution/unreal-mcp.md).
+
+## Terrain suitability foundation — 2026-09-16
+
+TerrainSuitability_01 now queries the existing native TerrainBase_01/WaterBase_01 for slope, footprint unevenness/water, wet/dry farming and infantry/cavalry costs. F8 cycles the optional 10 m overlay; B uses shared terrain rules in the existing placement transaction, and Home frames the village. Thresholds are in `game/Config/TerrainSuitability_01.json`. Session-only, with no terrain redesign or pathfinding. Final build, two focused portable targets and one live-map Unreal test passed; actual Metal overlay captures are separate. [Controls, brief terrain note and evidence](artifacts/terrainsuitability01/README.md).
+
 ## Kusazuri 01 waist armor note — 2026-09-15
 
 Kusazuri01 now has seven independently hinged leaves in a 30-mesh editable Blender source, with revised Dō-matched plate detail, red lacing, restrained brass, braided indigo obi and dark padded lining. It imports on unchanged native Manny with one opaque material, the existing three 2K Dō textures and 147,408 / 44,210 / 15,734 triangle LODs. Existing Kabuto/Dō/Sode geometry and gameplay remain unchanged.
@@ -103,3 +120,61 @@ Final code passed on 2026-09-15:
 The results reinforce technical feasibility of formation-scale navigation and a shared population/economy/combat ledger. They also expose the larger design risk: affordable computation does not ensure readable orders or satisfying congestion and flank timing.
 
 **Recommended C:** a bounded combined-arms command and battle-pacing playtest on this same map. Make attack/hold intent and queue feedback clear, test line width and supported flanks with a human, and profile the observed frame hitches. Keep the same society and terrain; do not add campaign systems or final art. **C has not begun.**
+
+## T03 terrain-form refinement — 2026-09-18
+
+Implemented only the lower-middle hill from `SHOEN_Terrain_Form_Refinement_Package.zip` on native additive layer `T03_LowerMiddleHill`. The crest rises up to 7.992 m and the side saddle lowers up to 3.383 m, with the package’s asymmetric shoulder support and smooth intervention boundary. Live baseline differed from package source by <0.003 m in T03; newer changes elsewhere (up to 2.421 m) remain intact. Existing ground material and scene placements are preserved.
+
+Final native readback: 5,265 changed vertices, zero height changes outside T03, exact layer-off rollback and exact layer-on restoration. Portable tests 7/7; Unreal editor build succeeded. Matched actual Metal strategy/oblique views, section A, control-point comparison, rollback instructions and limitations are in [T03 evidence](artifacts/terrain-t03/README.md). No other intervention started; awaiting the user’s visual review of this hill.
+
+## T01 terrain-form refinement — 2026-09-18
+
+Implemented only the upper-left bent ridge and side hollow on native additive layer `T01_UpperLeftRidge`, preserving completed T03. Live/source discrepancy within T01 was <0.003 m. The isolated package field uses its actual smooth boundary, 30 m inward fade and unequal shoulders; native changes range from -3 to +9 m across 9,999 vertices.
+
+Readback confirms zero height changes outside T01, exact T03 preservation, exact layer-off rollback and exact layer-on restoration. Existing material and 2,313 non-camera actor locations are preserved. Portable tests 7/7 and Unreal editor build passed. Matched rendered strategy/oblique images, controls, an explicitly authored local profile (the package has no T01 section), and rollback instructions are in [T01 evidence](artifacts/terrain-t01/README.md). T01 and T03 are saved enabled. No other intervention started.
+
+## T02 terrain-form refinement — 2026-09-18
+
+Implemented only the upper-middle tapered spur and side hollow on native additive layer `T02_UpperMiddleSpur`, preserving completed T01/T03. Live/source mismatch inside T02 was <0.002 m. The isolated field retains the package’s smooth boundary, 28 m fade, asymmetric shoulders and tapered lower end. Changes range from -2.367 to +6.5 m over 4,295 vertices.
+
+Native readback confirms zero changes outside T02, exact T01/T03 preservation, exact layer-off rollback and layer-on restoration. Existing material and all 2,313 non-camera actor transforms are unchanged. Portable tests 7/7 and Unreal build passed. Matched actual Metal strategy/oblique renders, controls, a labelled local profile (no T02 section exists in the package), and rollback instructions are in [T02 evidence](artifacts/terrain-t02/README.md). T02/T01/T03 are saved enabled. No other intervention started.
+
+## T04 terrain-form refinement — 2026-09-18
+
+Implemented only the lower-right connected ridge and side hollow on native additive layer `T04_LowerRightRidge`, preserving completed T01/T02/T03. Live/source mismatch inside T04 was <0.003 m. The isolated field follows the package’s curved boundary, 30 m inward fade, asymmetric shoulders and connected crest. Changes range from -2.602 to +7 m over 6,186 vertices.
+
+Native readback confirms zero changes outside T04, exact T01/T02/T03 preservation, exact layer-off rollback and layer-on restoration. Existing material and all 2,313 non-camera actor transforms are unchanged. Portable tests 7/7 and Unreal build passed. Matched actual Metal strategy/oblique renders, controls, a labelled local profile (no T04 section exists in the package), and rollback instructions are in [T04 evidence](artifacts/terrain-t04/README.md). All four completed layers are saved enabled. No other intervention started.
+
+## T05 terrain-form refinement — 2026-09-18
+
+Implemented only the isolated lowland rib adjustment on native additive layer `T05_LowlandRib`, preserving completed T01–T04. Live/source mismatch was <0.002 m. The isolated proposal retains its actual curved boundary and 22 m fade, with added protection around current road mesh bounds and local cap-transition smoothing after visual review. Changes range from -4 to +1 m over 4,051 vertices.
+
+Native readback verifies zero height changes outside T05 or within current road bounds plus 6 m, exact preservation of all prior landforms, exact layer-off rollback and layer-on restoration. Existing material and all 2,313 non-camera actor transforms are unchanged. Portable tests 7/7 and Unreal build passed. Matched actual Metal strategy/oblique renders, section B, slope measurements, controls and rollback instructions are in [T05 evidence](artifacts/terrain-t05/README.md). The map is saved with all five layers enabled. No other intervention started.
+
+## T06 terrain-form refinement — 2026-09-18
+
+Implemented only the main river bend bank adjustment on native additive layer `T06_MainRiverBanks`, preserving T01–T05. Live/source discrepancy reached 1.008 m, so the old target was locally adapted to current water geometry and recent terrain improvements. The inner shelf, submerged bed and water-contact guard remain fixed; the eligible outer shoulder rises up to 0.75 m over 564 native vertices. The source cutting targets were not forced into newer river work.
+
+Native readback verifies zero changes outside T06, at wet contacts/submerged ground, inside road protection or on newer improvements of at least 0.25 m. Water mesh exports are byte-identical and wet classification, water material/transform, all 2,313 non-camera actor transforms and prior landforms are unchanged. Exact layer rollback/restoration passed. Portable tests 7/7 and Unreal build passed. Matched strategy, two oblique and detail renders, section C, rebase evidence and rollback instructions are in [T06 evidence](artifacts/terrain-t06/README.md). All six completed layers are saved enabled. No other intervention started.
+
+## T07 terrain-form refinement — 2026-09-18
+
+Implemented only tributary bank shoulders on native additive layer `T07_TributaryShoulders`, preserving T01–T06 and the repaired river mouth. Live/source discrepancy reached 1.353 m, requiring local adaptation. The remaining subtle shoulder edit ranges -0.1953 to +0.125 m over 156 vertices; the stream bed, crossing and protected junction ground are unchanged. The project layer limit is now nine so earlier layers remain separate.
+
+Native readback verifies zero changes outside T07, exact prior-landform preservation and exact layer rollback/restoration. A 0.5 m contact check found zero changed wet classifications or shoreline/submerged terrain changes. Water mesh exports are byte-identical; materials and all 2,313 non-camera actor transforms are unchanged. Portable tests 7/7 and Unreal build passed. Matched strategy, opposite oblique and junction-detail renders, T07-only section D, adaptation evidence and reversal instructions are in [T07 evidence](artifacts/terrain-t07/README.md). All seven terrain layers are saved enabled. No other intervention started.
+
+## T08 terrain-form refinement — 2026-09-18
+
+Implemented only the eastern-road hump and surrounding ground on native additive layer `T08_EasternRoadHump`, preserving T01–T07. The profile was adapted to the actual shifted/widened road rather than the package's stale reference line. Current 5.730–6.270 m width settings and exact centreline XY are retained. Native terrain changes range -5.5703 to +1.3984 m over 2,526 vertices, with zero changes outside the true boundary.
+
+110 existing spline segments were fitted vertically; maximum rendered road grade reduces from 25.638% to 8.050% (ground under live route: 7.995% final). Fully adjusted fitted tread clearance is 2.0–3.9 cm. Existing materials, assets and actor transforms are unchanged; a dense current-shoreline check reports zero contact/submerged changes. Combined terrain-and-road rollback and restoration passed. Portable tests 7/7 and Unreal build passed. The project now permits ten separate edit layers. Matched strategy/along-road renders, adapted profile E, controls, verification and coordinated reversal scripts are in [T08 evidence](artifacts/terrain-t08/README.md). All eight completed terrain edits are saved enabled. No other intervention started.
+
+## T09 terrain-form refinement — 2026-09-18
+
+Saved the village-to-bridge ramp on native additive layer `T09_VillageBridgeRamp`, preserving T01–T08 and fixed bridge connections. Current route and widened road were retained. Native terrain changes range -3.58594 to +0.46094 m over 827 vertices; 87 existing spline segments received vertical fitting, including local village junctions. Maximum main approach road grade reduces from 19.719% to 13.707%, retaining the short bridge-side transition. Between-endpoint contact was refined and checked densely. Combined rollback/restoration, prior terrain preservation, water contacts, 7/7 portable tests and Unreal build passed. Matched captures and reversal instructions: [T09 evidence](artifacts/terrain-t09/README.md).
+
+## T10 terrain-form refinement — 2026-09-18
+
+Saved only the crossing-approach adjustment on native additive layer `T10_DryCrossingApproach`, preserving T01–T09, current route/width, fixed crossing and water. Source-to-live discrepancy reaches 1.2265 m, so the isolated proposal was locally attenuated around current terrain and water contacts. Final edit: -0.21875 to +0.234375 m over 186 vertices; 25 approach splines follow the small displacement. The protected 22.669% road transition remains unchanged; changed approach segments remain below 3.815% grade. No new submersion or tread intersections were found. The protected core has pre-existing water-mesh overlap, which remains unchanged; an entirely dry crossing is not certified.
+
+Exact native readback, T01–T09 preservation, combined terrain/road rollback and restoration, fixed crossing geometry, actor/material invariants and unchanged water export passed. Portable tests 7/7 and Unreal build passed. All ten interventions are saved enabled, with 12 separate layers including base and water. Matched comparisons, profile, crossing limitation and reversal: [T10 evidence](artifacts/terrain-t10/README.md). The final whole-map review has not begun.

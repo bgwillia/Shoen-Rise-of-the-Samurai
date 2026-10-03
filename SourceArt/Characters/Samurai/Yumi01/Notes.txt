@@ -1,0 +1,7 @@
+Yumi_01 — refined lacquer, tightly bound silk, and sculpted plum-crest brass furniture.
+Editable source: Yumi01.blend. Separate limbs, grip, bindings, fittings, nocks and string; reference sheet packed.
+Span 2.30 m; grip 33.9% above the lower tip, fitted against the unchanged 1.805 m Manny.
+Unreal map: /Game/Art/Characters/Samurai/Yumi01/Yumi01_Fitted
+Meshes: SM_Yumi_01 and SM_Yumi_01_String. Existing Dō texture atlas reused.
+Review contains bow-only, grip, on-character, and tactical views; unreal- images are actual Unreal renders.
+Remaining visual issues: relaxed stock fingers do not fully close around the grip; the thin string aliases at some distant views.

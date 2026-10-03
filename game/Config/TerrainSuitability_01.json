@@ -1,0 +1,10 @@
+{
+  "building_ideal": 4, "building_max": 8, "building_marginal": 12,
+  "building_variation_cm": 65,
+  "rice_ideal": 3, "rice_max": 5,
+  "dry_ideal": 5, "dry_usable": 8, "dry_max": 12,
+  "water_access_cm": 6000, "wet_bank_cm": 2500, "wet_height_cm": 350, "rice_lowland_cm": 1200,
+  "infantry": {"normal": 20, "slow": 35, "maximum": 45, "slow_speed": 0.65, "difficult_speed": 0.3, "wet_speed": 0.65},
+  "cavalry": {"normal": 15, "slow": 25, "maximum": 35, "slow_speed": 0.55, "difficult_speed": 0.2, "wet_speed": 0.35},
+  "debug_spacing_cm": 1000, "footprint_spacing_cm": 150, "debug_footprint_cm": 600
+}

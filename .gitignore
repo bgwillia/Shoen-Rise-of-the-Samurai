@@ -33,3 +33,10 @@ __pycache__/
 .env
 .env.*
 !.env.example
+
+# Samurai reproducible pipeline scratch (source/curated evidence stay tracked)
+/artifacts/samurai-prototype/local/
+*.blend1
+
+# Local Unreal-MCP installation (signed binaries; setup and compatibility patch in docs)
+/game/Plugins/UnrealMCP/

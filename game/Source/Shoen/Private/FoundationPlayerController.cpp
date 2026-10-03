@@ -13,6 +13,8 @@
 #include "GameFramework/HUD.h"
 #include "FoundationCursorDiagnostics.h"
 #include "InteractionProfiler.h"
+#include "TerrainSuitability.h"
+#include "StrategyCameraPawn.h"
 
 AFoundationPlayerController::AFoundationPlayerController()
 {
@@ -48,6 +50,13 @@ bool AFoundationPlayerController::GroundAtCursor(FVector& Point) const
 {
     FVector Origin, Direction;
     if (!DeprojectMousePositionToWorld(Origin, Direction) || FMath::Abs(Direction.Z) < 0.0001) return false;
+    if (const auto* Suitability=ATerrainSuitability::Find(GetWorld()))
+    {
+        FHitResult Hit;
+        if (!Suitability->TraceGround(Origin,Origin+Direction*2000000.,Hit)) return false;
+        Point=Hit.ImpactPoint;
+        return true;
+    }
     const double T = -Origin.Z / Direction.Z;
     if (T < 0) return false;
     Point = Origin + Direction * T;
@@ -221,7 +230,7 @@ void AFoundationPlayerController::UpdatePlacement(bool bCanReadCursor)
         }
         domain::Point3 Hit;
         const auto Area=Sim->State.build_areas.find(PendingPlacement.settlement_id);
-        bool Found=Area!=Sim->State.build_areas.end() && domain::RaycastBuildArea(Area->second,
+        bool Found=Area!=Sim->State.build_areas.end() && !Area->second.live_terrain && domain::RaycastBuildArea(Area->second,
             {Origin.X,Origin.Y,Origin.Z},{Direction.X,Direction.Y,Direction.Z},Hit);
         if (!Found)
         {
@@ -230,6 +239,9 @@ void AFoundationPlayerController::UpdatePlacement(bool bCanReadCursor)
             if (Found) Hit={Ground.X,Ground.Y,Ground.Z};
         }
         bHasPlacementPoint=Found;
+        if (!Found)
+            if (auto* Mode=Cast<AFoundationGameMode>(GetWorld()->GetAuthGameMode()))
+                if (auto* View=Mode->SettlementPresentation()) View->HidePreview();
         if (Found)
         {
             PendingPlacement.x_cm=FMath::RoundToInt(FMath::Clamp(Hit.x,-1.e9,1.e9));
@@ -400,6 +412,15 @@ void AFoundationPlayerController::PlayerTick(float Dt)
     if (WasInputKeyJustPressed(EKeys::F4)) Sim->SetGameSpeed(10);
     if (WasInputKeyJustPressed(EKeys::F5)) Sim->Save();
     if (WasInputKeyJustPressed(EKeys::F9)) Sim->Load();
+    if (WasInputKeyJustPressed(EKeys::F8))
+        if (auto* Suitability=ATerrainSuitability::Find(GetWorld()))
+        {
+            const bool bWasOff=Suitability->DebugMode==0;
+            Suitability->CycleDebugMode();
+            if (bWasOff)
+                if (auto* Camera=Cast<AStrategyCameraPawn>(GetPawn())) Camera->FrameLandscape(true);
+            Sim->Message=TEXT("Terrain suitability: ")+Suitability->DebugLabel()+TEXT(". F8 cycles; Home returns to village.");
+        }
     if (WasInputKeyJustPressed(EKeys::F6))
     {
         if (ShoenProfile::IsCapturing()) Sim->Message=ShoenProfile::Stop() ? TEXT("Input profile saved under Saved/Profiling.") : TEXT("Input profile export failed.");
@@ -419,6 +440,7 @@ void AFoundationPlayerController::PlayerTick(float Dt)
     }
     if (auto* Mode = Cast<AFoundationGameMode>(GetWorld()->GetAuthGameMode()))
     {
+        if (!Sim->Prototype.enabled && WasInputKeyJustPressed(EKeys::Home)) Mode->FrameCurrentScenario();
         if (WasInputKeyJustPressed(EKeys::N)) { if (Sim->Prototype.enabled) Mode->NewPrototype(); else Mode->NewSettlement(); }
         if (Sim->Prototype.enabled)
         {

@@ -4,6 +4,9 @@
 #include "GameFramework/PlayerController.h"
 #include "Components/SceneComponent.h"
 #include "InputCoreTypes.h"
+#include "TerrainSuitability.h"
+#include "LandscapeProxy.h"
+#include "EngineUtils.h"
 
 AStrategyCameraPawn::AStrategyCameraPawn()
 {
@@ -20,6 +23,7 @@ AStrategyCameraPawn::AStrategyCameraPawn()
 }
 void AStrategyCameraPawn::FrameScenario(int32 Count)
 {
+    bLandscapeWorld=false;
     const int32 Columns = FMath::Max(1, FMath::CeilToInt(FMath::Sqrt(float(Count))));
     TargetFocus = FVector((Columns - 1) * 750.0, (Columns - 1) * 750.0, 0);
     TargetZoom = FMath::Clamp(Columns * 2700.0f, 6000.0f, 50000.0f);
@@ -30,6 +34,8 @@ void AStrategyCameraPawn::FrameScenario(int32 Count)
 }
 void AStrategyCameraPawn::FrameSettlement()
 {
+    if (ATerrainSuitability::Find(GetWorld())) { FrameLandscape(); return; }
+    bLandscapeWorld=false;
     TargetFocus = FVector(-1700,0,0);
     TargetZoom = 16000;
     TargetYaw = -90;
@@ -39,9 +45,34 @@ void AStrategyCameraPawn::FrameSettlement()
     Arm->TargetArmLength = TargetZoom;
     Arm->SetRelativeRotation(FRotator(-60,TargetYaw,0));
 }
+void AStrategyCameraPawn::FrameLandscape(bool bOverview)
+{
+    bLandscapeWorld=true;
+    LandscapeBounds=FBox(ForceInit);
+    for (TActorIterator<ALandscapeProxy> It(GetWorld()); It; ++It)
+        LandscapeBounds+=It->GetComponentsBoundingBox(true);
+    const float Span=LandscapeBounds.IsValid ? float(FMath::Max(LandscapeBounds.GetSize().X,LandscapeBounds.GetSize().Y)) : 150000.f;
+    LandscapeMaxZoom=FMath::Max(60000.f,Span*3.2f);
+    // Native TerrainBase_01's village shelf; the camera follows the queried
+    // ground elevation while panning, including the higher outer ridges.
+    TargetFocus=bOverview && LandscapeBounds.IsValid ? LandscapeBounds.GetCenter() : FVector(22000,-23000,1950);
+    TargetFocus.X-=bOverview ? Span*.22f : 2300.f;
+    if (const auto* Suitability=ATerrainSuitability::Find(GetWorld()))
+    {
+        FHitResult Hit;
+        if (Suitability->TraceGround(TargetFocus+FVector(0,0,200000),TargetFocus-FVector(0,0,200000),Hit)) TargetFocus.Z=Hit.ImpactPoint.Z;
+    }
+    TargetZoom=bOverview ? Span*2.5f : 20000.f;
+    TargetYaw=-90;
+    ScenarioFocus=TargetFocus; ScenarioZoom=TargetZoom;
+    SetActorLocation(TargetFocus);
+    Arm->TargetArmLength=TargetZoom;
+    Arm->SetRelativeRotation(FRotator(-60,TargetYaw,0));
+}
 float AStrategyCameraPawn::Zoom() const { return Arm->TargetArmLength; }
 void AStrategyCameraPawn::FramePrototype(FVector Center, float Span)
 {
+    bLandscapeWorld=false;
     // Reserve the existing sidebar's screen space when framing either scene.
     TargetFocus = Center - FVector(Span * .23f, 0, 0);
     TargetZoom = FMath::Clamp(Span * 1.9f, 11000.0f, 58000.0f);
@@ -56,6 +87,7 @@ void AStrategyCameraPawn::Tick(float Dt)
     Super::Tick(Dt);
     auto* PC = Cast<APlayerController>(GetController());
     if (!PC) return;
+    const FVector PreviousFocus=TargetFocus;
     if (bBenchmarkMotion)
     {
         SweepTime += Dt;
@@ -84,9 +116,15 @@ void AStrategyCameraPawn::Tick(float Dt)
     if (PC->IsInputKeyDown(EKeys::E)) TargetYaw += 65 * Dt;
     if (PC->WasInputKeyJustPressed(EKeys::MouseScrollUp)) TargetZoom *= 0.86f;
     if (PC->WasInputKeyJustPressed(EKeys::MouseScrollDown)) TargetZoom *= 1.16f;
-    TargetZoom = FMath::Clamp(TargetZoom, 1400.0f, 60000.0f);
-    TargetFocus.X = FMath::Clamp(TargetFocus.X, -35000.0, 50000.0);
-    TargetFocus.Y = FMath::Clamp(TargetFocus.Y, -35000.0, 50000.0);
+    TargetZoom = FMath::Clamp(TargetZoom, 1400.0f, bLandscapeWorld ? LandscapeMaxZoom : 60000.0f);
+    TargetFocus.X = FMath::Clamp(TargetFocus.X, bLandscapeWorld && LandscapeBounds.IsValid ? LandscapeBounds.Min.X : -35000., bLandscapeWorld && LandscapeBounds.IsValid ? LandscapeBounds.Max.X : 50000.);
+    TargetFocus.Y = FMath::Clamp(TargetFocus.Y, bLandscapeWorld && LandscapeBounds.IsValid ? LandscapeBounds.Min.Y : -35000., bLandscapeWorld && LandscapeBounds.IsValid ? LandscapeBounds.Max.Y : 50000.);
+    if (bLandscapeWorld && !TargetFocus.Equals(PreviousFocus))
+        if (const auto* Suitability=ATerrainSuitability::Find(GetWorld()))
+        {
+            FHitResult Hit;
+            if (Suitability->TraceGround(TargetFocus+FVector(0,0,200000),TargetFocus-FVector(0,0,200000),Hit)) TargetFocus.Z=Hit.ImpactPoint.Z;
+        }
     SetActorLocation(FMath::VInterpTo(GetActorLocation(), TargetFocus, Dt, 9));
     Arm->TargetArmLength = FMath::FInterpTo(Arm->TargetArmLength, TargetZoom, Dt, 10);
     Arm->SetRelativeRotation(FMath::RInterpTo(Arm->GetRelativeRotation(), FRotator(-60, TargetYaw, 0), Dt, 10));

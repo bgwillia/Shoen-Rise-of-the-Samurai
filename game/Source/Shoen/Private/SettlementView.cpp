@@ -1,4 +1,5 @@
 #include "SettlementView.h"
+#include "TerrainSuitability.h"
 #include "Components/InstancedStaticMeshComponent.h"
 #include "Components/SceneComponent.h"
 #include "Components/StaticMeshComponent.h"
@@ -177,9 +178,15 @@ ASettlementView::ASettlementView()
     Terrain = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("SettlementTerrain"));
     Bodies = CreateDefaultSubobject<UInstancedStaticMeshComponent>(TEXT("BuildingBodies"));
     Roofs = CreateDefaultSubobject<UInstancedStaticMeshComponent>(TEXT("BuildingRoofs"));
+    Storehouses = CreateDefaultSubobject<UInstancedStaticMeshComponent>(TEXT("StorehouseBuildings"));
+    StorehouseProps = CreateDefaultSubobject<UInstancedStaticMeshComponent>(TEXT("StorehouseProps"));
+    Granaries = CreateDefaultSubobject<UInstancedStaticMeshComponent>(TEXT("GranaryBuildings"));
     Boundary = CreateDefaultSubobject<UInstancedStaticMeshComponent>(TEXT("BuildAreaBoundary"));
     PreviewBody = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("PlacementBody"));
     PreviewRoof = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("PlacementRoof"));
+    PreviewStorehouse = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("PlacementStorehouse"));
+    PreviewStorehouseProps = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("PlacementStorehouseProps"));
+    PreviewGranary = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("PlacementGranary"));
     PreviewFootprint = CreateDefaultSubobject<UInstancedStaticMeshComponent>(TEXT("PlacementFootprint"));
     SelectedFootprint = CreateDefaultSubobject<UInstancedStaticMeshComponent>(TEXT("BuildingSelectionFootprint"));
     UStaticMeshComponent* Components[] = {Terrain,Bodies,Roofs,Boundary,PreviewBody,PreviewRoof,PreviewFootprint,SelectedFootprint};
@@ -192,6 +199,15 @@ ASettlementView::ASettlementView()
     static ConstructorHelpers::FObjectFinder<UMaterialInterface> Material(TEXT("/Engine/BasicShapes/BasicShapeMaterial.BasicShapeMaterial"));
     BaseMaterial = Material.Object;
     for (auto* Component : Components) Component->SetMaterial(0,BaseMaterial);
+    UStaticMeshComponent* ArtComponents[] = {Storehouses,StorehouseProps,Granaries,PreviewStorehouse,PreviewStorehouseProps,PreviewGranary};
+    for (auto* Component : ArtComponents)
+    {
+        Component->SetupAttachment(GetRootComponent());
+        PassiveComponent(Component);
+    }
+    Storehouses->SetCastShadow(true);
+    StorehouseProps->SetCastShadow(true);
+    Granaries->SetCastShadow(true);
     Bodies->SetStaticMesh(Cube.Object);
     Boundary->SetStaticMesh(Cube.Object);
     PreviewBody->SetStaticMesh(Cube.Object);
@@ -203,6 +219,21 @@ ASettlementView::ASettlementView()
 
 void ASettlementView::PrepareMeshesAndMaterials()
 {
+    if (!GranaryMesh)
+    {
+        GranaryMesh = LoadObject<UStaticMesh>(nullptr,TEXT("/Game/Art/Buildings/Rural/Granary01/SM_Granary_01.SM_Granary_01"));
+        Granaries->SetStaticMesh(GranaryMesh);
+        PreviewGranary->SetStaticMesh(GranaryMesh);
+    }
+    if (!StorehouseMesh)
+    {
+        StorehouseMesh = LoadObject<UStaticMesh>(nullptr,TEXT("/Game/Art/Buildings/Rural/Storehouse01/SM_Storehouse_01.SM_Storehouse_01"));
+        StorehousePropsMesh = LoadObject<UStaticMesh>(nullptr,TEXT("/Game/Art/Buildings/Rural/Storehouse01/SM_SH01_Props.SM_SH01_Props"));
+        Storehouses->SetStaticMesh(StorehouseMesh);
+        StorehouseProps->SetStaticMesh(StorehousePropsMesh);
+        PreviewStorehouse->SetStaticMesh(StorehouseMesh);
+        PreviewStorehouseProps->SetStaticMesh(StorehousePropsMesh);
+    }
     if (!RoofMesh)
     {
         FSurfaceMesh Mesh;
@@ -224,6 +255,9 @@ void ASettlementView::PrepareMeshesAndMaterials()
         PreviewRoof->SetMaterial(0,PreviewMaterial);
         PreviewFootprint->SetMaterial(0,PreviewMaterial);
     }
+    for (auto* Component : {PreviewStorehouse.Get(),PreviewStorehouseProps.Get(),PreviewGranary.Get()})
+        for (int32 Index=0; Index<Component->GetNumMaterials(); ++Index)
+            Component->SetMaterial(Index,PreviewMaterial);
 }
 
 void ASettlementView::Rebuild(const domain::World& State)
@@ -233,8 +267,13 @@ void ASettlementView::Rebuild(const domain::World& State)
     HidePreview();
     Bodies->ClearInstances();
     Roofs->ClearInstances();
+    Storehouses->ClearInstances();
+    StorehouseProps->ClearInstances();
+    Granaries->ClearInstances();
     BuildingTransforms.Reset();
     InstanceBuildingIds.Reset();
+    PickBodyTransforms.Reset();
+    PickRoofTransforms.Reset();
     InstanceBuildingIds.Reserve(int32(State.buildings.size()));
     TArray<FTransform> BodyTransforms, RoofTransforms;
     BodyTransforms.Reserve(int32(State.buildings.size()));
@@ -244,8 +283,25 @@ void ASettlementView::Rebuild(const domain::World& State)
         const FTransform Base = BasePose(Building.x_cm,Building.y_cm,Building.z_cm,Building.yaw_degrees);
         BuildingTransforms.Add(Id,Base);
         InstanceBuildingIds.Add(Id);
-        BodyTransforms.Add(BodyPose(Base,Building.width_cm,Building.depth_cm,Building.height_cm));
-        RoofTransforms.Add(RoofPose(Base,Building.width_cm,Building.depth_cm,Building.height_cm));
+        const FTransform Body = BodyPose(Base,Building.width_cm,Building.depth_cm,Building.height_cm);
+        const FTransform Roof = RoofPose(Base,Building.width_cm,Building.depth_cm,Building.height_cm);
+        PickBodyTransforms.Add(Body);
+        PickRoofTransforms.Add(Roof);
+        if (GranaryMesh && Building.definition_id=="granary")
+        {
+            Granaries->AddInstance(Base);
+        }
+        else if (StorehouseMesh && Building.definition_id=="small_storehouse")
+        {
+            // The art uses its authored metre scale within the unchanged saved lot.
+            Storehouses->AddInstance(Base);
+            if (StorehousePropsMesh) StorehouseProps->AddInstance(Base);
+        }
+        else
+        {
+            BodyTransforms.Add(Body);
+            RoofTransforms.Add(Roof);
+        }
     }
     Bodies->AddInstances(BodyTransforms,false,false,false);
     Roofs->AddInstances(RoofTransforms,false,false,false);
@@ -261,6 +317,9 @@ void ASettlementView::RebuildTerrain(const domain::World& State)
     BuiltTerrainTriangles = 0;
     for (const auto& [SettlementId,Area] : State.build_areas)
     {
+        // Native landscapes own their geometry and water; never cover them with
+        // the legacy settlement fixture's synthetic terrain or boundary.
+        if (Area.live_terrain) continue;
         if (Area.columns<2 || Area.rows<2 || Area.cell_size_cm<=0 ||
             uint64(Area.columns)*Area.rows!=Area.heights_cm.size())
         {
@@ -307,7 +366,7 @@ void ASettlementView::RebuildTerrain(const domain::World& State)
     bHasBuiltTerrain = true;
 }
 
-int32 ASettlementView::BuildingCount() const { return Bodies->GetInstanceCount(); }
+int32 ASettlementView::BuildingCount() const { return InstanceBuildingIds.Num(); }
 
 bool ASettlementView::PickBuilding(const FVector& Origin, const FVector& Direction, uint64& OutId) const
 {
@@ -322,8 +381,8 @@ bool ASettlementView::PickBuilding(const FVector& Origin, const FVector& Directi
     double Nearest=std::numeric_limits<double>::infinity();
     for (int32 Index=0; Index<InstanceBuildingIds.Num(); ++Index)
     {
-        FTransform Body,Roof;
-        if (!Bodies->GetInstanceTransform(Index,Body,true) || !Roofs->GetInstanceTransform(Index,Roof,true)) continue;
+        const FTransform& Body=PickBodyTransforms[Index];
+        const FTransform& Roof=PickRoofTransforms[Index];
         double Distance=0;
         if (RayBody(Body.InverseTransformPosition(Origin),Body.InverseTransformVector(RayDirection),Distance) && Distance<Nearest)
         {
@@ -386,6 +445,11 @@ bool ASettlementView::GetBuildingTransform(uint64 Id, FTransform& Out) const
 
 double ASettlementView::PreviewHeight(double X, double Y, int32 GroundZ) const
 {
+    if (const auto* Suitability=ATerrainSuitability::Find(GetWorld()))
+    {
+        FHitResult Hit;
+        return Suitability->TraceGround(FVector(X,Y,200000),FVector(X,Y,-200000),Hit) ? Hit.ImpactPoint.Z : GroundZ;
+    }
     for (const auto& [Id,Area] : PresentedAreas)
     {
         const double Height = domain::TerrainHeightAt(Area,X,Y);
@@ -401,11 +465,19 @@ void ASettlementView::SetPreview(const domain::BuildingDefinition& Definition,
     const FTransform Base = BasePose(Command.x_cm,Command.y_cm,GroundZ,Command.yaw_degrees);
     PreviewBody->SetWorldTransform(BodyPose(Base,Definition.width_cm,Definition.depth_cm,Definition.height_cm));
     PreviewRoof->SetWorldTransform(RoofPose(Base,Definition.width_cm,Definition.depth_cm,Definition.height_cm));
+    PreviewStorehouse->SetWorldTransform(Base);
+    PreviewStorehouseProps->SetWorldTransform(Base);
+    PreviewGranary->SetWorldTransform(Base);
     PreviewMaterial->SetVectorParameterValue(TEXT("Color"),bValid ? FLinearColor(.15,.85,.28) : FLinearColor(.95,.12,.08));
     RebuildFootprint(PreviewFootprint,Command.x_cm,Command.y_cm,Command.yaw_degrees,
         Definition.width_cm,Definition.depth_cm,GroundZ,14);
-    PreviewBody->SetVisibility(true);
-    PreviewRoof->SetVisibility(true);
+    const bool bStorehouse=StorehouseMesh && Command.definition_id=="small_storehouse";
+    const bool bGranary=GranaryMesh && Command.definition_id=="granary";
+    PreviewBody->SetVisibility(!bStorehouse && !bGranary);
+    PreviewRoof->SetVisibility(!bStorehouse && !bGranary);
+    PreviewStorehouse->SetVisibility(bStorehouse);
+    PreviewStorehouseProps->SetVisibility(bStorehouse && StorehousePropsMesh);
+    PreviewGranary->SetVisibility(bGranary);
     PreviewFootprint->SetVisibility(true);
 }
 
@@ -434,5 +506,8 @@ void ASettlementView::HidePreview()
 {
     PreviewBody->SetVisibility(false);
     PreviewRoof->SetVisibility(false);
+    PreviewStorehouse->SetVisibility(false);
+    PreviewStorehouseProps->SetVisibility(false);
+    PreviewGranary->SetVisibility(false);
     PreviewFootprint->SetVisibility(false);
 }

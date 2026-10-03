@@ -1,0 +1,85 @@
+{
+  "instances": [
+    {
+      "name": "Main shrine",
+      "mesh": "SmallShrine_01",
+      "location": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "Torii_01",
+      "mesh": "Torii_01",
+      "location": [
+        0,
+        -3.05,
+        0
+      ]
+    },
+    {
+      "name": "OfferingBox_01",
+      "mesh": "OfferingBox_01",
+      "location": [
+        0,
+        -1.15,
+        0.86
+      ]
+    },
+    {
+      "name": "StoneLantern_01",
+      "mesh": "StoneLantern_01",
+      "location": [
+        -2.05,
+        -1.9,
+        0
+      ]
+    },
+    {
+      "name": "StoneLantern_02",
+      "mesh": "StoneLantern_01",
+      "location": [
+        2.05,
+        -1.9,
+        0
+      ]
+    },
+    {
+      "name": "SR01_Fence_End",
+      "mesh": "SR01_Fence_End",
+      "location": [
+        -2.65,
+        -3.45,
+        0
+      ]
+    },
+    {
+      "name": "SR01_Fence_Boundary",
+      "mesh": "SR01_Fence_Boundary",
+      "location": [
+        1.45,
+        -3.45,
+        0
+      ]
+    },
+    {
+      "name": "SR01_Fence_Straight",
+      "mesh": "SR01_Fence_Straight",
+      "location": [
+        -2.65,
+        -3.45,
+        0
+      ]
+    },
+    {
+      "name": "SR01_Banners",
+      "mesh": "SR01_Banners",
+      "location": [
+        0,
+        -0.6,
+        0
+      ]
+    }
+  ]
+}

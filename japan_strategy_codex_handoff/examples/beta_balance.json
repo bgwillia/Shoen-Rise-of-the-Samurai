@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "status": "proposed_gameplay_defaults_not_measured_or_historical",
+  "calendar": {
+    "days_per_year": 360,
+    "real_seconds_per_day_at_1x": 3,
+    "speed_multipliers": [
+      0,
+      1,
+      3,
+      5,
+      10
+    ],
+    "tactical_tick_hz": 20,
+    "campaign_during_land_battle": "frozen",
+    "operational_days_per_committed_encounter": 1
+  },
+  "starting_player": {
+    "capital_population": 420,
+    "hinterland_population": 1680,
+    "total_population": 2100
+  },
+  "district_administration": {
+    "minimum_town_residents": 1200,
+    "requires_administration_module": true,
+    "requires_funded_promotion": true,
+    "food_risk_is_warning_not_universal_hard_lock": true
+  },
+  "formation_defaults": {
+    "ordinary": 100,
+    "elite_foot": 40,
+    "elite_mounted": 32,
+    "ordinary_range": [
+      60,
+      160
+    ],
+    "elite_range": [
+      24,
+      60
+    ]
+  },
+  "performance_targets": {
+    "beta_total_soldiers": 8000,
+    "stress_total_soldiers": 20000,
+    "stress_formation_size": 100,
+    "stress_formation_count": 200,
+    "city_aggregate_residents": 10000,
+    "city_visible_buildings": 5000,
+    "resolution": [
+      1920,
+      1080
+    ],
+    "graphics": "medium",
+    "target_fps_floor": 30,
+    "evidence_status": "unmeasured"
+  },
+  "campaign_content": {
+    "nodes": 8,
+    "land_routes": 10,
+    "sea_routes": 1,
+    "factions": 4,
+    "playable_start_scenarios": 1,
+    "battlefield_families": 4
+  },
+  "regional_objective": {
+    "owned_nodes": 4,
+    "coalition_recognized_nodes": 5,
+    "hold_days": 360,
+    "full_game_emperor_victory": false
+  }
+}

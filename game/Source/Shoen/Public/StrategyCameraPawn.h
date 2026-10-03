@@ -14,6 +14,7 @@ public:
     void FrameScenario(int32 FormationCount);
     float Zoom() const;
     void FrameSettlement();
+    void FrameLandscape(bool bOverview=false);
     void FramePrototype(FVector Center, float Span);
     bool bBenchmarkMotion = false;
 private:
@@ -25,4 +26,7 @@ private:
     float SweepTime = 0;
     FVector ScenarioFocus = FVector::ZeroVector;
     float ScenarioZoom = 7000;
+    bool bLandscapeWorld = false;
+    FBox LandscapeBounds = FBox(ForceInit);
+    float LandscapeMaxZoom = 400000;
 };

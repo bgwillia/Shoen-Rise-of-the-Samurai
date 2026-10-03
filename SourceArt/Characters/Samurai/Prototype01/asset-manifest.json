@@ -1,0 +1,139 @@
+{
+  "asset": "SHOEN Samurai Prototype01",
+  "blender_version": "5.1.2",
+  "source_triangles": 35930,
+  "skeletal_body_triangles": 29306,
+  "bones": 63,
+  "runtime_body_materials": 1,
+  "runtime_body_sections_expected": 1,
+  "source_components": {
+    "SK_Body": 5924,
+    "CLO_Undergarment": 1120,
+    "CLO_Hakama": 476,
+    "CLO_Footwear": 3528,
+    "ARM_Chest": 6572,
+    "ARM_Shoulder_L": 640,
+    "ARM_Shoulder_R": 640,
+    "ARM_Kote_L": 640,
+    "ARM_Kote_R": 640,
+    "ARM_Kusazuri": 2880,
+    "ARM_Suneate_L": 964,
+    "ARM_Suneate_R": 964,
+    "ARM_Kabuto": 5268,
+    "WPN_Yumi": 2494,
+    "WPN_Tachi": 852,
+    "WPN_Sheath": 988,
+    "PROP_Quiver": 1004,
+    "PROP_Arrows": 336
+  },
+  "textures": "2048x2048 shared BaseColor + tangent Normal + ORM",
+  "vat": [
+    {
+      "lod": 0,
+      "vertices": 19364,
+      "triangles": 34908,
+      "texture_width": 2048,
+      "texture_height": 720,
+      "rows_per_frame": 10,
+      "frames_per_clip": 24,
+      "clips": [
+        "idle",
+        "walk",
+        "attack"
+      ],
+      "clip_seconds": [
+        2,
+        1,
+        1.5
+      ],
+      "source_to_unreal_position": [
+        100,
+        -100,
+        100
+      ]
+    },
+    {
+      "lod": 1,
+      "vertices": 9618,
+      "triangles": 16754,
+      "texture_width": 2048,
+      "texture_height": 360,
+      "rows_per_frame": 5,
+      "frames_per_clip": 24,
+      "clips": [
+        "idle",
+        "walk",
+        "attack"
+      ],
+      "clip_seconds": [
+        2,
+        1,
+        1.5
+      ],
+      "source_to_unreal_position": [
+        100,
+        -100,
+        100
+      ]
+    },
+    {
+      "lod": 2,
+      "vertices": 3581,
+      "triangles": 5236,
+      "texture_width": 2048,
+      "texture_height": 144,
+      "rows_per_frame": 2,
+      "frames_per_clip": 24,
+      "clips": [
+        "idle",
+        "walk",
+        "attack"
+      ],
+      "clip_seconds": [
+        2,
+        1,
+        1.5
+      ],
+      "source_to_unreal_position": [
+        100,
+        -100,
+        100
+      ]
+    }
+  ],
+  "fbx_import": {
+    "convert_scene": false,
+    "convert_scene_unit": true,
+    "force_front_x_axis": false,
+    "runtime_yaw_degrees": -90,
+    "unit": "centimetres in Unreal"
+  },
+  "weapon_pivots_blender_metres": {
+    "bow_socket": [
+      0.4519999921321869,
+      -0.07999999821186066,
+      0.8899999856948853
+    ],
+    "sword_socket": [
+      0.20999999344348907,
+      -0.30000001192092896,
+      1.0720000267028809
+    ],
+    "sheath_socket": [
+      0.2150000035762787,
+      -0.15000000596046448,
+      1.0299999713897705
+    ],
+    "quiver_socket": [
+      -0.18799999356269836,
+      0.15000000596046448,
+      1.0399999618530273
+    ]
+  },
+  "limitations": [
+    "Original parametric human, no scan or purchased mesh; face is prototype detail.",
+    "No certified mannequin retarget compatibility: shared humanoid names, original proportions.",
+    "Attack is a simple guard/thrust motion test; archery release, hit and death are future work.",
+    "Crowd uses rig-baked vertex animation; skeletal body retained for conventional animation proof."
+  ]
+}

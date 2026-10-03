@@ -1,0 +1,91 @@
+{
+  "schema_version": 1,
+  "status": "authored_contract_example_not_generated_game_output",
+  "encounter_id": "E_SAMPLE_001",
+  "route_id": "R03",
+  "world_revision": 220,
+  "seed": 72031,
+  "participants": [
+    {
+      "army_id": "A01",
+      "faction": "F01",
+      "progress": 0.35,
+      "reachable_interval": [
+        0.35,
+        0.62
+      ],
+      "approach": "west"
+    },
+    {
+      "army_id": "A02",
+      "faction": "F02",
+      "progress": 0.65,
+      "reachable_interval": [
+        0.38,
+        0.65
+      ],
+      "approach": "east"
+    }
+  ],
+  "candidates": [
+    {
+      "site_id": "RIDGE_MID",
+      "progress": 0.5,
+      "eligible": true,
+      "terrain_tags": [
+        "ridge",
+        "local_tree_cover"
+      ]
+    },
+    {
+      "site_id": "PASS_FAR",
+      "progress": 0.85,
+      "eligible": false,
+      "reason": "outside_joint_reachable_window"
+    }
+  ],
+  "events": [
+    {
+      "id": "EV1",
+      "type": "enemy_detected",
+      "side": "F01",
+      "source": "scout_report",
+      "effect": "initiative_advantage"
+    },
+    {
+      "id": "EV2",
+      "type": "reachable_site_selected",
+      "side": "F01",
+      "site": "RIDGE_MID",
+      "effect": "west_ridge_deployment"
+    },
+    {
+      "id": "EV3",
+      "type": "flank_detachment_detected",
+      "side": "F02",
+      "effect": "full_ambush_denied"
+    }
+  ],
+  "deployment": {
+    "site_id": "RIDGE_MID",
+    "player_zone": "west_ridge",
+    "enemy_zone": "east_approach",
+    "full_ambush": false,
+    "reinforcement_rule": "only_from_reachable_route_approach"
+  },
+  "narrative_clauses": [
+    {
+      "event_id": "EV1",
+      "text": "Your scouts located the opposing column."
+    },
+    {
+      "event_id": "EV2",
+      "text": "Your commander occupied the reachable western ridge."
+    },
+    {
+      "event_id": "EV3",
+      "text": "Enemy patrols detected the flanking detachment, preventing a full ambush."
+    }
+  ],
+  "persist_before_battle": true
+}

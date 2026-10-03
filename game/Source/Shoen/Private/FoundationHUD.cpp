@@ -12,6 +12,7 @@
 #include "domain/Terrain.h"
 #include "InteractionProfiler.h"
 #include "InputCoreTypes.h"
+#include "TerrainSuitability.h"
 
 void AFoundationHUD::Label(const FString& Text,float X,float Y,FLinearColor Color,float Scale)
 {
@@ -54,10 +55,11 @@ void AFoundationHUD::DrawHUD()
     auto* PC = Cast<AFoundationPlayerController>(PlayerOwner);
     if (!Sim || !Mode || !Canvas) return;
     if (Sim->Prototype.enabled) { DrawPrototypeHUD(Sim,Mode,PC); return; }
+    const auto* Suitability=ATerrainSuitability::Find(GetWorld());
     const auto P = domain::Summarize(Sim->State);
     const FLinearColor Muted(.62,.72,.73), Gold(.95,.74,.37);
     DrawRect(FLinearColor(.025,.04,.045,.95),0,0,Canvas->SizeX,64);
-    Label(Sim->IsSettlement() ? TEXT("SHOEN  /  SETTLEMENT") : TEXT("SHOEN  /  FOUNDATION LAB"),20,15,Gold,1.4f);
+    Label(Suitability ? TEXT("SHOEN  /  TERRAIN SUITABILITY") : Sim->IsSettlement() ? TEXT("SHOEN  /  SETTLEMENT") : TEXT("SHOEN  /  FOUNDATION LAB"),20,15,Gold,1.4f);
     Button(TEXT("settlement"),TEXT("N  New settlement fixture"),Canvas->SizeX-246,17,226);
     Label(FString::Printf(TEXT("Year %lld  |  Day %lld / 360  |  %dx"),1180+Sim->State.campaign_day/360,1+Sim->State.campaign_day%360,Sim->State.speed),440,17,FLinearColor::White,1.2f);
     Label(TEXT("Simulation calendar  |  1 day / 3 sec at 1x"),440,40,Muted);
@@ -109,15 +111,19 @@ void AFoundationHUD::DrawHUD()
                 const auto& Last=Sim->State.buildings.rbegin()->second;
                 Label(FString::Printf(TEXT("Last building ID %llu | Completed"),uint64(Last.id)),20,554,Gold);
             }
-            Label(TEXT("Gold outline: build area | Raised strip: slope"),20,580,Muted);
+            Label(Suitability ? TEXT("Live landscape slope, footprint and water checks") : TEXT("Gold outline: build area | Raised strip: slope"),20,580,Muted);
         }
-        Button(TEXT("save"),TEXT("F5  Save settlement"),20,606);
-        Button(TEXT("load"),TEXT("F9  Load settlement"),211,606);
+        if (Suitability) Label(TEXT("Session-only terrain foundation"),20,612,Muted);
+        else
+        {
+            Button(TEXT("save"),TEXT("F5  Save settlement"),20,606);
+            Button(TEXT("load"),TEXT("F9  Load settlement"),211,606);
+        }
         Label(TEXT("WASD pan | Wheel zoom | Q/E camera rotate"),20,640,Muted);
         Label(TEXT("Middle-drag rotate | Shift-middle pan"),20,656,Muted);
         Label(Placing ? TEXT("Click / Enter build | Right click / Esc cancel") : TEXT("Click building: inspect | Esc: clear selection"),20,672,Muted);
-        Label(TEXT("N new fixture | R foundation | F12 diagnostics"),20,688,Muted);
-        Label(TEXT("Placeholder only. No storage or production."),20,705,Muted);
+        Label(Suitability ? TEXT("F8 terrain view | Home village | N new settlement") : TEXT("N new fixture | R foundation | F12 diagnostics"),20,688,Muted);
+        Label(Suitability ? TEXT("Suitability only; no farming or pathfinding.") : TEXT("Placeholder only. No storage or production."),20,705,Muted);
     }
     else
     {
@@ -192,9 +198,34 @@ void AFoundationHUD::DrawHUD()
             DrawLine(A.X,B.Y,A.X,A.Y,Gold,1);
         }
     }
+    if (Suitability && Suitability->DebugMode!=0)
+    {
+        DrawRect(FLinearColor(.025,.04,.045,.92),430,78,FMath::Min(680.f,float(Canvas->SizeX)-450.f),78);
+        Label(TEXT("TERRAIN / ")+Suitability->DebugLabel()+TEXT("   [F8 next / off]"),442,88,Gold,1.1f);
+        if (Suitability->DebugMode==1)
+        {
+            Label(TEXT("Green: suitable / ideal    Yellow: marginal    Red: unsuitable"),442,113);
+            Label(TEXT("Blue: standing water    Footprint checks run on placement"),442,134,Muted);
+        }
+        else if (Suitability->DebugMode==2)
+        {
+            Label(TEXT("Green: ideal    Yellow: marginal    Red: unsuitable"),442,113);
+            Label(TEXT("Flat wet lowlands preferred; standing river water is unsuitable"),442,134,Muted);
+        }
+        else if (Suitability->DebugMode==3)
+        {
+            Label(TEXT("Green: ideal    Yellow: usable    Orange: marginal    Red: unsuitable"),442,113);
+            Label(TEXT("Standing water is unsuitable for ordinary dry farming"),442,134,Muted);
+        }
+        else
+        {
+            Label(TEXT("Green: normal    Yellow: slowed    Orange: difficult    Red: blocked"),442,113);
+            Label(TEXT("Classification only; army pathfinding is not connected"),442,134,Muted);
+        }
+    }
     DrawRect(FLinearColor(.025,.04,.045,.95),410,Canvas->SizeY-54,Canvas->SizeX-410,54);
     Label(Sim->Message,430,Canvas->SizeY-42,Gold);
-    Label(Sim->IsSettlement() ? TEXT("Buildings are saved simulation records. N resets this test fixture.") : TEXT("Original primitive placeholders. Scale support requires measured evidence."),430,Canvas->SizeY-23,Muted);
+    Label(Suitability ? TEXT("F8: Building > Rice > Dry farming > Infantry > Cavalry > Off") : Sim->IsSettlement() ? TEXT("Buildings are saved simulation records. N resets this test fixture.") : TEXT("Original primitive placeholders. Scale support requires measured evidence."),430,Canvas->SizeY-23,Muted);
     ShoenProfile::CaptureHud(Sim->Message);
 }
 void AFoundationHUD::NotifyHitBoxClick(FName Id)

@@ -2,6 +2,7 @@
 #include <array>
 #include <cstdint>
 #include <map>
+#include <memory>
 #include <string>
 #include <vector>
 namespace domain {
@@ -19,11 +20,14 @@ struct BuildingDefinition {
     bool operator==(const BuildingDefinition&) const = default;
 };
 using BuildingCatalog = std::map<std::string, BuildingDefinition>;
+struct BuildingTerrain;
 struct BuildArea {
     std::uint64_t settlement_id = 0;
     std::int32_t origin_x_cm = 0, origin_y_cm = 0, cell_size_cm = 0;
     std::uint32_t columns = 0, rows = 0; // Vertex counts; row-major heights, y first.
     std::vector<std::int32_t> heights_cm;
+    // Optional live surface adapter. Session-only; never serialized.
+    std::shared_ptr<const BuildingTerrain> live_terrain = {};
     bool operator==(const BuildArea&) const = default;
 };
 enum class ConstructionState : std::uint8_t { Completed };
@@ -44,10 +48,14 @@ struct PlacementCommand {
 enum class PlacementCode : std::uint8_t {
     Valid, AlreadyApplied, UnknownDefinition, InvalidCommand, InvalidWorld, NoBuildArea,
     OverlapsBuilding, OutsideBuildArea, TerrainTooSteep, InsufficientResources,
-    TransactionConflict, CapacityExceeded
+    TransactionConflict, CapacityExceeded, TerrainTooUneven, InWater
 };
 struct PlacementResult {
     bool ok = false; PlacementCode code = PlacementCode::InvalidCommand;
     std::uint64_t building_id = 0; std::int32_t ground_z_cm = 0;
+};
+struct BuildingTerrain {
+    virtual ~BuildingTerrain() = default;
+    virtual PlacementResult Evaluate(const PlacementCommand&, const BuildingDefinition&) const = 0;
 };
 }

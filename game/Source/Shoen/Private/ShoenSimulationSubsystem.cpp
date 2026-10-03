@@ -8,6 +8,7 @@
 #include "HAL/FileManager.h"
 #include "InteractionProfiler.h"
 #include "domain/ProfilingFixture.h"
+#include "TerrainSuitability.h"
 
 void UShoenSimulationSubsystem::Initialize(FSubsystemCollectionBase& Collection)
 {
@@ -48,6 +49,11 @@ bool UShoenSimulationSubsystem::ResetSettlement()
     }
     Settlement->second.resources.timber = Timber;
     Settlement->second.resources.treasury = Treasury;
+    if (auto* Suitability=ATerrainSuitability::Find(GetWorld()))
+    {
+        Suitability->InitializeSources();
+        CandidateArea=Suitability->MakeBuildArea(CandidateArea.settlement_id);
+    }
     Candidate.build_areas.emplace(CandidateArea.settlement_id, std::move(CandidateArea));
     const domain::Result WorldValidation = domain::ValidateWorld(Candidate);
     const domain::Result BuildingValidation = domain::ValidateBuildingState(Candidate);
@@ -69,6 +75,7 @@ bool UShoenSimulationSubsystem::ResetSettlement()
         UTF8_TO_TCHAR(Storehouse.display_name.c_str()),
         Storehouse.timber_cost,
         Storehouse.treasury_cost);
+    if (ATerrainSuitability::Find(GetWorld())) Message=TEXT("TerrainBase_01: B places a building using terrain rules. F8 cycles suitability; Home frames the village.");
     ++ViewGeneration;
     ++WorldGeneration;
     return true;
@@ -94,7 +101,15 @@ bool UShoenSimulationSubsystem::PrepareSettlementForLevel()
 }
 domain::PlacementResult UShoenSimulationSubsystem::PreviewBuilding(const domain::PlacementCommand& Command) const
 {
-    return domain::EvaluatePlacement(State, BuildingCatalog, Command);
+    auto Result=domain::EvaluatePlacement(State, BuildingCatalog, Command);
+    // Early overlap/bounds failures still need the native ground height so the
+    // existing red preview remains visible at the attempted location.
+    if (const auto* Suitability=ATerrainSuitability::Find(GetWorld()))
+    {
+        const auto Sample=Suitability->Query(FVector(Command.x_cm,Command.y_cm,0));
+        if (Sample.bInside) Result.ground_z_cm=FMath::RoundToInt(Sample.Position.Z);
+    }
+    return Result;
 }
 domain::PlacementResult UShoenSimulationSubsystem::PlaceBuilding(const domain::PlacementCommand& Command)
 {
@@ -202,6 +217,7 @@ bool UShoenSimulationSubsystem::DemobilizeProof()
 }
 bool UShoenSimulationSubsystem::SaveToPath(const FString& Path)
 {
+    if (ATerrainSuitability::Find(GetWorld())) { Message=TEXT("Terrain suitability is session-only. Existing save slots are preserved."); return false; }
     if (Prototype.enabled) { Message=TEXT("Core-loop prototype is session-only. Existing foundation/settlement saves are separate."); return false; }
     if (IsProfilingFixture()) { Message=TEXT("Profiling fixture is transient; saving is disabled until it ends."); return false; }
     const auto Bytes = domain::EncodeSnapshot(State);
@@ -219,6 +235,7 @@ bool UShoenSimulationSubsystem::SaveToPath(const FString& Path)
 }
 bool UShoenSimulationSubsystem::LoadFromPath(const FString& Path)
 {
+    if (ATerrainSuitability::Find(GetWorld())) { Message=TEXT("Terrain suitability is session-only. N starts a fresh settlement on this landscape."); return false; }
     if (Prototype.enabled) { Message=TEXT("Prototype persistence is deferred. N starts a fresh core-loop session."); return false; }
     if (IsProfilingFixture()) { Message=TEXT("End the transient profiling fixture before loading."); return false; }
     const int64 Size = IFileManager::Get().FileSize(*Path);

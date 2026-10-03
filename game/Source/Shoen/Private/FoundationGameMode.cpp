@@ -27,6 +27,9 @@
 #include "domain/Battle.h"
 #include "InteractionProfiler.h"
 #include "DrawDebugHelpers.h"
+#include "TerrainSuitability.h"
+#include "LandscapeProxy.h"
+#include "EngineUtils.h"
 
 AFoundationGameMode::AFoundationGameMode()
 {
@@ -38,7 +41,14 @@ AFoundationGameMode::AFoundationGameMode()
 void AFoundationGameMode::BeginPlay()
 {
     Super::BeginPlay();
-    CreateEnvironment();
+    const bool bLandscapeWorld=bool(TActorIterator<ALandscapeProxy>(GetWorld()));
+    ATerrainSuitability* Suitability=ATerrainSuitability::Find(GetWorld());
+    if (bLandscapeWorld)
+    {
+        if (!Suitability) Suitability=GetWorld()->SpawnActor<ATerrainSuitability>();
+        if (Suitability) Suitability->InitializeSources();
+    }
+    else CreateEnvironment();
     FParse::Value(FCommandLine::Get(),TEXT("ShoenSoldiers="),RequestedSoldiers);
     if (RequestedSoldiers != 0 && RequestedSoldiers != 1000 && RequestedSoldiers != 4000 && RequestedSoldiers != 8000 && RequestedSoldiers != 20000)
         RequestedSoldiers = 0;
@@ -49,7 +59,12 @@ void AFoundationGameMode::BeginPlay()
     auto* Sim = GetGameInstance()->GetSubsystem<UShoenSimulationSubsystem>();
     FString Scenario;
     FParse::Value(FCommandLine::Get(),TEXT("ShoenScenario="),Scenario);
-    if (Scenario==TEXT("terrain")) { Sim->ResetTerrainPrototype(); Sim->bHasPresentedLevel=true; }
+    if (bLandscapeWorld)
+    {
+        Sim->ResetSettlement();
+        Sim->bHasPresentedLevel=true;
+    }
+    else if (Scenario==TEXT("terrain")) { Sim->ResetTerrainPrototype(); Sim->bHasPresentedLevel=true; }
     else if (Scenario==TEXT("prototype")) { Sim->ResetPrototype(); Sim->bHasPresentedLevel=true; }
     else if (Scenario==TEXT("settlement")) Sim->PrepareSettlementForLevel();
     else Sim->PrepareForLevel(RequestedSoldiers);
@@ -91,6 +106,7 @@ void AFoundationGameMode::CreateEnvironment()
 }
 void AFoundationGameMode::NewScenario(int32 Soldiers)
 {
+    if (ATerrainSuitability::Find(GetWorld())) { NewSettlement(); return; }
     auto* Sim = GetGameInstance()->GetSubsystem<UShoenSimulationSubsystem>();
     Sim->ResetScenario(Soldiers);
     RebuildViews();

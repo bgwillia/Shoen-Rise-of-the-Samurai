@@ -1,0 +1,905 @@
+{
+  "asset": "Market_01",
+  "instances": [
+    {
+      "name": "MK01_GroundApron_0",
+      "mesh": "MK01_GroundApron",
+      "location": [
+        0,
+        0,
+        -0.012
+      ],
+      "rotation_degrees": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "Main covered market",
+      "mesh": "Market_01",
+      "location": [
+        0,
+        0.35,
+        0
+      ],
+      "rotation_degrees": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "West produce stall",
+      "mesh": "MarketStall_Open_01",
+      "location": [
+        -4.02,
+        0.1,
+        0
+      ],
+      "rotation_degrees": 90,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "East pottery stall",
+      "mesh": "MarketStall_Open_01",
+      "location": [
+        4.03,
+        0.45,
+        0
+      ],
+      "rotation_degrees": -90,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "Rear cloth stall",
+      "mesh": "MarketStall_Open_01",
+      "location": [
+        2.5,
+        3.52,
+        0
+      ],
+      "rotation_degrees": 180,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "MK01_AwningPosts_5",
+      "mesh": "MK01_AwningPosts",
+      "location": [
+        -1.65,
+        -2.26,
+        0
+      ],
+      "rotation_degrees": -2,
+      "scale": [
+        0.78,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "MK01_Canopy_A_6",
+      "mesh": "MK01_Canopy_A",
+      "location": [
+        -1.65,
+        -2.26,
+        0
+      ],
+      "rotation_degrees": -2,
+      "scale": [
+        0.78,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "MK01_AwningPosts_7",
+      "mesh": "MK01_AwningPosts",
+      "location": [
+        1.65,
+        -2.27,
+        0
+      ],
+      "rotation_degrees": 2,
+      "scale": [
+        0.78,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "MK01_Canopy_A_8",
+      "mesh": "MK01_Canopy_A",
+      "location": [
+        1.65,
+        -2.27,
+        0
+      ],
+      "rotation_degrees": 2,
+      "scale": [
+        0.78,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "MK01_AwningPosts_9",
+      "mesh": "MK01_AwningPosts",
+      "location": [
+        -3.9,
+        2.56,
+        0.03
+      ],
+      "rotation_degrees": 30,
+      "scale": [
+        0.8,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "MK01_Canopy_B_10",
+      "mesh": "MK01_Canopy_B",
+      "location": [
+        -3.9,
+        2.56,
+        0.03
+      ],
+      "rotation_degrees": 30,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "MK01_Table_A_11",
+      "mesh": "MK01_Table_A",
+      "location": [
+        -1.43,
+        -1.03,
+        0
+      ],
+      "rotation_degrees": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "MK01_Table_A_12",
+      "mesh": "MK01_Table_A",
+      "location": [
+        1.42,
+        -1.02,
+        0
+      ],
+      "rotation_degrees": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "MK01_Table_A_13",
+      "mesh": "MK01_Table_A",
+      "location": [
+        -1.28,
+        1.78,
+        0
+      ],
+      "rotation_degrees": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "MK01_Table_A_14",
+      "mesh": "MK01_Table_A",
+      "location": [
+        1.15,
+        1.78,
+        0
+      ],
+      "rotation_degrees": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "MK01_Table_A_15",
+      "mesh": "MK01_Table_A",
+      "location": [
+        -4.1,
+        0.12,
+        0
+      ],
+      "rotation_degrees": 90,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "MK01_Table_A_16",
+      "mesh": "MK01_Table_A",
+      "location": [
+        4.05,
+        0.43,
+        0
+      ],
+      "rotation_degrees": -90,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "MK01_Table_A_17",
+      "mesh": "MK01_Table_A",
+      "location": [
+        2.5,
+        3.6,
+        0
+      ],
+      "rotation_degrees": 180,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "MK01_Table_B_18",
+      "mesh": "MK01_Table_B",
+      "location": [
+        -2.3,
+        -2.76,
+        0
+      ],
+      "rotation_degrees": -7,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "MK01_Table_B_19",
+      "mesh": "MK01_Table_B",
+      "location": [
+        2.5,
+        -2.73,
+        0
+      ],
+      "rotation_degrees": 8,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "MK01_Fence_20",
+      "mesh": "MK01_Fence",
+      "location": [
+        -5.0,
+        -2.6,
+        0
+      ],
+      "rotation_degrees": 90,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "MK01_Fence_21",
+      "mesh": "MK01_Fence",
+      "location": [
+        -5.0,
+        0.9,
+        0
+      ],
+      "rotation_degrees": 90,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "MK01_Fence_22",
+      "mesh": "MK01_Fence",
+      "location": [
+        5.04,
+        -2.45,
+        0
+      ],
+      "rotation_degrees": 90,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "MK01_Fence_23",
+      "mesh": "MK01_Fence",
+      "location": [
+        5.04,
+        1.05,
+        0
+      ],
+      "rotation_degrees": 90,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "MK01_Fence_24",
+      "mesh": "MK01_Fence",
+      "location": [
+        -3.2,
+        3.1,
+        0
+      ],
+      "rotation_degrees": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "MK01_Fence_25",
+      "mesh": "MK01_Fence",
+      "location": [
+        -5.0,
+        -3.45,
+        0
+      ],
+      "rotation_degrees": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "MK01_Fence_26",
+      "mesh": "MK01_Fence",
+      "location": [
+        3.0,
+        -3.46,
+        0
+      ],
+      "rotation_degrees": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "MK01_Banner_27",
+      "mesh": "MK01_Banner",
+      "location": [
+        3.5,
+        -3.14,
+        0
+      ],
+      "rotation_degrees": -6,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "MK01_BasketProduce_28",
+      "mesh": "MK01_BasketProduce",
+      "location": [
+        -1.9,
+        -1.0,
+        0.86
+      ],
+      "rotation_degrees": -13.424838677855151,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "MK01_BasketProduce_29",
+      "mesh": "MK01_BasketProduce",
+      "location": [
+        -1.26,
+        -1.04,
+        0.86
+      ],
+      "rotation_degrees": 18.223986825353137,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "MK01_BasketProduce_30",
+      "mesh": "MK01_BasketProduce",
+      "location": [
+        -4.12,
+        -0.33,
+        0.86
+      ],
+      "rotation_degrees": -10.574285573182056,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "MK01_BasketProduce_31",
+      "mesh": "MK01_BasketProduce",
+      "location": [
+        -4.1,
+        0.28,
+        0.86
+      ],
+      "rotation_degrees": -11.905951806487817,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "MK01_BasketProduce_32",
+      "mesh": "MK01_BasketProduce",
+      "location": [
+        -2.3,
+        -2.76,
+        0.66
+      ],
+      "rotation_degrees": 10.090929574013053,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "MK01_BasketEmpty_33",
+      "mesh": "MK01_BasketEmpty",
+      "location": [
+        -0.73,
+        -1.04,
+        0.86
+      ],
+      "rotation_degrees": 1.0798537178905665,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "MK01_BasketEmpty_34",
+      "mesh": "MK01_BasketEmpty",
+      "location": [
+        -4.13,
+        0.79,
+        0.86
+      ],
+      "rotation_degrees": 7.713727880631183,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "MK01_BasketEmpty_35",
+      "mesh": "MK01_BasketEmpty",
+      "location": [
+        -2.52,
+        -1.38,
+        0
+      ],
+      "rotation_degrees": -4.572816530748423,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "MK01_BasketEmpty_36",
+      "mesh": "MK01_BasketEmpty",
+      "location": [
+        -3.0,
+        -2.7,
+        0
+      ],
+      "rotation_degrees": 13.99708305002557,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "MK01_Pottery_37",
+      "mesh": "MK01_Pottery",
+      "location": [
+        1.04,
+        -1.03,
+        0.86
+      ],
+      "rotation_degrees": 38.668962013024824,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "MK01_Pottery_38",
+      "mesh": "MK01_Pottery",
+      "location": [
+        4.05,
+        0.78,
+        0.86
+      ],
+      "rotation_degrees": 49.95744035740176,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "MK01_Pottery_39",
+      "mesh": "MK01_Pottery",
+      "location": [
+        4.06,
+        0.12,
+        0.86
+      ],
+      "rotation_degrees": 24.8539215719357,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "MK01_Pottery_40",
+      "mesh": "MK01_Pottery",
+      "location": [
+        2.48,
+        -2.73,
+        0.66
+      ],
+      "rotation_degrees": 38.154800656911625,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "MK01_PotteryTall_41",
+      "mesh": "MK01_PotteryTall",
+      "location": [
+        2.03,
+        -1.02,
+        0.86
+      ],
+      "rotation_degrees": 3.1143491273919945,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "MK01_PotteryTall_42",
+      "mesh": "MK01_PotteryTall",
+      "location": [
+        2.88,
+        -1.58,
+        0
+      ],
+      "rotation_degrees": 9.962431750014915,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "MK01_PotteryTall_43",
+      "mesh": "MK01_PotteryTall",
+      "location": [
+        4.12,
+        1.52,
+        0
+      ],
+      "rotation_degrees": -2.2227739237332536,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "MK01_Crate_44",
+      "mesh": "MK01_Crate",
+      "location": [
+        -2.13,
+        1.11,
+        0
+      ],
+      "rotation_degrees": 9.894298423216519,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "MK01_Crate_45",
+      "mesh": "MK01_Crate",
+      "location": [
+        -1.91,
+        1.52,
+        0
+      ],
+      "rotation_degrees": 7.856888077862578,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "MK01_Crate_46",
+      "mesh": "MK01_Crate",
+      "location": [
+        2.07,
+        1.16,
+        0
+      ],
+      "rotation_degrees": -11.997760996988141,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "MK01_Crate_47",
+      "mesh": "MK01_Crate",
+      "location": [
+        -3.81,
+        2.3,
+        0
+      ],
+      "rotation_degrees": -10.78578305868239,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "MK01_Crate_48",
+      "mesh": "MK01_Crate",
+      "location": [
+        3.85,
+        2.01,
+        0
+      ],
+      "rotation_degrees": 5.830758808638997,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "MK01_Crate_49",
+      "mesh": "MK01_Crate",
+      "location": [
+        -2.09,
+        1.1,
+        0.48
+      ],
+      "rotation_degrees": 6,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "MK01_Sacks_50",
+      "mesh": "MK01_Sacks",
+      "location": [
+        1.18,
+        1.8,
+        0.86
+      ],
+      "rotation_degrees": -9.94774166441795,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "MK01_Sacks_51",
+      "mesh": "MK01_Sacks",
+      "location": [
+        -1.45,
+        1.83,
+        0.86
+      ],
+      "rotation_degrees": -4.309956293636393,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "MK01_Sacks_52",
+      "mesh": "MK01_Sacks",
+      "location": [
+        -2.23,
+        2.17,
+        0
+      ],
+      "rotation_degrees": 9.50494344081024,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "MK01_Sacks_53",
+      "mesh": "MK01_Sacks",
+      "location": [
+        3.67,
+        3.37,
+        0
+      ],
+      "rotation_degrees": 7.028733287587745,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "MK01_ClothBundle_54",
+      "mesh": "MK01_ClothBundle",
+      "location": [
+        2.25,
+        3.6,
+        0.86
+      ],
+      "rotation_degrees": 1.2618688940547464,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "MK01_ClothBundle_55",
+      "mesh": "MK01_ClothBundle",
+      "location": [
+        2.87,
+        3.63,
+        0.86
+      ],
+      "rotation_degrees": 3.388408258984505,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "MK01_ClothBundle_56",
+      "mesh": "MK01_ClothBundle",
+      "location": [
+        0.36,
+        1.8,
+        0.86
+      ],
+      "rotation_degrees": -3.974100619172024,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "MK01_HangingGoods_57",
+      "mesh": "MK01_HangingGoods",
+      "location": [
+        -1.65,
+        -3.03,
+        2.04
+      ],
+      "rotation_degrees": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "MK01_HangingGoods_58",
+      "mesh": "MK01_HangingGoods",
+      "location": [
+        1.65,
+        -3.04,
+        2.04
+      ],
+      "rotation_degrees": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "MK01_HangingGoods_59",
+      "mesh": "MK01_HangingGoods",
+      "location": [
+        -2.2,
+        1.95,
+        2.09
+      ],
+      "rotation_degrees": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    }
+  ]
+}

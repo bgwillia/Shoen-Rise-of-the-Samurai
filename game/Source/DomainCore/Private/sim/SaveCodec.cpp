@@ -145,6 +145,8 @@ World ReadWorld(Reader& p,std::uint32_t version) {
 }
 std::vector<std::uint8_t> EncodeSnapshot(const World& w) {
     if(!ValidateWorld(w).ok) return {};
+    // Live scene surfaces have no portable snapshot representation yet.
+    for(const auto& [id,area]:w.build_areas) if(area.live_terrain) return {};
     Writer p; EncodeWorld(p,w); if(p.bytes.size()>MaxSnapshotBytes-HeaderSize) return {};
     Writer out; for(auto b:Magic) out.U8(b); out.U32(SnapshotVersion); out.U64(p.bytes.size()); out.U64(Checksum(p.bytes));
     out.bytes.insert(out.bytes.end(),p.bytes.begin(),p.bytes.end()); return out.bytes;

@@ -1,0 +1,2 @@
+# Added by unreal-mcp-cli configure — never commit local MCP secrets.
+.env

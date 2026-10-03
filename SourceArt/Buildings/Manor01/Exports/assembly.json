@@ -1,0 +1,666 @@
+{
+  "asset": "Manor_01",
+  "units": "metres",
+  "instances": [
+    {
+      "name": "Manor_MainHall_01_0",
+      "mesh": "Manor_MainHall_01",
+      "location": [
+        0.35,
+        2.8,
+        0
+      ],
+      "rotation_degrees": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "MN01_MainRoof_1",
+      "mesh": "MN01_MainRoof",
+      "location": [
+        0.35,
+        2.8,
+        0
+      ],
+      "rotation_degrees": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "MN01_StoneBase_2",
+      "mesh": "MN01_StoneBase",
+      "location": [
+        0.35,
+        2.8,
+        0
+      ],
+      "rotation_degrees": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "MN01_Veranda_3",
+      "mesh": "MN01_Veranda",
+      "location": [
+        0.35,
+        2.8,
+        0
+      ],
+      "rotation_degrees": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "MN01_Steps_4",
+      "mesh": "MN01_Steps",
+      "location": [
+        0.35,
+        2.8,
+        0
+      ],
+      "rotation_degrees": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "ManorGate_01_5",
+      "mesh": "ManorGate_01",
+      "location": [
+        0,
+        -7,
+        0
+      ],
+      "rotation_degrees": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "ManorSideBuilding_01_6",
+      "mesh": "ManorSideBuilding_01",
+      "location": [
+        -6.75,
+        -0.05,
+        0
+      ],
+      "rotation_degrees": 90,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "ManorWall_Corner_01_7",
+      "mesh": "ManorWall_Corner_01",
+      "location": [
+        -9,
+        -7,
+        0
+      ],
+      "rotation_degrees": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "ManorWall_Corner_01_8",
+      "mesh": "ManorWall_Corner_01",
+      "location": [
+        9,
+        -7,
+        0
+      ],
+      "rotation_degrees": 90,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "ManorWall_Corner_01_9",
+      "mesh": "ManorWall_Corner_01",
+      "location": [
+        9,
+        7,
+        0
+      ],
+      "rotation_degrees": 180,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "ManorWall_Corner_01_10",
+      "mesh": "ManorWall_Corner_01",
+      "location": [
+        -9,
+        7,
+        0
+      ],
+      "rotation_degrees": 270,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "ManorWall_Straight_01_11",
+      "mesh": "ManorWall_Straight_01",
+      "location": [
+        -8,
+        -7,
+        0
+      ],
+      "rotation_degrees": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "ManorWall_Straight_01_12",
+      "mesh": "ManorWall_Straight_01",
+      "location": [
+        -6,
+        -7,
+        0
+      ],
+      "rotation_degrees": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "ManorWall_Plaster_01_13",
+      "mesh": "ManorWall_Plaster_01",
+      "location": [
+        -4,
+        -7,
+        0
+      ],
+      "rotation_degrees": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "ManorWall_Plaster_01_14",
+      "mesh": "ManorWall_Plaster_01",
+      "location": [
+        2,
+        -7,
+        0
+      ],
+      "rotation_degrees": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "ManorWall_Straight_01_15",
+      "mesh": "ManorWall_Straight_01",
+      "location": [
+        4,
+        -7,
+        0
+      ],
+      "rotation_degrees": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "ManorWall_Straight_01_16",
+      "mesh": "ManorWall_Straight_01",
+      "location": [
+        6,
+        -7,
+        0
+      ],
+      "rotation_degrees": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "ManorWall_Straight_01_17",
+      "mesh": "ManorWall_Straight_01",
+      "location": [
+        -8,
+        7,
+        0
+      ],
+      "rotation_degrees": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "ManorWall_Straight_01_18",
+      "mesh": "ManorWall_Straight_01",
+      "location": [
+        -6,
+        7,
+        0
+      ],
+      "rotation_degrees": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "ManorWall_Straight_01_19",
+      "mesh": "ManorWall_Straight_01",
+      "location": [
+        -4,
+        7,
+        0
+      ],
+      "rotation_degrees": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "ManorWall_Straight_01_20",
+      "mesh": "ManorWall_Straight_01",
+      "location": [
+        -2,
+        7,
+        0
+      ],
+      "rotation_degrees": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "ManorWall_Straight_01_21",
+      "mesh": "ManorWall_Straight_01",
+      "location": [
+        0,
+        7,
+        0
+      ],
+      "rotation_degrees": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "ManorWall_Straight_01_22",
+      "mesh": "ManorWall_Straight_01",
+      "location": [
+        2,
+        7,
+        0
+      ],
+      "rotation_degrees": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "ManorWall_Straight_01_23",
+      "mesh": "ManorWall_Straight_01",
+      "location": [
+        4,
+        7,
+        0
+      ],
+      "rotation_degrees": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "ManorWall_Straight_01_24",
+      "mesh": "ManorWall_Straight_01",
+      "location": [
+        6,
+        7,
+        0
+      ],
+      "rotation_degrees": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "ManorWall_Straight_01_25",
+      "mesh": "ManorWall_Straight_01",
+      "location": [
+        -9,
+        -6,
+        0
+      ],
+      "rotation_degrees": 90,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "ManorWall_Straight_01_26",
+      "mesh": "ManorWall_Straight_01",
+      "location": [
+        -9,
+        -4,
+        0
+      ],
+      "rotation_degrees": 90,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "ManorWall_Straight_01_27",
+      "mesh": "ManorWall_Straight_01",
+      "location": [
+        -9,
+        -2,
+        0
+      ],
+      "rotation_degrees": 90,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "ManorWall_Straight_01_28",
+      "mesh": "ManorWall_Straight_01",
+      "location": [
+        -9,
+        0,
+        0
+      ],
+      "rotation_degrees": 90,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "ManorWall_Straight_01_29",
+      "mesh": "ManorWall_Straight_01",
+      "location": [
+        -9,
+        2,
+        0
+      ],
+      "rotation_degrees": 90,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "ManorWall_Straight_01_30",
+      "mesh": "ManorWall_Straight_01",
+      "location": [
+        -9,
+        4,
+        0
+      ],
+      "rotation_degrees": 90,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "ManorWall_Straight_01_31",
+      "mesh": "ManorWall_Straight_01",
+      "location": [
+        9,
+        -6,
+        0
+      ],
+      "rotation_degrees": 90,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "ManorWall_Straight_01_32",
+      "mesh": "ManorWall_Straight_01",
+      "location": [
+        9,
+        -4,
+        0
+      ],
+      "rotation_degrees": 90,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "ManorWall_Straight_01_33",
+      "mesh": "ManorWall_Straight_01",
+      "location": [
+        9,
+        -2,
+        0
+      ],
+      "rotation_degrees": 90,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "ManorWall_Straight_01_34",
+      "mesh": "ManorWall_Straight_01",
+      "location": [
+        9,
+        0,
+        0
+      ],
+      "rotation_degrees": 90,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "ManorWall_Straight_01_35",
+      "mesh": "ManorWall_Straight_01",
+      "location": [
+        9,
+        2,
+        0
+      ],
+      "rotation_degrees": 90,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "ManorWall_Straight_01_36",
+      "mesh": "ManorWall_Straight_01",
+      "location": [
+        9,
+        4,
+        0
+      ],
+      "rotation_degrees": 90,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "MN01_GroundApron_37",
+      "mesh": "MN01_GroundApron",
+      "location": [
+        0,
+        0,
+        0
+      ],
+      "rotation_degrees": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "MN01_GardenElements_38",
+      "mesh": "MN01_GardenElements",
+      "location": [
+        -6.55,
+        -4.05,
+        0
+      ],
+      "rotation_degrees": 24,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "MN01_GardenElements_39",
+      "mesh": "MN01_GardenElements",
+      "location": [
+        6.4,
+        -1.6,
+        0
+      ],
+      "rotation_degrees": -50,
+      "scale": [
+        1.12,
+        1.12,
+        1.08
+      ]
+    },
+    {
+      "name": "StoneLantern_01_40",
+      "mesh": "StoneLantern_01",
+      "location": [
+        -2.65,
+        -7.45,
+        0
+      ],
+      "rotation_degrees": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "StoneLantern_01_41",
+      "mesh": "StoneLantern_01",
+      "location": [
+        2.65,
+        -7.45,
+        0
+      ],
+      "rotation_degrees": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "MN01_Banners_42",
+      "mesh": "MN01_Banners",
+      "location": [
+        -6.6,
+        3.6,
+        0
+      ],
+      "rotation_degrees": 0,
+      "scale": [
+        1.12,
+        1.12,
+        1.66
+      ]
+    },
+    {
+      "name": "MN01_Banners_43",
+      "mesh": "MN01_Banners",
+      "location": [
+        7.2,
+        3.6,
+        0
+      ],
+      "rotation_degrees": 0,
+      "scale": [
+        1.12,
+        1.12,
+        1.66
+      ]
+    }
+  ]
+}

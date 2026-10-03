@@ -36,3 +36,7 @@ target_sources(domain_core PRIVATE "${DOMAIN_SOURCE}/Private/sim/Terrain.cpp")
 add_executable(domain_terrain_tests tests/test_terrain.cpp)
 target_link_libraries(domain_terrain_tests PRIVATE domain_core)
 add_test(NAME domain_terrain_invariants COMMAND domain_terrain_tests)
+
+add_executable(domain_terrain_suitability_tests tests/test_terrain_suitability.cpp)
+target_link_libraries(domain_terrain_suitability_tests PRIVATE domain_core)
+add_test(NAME domain_terrain_suitability_invariants COMMAND domain_terrain_suitability_tests)

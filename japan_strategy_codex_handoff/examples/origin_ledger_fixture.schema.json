@@ -1,0 +1,197 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:project-domain:origin-ledger-fixture:v1",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "fixture_id",
+    "battle_id",
+    "initial_population",
+    "ineligible_or_dependent",
+    "cohorts",
+    "service_records",
+    "expected"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "fixture_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "battle_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "initial_population": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "ineligible_or_dependent": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "cohorts": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "district_id",
+          "occupation_id",
+          "skill",
+          "estate",
+          "available_before_muster",
+          "muster_count"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "district_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "occupation_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "skill": {
+            "type": "string",
+            "minLength": 1
+          },
+          "estate": {
+            "type": "string",
+            "minLength": 1
+          },
+          "available_before_muster": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "muster_count": {
+            "type": "integer",
+            "minimum": 0
+          }
+        }
+      }
+    },
+    "service_records": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "service_id",
+          "origin_settlement_id",
+          "origin_cohort_id",
+          "origin_district_id",
+          "occupation_id",
+          "skill",
+          "estate",
+          "disposition"
+        ],
+        "properties": {
+          "service_id": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "origin_settlement_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "origin_cohort_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "origin_district_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "occupation_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "skill": {
+            "type": "string",
+            "minLength": 1
+          },
+          "estate": {
+            "type": "string",
+            "minLength": 1
+          },
+          "disposition": {
+            "enum": [
+              "dead",
+              "wounded",
+              "captive",
+              "healthy"
+            ]
+          }
+        }
+      }
+    },
+    "expected": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "mobilized",
+        "dead",
+        "wounded",
+        "captive",
+        "healthy",
+        "living_after_battle",
+        "available_immediately_after_battle",
+        "available_after_healthy_return",
+        "available_after_five_wounded_recover",
+        "second_apply"
+      ],
+      "properties": {
+        "mobilized": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "dead": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "wounded": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "captive": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "healthy": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "living_after_battle": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "available_immediately_after_battle": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "available_after_healthy_return": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "available_after_five_wounded_recover": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "second_apply": {
+          "const": "AlreadyApplied"
+        }
+      }
+    }
+  }
+}

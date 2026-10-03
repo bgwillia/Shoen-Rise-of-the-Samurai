@@ -1,0 +1,456 @@
+{
+  "asset": "HarborShipyard_01",
+  "units": "metres",
+  "instances": [
+    {
+      "mesh": "HS01_WorkingRopes",
+      "name": "HS01_WorkingRopes_00",
+      "location": [
+        0,
+        0,
+        0
+      ],
+      "rotation_degrees": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "mesh": "HS01_Frame",
+      "name": "HS01_Frame_00",
+      "location": [
+        0,
+        0,
+        0
+      ],
+      "rotation_degrees": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "mesh": "HS01_Roof",
+      "name": "HS01_Roof_00",
+      "location": [
+        0,
+        0,
+        0
+      ],
+      "rotation_degrees": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "mesh": "HS01_Shoreline",
+      "name": "HS01_Shoreline_00",
+      "location": [
+        0,
+        0,
+        0
+      ],
+      "rotation_degrees": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "mesh": "Dock_Straight_01",
+      "name": "Dock_Straight_01_00",
+      "location": [
+        -5.0,
+        -5.4,
+        -0.08
+      ],
+      "rotation_degrees": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "mesh": "Dock_End_01",
+      "name": "Dock_End_01_00",
+      "location": [
+        -5.0,
+        -8.4,
+        -0.08
+      ],
+      "rotation_degrees": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "mesh": "Dock_Straight_01",
+      "name": "Dock_Straight_01_01",
+      "location": [
+        5.0,
+        -5.4,
+        -0.08
+      ],
+      "rotation_degrees": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "mesh": "Dock_End_01",
+      "name": "Dock_End_01_01",
+      "location": [
+        5.0,
+        -8.4,
+        -0.08
+      ],
+      "rotation_degrees": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "mesh": "Dock_Straight_01",
+      "name": "Dock_Straight_01_02",
+      "location": [
+        -2.5,
+        -8.5,
+        -0.08
+      ],
+      "rotation_degrees": 90,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "mesh": "Slipway_01",
+      "name": "Slipway_01_00",
+      "location": [
+        0,
+        -2.9,
+        0
+      ],
+      "rotation_degrees": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "mesh": "ShipyardWinch_01",
+      "name": "ShipyardWinch_01_00",
+      "location": [
+        -1.65,
+        -2.95,
+        0.02
+      ],
+      "rotation_degrees": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "mesh": "WorkBoat_01",
+      "name": "WorkBoat_01_00",
+      "location": [
+        0.15,
+        -0.45,
+        0.28
+      ],
+      "rotation_degrees": 90,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "mesh": "WorkBoat_01",
+      "name": "WorkBoat_01_01",
+      "location": [
+        1.25,
+        -10.35,
+        -1.05
+      ],
+      "rotation_degrees": 78,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "mesh": "HS01_LumberStacks",
+      "name": "HS01_LumberStacks_00",
+      "location": [
+        -3.25,
+        1.35,
+        0
+      ],
+      "rotation_degrees": 0,
+      "scale": [
+        0.78,
+        0.78,
+        0.83
+      ]
+    },
+    {
+      "mesh": "HS01_LumberStacks",
+      "name": "HS01_LumberStacks_01",
+      "location": [
+        4.2,
+        1.5,
+        0
+      ],
+      "rotation_degrees": 90,
+      "scale": [
+        0.8,
+        0.8,
+        0.8
+      ]
+    },
+    {
+      "mesh": "HS01_LogPile",
+      "name": "HS01_LogPile_00",
+      "location": [
+        6.0,
+        1.1,
+        0
+      ],
+      "rotation_degrees": 0,
+      "scale": [
+        0.75,
+        1,
+        0.8
+      ]
+    },
+    {
+      "mesh": "HS01_WorkBench",
+      "name": "HS01_WorkBench_00",
+      "location": [
+        -3.2,
+        -2.9,
+        0
+      ],
+      "rotation_degrees": -8,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "mesh": "HS01_RopeNetStorage",
+      "name": "HS01_RopeNetStorage_00",
+      "location": [
+        3.2,
+        -2.9,
+        0
+      ],
+      "rotation_degrees": -7,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "mesh": "MooringPost_01",
+      "name": "MooringPost_01_00",
+      "location": [
+        -5.85,
+        -4.15,
+        -0.08
+      ],
+      "rotation_degrees": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "mesh": "MooringPost_01",
+      "name": "MooringPost_01_01",
+      "location": [
+        -5.85,
+        -9.65,
+        -0.08
+      ],
+      "rotation_degrees": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "mesh": "MooringPost_01",
+      "name": "MooringPost_01_02",
+      "location": [
+        -3.8,
+        -8.9,
+        -0.08
+      ],
+      "rotation_degrees": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "mesh": "MooringPost_01",
+      "name": "MooringPost_01_03",
+      "location": [
+        5.83,
+        -7,
+        -0.08
+      ],
+      "rotation_degrees": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "mesh": "MooringPost_01",
+      "name": "MooringPost_01_04",
+      "location": [
+        5.85,
+        -9.65,
+        -0.08
+      ],
+      "rotation_degrees": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "mesh": "HS01_Crate",
+      "name": "HS01_Crate_00",
+      "location": [
+        -6.1,
+        -2,
+        0
+      ],
+      "rotation_degrees": 12,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "mesh": "HS01_Crate",
+      "name": "HS01_Crate_01",
+      "location": [
+        -5.8,
+        -1,
+        0
+      ],
+      "rotation_degrees": 3,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "mesh": "HS01_Crate",
+      "name": "HS01_Crate_02",
+      "location": [
+        5.7,
+        -2.9,
+        0
+      ],
+      "rotation_degrees": -10,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "mesh": "HS01_Fence",
+      "name": "HS01_Fence_00",
+      "location": [
+        -5.7,
+        3.5,
+        0
+      ],
+      "rotation_degrees": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "mesh": "HS01_Fence",
+      "name": "HS01_Fence_01",
+      "location": [
+        -3.4,
+        3.5,
+        0
+      ],
+      "rotation_degrees": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "mesh": "HS01_Fence",
+      "name": "HS01_Fence_02",
+      "location": [
+        3.5,
+        3.5,
+        0
+      ],
+      "rotation_degrees": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "mesh": "HS01_Fence",
+      "name": "HS01_Fence_03",
+      "location": [
+        5.8,
+        3.5,
+        0
+      ],
+      "rotation_degrees": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    }
+  ]
+}

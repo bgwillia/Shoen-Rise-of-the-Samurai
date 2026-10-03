@@ -1,0 +1,403 @@
+{
+  "units": "metres; north is negative Y",
+  "routes": [
+    {
+      "name": "MainRoad_ProvinceToOutlying",
+      "kind": "main",
+      "width": 6.0,
+      "points": [
+        [
+          -180,
+          -750
+        ],
+        [
+          -160,
+          -650
+        ],
+        [
+          -136,
+          -545
+        ],
+        [
+          -140,
+          -435
+        ],
+        [
+          -163,
+          -340
+        ],
+        [
+          -155,
+          -285
+        ],
+        [
+          -125,
+          -258
+        ],
+        [
+          -87.287,
+          -250
+        ],
+        [
+          -50,
+          -242
+        ],
+        [
+          5,
+          -224
+        ],
+        [
+          235,
+          -170
+        ],
+        [
+          242,
+          -110
+        ],
+        [
+          175,
+          -55
+        ],
+        [
+          90,
+          -20
+        ],
+        [
+          10,
+          5
+        ],
+        [
+          -30,
+          70
+        ],
+        [
+          -20,
+          150
+        ],
+        [
+          50,
+          220
+        ],
+        [
+          140,
+          290
+        ],
+        [
+          195,
+          400
+        ],
+        [
+          165,
+          480
+        ],
+        [
+          85,
+          545
+        ],
+        [
+          70,
+          605
+        ],
+        [
+          120,
+          650
+        ],
+        [
+          185,
+          700
+        ],
+        [
+          210,
+          750
+        ]
+      ]
+    },
+    {
+      "name": "Village_ManorRetainers",
+      "kind": "village",
+      "width": 1.8,
+      "points": [
+        [
+          175,
+          -205
+        ],
+        [
+          184,
+          -243
+        ],
+        [
+          218,
+          -277
+        ],
+        [
+          270,
+          -283
+        ],
+        [
+          302,
+          -257
+        ]
+      ]
+    },
+    {
+      "name": "Village_TempleShrine",
+      "kind": "village",
+      "width": 1.6,
+      "points": [
+        [
+          85,
+          -206
+        ],
+        [
+          64,
+          -241
+        ],
+        [
+          60,
+          -283
+        ],
+        [
+          85,
+          -316
+        ],
+        [
+          134,
+          -331
+        ],
+        [
+          202,
+          -324
+        ],
+        [
+          244,
+          -341
+        ]
+      ]
+    },
+    {
+      "name": "Village_HousingMarket",
+      "kind": "village",
+      "width": 1.8,
+      "points": [
+        [
+          64,
+          -241
+        ],
+        [
+          110,
+          -261
+        ],
+        [
+          145,
+          -247
+        ],
+        [
+          175,
+          -205
+        ],
+        [
+          177,
+          -168
+        ],
+        [
+          148,
+          -147
+        ],
+        [
+          116,
+          -153
+        ],
+        [
+          102,
+          -184
+        ],
+        [
+          85,
+          -206
+        ]
+      ]
+    },
+    {
+      "name": "Village_SmithyGranary",
+      "kind": "village",
+      "width": 1.7,
+      "points": [
+        [
+          235,
+          -170
+        ],
+        [
+          217,
+          -140
+        ],
+        [
+          190,
+          -109
+        ],
+        [
+          157,
+          -87
+        ],
+        [
+          175,
+          -55
+        ]
+      ]
+    },
+    {
+      "name": "Farm_CompoundRiceFlats",
+      "kind": "farm",
+      "width": 1.1,
+      "points": [
+        [
+          50,
+          220
+        ],
+        [
+          33,
+          254
+        ],
+        [
+          -5,
+          285
+        ],
+        [
+          -55,
+          302
+        ]
+      ]
+    },
+    {
+      "name": "Farm_LivestockDryFields",
+      "kind": "farm",
+      "width": 1.0,
+      "points": [
+        [
+          140,
+          290
+        ],
+        [
+          170,
+          255
+        ],
+        [
+          180,
+          212
+        ],
+        [
+          157,
+          183
+        ]
+      ]
+    },
+    {
+      "name": "Farm_GranaryWetFlats",
+      "kind": "farm",
+      "width": 1.1,
+      "points": [
+        [
+          -30,
+          70
+        ],
+        [
+          -56,
+          99
+        ],
+        [
+          -78,
+          147
+        ],
+        [
+          -78,
+          220
+        ]
+      ]
+    },
+    {
+      "name": "Farm_OuterFields",
+      "kind": "farm",
+      "width": 0.9,
+      "points": [
+        [
+          195,
+          400
+        ],
+        [
+          225,
+          436
+        ],
+        [
+          245,
+          485
+        ]
+      ]
+    },
+    {
+      "name": "Village_FordLumberBranch",
+      "kind": "village",
+      "width": 1.9,
+      "points": [
+        [
+          -155,
+          -285
+        ],
+        [
+          -199,
+          -237
+        ],
+        [
+          -225,
+          -168
+        ],
+        [
+          -242,
+          -106
+        ],
+        [
+          -246,
+          -81
+        ],
+        [
+          -236,
+          -63
+        ],
+        [
+          -228,
+          -43
+        ],
+        [
+          -244,
+          5
+        ],
+        [
+          -291,
+          59
+        ],
+        [
+          -325,
+          107
+        ]
+      ]
+    }
+  ],
+  "bridge": {
+    "center": [
+      -87.287,
+      -250
+    ],
+    "direction": [
+      1,
+      0.22
+    ],
+    "length": 38,
+    "width": 5.04
+  },
+  "ford": {
+    "center": [
+      -236,
+      -63
+    ],
+    "width": 5.0
+  },
+  "note": "Bare environment map has no placed building actors. Village branches reserve connections around the established shelf; endpoint labels describe intended destinations, not existing buildings."
+}

@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "artifacts": [
+    {
+      "id": "IMPORTED_PRECISION_TOOL",
+      "scenario": "beta_region",
+      "historical_label": "authored_plausible_reconstruction_requires_specific_research",
+      "form": "craft_specimen",
+      "acquisition": "foreign_contact_delivery",
+      "prerequisites": {
+        "research_capacity": 1,
+        "qualified_master_metalworkers": 1,
+        "knowledge_tags": [
+          "metal_fitting"
+        ],
+        "input_categories": [
+          "metal",
+          "fuel",
+          "workshop_time"
+        ]
+      },
+      "stages": [
+        "acquired",
+        "interpreted",
+        "studying",
+        "prototype",
+        "validated",
+        "manufacturable"
+      ],
+      "unlocks": "precision_tool_recipe",
+      "unit_eligibility": null
+    },
+    {
+      "id": "ALT_EXPERIMENTAL_FIREARM",
+      "scenario": "artifact_lab",
+      "historical_label": "explicit_alternate_history_not_standard_1180_spawn",
+      "form": "foreign_specimen",
+      "acquisition": "laboratory_scenario_setup",
+      "prerequisites": {
+        "research_capacity": 3,
+        "qualified_master_metalworkers": 3,
+        "knowledge_tags": [
+          "advanced_metallurgy",
+          "precision_craft",
+          "specialist_consumables"
+        ],
+        "input_categories": [
+          "qualified_metal",
+          "specialist_supplies",
+          "workshop_time"
+        ]
+      },
+      "stages": [
+        "acquired",
+        "interpreted",
+        "studying",
+        "prototype",
+        "validated",
+        "manufacturable"
+      ],
+      "unlocks": "experimental_arm_recipe",
+      "unit_eligibility": {
+        "required_training_class": "elite",
+        "permitted_societal_role": "samurai",
+        "ordinary_levy_allowed": false
+      },
+      "description_rule": "Abstract game capabilities only; no real manufacturing recipe."
+    }
+  ]
+}

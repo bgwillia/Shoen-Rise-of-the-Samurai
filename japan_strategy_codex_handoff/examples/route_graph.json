@@ -1,0 +1,344 @@
+{
+  "schema_version": 1,
+  "geographic_status": "schematic_validation_fixture_not_a_real_map",
+  "nodes": [
+    {
+      "id": "N01",
+      "label": "Home manor",
+      "faction_id": "F01",
+      "coastal": false,
+      "position_space": "schematic_only",
+      "position": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "N02",
+      "label": "Rice hinterland",
+      "faction_id": "F01",
+      "coastal": false,
+      "position_space": "schematic_only",
+      "position": [
+        1,
+        0
+      ]
+    },
+    {
+      "id": "N03",
+      "label": "Market center",
+      "faction_id": "F02",
+      "coastal": false,
+      "position_space": "schematic_only",
+      "position": [
+        2,
+        0
+      ]
+    },
+    {
+      "id": "N04",
+      "label": "Religious center",
+      "faction_id": "F02",
+      "coastal": false,
+      "position_space": "schematic_only",
+      "position": [
+        3,
+        0
+      ]
+    },
+    {
+      "id": "N05",
+      "label": "Forge town",
+      "faction_id": "F03",
+      "coastal": false,
+      "position_space": "schematic_only",
+      "position": [
+        0,
+        1
+      ]
+    },
+    {
+      "id": "N06",
+      "label": "Mountain seat",
+      "faction_id": "F03",
+      "coastal": false,
+      "position_space": "schematic_only",
+      "position": [
+        1,
+        1
+      ]
+    },
+    {
+      "id": "N07",
+      "label": "Main port",
+      "faction_id": "F04",
+      "coastal": true,
+      "position_space": "schematic_only",
+      "position": [
+        2,
+        1
+      ]
+    },
+    {
+      "id": "N08",
+      "label": "Eastern port",
+      "faction_id": "F04",
+      "coastal": true,
+      "position_space": "schematic_only",
+      "position": [
+        3,
+        1
+      ]
+    }
+  ],
+  "routes": [
+    {
+      "id": "R01",
+      "from": "N01",
+      "to": "N02",
+      "mode": "land",
+      "operational_length": 100,
+      "sites": [
+        {
+          "id": "R01_S1",
+          "progress": 0.2,
+          "family": "river_crossing"
+        },
+        {
+          "id": "R01_S2",
+          "progress": 0.5,
+          "family": "wooded_ridge"
+        },
+        {
+          "id": "R01_S3",
+          "progress": 0.8,
+          "family": "town_approach"
+        }
+      ]
+    },
+    {
+      "id": "R02",
+      "from": "N02",
+      "to": "N03",
+      "mode": "land",
+      "operational_length": 100,
+      "sites": [
+        {
+          "id": "R02_S1",
+          "progress": 0.2,
+          "family": "wooded_ridge"
+        },
+        {
+          "id": "R02_S2",
+          "progress": 0.5,
+          "family": "town_approach"
+        },
+        {
+          "id": "R02_S3",
+          "progress": 0.8,
+          "family": "farmland"
+        }
+      ]
+    },
+    {
+      "id": "R03",
+      "from": "N03",
+      "to": "N04",
+      "mode": "land",
+      "operational_length": 100,
+      "sites": [
+        {
+          "id": "R03_S1",
+          "progress": 0.2,
+          "family": "town_approach"
+        },
+        {
+          "id": "R03_S2",
+          "progress": 0.5,
+          "family": "farmland"
+        },
+        {
+          "id": "R03_S3",
+          "progress": 0.8,
+          "family": "river_crossing"
+        }
+      ]
+    },
+    {
+      "id": "R04",
+      "from": "N04",
+      "to": "N05",
+      "mode": "land",
+      "operational_length": 100,
+      "sites": [
+        {
+          "id": "R04_S1",
+          "progress": 0.2,
+          "family": "farmland"
+        },
+        {
+          "id": "R04_S2",
+          "progress": 0.5,
+          "family": "river_crossing"
+        },
+        {
+          "id": "R04_S3",
+          "progress": 0.8,
+          "family": "wooded_ridge"
+        }
+      ]
+    },
+    {
+      "id": "R05",
+      "from": "N05",
+      "to": "N06",
+      "mode": "land",
+      "operational_length": 100,
+      "sites": [
+        {
+          "id": "R05_S1",
+          "progress": 0.2,
+          "family": "river_crossing"
+        },
+        {
+          "id": "R05_S2",
+          "progress": 0.5,
+          "family": "wooded_ridge"
+        },
+        {
+          "id": "R05_S3",
+          "progress": 0.8,
+          "family": "town_approach"
+        }
+      ]
+    },
+    {
+      "id": "R06",
+      "from": "N06",
+      "to": "N01",
+      "mode": "land",
+      "operational_length": 100,
+      "sites": [
+        {
+          "id": "R06_S1",
+          "progress": 0.2,
+          "family": "wooded_ridge"
+        },
+        {
+          "id": "R06_S2",
+          "progress": 0.5,
+          "family": "town_approach"
+        },
+        {
+          "id": "R06_S3",
+          "progress": 0.8,
+          "family": "farmland"
+        }
+      ]
+    },
+    {
+      "id": "R07",
+      "from": "N03",
+      "to": "N07",
+      "mode": "land",
+      "operational_length": 100,
+      "sites": [
+        {
+          "id": "R07_S1",
+          "progress": 0.2,
+          "family": "town_approach"
+        },
+        {
+          "id": "R07_S2",
+          "progress": 0.5,
+          "family": "farmland"
+        },
+        {
+          "id": "R07_S3",
+          "progress": 0.8,
+          "family": "river_crossing"
+        }
+      ]
+    },
+    {
+      "id": "R08",
+      "from": "N05",
+      "to": "N07",
+      "mode": "land",
+      "operational_length": 100,
+      "sites": [
+        {
+          "id": "R08_S1",
+          "progress": 0.2,
+          "family": "farmland"
+        },
+        {
+          "id": "R08_S2",
+          "progress": 0.5,
+          "family": "river_crossing"
+        },
+        {
+          "id": "R08_S3",
+          "progress": 0.8,
+          "family": "wooded_ridge"
+        }
+      ]
+    },
+    {
+      "id": "R09",
+      "from": "N06",
+      "to": "N08",
+      "mode": "land",
+      "operational_length": 100,
+      "sites": [
+        {
+          "id": "R09_S1",
+          "progress": 0.2,
+          "family": "river_crossing"
+        },
+        {
+          "id": "R09_S2",
+          "progress": 0.5,
+          "family": "wooded_ridge"
+        },
+        {
+          "id": "R09_S3",
+          "progress": 0.8,
+          "family": "town_approach"
+        }
+      ]
+    },
+    {
+      "id": "R10",
+      "from": "N08",
+      "to": "N04",
+      "mode": "land",
+      "operational_length": 100,
+      "sites": [
+        {
+          "id": "R10_S1",
+          "progress": 0.2,
+          "family": "wooded_ridge"
+        },
+        {
+          "id": "R10_S2",
+          "progress": 0.5,
+          "family": "town_approach"
+        },
+        {
+          "id": "R10_S3",
+          "progress": 0.8,
+          "family": "farmland"
+        }
+      ]
+    },
+    {
+      "id": "SEA01",
+      "from": "N07",
+      "to": "N08",
+      "mode": "sea",
+      "operational_length": 100,
+      "sites": []
+    }
+  ]
+}

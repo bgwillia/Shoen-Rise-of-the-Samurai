@@ -1,0 +1,64 @@
+--- a/game/Plugins/UnrealMCP/Source/UnrealMcpEditor/Private/UI/FUnrealMcpStyle.h
++++ b/game/Plugins/UnrealMCP/Source/UnrealMcpEditor/Private/UI/FUnrealMcpStyle.h
+@@ -10,7 +10,7 @@
+ 
+ /**
+  * The "AI Game Developer" Slate style set (docs/ARCHITECTURE.md §7) — the C++/Slate analog of Unity-MCP's
+- * shared USS (Editor/UI/uss/common/*.uss). It centralizes the palette, card/frame/input brushes, status-dot
++ * shared USS (the .uss files under Editor/UI/uss/common/). It centralizes the palette, card/frame/input brushes, status-dot
+  * brushes, the segmented-control + toggle-switch button styles, and the icon brushes (AI-cube logo, Discord,
+  * GitHub, Star) so the main window stops hard-coding inline colours / default FAppStyle brushes and instead
+  * reads one source of truth that matches the Unity reference 1:1.
+@@ -18,7 +18,7 @@
+  * Lifetime: a single shared FSlateStyleSet registered with FSlateStyleRegistry at module startup and
+  * unregistered at shutdown. Initialize()/Shutdown() are idempotent (safe to call twice). Every colour
+  * constant below is the EXACT value lifted from the Unity USS (see the issue's palette table); keep them in
+- * lockstep with `Editor/UI/uss/common/*.uss` if the reference ever changes.
++ * lockstep with `the .uss files under Editor/UI/uss/common/` if the reference ever changes.
+  *
+  * Usage: widgets read brushes via `FUnrealMcpStyle::Get().GetBrush("UnrealMcp.<Name>")` or the typed
+  * accessors, and colours via the inline `static constexpr`/`static` palette helpers (no style-set lookup
+--- a/game/Plugins/UnrealMCP/Source/UnrealMcpEditor/Private/Extensions/UnrealMcpExtensionInstaller.h
++++ b/game/Plugins/UnrealMCP/Source/UnrealMcpEditor/Private/Extensions/UnrealMcpExtensionInstaller.h
+@@ -149,7 +149,7 @@
+ 
+ 	/** The shallowest `*.uplugin` file under @p Dir (build-cache subtrees skipped), or empty. */
+ 	static UNREALMCPEDITOR_API FString FindUPluginFile(const FString& Dir);
+-	/** Scan `<ProjectDir>/Plugins/*` for installed extension plugins (folder name + `.uplugin` VersionName). */
++	/** Scan `the directories under <ProjectDir>/Plugins/` for installed extension plugins (folder name + `.uplugin` VersionName). */
+ 	static UNREALMCPEDITOR_API TArray<FUnrealMcpInstalledOnDisk> ScanInstalledPlugins(const FString& ProjectDir);
+ 	/** Copy a plugin source root into @p InstalledPath via stage-then-swap, filtering build-cache subtrees. */
+ 	static UNREALMCPEDITOR_API bool PlacePluginDir(const FString& SourcePluginRoot, const FString& InstalledPath, FString& OutError);
+--- a/game/Plugins/UnrealMCP/Source/UnrealMcpEditor/Private/Server/UnrealMcpServerManager.cpp
++++ b/game/Plugins/UnrealMCP/Source/UnrealMcpEditor/Private/Server/UnrealMcpServerManager.cpp
+@@ -504,7 +504,9 @@
+ 	// Bind the child to the kill-on-job-close job so it dies with the editor by ANY exit path (graceful, hard
+ 	// TerminateProcess, or crash) — the load-bearing guarantee for "Start then close editor → no orphan" when
+ 	// the engine's graceful OnEnginePreExit teardown never runs. The handle (HANDLE on Windows) is ProcHandle.Get().
++#if PLATFORM_WINDOWS
+ 	BindProcessToKillOnCloseJob(NewHandle.Get());
++#endif
+ 	WritePidFile(NewProcId);
+ 	UE_LOG(LogUnrealMcp, Log, TEXT("[Unreal-MCP] spawned local server pid=%u on port=%d."), NewProcId, ListenPort);
+ 	return true;
+@@ -633,7 +635,9 @@
+ 	}
+ 	// Re-bind the adopted survivor to a kill-on-close job so it too dies with THIS editor session by any exit
+ 	// path (the original spawning session's job died with that session's editor).
++#if PLATFORM_WINDOWS
+ 	BindProcessToKillOnCloseJob(Adopted.Get());
++#endif
+ 	// Reattach does NOT reset the restart counter (only a fresh Start does); Watchdog.Start resets the crash window.
+ 	StartWatchdog();
+ 	UE_LOG(LogUnrealMcp, Log, TEXT("[Unreal-MCP] reattached to existing local server pid=%d on port=%d."), SavedPid, Port);
+--- a/game/Plugins/UnrealMCP/Source/UnrealMcpRuntime/Public/UnrealMcpToolRegistry.h
++++ b/game/Plugins/UnrealMCP/Source/UnrealMcpRuntime/Public/UnrealMcpToolRegistry.h
+@@ -236,7 +236,7 @@
+ 	static const TCHAR* ManifestType() { return TEXT("tool-manifest"); }
+ 	static const TCHAR* ManifestArrayKey() { return TEXT("tools"); }
+ 	/** True iff @p Name is a valid kebab-case tool id (non-empty; lowercase letters/digits with single internal hyphens). */
+-	static bool IsValidKey(const FString& Name);
++	static UNREALMCPRUNTIME_API bool IsValidKey(const FString& Name);
+ 	/** Validate a tool descriptor for the §5 isolation contract. Returns false + a reason on the first problem. */
+ 	static bool Validate(const FUnrealMcpRegisteredTool& InTool, FString& OutError);
+ };

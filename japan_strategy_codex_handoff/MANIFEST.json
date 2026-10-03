@@ -1,0 +1,167 @@
+{
+  "package": "Project Domain Codex handoff",
+  "prepared": "2026-09-14",
+  "kind": "design_and_implementation_instructions_not_a_game_build",
+  "files": [
+    {
+      "path": "AGENTS.md",
+      "bytes": 4439,
+      "sha256": "85fd16dfb7a4dfc4e02e01b8a41b52eedc302fcb220332088cc342646f251e78"
+    },
+    {
+      "path": "CODEX_START_HERE.md",
+      "bytes": 4391,
+      "sha256": "a0b547d4e1fdbc955fe34b3de747c54cb908b6600f6f022fef3c63ba1b9619d4"
+    },
+    {
+      "path": "PACKAGE_VALIDATION.md",
+      "bytes": 2587,
+      "sha256": "113ecbacff02ce4538ea04b29c56dc2697171954f81c053d352801b31d15cc2b"
+    },
+    {
+      "path": "PLANS.md",
+      "bytes": 4168,
+      "sha256": "2360f4cbdd368ebcb1a452032c85139c42b355a45ec1d8a15f015d76f9f978c4"
+    },
+    {
+      "path": "README.md",
+      "bytes": 5115,
+      "sha256": "f273a809cffeda81010c45a6bfc519a3e29b37885657e602fcb08a0bec21e1d4"
+    },
+    {
+      "path": "docs/00_PRODUCT_CONTRACT.md",
+      "bytes": 11260,
+      "sha256": "c58b04dc617227b530bd41a0fed3acd8786b838cf566b5b263cc717ab6221ee4"
+    },
+    {
+      "path": "docs/01_BETA_SPEC.md",
+      "bytes": 13226,
+      "sha256": "a8039ed47a4dc0d52032a42816782f25c05c0dfe880a212b488bc3e2e4722519"
+    },
+    {
+      "path": "docs/02_ARCHITECTURE.md",
+      "bytes": 12576,
+      "sha256": "df9b576b1bba3b36f71c1dcb5c21f5c07161de40f76b42e431054636423dfd60"
+    },
+    {
+      "path": "docs/03_SIMULATION_RULES.md",
+      "bytes": 13936,
+      "sha256": "d9961c02ce5d09049431949e16ff04ee8d3c34bcac9db158b5a1f1436707ff18"
+    },
+    {
+      "path": "docs/04_BATTLE_AND_CAMPAIGN.md",
+      "bytes": 11580,
+      "sha256": "edb622f0ee2329d0fdfebda7c056ccd6916e506a5547192dbe91d499582cf504"
+    },
+    {
+      "path": "docs/05_INTERFACE_AND_CONTENT.md",
+      "bytes": 7776,
+      "sha256": "1b2fa45e208e746c6e5d25eb24a1aed74ad1d0b4eaa02247f5166c7ec7cd469a"
+    },
+    {
+      "path": "docs/06_FULL_GAME_ROADMAP.md",
+      "bytes": 12100,
+      "sha256": "5e1696d7d046cdbe20763d8b9dfd03a4881ae440eb471106315d83fd93d44c06"
+    },
+    {
+      "path": "docs/07_TEST_AND_RELEASE_GATES.md",
+      "bytes": 10918,
+      "sha256": "df654309062de644a46d5bef344c9d1447bbff7139702f221b1e926a5561a0bf"
+    },
+    {
+      "path": "docs/08_HISTORICAL_AND_SOURCE_NOTES.md",
+      "bytes": 6575,
+      "sha256": "76414822a23a68e3b3f189d9df78f6826a56c7f978667cb546158742797a95b0"
+    },
+    {
+      "path": "docs/09_RISK_AND_DECISIONS.md",
+      "bytes": 5004,
+      "sha256": "b12f38fb538b5efe1eb14ea1923694b5fe49475d688223f48ddd62668fc65727"
+    },
+    {
+      "path": "docs/10_TRACEABILITY.md",
+      "bytes": 2635,
+      "sha256": "b86c1780138f7313ad51ac7d5d41100226a44a527f2a5417bdb7cea16c630054"
+    },
+    {
+      "path": "docs/plans/00_INDEX.md",
+      "bytes": 2198,
+      "sha256": "e010816e49eb124fe275a050dacaae9ee532fe1def965f40fd6abf7f56b8eeb4"
+    },
+    {
+      "path": "docs/plans/01_FOUNDATION.md",
+      "bytes": 7608,
+      "sha256": "60cefc3fdbb61b296b0dfd6803516f29f08a1ab2686ffd82cba7285266ad1403"
+    },
+    {
+      "path": "docs/plans/02_CITY_ECONOMY.md",
+      "bytes": 8431,
+      "sha256": "3aad93bae29584c8195d93019c0b7232e411b0f5f7c7f91449f856b5b61dfa28"
+    },
+    {
+      "path": "docs/plans/03_BATTLE_LEDGER.md",
+      "bytes": 7823,
+      "sha256": "c5314d747dc04847a4ee50b84a3c042dd39ca77161eb23e32640f2e41864f93f"
+    },
+    {
+      "path": "docs/plans/04_CAMPAIGN_POLITICS.md",
+      "bytes": 7276,
+      "sha256": "65a58f83ef0a70c54d2d4ba93518f91cfd9dd7607bc24239e5fbbd121a353521"
+    },
+    {
+      "path": "docs/plans/05_MANOR_DISCOVERY_SEA.md",
+      "bytes": 6027,
+      "sha256": "bf6d1a34b9c4521d4a6c7b742cb15c3c0d7ff2c2af772342da02e1dfb7d51b44"
+    },
+    {
+      "path": "docs/plans/06_RELEASE.md",
+      "bytes": 6260,
+      "sha256": "9a80c42b02c76d8d120a2ebdf9a8a03c37e3ca980827c0406043c621581bf6d9"
+    },
+    {
+      "path": "examples/README.md",
+      "bytes": 1613,
+      "sha256": "9856057dd61ea565149d01c7281b3b206419331fa5b250dc106cd3e859b01a54"
+    },
+    {
+      "path": "examples/artifact_contracts.json",
+      "bytes": 1894,
+      "sha256": "22d362ed5eca852038805a01750138567a1a3b5d227bf5dd9a72e1701c7f48c9"
+    },
+    {
+      "path": "examples/beta_balance.json",
+      "bytes": 1621,
+      "sha256": "d578e2b4bbeb950c6229add88c6d7f25e84a8dc31fb747c39663ef4339d67bbc"
+    },
+    {
+      "path": "examples/encounter_trace.json",
+      "bytes": 1962,
+      "sha256": "ea43bfcf01901ca36598595e68247badcd897ef0208db2429207b30ff306f3c5"
+    },
+    {
+      "path": "examples/origin_ledger_fixture.json",
+      "bytes": 28232,
+      "sha256": "e23f062f04b0c3e5d08f0ee7573cdf44daca2a0409d857d1615992038934b9e7"
+    },
+    {
+      "path": "examples/origin_ledger_fixture.schema.json",
+      "bytes": 4452,
+      "sha256": "8432a2c3062300b95fd31231b6b77753d3e40cb2fa8eee30be8a7d70e787b246"
+    },
+    {
+      "path": "examples/route_graph.json",
+      "bytes": 6691,
+      "sha256": "d8ba1d4af214050c863e81ec61c6ae39089f5e609dab158a44462ba0af6c04b0"
+    },
+    {
+      "path": "templates/EVIDENCE.template.md",
+      "bytes": 859,
+      "sha256": "089ca21520ea5fe78ef48897341ed81a9a29ccb66fd78e15239dd157ea6bcee0"
+    },
+    {
+      "path": "templates/STATUS.template.md",
+      "bytes": 1787,
+      "sha256": "1a5d304e9c2ae53cf5b7d9441105508049e0e06d7867d9cd98bc9e7fc43fb4ed"
+    }
+  ]
+}

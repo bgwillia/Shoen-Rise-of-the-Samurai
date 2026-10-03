@@ -1,0 +1,1050 @@
+{
+  "schema_version": 1,
+  "fixture_id": "exact_origin_100",
+  "battle_id": "B_FIXTURE_001",
+  "initial_population": 420,
+  "ineligible_or_dependent": 220,
+  "cohorts": [
+    {
+      "id": "C_AG",
+      "district_id": "D_RICE",
+      "occupation_id": "agriculture",
+      "skill": "trained",
+      "estate": "ordinary",
+      "available_before_muster": 120,
+      "muster_count": 60
+    },
+    {
+      "id": "C_SM",
+      "district_id": "D_FORGE",
+      "occupation_id": "smithing",
+      "skill": "apprentice",
+      "estate": "ordinary",
+      "available_before_muster": 40,
+      "muster_count": 20
+    },
+    {
+      "id": "C_RE",
+      "district_id": "D_RETAINER",
+      "occupation_id": "retainer_service",
+      "skill": "trained",
+      "estate": "warrior",
+      "available_before_muster": 40,
+      "muster_count": 20
+    }
+  ],
+  "service_records": [
+    {
+      "service_id": 1,
+      "origin_settlement_id": "N01",
+      "origin_cohort_id": "C_AG",
+      "origin_district_id": "D_RICE",
+      "occupation_id": "agriculture",
+      "skill": "trained",
+      "estate": "ordinary",
+      "disposition": "dead"
+    },
+    {
+      "service_id": 2,
+      "origin_settlement_id": "N01",
+      "origin_cohort_id": "C_AG",
+      "origin_district_id": "D_RICE",
+      "occupation_id": "agriculture",
+      "skill": "trained",
+      "estate": "ordinary",
+      "disposition": "dead"
+    },
+    {
+      "service_id": 3,
+      "origin_settlement_id": "N01",
+      "origin_cohort_id": "C_AG",
+      "origin_district_id": "D_RICE",
+      "occupation_id": "agriculture",
+      "skill": "trained",
+      "estate": "ordinary",
+      "disposition": "dead"
+    },
+    {
+      "service_id": 4,
+      "origin_settlement_id": "N01",
+      "origin_cohort_id": "C_AG",
+      "origin_district_id": "D_RICE",
+      "occupation_id": "agriculture",
+      "skill": "trained",
+      "estate": "ordinary",
+      "disposition": "dead"
+    },
+    {
+      "service_id": 5,
+      "origin_settlement_id": "N01",
+      "origin_cohort_id": "C_AG",
+      "origin_district_id": "D_RICE",
+      "occupation_id": "agriculture",
+      "skill": "trained",
+      "estate": "ordinary",
+      "disposition": "dead"
+    },
+    {
+      "service_id": 6,
+      "origin_settlement_id": "N01",
+      "origin_cohort_id": "C_AG",
+      "origin_district_id": "D_RICE",
+      "occupation_id": "agriculture",
+      "skill": "trained",
+      "estate": "ordinary",
+      "disposition": "dead"
+    },
+    {
+      "service_id": 7,
+      "origin_settlement_id": "N01",
+      "origin_cohort_id": "C_AG",
+      "origin_district_id": "D_RICE",
+      "occupation_id": "agriculture",
+      "skill": "trained",
+      "estate": "ordinary",
+      "disposition": "wounded"
+    },
+    {
+      "service_id": 8,
+      "origin_settlement_id": "N01",
+      "origin_cohort_id": "C_AG",
+      "origin_district_id": "D_RICE",
+      "occupation_id": "agriculture",
+      "skill": "trained",
+      "estate": "ordinary",
+      "disposition": "wounded"
+    },
+    {
+      "service_id": 9,
+      "origin_settlement_id": "N01",
+      "origin_cohort_id": "C_AG",
+      "origin_district_id": "D_RICE",
+      "occupation_id": "agriculture",
+      "skill": "trained",
+      "estate": "ordinary",
+      "disposition": "wounded"
+    },
+    {
+      "service_id": 10,
+      "origin_settlement_id": "N01",
+      "origin_cohort_id": "C_AG",
+      "origin_district_id": "D_RICE",
+      "occupation_id": "agriculture",
+      "skill": "trained",
+      "estate": "ordinary",
+      "disposition": "wounded"
+    },
+    {
+      "service_id": 11,
+      "origin_settlement_id": "N01",
+      "origin_cohort_id": "C_AG",
+      "origin_district_id": "D_RICE",
+      "occupation_id": "agriculture",
+      "skill": "trained",
+      "estate": "ordinary",
+      "disposition": "wounded"
+    },
+    {
+      "service_id": 12,
+      "origin_settlement_id": "N01",
+      "origin_cohort_id": "C_AG",
+      "origin_district_id": "D_RICE",
+      "occupation_id": "agriculture",
+      "skill": "trained",
+      "estate": "ordinary",
+      "disposition": "wounded"
+    },
+    {
+      "service_id": 13,
+      "origin_settlement_id": "N01",
+      "origin_cohort_id": "C_AG",
+      "origin_district_id": "D_RICE",
+      "occupation_id": "agriculture",
+      "skill": "trained",
+      "estate": "ordinary",
+      "disposition": "wounded"
+    },
+    {
+      "service_id": 14,
+      "origin_settlement_id": "N01",
+      "origin_cohort_id": "C_AG",
+      "origin_district_id": "D_RICE",
+      "occupation_id": "agriculture",
+      "skill": "trained",
+      "estate": "ordinary",
+      "disposition": "wounded"
+    },
+    {
+      "service_id": 15,
+      "origin_settlement_id": "N01",
+      "origin_cohort_id": "C_AG",
+      "origin_district_id": "D_RICE",
+      "occupation_id": "agriculture",
+      "skill": "trained",
+      "estate": "ordinary",
+      "disposition": "wounded"
+    },
+    {
+      "service_id": 16,
+      "origin_settlement_id": "N01",
+      "origin_cohort_id": "C_AG",
+      "origin_district_id": "D_RICE",
+      "occupation_id": "agriculture",
+      "skill": "trained",
+      "estate": "ordinary",
+      "disposition": "captive"
+    },
+    {
+      "service_id": 17,
+      "origin_settlement_id": "N01",
+      "origin_cohort_id": "C_AG",
+      "origin_district_id": "D_RICE",
+      "occupation_id": "agriculture",
+      "skill": "trained",
+      "estate": "ordinary",
+      "disposition": "captive"
+    },
+    {
+      "service_id": 18,
+      "origin_settlement_id": "N01",
+      "origin_cohort_id": "C_AG",
+      "origin_district_id": "D_RICE",
+      "occupation_id": "agriculture",
+      "skill": "trained",
+      "estate": "ordinary",
+      "disposition": "captive"
+    },
+    {
+      "service_id": 19,
+      "origin_settlement_id": "N01",
+      "origin_cohort_id": "C_AG",
+      "origin_district_id": "D_RICE",
+      "occupation_id": "agriculture",
+      "skill": "trained",
+      "estate": "ordinary",
+      "disposition": "healthy"
+    },
+    {
+      "service_id": 20,
+      "origin_settlement_id": "N01",
+      "origin_cohort_id": "C_AG",
+      "origin_district_id": "D_RICE",
+      "occupation_id": "agriculture",
+      "skill": "trained",
+      "estate": "ordinary",
+      "disposition": "healthy"
+    },
+    {
+      "service_id": 21,
+      "origin_settlement_id": "N01",
+      "origin_cohort_id": "C_AG",
+      "origin_district_id": "D_RICE",
+      "occupation_id": "agriculture",
+      "skill": "trained",
+      "estate": "ordinary",
+      "disposition": "healthy"
+    },
+    {
+      "service_id": 22,
+      "origin_settlement_id": "N01",
+      "origin_cohort_id": "C_AG",
+      "origin_district_id": "D_RICE",
+      "occupation_id": "agriculture",
+      "skill": "trained",
+      "estate": "ordinary",
+      "disposition": "healthy"
+    },
+    {
+      "service_id": 23,
+      "origin_settlement_id": "N01",
+      "origin_cohort_id": "C_AG",
+      "origin_district_id": "D_RICE",
+      "occupation_id": "agriculture",
+      "skill": "trained",
+      "estate": "ordinary",
+      "disposition": "healthy"
+    },
+    {
+      "service_id": 24,
+      "origin_settlement_id": "N01",
+      "origin_cohort_id": "C_AG",
+      "origin_district_id": "D_RICE",
+      "occupation_id": "agriculture",
+      "skill": "trained",
+      "estate": "ordinary",
+      "disposition": "healthy"
+    },
+    {
+      "service_id": 25,
+      "origin_settlement_id": "N01",
+      "origin_cohort_id": "C_AG",
+      "origin_district_id": "D_RICE",
+      "occupation_id": "agriculture",
+      "skill": "trained",
+      "estate": "ordinary",
+      "disposition": "healthy"
+    },
+    {
+      "service_id": 26,
+      "origin_settlement_id": "N01",
+      "origin_cohort_id": "C_AG",
+      "origin_district_id": "D_RICE",
+      "occupation_id": "agriculture",
+      "skill": "trained",
+      "estate": "ordinary",
+      "disposition": "healthy"
+    },
+    {
+      "service_id": 27,
+      "origin_settlement_id": "N01",
+      "origin_cohort_id": "C_AG",
+      "origin_district_id": "D_RICE",
+      "occupation_id": "agriculture",
+      "skill": "trained",
+      "estate": "ordinary",
+      "disposition": "healthy"
+    },
+    {
+      "service_id": 28,
+      "origin_settlement_id": "N01",
+      "origin_cohort_id": "C_AG",
+      "origin_district_id": "D_RICE",
+      "occupation_id": "agriculture",
+      "skill": "trained",
+      "estate": "ordinary",
+      "disposition": "healthy"
+    },
+    {
+      "service_id": 29,
+      "origin_settlement_id": "N01",
+      "origin_cohort_id": "C_AG",
+      "origin_district_id": "D_RICE",
+      "occupation_id": "agriculture",
+      "skill": "trained",
+      "estate": "ordinary",
+      "disposition": "healthy"
+    },
+    {
+      "service_id": 30,
+      "origin_settlement_id": "N01",
+      "origin_cohort_id": "C_AG",
+      "origin_district_id": "D_RICE",
+      "occupation_id": "agriculture",
+      "skill": "trained",
+      "estate": "ordinary",
+      "disposition": "healthy"
+    },
+    {
+      "service_id": 31,
+      "origin_settlement_id": "N01",
+      "origin_cohort_id": "C_AG",
+      "origin_district_id": "D_RICE",
+      "occupation_id": "agriculture",
+      "skill": "trained",
+      "estate": "ordinary",
+      "disposition": "healthy"
+    },
+    {
+      "service_id": 32,
+      "origin_settlement_id": "N01",
+      "origin_cohort_id": "C_AG",
+      "origin_district_id": "D_RICE",
+      "occupation_id": "agriculture",
+      "skill": "trained",
+      "estate": "ordinary",
+      "disposition": "healthy"
+    },
+    {
+      "service_id": 33,
+      "origin_settlement_id": "N01",
+      "origin_cohort_id": "C_AG",
+      "origin_district_id": "D_RICE",
+      "occupation_id": "agriculture",
+      "skill": "trained",
+      "estate": "ordinary",
+      "disposition": "healthy"
+    },
+    {
+      "service_id": 34,
+      "origin_settlement_id": "N01",
+      "origin_cohort_id": "C_AG",
+      "origin_district_id": "D_RICE",
+      "occupation_id": "agriculture",
+      "skill": "trained",
+      "estate": "ordinary",
+      "disposition": "healthy"
+    },
+    {
+      "service_id": 35,
+      "origin_settlement_id": "N01",
+      "origin_cohort_id": "C_AG",
+      "origin_district_id": "D_RICE",
+      "occupation_id": "agriculture",
+      "skill": "trained",
+      "estate": "ordinary",
+      "disposition": "healthy"
+    },
+    {
+      "service_id": 36,
+      "origin_settlement_id": "N01",
+      "origin_cohort_id": "C_AG",
+      "origin_district_id": "D_RICE",
+      "occupation_id": "agriculture",
+      "skill": "trained",
+      "estate": "ordinary",
+      "disposition": "healthy"
+    },
+    {
+      "service_id": 37,
+      "origin_settlement_id": "N01",
+      "origin_cohort_id": "C_AG",
+      "origin_district_id": "D_RICE",
+      "occupation_id": "agriculture",
+      "skill": "trained",
+      "estate": "ordinary",
+      "disposition": "healthy"
+    },
+    {
+      "service_id": 38,
+      "origin_settlement_id": "N01",
+      "origin_cohort_id": "C_AG",
+      "origin_district_id": "D_RICE",
+      "occupation_id": "agriculture",
+      "skill": "trained",
+      "estate": "ordinary",
+      "disposition": "healthy"
+    },
+    {
+      "service_id": 39,
+      "origin_settlement_id": "N01",
+      "origin_cohort_id": "C_AG",
+      "origin_district_id": "D_RICE",
+      "occupation_id": "agriculture",
+      "skill": "trained",
+      "estate": "ordinary",
+      "disposition": "healthy"
+    },
+    {
+      "service_id": 40,
+      "origin_settlement_id": "N01",
+      "origin_cohort_id": "C_AG",
+      "origin_district_id": "D_RICE",
+      "occupation_id": "agriculture",
+      "skill": "trained",
+      "estate": "ordinary",
+      "disposition": "healthy"
+    },
+    {
+      "service_id": 41,
+      "origin_settlement_id": "N01",
+      "origin_cohort_id": "C_AG",
+      "origin_district_id": "D_RICE",
+      "occupation_id": "agriculture",
+      "skill": "trained",
+      "estate": "ordinary",
+      "disposition": "healthy"
+    },
+    {
+      "service_id": 42,
+      "origin_settlement_id": "N01",
+      "origin_cohort_id": "C_AG",
+      "origin_district_id": "D_RICE",
+      "occupation_id": "agriculture",
+      "skill": "trained",
+      "estate": "ordinary",
+      "disposition": "healthy"
+    },
+    {
+      "service_id": 43,
+      "origin_settlement_id": "N01",
+      "origin_cohort_id": "C_AG",
+      "origin_district_id": "D_RICE",
+      "occupation_id": "agriculture",
+      "skill": "trained",
+      "estate": "ordinary",
+      "disposition": "healthy"
+    },
+    {
+      "service_id": 44,
+      "origin_settlement_id": "N01",
+      "origin_cohort_id": "C_AG",
+      "origin_district_id": "D_RICE",
+      "occupation_id": "agriculture",
+      "skill": "trained",
+      "estate": "ordinary",
+      "disposition": "healthy"
+    },
+    {
+      "service_id": 45,
+      "origin_settlement_id": "N01",
+      "origin_cohort_id": "C_AG",
+      "origin_district_id": "D_RICE",
+      "occupation_id": "agriculture",
+      "skill": "trained",
+      "estate": "ordinary",
+      "disposition": "healthy"
+    },
+    {
+      "service_id": 46,
+      "origin_settlement_id": "N01",
+      "origin_cohort_id": "C_AG",
+      "origin_district_id": "D_RICE",
+      "occupation_id": "agriculture",
+      "skill": "trained",
+      "estate": "ordinary",
+      "disposition": "healthy"
+    },
+    {
+      "service_id": 47,
+      "origin_settlement_id": "N01",
+      "origin_cohort_id": "C_AG",
+      "origin_district_id": "D_RICE",
+      "occupation_id": "agriculture",
+      "skill": "trained",
+      "estate": "ordinary",
+      "disposition": "healthy"
+    },
+    {
+      "service_id": 48,
+      "origin_settlement_id": "N01",
+      "origin_cohort_id": "C_AG",
+      "origin_district_id": "D_RICE",
+      "occupation_id": "agriculture",
+      "skill": "trained",
+      "estate": "ordinary",
+      "disposition": "healthy"
+    },
+    {
+      "service_id": 49,
+      "origin_settlement_id": "N01",
+      "origin_cohort_id": "C_AG",
+      "origin_district_id": "D_RICE",
+      "occupation_id": "agriculture",
+      "skill": "trained",
+      "estate": "ordinary",
+      "disposition": "healthy"
+    },
+    {
+      "service_id": 50,
+      "origin_settlement_id": "N01",
+      "origin_cohort_id": "C_AG",
+      "origin_district_id": "D_RICE",
+      "occupation_id": "agriculture",
+      "skill": "trained",
+      "estate": "ordinary",
+      "disposition": "healthy"
+    },
+    {
+      "service_id": 51,
+      "origin_settlement_id": "N01",
+      "origin_cohort_id": "C_AG",
+      "origin_district_id": "D_RICE",
+      "occupation_id": "agriculture",
+      "skill": "trained",
+      "estate": "ordinary",
+      "disposition": "healthy"
+    },
+    {
+      "service_id": 52,
+      "origin_settlement_id": "N01",
+      "origin_cohort_id": "C_AG",
+      "origin_district_id": "D_RICE",
+      "occupation_id": "agriculture",
+      "skill": "trained",
+      "estate": "ordinary",
+      "disposition": "healthy"
+    },
+    {
+      "service_id": 53,
+      "origin_settlement_id": "N01",
+      "origin_cohort_id": "C_AG",
+      "origin_district_id": "D_RICE",
+      "occupation_id": "agriculture",
+      "skill": "trained",
+      "estate": "ordinary",
+      "disposition": "healthy"
+    },
+    {
+      "service_id": 54,
+      "origin_settlement_id": "N01",
+      "origin_cohort_id": "C_AG",
+      "origin_district_id": "D_RICE",
+      "occupation_id": "agriculture",
+      "skill": "trained",
+      "estate": "ordinary",
+      "disposition": "healthy"
+    },
+    {
+      "service_id": 55,
+      "origin_settlement_id": "N01",
+      "origin_cohort_id": "C_AG",
+      "origin_district_id": "D_RICE",
+      "occupation_id": "agriculture",
+      "skill": "trained",
+      "estate": "ordinary",
+      "disposition": "healthy"
+    },
+    {
+      "service_id": 56,
+      "origin_settlement_id": "N01",
+      "origin_cohort_id": "C_AG",
+      "origin_district_id": "D_RICE",
+      "occupation_id": "agriculture",
+      "skill": "trained",
+      "estate": "ordinary",
+      "disposition": "healthy"
+    },
+    {
+      "service_id": 57,
+      "origin_settlement_id": "N01",
+      "origin_cohort_id": "C_AG",
+      "origin_district_id": "D_RICE",
+      "occupation_id": "agriculture",
+      "skill": "trained",
+      "estate": "ordinary",
+      "disposition": "healthy"
+    },
+    {
+      "service_id": 58,
+      "origin_settlement_id": "N01",
+      "origin_cohort_id": "C_AG",
+      "origin_district_id": "D_RICE",
+      "occupation_id": "agriculture",
+      "skill": "trained",
+      "estate": "ordinary",
+      "disposition": "healthy"
+    },
+    {
+      "service_id": 59,
+      "origin_settlement_id": "N01",
+      "origin_cohort_id": "C_AG",
+      "origin_district_id": "D_RICE",
+      "occupation_id": "agriculture",
+      "skill": "trained",
+      "estate": "ordinary",
+      "disposition": "healthy"
+    },
+    {
+      "service_id": 60,
+      "origin_settlement_id": "N01",
+      "origin_cohort_id": "C_AG",
+      "origin_district_id": "D_RICE",
+      "occupation_id": "agriculture",
+      "skill": "trained",
+      "estate": "ordinary",
+      "disposition": "healthy"
+    },
+    {
+      "service_id": 61,
+      "origin_settlement_id": "N01",
+      "origin_cohort_id": "C_SM",
+      "origin_district_id": "D_FORGE",
+      "occupation_id": "smithing",
+      "skill": "apprentice",
+      "estate": "ordinary",
+      "disposition": "dead"
+    },
+    {
+      "service_id": 62,
+      "origin_settlement_id": "N01",
+      "origin_cohort_id": "C_SM",
+      "origin_district_id": "D_FORGE",
+      "occupation_id": "smithing",
+      "skill": "apprentice",
+      "estate": "ordinary",
+      "disposition": "dead"
+    },
+    {
+      "service_id": 63,
+      "origin_settlement_id": "N01",
+      "origin_cohort_id": "C_SM",
+      "origin_district_id": "D_FORGE",
+      "occupation_id": "smithing",
+      "skill": "apprentice",
+      "estate": "ordinary",
+      "disposition": "wounded"
+    },
+    {
+      "service_id": 64,
+      "origin_settlement_id": "N01",
+      "origin_cohort_id": "C_SM",
+      "origin_district_id": "D_FORGE",
+      "occupation_id": "smithing",
+      "skill": "apprentice",
+      "estate": "ordinary",
+      "disposition": "wounded"
+    },
+    {
+      "service_id": 65,
+      "origin_settlement_id": "N01",
+      "origin_cohort_id": "C_SM",
+      "origin_district_id": "D_FORGE",
+      "occupation_id": "smithing",
+      "skill": "apprentice",
+      "estate": "ordinary",
+      "disposition": "wounded"
+    },
+    {
+      "service_id": 66,
+      "origin_settlement_id": "N01",
+      "origin_cohort_id": "C_SM",
+      "origin_district_id": "D_FORGE",
+      "occupation_id": "smithing",
+      "skill": "apprentice",
+      "estate": "ordinary",
+      "disposition": "captive"
+    },
+    {
+      "service_id": 67,
+      "origin_settlement_id": "N01",
+      "origin_cohort_id": "C_SM",
+      "origin_district_id": "D_FORGE",
+      "occupation_id": "smithing",
+      "skill": "apprentice",
+      "estate": "ordinary",
+      "disposition": "healthy"
+    },
+    {
+      "service_id": 68,
+      "origin_settlement_id": "N01",
+      "origin_cohort_id": "C_SM",
+      "origin_district_id": "D_FORGE",
+      "occupation_id": "smithing",
+      "skill": "apprentice",
+      "estate": "ordinary",
+      "disposition": "healthy"
+    },
+    {
+      "service_id": 69,
+      "origin_settlement_id": "N01",
+      "origin_cohort_id": "C_SM",
+      "origin_district_id": "D_FORGE",
+      "occupation_id": "smithing",
+      "skill": "apprentice",
+      "estate": "ordinary",
+      "disposition": "healthy"
+    },
+    {
+      "service_id": 70,
+      "origin_settlement_id": "N01",
+      "origin_cohort_id": "C_SM",
+      "origin_district_id": "D_FORGE",
+      "occupation_id": "smithing",
+      "skill": "apprentice",
+      "estate": "ordinary",
+      "disposition": "healthy"
+    },
+    {
+      "service_id": 71,
+      "origin_settlement_id": "N01",
+      "origin_cohort_id": "C_SM",
+      "origin_district_id": "D_FORGE",
+      "occupation_id": "smithing",
+      "skill": "apprentice",
+      "estate": "ordinary",
+      "disposition": "healthy"
+    },
+    {
+      "service_id": 72,
+      "origin_settlement_id": "N01",
+      "origin_cohort_id": "C_SM",
+      "origin_district_id": "D_FORGE",
+      "occupation_id": "smithing",
+      "skill": "apprentice",
+      "estate": "ordinary",
+      "disposition": "healthy"
+    },
+    {
+      "service_id": 73,
+      "origin_settlement_id": "N01",
+      "origin_cohort_id": "C_SM",
+      "origin_district_id": "D_FORGE",
+      "occupation_id": "smithing",
+      "skill": "apprentice",
+      "estate": "ordinary",
+      "disposition": "healthy"
+    },
+    {
+      "service_id": 74,
+      "origin_settlement_id": "N01",
+      "origin_cohort_id": "C_SM",
+      "origin_district_id": "D_FORGE",
+      "occupation_id": "smithing",
+      "skill": "apprentice",
+      "estate": "ordinary",
+      "disposition": "healthy"
+    },
+    {
+      "service_id": 75,
+      "origin_settlement_id": "N01",
+      "origin_cohort_id": "C_SM",
+      "origin_district_id": "D_FORGE",
+      "occupation_id": "smithing",
+      "skill": "apprentice",
+      "estate": "ordinary",
+      "disposition": "healthy"
+    },
+    {
+      "service_id": 76,
+      "origin_settlement_id": "N01",
+      "origin_cohort_id": "C_SM",
+      "origin_district_id": "D_FORGE",
+      "occupation_id": "smithing",
+      "skill": "apprentice",
+      "estate": "ordinary",
+      "disposition": "healthy"
+    },
+    {
+      "service_id": 77,
+      "origin_settlement_id": "N01",
+      "origin_cohort_id": "C_SM",
+      "origin_district_id": "D_FORGE",
+      "occupation_id": "smithing",
+      "skill": "apprentice",
+      "estate": "ordinary",
+      "disposition": "healthy"
+    },
+    {
+      "service_id": 78,
+      "origin_settlement_id": "N01",
+      "origin_cohort_id": "C_SM",
+      "origin_district_id": "D_FORGE",
+      "occupation_id": "smithing",
+      "skill": "apprentice",
+      "estate": "ordinary",
+      "disposition": "healthy"
+    },
+    {
+      "service_id": 79,
+      "origin_settlement_id": "N01",
+      "origin_cohort_id": "C_SM",
+      "origin_district_id": "D_FORGE",
+      "occupation_id": "smithing",
+      "skill": "apprentice",
+      "estate": "ordinary",
+      "disposition": "healthy"
+    },
+    {
+      "service_id": 80,
+      "origin_settlement_id": "N01",
+      "origin_cohort_id": "C_SM",
+      "origin_district_id": "D_FORGE",
+      "occupation_id": "smithing",
+      "skill": "apprentice",
+      "estate": "ordinary",
+      "disposition": "healthy"
+    },
+    {
+      "service_id": 81,
+      "origin_settlement_id": "N01",
+      "origin_cohort_id": "C_RE",
+      "origin_district_id": "D_RETAINER",
+      "occupation_id": "retainer_service",
+      "skill": "trained",
+      "estate": "warrior",
+      "disposition": "dead"
+    },
+    {
+      "service_id": 82,
+      "origin_settlement_id": "N01",
+      "origin_cohort_id": "C_RE",
+      "origin_district_id": "D_RETAINER",
+      "occupation_id": "retainer_service",
+      "skill": "trained",
+      "estate": "warrior",
+      "disposition": "dead"
+    },
+    {
+      "service_id": 83,
+      "origin_settlement_id": "N01",
+      "origin_cohort_id": "C_RE",
+      "origin_district_id": "D_RETAINER",
+      "occupation_id": "retainer_service",
+      "skill": "trained",
+      "estate": "warrior",
+      "disposition": "wounded"
+    },
+    {
+      "service_id": 84,
+      "origin_settlement_id": "N01",
+      "origin_cohort_id": "C_RE",
+      "origin_district_id": "D_RETAINER",
+      "occupation_id": "retainer_service",
+      "skill": "trained",
+      "estate": "warrior",
+      "disposition": "wounded"
+    },
+    {
+      "service_id": 85,
+      "origin_settlement_id": "N01",
+      "origin_cohort_id": "C_RE",
+      "origin_district_id": "D_RETAINER",
+      "occupation_id": "retainer_service",
+      "skill": "trained",
+      "estate": "warrior",
+      "disposition": "wounded"
+    },
+    {
+      "service_id": 86,
+      "origin_settlement_id": "N01",
+      "origin_cohort_id": "C_RE",
+      "origin_district_id": "D_RETAINER",
+      "occupation_id": "retainer_service",
+      "skill": "trained",
+      "estate": "warrior",
+      "disposition": "captive"
+    },
+    {
+      "service_id": 87,
+      "origin_settlement_id": "N01",
+      "origin_cohort_id": "C_RE",
+      "origin_district_id": "D_RETAINER",
+      "occupation_id": "retainer_service",
+      "skill": "trained",
+      "estate": "warrior",
+      "disposition": "healthy"
+    },
+    {
+      "service_id": 88,
+      "origin_settlement_id": "N01",
+      "origin_cohort_id": "C_RE",
+      "origin_district_id": "D_RETAINER",
+      "occupation_id": "retainer_service",
+      "skill": "trained",
+      "estate": "warrior",
+      "disposition": "healthy"
+    },
+    {
+      "service_id": 89,
+      "origin_settlement_id": "N01",
+      "origin_cohort_id": "C_RE",
+      "origin_district_id": "D_RETAINER",
+      "occupation_id": "retainer_service",
+      "skill": "trained",
+      "estate": "warrior",
+      "disposition": "healthy"
+    },
+    {
+      "service_id": 90,
+      "origin_settlement_id": "N01",
+      "origin_cohort_id": "C_RE",
+      "origin_district_id": "D_RETAINER",
+      "occupation_id": "retainer_service",
+      "skill": "trained",
+      "estate": "warrior",
+      "disposition": "healthy"
+    },
+    {
+      "service_id": 91,
+      "origin_settlement_id": "N01",
+      "origin_cohort_id": "C_RE",
+      "origin_district_id": "D_RETAINER",
+      "occupation_id": "retainer_service",
+      "skill": "trained",
+      "estate": "warrior",
+      "disposition": "healthy"
+    },
+    {
+      "service_id": 92,
+      "origin_settlement_id": "N01",
+      "origin_cohort_id": "C_RE",
+      "origin_district_id": "D_RETAINER",
+      "occupation_id": "retainer_service",
+      "skill": "trained",
+      "estate": "warrior",
+      "disposition": "healthy"
+    },
+    {
+      "service_id": 93,
+      "origin_settlement_id": "N01",
+      "origin_cohort_id": "C_RE",
+      "origin_district_id": "D_RETAINER",
+      "occupation_id": "retainer_service",
+      "skill": "trained",
+      "estate": "warrior",
+      "disposition": "healthy"
+    },
+    {
+      "service_id": 94,
+      "origin_settlement_id": "N01",
+      "origin_cohort_id": "C_RE",
+      "origin_district_id": "D_RETAINER",
+      "occupation_id": "retainer_service",
+      "skill": "trained",
+      "estate": "warrior",
+      "disposition": "healthy"
+    },
+    {
+      "service_id": 95,
+      "origin_settlement_id": "N01",
+      "origin_cohort_id": "C_RE",
+      "origin_district_id": "D_RETAINER",
+      "occupation_id": "retainer_service",
+      "skill": "trained",
+      "estate": "warrior",
+      "disposition": "healthy"
+    },
+    {
+      "service_id": 96,
+      "origin_settlement_id": "N01",
+      "origin_cohort_id": "C_RE",
+      "origin_district_id": "D_RETAINER",
+      "occupation_id": "retainer_service",
+      "skill": "trained",
+      "estate": "warrior",
+      "disposition": "healthy"
+    },
+    {
+      "service_id": 97,
+      "origin_settlement_id": "N01",
+      "origin_cohort_id": "C_RE",
+      "origin_district_id": "D_RETAINER",
+      "occupation_id": "retainer_service",
+      "skill": "trained",
+      "estate": "warrior",
+      "disposition": "healthy"
+    },
+    {
+      "service_id": 98,
+      "origin_settlement_id": "N01",
+      "origin_cohort_id": "C_RE",
+      "origin_district_id": "D_RETAINER",
+      "occupation_id": "retainer_service",
+      "skill": "trained",
+      "estate": "warrior",
+      "disposition": "healthy"
+    },
+    {
+      "service_id": 99,
+      "origin_settlement_id": "N01",
+      "origin_cohort_id": "C_RE",
+      "origin_district_id": "D_RETAINER",
+      "occupation_id": "retainer_service",
+      "skill": "trained",
+      "estate": "warrior",
+      "disposition": "healthy"
+    },
+    {
+      "service_id": 100,
+      "origin_settlement_id": "N01",
+      "origin_cohort_id": "C_RE",
+      "origin_district_id": "D_RETAINER",
+      "occupation_id": "retainer_service",
+      "skill": "trained",
+      "estate": "warrior",
+      "disposition": "healthy"
+    }
+  ],
+  "expected": {
+    "mobilized": 100,
+    "dead": 10,
+    "wounded": 15,
+    "captive": 5,
+    "healthy": 70,
+    "living_after_battle": 410,
+    "available_immediately_after_battle": 100,
+    "available_after_healthy_return": 170,
+    "available_after_five_wounded_recover": 175,
+    "second_apply": "AlreadyApplied"
+  }
+}

@@ -1,0 +1,621 @@
+{
+  "asset": "RetainerCompound_01",
+  "units": "metres",
+  "instances": [
+    {
+      "name": "RC01_GroundApron_0",
+      "mesh": "RC01_GroundApron",
+      "location": [
+        0,
+        0,
+        -0.014
+      ],
+      "rotation_degrees": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "Main retainer hall",
+      "mesh": "RetainerCompound_01",
+      "location": [
+        -1.7,
+        2.35,
+        0
+      ],
+      "rotation_degrees": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "Compound entry",
+      "mesh": "RetainerGate_01",
+      "location": [
+        0,
+        -4.75,
+        0
+      ],
+      "rotation_degrees": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "Small observation tower",
+      "mesh": "Watchtower_01",
+      "location": [
+        4.37,
+        1.6,
+        0
+      ],
+      "rotation_degrees": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "Exterior equipment shelter",
+      "mesh": "RC01_LeanTo",
+      "location": [
+        -4.55,
+        -1.2,
+        0
+      ],
+      "rotation_degrees": 90,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "RetainerFence_Corner_01_5",
+      "mesh": "RetainerFence_Corner_01",
+      "location": [
+        -6,
+        -4.75,
+        0
+      ],
+      "rotation_degrees": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "RetainerFence_Corner_01_6",
+      "mesh": "RetainerFence_Corner_01",
+      "location": [
+        6,
+        -4.75,
+        0
+      ],
+      "rotation_degrees": 90,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "RetainerFence_Corner_01_7",
+      "mesh": "RetainerFence_Corner_01",
+      "location": [
+        6,
+        4.75,
+        0
+      ],
+      "rotation_degrees": 180,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "RetainerFence_Corner_01_8",
+      "mesh": "RetainerFence_Corner_01",
+      "location": [
+        -6,
+        4.75,
+        0
+      ],
+      "rotation_degrees": 270,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "RetainerFence_Straight_01_9",
+      "mesh": "RetainerFence_Straight_01",
+      "location": [
+        -5,
+        -4.75,
+        0
+      ],
+      "rotation_degrees": 0,
+      "scale": [
+        1.0,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "RetainerFence_Straight_01_10",
+      "mesh": "RetainerFence_Straight_01",
+      "location": [
+        -3,
+        -4.75,
+        0
+      ],
+      "rotation_degrees": 0,
+      "scale": [
+        0.725,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "RetainerFence_Straight_01_11",
+      "mesh": "RetainerFence_Straight_01",
+      "location": [
+        1.55,
+        -4.75,
+        0
+      ],
+      "rotation_degrees": 0,
+      "scale": [
+        0.725,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "RetainerFence_Straight_01_12",
+      "mesh": "RetainerFence_Straight_01",
+      "location": [
+        3,
+        -4.75,
+        0
+      ],
+      "rotation_degrees": 0,
+      "scale": [
+        1.0,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "RetainerFence_Straight_01_13",
+      "mesh": "RetainerFence_Straight_01",
+      "location": [
+        -5,
+        4.75,
+        0
+      ],
+      "rotation_degrees": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "RetainerFence_Straight_01_14",
+      "mesh": "RetainerFence_Straight_01",
+      "location": [
+        -3,
+        4.75,
+        0
+      ],
+      "rotation_degrees": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "RetainerFence_Straight_01_15",
+      "mesh": "RetainerFence_Straight_01",
+      "location": [
+        -1,
+        4.75,
+        0
+      ],
+      "rotation_degrees": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "RetainerFence_Straight_01_16",
+      "mesh": "RetainerFence_Straight_01",
+      "location": [
+        1,
+        4.75,
+        0
+      ],
+      "rotation_degrees": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "RetainerFence_Straight_01_17",
+      "mesh": "RetainerFence_Straight_01",
+      "location": [
+        3,
+        4.75,
+        0
+      ],
+      "rotation_degrees": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "RetainerFence_Straight_01_18",
+      "mesh": "RetainerFence_Straight_01",
+      "location": [
+        -6,
+        -3.75,
+        0
+      ],
+      "rotation_degrees": 90,
+      "scale": [
+        0.9375,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "RetainerFence_Straight_01_19",
+      "mesh": "RetainerFence_Straight_01",
+      "location": [
+        -6,
+        -1.875,
+        0
+      ],
+      "rotation_degrees": 90,
+      "scale": [
+        0.9375,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "RetainerFence_Straight_01_20",
+      "mesh": "RetainerFence_Straight_01",
+      "location": [
+        -6,
+        0,
+        0
+      ],
+      "rotation_degrees": 90,
+      "scale": [
+        0.9375,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "RetainerFence_Straight_01_21",
+      "mesh": "RetainerFence_Straight_01",
+      "location": [
+        -6,
+        1.875,
+        0
+      ],
+      "rotation_degrees": 90,
+      "scale": [
+        0.9375,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "RetainerFence_Straight_01_22",
+      "mesh": "RetainerFence_Straight_01",
+      "location": [
+        6,
+        -3.75,
+        0
+      ],
+      "rotation_degrees": 90,
+      "scale": [
+        0.9375,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "RetainerFence_Straight_01_23",
+      "mesh": "RetainerFence_Straight_01",
+      "location": [
+        6,
+        -1.875,
+        0
+      ],
+      "rotation_degrees": 90,
+      "scale": [
+        0.9375,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "RetainerFence_Straight_01_24",
+      "mesh": "RetainerFence_Straight_01",
+      "location": [
+        6,
+        0,
+        0
+      ],
+      "rotation_degrees": 90,
+      "scale": [
+        0.9375,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "RetainerFence_Straight_01_25",
+      "mesh": "RetainerFence_Straight_01",
+      "location": [
+        6,
+        1.875,
+        0
+      ],
+      "rotation_degrees": 90,
+      "scale": [
+        0.9375,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "Gate clan banner -1.97",
+      "mesh": "RetainerBanner_01",
+      "location": [
+        -1.97,
+        -5.65,
+        0
+      ],
+      "rotation_degrees": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "Gate clan banner 1.97",
+      "mesh": "RetainerBanner_01",
+      "location": [
+        1.97,
+        -5.65,
+        0
+      ],
+      "rotation_degrees": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "Tower clan banner",
+      "mesh": "RetainerBanner_01",
+      "location": [
+        5.02,
+        0.44,
+        2.0
+      ],
+      "rotation_degrees": 0,
+      "scale": [
+        0.82,
+        0.82,
+        0.9
+      ]
+    },
+    {
+      "name": "TrainingDummy_01_29",
+      "mesh": "TrainingDummy_01",
+      "location": [
+        1.15,
+        -0.9,
+        0
+      ],
+      "rotation_degrees": -8,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "TrainingDummy_01_30",
+      "mesh": "TrainingDummy_01",
+      "location": [
+        2.62,
+        -0.7,
+        0
+      ],
+      "rotation_degrees": 8,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "WeaponRack_01_31",
+      "mesh": "WeaponRack_01",
+      "location": [
+        4.5,
+        -2.8,
+        0
+      ],
+      "rotation_degrees": -12,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "WeaponRack_01_32",
+      "mesh": "WeaponRack_01",
+      "location": [
+        -3.2,
+        0.09,
+        0.29
+      ],
+      "rotation_degrees": 0,
+      "scale": [
+        0.85,
+        0.85,
+        0.85
+      ]
+    },
+    {
+      "name": "ArmorStand_01_33",
+      "mesh": "ArmorStand_01",
+      "location": [
+        -0.65,
+        0.05,
+        0.29
+      ],
+      "rotation_degrees": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "Brazier_01_34",
+      "mesh": "Brazier_01",
+      "location": [
+        -1.91,
+        -6.21,
+        0
+      ],
+      "rotation_degrees": 0,
+      "scale": [
+        0.9,
+        0.9,
+        0.9
+      ]
+    },
+    {
+      "name": "Brazier_01_35",
+      "mesh": "Brazier_01",
+      "location": [
+        1.91,
+        -6.21,
+        0
+      ],
+      "rotation_degrees": 0,
+      "scale": [
+        0.9,
+        0.9,
+        0.9
+      ]
+    },
+    {
+      "name": "RC01_Crate_36",
+      "mesh": "RC01_Crate",
+      "location": [
+        3.83,
+        -3.95,
+        0
+      ],
+      "rotation_degrees": 3,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "RC01_Crate_37",
+      "mesh": "RC01_Crate",
+      "location": [
+        4.6,
+        -3.97,
+        0
+      ],
+      "rotation_degrees": -5,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "RC01_Crate_38",
+      "mesh": "RC01_Crate",
+      "location": [
+        -5.0,
+        -2.4,
+        0
+      ],
+      "rotation_degrees": 90,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "RC01_Crate_39",
+      "mesh": "RC01_Crate",
+      "location": [
+        4.59,
+        -3.96,
+        0.49
+      ],
+      "rotation_degrees": 2,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "RC01_Cart_40",
+      "mesh": "RC01_Cart",
+      "location": [
+        4.36,
+        3.55,
+        0
+      ],
+      "rotation_degrees": 90,
+      "scale": [
+        0.8,
+        0.8,
+        0.8
+      ]
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+Kote_L_01 and Kote_R_01 are in Kote01.blend and the Exports folder.
+Unreal: /Game/Art/Characters/Samurai/Kote01/Kote01_Fitted
+Both use the existing Manny skeleton and the existing armor texture atlas; M_Kote01 darkens the leather only.
+
+Visual issues: minor palm/wrist clipping remains in the bent-arm view; lacing and finger construction remain simplified. Dedicated sword and bow clips were not available for this check.
+Quick source samples: idle, walk, run, moderate and deep elbow bends. Three final Unreal views are in artifacts/kote01/.

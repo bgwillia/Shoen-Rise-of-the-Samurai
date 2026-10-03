@@ -1,0 +1,561 @@
+{
+  "asset": "FarmCompound_01",
+  "units": "metres",
+  "instances": [
+    {
+      "mesh": "FC01_MainHouse",
+      "name": "FC01_MainHouse",
+      "location": [
+        -2.62,
+        0.7,
+        0
+      ],
+      "rotation_degrees": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "mesh": "FC01_ToolShed",
+      "name": "FC01_ToolShed",
+      "location": [
+        1.0,
+        2.87,
+        0
+      ],
+      "rotation_degrees": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "mesh": "FC01_HayShelter",
+      "name": "FC01_HayShelter",
+      "location": [
+        4.16,
+        0.9,
+        0
+      ],
+      "rotation_degrees": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "mesh": "FC01_WorkShelter",
+      "name": "FC01_WorkShelter",
+      "location": [
+        0.85,
+        0.52,
+        0
+      ],
+      "rotation_degrees": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "mesh": "FC01_Cart",
+      "name": "FC01_Cart",
+      "location": [
+        -1.0,
+        -2.23,
+        0
+      ],
+      "rotation_degrees": -18,
+      "scale": [
+        0.86,
+        0.86,
+        0.86
+      ]
+    },
+    {
+      "mesh": "FC01_WaterTrough",
+      "name": "FC01_WaterTrough",
+      "location": [
+        -4.16,
+        -2.25,
+        0
+      ],
+      "rotation_degrees": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "mesh": "FC01_ToolRack",
+      "name": "FC01_ToolRack",
+      "location": [
+        1.02,
+        3.18,
+        0
+      ],
+      "rotation_degrees": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "mesh": "FC01_ToolRack",
+      "name": "FC01_ToolRack_01",
+      "location": [
+        -5.8,
+        0.78,
+        0
+      ],
+      "rotation_degrees": 90,
+      "scale": [
+        0.83,
+        0.83,
+        0.85
+      ]
+    },
+    {
+      "mesh": "FC01_ToolRack",
+      "name": "FC01_ToolRack_02",
+      "location": [
+        -1.15,
+        1.4,
+        0
+      ],
+      "rotation_degrees": 0,
+      "scale": [
+        0.8,
+        0.8,
+        0.88
+      ]
+    },
+    {
+      "mesh": "FC01_Baskets",
+      "name": "FC01_Baskets",
+      "location": [
+        0.36,
+        0.27,
+        0.86
+      ],
+      "rotation_degrees": 0,
+      "scale": [
+        0.62,
+        0.62,
+        0.62
+      ]
+    },
+    {
+      "mesh": "FC01_Baskets",
+      "name": "FC01_Baskets_01",
+      "location": [
+        -2.27,
+        -0.27,
+        0.94
+      ],
+      "rotation_degrees": -12,
+      "scale": [
+        0.75,
+        0.75,
+        0.85
+      ]
+    },
+    {
+      "mesh": "FC01_Baskets",
+      "name": "FC01_Baskets_02",
+      "location": [
+        -1.01,
+        1.77,
+        1.42
+      ],
+      "rotation_degrees": 28,
+      "scale": [
+        0.72,
+        0.72,
+        0.65
+      ]
+    },
+    {
+      "mesh": "FC01_Baskets",
+      "name": "FC01_Baskets_03",
+      "location": [
+        -0.3,
+        -0.65,
+        0
+      ],
+      "rotation_degrees": 24,
+      "scale": [
+        0.73,
+        0.73,
+        0.85
+      ]
+    },
+    {
+      "mesh": "FC01_HayBundles",
+      "name": "FC01_HayBundles",
+      "location": [
+        3.3,
+        0.92,
+        0.22
+      ],
+      "rotation_degrees": 18.012369561108066,
+      "scale": [
+        1.15,
+        1.15,
+        1.15
+      ]
+    },
+    {
+      "mesh": "FC01_HayBundles",
+      "name": "FC01_HayBundles_01",
+      "location": [
+        4.06,
+        1.15,
+        0.22
+      ],
+      "rotation_degrees": 12.017086781752234,
+      "scale": [
+        1.23,
+        1.23,
+        1.23
+      ]
+    },
+    {
+      "mesh": "FC01_HayBundles",
+      "name": "FC01_HayBundles_02",
+      "location": [
+        4.87,
+        1.09,
+        0.22
+      ],
+      "rotation_degrees": 18.3529045653935,
+      "scale": [
+        1.11,
+        1.11,
+        1.11
+      ]
+    },
+    {
+      "mesh": "FC01_HayBundles",
+      "name": "FC01_HayBundles_03",
+      "location": [
+        3.36,
+        0.28,
+        0.22
+      ],
+      "rotation_degrees": -15.030563535259578,
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "mesh": "FC01_HayBundles",
+      "name": "FC01_HayBundles_04",
+      "location": [
+        4.12,
+        0.39,
+        0.22
+      ],
+      "rotation_degrees": 5.052863796723436,
+      "scale": [
+        1.15,
+        1.15,
+        1.15
+      ]
+    },
+    {
+      "mesh": "FC01_HayBundles",
+      "name": "FC01_HayBundles_05",
+      "location": [
+        4.91,
+        0.35,
+        0.22
+      ],
+      "rotation_degrees": -8.198357841046505,
+      "scale": [
+        1.04,
+        1.04,
+        1.04
+      ]
+    },
+    {
+      "mesh": "FC01_HayBundles",
+      "name": "FC01_HayBundles_06",
+      "location": [
+        3.2,
+        1.57,
+        0.22
+      ],
+      "rotation_degrees": 12.471985087256456,
+      "scale": [
+        0.9,
+        0.9,
+        0.9
+      ]
+    },
+    {
+      "mesh": "FC01_HayBundles",
+      "name": "FC01_HayBundles_07",
+      "location": [
+        4.72,
+        1.57,
+        0.22
+      ],
+      "rotation_degrees": -10.258756141149782,
+      "scale": [
+        0.93,
+        0.93,
+        0.93
+      ]
+    },
+    {
+      "mesh": "FC01_HayBundles",
+      "name": "FC01_HayBundles_08",
+      "location": [
+        3.72,
+        0.96,
+        0.73
+      ],
+      "rotation_degrees": 72,
+      "scale": [
+        1.22,
+        1.1,
+        0.9
+      ]
+    },
+    {
+      "mesh": "FC01_HayBundles",
+      "name": "FC01_HayBundles_09",
+      "location": [
+        4.51,
+        0.86,
+        0.72
+      ],
+      "rotation_degrees": -43,
+      "scale": [
+        1.1,
+        1.07,
+        0.84
+      ]
+    },
+    {
+      "mesh": "FC01_HayBundles",
+      "name": "FC01_HayBundles_10",
+      "location": [
+        -1.42,
+        -2.06,
+        0.56
+      ],
+      "rotation_degrees": 12,
+      "scale": [
+        0.51,
+        0.51,
+        0.48
+      ]
+    },
+    {
+      "mesh": "FC01_Baskets",
+      "name": "FC01_Baskets_04",
+      "location": [
+        -1.72,
+        -2.27,
+        0.56
+      ],
+      "rotation_degrees": -16,
+      "scale": [
+        0.78,
+        0.78,
+        0.84
+      ]
+    },
+    {
+      "mesh": "FC01_Fence_Straight",
+      "name": "FC01_Fence_Straight",
+      "location": [
+        -5.95,
+        -3.18,
+        0
+      ],
+      "rotation_degrees": 0,
+      "scale": [
+        1.12,
+        1,
+        0.84
+      ]
+    },
+    {
+      "mesh": "FC01_Fence_Straight",
+      "name": "FC01_Fence_Straight_01",
+      "location": [
+        -5.95,
+        -3.18,
+        0
+      ],
+      "rotation_degrees": 90,
+      "scale": [
+        1.13,
+        1,
+        0.84
+      ]
+    },
+    {
+      "mesh": "FC01_Fence_Straight",
+      "name": "FC01_Fence_Straight_02",
+      "location": [
+        -5.95,
+        -0.92,
+        0
+      ],
+      "rotation_degrees": 90,
+      "scale": [
+        1.12,
+        1,
+        0.84
+      ]
+    },
+    {
+      "mesh": "FC01_Fence_Straight",
+      "name": "FC01_Fence_Straight_03",
+      "location": [
+        -5.95,
+        1.32,
+        0
+      ],
+      "rotation_degrees": 90,
+      "scale": [
+        1.0,
+        1,
+        0.84
+      ]
+    },
+    {
+      "mesh": "FC01_Fence_Straight",
+      "name": "FC01_Fence_Straight_04",
+      "location": [
+        3.55,
+        -3.18,
+        0
+      ],
+      "rotation_degrees": 0,
+      "scale": [
+        1.1,
+        1,
+        0.84
+      ]
+    },
+    {
+      "mesh": "FC01_Fence_Straight",
+      "name": "FC01_Fence_Straight_05",
+      "location": [
+        5.75,
+        -3.18,
+        0
+      ],
+      "rotation_degrees": 90,
+      "scale": [
+        1.0,
+        1,
+        0.84
+      ]
+    },
+    {
+      "mesh": "FC01_Fence_Straight",
+      "name": "FC01_Fence_Straight_06",
+      "location": [
+        5.75,
+        -1.18,
+        0
+      ],
+      "rotation_degrees": 90,
+      "scale": [
+        1.0,
+        1,
+        0.84
+      ]
+    },
+    {
+      "mesh": "FC01_Fence_Straight",
+      "name": "FC01_Fence_Straight_07",
+      "location": [
+        5.75,
+        0.82,
+        0
+      ],
+      "rotation_degrees": 90,
+      "scale": [
+        0.87,
+        1,
+        0.84
+      ]
+    },
+    {
+      "mesh": "FC01_Fence_Straight",
+      "name": "FC01_Fence_Straight_08",
+      "location": [
+        2.31,
+        -3.18,
+        0
+      ],
+      "rotation_degrees": 90,
+      "scale": [
+        0.9,
+        1,
+        0.84
+      ]
+    },
+    {
+      "mesh": "FC01_Fence_Straight",
+      "name": "FC01_Fence_Straight_09",
+      "location": [
+        2.31,
+        -1.38,
+        0
+      ],
+      "rotation_degrees": 90,
+      "scale": [
+        0.6,
+        1,
+        0.84
+      ]
+    },
+    {
+      "mesh": "FC01_Fence_Gate",
+      "name": "FC01_Fence_Gate",
+      "location": [
+        2.31,
+        -3.18,
+        0
+      ],
+      "rotation_degrees": 63,
+      "scale": [
+        1,
+        1,
+        0.84
+      ]
+    },
+    {
+      "mesh": "FC01_GroundApron",
+      "name": "FC01_GroundApron",
+      "location": [
+        0,
+        0,
+        -0.008
+      ],
+      "rotation_degrees": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    }
+  ]
+}

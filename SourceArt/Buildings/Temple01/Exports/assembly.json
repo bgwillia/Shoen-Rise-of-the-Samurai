@@ -1,0 +1,751 @@
+{
+  "asset": "Temple_01",
+  "units": "metres",
+  "instances": [
+    {
+      "name": "Temple_MainHall_01_0",
+      "mesh": "Temple_MainHall_01",
+      "location": [
+        0,
+        2.5,
+        0
+      ],
+      "rotation_degrees": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "Temple_MainRoof_01_1",
+      "mesh": "Temple_MainRoof_01",
+      "location": [
+        0,
+        2.5,
+        0
+      ],
+      "rotation_degrees": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "Temple_Foundation_01_2",
+      "mesh": "Temple_Foundation_01",
+      "location": [
+        0,
+        2.5,
+        0
+      ],
+      "rotation_degrees": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "Temple_Veranda_01_3",
+      "mesh": "Temple_Veranda_01",
+      "location": [
+        0,
+        2.5,
+        0
+      ],
+      "rotation_degrees": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "Temple_Curtains_01_4",
+      "mesh": "Temple_Curtains_01",
+      "location": [
+        0,
+        2.5,
+        0
+      ],
+      "rotation_degrees": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "Temple_Steps_01_5",
+      "mesh": "Temple_Steps_01",
+      "location": [
+        0,
+        -2.6,
+        0
+      ],
+      "rotation_degrees": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "Temple_Railing_01_6",
+      "mesh": "Temple_Railing_01",
+      "location": [
+        -6.3,
+        -2.45,
+        1.3
+      ],
+      "rotation_degrees": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "Temple_Railing_01_7",
+      "mesh": "Temple_Railing_01",
+      "location": [
+        -4.25,
+        -2.45,
+        1.3
+      ],
+      "rotation_degrees": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "Temple_Railing_01_8",
+      "mesh": "Temple_Railing_01",
+      "location": [
+        2.25,
+        -2.45,
+        1.3
+      ],
+      "rotation_degrees": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "Temple_Railing_01_9",
+      "mesh": "Temple_Railing_01",
+      "location": [
+        4.3,
+        -2.45,
+        1.3
+      ],
+      "rotation_degrees": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "Temple_Railing_01_10",
+      "mesh": "Temple_Railing_01",
+      "location": [
+        -6.3,
+        7.45,
+        1.3
+      ],
+      "rotation_degrees": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "Temple_Railing_01_11",
+      "mesh": "Temple_Railing_01",
+      "location": [
+        -4.25,
+        7.45,
+        1.3
+      ],
+      "rotation_degrees": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "Temple_Railing_01_12",
+      "mesh": "Temple_Railing_01",
+      "location": [
+        -2.2,
+        7.45,
+        1.3
+      ],
+      "rotation_degrees": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "Temple_Railing_01_13",
+      "mesh": "Temple_Railing_01",
+      "location": [
+        -0.15,
+        7.45,
+        1.3
+      ],
+      "rotation_degrees": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "Temple_Railing_01_14",
+      "mesh": "Temple_Railing_01",
+      "location": [
+        1.9,
+        7.45,
+        1.3
+      ],
+      "rotation_degrees": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "Temple_Railing_01_15",
+      "mesh": "Temple_Railing_01",
+      "location": [
+        3.95,
+        7.45,
+        1.3
+      ],
+      "rotation_degrees": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "Temple_Railing_01_16",
+      "mesh": "Temple_Railing_01",
+      "location": [
+        -6.7,
+        -2.3,
+        1.3
+      ],
+      "rotation_degrees": 90,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "Temple_Railing_01_17",
+      "mesh": "Temple_Railing_01",
+      "location": [
+        -6.7,
+        -0.25,
+        1.3
+      ],
+      "rotation_degrees": 90,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "Temple_Railing_01_18",
+      "mesh": "Temple_Railing_01",
+      "location": [
+        -6.7,
+        1.8,
+        1.3
+      ],
+      "rotation_degrees": 90,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "Temple_Railing_01_19",
+      "mesh": "Temple_Railing_01",
+      "location": [
+        -6.7,
+        3.85,
+        1.3
+      ],
+      "rotation_degrees": 90,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "Temple_Railing_01_20",
+      "mesh": "Temple_Railing_01",
+      "location": [
+        -6.7,
+        5.9,
+        1.3
+      ],
+      "rotation_degrees": 90,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "Temple_Railing_01_21",
+      "mesh": "Temple_Railing_01",
+      "location": [
+        6.7,
+        -2.3,
+        1.3
+      ],
+      "rotation_degrees": 90,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "Temple_Railing_01_22",
+      "mesh": "Temple_Railing_01",
+      "location": [
+        6.7,
+        -0.25,
+        1.3
+      ],
+      "rotation_degrees": 90,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "Temple_Railing_01_23",
+      "mesh": "Temple_Railing_01",
+      "location": [
+        6.7,
+        1.8,
+        1.3
+      ],
+      "rotation_degrees": 90,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "Temple_Railing_01_24",
+      "mesh": "Temple_Railing_01",
+      "location": [
+        6.7,
+        3.85,
+        1.3
+      ],
+      "rotation_degrees": 90,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "Temple_Railing_01_25",
+      "mesh": "Temple_Railing_01",
+      "location": [
+        6.7,
+        5.9,
+        1.3
+      ],
+      "rotation_degrees": 90,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "TempleGate_01_26",
+      "mesh": "TempleGate_01",
+      "location": [
+        0,
+        -10,
+        0
+      ],
+      "rotation_degrees": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "TempleBellPavilion_01_27",
+      "mesh": "TempleBellPavilion_01",
+      "location": [
+        10,
+        -3.4,
+        0
+      ],
+      "rotation_degrees": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "TempleBell_01_28",
+      "mesh": "TempleBell_01",
+      "location": [
+        10,
+        -3.4,
+        1.3
+      ],
+      "rotation_degrees": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "StoneLantern_01_29",
+      "mesh": "StoneLantern_01",
+      "location": [
+        -2.7,
+        -5.8,
+        0
+      ],
+      "rotation_degrees": 0,
+      "scale": [
+        1.07,
+        1.07,
+        1.07
+      ]
+    },
+    {
+      "name": "StoneLantern_01_30",
+      "mesh": "StoneLantern_01",
+      "location": [
+        2.7,
+        -5.8,
+        0
+      ],
+      "rotation_degrees": 0,
+      "scale": [
+        1.07,
+        1.07,
+        1.07
+      ]
+    },
+    {
+      "name": "StoneLantern_01_31",
+      "mesh": "StoneLantern_01",
+      "location": [
+        -3.1,
+        -10.2,
+        0
+      ],
+      "rotation_degrees": 0,
+      "scale": [
+        1.07,
+        1.07,
+        1.07
+      ]
+    },
+    {
+      "name": "StoneLantern_01_32",
+      "mesh": "StoneLantern_01",
+      "location": [
+        3.1,
+        -10.2,
+        0
+      ],
+      "rotation_degrees": 0,
+      "scale": [
+        1.07,
+        1.07,
+        1.07
+      ]
+    },
+    {
+      "name": "Temple_Fence_01_33",
+      "mesh": "Temple_Fence_01",
+      "location": [
+        -7.3,
+        -9.5,
+        0
+      ],
+      "rotation_degrees": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "Temple_Fence_01_34",
+      "mesh": "Temple_Fence_01",
+      "location": [
+        -5.3,
+        -9.5,
+        0
+      ],
+      "rotation_degrees": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "Temple_Fence_01_35",
+      "mesh": "Temple_Fence_01",
+      "location": [
+        -3.3,
+        -9.5,
+        0
+      ],
+      "rotation_degrees": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "Temple_Fence_01_36",
+      "mesh": "Temple_Fence_01",
+      "location": [
+        3.3,
+        -9.5,
+        0
+      ],
+      "rotation_degrees": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "Temple_Fence_01_37",
+      "mesh": "Temple_Fence_01",
+      "location": [
+        5.3,
+        -9.5,
+        0
+      ],
+      "rotation_degrees": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "Temple_Fence_01_38",
+      "mesh": "Temple_Fence_01",
+      "location": [
+        7.3,
+        -9.5,
+        0
+      ],
+      "rotation_degrees": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "Temple_Fence_01_39",
+      "mesh": "Temple_Fence_01",
+      "location": [
+        9.3,
+        -9.5,
+        0
+      ],
+      "rotation_degrees": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "Temple_Fence_01_40",
+      "mesh": "Temple_Fence_01",
+      "location": [
+        11.3,
+        -9.5,
+        0
+      ],
+      "rotation_degrees": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "Temple_Approach_01_41",
+      "mesh": "Temple_Approach_01",
+      "location": [
+        0,
+        0,
+        0
+      ],
+      "rotation_degrees": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "Temple_Planting_01_42",
+      "mesh": "Temple_Planting_01",
+      "location": [
+        0,
+        0,
+        0
+      ],
+      "rotation_degrees": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    }
+  ],
+  "collision_boxes": {
+    "Temple_MainHall_01": [
+      [
+        0,
+        0,
+        2.9,
+        10.8,
+        7.6,
+        3.2
+      ]
+    ],
+    "Temple_Foundation_01": [
+      [
+        0,
+        0,
+        0.23,
+        10.7,
+        7.5,
+        0.45
+      ]
+    ],
+    "Temple_Steps_01": [
+      [
+        0,
+        -1.25,
+        0.64,
+        3.82,
+        2.7,
+        1.28
+      ]
+    ],
+    "TempleGate_01": [
+      [
+        -2.15,
+        -0.39,
+        1.42,
+        0.34,
+        0.34,
+        2.84
+      ],
+      [
+        -2.15,
+        0.39,
+        1.42,
+        0.34,
+        0.34,
+        2.84
+      ],
+      [
+        2.15,
+        -0.39,
+        1.42,
+        0.34,
+        0.34,
+        2.84
+      ],
+      [
+        2.15,
+        0.39,
+        1.42,
+        0.34,
+        0.34,
+        2.84
+      ]
+    ],
+    "TempleBellPavilion_01": [
+      [
+        -1.02,
+        -1.02,
+        1.45,
+        0.3,
+        0.3,
+        2.9
+      ],
+      [
+        -1.02,
+        1.02,
+        1.45,
+        0.3,
+        0.3,
+        2.9
+      ],
+      [
+        1.02,
+        -1.02,
+        1.45,
+        0.3,
+        0.3,
+        2.9
+      ],
+      [
+        1.02,
+        1.02,
+        1.45,
+        0.3,
+        0.3,
+        2.9
+      ]
+    ]
+  }
+}
